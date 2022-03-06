@@ -40,7 +40,7 @@
     <MoveCompletedEndsForward>0</MoveCompletedEndsForward>
     <BaselineForEarnedValue>0</BaselineForEarnedValue>
     <AutoAddNewResourcesAndTasks>1</AutoAddNewResourcesAndTasks>
-    <CurrentDate>2022-03-06T20:08:00</CurrentDate>
+    <CurrentDate>2022-03-06T20:28:50</CurrentDate>
     <MicrosoftProjectServerURL>1</MicrosoftProjectServerURL>
     <Autolink>1</Autolink>
     <NewTaskStartDate>0</NewTaskStartDate>
@@ -178,9 +178,9 @@
             <Manual>0</Manual>
         </Task>
         <Task>
-            <UID>13</UID>
+            <UID>23</UID>
             <ID>1</ID>
-            <Name>A.2</Name>
+            <Name>A.2.1</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
             <WBS>1</WBS>
@@ -188,8 +188,8 @@
             <OutlineLevel>1</OutlineLevel>
             <Priority>600</Priority>
             <Start>2022-03-07T08:00:00</Start>
-            <Finish>2022-03-11T17:00:00</Finish>
-            <Duration>PT40H0M0S</Duration>
+            <Finish>2022-03-07T17:00:00</Finish>
+            <Duration>PT8H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
             <EffortDriven>0</EffortDriven>
@@ -204,57 +204,36 @@
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
-            <RemainingDuration>PT40H0M0S</RemainingDuration>
+            <RemainingDuration>PT8H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
             <Hyperlink></Hyperlink>
             <IgnoreResourceCalendar>1</IgnoreResourceCalendar>
-            <Notes>Le fichier carte.h est en charge des informations des cartes du jeu : en particulier son nom, sa description, le nombre d’occurrences de cette carte. Il n'est pas responsable de la manipulation des cartes (placer une carte sur le plateau ou dans la main d'un joueur par exemple).
-
-Le fichier faction.h est en charge des informations et des manipulations propres à une faction : son nom, le nombre de points DDRS, sa main, sa pioche ... mais pas ce qui affecte les deux factions à la fois. Par exemple ce n'est pas ce fichier qui décide quelle faction joue en premier dans une manche.
-
-Ajoutez chacun des types et des fonctions suivants, avec les paramètres qui vous semblent adéquats à vous et au responsable de la tâche A.1 pour coder le fichier main.c. Documentez ensuite ces fonctions et ces types suffisamment pour pouvoir les implanter facilement dans le lot suivant et pour pouvoir les utiliser correctement dans le fichier main.c.
-
-Dans le fichier carte.h:
-
-un type carte (possiblement abstrait)
-Dans le fichier faction.h:
-
-un type faction (possiblement abstrait)
-une fonction permettant de savoir si une faction a utilisé l'option de remélanger sa main et la boîte à idée et de repiocher des cartes.
-une fonction permettant à une faction d'utiliser l'option ci-dessus.
-une fonction permettant à une faction de vider sa main dans sa pioche.
-une fonction permettant à une faction de mélanger sa pioche.
-une fonction permettant à une faction de repiocher ses cartes.
-Attention : aucune de ces fonctions n’échange d’informations avec le joueur humain (pas de printf, pas de scanf). C’est le rôle de interface.h.
-
-On rappelle qu’un fichier .h ne contient pas de code, juste des signatures de fonctions.
-
-Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement de votre travail. Vos commits doivent avoir l’indication Tâche A.2 (en plus d’un message décrivant le commit).</Notes>
+            <Notes>Création des types</Notes>
             <HideBar>0</HideBar>
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>1</Manual>
             <ManualStart>2022-03-07T08:00:00</ManualStart>
-            <ManualFinish>2022-03-11T17:00:00</ManualFinish>
-            <ManualDuration>PT40H0M0S</ManualDuration>
+            <ManualFinish>2022-03-07T17:00:00</ManualFinish>
+            <ManualDuration>PT8H0M0S</ManualDuration>
         </Task>
         <Task>
-            <UID>2</UID>
+            <UID>18</UID>
             <ID>2</ID>
-            <Name>A.3</Name>
+            <Name>A.2.2</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
             <WBS>2</WBS>
             <OutlineNumber>2</OutlineNumber>
             <OutlineLevel>1</OutlineLevel>
-            <Priority>600</Priority>
-            <Start>2022-03-07T08:00:00</Start>
+            <Priority>500</Priority>
+            <Start>2022-03-08T08:00:00</Start>
             <Finish>2022-03-11T17:00:00</Finish>
-            <Duration>PT40H0M0S</Duration>
+            <Duration>PT32H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
             <EffortDriven>0</EffortDriven>
@@ -269,46 +248,139 @@ Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
-            <RemainingDuration>PT40H0M0S</RemainingDuration>
+            <RemainingDuration>PT32H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
             <Hyperlink></Hyperlink>
             <IgnoreResourceCalendar>1</IgnoreResourceCalendar>
-            <Notes>Le fichier plateau.h est en charge de tout ce qui concerne le plateau et le déroulement de la partie : gérer les deux factions, poser les cartes sur le plateau faces cachées, les retourner et activer les effets. Il ne gère pas directement les cartes en main d'une faction, les scores des factions, les points de manche, ... qui sont gérés par le fichier faction.h. Il ne gère pas non plus les informations relatives aux cartes qui sont gérées par le fichier carte.h.
-
-Ajoutez chacun des types et des fonctions suivants, avec les paramètres qui vous semblent adéquats à vous et au responsable de la tâche A.1 pour coder le fichier main.c. Documentez ensuite ces fonctions et ces types suffisamment pour pouvoir les implanter facilement dans le lot suivant et pour pouvoir les utiliser correctement dans le fichier main.c.
-
-un type plateau (possiblement abstrait)
-une fonction pour créer un nouveau plateau (et les deux factions qui joueront dessus)
-une fonction pour libérer la mémoire associée à un plateau (et ses deux factions)
-une fonction pour initialiser une nouvelle manche du jeu, ou, le cas échéant, indiquer que le jeu est terminé
-une fonction qui renvoie la liste des deux factions du jeu
-une fonction pour permettre à une faction de poser une carte face cachée sur le plateau
-une fonction pour retourner une carte face visible et activer son effet
-Attention : aucune de ces fonctions n’échange d’informations avec le joueur humain (pas de printf, pas de scanf). C’est le rôle de interface.h.
-
-On rappelle qu’un fichier .h ne contient pas de code, juste des signatures de fonctions.
-
-Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement de votre travail. Vos commits doivent avoir l’indication Tâche A.3 (en plus d’un message décrivant le commit).</Notes>
+            <Notes>Implémentation des prototypes</Notes>
+            <HideBar>0</HideBar>
+            <Rollup>0</Rollup>
+            <EarnedValueMethod>0</EarnedValueMethod>
+            <PredecessorLink>
+                <PredecessorUID>23</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>0</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
+            <Active>1</Active>
+            <Manual>1</Manual>
+            <ManualStart>2022-03-08T08:00:00</ManualStart>
+            <ManualFinish>2022-03-11T17:00:00</ManualFinish>
+            <ManualDuration>PT32H0M0S</ManualDuration>
+        </Task>
+        <Task>
+            <UID>2</UID>
+            <ID>3</ID>
+            <Name>A.3.1</Name>
+            <Type>0</Type>
+            <IsNull>0</IsNull>
+            <WBS>3</WBS>
+            <OutlineNumber>3</OutlineNumber>
+            <OutlineLevel>1</OutlineLevel>
+            <Priority>600</Priority>
+            <Start>2022-03-07T08:00:00</Start>
+            <Finish>2022-03-07T17:00:00</Finish>
+            <Duration>PT8H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
+            <ResumeValid>0</ResumeValid>
+            <EffortDriven>0</EffortDriven>
+            <Recurring>0</Recurring>
+            <OverAllocated>0</OverAllocated>
+            <Estimated>0</Estimated>
+            <Milestone>0</Milestone>
+            <Summary>0</Summary>
+            <Critical>1</Critical>
+            <IsSubproject>0</IsSubproject>
+            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
+            <ExternalTask>0</ExternalTask>
+            <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
+            <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <ConstraintType>0</ConstraintType>
+            <CalendarUID>-1</CalendarUID>
+            <LevelAssignments>0</LevelAssignments>
+            <LevelingCanSplit>0</LevelingCanSplit>
+            <Hyperlink></Hyperlink>
+            <IgnoreResourceCalendar>1</IgnoreResourceCalendar>
+            <Notes>Création des types</Notes>
             <HideBar>0</HideBar>
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>1</Manual>
             <ManualStart>2022-03-07T08:00:00</ManualStart>
+            <ManualFinish>2022-03-07T17:00:00</ManualFinish>
+            <ManualDuration>PT8H0M0S</ManualDuration>
+        </Task>
+        <Task>
+            <UID>22</UID>
+            <ID>4</ID>
+            <Name>A.3.2</Name>
+            <Type>0</Type>
+            <IsNull>0</IsNull>
+            <WBS>4</WBS>
+            <OutlineNumber>4</OutlineNumber>
+            <OutlineLevel>1</OutlineLevel>
+            <Priority>500</Priority>
+            <Start>2022-03-08T08:00:00</Start>
+            <Finish>2022-03-11T17:00:00</Finish>
+            <Duration>PT32H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
+            <ResumeValid>0</ResumeValid>
+            <EffortDriven>0</EffortDriven>
+            <Recurring>0</Recurring>
+            <OverAllocated>0</OverAllocated>
+            <Estimated>0</Estimated>
+            <Milestone>0</Milestone>
+            <Summary>0</Summary>
+            <Critical>1</Critical>
+            <IsSubproject>0</IsSubproject>
+            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
+            <ExternalTask>0</ExternalTask>
+            <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
+            <RemainingDuration>PT32H0M0S</RemainingDuration>
+            <ConstraintType>0</ConstraintType>
+            <CalendarUID>-1</CalendarUID>
+            <LevelAssignments>0</LevelAssignments>
+            <LevelingCanSplit>0</LevelingCanSplit>
+            <Hyperlink></Hyperlink>
+            <IgnoreResourceCalendar>1</IgnoreResourceCalendar>
+            <HideBar>0</HideBar>
+            <Rollup>0</Rollup>
+            <EarnedValueMethod>0</EarnedValueMethod>
+            <PredecessorLink>
+                <PredecessorUID>23</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>0</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
+            <PredecessorLink>
+                <PredecessorUID>2</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>0</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
+            <Active>1</Active>
+            <Manual>1</Manual>
+            <ManualStart>2022-03-08T08:00:00</ManualStart>
             <ManualFinish>2022-03-11T17:00:00</ManualFinish>
-            <ManualDuration>PT40H0M0S</ManualDuration>
+            <ManualDuration>PT32H0M0S</ManualDuration>
         </Task>
         <Task>
             <UID>10</UID>
-            <ID>3</ID>
+            <ID>5</ID>
             <Name>A.1.1</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <WBS>3</WBS>
-            <OutlineNumber>3</OutlineNumber>
+            <WBS>5</WBS>
+            <OutlineNumber>5</OutlineNumber>
             <OutlineLevel>1</OutlineLevel>
             <Priority>500</Priority>
             <Start>2022-03-07T08:00:00</Start>
@@ -350,12 +422,12 @@ tâches en sous-taches sur vous voulez.</Notes>
         </Task>
         <Task>
             <UID>12</UID>
-            <ID>4</ID>
+            <ID>6</ID>
             <Name>A.1.2</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <WBS>4</WBS>
-            <OutlineNumber>4</OutlineNumber>
+            <WBS>6</WBS>
+            <OutlineNumber>6</OutlineNumber>
             <OutlineLevel>1</OutlineLevel>
             <Priority>900</Priority>
             <Start>2022-03-14T08:00:00</Start>
@@ -389,7 +461,7 @@ Faites valider le Lot A par votre encadrant une fois toutes les tâches terminé
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
             <PredecessorLink>
-                <PredecessorUID>13</PredecessorUID>
+                <PredecessorUID>23</PredecessorUID>
                 <Type>1</Type>
                 <CrossProject>0</CrossProject>
                 <LinkLag>0</LinkLag>
@@ -416,6 +488,20 @@ Faites valider le Lot A par votre encadrant une fois toutes les tâches terminé
                 <LinkLag>0</LinkLag>
                 <LagFormat>7</LagFormat>
             </PredecessorLink>
+            <PredecessorLink>
+                <PredecessorUID>18</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>0</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
+            <PredecessorLink>
+                <PredecessorUID>22</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>0</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
             <Active>1</Active>
             <Manual>1</Manual>
             <ManualStart>2022-03-14T08:00:00</ManualStart>
@@ -424,12 +510,12 @@ Faites valider le Lot A par votre encadrant une fois toutes les tâches terminé
         </Task>
         <Task>
             <UID>7</UID>
-            <ID>5</ID>
+            <ID>7</ID>
             <Name>A.4</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <WBS>5</WBS>
-            <OutlineNumber>5</OutlineNumber>
+            <WBS>7</WBS>
+            <OutlineNumber>7</OutlineNumber>
             <OutlineLevel>1</OutlineLevel>
             <Priority>500</Priority>
             <Start>2022-03-08T08:00:00</Start>
@@ -477,6 +563,20 @@ Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement
             <HideBar>0</HideBar>
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
+            <PredecessorLink>
+                <PredecessorUID>23</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>0</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
+            <PredecessorLink>
+                <PredecessorUID>2</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>0</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
             <Active>1</Active>
             <Manual>1</Manual>
             <ManualStart>2022-03-08T08:00:00</ManualStart>
@@ -552,34 +652,62 @@ Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement
     <Assignments>
         <Assignment>
             <UID>1</UID>
-            <TaskUID>13</TaskUID>
+            <TaskUID>23</TaskUID>
+            <ResourceUID>2</ResourceUID>
+            <PercentWorkComplete>0</PercentWorkComplete>
+            <Finish>2022-03-07T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT8H0M0S</RemainingWork>
+            <Start>2022-03-07T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT8H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>2</UID>
+            <TaskUID>18</TaskUID>
             <ResourceUID>2</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
             <Finish>2022-03-11T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT40H0M0S</RemainingWork>
-            <Start>2022-03-07T08:00:00</Start>
+            <RemainingWork>PT32H0M0S</RemainingWork>
+            <Start>2022-03-08T08:00:00</Start>
             <Units>1</Units>
-            <Work>PT40H0M0S</Work>
+            <Work>PT32H0M0S</Work>
         </Assignment>
         <Assignment>
-            <UID>2</UID>
+            <UID>3</UID>
             <TaskUID>2</TaskUID>
+            <ResourceUID>1</ResourceUID>
+            <PercentWorkComplete>0</PercentWorkComplete>
+            <Finish>2022-03-07T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT8H0M0S</RemainingWork>
+            <Start>2022-03-07T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT8H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>4</UID>
+            <TaskUID>22</TaskUID>
             <ResourceUID>1</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
             <Finish>2022-03-11T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT40H0M0S</RemainingWork>
-            <Start>2022-03-07T08:00:00</Start>
+            <RemainingWork>PT32H0M0S</RemainingWork>
+            <Start>2022-03-08T08:00:00</Start>
             <Units>1</Units>
-            <Work>PT40H0M0S</Work>
+            <Work>PT32H0M0S</Work>
         </Assignment>
         <Assignment>
-            <UID>3</UID>
+            <UID>5</UID>
             <TaskUID>10</TaskUID>
             <ResourceUID>3</ResourceUID>
             <PercentWorkComplete>100</PercentWorkComplete>
@@ -593,7 +721,7 @@ Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement
             <Work>PT8H0M0S</Work>
         </Assignment>
         <Assignment>
-            <UID>4</UID>
+            <UID>6</UID>
             <TaskUID>12</TaskUID>
             <ResourceUID>3</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
@@ -607,7 +735,7 @@ Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement
             <Work>PT40H0M0S</Work>
         </Assignment>
         <Assignment>
-            <UID>5</UID>
+            <UID>7</UID>
             <TaskUID>7</TaskUID>
             <ResourceUID>3</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
