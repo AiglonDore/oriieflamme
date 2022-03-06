@@ -40,7 +40,7 @@
     <MoveCompletedEndsForward>0</MoveCompletedEndsForward>
     <BaselineForEarnedValue>0</BaselineForEarnedValue>
     <AutoAddNewResourcesAndTasks>1</AutoAddNewResourcesAndTasks>
-    <CurrentDate>2022-03-06T19:49:16</CurrentDate>
+    <CurrentDate>2022-03-06T20:08:00</CurrentDate>
     <MicrosoftProjectServerURL>1</MicrosoftProjectServerURL>
     <Autolink>1</Autolink>
     <NewTaskStartDate>0</NewTaskStartDate>
@@ -322,13 +322,13 @@ Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement
             <Estimated>0</Estimated>
             <Milestone>0</Milestone>
             <Summary>0</Summary>
-            <Critical>1</Critical>
+            <Critical>0</Critical>
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <PercentComplete>0</PercentComplete>
-            <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <PercentComplete>100</PercentComplete>
+            <ActualDuration>PT8H0M0S</ActualDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -582,12 +582,12 @@ Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement
             <UID>3</UID>
             <TaskUID>10</TaskUID>
             <ResourceUID>3</ResourceUID>
-            <PercentWorkComplete>0</PercentWorkComplete>
+            <PercentWorkComplete>100</PercentWorkComplete>
+            <ActualWork>PT8H0M0S</ActualWork>
             <Finish>2022-03-07T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2022-03-07T08:00:00</Start>
             <Units>1</Units>
             <Work>PT8H0M0S</Work>
