@@ -79,7 +79,7 @@ Vérifiez, une fois toutes les interfaces rédigées par les autres membres, que
 Faites valider le Lot A par votre encadrant une fois toutes les tâches terminées.]]>
             </notes>
         </task>
-        <task id="7" name="A.4" color="#00ffcc" meeting="false" start="2022-03-08" duration="3" complete="0" thirdDate="2022-02-23" thirdDate-constraint="0" expand="true">
+        <task id="7" name="A.4" color="#00ffcc" meeting="false" start="2022-03-08" duration="3" complete="5" thirdDate="2022-02-23" thirdDate-constraint="0" expand="true">
             <notes>
                 <![CDATA[Le fichier interface.h est en charge d'échanger des informations avec les joueurs. Par exemple demander quelle carte la faction veut poser sur le plateau et à quel endroit, ou afficher le plateau de jeu en console.
 

@@ -40,7 +40,7 @@
     <MoveCompletedEndsForward>0</MoveCompletedEndsForward>
     <BaselineForEarnedValue>0</BaselineForEarnedValue>
     <AutoAddNewResourcesAndTasks>1</AutoAddNewResourcesAndTasks>
-    <CurrentDate>2022-03-06T20:28:50</CurrentDate>
+    <CurrentDate>2022-03-06T21:04:06</CurrentDate>
     <MicrosoftProjectServerURL>1</MicrosoftProjectServerURL>
     <Autolink>1</Autolink>
     <NewTaskStartDate>0</NewTaskStartDate>
@@ -534,8 +534,9 @@ Faites valider le Lot A par votre encadrant une fois toutes les tâches terminé
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <PercentComplete>0</PercentComplete>
-            <RemainingDuration>PT24H0M0S</RemainingDuration>
+            <PercentComplete>5</PercentComplete>
+            <ActualDuration>PT1H12M0S</ActualDuration>
+            <RemainingDuration>PT22H48M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -738,12 +739,13 @@ Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement
             <UID>7</UID>
             <TaskUID>7</TaskUID>
             <ResourceUID>3</ResourceUID>
-            <PercentWorkComplete>0</PercentWorkComplete>
+            <PercentWorkComplete>5</PercentWorkComplete>
+            <ActualWork>PT1H12M0S</ActualWork>
             <Finish>2022-03-10T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT24H0M0S</RemainingWork>
+            <RemainingWork>PT22H48M0S</RemainingWork>
             <Start>2022-03-08T08:00:00</Start>
             <Units>1</Units>
             <Work>PT24H0M0S</Work>
