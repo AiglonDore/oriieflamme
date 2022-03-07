@@ -2,7 +2,7 @@
 #define CARTE_H
 
 /**
- * @brief Déclaration des cartes en utilisant un struct
+ * @brief DÃ©claration des cartes en utilisant un struct
  * @author Nour ELBESSI
  * @date 07/03/2022
  */
