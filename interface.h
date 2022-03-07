@@ -13,6 +13,12 @@
  */
 void affiche_plateau(Plateau p);
 
-
+/**
+ * @brief Fonction qui affiche la main de la faction pointée par f
+ * @return rien
+ * @param f faction en jeu
+ * @author Thomas Roiseux
+ */
+void affiche_main(Faction f);
 
 #endif //INTERFACE_H
