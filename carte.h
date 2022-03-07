@@ -7,7 +7,7 @@
  * @date 07/03/2022
  */
 
-// struct for a card
+// struct de carte
 typedef struct StructureCarte *Carte;
 
 
