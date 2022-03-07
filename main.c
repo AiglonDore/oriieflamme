@@ -1,7 +1,7 @@
 /**
  * @file main.c
  * @author Thomas Roiseux (thomas.roiseux@ensiie.fr)
- * @brief 
+ * @brief Fichier principal qui contrôle le programme
  * @version 0.1
  * @date 2022-03-07
  */
