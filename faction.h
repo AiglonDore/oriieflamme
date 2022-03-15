@@ -20,8 +20,8 @@ typedef struct StructureFactions *Faction;
 void a_remelange();
 //une fonction permettant à une faction d'utiliser l'option ci-dessus.
 
-void vider_sa_main(StructureCarte tab_carte[]);
-void melanger_pioche(StructureCarte tab_carte[], int n);
-void repiocher(StructureCarte tab_carte[]);
+void vider_sa_main(Carte tab_carte[]);
+void melanger_pioche(Carte tab_carte[], int n);
+void repiocher(Carte tab_carte[]);
 
 #endif
