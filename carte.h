@@ -1,15 +1,15 @@
+/**
+ * @file carte.h
+ * @author Nour ELBESSI
+ * @brief  Interface faction : interface en charge 
+ * des informations des cartes jeu.
+ * @date 2022-03-07
+ */
+
 #ifndef CARTE_H
 #define CARTE_H
 
-/**
- * @brief Déclaration des cartes en utilisant un struct
- * @author Nour ELBESSI
- * @date 07/03/2022
- */
-
-// struct de carte
+// Déclaration de faction (type abstrait)
 typedef struct StructureCarte *Carte;
-
-
 
 #endif
