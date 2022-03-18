@@ -13,6 +13,28 @@
 #include "faction.h"
 #include "plateau.h"
 
+/**
+ * @brief Fonction qui contrôle la phase 1
+ * 
+ * @param p Plateau de jeu.
+ */
+void phase1(Plateau p)
+{
+    Factions_en_jeu factions = factions_plateau(p);//Type concret donc free inutile
+    melanger(factions.left);
+    melanger(factions.right);
+    
+}
+
+/**
+ * @brief Fonction qui contrôle la phase 2
+ * 
+ * @param p Plateau de jeu.
+ */
+void phase2(Plateau p)
+{
+
+}
 
 /**
  * @brief Fonction principale qui controle le programme.
@@ -23,6 +45,9 @@
  */
 int main(int argc, char *argv[])
 {
-    
+    Plateau jeu = init_plateau();       //Initialise le plateau, les factions...
+
+    libere_plateau(jeu);
+    jeu = NULL;
     return 0;
 }
