@@ -19,12 +19,12 @@
  * 
  */
 
-struct bucket {
-  Faction f;
-  struct bucket *next;
+struct Factions_en_jeu {
+  Faction left;
+  Faction right;
 };
 
-typedef struct bucket * list;
+typedef struct Factions_en_jeu Factions_en_jeu;
 
 /**
  * @brief type abstrait pour le plateau de jeu
@@ -65,16 +65,18 @@ int nouvelle_manche(Plateau p);
  * 
  */
 
-list factions_plateau(Plateau p);
+Factions_en_jeu factions_plateau(Plateau p);
 
 /**
  * @brief permet à une faction de poser une carte face cachée sur le plateau
  * @param c carte valide
  * @param p plateau valide (le pointeur doit être valide)
+ * @param i position en abscisse dans le plateau souhaitée pour la carte
+ * @param j position en ordonnée dans le plateau souhaitée pour la carte
  * 
  */
 
-void poser_carte(Carte c, Plateau p);
+void poser_carte(Carte c, Plateau p, int i, int j);
 
 /**
  * @brief permet à une faction de retourner une carte face visible et activer son effet
