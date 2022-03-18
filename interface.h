@@ -58,11 +58,11 @@ int utiliser_option(Faction f);
 Carte a_poser_face_cachee_sur_plateau(Faction f);
 
 /**
- * @brief Affiche les effets de la carte c si elle est posée et retournée sur le plateau p.
+ * @brief Affiche les effets de la carte c si elle est posée.
  * @param p Plateau de jeu.
  * @param c Carte dont on veut afficher les effets
  */
-void affiche_effets(Plateau p, Carte c);
+void affiche_effets(Carte c);
 
 /**
  * @brief Affiche le vainquer de la partie.
