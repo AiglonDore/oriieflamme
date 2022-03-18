@@ -52,14 +52,14 @@ void libere_plateau(Plateau p);
 /**
  * @brief initialise une nouvelle manche ou indique que le jeu est terminé
  * @param p plateau valide (le pointeur doit être valide)
- * @return 0 si la partie continue, 1 si le jeu est terminé
+ * @return 1 si la partie continue, 0 si le jeu est terminé
  * 
  */
 
 int nouvelle_manche(Plateau p);
 
 /**
- * @brief renvoie la liste des deux factions du jeu
+ * @brief détermine la faction qui joue en premier et renvoie la liste des deux factions du jeu dont le premier élément est la faction qui joue en premier
  * @param p plateau valide (le pointeur doit être valide)
  * @return la liste des des factions du jeu
  * 
