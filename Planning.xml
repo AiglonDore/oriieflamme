@@ -4,7 +4,7 @@
     <Title>Project1</Title>
     <ScheduleFromStart>1</ScheduleFromStart>
     <StartDate>2022-03-07T08:00:00</StartDate>
-    <FinishDate>2022-03-18T17:00:00</FinishDate>
+    <FinishDate>2022-03-21T17:00:00</FinishDate>
     <FYStartDate>1</FYStartDate>
     <CriticalSlackLimit>0</CriticalSlackLimit>
     <CurrencyDigits>2</CurrencyDigits>
@@ -40,7 +40,7 @@
     <MoveCompletedEndsForward>0</MoveCompletedEndsForward>
     <BaselineForEarnedValue>0</BaselineForEarnedValue>
     <AutoAddNewResourcesAndTasks>1</AutoAddNewResourcesAndTasks>
-    <CurrentDate>2022-03-07T21:48:49</CurrentDate>
+    <CurrentDate>2022-03-18T17:57:01</CurrentDate>
     <MicrosoftProjectServerURL>1</MicrosoftProjectServerURL>
     <Autolink>1</Autolink>
     <NewTaskStartDate>0</NewTaskStartDate>
@@ -150,8 +150,8 @@
             <OutlineLevel>0</OutlineLevel>
             <Priority>500</Priority>
             <Start>2022-03-07T08:00:00</Start>
-            <Finish>2022-03-18T17:00:00</Finish>
-            <Duration>PT96H0M0S</Duration>
+            <Finish>2022-03-21T17:00:00</Finish>
+            <Duration>PT120H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
             <EffortDriven>0</EffortDriven>
@@ -165,7 +165,7 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <RemainingDuration>PT96H0M0S</RemainingDuration>
+            <RemainingDuration>PT120H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -232,8 +232,8 @@
             <OutlineLevel>1</OutlineLevel>
             <Priority>500</Priority>
             <Start>2022-03-08T08:00:00</Start>
-            <Finish>2022-03-11T17:00:00</Finish>
-            <Duration>PT32H0M0S</Duration>
+            <Finish>2022-03-17T17:00:00</Finish>
+            <Duration>PT64H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
             <EffortDriven>0</EffortDriven>
@@ -242,13 +242,13 @@
             <Estimated>0</Estimated>
             <Milestone>0</Milestone>
             <Summary>0</Summary>
-            <Critical>1</Critical>
+            <Critical>0</Critical>
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <PercentComplete>0</PercentComplete>
-            <RemainingDuration>PT32H0M0S</RemainingDuration>
+            <PercentComplete>100</PercentComplete>
+            <ActualDuration>PT64H0M0S</ActualDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -269,8 +269,8 @@
             <Active>1</Active>
             <Manual>1</Manual>
             <ManualStart>2022-03-08T08:00:00</ManualStart>
-            <ManualFinish>2022-03-11T17:00:00</ManualFinish>
-            <ManualDuration>PT32H0M0S</ManualDuration>
+            <ManualFinish>2022-03-17T17:00:00</ManualFinish>
+            <ManualDuration>PT64H0M0S</ManualDuration>
         </Task>
         <Task>
             <UID>2</UID>
@@ -293,14 +293,13 @@
             <Estimated>0</Estimated>
             <Milestone>0</Milestone>
             <Summary>0</Summary>
-            <Critical>1</Critical>
+            <Critical>0</Critical>
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <PercentComplete>25</PercentComplete>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <RemainingDuration>PT6H0M0S</RemainingDuration>
+            <PercentComplete>100</PercentComplete>
+            <ActualDuration>PT8H0M0S</ActualDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -328,8 +327,8 @@
             <OutlineLevel>1</OutlineLevel>
             <Priority>500</Priority>
             <Start>2022-03-08T08:00:00</Start>
-            <Finish>2022-03-11T17:00:00</Finish>
-            <Duration>PT32H0M0S</Duration>
+            <Finish>2022-03-17T17:00:00</Finish>
+            <Duration>PT64H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
             <EffortDriven>0</EffortDriven>
@@ -338,13 +337,13 @@
             <Estimated>0</Estimated>
             <Milestone>0</Milestone>
             <Summary>0</Summary>
-            <Critical>1</Critical>
+            <Critical>0</Critical>
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <PercentComplete>0</PercentComplete>
-            <RemainingDuration>PT32H0M0S</RemainingDuration>
+            <PercentComplete>100</PercentComplete>
+            <ActualDuration>PT64H0M0S</ActualDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -371,8 +370,8 @@
             <Active>1</Active>
             <Manual>1</Manual>
             <ManualStart>2022-03-08T08:00:00</ManualStart>
-            <ManualFinish>2022-03-11T17:00:00</ManualFinish>
-            <ManualDuration>PT32H0M0S</ManualDuration>
+            <ManualFinish>2022-03-17T17:00:00</ManualFinish>
+            <ManualDuration>PT64H0M0S</ManualDuration>
         </Task>
         <Task>
             <UID>10</UID>
@@ -431,9 +430,9 @@ tâches en sous-taches sur vous voulez.</Notes>
             <OutlineNumber>6</OutlineNumber>
             <OutlineLevel>1</OutlineLevel>
             <Priority>900</Priority>
-            <Start>2022-03-14T08:00:00</Start>
-            <Finish>2022-03-18T17:00:00</Finish>
-            <Duration>PT40H0M0S</Duration>
+            <Start>2022-03-18T08:00:00</Start>
+            <Finish>2022-03-21T17:00:00</Finish>
+            <Duration>PT16H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
             <EffortDriven>0</EffortDriven>
@@ -442,13 +441,13 @@ tâches en sous-taches sur vous voulez.</Notes>
             <Estimated>0</Estimated>
             <Milestone>0</Milestone>
             <Summary>0</Summary>
-            <Critical>1</Critical>
+            <Critical>0</Critical>
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <PercentComplete>0</PercentComplete>
-            <RemainingDuration>PT40H0M0S</RemainingDuration>
+            <PercentComplete>100</PercentComplete>
+            <ActualDuration>PT16H0M0S</ActualDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -505,9 +504,9 @@ Faites valider le Lot A par votre encadrant une fois toutes les tâches terminé
             </PredecessorLink>
             <Active>1</Active>
             <Manual>1</Manual>
-            <ManualStart>2022-03-14T08:00:00</ManualStart>
-            <ManualFinish>2022-03-18T17:00:00</ManualFinish>
-            <ManualDuration>PT40H0M0S</ManualDuration>
+            <ManualStart>2022-03-18T08:00:00</ManualStart>
+            <ManualFinish>2022-03-21T17:00:00</ManualFinish>
+            <ManualDuration>PT16H0M0S</ManualDuration>
         </Task>
         <Task>
             <UID>7</UID>
@@ -520,8 +519,8 @@ Faites valider le Lot A par votre encadrant une fois toutes les tâches terminé
             <OutlineLevel>1</OutlineLevel>
             <Priority>500</Priority>
             <Start>2022-03-08T08:00:00</Start>
-            <Finish>2022-03-10T17:00:00</Finish>
-            <Duration>PT24H0M0S</Duration>
+            <Finish>2022-03-17T17:00:00</Finish>
+            <Duration>PT64H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
             <EffortDriven>0</EffortDriven>
@@ -530,14 +529,13 @@ Faites valider le Lot A par votre encadrant une fois toutes les tâches terminé
             <Estimated>0</Estimated>
             <Milestone>0</Milestone>
             <Summary>0</Summary>
-            <Critical>1</Critical>
+            <Critical>0</Critical>
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <PercentComplete>5</PercentComplete>
-            <ActualDuration>PT1H12M0S</ActualDuration>
-            <RemainingDuration>PT22H48M0S</RemainingDuration>
+            <PercentComplete>100</PercentComplete>
+            <ActualDuration>PT64H0M0S</ActualDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -582,8 +580,8 @@ Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement
             <Active>1</Active>
             <Manual>1</Manual>
             <ManualStart>2022-03-08T08:00:00</ManualStart>
-            <ManualFinish>2022-03-10T17:00:00</ManualFinish>
-            <ManualDuration>PT24H0M0S</ManualDuration>
+            <ManualFinish>2022-03-17T17:00:00</ManualFinish>
+            <ManualDuration>PT64H0M0S</ManualDuration>
         </Task>
     </Tasks>
     <Resources>
@@ -598,7 +596,7 @@ Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement
             <PeakUnits>1</PeakUnits>
             <OverAllocated>0</OverAllocated>
             <Start>2022-03-07T08:00:00</Start>
-            <Finish>2022-03-11T17:00:00</Finish>
+            <Finish>2022-03-17T17:00:00</Finish>
             <CanLevel>0</CanLevel>
             <StandardRateFormat>3</StandardRateFormat>
             <OvertimeRateFormat>3</OvertimeRateFormat>
@@ -619,7 +617,7 @@ Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement
             <PeakUnits>1</PeakUnits>
             <OverAllocated>0</OverAllocated>
             <Start>2022-03-07T08:00:00</Start>
-            <Finish>2022-03-11T17:00:00</Finish>
+            <Finish>2022-03-17T17:00:00</Finish>
             <CanLevel>0</CanLevel>
             <StandardRateFormat>3</StandardRateFormat>
             <OvertimeRateFormat>3</OvertimeRateFormat>
@@ -640,7 +638,7 @@ Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement
             <PeakUnits>1</PeakUnits>
             <OverAllocated>0</OverAllocated>
             <Start>2022-03-07T08:00:00</Start>
-            <Finish>2022-03-18T17:00:00</Finish>
+            <Finish>2022-03-21T17:00:00</Finish>
             <CanLevel>0</CanLevel>
             <StandardRateFormat>3</StandardRateFormat>
             <OvertimeRateFormat>3</OvertimeRateFormat>
@@ -670,27 +668,26 @@ Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement
             <UID>2</UID>
             <TaskUID>18</TaskUID>
             <ResourceUID>2</ResourceUID>
-            <PercentWorkComplete>0</PercentWorkComplete>
-            <Finish>2022-03-11T17:00:00</Finish>
+            <PercentWorkComplete>100</PercentWorkComplete>
+            <ActualWork>PT64H0M0S</ActualWork>
+            <Finish>2022-03-17T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT32H0M0S</RemainingWork>
             <Start>2022-03-08T08:00:00</Start>
             <Units>1</Units>
-            <Work>PT32H0M0S</Work>
+            <Work>PT64H0M0S</Work>
         </Assignment>
         <Assignment>
             <UID>3</UID>
             <TaskUID>2</TaskUID>
             <ResourceUID>1</ResourceUID>
-            <PercentWorkComplete>25</PercentWorkComplete>
-            <ActualWork>PT2H0M0S</ActualWork>
+            <PercentWorkComplete>100</PercentWorkComplete>
+            <ActualWork>PT8H0M0S</ActualWork>
             <Finish>2022-03-07T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT6H0M0S</RemainingWork>
             <Start>2022-03-07T08:00:00</Start>
             <Units>1</Units>
             <Work>PT8H0M0S</Work>
@@ -699,15 +696,15 @@ Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement
             <UID>4</UID>
             <TaskUID>22</TaskUID>
             <ResourceUID>1</ResourceUID>
-            <PercentWorkComplete>0</PercentWorkComplete>
-            <Finish>2022-03-11T17:00:00</Finish>
+            <PercentWorkComplete>100</PercentWorkComplete>
+            <ActualWork>PT64H0M0S</ActualWork>
+            <Finish>2022-03-17T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT32H0M0S</RemainingWork>
             <Start>2022-03-08T08:00:00</Start>
             <Units>1</Units>
-            <Work>PT32H0M0S</Work>
+            <Work>PT64H0M0S</Work>
         </Assignment>
         <Assignment>
             <UID>5</UID>
@@ -727,30 +724,29 @@ Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement
             <UID>6</UID>
             <TaskUID>12</TaskUID>
             <ResourceUID>3</ResourceUID>
-            <PercentWorkComplete>0</PercentWorkComplete>
-            <Finish>2022-03-18T17:00:00</Finish>
+            <PercentWorkComplete>100</PercentWorkComplete>
+            <ActualWork>PT16H0M0S</ActualWork>
+            <Finish>2022-03-21T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT40H0M0S</RemainingWork>
-            <Start>2022-03-14T08:00:00</Start>
+            <Start>2022-03-18T08:00:00</Start>
             <Units>1</Units>
-            <Work>PT40H0M0S</Work>
+            <Work>PT16H0M0S</Work>
         </Assignment>
         <Assignment>
             <UID>7</UID>
             <TaskUID>7</TaskUID>
             <ResourceUID>3</ResourceUID>
-            <PercentWorkComplete>5</PercentWorkComplete>
-            <ActualWork>PT1H12M0S</ActualWork>
-            <Finish>2022-03-10T17:00:00</Finish>
+            <PercentWorkComplete>100</PercentWorkComplete>
+            <ActualWork>PT64H0M0S</ActualWork>
+            <Finish>2022-03-17T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT22H48M0S</RemainingWork>
             <Start>2022-03-08T08:00:00</Start>
             <Units>1</Units>
-            <Work>PT24H0M0S</Work>
+            <Work>PT64H0M0S</Work>
         </Assignment>
     </Assignments>
 </Project>

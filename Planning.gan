@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="lot_a" company="ENSIIE" webLink="http://" view-date="2022-02-23" view-index="0" gantt-divider-location="440" resource-divider-location="300" version="3.1.3103" locale="en_GB">
+<?xml version="1.0" encoding="UTF-8"?><project name="lot_a" company="ENSIIE" webLink="http://" view-date="2022-02-23" view-index="0" gantt-divider-location="440" resource-divider-location="300" version="3.1.3100" locale="en_GB">
     <description/>
     <view zooming-state="default:2" id="gantt-chart">
         <field id="tpd3" name="Name" width="100" order="0"/>
@@ -46,13 +46,13 @@
             <depend id="18" type="2" difference="0" hardness="Strong"/>
             <depend id="22" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="18" name="A.2.2" color="#8cb6ce" meeting="false" start="2022-03-08" duration="4" complete="0" thirdDate="2022-02-23" thirdDate-constraint="0" expand="true">
+        <task id="18" name="A.2.2" color="#8cb6ce" meeting="false" start="2022-03-08" duration="8" complete="100" thirdDate="2022-02-23" thirdDate-constraint="0" expand="true">
             <notes>
                 <![CDATA[Implémentation des prototypes]]>
             </notes>
             <depend id="12" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="2" name="A.3.1" color="#ff0000" meeting="false" start="2022-03-07" duration="1" complete="25" thirdDate="2022-02-23" thirdDate-constraint="0" priority="2" expand="true">
+        <task id="2" name="A.3.1" color="#ff0000" meeting="false" start="2022-03-07" duration="1" complete="100" thirdDate="2022-02-23" thirdDate-constraint="0" priority="2" expand="true">
             <notes>
                 <![CDATA[Création des types]]>
             </notes>
@@ -60,7 +60,7 @@
             <depend id="12" type="2" difference="0" hardness="Strong"/>
             <depend id="22" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="22" name="A.3.2" color="#ff0033" meeting="false" start="2022-03-08" duration="4" complete="0" thirdDate="2022-02-23" thirdDate-constraint="0" expand="true">
+        <task id="22" name="A.3.2" color="#ff0033" meeting="false" start="2022-03-08" duration="8" complete="100" thirdDate="2022-02-23" thirdDate-constraint="0" expand="true">
             <depend id="12" type="2" difference="0" hardness="Strong"/>
         </task>
         <task id="10" name="A.1.1" color="#0000cc" meeting="false" start="2022-03-07" duration="1" complete="100" thirdDate="2022-02-23" thirdDate-constraint="0" expand="true">
@@ -72,14 +72,14 @@ tâches en sous-taches sur vous voulez.]]>
             </notes>
             <depend id="12" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="12" name="A.1.2" color="#ffff00" meeting="false" start="2022-03-14" duration="5" complete="0" thirdDate="2022-02-23" thirdDate-constraint="0" priority="4" expand="true">
+        <task id="12" name="A.1.2" color="#ffff00" meeting="false" start="2022-03-18" duration="2" complete="100" thirdDate="2022-02-23" thirdDate-constraint="0" priority="4" expand="true">
             <notes>
                 <![CDATA[Codez le fichier main.c. Ce fichier devra utiliser toutes les fonctions et uniquement les fonctions qui auront été ajoutées dans les interfaces remplies par les autres membres du groupe. Remarque : ce fichier restera normalement inchangé tout le long du Lot B. Une fois ce dernier terminé, main.c pourra être compilé en un exécutable qui fera tourner le projet.
 Vérifiez, une fois toutes les interfaces rédigées par les autres membres, que votre fichier main.c compile sous forme de fichier objet main.o.
 Faites valider le Lot A par votre encadrant une fois toutes les tâches terminées.]]>
             </notes>
         </task>
-        <task id="7" name="A.4" color="#00ffcc" meeting="false" start="2022-03-08" duration="3" complete="5" thirdDate="2022-02-23" thirdDate-constraint="0" expand="true">
+        <task id="7" name="A.4" color="#00ffcc" meeting="false" start="2022-03-08" duration="8" complete="100" thirdDate="2022-02-23" thirdDate-constraint="0" expand="true">
             <notes>
                 <![CDATA[Le fichier interface.h est en charge d'échanger des informations avec les joueurs. Par exemple demander quelle carte la faction veut poser sur le plateau et à quel endroit, ou afficher le plateau de jeu en console.
 
