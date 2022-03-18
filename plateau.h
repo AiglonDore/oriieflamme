@@ -87,6 +87,7 @@ void poser_carte(Carte c, Plateau p, int i, int j);
  * @brief retourne la carte la plus en haut à gauche du plateau face visible et active son effet
  * @param p plateau valide (le pointeur doit être valide)
  * @return la carte que l'on a retourné face visible
+ * @return NULL s'il n'y a plus aucune carte à retourner
  * 
  */
 
