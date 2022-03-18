@@ -52,14 +52,14 @@ void libere_plateau(Plateau p);
 /**
  * @brief initialise une nouvelle manche ou indique que le jeu est terminé
  * @param p plateau valide (le pointeur doit être valide)
- * @return 0 si la partie continue, 1 si le jeu est terminé
+ * @return 1 si la partie continue, 0 si le jeu est terminé
  * 
  */
 
 int nouvelle_manche(Plateau p);
 
 /**
- * @brief renvoie la liste des deux factions du jeu
+ * @brief détermine la faction qui joue en premier et renvoie la liste des deux factions du jeu dont le premier élément est la faction qui joue en premier
  * @param p plateau valide (le pointeur doit être valide)
  * @return la liste des des factions du jeu
  * 
@@ -79,12 +79,11 @@ Factions_en_jeu factions_plateau(Plateau p);
 void poser_carte(Carte c, Plateau p, int i, int j);
 
 /**
- * @brief permet à une faction de retourner une carte face visible et activer son effet
- * @param c carte valide
+ * @brief retourne la carte la plus en haut à gauche du plateau face visible et active son effet
  * @param p plateau valide (le pointeur doit être valide)
  * 
  */
 
-void retourner_carte(Carte c, Plateau p);
+void retourner_carte(Plateau p);
 
 #endif // PLATEAU_H
