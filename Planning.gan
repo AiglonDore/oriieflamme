@@ -6,7 +6,7 @@
         <field id="tpd5" name="End date" width="91" order="2"/>
         <field id="tpd13" name="Resources" width="143" order="3"/>
         <option id="color.recent">
-            <![CDATA[#ff0033 #ffff00 #0000cc #00ffcc #ff0000]]>
+            <![CDATA[#0000ff #00cc33 #ffff99 #cc0033 #ff0000 #00ffff #ffcc00 #ff0033 #ffff00 #0000cc]]>
         </option>
     </view>
     <view id="resource-table">
@@ -78,7 +78,12 @@ tâches en sous-taches sur vous voulez.]]>
 Vérifiez, une fois toutes les interfaces rédigées par les autres membres, que votre fichier main.c compile sous forme de fichier objet main.o.
 Faites valider le Lot A par votre encadrant une fois toutes les tâches terminées.]]>
             </notes>
+            <depend id="61" type="2" difference="0" hardness="Strong"/>
         </task>
+        <task id="61" name="B.1" color="#0000ff" meeting="false" start="2022-03-22" duration="4" complete="5" thirdDate="2022-02-23" thirdDate-constraint="0" expand="true"/>
+        <task id="95" name="B.6" color="#00cc33" meeting="false" start="2022-03-22" duration="30" complete="0" thirdDate="2022-02-23" thirdDate-constraint="0" expand="true"/>
+        <task id="97" name="B.7" color="#00cc33" meeting="false" start="2022-03-22" duration="30" complete="0" thirdDate="2022-02-23" thirdDate-constraint="0" expand="true"/>
+        <task id="99" name="B.8" color="#0000ff" meeting="false" start="2022-03-22" duration="30" complete="0" thirdDate="2022-02-23" thirdDate-constraint="0" expand="true"/>
         <task id="7" name="A.4" color="#00ffcc" meeting="false" start="2022-03-08" duration="8" complete="100" thirdDate="2022-02-23" thirdDate-constraint="0" expand="true">
             <notes>
                 <![CDATA[Le fichier interface.h est en charge d'échanger des informations avec les joueurs. Par exemple demander quelle carte la faction veut poser sur le plateau et à quel endroit, ou afficher le plateau de jeu en console.
@@ -102,6 +107,10 @@ Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement
             </notes>
             <depend id="12" type="2" difference="0" hardness="Strong"/>
         </task>
+        <task id="74" name="B.2" color="#cc0033" meeting="false" start="2022-03-22" duration="30" complete="0" thirdDate="2022-02-23" thirdDate-constraint="0" expand="true"/>
+        <task id="77" name="B.3" color="#00cc33" meeting="false" start="2022-03-22" duration="30" complete="0" thirdDate="2022-02-23" thirdDate-constraint="0" expand="true"/>
+        <task id="82" name="B.4" color="#cc0033" meeting="false" start="2022-03-22" duration="30" complete="0" thirdDate="2022-02-23" thirdDate-constraint="0" expand="true"/>
+        <task id="85" name="B.5" color="#cc0033" meeting="false" start="2022-03-22" duration="30" complete="0" thirdDate="2022-02-23" thirdDate-constraint="0" expand="true"/>
     </tasks>
     <resources>
         <resource id="0" name="Valentin Gardel" function="SoftwareDevelopment:2" contacts="" phone=""/>
@@ -111,11 +120,19 @@ Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement
     <allocations>
         <allocation task-id="2" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
         <allocation task-id="22" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="77" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="95" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="97" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
         <allocation task-id="0" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
         <allocation task-id="18" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="74" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="82" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="85" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
         <allocation task-id="7" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
         <allocation task-id="10" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
         <allocation task-id="12" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="61" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="99" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
     </allocations>
     <vacations/>
     <previous/>
