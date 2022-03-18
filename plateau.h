@@ -15,7 +15,7 @@
 #include "faction.h"
 
 /**
- * @brief type concret pour les listes de factions
+ * @brief Structure pour les couples de factions
  * 
  */
 
@@ -23,6 +23,11 @@ struct Factions_en_jeu {
   Faction left;
   Faction right;
 };
+
+/**
+ * @brief Alias pour les couples de factions
+ * 
+ */
 
 typedef struct Factions_en_jeu Factions_en_jeu;
 
