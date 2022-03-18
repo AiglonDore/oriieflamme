@@ -1,8 +1,7 @@
 /**
  * @file faction.h
  * @author Nour ELBESSI
- * @brief  Interface faction : interface en charge 
- * des informations et des manipulations propre d'une faction.
+ * @brief  Interface faction : interface en charge des informations et des manipulations propre d'une faction.
  * @date 2022-03-07
  */
 
@@ -10,8 +9,7 @@
 #define FACTION_H
 
 /**
- * @brief type abstrait pour la faction 
- * qu'on définira dans faction.c
+ * @brief type abstrait pour la faction qu'on définira dans faction.c
  * 
  */
 typedef struct StructureFactions *Faction;
@@ -21,8 +19,7 @@ typedef struct StructureFactions *Faction;
  ****************************************/
 
 /**
- * @brief Savoir si une faction a itilisé l'option de remélanger sa main
- * et boîte à idée et de repiocher des cartes.
+ * @brief Savoir si une faction a itilisé l'option de remélanger sa main et boîte à idée et de repiocher des cartes.
  * @param f une faction
  * @return 0 si la main n'a pas été remélangé 
  * @return 1 si la main a été remélangé
