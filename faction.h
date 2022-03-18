@@ -54,6 +54,6 @@ void melanger_pioche(Faction f);
  * @brief Permet à une faction de repiocher ses cartes
  * @param f une faction
  */
-void repiocher(Faction f);
+void piocher(Faction f);
 
 #endif
