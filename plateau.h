@@ -79,12 +79,11 @@ Factions_en_jeu factions_plateau(Plateau p);
 void poser_carte(Carte c, Plateau p, int i, int j);
 
 /**
- * @brief permet à une faction de retourner une carte face visible et activer son effet
- * @param c carte valide
+ * @brief retourne la carte la plus en haut à gauche du plateau face visible et active son effet
  * @param p plateau valide (le pointeur doit être valide)
  * 
  */
 
-void retourner_carte(Carte c, Plateau p);
+void retourner_carte(Plateau p);
 
 #endif // PLATEAU_H
