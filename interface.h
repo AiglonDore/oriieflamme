@@ -13,7 +13,6 @@
 #include "faction.h"
 #include "plateau.h"
 
-
 /**
  * @brief Structure de couples d'entiers.
  * 
