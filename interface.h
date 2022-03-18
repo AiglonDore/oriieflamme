@@ -14,6 +14,21 @@
 #include "plateau.h"
 
 /**
+ * @brief Structure de couples d'entiers.
+ * 
+ */
+struct IntCouple {
+    int left;
+    int right;
+};
+
+/**
+ * @brief Alias pour les structures de couple
+ * 
+ */
+typedef struct IntCouple IntCouple;
+
+/**
  * @brief Fonction qui affiche le plateau de jeu
  * @param p plateau de jeu (pointeur devant être valide)
  * @return rien
@@ -60,5 +75,5 @@ void affiche_vainqueur(Plateau p);
  * 
  * @param p Plateau de jeu.
  */
-void demande_position(Plateau p);
+IntCouple demande_position(Plateau p);
 #endif //INTERFACE_H
