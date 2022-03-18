@@ -21,9 +21,24 @@
 void phase1(Plateau p)
 {
     Factions_en_jeu factions = factions_plateau(p);//Type concret donc free inutile
-    melanger(factions.left);
-    melanger(factions.right);
-    
+    melanger_pioche(factions.left);
+    melanger_pioche(factions.right);
+    piocher(factions.left);
+    piocher(factions.right);
+    //Joueur 1
+    affiche_main(factions.left);
+    if (!a_remelange(factions.left) && utiliser_option(factions.left))
+    {
+        melanger(factions.left);
+    }
+    //Joueur 2
+    affiche_main(factions.right);
+    if (!a_remelange(factions.right) && utiliser_option(factions.right))
+    {
+        melanger(factions.right);
+    }
+
+
 }
 
 /**
@@ -46,7 +61,10 @@ void phase2(Plateau p)
 int main(int argc, char *argv[])
 {
     Plateau jeu = init_plateau();       //Initialise le plateau, les factions...
-
+    while (nouvelle_manche(jeu))
+    {
+        
+    }
     libere_plateau(jeu);
     jeu = NULL;
     return 0;
