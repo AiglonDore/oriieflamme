@@ -9,19 +9,51 @@
 #ifndef FACTION_H
 #define FACTION_H
 
-#include "carte.h"
-
-// Déclaration de faction (type abstrait)
+/**
+ * @brief type abstrait pour la faction 
+ * qu'on définira dans faction.c
+ * 
+ */
 typedef struct StructureFactions *Faction;
 
-//Les prototypes des fonctions de faction.c
-// extern LISTE_T uneVariableListeGlobale;
+/*****************************************
+ * Prototypes des fonctions
+ ****************************************/
 
-void a_remelange();
-//une fonction permettant à une faction d'utiliser l'option ci-dessus.
+/**
+ * @brief Savoir si une faction a itilisé l'option de remélanger sa main
+ * et boîte à idée et de repiocher des cartes.
+ * @param f une faction
+ * @return 0 si la main n'a pas été remélangé 
+ * @return 1 si la main a été remélangé
+ */
 
-void vider_sa_main(Carte tab_carte[]);
-void melanger_pioche(Carte tab_carte[], int n);
-void repiocher(Carte tab_carte[]);
+int a_remelange(Faction f);
+
+/**
+ * @brief Permet à une faction de vider sa main, 
+ * vider sa pioche et repiocher ses cartes
+ * @param f une faction
+ */
+void melanger(Faction f);
+
+/**
+ * @brief Permet à une faction de vider sa main
+ * @param f une faction
+ */
+void vider_sa_main(Faction f);
+
+/**
+ * @brief Permet à une faction de mélanger sa pioche
+ * @param f une faction
+ */
+
+void melanger_pioche(Faction f);
+
+/**
+ * @brief Permet à une faction de repiocher ses cartes
+ * @param f une faction
+ */
+void repiocher(Faction f);
 
 #endif
