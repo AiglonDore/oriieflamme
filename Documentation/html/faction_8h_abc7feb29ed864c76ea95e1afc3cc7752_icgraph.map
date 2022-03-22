@@ -1,0 +1,5 @@
+<map id="melanger" name="melanger">
+<area shape="rect" id="node1" title="Permet à une faction de vider sa main, vider sa pioche et repiocher ses cartes." alt="" coords="225,5,309,32"/>
+<area shape="rect" id="node2" href="$main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="108,5,177,32"/>
+<area shape="rect" id="node3" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="5,5,60,32"/>
+</map>

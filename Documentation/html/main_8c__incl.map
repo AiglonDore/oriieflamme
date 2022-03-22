@@ -1,0 +1,8 @@
+<map id="src/main.c" name="src/main.c">
+<area shape="rect" id="node1" title="Fichier principal qui contrôle le programme." alt="" coords="189,5,279,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,80,76,107"/>
+<area shape="rect" id="node3" href="$interface_8h.html" title="Interface entre le plateau de jeu et le joueur." alt="" coords="151,80,317,107"/>
+<area shape="rect" id="node4" href="$carte_8h.html" title="Interface Carte : interface en charge des informations des cartes jeu." alt="" coords="157,229,223,256"/>
+<area shape="rect" id="node5" href="$faction_8h.html" title="Interface faction : interface en charge des informations et des manipulations propre d&#39;une faction." alt="" coords="280,229,359,256"/>
+<area shape="rect" id="node6" href="$plateau_8h.html" title="Interface pour gérer le plateau de jeu et le déroulement de la partie." alt="" coords="278,155,361,181"/>
+</map>

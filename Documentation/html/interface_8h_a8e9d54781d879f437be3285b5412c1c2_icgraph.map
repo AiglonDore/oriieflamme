@@ -1,0 +1,5 @@
+<map id="affiche_effets" name="affiche_effets">
+<area shape="rect" id="node1" title="Affiche les effets de la carte c si elle est posée." alt="" coords="225,5,336,32"/>
+<area shape="rect" id="node2" href="$main_8c.html#a34ccc9f1e0da464163a6f5e297c42563" title="Fonction qui contrôle la phase 2." alt="" coords="108,5,177,32"/>
+<area shape="rect" id="node3" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="5,5,60,32"/>
+</map>

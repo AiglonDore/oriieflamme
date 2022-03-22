@@ -1,0 +1,6 @@
+<map id="hearders/carte.h" name="hearders/carte.h">
+<area shape="rect" id="node1" title="Interface Carte : interface en charge des informations des cartes jeu." alt="" coords="7,5,135,32"/>
+<area shape="rect" id="node2" href="$interface_8h.html" title="Interface entre le plateau de jeu et le joueur." alt="" coords="26,155,180,181"/>
+<area shape="rect" id="node3" href="$main_8c.html" title="Fichier principal qui contrôle le programme." alt="" coords="58,229,148,256"/>
+<area shape="rect" id="node4" href="$plateau_8h.html" title="Interface pour gérer le plateau de jeu et le déroulement de la partie." alt="" coords="108,80,252,107"/>
+</map>

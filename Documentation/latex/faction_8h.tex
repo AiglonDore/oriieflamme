@@ -1,0 +1,176 @@
+\hypertarget{faction_8h}{}\doxysection{hearders/faction.h File Reference}
+\label{faction_8h}\index{hearders/faction.h@{hearders/faction.h}}
+
+
+Interface faction \+: interface en charge des informations et des manipulations propre d\textquotesingle{}une faction.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=269pt]{faction_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct Structure\+Factions $\ast$ \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}
+\begin{DoxyCompactList}\small\item\em type abstrait pour la faction qu\textquotesingle{}on définira dans faction.\+c \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{faction_8h_aaa0655066f74d90991cac0094fb8964a}{a\+\_\+remelange}} (\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f)
+\begin{DoxyCompactList}\small\item\em Savoir si une faction a itilisé l\textquotesingle{}option de remélanger sa main et boîte à idée et de repiocher des cartes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{faction_8h_abc7feb29ed864c76ea95e1afc3cc7752}{melanger}} (\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f)
+\begin{DoxyCompactList}\small\item\em Permet à une faction de vider sa main, vider sa pioche et repiocher ses cartes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{faction_8h_aa3b0b517bf0cba1c7d52fb4ca770fcdb}{vider\+\_\+sa\+\_\+main}} (\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f)
+\begin{DoxyCompactList}\small\item\em Permet à une faction de vider sa main. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{faction_8h_adf3497e77c11921394ac7ca7d2e6cbdb}{melanger\+\_\+pioche}} (\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f)
+\begin{DoxyCompactList}\small\item\em Permet à une faction de mélanger sa pioche. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{faction_8h_a5b400a1d1b3c89ef50e5bb4b98e177cb}{piocher}} (\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f)
+\begin{DoxyCompactList}\small\item\em Permet à une faction de repiocher ses cartes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface faction \+: interface en charge des informations et des manipulations propre d\textquotesingle{}une faction. 
+
+\begin{DoxyAuthor}{Author}
+Nour E\+L\+B\+E\+S\+SI 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2022-\/03-\/07 
+\end{DoxyDate}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{faction_8h_a0456d2a4764f54c3e638c612de27a485}\label{faction_8h_a0456d2a4764f54c3e638c612de27a485}} 
+\index{faction.h@{faction.h}!Faction@{Faction}}
+\index{Faction@{Faction}!faction.h@{faction.h}}
+\doxysubsubsection{\texorpdfstring{Faction}{Faction}}
+{\footnotesize\ttfamily typedef struct Structure\+Factions$\ast$ \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}
+
+
+
+type abstrait pour la faction qu\textquotesingle{}on définira dans faction.\+c 
+
+
+
+Definition at line 15 of file faction.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{faction_8h_aaa0655066f74d90991cac0094fb8964a}\label{faction_8h_aaa0655066f74d90991cac0094fb8964a}} 
+\index{faction.h@{faction.h}!a\_remelange@{a\_remelange}}
+\index{a\_remelange@{a\_remelange}!faction.h@{faction.h}}
+\doxysubsubsection{\texorpdfstring{a\_remelange()}{a\_remelange()}}
+{\footnotesize\ttfamily int a\+\_\+remelange (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f }\end{DoxyParamCaption})}
+
+
+
+Savoir si une faction a itilisé l\textquotesingle{}option de remélanger sa main et boîte à idée et de repiocher des cartes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & une faction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 si la main n\textquotesingle{}a pas été remélangé 
+
+1 si la main a été remélangé 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{faction_8h_aaa0655066f74d90991cac0094fb8964a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{faction_8h_abc7feb29ed864c76ea95e1afc3cc7752}\label{faction_8h_abc7feb29ed864c76ea95e1afc3cc7752}} 
+\index{faction.h@{faction.h}!melanger@{melanger}}
+\index{melanger@{melanger}!faction.h@{faction.h}}
+\doxysubsubsection{\texorpdfstring{melanger()}{melanger()}}
+{\footnotesize\ttfamily void melanger (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f }\end{DoxyParamCaption})}
+
+
+
+Permet à une faction de vider sa main, vider sa pioche et repiocher ses cartes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & une faction \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{faction_8h_abc7feb29ed864c76ea95e1afc3cc7752_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{faction_8h_adf3497e77c11921394ac7ca7d2e6cbdb}\label{faction_8h_adf3497e77c11921394ac7ca7d2e6cbdb}} 
+\index{faction.h@{faction.h}!melanger\_pioche@{melanger\_pioche}}
+\index{melanger\_pioche@{melanger\_pioche}!faction.h@{faction.h}}
+\doxysubsubsection{\texorpdfstring{melanger\_pioche()}{melanger\_pioche()}}
+{\footnotesize\ttfamily void melanger\+\_\+pioche (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f }\end{DoxyParamCaption})}
+
+
+
+Permet à une faction de mélanger sa pioche. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & une faction \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{faction_8h_adf3497e77c11921394ac7ca7d2e6cbdb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{faction_8h_a5b400a1d1b3c89ef50e5bb4b98e177cb}\label{faction_8h_a5b400a1d1b3c89ef50e5bb4b98e177cb}} 
+\index{faction.h@{faction.h}!piocher@{piocher}}
+\index{piocher@{piocher}!faction.h@{faction.h}}
+\doxysubsubsection{\texorpdfstring{piocher()}{piocher()}}
+{\footnotesize\ttfamily void piocher (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f }\end{DoxyParamCaption})}
+
+
+
+Permet à une faction de repiocher ses cartes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & une faction \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{faction_8h_a5b400a1d1b3c89ef50e5bb4b98e177cb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{faction_8h_aa3b0b517bf0cba1c7d52fb4ca770fcdb}\label{faction_8h_aa3b0b517bf0cba1c7d52fb4ca770fcdb}} 
+\index{faction.h@{faction.h}!vider\_sa\_main@{vider\_sa\_main}}
+\index{vider\_sa\_main@{vider\_sa\_main}!faction.h@{faction.h}}
+\doxysubsubsection{\texorpdfstring{vider\_sa\_main()}{vider\_sa\_main()}}
+{\footnotesize\ttfamily void vider\+\_\+sa\+\_\+main (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f }\end{DoxyParamCaption})}
+
+
+
+Permet à une faction de vider sa main. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & une faction \\
+\hline
+\end{DoxyParams}

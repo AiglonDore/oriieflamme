@@ -1,0 +1,22 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title="Fonction principale qui controle le programme." alt="" coords="5,198,60,225"/>
+<area shape="rect" id="node2" href="$interface_8h.html#a802545d4ff1c158f7a2ca77be20915f9" title="Affiche le vainquer de la partie." alt="" coords="108,71,247,98"/>
+<area shape="rect" id="node3" href="$plateau_8h.html#a48e20516b8894156393d7f0f2da54ce2" title="crée un plateau et les deux factions qui joueront dessuss" alt="" coords="128,122,227,149"/>
+<area shape="rect" id="node4" href="$plateau_8h.html#aa2fd2fef89b903a5c089bf57cb932e29" title="libère la mémoire associée au plateau de jeu et aux deux factions" alt="" coords="120,173,235,199"/>
+<area shape="rect" id="node5" href="$plateau_8h.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="109,223,246,250"/>
+<area shape="rect" id="node6" href="$main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="143,274,212,301"/>
+<area shape="rect" id="node17" href="$main_8c.html#a34ccc9f1e0da464163a6f5e297c42563" title="Fonction qui contrôle la phase 2." alt="" coords="143,553,212,579"/>
+<area shape="rect" id="node7" href="$interface_8h.html#a59cec6e54845df8ae5160bd8b2a351c2" title="Fonction qui demande la carte qui sera posée face cachée sur le plateau." alt="" coords="295,5,456,47"/>
+<area shape="rect" id="node8" href="$faction_8h.html#aaa0655066f74d90991cac0094fb8964a" title="Savoir si une faction a itilisé l&#39;option de remélanger sa main et boîte à idée et de repiocher des ca..." alt="" coords="322,71,429,98"/>
+<area shape="rect" id="node9" href="$interface_8h.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="322,122,429,149"/>
+<area shape="rect" id="node10" href="$interface_8h.html#ae31ac3b00204cf79a078399e83c900f5" title="Fonction qui demande à quelle position doit être placée la carte." alt="" coords="304,173,447,199"/>
+<area shape="rect" id="node11" href="$plateau_8h.html#ab023dd151ba2f8cf843b792a3434b8f5" title="détermine la faction qui joue en premier et renvoie la liste des deux factions du jeu dont le premier..." alt="" coords="310,223,441,250"/>
+<area shape="rect" id="node12" href="$faction_8h.html#abc7feb29ed864c76ea95e1afc3cc7752" title="Permet à une faction de vider sa main, vider sa pioche et repiocher ses cartes." alt="" coords="333,274,417,301"/>
+<area shape="rect" id="node13" href="$faction_8h.html#adf3497e77c11921394ac7ca7d2e6cbdb" title="Permet à une faction de mélanger sa pioche." alt="" coords="308,325,443,351"/>
+<area shape="rect" id="node14" href="$faction_8h.html#a5b400a1d1b3c89ef50e5bb4b98e177cb" title="Permet à une faction de repiocher ses cartes." alt="" coords="340,375,411,402"/>
+<area shape="rect" id="node15" href="$plateau_8h.html#a425437529596e13babd7bc8b4e04d491" title="permet à une faction de poser une carte face cachée sur le plateau" alt="" coords="326,426,425,453"/>
+<area shape="rect" id="node16" href="$interface_8h.html#aea24bb8bc24a5877aba14a3879602c7b" title="Fonction qui demande si la faction pointée par f veut utiliser son option." alt="" coords="318,477,433,503"/>
+<area shape="rect" id="node18" href="$interface_8h.html#a8e9d54781d879f437be3285b5412c1c2" title="Affiche les effets de la carte c si elle est posée." alt="" coords="320,527,431,554"/>
+<area shape="rect" id="node19" href="$interface_8h.html#a8bb576a3127fc3437d91467ec19d0de0" title="Fonction qui affiche le plateau de jeu." alt="" coords="314,578,437,605"/>
+<area shape="rect" id="node20" href="$plateau_8h.html#a41cddf8d1f1e457df2f4c905d6605151" title="retourne la carte la plus en haut à gauche du plateau face visible et active son effet" alt="" coords="314,629,437,655"/>
+</map>

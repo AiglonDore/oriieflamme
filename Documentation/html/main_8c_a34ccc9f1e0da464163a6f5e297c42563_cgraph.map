@@ -1,0 +1,6 @@
+<map id="phase2" name="phase2">
+<area shape="rect" id="node1" title="Fonction qui contrôle la phase 2." alt="" coords="5,56,75,83"/>
+<area shape="rect" id="node2" href="$interface_8h.html#a8e9d54781d879f437be3285b5412c1c2" title="Affiche les effets de la carte c si elle est posée." alt="" coords="129,5,239,32"/>
+<area shape="rect" id="node3" href="$interface_8h.html#a8bb576a3127fc3437d91467ec19d0de0" title="Fonction qui affiche le plateau de jeu." alt="" coords="123,56,245,83"/>
+<area shape="rect" id="node4" href="$plateau_8h.html#a41cddf8d1f1e457df2f4c905d6605151" title="retourne la carte la plus en haut à gauche du plateau face visible et active son effet" alt="" coords="123,107,245,133"/>
+</map>

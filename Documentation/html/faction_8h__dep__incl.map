@@ -1,0 +1,6 @@
+<map id="hearders/faction.h" name="hearders/faction.h">
+<area shape="rect" id="node1" title="Interface faction : interface en charge des informations et des manipulations propre d&#39;une faction." alt="" coords="5,5,145,32"/>
+<area shape="rect" id="node2" href="$interface_8h.html" title="Interface entre le plateau de jeu et le joueur." alt="" coords="31,155,184,181"/>
+<area shape="rect" id="node3" href="$main_8c.html" title="Fichier principal qui contrôle le programme." alt="" coords="63,229,152,256"/>
+<area shape="rect" id="node4" href="$plateau_8h.html" title="Interface pour gérer le plateau de jeu et le déroulement de la partie." alt="" coords="113,80,257,107"/>
+</map>
