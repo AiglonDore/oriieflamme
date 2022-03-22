@@ -8,10 +8,10 @@
 
 #include <stdlib.h>
 
-#include "../hearders/interface.h"
-#include "../hearders/carte.h"
-#include "../hearders/faction.h"
-#include "../hearders/plateau.h"
+#include "../headers/interface.h"
+#include "../headers/carte.h"
+#include "../headers/faction.h"
+#include "../headers/plateau.h"
 
 /**
  * @brief Fonction qui contrôle la phase 1

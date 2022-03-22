@@ -12,15 +12,15 @@ oriieflamme.out : main.o carte.o faction.o interface.o plateau.o
 %.o : %.c
 	$(CC) $(FLAGS) -c -o obj/$@ src/$<
 
-main.o : hearders/carte.h hearders/faction.h hearders/interface.h hearders/plateau.h
+main.o : headers/carte.h headers/faction.h headers/interface.h headers/plateau.h
 
-carte.o : hearders/carte.h
+carte.o : headers/carte.h
 
-faction.o : hearders/faction.h hearders/carte.h
+faction.o : headers/faction.h headers/carte.h
 
-interface.o : hearders/carte.h hearders/faction.h hearders/interface.h hearders/plateau.h
+interface.o : headers/carte.h headers/faction.h headers/interface.h headers/plateau.h
 
-plateau.o : hearders/plateau.h hearders/carte.h hearders/faction.h
+plateau.o : headers/plateau.h headers/carte.h headers/faction.h
 
 clean :
 	cd bin
