@@ -12,12 +12,12 @@ oriieflamme.out : main.o carte.o faction.o interface.o plateau.o
 %.o : %.c
 	$(CC) $(FLAGS) -c -o obj/$@ src/$<
 
-main.o : carte.h faction.h interface.h plateau.h
+main.o : hearders/carte.h hearders/faction.h hearders/interface.h hearders/plateau.h
 
-carte.o : carte.h
+carte.o : hearders/carte.h
 
-faction.o : faction.h carte.h
+faction.o : hearders/faction.h hearders/carte.h
 
-interface.o : carte.h faction.h interface.h plateau.h
+interface.o : hearders/carte.h hearders/faction.h hearders/interface.h hearders/plateau.h
 
-plateau.o : plateau.h carte.h faction.h
+plateau.o : hearders/plateau.h hearders/carte.h hearders/faction.h
