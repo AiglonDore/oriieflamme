@@ -21,3 +21,10 @@ faction.o : hearders/faction.h hearders/carte.h
 interface.o : hearders/carte.h hearders/faction.h hearders/interface.h hearders/plateau.h
 
 plateau.o : hearders/plateau.h hearders/carte.h hearders/faction.h
+
+clean :
+	cd bin
+	rm -f -i -v *.out
+	cd ..\obj
+	rm -f -i -v *.o
+	cd ..
