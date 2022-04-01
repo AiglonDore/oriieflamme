@@ -1,6 +1,6 @@
 /**
  * @file carte.c
- * @author Nour Elbessi & Valentin Gardel
+ * @author Nour Elbessi
  * @brief Implantation de l'interface en charge des informations des cartes du jeu
  * @version 0.1
  * @date 2022-03-22
@@ -14,6 +14,10 @@
  *
  */
 
+#include "../headers/carte.h"
+#include "../headers/faction.h"
+#include "../headers/structure.h"
+
 struct StructureCarte
 {
     char *nom;
@@ -21,3 +25,42 @@ struct StructureCarte
     int nb_occ;
     int est_cachee;
 };
+
+/**************************************************
+ * Implémentation des getters et setters
+ ***************************************************/
+
+char *get_nom(Carte c)
+{
+    return c->nom;
+}
+
+void set_nom(Carte c, char *nom_carte)
+{
+    c->nom = nom_carte;
+}
+
+char *get_description(Carte c)
+{
+    return c->nom;
+}
+
+void set_description(Carte c, char *description_carte)
+{
+    c->description = description_carte;
+}
+
+int get_nb_occ(Carte c)
+{
+    return c->nb_occ;
+}
+
+int get_est_cachee(Carte c)
+{
+    return c->est_cachee;
+}
+
+void set_est_cachee(Carte c, int x)
+{
+    c->est_cachee = x;
+}

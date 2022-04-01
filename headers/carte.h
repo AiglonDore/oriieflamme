@@ -105,4 +105,61 @@ char *description[32] = {
  * Création des prototypes des getters et setters
  ***************************************************/
 
+/**
+ * @brief Prototype de get_nom qui permet de récupérer le nom de la carte
+ *
+ * @param c
+ * @return char*
+ */
+
+char *get_nom(Carte c);
+
+/**
+ * @brief Prototype de set_nom qui permet d'initialiser le nom de la carte.
+ *
+ * @param c
+ * @param nom_carte
+ */
+void set_nom(Carte c, char *nom_carte);
+
+/**
+ * @brief Prototype de get_description qui permet de récupérer la description de la carte
+ *
+ * @param c
+ * @return char*
+ */
+char *get_description(Carte c);
+
+/**
+ * @brief Prototype de set_description qui permet d'initialiser la description de la carte.
+ *
+ * @param c
+ * @param description_carte
+ */
+void set_description(Carte c, char *description_carte);
+
+/**
+ * @brief Prototype de get_nb_occ qui permet de récupérer le nombre d'occurence d'une carte
+ *
+ * @param c
+ * @return int
+ */
+int get_nb_occ(Carte c);
+
+/**
+ * @brief Prototype de get_est_cachee qui permet de récupérer un entier qui indique si la face est cachée ou pas.
+ *
+ * @param c
+ * @return int
+ */
+int get_est_cachee(Carte c);
+
+/**
+ * @brief Prototype de set_est_cachee qui permet de changer la valeur associé à la face d'une carte: 0 Face non cachée et 1 face cachée
+ *
+ * @param c
+ * @param x
+ */
+void set_est_cachee(Carte c, int x);
+
 #endif
