@@ -9,10 +9,10 @@
  *
  */
 
-#include "plateau.h"
-#include "carte.h"
-#include "faction.h"
-#include "structure.h"
+#include "../headers/plateau.h"
+#include "../headers/carte.h"
+#include "../headers/faction.h"
+#include "../headers/structure.h"
 
 /**
  * @brief type concret vers lequel pointe le plateau de jeu
