@@ -1,7 +1,7 @@
 /**
  * @file structure.c
  * @author Valentin Gardel (valentin.gardel@ensiie.fr)
- * @brief Implémentationd de l'interface pour gérer le plateau de jeu et le déroulement de la partie
+ * @brief Implémentation de l'interface pour gérer le plateau de jeu et le déroulement de la partie
  * @version 0.1
  * @date 2022-04-01
  * 

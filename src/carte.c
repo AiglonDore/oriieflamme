@@ -10,7 +10,7 @@
  */
 
 /**
- * @brief type concret pour la faction
+ * @brief type concret pour la faction, est_cachee vaut 1 si la carte est posée face cachée, 0 sinon
  *
  */
 
@@ -19,4 +19,5 @@ struct StructureCarte
     char *nom;
     char *description;
     int nb_occ;
+    int est_cachee;
 };

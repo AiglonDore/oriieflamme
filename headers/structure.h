@@ -55,6 +55,14 @@ struct Coord_carte {
 
 typedef struct Coord_carte Coord_carte;
 
+
+/**
+ * @brief type concret pour la main d'une faction
+ * 
+ */
+
+typedef Carte Main[8];
+
 /**
  * @brief type abstrait pour la pioche d'une faction
  * 
@@ -63,10 +71,37 @@ typedef struct Coord_carte Coord_carte;
 typedef struct s_pioche *Pioche;
 
 /**
- * @brief type concret pour la main d'une faction
- * 
+ * @brief Savoir si une faction a itilisé l'option de remélanger sa main et boîte à idée et de repiocher des cartes.
+ * @param f une faction
+ * @return 0 si la main n'a pas été remélangé 
+ * @return 1 si la main a été remélangé
  */
 
-typedef Carte Main[8];
+Pioche creation_pioche_vide();
+
+/**
+ * @brief indique si la pioche est vide ou non
+ * @param p une pioche valide
+ * @return 0 si la pioche n'est pas vide
+ * @return 1 si la pioche est vide
+ */
+
+int pioche_est_vide(Pioche p);
+
+/**
+ * @brief ajoute la carte à la pioche au sommet de celle-ci
+ * @param p une pioche valide
+ * @param c une carte valide
+ */
+
+void ajout_pioche(Pioche p, Carte c);
+
+/**
+ * @brief enlève la carte au sommet de la pioche (on suppose la pioche non vide)
+ * @param p une pioche valide
+ * @return la carte qui a été retirée
+ */
+
+Carte enleve_pioche(Pioche p);
 
 #endif // STRUCTURE_H

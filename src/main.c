@@ -12,6 +12,7 @@
 #include "../headers/carte.h"
 #include "../headers/faction.h"
 #include "../headers/plateau.h"
+#include "../headers/structure.h"
 
 /**
  * @brief Fonction qui contrôle la phase 1
