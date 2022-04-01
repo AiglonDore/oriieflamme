@@ -20,8 +20,8 @@ typedef struct StructureCarte *Carte
      * Déclaration des constantes et variables globales relative aux cartes. Nombre de carte fixe à 8, et une énumération des nom de cartes, ainsi qu'une déclaration des effets.
      *
      */
-    const int nb_cartes = 8;
 
+    const int nb_cartes = 8;
 typedef enum nom_carte
 {
     FISE,
