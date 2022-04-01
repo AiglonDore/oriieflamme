@@ -13,15 +13,15 @@
  * @brief type abstrait pour la faction qu'on définira dans carte.c
  *
  */
-typedef struct StructureCarte *Carte
+typedef struct StructureCarte *Carte;
 
-    /**
-     * @brief
-     * Déclaration des constantes et variables globales relative aux cartes. Nombre de carte fixe à 8, et une énumération des nom de cartes, ainsi qu'une déclaration des effets.
-     *
-     */
+/**
+ * @brief
+ * Déclaration des constantes et variables globales relative aux cartes. Nombre de carte fixe à 8, et une énumération des nom de cartes, ainsi qu'une déclaration des effets.
+ *
+ */
 
-    const int nb_cartes = 8;
+const int nb_cartes = 8;
 
 typedef enum nom_carte
 {
@@ -72,8 +72,7 @@ char *description[32] = {
     "La faction qui a posé cette carte gagne 2 points DDRS si le nombre de cartes retournées sur le plateau (y compris celle-ci) est pair, et 0 sinon.",
     "La faction qui a posé cette carte gagne 4 points DDRS si au moins une autre carte FC est retournée sur le plateau et 0 sinon",
     "La faction qui a posé cette carte gagne 1 point DDRS par carte FISE/FISA/FC retournée.",
-    "Prenez toutes les cartes FISE/FISA/FC retournées, retirez les du plateau, mélangez les et reposez les face cachées une par une sur la gauche de la carte la plus en haut à gauche du plateau, dans cet ordre. Les prochaines cartes à être retournées sont ces cartes là.	2
-    Soirée sans alcool Si au moins une carte alcool est retournée supprimez toutes ",
+    "Prenez toutes les cartes FISE/FISA/FC retournées, retirez les du plateau, mélangez les et reposez les face cachées une par une sur la gauche de la carte la plus en haut à gauche du plateau, dans cet ordre. Les prochaines cartes à être retournées sont ces cartes là.",
     "Si au moins une carte alcool est retournée, supprimez toutes les cartes FISE/FISA/FC retournées du plateau. Supprimez ensuite la première et la dernière ligne du plateau. Sinon la faction qui a posé cette carte gagne 5 points DDRS.",
     "Supprimez du plateau toutes les cartes qui touchent cette carte-ci (mais laissez la carte Alcool sur le plateau).",
     "Supprimez toutes les cartes Thé et Alcool retournées sur le plateau. Si une carte Ecocup est retournée sur le plateau, la faction qui a posé cette carte gagne 1 point DDRS. Sinon elle perd 1 point DDRS.",
@@ -101,5 +100,9 @@ char *description[32] = {
     "S'il y a une carte FISA retournée dans la même ligne ou la même colonne que cette carte, la faction qui a posé cette carte gagne 5 points DDRS.",
     "Si les cartes Djibril-Aurélien Djembele-Cabeau, Eric Lejeune et Lucienne Pacavé sont retournées, la faction qui a posé cette carte gagne 10 points DDRS. Sinon, retournez toutes les cartes dans la même ligne de cette carte sans appliquer leurs effets.",
     "Si Laurent Prével est la dernière carte retournée du plateau, la faction qui a posé cette carte gagne la manche, quel que soit le nombre de points DDRS des deux factions."};
+
+/**************************************************
+ * Création des prototypes des getters et setters
+ ***************************************************/
 
 #endif
