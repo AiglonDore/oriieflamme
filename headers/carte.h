@@ -22,6 +22,7 @@ typedef struct StructureCarte *Carte
      */
 
     const int nb_cartes = 8;
+
 typedef enum nom_carte
 {
     FISE,
