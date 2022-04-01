@@ -9,8 +9,6 @@
  * 
  */
 
-#ifndef _STRUCTURE_H
-#define _STRUCTURE_H
 #include "../headers/carte.h"
 #include "../headers/faction.h"
 #include "../headers/structure.h"
@@ -79,5 +77,3 @@ Carte enleve_pioche(Pioche p) {
   p->top-=1;
   return c;
 }
-
-#endif // STRUCTURE_H
