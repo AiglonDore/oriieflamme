@@ -10,6 +10,7 @@
  */
 
 #include <stdlib.h>
+#include <stdio.h>
 #include "../headers/plateau.h"
 #include "../headers/carte.h"
 #include "../headers/faction.h"
@@ -166,4 +167,12 @@ void poser_carte(Carte c, Plateau p, int i, int j) {
  *
  */
 
-Carte retourner_carte(Plateau p);
+Carte retourner_carte(Plateau p) {
+    Coord coord = p->carte_haut_gauche;
+    Carte c = p->plateau_jeu[coord.i][coord.j];
+    set_est_cachee(c, 0);
+    id_carte id = get_id(c);
+    // Traitement des effets
+    // Mise à jour des constantes du plateau
+    return c;
+}
