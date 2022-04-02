@@ -24,7 +24,15 @@ const int nb_maches_gagnantes = 2;
 typedef struct s_plateau *Plateau;
 
 /**
- * @brief crée un plateau et les deux factions qui joueront dessuss
+ * @brief crée la pioche avec les 32 cartes de l'énoncé pour la faction donnée
+ * @param f faction valide (le pointeur doit être valide)
+ *
+ */
+
+void init_pioche(Faction f);
+
+/**
+ * @brief crée un plateau et les deux factions qui joueront dessus
  * @return le plateau initialisé
  *
  */

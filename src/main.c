@@ -42,12 +42,12 @@ void phase1(Plateau p)
     {
         affiche_main(factions.left);
         Carte a_poser = a_poser_face_cachee_sur_plateau(factions.left);
-        IntCouple position = demande_position(p);
-        poser_carte(a_poser,p,position.left,position.right);
+        Coord position = demande_position(p);
+        poser_carte(a_poser,p,position.i,position.j);
         affiche_main(factions.right);
         a_poser = a_poser_face_cachee_sur_plateau(factions.right);
         position = demande_position(p);
-        poser_carte(a_poser,p,position.left,position.right);
+        poser_carte(a_poser,p,position.i,position.j);
     }
 }
 

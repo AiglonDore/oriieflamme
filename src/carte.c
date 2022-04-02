@@ -20,6 +20,7 @@
 
 struct StructureCarte
 {
+    id_carte id;
     char *nom;
     char *description;
     int nb_occ;
@@ -29,6 +30,14 @@ struct StructureCarte
 /**************************************************
  * Implémentation des getters et setters
  ***************************************************/
+
+id_carte get_id(Carte c) {
+    return c->id;
+}
+
+void set_id(Carte c, id_carte id) {
+    c->id = id;
+}
 
 char *get_nom(Carte c)
 {
@@ -53,6 +62,10 @@ void set_description(Carte c, char *description_carte)
 int get_nb_occ(Carte c)
 {
     return c->nb_occ;
+}
+
+void set_nb_occ(Carte c, int x) {
+    c->nb_occ = x;
 }
 
 int get_est_cachee(Carte c)

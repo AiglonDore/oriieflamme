@@ -12,21 +12,14 @@
 #include "carte.h"
 #include "faction.h"
 #include "plateau.h"
+#include "structure.h"
 
 /**
- * @brief Structure de couples d'entiers.
- * 
+ * @brief Fonction qui affiche le plateau de jeu
+ * @param p plateau de jeu (pointeur devant être valide)
+ * @return rien
  */
-struct IntCouple {
-    int left;
-    int right;
-};
-
-/**
- * @brief Alias pour les structures de couple
- * 
- */
-typedef struct IntCouple IntCouple;
+char * nom_faction(Faction f);
 
 /**
  * @brief Fonction qui affiche le plateau de jeu
@@ -75,5 +68,6 @@ void affiche_vainqueur(Plateau p);
  * 
  * @param p Plateau de jeu.
  */
-IntCouple demande_position(Plateau p);
+Coord demande_position(Plateau p);
+
 #endif //INTERFACE_H

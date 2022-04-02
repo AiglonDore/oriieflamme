@@ -43,7 +43,7 @@ typedef struct Factions_en_jeu Factions_en_jeu;
  * 
  */
 
-struct Coord_carte {
+struct Coord {
   int i;
   int j;
 };
@@ -53,7 +53,7 @@ struct Coord_carte {
  * 
  */
 
-typedef struct Coord_carte Coord_carte;
+typedef struct Coord Coord;
 
 
 /**

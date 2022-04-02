@@ -57,7 +57,7 @@ typedef enum nom_carte
     Lucienne_Pacave,
     Katrin_Salhab,
     Laurent_Prevel
-} nom_carte;
+} id_carte;
 
 char *nom_carte[32] = {"FISE", "FISA", "FC", "EcologIIE", "lIIEns", "Soiree_sans_alcool", "Alcool",
                        "Cafe", "The", "Ecocup", "Reprographie", "Isolation_batiment", "Parcous_sobriete_mumerique",
@@ -101,9 +101,29 @@ char *description[32] = {
     "Si les cartes Djibril-Aurélien Djembele-Cabeau, Eric Lejeune et Lucienne Pacavé sont retournées, la faction qui a posé cette carte gagne 10 points DDRS. Sinon, retournez toutes les cartes dans la même ligne de cette carte sans appliquer leurs effets.",
     "Si Laurent Prével est la dernière carte retournée du plateau, la faction qui a posé cette carte gagne la manche, quel que soit le nombre de points DDRS des deux factions."};
 
+int nb_occ[32] = {4, 4, 4, 2, 2, 1, 1, 3, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+
 /**************************************************
  * Création des prototypes des getters et setters
  ***************************************************/
+
+/**
+ * @brief Prototype de get_id qui permet de récupérer l'id de la carte
+ *
+ * @param c
+ * @return id_carte
+ */
+
+id_carte get_id(Carte c);
+
+/**
+ * @brief Prototype de set_id qui permet d'initialiser l'id de la carte.
+ *
+ * @param c
+ * @param id
+ */
+
+void set_id(Carte c, id_carte id);
 
 /**
  * @brief Prototype de get_nom qui permet de récupérer le nom de la carte
@@ -139,12 +159,20 @@ char *get_description(Carte c);
 void set_description(Carte c, char *description_carte);
 
 /**
- * @brief Prototype de get_nb_occ qui permet de récupérer le nombre d'occurence d'une carte
+ * @brief Prototype de get_nb_occ qui permet de récupérer le nombre d'occurences d'une carte
  *
  * @param c
  * @return int
  */
 int get_nb_occ(Carte c);
+
+/**
+ * @brief Prototype de set_nb_occ qui permet d'initialiser le nombre d'occurences d'une carte
+ *
+ * @param c
+ * @param x
+ */
+void set_nb_occ(Carte c, int x);
 
 /**
  * @brief Prototype de get_est_cachee qui permet de récupérer un entier qui indique si la face est cachée ou pas.
