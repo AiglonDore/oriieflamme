@@ -122,6 +122,15 @@ int get_a_remelange(Faction f);
 void set_a_remelange(Faction f, int x);
 
 /**
+ * @brief Prototype de get_main qui permet de récupérer la main de la faction
+ *
+ * @param f
+ * @return Carte *
+ */
+
+Carte * get_main(Faction f);
+
+/**
  * @brief Prototype de set_main qui permet d'initialiser la main de la faction
  *
  * @param f

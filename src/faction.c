@@ -60,7 +60,7 @@ void melanger_pioche(Faction f) {
     }
 
     // On mélange ce tableau : on crée pioche_melange que l'on remplit à partir de pioche en générant un indice aléatoire de 0 à 31
-    int t[20]; // ce tableau sert à savoir si l'indice généré a déjà été généré (t[i]=1 si i déjà sorti, 0 sinon)
+    int t[32]; // ce tableau sert à savoir si l'indice généré a déjà été généré (t[i]=1 si i déjà sorti, 0 sinon)
     Carte pioche_melange[32];
     int c = 0; // sert à compter le nombre de cartes rentrées dans pioche_melange
     int n = rand()%32; // génère un nombre entier aléatoire entre 0 et 31
@@ -121,6 +121,10 @@ int get_a_remelange(Faction f) {
 
 void set_a_remelange(Faction f, int x) {
     f->a_remelange = x;
+}
+
+Carte * get_main(Faction f) {
+    return f->main;
 }
 
 void set_main(Faction f, Carte * main) {

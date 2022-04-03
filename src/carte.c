@@ -21,6 +21,7 @@
 struct StructureCarte
 {
     id_carte id;
+    Faction proprietaire;
     char *nom;
     char *description;
     int nb_occ;
@@ -37,6 +38,14 @@ id_carte get_id(Carte c) {
 
 void set_id(Carte c, id_carte id) {
     c->id = id;
+}
+
+Faction get_proprietaire(Carte c) {
+    return c->proprietaire;
+}
+
+void set_proprietaire(Carte c, Faction f) {
+    c->proprietaire = f;
 }
 
 char *get_nom(Carte c)

@@ -126,11 +126,30 @@ id_carte get_id(Carte c);
 void set_id(Carte c, id_carte id);
 
 /**
+ * @brief Prototype de get_proprietaire qui permet de récupérer la faction qui possède cette carte
+ *
+ * @param c
+ * @return Faction
+ */
+
+Faction get_proprietaire(Carte c);
+
+/**
+ * @brief Prototype de set_proprietaire qui permet d'initialiser la fonction qui possède la carte.
+ *
+ * @param c
+ * @param f
+ */
+
+void set_proprietaire(Carte c, Faction f);
+
+/**
  * @brief Prototype de get_nom qui permet de récupérer le nom de la carte
  *
  * @param c
  * @return char*
  */
+
 
 char *get_nom(Carte c);
 
