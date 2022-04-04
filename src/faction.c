@@ -25,6 +25,7 @@ typedef struct StructureFactions
     int nb_manches_gagnees;
     int pts_DDRS_manche;
     int a_remelange;
+    int carte_anl_retournee;
     Pioche pioche;
     Main main;
 };
@@ -121,6 +122,14 @@ int get_a_remelange(Faction f) {
 
 void set_a_remelange(Faction f, int x) {
     f->a_remelange = x;
+}
+
+int get_carte_anl_retournee(Faction f) {
+    return f->carte_anl_retournee;
+}
+
+void set_carte_anl_retournee(Faction f, int x) {
+    f->carte_anl_retournee = x;
 }
 
 Carte * get_main(Faction f) {
