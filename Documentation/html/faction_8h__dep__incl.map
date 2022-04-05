@@ -8,5 +8,5 @@
 <area shape="rect" id="node8" href="$structure_8h.html" title="Interface pour gérer le plateau de jeu et le déroulement de la partie." alt="" coords="407,80,555,107"/>
 <area shape="rect" id="node9" href="$carte_8c.html" title="Implantation de l&#39;interface en charge des informations des cartes du jeu." alt="" coords="539,155,628,181"/>
 <area shape="rect" id="node10" href="$structure_8c.html" title="Implémentation de l&#39;interface pour gérer le plateau de jeu et le déroulement de la partie." alt="" coords="653,155,767,181"/>
-<area shape="rect" id="node3" href="$interface_8c.html" title=" " alt="" coords="119,229,234,256"/>
+<area shape="rect" id="node3" href="$interface_8c.html" title="Implémentation de interface.h." alt="" coords="119,229,234,256"/>
 </map>

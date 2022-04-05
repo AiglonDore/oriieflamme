@@ -71,24 +71,25 @@ $(function() {
 <div class="title">interface.c</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="interface_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;../headers/interface.h&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="interface_8c.html#a8bb576a3127fc3437d91467ec19d0de0">    6</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="interface_8c.html#a8bb576a3127fc3437d91467ec19d0de0">affiche_plateau</a>(<a class="code" href="structs__plateau.html">Plateau</a> p)</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;}</div>
+<a href="interface_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;../headers/interface.h&quot;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="interface_8c.html#a8e9d54781d879f437be3285b5412c1c2">   11</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="interface_8c.html#a8e9d54781d879f437be3285b5412c1c2">affiche_effets</a>(<a class="code" href="struct_structure_carte.html">Carte</a> c)</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    printf(<span class="stringliteral">&quot;Effet de la carte \&quot;%s\&quot;: \&quot;%s\&quot;.\n&quot;</span>,<a class="code" href="carte_8h.html#a36dc56ecacce3b5d693e8ddab6e4201a">get_nom</a>(c),<a class="code" href="carte_8h.html#a99d2f8528669eb8a99312bb74a2a27bb">get_description</a>(c));</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="interface_8c.html#a8bb576a3127fc3437d91467ec19d0de0">   14</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="interface_8c.html#a8bb576a3127fc3437d91467ec19d0de0">affiche_plateau</a>(<a class="code" href="structs__plateau.html">Plateau</a> p)</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="interface_8c.html#a8e9d54781d879f437be3285b5412c1c2">   19</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="interface_8c.html#a8e9d54781d879f437be3285b5412c1c2">affiche_effets</a>(<a class="code" href="struct_structure_carte.html">Carte</a> c)</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    printf(<span class="stringliteral">&quot;Effet de la carte \&quot;%s\&quot;: \&quot;%s\&quot;.\n&quot;</span>,<a class="code" href="carte_8h.html#a36dc56ecacce3b5d693e8ddab6e4201a">get_nom</a>(c),<a class="code" href="carte_8h.html#a99d2f8528669eb8a99312bb74a2a27bb">get_description</a>(c));</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="ainterface_8c_html_a8e9d54781d879f437be3285b5412c1c2"><div class="ttname"><a href="interface_8c.html#a8e9d54781d879f437be3285b5412c1c2">affiche_effets</a></div><div class="ttdeci">void affiche_effets(Carte c)</div><div class="ttdoc">Affiche les effets de la carte c si elle est posée.</div><div class="ttdef"><b>Definition:</b> <a href="interface_8c_source.html#l00011">interface.c:11</a></div></div>
+<div class="ttc" id="ainterface_8c_html_a8e9d54781d879f437be3285b5412c1c2"><div class="ttname"><a href="interface_8c.html#a8e9d54781d879f437be3285b5412c1c2">affiche_effets</a></div><div class="ttdeci">void affiche_effets(Carte c)</div><div class="ttdoc">Affiche les effets de la carte c si elle est posée.</div><div class="ttdef"><b>Definition:</b> <a href="interface_8c_source.html#l00019">interface.c:19</a></div></div>
 <div class="ttc" id="astructs__plateau_html"><div class="ttname"><a href="structs__plateau.html">s_plateau</a></div><div class="ttdoc">type concret vers lequel pointe le plateau de jeu</div><div class="ttdef"><b>Definition:</b> <a href="plateau_8c_source.html#l00024">plateau.c:24</a></div></div>
-<div class="ttc" id="ainterface_8c_html_a8bb576a3127fc3437d91467ec19d0de0"><div class="ttname"><a href="interface_8c.html#a8bb576a3127fc3437d91467ec19d0de0">affiche_plateau</a></div><div class="ttdeci">void affiche_plateau(Plateau p)</div><div class="ttdoc">Fonction qui affiche le plateau de jeu.</div><div class="ttdef"><b>Definition:</b> <a href="interface_8c_source.html#l00006">interface.c:6</a></div></div>
+<div class="ttc" id="ainterface_8c_html_a8bb576a3127fc3437d91467ec19d0de0"><div class="ttname"><a href="interface_8c.html#a8bb576a3127fc3437d91467ec19d0de0">affiche_plateau</a></div><div class="ttdeci">void affiche_plateau(Plateau p)</div><div class="ttdoc">Fonction qui affiche le plateau de jeu.</div><div class="ttdef"><b>Definition:</b> <a href="interface_8c_source.html#l00014">interface.c:14</a></div></div>
 <div class="ttc" id="acarte_8h_html_a99d2f8528669eb8a99312bb74a2a27bb"><div class="ttname"><a href="carte_8h.html#a99d2f8528669eb8a99312bb74a2a27bb">get_description</a></div><div class="ttdeci">char * get_description(Carte c)</div><div class="ttdoc">Prototype de get_description qui permet de récupérer la description de la carte.</div><div class="ttdef"><b>Definition:</b> <a href="carte_8c_source.html#l00065">carte.c:65</a></div></div>
 <div class="ttc" id="astruct_structure_carte_html"><div class="ttname"><a href="struct_structure_carte.html">StructureCarte</a></div><div class="ttdoc">type concret pour la faction, est_cachee vaut 1 si la carte est posée face cachée,...</div><div class="ttdef"><b>Definition:</b> <a href="carte_8c_source.html#l00021">carte.c:21</a></div></div>
 <div class="ttc" id="acarte_8h_html_a36dc56ecacce3b5d693e8ddab6e4201a"><div class="ttname"><a href="carte_8h.html#a36dc56ecacce3b5d693e8ddab6e4201a">get_nom</a></div><div class="ttdeci">char * get_nom(Carte c)</div><div class="ttdoc">Prototype de get_nom qui permet de récupérer le nom de la carte.</div><div class="ttdef"><b>Definition:</b> <a href="carte_8c_source.html#l00055">carte.c:55</a></div></div>
