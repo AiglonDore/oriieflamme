@@ -76,14 +76,89 @@ Factions_en_jeu factions_plateau(Plateau p);
 
 void poser_carte(Carte c, Plateau p, int i, int j);
 
+/**************************************************
+ * Création des prototypes des getters et setters
+ ***************************************************/
+
 /**
- * @TODO Prototypes pour dégorger retourner_carte
- * 
+ * @brief Prototype de get_plateau_jeu.
+ *
+ * @param p
+ * @return Plateau_jeu
  */
+Plateau_jeu get_plateau_jeu(Plateau p);
 
+/**
+ * @brief Prototype de get_factions qui permet de récupérer les factions en jeu.
+ *
+ * @param p
+ * @return Factions_en_jeu
+ */
+Factions_en_jeu get_factions(Plateau p);
 
+/**
+ * @brief Prototype de get_derniere_carte_posee.
+ *
+ * @param p
+ * @return Coord
+ */
+Coord get_derniere_carte_posee(Plateau p);
 
+/**
+ * @brief Prototype de get_derniere_carte_retournee.
+ *
+ * @param p
+ * @return Coord
+ */
+Coord get_derniere_carte_retournee(Plateau p);
 
+/**
+ * @brief Prototype de get_avant_derniere_carte_retournee.
+ *
+ * @param p
+ * @return Coord
+ */
+Coord get_avant_derniere_carte_retournee(Plateau p);
+
+/**
+ * @brief Prototype de get_carte_haut_gauche.
+ *
+ * @param p
+ * @return Coord
+ */
+Coord get_carte_haut_gauche(Plateau p);
+
+/**
+ * @brief Prototype de get_carte_bas_droite.
+ *
+ * @param p
+ * @return Coord
+ */
+Coord get_carte_bas_droite(Plateau p);
+
+/**
+ * @brief Prototype de get_numero_manche.
+ *
+ * @param p
+ * @return int
+ */
+int get_numero_manche(Plateau p);
+
+/**
+ * @brief Prototype de get_cartes_retournees_manche.
+ *
+ * @param p
+ * @return int
+ */
+int get_cartes_retournees_manche(Plateau p);
+
+/**
+ * @brief Prototype de get_cartes_non_retournees_manche.
+ *
+ * @param p
+ * @return int
+ */
+int get_cartes_non_retournees_manche(Plateau p);
 
 /**
  * @brief retourne la carte la plus en haut à gauche du plateau face visible et active son effet
