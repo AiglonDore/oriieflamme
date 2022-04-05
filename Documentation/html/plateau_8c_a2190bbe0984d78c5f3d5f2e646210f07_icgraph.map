@@ -1,0 +1,6 @@
+<map id="init_pioche" name="init_pioche">
+<area shape="rect" id="node1" title="crée la pioche avec les 32 cartes de l&#39;énoncé pour la faction donnée" alt="" coords="424,5,517,32"/>
+<area shape="rect" id="node2" href="$plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="239,5,376,32"/>
+<area shape="rect" id="node3" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="136,5,191,32"/>
+<area shape="rect" id="node4" href="$faction_8c.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="5,31,88,57"/>
+</map>

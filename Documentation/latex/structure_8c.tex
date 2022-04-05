@@ -1,0 +1,161 @@
+\hypertarget{structure_8c}{}\doxysection{src/structure.c File Reference}
+\label{structure_8c}\index{src/structure.c@{src/structure.c}}
+
+
+Implémentation de l\textquotesingle{}interface pour gérer le plateau de jeu et le déroulement de la partie.  
+
+
+{\ttfamily \#include \char`\"{}../headers/carte.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../headers/faction.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../headers/structure.\+h\char`\"{}}\newline
+Include dependency graph for structure.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=323pt]{structure_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structs__pioche}{s\+\_\+pioche}}
+\begin{DoxyCompactList}\small\item\em type concret de pile pour la pioche d\textquotesingle{}une faction \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structure_8h_a9b18ab4f4d3508a3f5ce014f4040217f}{Pioche}} \mbox{\hyperlink{structure_8c_ad911b5ece54d506c7109120dbfc9c2f0}{creation\+\_\+pioche\+\_\+vide}} ()
+\begin{DoxyCompactList}\small\item\em Savoir si une faction a itilisé l\textquotesingle{}option de remélanger sa main et boîte à idée et de repiocher des cartes. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structure_8c_ae973594dee297fae28846edec431f098}{pioche\+\_\+est\+\_\+vide}} (\mbox{\hyperlink{structure_8h_a9b18ab4f4d3508a3f5ce014f4040217f}{Pioche}} p)
+\begin{DoxyCompactList}\small\item\em indique si la pioche est vide ou non \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structure_8c_ac8dcdc0ffb092b739d94573e47eaaacf}{ajout\+\_\+pioche}} (\mbox{\hyperlink{structure_8h_a9b18ab4f4d3508a3f5ce014f4040217f}{Pioche}} p, \mbox{\hyperlink{carte_8h_a633ba64ee908d35aac798844f477ee9d}{Carte}} c)
+\begin{DoxyCompactList}\small\item\em ajoute la carte à la pioche au sommet de celle-\/ci \end{DoxyCompactList}\item 
+\mbox{\hyperlink{carte_8h_a633ba64ee908d35aac798844f477ee9d}{Carte}} \mbox{\hyperlink{structure_8c_a7b95c6a72accdcab7cc1f39d2536fe06}{enleve\+\_\+pioche}} (\mbox{\hyperlink{structure_8h_a9b18ab4f4d3508a3f5ce014f4040217f}{Pioche}} p)
+\begin{DoxyCompactList}\small\item\em enlève la carte au sommet de la pioche (on suppose la pioche non vide) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implémentation de l\textquotesingle{}interface pour gérer le plateau de jeu et le déroulement de la partie. 
+
+\begin{DoxyAuthor}{Author}
+Valentin Gardel (\href{mailto:valentin.gardel@ensiie.fr}{\texttt{ valentin.\+gardel@ensiie.\+fr}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/04-\/01
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2022 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{structure_8c_ac8dcdc0ffb092b739d94573e47eaaacf}\label{structure_8c_ac8dcdc0ffb092b739d94573e47eaaacf}} 
+\index{structure.c@{structure.c}!ajout\_pioche@{ajout\_pioche}}
+\index{ajout\_pioche@{ajout\_pioche}!structure.c@{structure.c}}
+\doxysubsubsection{\texorpdfstring{ajout\_pioche()}{ajout\_pioche()}}
+{\footnotesize\ttfamily void ajout\+\_\+pioche (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structure_8h_a9b18ab4f4d3508a3f5ce014f4040217f}{Pioche}}}]{p,  }\item[{\mbox{\hyperlink{carte_8h_a633ba64ee908d35aac798844f477ee9d}{Carte}}}]{c }\end{DoxyParamCaption})}
+
+
+
+ajoute la carte à la pioche au sommet de celle-\/ci 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & une pioche valide \\
+\hline
+{\em c} & une carte valide \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 36 of file structure.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structure_8c_ac8dcdc0ffb092b739d94573e47eaaacf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structure_8c_ad911b5ece54d506c7109120dbfc9c2f0}\label{structure_8c_ad911b5ece54d506c7109120dbfc9c2f0}} 
+\index{structure.c@{structure.c}!creation\_pioche\_vide@{creation\_pioche\_vide}}
+\index{creation\_pioche\_vide@{creation\_pioche\_vide}!structure.c@{structure.c}}
+\doxysubsubsection{\texorpdfstring{creation\_pioche\_vide()}{creation\_pioche\_vide()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structure_8h_a9b18ab4f4d3508a3f5ce014f4040217f}{Pioche}} creation\+\_\+pioche\+\_\+vide (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Savoir si une faction a itilisé l\textquotesingle{}option de remélanger sa main et boîte à idée et de repiocher des cartes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & une faction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 si la main n\textquotesingle{}a pas été remélangé 
+
+1 si la main a été remélangé 
+\end{DoxyReturn}
+
+
+Definition at line 26 of file structure.\+c.
+
+\mbox{\Hypertarget{structure_8c_a7b95c6a72accdcab7cc1f39d2536fe06}\label{structure_8c_a7b95c6a72accdcab7cc1f39d2536fe06}} 
+\index{structure.c@{structure.c}!enleve\_pioche@{enleve\_pioche}}
+\index{enleve\_pioche@{enleve\_pioche}!structure.c@{structure.c}}
+\doxysubsubsection{\texorpdfstring{enleve\_pioche()}{enleve\_pioche()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{carte_8h_a633ba64ee908d35aac798844f477ee9d}{Carte}} enleve\+\_\+pioche (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structure_8h_a9b18ab4f4d3508a3f5ce014f4040217f}{Pioche}}}]{p }\end{DoxyParamCaption})}
+
+
+
+enlève la carte au sommet de la pioche (on suppose la pioche non vide) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & une pioche valide \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la carte qui a été retirée 
+\end{DoxyReturn}
+
+
+Definition at line 41 of file structure.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structure_8c_a7b95c6a72accdcab7cc1f39d2536fe06_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structure_8c_ae973594dee297fae28846edec431f098}\label{structure_8c_ae973594dee297fae28846edec431f098}} 
+\index{structure.c@{structure.c}!pioche\_est\_vide@{pioche\_est\_vide}}
+\index{pioche\_est\_vide@{pioche\_est\_vide}!structure.c@{structure.c}}
+\doxysubsubsection{\texorpdfstring{pioche\_est\_vide()}{pioche\_est\_vide()}}
+{\footnotesize\ttfamily int pioche\+\_\+est\+\_\+vide (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structure_8h_a9b18ab4f4d3508a3f5ce014f4040217f}{Pioche}}}]{p }\end{DoxyParamCaption})}
+
+
+
+indique si la pioche est vide ou non 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & une pioche valide \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 si la pioche n\textquotesingle{}est pas vide 
+
+1 si la pioche est vide 
+\end{DoxyReturn}
+
+
+Definition at line 32 of file structure.\+c.
+

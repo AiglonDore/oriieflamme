@@ -1,0 +1,4 @@
+<map id="vider_sa_main" name="vider_sa_main">
+<area shape="rect" id="node1" title="Permet à une faction de vider sa main." alt="" coords="5,5,123,32"/>
+<area shape="rect" id="node2" href="$structure_8h.html#ac8dcdc0ffb092b739d94573e47eaaacf" title="ajoute la carte à la pioche au sommet de celle&#45;ci" alt="" coords="171,5,276,32"/>
+</map>

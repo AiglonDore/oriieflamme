@@ -1,0 +1,4 @@
+<map id="piocher" name="piocher">
+<area shape="rect" id="node1" title="Permet à une faction de repiocher ses cartes." alt="" coords="5,5,76,32"/>
+<area shape="rect" id="node2" href="$structure_8h.html#a7b95c6a72accdcab7cc1f39d2536fe06" title="enlève la carte au sommet de la pioche (on suppose la pioche non vide)" alt="" coords="124,5,240,32"/>
+</map>

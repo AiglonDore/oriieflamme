@@ -1,0 +1,10 @@
+<map id="enleve_pioche" name="enleve_pioche">
+<area shape="rect" id="node1" title="enlève la carte au sommet de la pioche (on suppose la pioche non vide)" alt="" coords="856,31,972,57"/>
+<area shape="rect" id="node2" href="$faction_8c.html#adf3497e77c11921394ac7ca7d2e6cbdb" title="Permet à une faction de mélanger sa pioche." alt="" coords="673,5,808,32"/>
+<area shape="rect" id="node8" href="$faction_8c.html#a5b400a1d1b3c89ef50e5bb4b98e177cb" title="Permet à une faction de repiocher ses cartes." alt="" coords="705,56,776,83"/>
+<area shape="rect" id="node3" href="$faction_8c.html#abc7feb29ed864c76ea95e1afc3cc7752" title="Permet à une faction de vider sa main, mélanger sa pioche et repiocher ses cartes." alt="" coords="541,31,625,57"/>
+<area shape="rect" id="node4" href="$main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="424,31,493,57"/>
+<area shape="rect" id="node5" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="321,31,376,57"/>
+<area shape="rect" id="node6" href="$plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,31,143,57"/>
+<area shape="rect" id="node7" href="$faction_8c.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="191,93,273,120"/>
+</map>

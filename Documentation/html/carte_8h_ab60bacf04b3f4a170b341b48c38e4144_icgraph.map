@@ -1,0 +1,9 @@
+<map id="set_est_cachee" name="set_est_cachee">
+<area shape="rect" id="node1" title="Prototype de set_est_cachee qui permet de changer la valeur associé à la face d&#39;une carte: 0 Face non..." alt="" coords="595,31,717,57"/>
+<area shape="rect" id="node2" href="$plateau_8c.html#a2190bbe0984d78c5f3d5f2e646210f07" title="crée la pioche avec les 32 cartes de l&#39;énoncé pour la faction donnée" alt="" coords="439,5,532,32"/>
+<area shape="rect" id="node6" href="$plateau_8c.html#a41cddf8d1f1e457df2f4c905d6605151" title="retourne la carte la plus en haut à gauche du plateau face visible et active son effet" alt="" coords="424,56,547,83"/>
+<area shape="rect" id="node3" href="$plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="239,5,376,32"/>
+<area shape="rect" id="node4" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="136,31,191,57"/>
+<area shape="rect" id="node5" href="$faction_8c.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="5,5,88,32"/>
+<area shape="rect" id="node7" href="$main_8c.html#a34ccc9f1e0da464163a6f5e297c42563" title="Fonction qui contrôle la phase 2." alt="" coords="273,56,342,83"/>
+</map>

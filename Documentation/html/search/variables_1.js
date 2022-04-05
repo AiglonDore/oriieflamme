@@ -1,4 +1,8 @@
 var searchData=
 [
-  ['right_65',['right',['../struct_int_couple.html#a2f54f8b71f0d765e2b7dbd9a8b9774ff',1,'IntCouple::right()'],['../struct_factions__en__jeu.html#aae23e1080a95aef1f1610a99c39f9c81',1,'Factions_en_jeu::right()']]]
+  ['carte_5fanl_5fretournee_232',['carte_anl_retournee',['../struct_structure_factions.html#a45864f4ca8953e5c312f5d5f65a19004',1,'StructureFactions']]],
+  ['carte_5fbas_5fdroite_233',['carte_bas_droite',['../structs__plateau.html#abc52ce617bc1a028cd39956733efa55f',1,'s_plateau']]],
+  ['carte_5fhaut_5fgauche_234',['carte_haut_gauche',['../structs__plateau.html#a05b31a66697a919ea1071bafcdf0ef13',1,'s_plateau']]],
+  ['cartes_5fnon_5fretournees_5fmanche_235',['cartes_non_retournees_manche',['../structs__plateau.html#ae6e5711783a4637882847b09a4e03d2b',1,'s_plateau']]],
+  ['cartes_5fretournees_5fmanche_236',['cartes_retournees_manche',['../structs__plateau.html#af710c246cc2107c9cd1cb2ea0d03935f',1,'s_plateau']]]
 ];

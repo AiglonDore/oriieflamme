@@ -1,0 +1,12 @@
+<map id="init_pioche" name="init_pioche">
+<area shape="rect" id="node1" title="crée la pioche avec les 32 cartes de l&#39;énoncé pour la faction donnée" alt="" coords="5,183,99,209"/>
+<area shape="rect" id="node2" href="$structure_8h.html#ac8dcdc0ffb092b739d94573e47eaaacf" title="ajoute la carte à la pioche au sommet de celle&#45;ci" alt="" coords="159,5,265,32"/>
+<area shape="rect" id="node3" href="$faction_8h.html#a4d000f4cb37265a12d2e36fc372b3b28" title="Prototype de get_pioche qui permet de récupérer la pioche de la faction." alt="" coords="165,56,259,83"/>
+<area shape="rect" id="node4" href="$carte_8h.html#a30fc91d4dd38a6b29c6eb86681238a70" title="Prototype de set_description qui permet d&#39;initialiser la description de la carte." alt="" coords="151,107,273,133"/>
+<area shape="rect" id="node5" href="$carte_8h.html#ab60bacf04b3f4a170b341b48c38e4144" title="Prototype de set_est_cachee qui permet de changer la valeur associé à la face d&#39;une carte: 0 Face non..." alt="" coords="151,157,273,184"/>
+<area shape="rect" id="node6" href="$carte_8h.html#aa47c30f1bd901b6511effcda2372029c" title="Prototype de set_id qui permet d&#39;initialiser l&#39;id de la carte." alt="" coords="181,208,243,235"/>
+<area shape="rect" id="node7" href="$carte_8c.html#ab49c570d782fe28d0639c144a68fc311" title=" " alt="" coords="165,259,259,285"/>
+<area shape="rect" id="node8" href="$faction_8h.html#aab43472fe255e9a674d0b8c8c022521e" title="Prototype de set_nom qui permet d&#39;initialiser le nom de la faction." alt="" coords="147,309,277,336"/>
+<area shape="rect" id="node10" href="$carte_8h.html#a5c6c6b9982006477c63fabac74db4649" title="Prototype de set_proprietaire qui permet d&#39;initialiser la fonction qui possède la carte." alt="" coords="149,360,275,387"/>
+<area shape="rect" id="node9" href="$interface_8h.html#ab716e0c166fd1d07dca1545157befef5" title="Fonction qui affiche le plateau de jeu." alt="" coords="325,309,428,336"/>
+</map>

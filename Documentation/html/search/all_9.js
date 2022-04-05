@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['readme_2emd_30',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
-  ['retourner_5fcarte_31',['retourner_carte',['../plateau_8h.html#a41cddf8d1f1e457df2f4c905d6605151',1,'plateau.h']]],
-  ['right_32',['right',['../struct_int_couple.html#a2f54f8b71f0d765e2b7dbd9a8b9774ff',1,'IntCouple::right()'],['../struct_factions__en__jeu.html#aae23e1080a95aef1f1610a99c39f9c81',1,'Factions_en_jeu::right()']]]
+  ['kahina_5fbouchama_81',['Kahina_Bouchama',['../carte_8h.html#abe76352df13b10f1e17f69b53bdd1d64a93f48fdafee391e4825f65fb2320c9bf',1,'carte.h']]],
+  ['katrin_5fsalhab_82',['Katrin_Salhab',['../carte_8h.html#abe76352df13b10f1e17f69b53bdd1d64aeae9721118288e2508f9fc995a7b1497',1,'carte.h']]],
+  ['kevin_5fgoilard_83',['Kevin_Goilard',['../carte_8h.html#abe76352df13b10f1e17f69b53bdd1d64a7e26fb0c881647c06a6aa1345e29d3d9',1,'carte.h']]]
 ];

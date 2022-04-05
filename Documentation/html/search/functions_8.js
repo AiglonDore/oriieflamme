@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['retourner_5fcarte_61',['retourner_carte',['../plateau_8h.html#a41cddf8d1f1e457df2f4c905d6605151',1,'plateau.h']]]
+  ['main_204',['main',['../main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.c']]],
+  ['melanger_205',['melanger',['../faction_8h.html#abc7feb29ed864c76ea95e1afc3cc7752',1,'melanger(Faction f):&#160;faction.c'],['../faction_8c.html#abc7feb29ed864c76ea95e1afc3cc7752',1,'melanger(Faction f):&#160;faction.c']]],
+  ['melanger_5fpioche_206',['melanger_pioche',['../faction_8h.html#adf3497e77c11921394ac7ca7d2e6cbdb',1,'melanger_pioche(Faction f):&#160;faction.c'],['../faction_8c.html#adf3497e77c11921394ac7ca7d2e6cbdb',1,'melanger_pioche(Faction f):&#160;faction.c']]]
 ];

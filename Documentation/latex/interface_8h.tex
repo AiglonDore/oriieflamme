@@ -1,5 +1,5 @@
-\hypertarget{interface_8h}{}\doxysection{hearders/interface.h File Reference}
-\label{interface_8h}\index{hearders/interface.h@{hearders/interface.h}}
+\hypertarget{interface_8h}{}\doxysection{headers/interface.h File Reference}
+\label{interface_8h}\index{headers/interface.h@{headers/interface.h}}
 
 
 Interface entre le plateau de jeu et le joueur.  
@@ -8,12 +8,13 @@ Interface entre le plateau de jeu et le joueur.
 {\ttfamily \#include \char`\"{}carte.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}faction.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}plateau.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}structure.\+h\char`\"{}}\newline
 Include dependency graph for interface.\+h\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=219pt]{interface_8h__incl}
+\includegraphics[width=255pt]{interface_8h__incl}
 \end{center}
 \end{figure}
 This graph shows which files directly or indirectly include this file\+:
@@ -21,22 +22,14 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=195pt]{interface_8h__dep__incl}
+\includegraphics[width=349pt]{interface_8h__dep__incl}
 \end{center}
 \end{figure}
-\doxysubsection*{Data Structures}
-\begin{DoxyCompactItemize}
-\item 
-struct \mbox{\hyperlink{struct_int_couple}{Int\+Couple}}
-\begin{DoxyCompactList}\small\item\em Structure de couples d\textquotesingle{}entiers. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Typedefs}
-\begin{DoxyCompactItemize}
-\item 
-typedef struct \mbox{\hyperlink{struct_int_couple}{Int\+Couple}} \mbox{\hyperlink{interface_8h_a63b1a43711b482f0a0851c340ffa867b}{Int\+Couple}}
-\begin{DoxyCompactList}\small\item\em Alias pour les structures de couple. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+char $\ast$ \mbox{\hyperlink{interface_8h_ab716e0c166fd1d07dca1545157befef5}{nom\+\_\+faction}} (\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f)
+\begin{DoxyCompactList}\small\item\em Fonction qui affiche le plateau de jeu. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{interface_8h_a8bb576a3127fc3437d91467ec19d0de0}{affiche\+\_\+plateau}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p)
 \begin{DoxyCompactList}\small\item\em Fonction qui affiche le plateau de jeu. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{interface_8h_ad36c35f78849abca949ea8c755f5b4e6}{affiche\+\_\+main}} (\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f)
@@ -49,7 +42,7 @@ void \mbox{\hyperlink{interface_8h_a8e9d54781d879f437be3285b5412c1c2}{affiche\+\
 \begin{DoxyCompactList}\small\item\em Affiche les effets de la carte c si elle est posée. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{interface_8h_a802545d4ff1c158f7a2ca77be20915f9}{affiche\+\_\+vainqueur}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p)
 \begin{DoxyCompactList}\small\item\em Affiche le vainquer de la partie. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{struct_int_couple}{Int\+Couple}} \mbox{\hyperlink{interface_8h_ae31ac3b00204cf79a078399e83c900f5}{demande\+\_\+position}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p)
+\mbox{\hyperlink{struct_coord}{Coord}} \mbox{\hyperlink{interface_8h_a8330a6ec294f24da52fe0f265181fbcc}{demande\+\_\+position}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p)
 \begin{DoxyCompactList}\small\item\em Fonction qui demande à quelle position doit être placée la carte. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -65,23 +58,6 @@ Thomas Roiseux (\href{mailto:thomas.roiseux@ensiie.fr}{\texttt{ thomas.\+roiseux
 \begin{DoxyDate}{Date}
 2022-\/03-\/07 
 \end{DoxyDate}
-
-
-\doxysubsection{Typedef Documentation}
-\mbox{\Hypertarget{interface_8h_a63b1a43711b482f0a0851c340ffa867b}\label{interface_8h_a63b1a43711b482f0a0851c340ffa867b}} 
-\index{interface.h@{interface.h}!IntCouple@{IntCouple}}
-\index{IntCouple@{IntCouple}!interface.h@{interface.h}}
-\doxysubsubsection{\texorpdfstring{IntCouple}{IntCouple}}
-{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_int_couple}{Int\+Couple}} \mbox{\hyperlink{struct_int_couple}{Int\+Couple}}}
-
-
-
-Alias pour les structures de couple. 
-
-
-
-Definition at line 29 of file interface.\+h.
-
 
 
 \doxysubsection{Function Documentation}
@@ -128,12 +104,24 @@ Affiche les effets de la carte c si elle est posée.
 {\em c} & Carte dont on veut afficher les effets \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 11 of file interface.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{interface_8h_a8e9d54781d879f437be3285b5412c1c2_cgraph}
+\end{center}
+\end{figure}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=328pt]{interface_8h_a8e9d54781d879f437be3285b5412c1c2_icgraph}
+\includegraphics[width=350pt]{interface_8h_a8e9d54781d879f437be3285b5412c1c2_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{interface_8h_ad36c35f78849abca949ea8c755f5b4e6}\label{interface_8h_ad36c35f78849abca949ea8c755f5b4e6}} 
@@ -159,7 +147,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=325pt]{interface_8h_ad36c35f78849abca949ea8c755f5b4e6_icgraph}
+\includegraphics[width=350pt]{interface_8h_ad36c35f78849abca949ea8c755f5b4e6_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{interface_8h_a8bb576a3127fc3437d91467ec19d0de0}\label{interface_8h_a8bb576a3127fc3437d91467ec19d0de0}} 
@@ -180,12 +168,16 @@ Fonction qui affiche le plateau de jeu.
 \begin{DoxyReturn}{Returns}
 rien 
 \end{DoxyReturn}
+
+
+Definition at line 6 of file interface.\+c.
+
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=337pt]{interface_8h_a8bb576a3127fc3437d91467ec19d0de0_icgraph}
+\includegraphics[width=350pt]{interface_8h_a8bb576a3127fc3437d91467ec19d0de0_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{interface_8h_a802545d4ff1c158f7a2ca77be20915f9}\label{interface_8h_a802545d4ff1c158f7a2ca77be20915f9}} 
@@ -208,14 +200,14 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=261pt]{interface_8h_a802545d4ff1c158f7a2ca77be20915f9_icgraph}
+\includegraphics[width=350pt]{interface_8h_a802545d4ff1c158f7a2ca77be20915f9_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{interface_8h_ae31ac3b00204cf79a078399e83c900f5}\label{interface_8h_ae31ac3b00204cf79a078399e83c900f5}} 
+\mbox{\Hypertarget{interface_8h_a8330a6ec294f24da52fe0f265181fbcc}\label{interface_8h_a8330a6ec294f24da52fe0f265181fbcc}} 
 \index{interface.h@{interface.h}!demande\_position@{demande\_position}}
 \index{demande\_position@{demande\_position}!interface.h@{interface.h}}
 \doxysubsubsection{\texorpdfstring{demande\_position()}{demande\_position()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_int_couple}{Int\+Couple}} demande\+\_\+position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_coord}{Coord}} demande\+\_\+position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p }\end{DoxyParamCaption})}
 
 
 
@@ -231,7 +223,33 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{interface_8h_ae31ac3b00204cf79a078399e83c900f5_icgraph}
+\includegraphics[width=350pt]{interface_8h_a8330a6ec294f24da52fe0f265181fbcc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{interface_8h_ab716e0c166fd1d07dca1545157befef5}\label{interface_8h_ab716e0c166fd1d07dca1545157befef5}} 
+\index{interface.h@{interface.h}!nom\_faction@{nom\_faction}}
+\index{nom\_faction@{nom\_faction}!interface.h@{interface.h}}
+\doxysubsubsection{\texorpdfstring{nom\_faction()}{nom\_faction()}}
+{\footnotesize\ttfamily char$\ast$ nom\+\_\+faction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f }\end{DoxyParamCaption})}
+
+
+
+Fonction qui affiche le plateau de jeu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & plateau de jeu (pointeur devant être valide) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+rien 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interface_8h_ab716e0c166fd1d07dca1545157befef5_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{interface_8h_aea24bb8bc24a5877aba14a3879602c7b}\label{interface_8h_aea24bb8bc24a5877aba14a3879602c7b}} 
@@ -259,6 +277,6 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=331pt]{interface_8h_aea24bb8bc24a5877aba14a3879602c7b_icgraph}
+\includegraphics[width=350pt]{interface_8h_aea24bb8bc24a5877aba14a3879602c7b_icgraph}
 \end{center}
 \end{figure}

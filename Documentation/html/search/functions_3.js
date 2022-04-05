@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['init_5fplateau_51',['init_plateau',['../plateau_8h.html#a48e20516b8894156393d7f0f2da54ce2',1,'plateau.h']]]
+  ['enleve_5fpioche_175',['enleve_pioche',['../structure_8h.html#a7b95c6a72accdcab7cc1f39d2536fe06',1,'enleve_pioche(Pioche p):&#160;structure.c'],['../structure_8c.html#a7b95c6a72accdcab7cc1f39d2536fe06',1,'enleve_pioche(Pioche p):&#160;structure.c']]]
 ];

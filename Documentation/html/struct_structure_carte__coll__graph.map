@@ -1,0 +1,5 @@
+<map id="StructureCarte" name="StructureCarte">
+<area shape="rect" id="node1" title="type concret pour la faction, est_cachee vaut 1 si la carte est posée face cachée,..." alt="" coords="41,5,157,32"/>
+<area shape="rect" id="node2" href="$struct_structure_factions.html" title="type concret pour la faction, a_remelange vaut 1 si la main a été remélangée, 0 sinon" alt="" coords="31,184,166,211"/>
+<area shape="rect" id="node3" href="$structs__pioche.html" title="type concret de pile pour la pioche d&#39;une faction" alt="" coords="59,95,138,121"/>
+</map>

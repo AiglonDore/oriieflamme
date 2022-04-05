@@ -1,6 +1,7 @@
-<map id="hearders/interface.h" name="hearders/interface.h">
-<area shape="rect" id="node1" title="Interface entre le plateau de jeu et le joueur." alt="" coords="11,5,165,32"/>
-<area shape="rect" id="node2" href="$carte_8h.html" title="Interface Carte : interface en charge des informations des cartes jeu." alt="" coords="5,155,72,181"/>
-<area shape="rect" id="node3" href="$faction_8h.html" title="Interface faction : interface en charge des informations et des manipulations propre d&#39;une faction." alt="" coords="111,155,190,181"/>
-<area shape="rect" id="node4" href="$plateau_8h.html" title="Interface pour gérer le plateau de jeu et le déroulement de la partie." alt="" coords="47,80,129,107"/>
+<map id="headers/interface.h" name="headers/interface.h">
+<area shape="rect" id="node1" title="Interface entre le plateau de jeu et le joueur." alt="" coords="45,5,193,32"/>
+<area shape="rect" id="node2" href="$carte_8h.html" title="Interface Carte : interface en charge des informations des cartes jeu." alt="" coords="30,155,97,181"/>
+<area shape="rect" id="node3" href="$faction_8h.html" title="Interface faction : interface en charge des informations et des manipulations propre d&#39;une faction." alt="" coords="136,155,215,181"/>
+<area shape="rect" id="node4" href="$plateau_8h.html" title="Interface pour gérer le plateau de jeu et le déroulement de la partie." alt="" coords="22,80,105,107"/>
+<area shape="rect" id="node5" href="$structure_8h.html" title="Interface pour gérer le plateau de jeu et le déroulement de la partie." alt="" coords="129,80,221,107"/>
 </map>

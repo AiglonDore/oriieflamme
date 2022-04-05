@@ -1,0 +1,8 @@
+<map id="set_nom_faction" name="set_nom_faction">
+<area shape="rect" id="node1" title="Prototype de set_nom qui permet d&#39;initialiser le nom de la faction." alt="" coords="565,31,696,57"/>
+<area shape="rect" id="node2" href="$plateau_8c.html#a2190bbe0984d78c5f3d5f2e646210f07" title="crée la pioche avec les 32 cartes de l&#39;énoncé pour la faction donnée" alt="" coords="424,5,517,32"/>
+<area shape="rect" id="node6" href="$plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="crée un plateau et les deux factions qui joueront dessus" alt="" coords="258,56,357,83"/>
+<area shape="rect" id="node3" href="$plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="239,5,376,32"/>
+<area shape="rect" id="node4" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="136,31,191,57"/>
+<area shape="rect" id="node5" href="$faction_8c.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="5,5,88,32"/>
+</map>

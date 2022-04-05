@@ -1,0 +1,9 @@
+<map id="set_carte_anl_retournee" name="set_carte_anl_retournee">
+<area shape="rect" id="node1" title="Prototype de set_carte_anl_retournee qui permet d&#39;initialiser si la faction a retourné sa carte Anne&#45;..." alt="" coords="741,31,920,57"/>
+<area shape="rect" id="node2" href="$plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="crée un plateau et les deux factions qui joueront dessus" alt="" coords="424,5,523,32"/>
+<area shape="rect" id="node6" href="$plateau_8c.html#a41cddf8d1f1e457df2f4c905d6605151" title="retourne la carte la plus en haut à gauche du plateau face visible et active son effet" alt="" coords="571,56,693,83"/>
+<area shape="rect" id="node3" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="321,31,376,57"/>
+<area shape="rect" id="node4" href="$plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,31,143,57"/>
+<area shape="rect" id="node5" href="$faction_8c.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="191,93,273,120"/>
+<area shape="rect" id="node7" href="$main_8c.html#a34ccc9f1e0da464163a6f5e297c42563" title="Fonction qui contrôle la phase 2." alt="" coords="439,56,508,83"/>
+</map>

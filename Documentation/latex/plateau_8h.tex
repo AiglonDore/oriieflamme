@@ -1,5 +1,5 @@
-\hypertarget{plateau_8h}{}\doxysection{hearders/plateau.h File Reference}
-\label{plateau_8h}\index{hearders/plateau.h@{hearders/plateau.h}}
+\hypertarget{plateau_8h}{}\doxysection{headers/plateau.h File Reference}
+\label{plateau_8h}\index{headers/plateau.h@{headers/plateau.h}}
 
 
 Interface pour gérer le plateau de jeu et le déroulement de la partie.  
@@ -20,26 +20,21 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=235pt]{plateau_8h__dep__incl}
+\includegraphics[width=350pt]{plateau_8h__dep__incl}
 \end{center}
 \end{figure}
-\doxysubsection*{Data Structures}
-\begin{DoxyCompactItemize}
-\item 
-struct \mbox{\hyperlink{struct_factions__en__jeu}{Factions\+\_\+en\+\_\+jeu}}
-\begin{DoxyCompactList}\small\item\em Structure pour les couples de factions. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-typedef struct \mbox{\hyperlink{struct_factions__en__jeu}{Factions\+\_\+en\+\_\+jeu}} \mbox{\hyperlink{plateau_8h_aaf4d7dcdfc776307087361b4ee995e09}{Factions\+\_\+en\+\_\+jeu}}
-\begin{DoxyCompactList}\small\item\em Alias pour les couples de factions. \end{DoxyCompactList}\item 
-typedef struct s\+\_\+plateau $\ast$ \mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}
+typedef struct \mbox{\hyperlink{structs__plateau}{s\+\_\+plateau}} $\ast$ \mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}
 \begin{DoxyCompactList}\small\item\em type abstrait pour le plateau de jeu \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+void \mbox{\hyperlink{plateau_8h_a2190bbe0984d78c5f3d5f2e646210f07}{init\+\_\+pioche}} (\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f)
+\begin{DoxyCompactList}\small\item\em crée la pioche avec les 32 cartes de l\textquotesingle{}énoncé pour la faction donnée \end{DoxyCompactList}\item 
 \mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} \mbox{\hyperlink{plateau_8h_a48e20516b8894156393d7f0f2da54ce2}{init\+\_\+plateau}} ()
-\begin{DoxyCompactList}\small\item\em crée un plateau et les deux factions qui joueront dessuss \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em crée un plateau et les deux factions qui joueront dessus \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{plateau_8h_aa2fd2fef89b903a5c089bf57cb932e29}{libere\+\_\+plateau}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p)
 \begin{DoxyCompactList}\small\item\em libère la mémoire associée au plateau de jeu et aux deux factions \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{plateau_8h_a49570b78f74ed1d5d588404e0f6bbcfc}{nouvelle\+\_\+manche}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p)
@@ -48,8 +43,33 @@ int \mbox{\hyperlink{plateau_8h_a49570b78f74ed1d5d588404e0f6bbcfc}{nouvelle\+\_\
 \begin{DoxyCompactList}\small\item\em détermine la faction qui joue en premier et renvoie la liste des deux factions du jeu dont le premier élément est la faction qui joue en premier \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{plateau_8h_a425437529596e13babd7bc8b4e04d491}{poser\+\_\+carte}} (\mbox{\hyperlink{carte_8h_a633ba64ee908d35aac798844f477ee9d}{Carte}} c, \mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, int i, int j)
 \begin{DoxyCompactList}\small\item\em permet à une faction de poser une carte face cachée sur le plateau \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structure_8h_af09c6150dd688094b9a2ed11657afbe0}{Plateau\+\_\+jeu}} \mbox{\hyperlink{plateau_8h_a16b4aa131728b3607f802a91a4e270a2}{get\+\_\+plateau\+\_\+jeu}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p)
+\begin{DoxyCompactList}\small\item\em Prototype de get\+\_\+plateau\+\_\+jeu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_factions__en__jeu}{Factions\+\_\+en\+\_\+jeu}} \mbox{\hyperlink{plateau_8h_a44f2d0cc019d090bd9af0bd3f86bb451}{get\+\_\+factions}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p)
+\begin{DoxyCompactList}\small\item\em Prototype de get\+\_\+factions qui permet de récupérer les factions en jeu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_coord}{Coord}} \mbox{\hyperlink{plateau_8h_af18e9c10ad5b52e70af728594d0b6fab}{get\+\_\+derniere\+\_\+carte\+\_\+posee}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p)
+\begin{DoxyCompactList}\small\item\em Prototype de get\+\_\+derniere\+\_\+carte\+\_\+posee. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_coord}{Coord}} \mbox{\hyperlink{plateau_8h_a7d0fe2e325ffc2e0d1c019bfb872940b}{get\+\_\+derniere\+\_\+carte\+\_\+retournee}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p)
+\begin{DoxyCompactList}\small\item\em Prototype de get\+\_\+derniere\+\_\+carte\+\_\+retournee. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_coord}{Coord}} \mbox{\hyperlink{plateau_8h_aae1f642b6cc9581157600e961459d17d}{get\+\_\+avant\+\_\+derniere\+\_\+carte\+\_\+retournee}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p)
+\begin{DoxyCompactList}\small\item\em Prototype de get\+\_\+avant\+\_\+derniere\+\_\+carte\+\_\+retournee. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_coord}{Coord}} \mbox{\hyperlink{plateau_8h_a71f7141a9a486188445d0c2382332ef6}{get\+\_\+carte\+\_\+haut\+\_\+gauche}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p)
+\begin{DoxyCompactList}\small\item\em Prototype de get\+\_\+carte\+\_\+haut\+\_\+gauche. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_coord}{Coord}} \mbox{\hyperlink{plateau_8h_aeadd637dac50b858195f6f2afc3ef727}{get\+\_\+carte\+\_\+bas\+\_\+droite}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p)
+\begin{DoxyCompactList}\small\item\em Prototype de get\+\_\+carte\+\_\+bas\+\_\+droite. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{plateau_8h_a672ab477e21c474ba7ca8d58eddba391}{get\+\_\+numero\+\_\+manche}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p)
+\begin{DoxyCompactList}\small\item\em Prototype de get\+\_\+numero\+\_\+manche. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{plateau_8h_a7c1c2c150f89293665ef0993cfec9f7f}{get\+\_\+cartes\+\_\+retournees\+\_\+manche}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p)
+\begin{DoxyCompactList}\small\item\em Prototype de get\+\_\+cartes\+\_\+retournees\+\_\+manche. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{plateau_8h_aad74c438b78c0feb48bef41bbcad9fb0}{get\+\_\+cartes\+\_\+non\+\_\+retournees\+\_\+manche}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p)
+\begin{DoxyCompactList}\small\item\em Prototype de get\+\_\+cartes\+\_\+non\+\_\+retournees\+\_\+manche. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{carte_8h_a633ba64ee908d35aac798844f477ee9d}{Carte}} \mbox{\hyperlink{plateau_8h_a41cddf8d1f1e457df2f4c905d6605151}{retourner\+\_\+carte}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p)
 \begin{DoxyCompactList}\small\item\em retourne la carte la plus en haut à gauche du plateau face visible et active son effet \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{plateau_8h_a435d6218b5d502b6a6658ecfcdda9d8a}{nb\+\_\+maches\+\_\+gagnantes}} = 2
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -70,25 +90,11 @@ Copyright (c) 2022
 
 
 \doxysubsection{Typedef Documentation}
-\mbox{\Hypertarget{plateau_8h_aaf4d7dcdfc776307087361b4ee995e09}\label{plateau_8h_aaf4d7dcdfc776307087361b4ee995e09}} 
-\index{plateau.h@{plateau.h}!Factions\_en\_jeu@{Factions\_en\_jeu}}
-\index{Factions\_en\_jeu@{Factions\_en\_jeu}!plateau.h@{plateau.h}}
-\doxysubsubsection{\texorpdfstring{Factions\_en\_jeu}{Factions\_en\_jeu}}
-{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_factions__en__jeu}{Factions\+\_\+en\+\_\+jeu}} \mbox{\hyperlink{struct_factions__en__jeu}{Factions\+\_\+en\+\_\+jeu}}}
-
-
-
-Alias pour les couples de factions. 
-
-
-
-Definition at line 32 of file plateau.\+h.
-
 \mbox{\Hypertarget{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}\label{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}} 
 \index{plateau.h@{plateau.h}!Plateau@{Plateau}}
 \index{Plateau@{Plateau}!plateau.h@{plateau.h}}
 \doxysubsubsection{\texorpdfstring{Plateau}{Plateau}}
-{\footnotesize\ttfamily typedef struct s\+\_\+plateau$\ast$ \mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structs__plateau}{s\+\_\+plateau}}$\ast$ \mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}
 
 
 
@@ -96,7 +102,7 @@ type abstrait pour le plateau de jeu
 
 
 
-Definition at line 39 of file plateau.\+h.
+Definition at line 24 of file plateau.\+h.
 
 
 
@@ -119,12 +125,231 @@ détermine la faction qui joue en premier et renvoie la liste des deux factions 
 \begin{DoxyReturn}{Returns}
 la liste des des factions du jeu 
 \end{DoxyReturn}
+
+
+Definition at line 122 of file plateau.\+c.
+
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=343pt]{plateau_8h_ab023dd151ba2f8cf843b792a3434b8f5_icgraph}
+\includegraphics[width=350pt]{plateau_8h_ab023dd151ba2f8cf843b792a3434b8f5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{plateau_8h_aae1f642b6cc9581157600e961459d17d}\label{plateau_8h_aae1f642b6cc9581157600e961459d17d}} 
+\index{plateau.h@{plateau.h}!get\_avant\_derniere\_carte\_retournee@{get\_avant\_derniere\_carte\_retournee}}
+\index{get\_avant\_derniere\_carte\_retournee@{get\_avant\_derniere\_carte\_retournee}!plateau.h@{plateau.h}}
+\doxysubsubsection{\texorpdfstring{get\_avant\_derniere\_carte\_retournee()}{get\_avant\_derniere\_carte\_retournee()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_coord}{Coord}} get\+\_\+avant\+\_\+derniere\+\_\+carte\+\_\+retournee (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Prototype de get\+\_\+avant\+\_\+derniere\+\_\+carte\+\_\+retournee. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{struct_coord}{Coord}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{plateau_8h_aeadd637dac50b858195f6f2afc3ef727}\label{plateau_8h_aeadd637dac50b858195f6f2afc3ef727}} 
+\index{plateau.h@{plateau.h}!get\_carte\_bas\_droite@{get\_carte\_bas\_droite}}
+\index{get\_carte\_bas\_droite@{get\_carte\_bas\_droite}!plateau.h@{plateau.h}}
+\doxysubsubsection{\texorpdfstring{get\_carte\_bas\_droite()}{get\_carte\_bas\_droite()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_coord}{Coord}} get\+\_\+carte\+\_\+bas\+\_\+droite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Prototype de get\+\_\+carte\+\_\+bas\+\_\+droite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{struct_coord}{Coord}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{plateau_8h_a71f7141a9a486188445d0c2382332ef6}\label{plateau_8h_a71f7141a9a486188445d0c2382332ef6}} 
+\index{plateau.h@{plateau.h}!get\_carte\_haut\_gauche@{get\_carte\_haut\_gauche}}
+\index{get\_carte\_haut\_gauche@{get\_carte\_haut\_gauche}!plateau.h@{plateau.h}}
+\doxysubsubsection{\texorpdfstring{get\_carte\_haut\_gauche()}{get\_carte\_haut\_gauche()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_coord}{Coord}} get\+\_\+carte\+\_\+haut\+\_\+gauche (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Prototype de get\+\_\+carte\+\_\+haut\+\_\+gauche. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{struct_coord}{Coord}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{plateau_8h_aad74c438b78c0feb48bef41bbcad9fb0}\label{plateau_8h_aad74c438b78c0feb48bef41bbcad9fb0}} 
+\index{plateau.h@{plateau.h}!get\_cartes\_non\_retournees\_manche@{get\_cartes\_non\_retournees\_manche}}
+\index{get\_cartes\_non\_retournees\_manche@{get\_cartes\_non\_retournees\_manche}!plateau.h@{plateau.h}}
+\doxysubsubsection{\texorpdfstring{get\_cartes\_non\_retournees\_manche()}{get\_cartes\_non\_retournees\_manche()}}
+{\footnotesize\ttfamily int get\+\_\+cartes\+\_\+non\+\_\+retournees\+\_\+manche (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Prototype de get\+\_\+cartes\+\_\+non\+\_\+retournees\+\_\+manche. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{plateau_8h_a7c1c2c150f89293665ef0993cfec9f7f}\label{plateau_8h_a7c1c2c150f89293665ef0993cfec9f7f}} 
+\index{plateau.h@{plateau.h}!get\_cartes\_retournees\_manche@{get\_cartes\_retournees\_manche}}
+\index{get\_cartes\_retournees\_manche@{get\_cartes\_retournees\_manche}!plateau.h@{plateau.h}}
+\doxysubsubsection{\texorpdfstring{get\_cartes\_retournees\_manche()}{get\_cartes\_retournees\_manche()}}
+{\footnotesize\ttfamily int get\+\_\+cartes\+\_\+retournees\+\_\+manche (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Prototype de get\+\_\+cartes\+\_\+retournees\+\_\+manche. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{plateau_8h_af18e9c10ad5b52e70af728594d0b6fab}\label{plateau_8h_af18e9c10ad5b52e70af728594d0b6fab}} 
+\index{plateau.h@{plateau.h}!get\_derniere\_carte\_posee@{get\_derniere\_carte\_posee}}
+\index{get\_derniere\_carte\_posee@{get\_derniere\_carte\_posee}!plateau.h@{plateau.h}}
+\doxysubsubsection{\texorpdfstring{get\_derniere\_carte\_posee()}{get\_derniere\_carte\_posee()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_coord}{Coord}} get\+\_\+derniere\+\_\+carte\+\_\+posee (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Prototype de get\+\_\+derniere\+\_\+carte\+\_\+posee. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{struct_coord}{Coord}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{plateau_8h_a7d0fe2e325ffc2e0d1c019bfb872940b}\label{plateau_8h_a7d0fe2e325ffc2e0d1c019bfb872940b}} 
+\index{plateau.h@{plateau.h}!get\_derniere\_carte\_retournee@{get\_derniere\_carte\_retournee}}
+\index{get\_derniere\_carte\_retournee@{get\_derniere\_carte\_retournee}!plateau.h@{plateau.h}}
+\doxysubsubsection{\texorpdfstring{get\_derniere\_carte\_retournee()}{get\_derniere\_carte\_retournee()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_coord}{Coord}} get\+\_\+derniere\+\_\+carte\+\_\+retournee (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Prototype de get\+\_\+derniere\+\_\+carte\+\_\+retournee. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{struct_coord}{Coord}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{plateau_8h_a44f2d0cc019d090bd9af0bd3f86bb451}\label{plateau_8h_a44f2d0cc019d090bd9af0bd3f86bb451}} 
+\index{plateau.h@{plateau.h}!get\_factions@{get\_factions}}
+\index{get\_factions@{get\_factions}!plateau.h@{plateau.h}}
+\doxysubsubsection{\texorpdfstring{get\_factions()}{get\_factions()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_factions__en__jeu}{Factions\+\_\+en\+\_\+jeu}} get\+\_\+factions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Prototype de get\+\_\+factions qui permet de récupérer les factions en jeu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{struct_factions__en__jeu}{Factions\+\_\+en\+\_\+jeu}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{plateau_8h_a672ab477e21c474ba7ca8d58eddba391}\label{plateau_8h_a672ab477e21c474ba7ca8d58eddba391}} 
+\index{plateau.h@{plateau.h}!get\_numero\_manche@{get\_numero\_manche}}
+\index{get\_numero\_manche@{get\_numero\_manche}!plateau.h@{plateau.h}}
+\doxysubsubsection{\texorpdfstring{get\_numero\_manche()}{get\_numero\_manche()}}
+{\footnotesize\ttfamily int get\+\_\+numero\+\_\+manche (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Prototype de get\+\_\+numero\+\_\+manche. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{plateau_8h_a16b4aa131728b3607f802a91a4e270a2}\label{plateau_8h_a16b4aa131728b3607f802a91a4e270a2}} 
+\index{plateau.h@{plateau.h}!get\_plateau\_jeu@{get\_plateau\_jeu}}
+\index{get\_plateau\_jeu@{get\_plateau\_jeu}!plateau.h@{plateau.h}}
+\doxysubsubsection{\texorpdfstring{get\_plateau\_jeu()}{get\_plateau\_jeu()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structure_8h_af09c6150dd688094b9a2ed11657afbe0}{Plateau\+\_\+jeu}} get\+\_\+plateau\+\_\+jeu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Prototype de get\+\_\+plateau\+\_\+jeu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Plateau\+\_\+jeu 
+\end{DoxyReturn}
+\mbox{\Hypertarget{plateau_8h_a2190bbe0984d78c5f3d5f2e646210f07}\label{plateau_8h_a2190bbe0984d78c5f3d5f2e646210f07}} 
+\index{plateau.h@{plateau.h}!init\_pioche@{init\_pioche}}
+\index{init\_pioche@{init\_pioche}!plateau.h@{plateau.h}}
+\doxysubsubsection{\texorpdfstring{init\_pioche()}{init\_pioche()}}
+{\footnotesize\ttfamily void init\+\_\+pioche (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f }\end{DoxyParamCaption})}
+
+
+
+crée la pioche avec les 32 cartes de l\textquotesingle{}énoncé pour la faction donnée 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & faction valide (le pointeur doit être valide) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 38 of file plateau.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{plateau_8h_a2190bbe0984d78c5f3d5f2e646210f07_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{plateau_8h_a2190bbe0984d78c5f3d5f2e646210f07_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{plateau_8h_a48e20516b8894156393d7f0f2da54ce2}\label{plateau_8h_a48e20516b8894156393d7f0f2da54ce2}} 
@@ -135,17 +360,29 @@ Here is the caller graph for this function\+:
 
 
 
-crée un plateau et les deux factions qui joueront dessuss 
+crée un plateau et les deux factions qui joueront dessus 
 
 \begin{DoxyReturn}{Returns}
 le plateau initialisé 
 \end{DoxyReturn}
+
+
+Definition at line 58 of file plateau.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{plateau_8h_a48e20516b8894156393d7f0f2da54ce2_cgraph}
+\end{center}
+\end{figure}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=231pt]{plateau_8h_a48e20516b8894156393d7f0f2da54ce2_icgraph}
+\includegraphics[width=350pt]{plateau_8h_a48e20516b8894156393d7f0f2da54ce2_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{plateau_8h_aa2fd2fef89b903a5c089bf57cb932e29}\label{plateau_8h_aa2fd2fef89b903a5c089bf57cb932e29}} 
@@ -163,12 +400,16 @@ libère la mémoire associée au plateau de jeu et aux deux factions
 {\em p} & plateau valide (le pointeur doit être valide) \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 80 of file plateau.\+c.
+
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=243pt]{plateau_8h_aa2fd2fef89b903a5c089bf57cb932e29_icgraph}
+\includegraphics[width=350pt]{plateau_8h_aa2fd2fef89b903a5c089bf57cb932e29_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{plateau_8h_a49570b78f74ed1d5d588404e0f6bbcfc}\label{plateau_8h_a49570b78f74ed1d5d588404e0f6bbcfc}} 
@@ -189,12 +430,24 @@ initialise une nouvelle manche ou indique que le jeu est terminé
 \begin{DoxyReturn}{Returns}
 1 si la partie continue, 0 si le jeu est terminé 
 \end{DoxyReturn}
+
+
+Definition at line 84 of file plateau.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{plateau_8h_a49570b78f74ed1d5d588404e0f6bbcfc_cgraph}
+\end{center}
+\end{figure}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=260pt]{plateau_8h_a49570b78f74ed1d5d588404e0f6bbcfc_icgraph}
+\includegraphics[width=350pt]{plateau_8h_a49570b78f74ed1d5d588404e0f6bbcfc_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{plateau_8h_a425437529596e13babd7bc8b4e04d491}\label{plateau_8h_a425437529596e13babd7bc8b4e04d491}} 
@@ -218,12 +471,16 @@ permet à une faction de poser une carte face cachée sur le plateau
 {\em j} & position en ordonnée dans le plateau souhaitée pour la carte \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 144 of file plateau.\+c.
+
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=319pt]{plateau_8h_a425437529596e13babd7bc8b4e04d491_icgraph}
+\includegraphics[width=350pt]{plateau_8h_a425437529596e13babd7bc8b4e04d491_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{plateau_8h_a41cddf8d1f1e457df2f4c905d6605151}\label{plateau_8h_a41cddf8d1f1e457df2f4c905d6605151}} 
@@ -246,11 +503,36 @@ la carte que l\textquotesingle{}on a retourné face visible
 
 N\+U\+LL s\textquotesingle{}il n\textquotesingle{}y a plus aucune carte à retourner 
 \end{DoxyReturn}
+@\+T\+O\+DO
+
+Definition at line 174 of file plateau.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{plateau_8h_a41cddf8d1f1e457df2f4c905d6605151_cgraph}
+\end{center}
+\end{figure}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=337pt]{plateau_8h_a41cddf8d1f1e457df2f4c905d6605151_icgraph}
+\includegraphics[width=350pt]{plateau_8h_a41cddf8d1f1e457df2f4c905d6605151_icgraph}
 \end{center}
 \end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{plateau_8h_a435d6218b5d502b6a6658ecfcdda9d8a}\label{plateau_8h_a435d6218b5d502b6a6658ecfcdda9d8a}} 
+\index{plateau.h@{plateau.h}!nb\_maches\_gagnantes@{nb\_maches\_gagnantes}}
+\index{nb\_maches\_gagnantes@{nb\_maches\_gagnantes}!plateau.h@{plateau.h}}
+\doxysubsubsection{\texorpdfstring{nb\_maches\_gagnantes}{nb\_maches\_gagnantes}}
+{\footnotesize\ttfamily const int nb\+\_\+maches\+\_\+gagnantes = 2}
+
+
+
+Definition at line 17 of file plateau.\+h.
+

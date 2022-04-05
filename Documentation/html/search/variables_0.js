@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['left_64',['left',['../struct_int_couple.html#ad8f5e19e19f12974c9713e920ec54331',1,'IntCouple::left()'],['../struct_factions__en__jeu.html#ad6aecb732d365d382955d9bc06fd897d',1,'Factions_en_jeu::left()']]]
+  ['a_5fremelange_230',['a_remelange',['../struct_structure_factions.html#ae68854d371b3b5821ee282829c22db8c',1,'StructureFactions']]],
+  ['avant_5fderniere_5fcarte_5fretournee_231',['avant_derniere_carte_retournee',['../structs__plateau.html#afe536a9b9846e99505d291f003a2c59c',1,'s_plateau']]]
 ];
