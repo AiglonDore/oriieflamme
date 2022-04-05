@@ -10,5 +10,5 @@ void affiche_plateau(Plateau p)
 
 void affiche_effets(Carte c)
 {
-    printf("Effet de la carte \"%s\": \"%s\".\n",c->get_nom(),c->get_description());
+    printf("Effet de la carte \"%s\": \"%s\".\n",get_nom(c),get_description(c));
 }
