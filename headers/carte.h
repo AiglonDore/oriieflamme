@@ -37,7 +37,7 @@ typedef enum nom_carte
     Ecocup,
     Reprographie,
     Isolation_batiment,
-    Parcous_sobriete_numerique,
+    Parcours_sobriete_numerique,
     Heures_supplementaires,
     Kahina_Bouchama,
     Kevin_Goilard,
@@ -60,7 +60,7 @@ typedef enum nom_carte
 } id_carte;
 
 char *nom_carte[32] = {"FISE", "FISA", "FC", "EcologIIE", "lIIEns", "Soiree_sans_alcool", "Alcool",
-                       "Cafe", "The", "Ecocup", "Reprographie", "Isolation_batiment", "Parcous_sobriete_mumerique",
+                       "Cafe", "The", "Ecocup", "Reprographie", "Isolation_batiment", "Parcours_sobriete_mumerique",
                        "Heures supplementaites", "Kahina Bouchama", "Kevin Goilard", "Massinissa Merabet",
                        "Vitera Y", "Jonas Senizergues", "Fetia Bannour", "Catherine Dubois", "Anne Laure Ligozat",
                        "Guillaume Burel", "Christophe Mouilleron", "Thomas lim", "Julien Forest", "Dimitri watel",
