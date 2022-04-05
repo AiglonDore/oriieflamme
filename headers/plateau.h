@@ -173,27 +173,30 @@ void bonus_anl(Plateau p, Faction f, int score, Faction f_adverse, int score_adv
  * @param p plateau valide (le pointeur doit être valide)
  * @param f faction valide (le pointeur doit être valide), faction qui a déposé la carte
  * @param score score de la faction f
+ * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
-void retourne_FISE(Plateau p, Faction f, int score);
+void retourne_FISE(Plateau p, Faction f, int score, Coord coord);
 
 /**
  * @brief Active les effets de la carte FISA
  * @param p plateau valide (le pointeur doit être valide)
  * @param f faction valide (le pointeur doit être valide), faction qui a déposé la carte
  * @param score score de la faction f
+ * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
-void retourne_FISA(Plateau p, Faction f, int score);
+void retourne_FISA(Plateau p, Faction f, int score, Coord coord);
 
 /**
  * @brief Active les effets de la carte FC
  * @param p plateau valide (le pointeur doit être valide)
  * @param f faction valide (le pointeur doit être valide), faction qui a déposé la carte
  * @param score score de la faction f
+ * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
-void retourne_FC(Plateau p, Faction f, int score);
+void retourne_FC(Plateau p, Faction f, int score, Coord coord);
 
 /**
  * @brief Active les effets de la carte EcologIIE
@@ -202,30 +205,33 @@ void retourne_FC(Plateau p, Faction f, int score);
  * @param score score de la faction f
  * @param f_adverse faction valide (le pointeur doit être valide), faction adverse de celle qui a déposé la carte
  * @param score_adverse score de la faction f_adverse
+ * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
-void retourne_EcologIIE(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse);
+void retourne_EcologIIE(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse, Coord coord);
 
 /**
  * @brief Active les effets de la carte lIIEns
  * @param p plateau valide (le pointeur doit être valide)
+ * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
-void retourne_lIIEns(Plateau p);
+void retourne_lIIEns(Plateau p, Coord coord);
 
 /**
  * @brief Active les effets de la carte Soirée sans alcool
  * @param p plateau valide (le pointeur doit être valide)
  * @param f faction valide (le pointeur doit être valide), faction qui a déposé la carte
  * @param score score de la faction f
+ * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
-void retourne_Soiree_sans_alcool(Plateau p, Faction f, int score);
+void retourne_Soiree_sans_alcool(Plateau p, Faction f, int score, Coord coord);
 
 /**
  * @brief Active les effets de la carte Alcool
  * @param p plateau valide (le pointeur doit être valide)
- * @param coord les coordonnées de la carte Alcool en question sur le plateau
+ * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
 void retourne_Alcool(Plateau p, Coord coord);
@@ -235,18 +241,20 @@ void retourne_Alcool(Plateau p, Coord coord);
  * @param p plateau valide (le pointeur doit être valide)
  * @param f faction valide (le pointeur doit être valide), faction qui a déposé la carte
  * @param score score de la faction f
+ * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
-void retourne_Cafe(Plateau p, Faction f, int score);
+void retourne_Cafe(Plateau p, Faction f, int score, Coord coord);
 
 /**
  * @brief Active les effets de la carte Thé
  * @param p plateau valide (le pointeur doit être valide)
  * @param f faction valide (le pointeur doit être valide), faction qui a déposé la carte
  * @param score score de la faction f
+ * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
-void retourne_The(Plateau p, Faction f, int score);
+void retourne_The(Plateau p, Faction f, int score, Coord coord);
 
 /**
  * @brief Active les effets de la carte Ecocup
@@ -255,9 +263,10 @@ void retourne_The(Plateau p, Faction f, int score);
  * @param score score de la faction f
  * @param f_adverse faction valide (le pointeur doit être valide), faction adverse de celle qui a déposé la carte
  * @param score_adverse score de la faction f_adverse
+ * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
-void retourne_Ecocup(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse);
+void retourne_Ecocup(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse, Coord coord);
 
 /**
  * @brief Active les effets de la carte Reprographie
@@ -266,9 +275,10 @@ void retourne_Ecocup(Plateau p, Faction f, int score, Faction f_adverse, int sco
  * @param score score de la faction f
  * @param f_adverse faction valide (le pointeur doit être valide), faction adverse de celle qui a déposé la carte
  * @param score_adverse score de la faction f_adverse
+ * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
-void retourne_Reprographie(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse);
+void retourne_Reprographie(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse, Coord coord);
 
 /**
  * @brief Active les effets de la carte Isolation du bâtiment
@@ -277,9 +287,10 @@ void retourne_Reprographie(Plateau p, Faction f, int score, Faction f_adverse, i
  * @param score score de la faction f
  * @param f_adverse faction valide (le pointeur doit être valide), faction adverse de celle qui a déposé la carte
  * @param score_adverse score de la faction f_adverse
+ * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
-void retourne_Isolation_du_bâtiment(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse);
+void retourne_Isolation_du_bâtiment(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse, Coord coord);
 
 /**
  * @brief Active les effets de la carte Parcours sobriété numérique
@@ -288,42 +299,47 @@ void retourne_Isolation_du_bâtiment(Plateau p, Faction f, int score, Faction f_
  * @param score score de la faction f
  * @param f_adverse faction valide (le pointeur doit être valide), faction adverse de celle qui a déposé la carte
  * @param score_adverse score de la faction f_adverse
+ * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
-void retourne_Parcours_sobriété_numérique(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse);
+void retourne_Parcours_sobriété_numérique(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse, Coord coord);
 
 /**
  * @brief Active les effets de la carte Heures supplémentaires
  * @param p plateau valide (le pointeur doit être valide)
  * @param f_adverse faction valide (le pointeur doit être valide), faction adverse de celle qui a déposé la carte
  * @param score_adverse score de la faction f_adverse
+ * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
-void retourne_Heures_supplementaires(Plateau p, Faction f_adverse, int score_adverse);
+void retourne_Heures_supplementaires(Plateau p, Faction f_adverse, int score_adverse, Coord coord);
 
 /**
  * @brief Active les effets de la carte Kahina Bouchama
  * @param p plateau valide (le pointeur doit être valide)
+ * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
-void retourne_Kahina_Bouchama(Plateau p);
+void retourne_Kahina_Bouchama(Plateau p, Coord coord);
 
 /**
  * @brief Active les effets de la carte Kevin Goilard
  * @param p plateau valide (le pointeur doit être valide)
  * @param f faction valide (le pointeur doit être valide), faction qui a déposé la carte
  * @param score score de la faction f
+ * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
-void retourne_Kevin_Goilard(Plateau p, Faction f, int score);
+void retourne_Kevin_Goilard(Plateau p, Faction f, int score, Coord coord);
 
 /**
  * @brief Active les effets de la carte Massinissa Merabet
  * @param p plateau valide (le pointeur doit être valide)
  * @param f faction valide (le pointeur doit être valide), faction qui a déposé la carte
+ * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
-void retourne_Massinissa_Merabet(Plateau p, Faction f);
+void retourne_Massinissa_Merabet(Plateau p, Faction f, Coord coord);
 
 /**
  * @brief Active les effets de la carte Vitéra Y
@@ -332,30 +348,33 @@ void retourne_Massinissa_Merabet(Plateau p, Faction f);
  * @param score score de la faction f
  * @param f_adverse faction valide (le pointeur doit être valide), faction adverse de celle qui a déposé la carte
  * @param score_adverse score de la faction f_adverse
+ * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
-void retourne_Vitera_Y(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse);
+void retourne_Vitera_Y(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse, Coord coord);
 
 /**
  * @brief Active les effets de la carte Jonas Senizergues
  * @param p plateau valide (le pointeur doit être valide)
+ * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
-void retourne_Jonas_Senizergues(Plateau p);
+void retourne_Jonas_Senizergues(Plateau p, Coord coord);
 
 /**
  * @brief Active les effets de la carte Fetia Bannour
  * @param p plateau valide (le pointeur doit être valide)
  * @param f faction valide (le pointeur doit être valide), faction qui a déposé la carte
  * @param score score de la faction f
+ * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
-void retourne_Fetia_Bannour(Plateau p, Faction f, int score);
+void retourne_Fetia_Bannour(Plateau p, Faction f, int score, Coord coord);
 
 /**
  * @brief Active les effets de la carte Catherine Dubois
  * @param p plateau valide (le pointeur doit être valide)
- * @param coord les coordonnées de la carte Catherine Dubois en question sur le plateau
+ * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
 void retourne_Catherine_Dubois(Plateau p, Coord coord);
@@ -365,9 +384,10 @@ void retourne_Catherine_Dubois(Plateau p, Coord coord);
  * @param p plateau valide (le pointeur doit être valide)
  * @param f faction valide (le pointeur doit être valide), faction qui a déposé la carte
  * @param score score de la faction f
+ * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
-void retourne_AnneLaure_Ligozat(Plateau p, Faction f, int score);
+void retourne_AnneLaure_Ligozat(Plateau p, Faction f, int score, Coord coord);
 
 /**
  * @brief Active les effets de la carte Guillaume Burel
@@ -376,16 +396,18 @@ void retourne_AnneLaure_Ligozat(Plateau p, Faction f, int score);
  * @param score score de la faction f
  * @param f_adverse faction valide (le pointeur doit être valide), faction adverse de celle qui a déposé la carte
  * @param score_adverse score de la faction f_adverse
+ * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
-void retourne_Guillaume_Burel(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse);
+void retourne_Guillaume_Burel(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse, Coord coord);
 
 /**
  * @brief Active les effets de la carte Christophe Mouilleron
  * @param p plateau valide (le pointeur doit être valide)
+ * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
-void retourne_Christophe_Mouilleron(Plateau p);
+void retourne_Christophe_Mouilleron(Plateau p, Coord coord);
 
 /**
  * @brief Active les effets de la carte Thomas Lim
@@ -394,34 +416,37 @@ void retourne_Christophe_Mouilleron(Plateau p);
  * @param score score de la faction f
  * @param f_adverse faction valide (le pointeur doit être valide), faction adverse de celle qui a déposé la carte
  * @param score_adverse score de la faction f_adverse
+ * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
-void retourne_Thomas_Lim(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse);
+void retourne_Thomas_Lim(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse, Coord coord);
 
 /**
  * @brief Active les effets de la carte Julien Forest
  * @param p plateau valide (le pointeur doit être valide)
  * @param f faction valide (le pointeur doit être valide), faction qui a déposé la carte
  * @param score score de la faction f
+ * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
-void retourne_Julien_Forest(Plateau p, Faction f, int score);
+void retourne_Julien_Forest(Plateau p, Faction f, int score, Coord coord);
 
 /**
  * @brief Active les effets de la carte Dimitri Watel
  * @param p plateau valide (le pointeur doit être valide)
  * @param f faction valide (le pointeur doit être valide), faction qui a déposé la carte
  * @param score score de la faction f
+ * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
-void retourne_Dimitri_Watel(Plateau p, Faction f, int score);
+void retourne_Dimitri_Watel(Plateau p, Faction f, int score, Coord coord);
 
 /**
  * @brief Active les effets de la carte Djibril-Aurélien Dembele-Cabot
  * @param p plateau valide (le pointeur doit être valide)
  * @param f faction valide (le pointeur doit être valide), faction qui a déposé la carte
  * @param score score de la faction f
- * @param coord les coordonnées de la carte Djibril-Aurélien Dembele-Cabot en question sur le plateau
+ * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
 void retourne_Djibril_Aurelien_Dembele_Cabot(Plateau p, Faction f, int score, Coord coord);
@@ -429,16 +454,17 @@ void retourne_Djibril_Aurelien_Dembele_Cabot(Plateau p, Faction f, int score, Co
 /**
  * @brief Active les effets de la carte Eric Lejeune
  * @param p plateau valide (le pointeur doit être valide)
+ * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
-void retourne_Eric_Lejeune(Plateau p);
+void retourne_Eric_Lejeune(Plateau p, Coord coord);
 
 /**
  * @brief Active les effets de la carte Lucienne Pacavé
  * @param p plateau valide (le pointeur doit être valide)
  * @param f faction valide (le pointeur doit être valide), faction qui a déposé la carte
  * @param score score de la faction f
- * @param coord les coordonnées de la carte Lucienne Pacavé en question sur le plateau
+ * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
 void retourne_Lucienne_Pacave(Plateau p, Faction f, int score, Coord coord);
@@ -448,7 +474,7 @@ void retourne_Lucienne_Pacave(Plateau p, Faction f, int score, Coord coord);
  * @param p plateau valide (le pointeur doit être valide)
  * @param f faction valide (le pointeur doit être valide), faction qui a déposé la carte
  * @param score score de la faction f
- * @param coord les coordonnées de la carte Katrin Salhab en question sur le plateau
+ * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
 void retourne_Katrin_Salhab(Plateau p, Faction f, int score, Coord coord);
@@ -456,9 +482,10 @@ void retourne_Katrin_Salhab(Plateau p, Faction f, int score, Coord coord);
 /**
  * @brief Active les effets de la carte Laurent Prével
  * @param p plateau valide (le pointeur doit être valide)
+ * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
-void retourne_Laurent_Prevel(Plateau p);
+void retourne_Laurent_Prevel(Plateau p, Coord coord);
 
 /**
  * @brief Active les effets de la carte d'identifiant id

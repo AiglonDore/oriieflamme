@@ -41,25 +41,55 @@ struct s_plateau
  * Implémentation des prototypes des getters et setters
  ***************************************************/
 
-Carte **get_plateau_jeu(Plateau p);
+Carte **get_plateau_jeu(Plateau p)
+{
+    return p->plateau_jeu;
+}
 
-Factions_en_jeu get_factions(Plateau p);
+Factions_en_jeu get_factions(Plateau p)
+{
+    return p->factions;
+}
 
-Coord get_derniere_carte_posee(Plateau p);
+Coord get_derniere_carte_posee(Plateau p)
+{
+    return p->derniere_carte_posee;
+}
 
-Coord get_derniere_carte_retournee(Plateau p);
+Coord get_derniere_carte_retournee(Plateau p)
+{
+    return p->derniere_carte_retournee;
+}
 
-Coord get_avant_derniere_carte_retournee(Plateau p);
+Coord get_avant_derniere_carte_retournee(Plateau p)
+{
+    return p->avant_derniere_carte_retournee;
+}
 
-Coord get_carte_haut_gauche(Plateau p);
+Coord get_carte_haut_gauche(Plateau p)
+{
+    return p->carte_haut_gauche;
+}
 
-Coord get_carte_bas_droite(Plateau p);
+Coord get_carte_bas_droite(Plateau p)
+{
+    return p->carte_bas_droite;
+}
 
-int get_numero_manche(Plateau p);
+int get_numero_manche(Plateau p)
+{
+    return p->numero_manche;
+}
 
-int get_cartes_retournees_manche(Plateau p);
+int get_cartes_retournees_manche(Plateau p)
+{
+    return p->cartes_retournees_manche;
+}
 
-int get_cartes_non_retournees_manche(Plateau p);
+int get_cartes_non_retournees_manche(Plateau p)
+{
+    return p->cartes_non_retournees_manche;
+}
 
 /********************************************************
  * Implémentation des prototypes des fonctions du plateau
@@ -300,12 +330,18 @@ void bonus_anl(Plateau p, Faction f, int score, Faction f_adverse, int score_adv
     }
 }
 
-void retourne_FISE(Plateau p, Faction f, int score)
+void retourne_FISE(Plateau p, Faction f, int score, Coord coord)
 {
     set_pts_DDRS_manche(f, score + 1);
+    p->cartes_retournees_manche += 1;
+    p->cartes_non_retournees_manche -= 1;
+    p->avant_derniere_carte_retournee.i = p->derniere_carte_retournee.i;
+    p->avant_derniere_carte_retournee.j = p->derniere_carte_retournee.j;
+    p->derniere_carte_retournee.i = coord.i;
+    p->derniere_carte_retournee.j = coord.j;
 }
 
-void retourne_FISA(Plateau p, Faction f, int score)
+void retourne_FISA(Plateau p, Faction f, int score, Coord coord)
 {
     if (p->cartes_retournees_manche % 2 == 0)
     {
@@ -313,7 +349,7 @@ void retourne_FISA(Plateau p, Faction f, int score)
     }
 }
 
-void retourne_FC(Plateau p, Faction f, int score)
+void retourne_FC(Plateau p, Faction f, int score, Coord coord)
 {
     int i, j;
     for (i = 0; i < 129; i += 1)
@@ -330,7 +366,7 @@ void retourne_FC(Plateau p, Faction f, int score)
     }
 }
 
-void retourne_EcologIIE(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse)
+void retourne_EcologIIE(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse, Coord coord)
 {
     bonus_anl(p, f, score, f_adverse, score_adverse);
     int pts_gagnes = 0;
@@ -349,7 +385,7 @@ void retourne_EcologIIE(Plateau p, Faction f, int score, Faction f_adverse, int 
     set_pts_DDRS_manche(f, score + pts_gagnes);
 }
 
-void retourne_lIIEns(Plateau p)
+void retourne_lIIEns(Plateau p, Coord coord)
 {
     // On enlève les cartes FISE/FISA/FC retournées du plateau, on les stocke dans a_retirer
     Carte a_retirer[16]; // il y a 16 cartes sur le plateau
@@ -400,7 +436,7 @@ void retourne_lIIEns(Plateau p)
     }
 }
 
-void retourne_Soiree_sans_alcool(Plateau p, Faction f, int score)
+void retourne_Soiree_sans_alcool(Plateau p, Faction f, int score, Coord coord)
 {
     int i, j;
     int alcool_retourne = 0;
@@ -448,7 +484,7 @@ void retourne_Alcool(Plateau p, Coord coord)
     p->plateau_jeu[coord.i][coord.j - 1] = NULL;
     p->plateau_jeu[coord.i][coord.j + 1] = NULL;
 }
-void retourne_Cafe(Plateau p, Faction f, int score)
+void retourne_Cafe(Plateau p, Faction f, int score, Coord coord)
 {
     int i, j;
     int ecocup_retourne = 0;
@@ -477,7 +513,7 @@ void retourne_Cafe(Plateau p, Faction f, int score)
     }
 }
 
-void retourne_The(Plateau p, Faction f, int score)
+void retourne_The(Plateau p, Faction f, int score, Coord coord)
 {
     int i, j;
     int ecocup_retourne = 0;
@@ -506,12 +542,12 @@ void retourne_The(Plateau p, Faction f, int score)
     }
 }
 
-void retourne_Ecocup(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse)
+void retourne_Ecocup(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse, Coord coord)
 {
     bonus_anl(p, f, score, f_adverse, score_adverse);
 }
 
-void retourne_Reprographie(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse)
+void retourne_Reprographie(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse, Coord coord)
 {
     int cartes_retournees[32] = {0};
     int i, j;
@@ -536,7 +572,7 @@ void retourne_Reprographie(Plateau p, Faction f, int score, Faction f_adverse, i
     set_pts_DDRS_manche(f_adverse, score_adverse - nb_paires);
 }
 
-void retourne_Isolation_du_bâtiment(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse)
+void retourne_Isolation_du_bâtiment(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse, Coord coord)
 {
     bonus_anl(p, f, score, f_adverse, score_adverse);
     int i, j;
@@ -561,7 +597,7 @@ void retourne_Isolation_du_bâtiment(Plateau p, Faction f, int score, Faction f_
     set_pts_DDRS_manche(f_adverse, score_adverse + pts_gagnes_f_adverse);
 }
 
-void retourne_Parcours_sobriété_numérique(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse)
+void retourne_Parcours_sobriété_numérique(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse, Coord coord)
 {
     bonus_anl(p, f, score, f_adverse, score_adverse);
     int i;
@@ -582,7 +618,7 @@ void retourne_Parcours_sobriété_numérique(Plateau p, Faction f, int score, Fa
     }
 }
 
-void retourne_Heures_supplementaires(Plateau p, Faction f_adverse, int score_adverse)
+void retourne_Heures_supplementaires(Plateau p, Faction f_adverse, int score_adverse, Coord coord)
 {
     int i, j;
     int malus = 0;
@@ -600,7 +636,7 @@ void retourne_Heures_supplementaires(Plateau p, Faction f_adverse, int score_adv
     set_pts_DDRS_manche(f_adverse, score_adverse + malus);
 }
 
-void retourne_Kahina_Bouchama(Plateau p)
+void retourne_Kahina_Bouchama(Plateau p, Coord coord)
 {
     int numero_carte_supprimer = rand() % p->cartes_non_retournees_manche + 1;
     int cartes_vues = 0;
@@ -623,7 +659,7 @@ void retourne_Kahina_Bouchama(Plateau p)
     }
 }
 
-void retourne_Kevin_Goilard(Plateau p, Faction f, int score)
+void retourne_Kevin_Goilard(Plateau p, Faction f, int score, Coord coord)
 {
     int ligne_suppression = rand() % 129;
     int cartes_supprimees = 0;
@@ -640,12 +676,24 @@ void retourne_Kevin_Goilard(Plateau p, Faction f, int score)
     set_pts_DDRS_manche(f, score + 2 * cartes_supprimees);
 }
 
-void retourne_Massinissa_Merabet(Plateau p, Faction f)
+void retourne_Massinissa_Merabet(Plateau p, Faction f, Coord coord)
 {
+    if (p->cartes_retournees_manche == 0)
+    {
+        p->cartes_retournees_manche += 1;
+        p->cartes_non_retournees_manche -= 1;
+        return;
+    }
     Coord carte_a_traiter = p->derniere_carte_retournee;
     Carte carte = p->plateau_jeu[carte_a_traiter.i][carte_a_traiter.j];
     if (get_id(carte) == Massinissa_Merabet)
     {
+        if (p->cartes_retournees_manche == 1)
+        {
+            p->cartes_retournees_manche += 1;
+            p->cartes_non_retournees_manche -= 1;
+            return;
+        }
         carte_a_traiter = p->avant_derniere_carte_retournee;
         carte = p->plateau_jeu[carte_a_traiter.i][carte_a_traiter.j];
     }
@@ -657,7 +705,7 @@ void retourne_Massinissa_Merabet(Plateau p, Faction f)
     switch_carte(p, id, carte_a_traiter, f, f_adverse, score, score_adverse);
 }
 
-void retourne_Vitera_Y(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse)
+void retourne_Vitera_Y(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse, Coord coord)
 {
     if (score < score_adverse)
     {
@@ -671,7 +719,7 @@ void retourne_Vitera_Y(Plateau p, Faction f, int score, Faction f_adverse, int s
     }
 }
 
-void retourne_Jonas_Senizergues(Plateau p)
+void retourne_Jonas_Senizergues(Plateau p, Coord coord)
 {
     int i, j;
     for (i = 0; i < 129; i += 1)
@@ -687,7 +735,7 @@ void retourne_Jonas_Senizergues(Plateau p)
     }
 }
 
-void retourne_Fetia_Bannour(Plateau p, Faction f, int score)
+void retourne_Fetia_Bannour(Plateau p, Faction f, int score, Coord coord)
 {
     int i, j;
     int heures_sup_retournees = 0;
@@ -749,7 +797,7 @@ void retourne_Catherine_Dubois(Plateau p, Coord coord)
     p->plateau_jeu[i][coord.j] = NULL;
 }
 
-void retourne_AnneLaure_Ligozat(Plateau p, Faction f, int score)
+void retourne_AnneLaure_Ligozat(Plateau p, Faction f, int score, Coord coord)
 {
     set_carte_anl_retournee(f, 1);
     int i, j;
@@ -770,7 +818,7 @@ void retourne_AnneLaure_Ligozat(Plateau p, Faction f, int score)
     p->plateau_jeu[bas_droite.i][bas_droite.j] = NULL;
 }
 
-void retourne_Guillaume_Burel(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse)
+void retourne_Guillaume_Burel(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse, Coord coord)
 {
     if (score_adverse > score)
     {
@@ -779,7 +827,7 @@ void retourne_Guillaume_Burel(Plateau p, Faction f, int score, Faction f_adverse
     }
 }
 
-void retourne_Christophe_Mouilleron(Plateau p)
+void retourne_Christophe_Mouilleron(Plateau p, Coord coord)
 {
     int i, j;
     int heures_sup_retournees = 0;
@@ -810,7 +858,7 @@ void retourne_Christophe_Mouilleron(Plateau p)
     }
 }
 
-void retourne_Thomas_Lim(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse)
+void retourne_Thomas_Lim(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse, Coord coord)
 {
     int i, j;
     int JF_retourne = 0;
@@ -847,7 +895,7 @@ void retourne_Thomas_Lim(Plateau p, Faction f, int score, Faction f_adverse, int
     }
 }
 
-void retourne_Julien_Forest(Plateau p, Faction f, int score)
+void retourne_Julien_Forest(Plateau p, Faction f, int score, Coord coord)
 {
     int i, j;
     int cafe_retourne = 0;
@@ -880,7 +928,7 @@ void retourne_Julien_Forest(Plateau p, Faction f, int score)
     }
 }
 
-void retourne_Dimitri_Watel(Plateau p, Faction f, int score)
+void retourne_Dimitri_Watel(Plateau p, Faction f, int score, Coord coord)
 {
     int i, j;
     int the_retourne = 0;
@@ -931,7 +979,7 @@ void retourne_Djibril_Aurelien_Dembele_Cabot(Plateau p, Faction f, int score, Co
     }
 }
 
-void retourne_Eric_Lejeune(Plateau p)
+void retourne_Eric_Lejeune(Plateau p, Coord coord)
 {
     int a_choisir = p->cartes_retournees_manche < 5 ? p->cartes_retournees_manche : 5;
     if (a_choisir == 0)
@@ -1090,7 +1138,7 @@ void retourne_Katrin_Salhab(Plateau p, Faction f, int score, Coord coord)
     }
 }
 
-void retourne_Laurent_Prevel(Plateau p)
+void retourne_Laurent_Prevel(Plateau p, Coord coord)
 {
     // Actualiser paramètres
     return;
@@ -1102,32 +1150,32 @@ void switch_carte(Plateau p, id_carte id, Coord coord, Faction f, Faction f_adve
     {
     case FISE:
     {
-        retourne_FISE(p, f, score);
+        retourne_FISE(p, f, score, coord);
         break;
     }
     case FISA:
     {
-        retourne_FISA(p, f, score);
+        retourne_FISA(p, f, score, coord);
         break;
     }
     case FC:
     {
-        retourne_FC(p, f, score);
+        retourne_FC(p, f, score, coord);
         break;
     }
     case EcologIIE:
     {
-        retourne_EcologIIE(p, f, score, f_adverse, score_adverse);
+        retourne_EcologIIE(p, f, score, f_adverse, score_adverse, coord);
         break;
     }
     case lIIEns:
     {
-        retourne_lIIEns(p);
+        retourne_lIIEns(p, coord);
         break;
     }
     case Soiree_sans_alcool:
     {
-        retourne_Soiree_sans_alcool(p, f, score);
+        retourne_Soiree_sans_alcool(p, f, score, coord);
         break;
     }
     case Alcool:
@@ -1137,67 +1185,67 @@ void switch_carte(Plateau p, id_carte id, Coord coord, Faction f, Faction f_adve
     }
     case Cafe:
     {
-        retourne_Cafe(p, f, score);
+        retourne_Cafe(p, f, score, coord);
         break;
     }
     case The:
     {
-        retourne_The(p, f, score);
+        retourne_The(p, f, score, coord);
         break;
     }
     case Ecocup:
     {
-        retourne_Ecocup(p, f, score, f_adverse, score_adverse);
+        retourne_Ecocup(p, f, score, f_adverse, score_adverse, coord);
         break;
     }
     case Reprographie:
     {
-        retourne_Reprographie(p, f, score, f_adverse, score_adverse);
+        retourne_Reprographie(p, f, score, f_adverse, score_adverse, coord);
         break;
     }
     case Isolation_batiment:
     {
-        retourne_Isolation_du_bâtiment(p, f, score, f_adverse, score_adverse);
+        retourne_Isolation_du_bâtiment(p, f, score, f_adverse, score_adverse, coord);
         break;
     }
     case Parcours_sobriete_numerique:
     {
-        retourne_Parcours_sobriété_numérique(p, f, score, f_adverse, score_adverse);
+        retourne_Parcours_sobriété_numérique(p, f, score, f_adverse, score_adverse, coord);
         break;
     }
     case Heures_supplementaires:
     {
-        retourne_Heures_supplementaires(p, f_adverse, score_adverse);
+        retourne_Heures_supplementaires(p, f_adverse, score_adverse, coord);
         break;
     }
     case Kahina_Bouchama:
     {
-        retourne_Kahina_Bouchama(p);
+        retourne_Kahina_Bouchama(p, coord);
         break;
     }
     case Kevin_Goilard:
     {
-        retourne_Kevin_Goilard(p, f, score);
+        retourne_Kevin_Goilard(p, f, score, coord);
         break;
     }
     case Massinissa_Merabet:
     {
-        retourne_Massinissa_Merabet(p, f);
+        retourne_Massinissa_Merabet(p, f, coord);
         break;
     }
     case Vitera_Y:
     {
-        retourne_Vitera_Y(p, f, score, f_adverse, score_adverse);
+        retourne_Vitera_Y(p, f, score, f_adverse, score_adverse, coord);
         break;
     }
     case Jonas_Senizergues:
     {
-        retourne_Jonas_Senizergues(p);
+        retourne_Jonas_Senizergues(p, coord);
         break;
     }
     case Fetia_Bannour:
     {
-        retourne_Fetia_Bannour(p, f, score);
+        retourne_Fetia_Bannour(p, f, score, coord);
         break;
     }
     case Catherine_Dubois:
@@ -1207,32 +1255,32 @@ void switch_carte(Plateau p, id_carte id, Coord coord, Faction f, Faction f_adve
     }
     case AnneLaure_Ligozat:
     {
-        retourne_AnneLaure_Ligozat(p, f, score);
+        retourne_AnneLaure_Ligozat(p, f, score, coord);
         break;
     }
     case Guillaume_Burel:
     {
-        retourne_Guillaume_Burel(p, f, score, f_adverse, score_adverse);
+        retourne_Guillaume_Burel(p, f, score, f_adverse, score_adverse, coord);
         break;
     }
     case Christophe_Mouilleron:
     {
-        retourne_Christophe_Mouilleron(p);
+        retourne_Christophe_Mouilleron(p, coord);
         break;
     }
     case Thomas_Lim:
     {
-        retourne_Thomas_Lim(p, f, score, f_adverse, score_adverse);
+        retourne_Thomas_Lim(p, f, score, f_adverse, score_adverse, coord);
         break;
     }
     case Julien_Forest:
     {
-        retourne_Julien_Forest(p, f, score);
+        retourne_Julien_Forest(p, f, score, coord);
         break;
     }
     case Dimitri_Watel:
     {
-        retourne_Dimitri_Watel(p, f, score);
+        retourne_Dimitri_Watel(p, f, score, coord);
         break;
     }
     case Djibril_Aurelien_Dembele_Cabot:
@@ -1242,7 +1290,7 @@ void switch_carte(Plateau p, id_carte id, Coord coord, Faction f, Faction f_adve
     }
     case Eric_Lejeune:
     {
-        retourne_Eric_Lejeune(p);
+        retourne_Eric_Lejeune(p, coord);
         break;
     }
     case Lucienne_Pacave:
@@ -1257,7 +1305,7 @@ void switch_carte(Plateau p, id_carte id, Coord coord, Faction f, Faction f_adve
     }
     case Laurent_Prevel:
     {
-        retourne_Laurent_Prevel(p);
+        retourne_Laurent_Prevel(p, coord);
         break;
     }
     default:
@@ -1284,10 +1332,62 @@ Carte retourner_carte(Plateau p)
 
     // On active l'effet de la carte
     switch_carte(p, id, coord, f, f_adverse, score, score_adverse);
+
+    // Actualisation des cartes en haut à gauche et en bas à droite
+    int i, j;
+    // Cartes en haut à gauche
+    for (i = 0; i < 129; i += 1)
+    {
+        for (j = 0; j < 129; j += 1)
+        {
+            if (p->plateau_jeu[i][j] != NULL)
+            {
+                p->carte_haut_gauche.i = i;
+                p->carte_haut_gauche.j = j;
+                break;
+            }
+        }
+    }
+    for (i = 0; i < 129; i += 1)
+    {
+        for (j = 0; j < 129; j += 1)
+        {
+            if (p->plateau_jeu[i][j] != NULL && get_est_cachee(p->plateau_jeu[i][j]) == 1)
+            {
+                p->carte_haut_gauche_cachee.i = i;
+                p->carte_haut_gauche_cachee.j = j;
+                break;
+            }
+        }
+    }
+    // Cartes en bas à droite
+    for (i = 128; i >= 0; i -= 1)
+    {
+        for (j = 128; j >= 0; j -= 1)
+        {
+            if (p->plateau_jeu[i][j] != NULL)
+            {
+                p->carte_haut_gauche.i = i;
+                p->carte_haut_gauche.j = j;
+                break;
+            }
+        }
+    }
+    for (i = 128; i >= 0; i -= 1)
+    {
+        for (j = 128; j >= 0; j -= 1)
+        {
+            if (p->plateau_jeu[i][j] != NULL && get_est_cachee(p->plateau_jeu[i][j]) == 1)
+            {
+                p->carte_haut_gauche_cachee.i = i;
+                p->carte_haut_gauche_cachee.j = j;
+                break;
+            }
+        }
+    }
     return c;
 }
 
 /*
 Les constantes à actualiser sont le nombre de cartes retournées, non retournées, la dernière carte retournée : dans les fonctions spécifiques.
-La carte la plus en haut à gauche et en bas à droite retournée ou quelconque : dans retourner_carte à la fin.
 */
