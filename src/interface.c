@@ -1,3 +1,11 @@
+/**
+ * @file interface.c
+ * @author Thomas Roiseux (thomas.roiseux@ensiie.fr)
+ * @brief Implémentation de interface.h
+ * @version 0.1
+ * @date 2022-04-05
+ */
+
 #include "../headers/interface.h"
 
 #include <stdio.h>
