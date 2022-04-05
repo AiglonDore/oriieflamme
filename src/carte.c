@@ -32,19 +32,23 @@ struct StructureCarte
  * Implémentation des getters et setters
  ***************************************************/
 
-id_carte get_id(Carte c) {
+id_carte get_id(Carte c)
+{
     return c->id;
 }
 
-void set_id(Carte c, id_carte id) {
+void set_id(Carte c, id_carte id)
+{
     c->id = id;
 }
 
-Faction get_proprietaire(Carte c) {
+Faction get_proprietaire(Carte c)
+{
     return c->proprietaire;
 }
 
-void set_proprietaire(Carte c, Faction f) {
+void set_proprietaire(Carte c, Faction f)
+{
     c->proprietaire = f;
 }
 
@@ -73,7 +77,8 @@ int get_nb_occ(Carte c)
     return c->nb_occ;
 }
 
-void set_nb_occ(Carte c, int x) {
+void set_nb_occ(Carte c, int x)
+{
     c->nb_occ = x;
 }
 
