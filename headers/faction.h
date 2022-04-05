@@ -10,7 +10,7 @@
 
 /**
  * @brief type abstrait pour la faction qu'on définira dans faction.c
- * 
+ *
  */
 typedef struct StructureFactions *Faction;
 
@@ -21,7 +21,7 @@ typedef struct StructureFactions *Faction;
 /**
  * @brief Savoir si une faction a utilisé l'option de remélanger sa main et boîte à idée et de repiocher des cartes.
  * @param f une faction
- * @return 0 si la main n'a pas été remélangé 
+ * @return 0 si la main n'a pas été remélangé
  * @return 1 si la main a été remélangé
  */
 
@@ -79,7 +79,7 @@ void set_nom_faction(Faction f, char *nom_faction);
  * @param f
  * @return int
  */
-int get_nb_maches_gagnees(Faction f);
+int get_nb_manches_gagnees(Faction f);
 
 /**
  * @brief Prototype de set_nb_manches_gagnees qui permet d'initialiser le nombre de manches gagnées d'une faction
@@ -144,7 +144,7 @@ void set_carte_anl_retournee(Faction f, int x);
  * @return Carte *
  */
 
-Carte * get_main(Faction f);
+Carte *get_main(Faction f);
 
 /**
  * @brief Prototype de set_main qui permet d'initialiser la main de la faction
@@ -153,7 +153,7 @@ Carte * get_main(Faction f);
  * @param main
  */
 
-void set_main(Faction f, Carte * main);
+void set_main(Faction f, Carte *main);
 
 /**
  * @brief Prototype de get_pioche qui permet de récupérer la pioche de la faction
