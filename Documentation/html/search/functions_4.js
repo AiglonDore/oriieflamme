@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['factions_5fplateau_176',['factions_plateau',['../plateau_8h.html#ab023dd151ba2f8cf843b792a3434b8f5',1,'factions_plateau(Plateau p):&#160;plateau.c'],['../plateau_8c.html#ab023dd151ba2f8cf843b792a3434b8f5',1,'factions_plateau(Plateau p):&#160;plateau.c']]]
+  ['enleve_5fpioche_212',['enleve_pioche',['../structure_8h.html#a7b95c6a72accdcab7cc1f39d2536fe06',1,'enleve_pioche(Pioche p):&#160;structure.c'],['../structure_8c.html#a7b95c6a72accdcab7cc1f39d2536fe06',1,'enleve_pioche(Pioche p):&#160;structure.c']]]
 ];

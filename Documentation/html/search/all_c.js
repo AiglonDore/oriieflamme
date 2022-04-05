@@ -1,12 +1,8 @@
 var searchData=
 [
-  ['nb_5fcartes_94',['nb_cartes',['../carte_8h.html#a2b6d4f8bcc0250f758fbe1084d6db400',1,'carte.h']]],
-  ['nb_5fmaches_5fgagnantes_95',['nb_maches_gagnantes',['../plateau_8h.html#a435d6218b5d502b6a6658ecfcdda9d8a',1,'plateau.h']]],
-  ['nb_5fmanches_5fgagnees_96',['nb_manches_gagnees',['../struct_structure_factions.html#a9a28e5f76e90c5583dd2a643b6e3d3f0',1,'StructureFactions']]],
-  ['nb_5focc_97',['nb_occ',['../struct_structure_carte.html#ab888049134c61bbeaad3ad6d00548000',1,'StructureCarte::nb_occ()'],['../carte_8h.html#a23ff9557f6159bca189decc25dab66f1',1,'nb_occ():&#160;carte.h']]],
-  ['nom_98',['nom',['../struct_structure_carte.html#abe308d273ff51ad86ff02ef3ba3b6f0e',1,'StructureCarte::nom()'],['../struct_structure_factions.html#abe308d273ff51ad86ff02ef3ba3b6f0e',1,'StructureFactions::nom()']]],
-  ['nom_5fcarte_99',['nom_carte',['../carte_8h.html#abe76352df13b10f1e17f69b53bdd1d64',1,'nom_carte():&#160;carte.h'],['../carte_8h.html#a4907e4800ac43a27ec79e1f3a7f80244',1,'nom_carte():&#160;carte.h']]],
-  ['nom_5ffaction_100',['nom_faction',['../interface_8h.html#ab716e0c166fd1d07dca1545157befef5',1,'interface.h']]],
-  ['nouvelle_5fmanche_101',['nouvelle_manche',['../plateau_8h.html#a49570b78f74ed1d5d588404e0f6bbcfc',1,'nouvelle_manche(Plateau p):&#160;plateau.c'],['../plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc',1,'nouvelle_manche(Plateau p):&#160;plateau.c']]],
-  ['numero_5fmanche_102',['numero_manche',['../structs__plateau.html#ab81fdfe0230368241bed8055124c3e16',1,'s_plateau']]]
+  ['main_92',['main',['../struct_structure_factions.html#ac8bdba352aea039c8e506f4ca30534ae',1,'StructureFactions::main()'],['../main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;main.c'],['../structure_8h.html#a0231077ad24f0c102c1d0d6daafae6e9',1,'Main():&#160;structure.h']]],
+  ['main_2ec_93',['main.c',['../main_8c.html',1,'']]],
+  ['massinissa_5fmerabet_94',['Massinissa_Merabet',['../carte_8h.html#abe76352df13b10f1e17f69b53bdd1d64a87a741dc61f19e476f8ecd6a2791e769',1,'carte.h']]],
+  ['melanger_95',['melanger',['../faction_8h.html#abc7feb29ed864c76ea95e1afc3cc7752',1,'melanger(Faction f):&#160;faction.c'],['../faction_8c.html#abc7feb29ed864c76ea95e1afc3cc7752',1,'melanger(Faction f):&#160;faction.c']]],
+  ['melanger_5fpioche_96',['melanger_pioche',['../faction_8h.html#adf3497e77c11921394ac7ca7d2e6cbdb',1,'melanger_pioche(Faction f):&#160;faction.c'],['../faction_8c.html#adf3497e77c11921394ac7ca7d2e6cbdb',1,'melanger_pioche(Faction f):&#160;faction.c']]]
 ];

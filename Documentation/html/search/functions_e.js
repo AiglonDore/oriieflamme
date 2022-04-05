@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vider_5fsa_5fmain_229',['vider_sa_main',['../faction_8h.html#aa3b0b517bf0cba1c7d52fb4ca770fcdb',1,'vider_sa_main(Faction f):&#160;faction.c'],['../faction_8c.html#aa3b0b517bf0cba1c7d52fb4ca770fcdb',1,'vider_sa_main(Faction f):&#160;faction.c']]]
+  ['utiliser_5foption_298',['utiliser_option',['../interface_8h.html#aea24bb8bc24a5877aba14a3879602c7b',1,'interface.h']]]
 ];

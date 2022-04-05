@@ -2,5 +2,5 @@
 <area shape="rect" id="node1" title="Interface entre le plateau de jeu et le joueur." alt="" coords="115,5,263,32"/>
 <area shape="rect" id="node2" href="$interface_8c.html" title="Implémentation de interface.h." alt="" coords="5,80,120,107"/>
 <area shape="rect" id="node3" href="$main_8c.html" title="Fichier principal qui contrôle le programme." alt="" coords="145,80,234,107"/>
-<area shape="rect" id="node4" href="$plateau_8c.html" title="Implantation de l&#39;interface pour gérer le plateau de jeu et le déroulement de la partie." alt="" coords="258,80,363,107"/>
+<area shape="rect" id="node4" href="$plateau_8c.html" title="Implémentation de l&#39;interface pour gérer le plateau de jeu et le déroulement de la partie." alt="" coords="258,80,363,107"/>
 </map>

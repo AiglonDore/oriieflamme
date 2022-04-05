@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['ecocup_29',['Ecocup',['../carte_8h.html#abe76352df13b10f1e17f69b53bdd1d64a630df6c07fbc6ca303ed4f26d31f2871',1,'carte.h']]],
-  ['ecologiie_30',['EcologIIE',['../carte_8h.html#abe76352df13b10f1e17f69b53bdd1d64a2398f70cd7c8f42bf22595d34e2ab1bf',1,'carte.h']]],
-  ['enleve_5fpioche_31',['enleve_pioche',['../structure_8h.html#a7b95c6a72accdcab7cc1f39d2536fe06',1,'enleve_pioche(Pioche p):&#160;structure.c'],['../structure_8c.html#a7b95c6a72accdcab7cc1f39d2536fe06',1,'enleve_pioche(Pioche p):&#160;structure.c']]],
-  ['eric_5flejeune_32',['Eric_Lejeune',['../carte_8h.html#abe76352df13b10f1e17f69b53bdd1d64a585f012c259f5bd5888f1f41f4dd7c94',1,'carte.h']]],
-  ['est_5fcachee_33',['est_cachee',['../struct_structure_carte.html#a1ecfe58c0def5087ffa6ca7c02464f4f',1,'StructureCarte']]]
+  ['demande_5fposition_26',['demande_position',['../interface_8h.html#a8330a6ec294f24da52fe0f265181fbcc',1,'interface.h']]],
+  ['derniere_5fcarte_5fposee_27',['derniere_carte_posee',['../structs__plateau.html#a15c38ec64099b084dabb698a683ba37f',1,'s_plateau']]],
+  ['derniere_5fcarte_5fretournee_28',['derniere_carte_retournee',['../structs__plateau.html#a43e28d326e00c37568d07b4d034c6741',1,'s_plateau']]],
+  ['description_29',['description',['../struct_structure_carte.html#a8444d6e0dfe2bbab0b5e7b24308f1559',1,'StructureCarte::description()'],['../carte_8h.html#a34a06fc28263f5843f42815459e83596',1,'description():&#160;carte.h']]],
+  ['dimitri_5fwatel_30',['Dimitri_Watel',['../carte_8h.html#abe76352df13b10f1e17f69b53bdd1d64ad8a142205dd72a72c01f0914522f54bc',1,'carte.h']]],
+  ['djibril_5faurelien_5fdembele_5fcabot_31',['Djibril_Aurelien_Dembele_Cabot',['../carte_8h.html#abe76352df13b10f1e17f69b53bdd1d64ac40e4c797ed996eaf2dfcf3af6d9220a',1,'carte.h']]]
 ];

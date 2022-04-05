@@ -1,0 +1,8 @@
+<map id="retourne_Isolation_du_bâtiment" name="retourne_Isolation_du_bâtiment">
+<area shape="rect" id="node1" title="Active les effets de la carte Isolation du bâtiment." alt="" coords="5,74,145,115"/>
+<area shape="rect" id="node2" href="$plateau_8c.html#abf68a3ea08cf4500f9925c2ee1e5f7c1" title="Ajoute un bonus de 3 points à la faction qui a posé la carte Anne&#45;Laure Ligozat qui a été précédemmen..." alt="" coords="213,5,301,32"/>
+<area shape="rect" id="node4" href="$faction_8h.html#ac18109f0c5db773e1499954c48373a4e" title="Prototype de set_pts_DDRS_manche qui permet d&#39;initialiser le nombre de points DDRS de la manche en co..." alt="" coords="372,56,544,83"/>
+<area shape="rect" id="node5" href="$carte_8h.html#ab61f3254187615cbc1c13aa4e51633c2" title="Prototype de get_est_cachee qui permet de récupérer un entier qui indique si la face est cachée ou pa..." alt="" coords="195,107,318,133"/>
+<area shape="rect" id="node6" href="$carte_8h.html#a253c323b2facf1fd67c2e6602c5932ee" title="Prototype de get_proprietaire qui permet de récupérer la faction qui possède cette carte." alt="" coords="193,157,320,184"/>
+<area shape="rect" id="node3" href="$faction_8h.html#abfde403e6b48d0c74700097039ddcad9" title="Prototype de get_carte_anl_retournee qui permet de récupérer un entier qui indique si la faction a re..." alt="" coords="368,5,548,32"/>
+</map>

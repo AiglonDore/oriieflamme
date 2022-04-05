@@ -1,8 +1,10 @@
 <map id="get_pts_DDRS_manche" name="get_pts_DDRS_manche">
-<area shape="rect" id="node1" title="Prototype de get_pts_DDRS_manche qui permet de récupérer le nombre de points DDRS de la manche en cou..." alt="" coords="712,5,885,32"/>
-<area shape="rect" id="node2" href="$plateau_8c.html#a41cddf8d1f1e457df2f4c905d6605151" title="retourne la carte la plus en haut à gauche du plateau face visible et active son effet" alt="" coords="541,5,664,32"/>
-<area shape="rect" id="node3" href="$main_8c.html#a34ccc9f1e0da464163a6f5e297c42563" title="Fonction qui contrôle la phase 2." alt="" coords="424,5,493,32"/>
-<area shape="rect" id="node4" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="321,5,376,32"/>
-<area shape="rect" id="node5" href="$plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,5,143,32"/>
-<area shape="rect" id="node6" href="$faction_8c.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="191,68,273,95"/>
+<area shape="rect" id="node1" title="Prototype de get_pts_DDRS_manche qui permet de récupérer le nombre de points DDRS de la manche en cou..." alt="" coords="951,63,1124,89"/>
+<area shape="rect" id="node2" href="$plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="239,5,376,32"/>
+<area shape="rect" id="node5" href="$plateau_8c.html#a0bcc10af128c117f13c64704d8217fd1" title="Active les effets de la carte Massinissa Merabet." alt="" coords="747,55,903,97"/>
+<area shape="rect" id="node7" href="$plateau_8c.html#a41cddf8d1f1e457df2f4c905d6605151" title="retourne la carte la plus en haut à gauche du plateau face visible et active son effet" alt="" coords="424,63,547,89"/>
+<area shape="rect" id="node3" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="136,35,191,61"/>
+<area shape="rect" id="node4" href="$faction_8c.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="5,9,88,36"/>
+<area shape="rect" id="node6" href="$plateau_8c.html#a676ed33ed1ff7fd3200efd68462f61e0" title="Active les effets de la carte d&#39;identifiant id." alt="" coords="595,63,699,89"/>
+<area shape="rect" id="node8" href="$main_8c.html#a34ccc9f1e0da464163a6f5e297c42563" title="Fonction qui contrôle la phase 2." alt="" coords="273,60,342,87"/>
 </map>

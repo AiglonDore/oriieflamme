@@ -1,0 +1,15 @@
+<map id="get_carte_anl_retournee" name="get_carte_anl_retournee">
+<area shape="rect" id="node1" title="Prototype de get_carte_anl_retournee qui permet de récupérer un entier qui indique si la faction a re..." alt="" coords="1280,85,1460,112"/>
+<area shape="rect" id="node2" href="$plateau_8c.html#abf68a3ea08cf4500f9925c2ee1e5f7c1" title="Ajoute un bonus de 3 points à la faction qui a posé la carte Anne&#45;Laure Ligozat qui a été précédemmen..." alt="" coords="1144,85,1232,112"/>
+<area shape="rect" id="node3" href="$plateau_8c.html#a1b1476aa0470878617850444f6707eff" title="Active les effets de la carte Ecocup." alt="" coords="931,5,1062,32"/>
+<area shape="rect" id="node11" href="$plateau_8c.html#a3ca90036287ffa05a590f42a1447e2db" title="Active les effets de la carte EcologIIE." alt="" coords="925,56,1068,83"/>
+<area shape="rect" id="node12" href="$plateau_8c.html#a54041ae2d6839dd6cbbf8b8a09201964" title="Active les effets de la carte Isolation du bâtiment." alt="" coords="927,107,1067,149"/>
+<area shape="rect" id="node13" href="$plateau_8c.html#a21ffcc285946c18ede8aa4b169d40c6d" title="Active les effets de la carte Parcours sobriété numérique." alt="" coords="897,173,1096,214"/>
+<area shape="rect" id="node4" href="$plateau_8c.html#a676ed33ed1ff7fd3200efd68462f61e0" title="Active les effets de la carte d&#39;identifiant id." alt="" coords="745,85,849,112"/>
+<area shape="rect" id="node5" href="$plateau_8c.html#a0bcc10af128c117f13c64704d8217fd1" title="Active les effets de la carte Massinissa Merabet." alt="" coords="541,78,697,119"/>
+<area shape="rect" id="node6" href="$plateau_8c.html#a41cddf8d1f1e457df2f4c905d6605151" title="retourne la carte la plus en haut à gauche du plateau face visible et active son effet" alt="" coords="558,144,681,171"/>
+<area shape="rect" id="node7" href="$main_8c.html#a34ccc9f1e0da464163a6f5e297c42563" title="Fonction qui contrôle la phase 2." alt="" coords="424,144,493,171"/>
+<area shape="rect" id="node8" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="321,144,376,171"/>
+<area shape="rect" id="node9" href="$plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,144,143,171"/>
+<area shape="rect" id="node10" href="$faction_8c.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="191,207,273,233"/>
+</map>

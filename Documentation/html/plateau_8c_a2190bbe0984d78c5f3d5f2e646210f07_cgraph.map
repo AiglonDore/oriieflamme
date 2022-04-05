@@ -1,5 +1,5 @@
 <map id="init_pioche" name="init_pioche">
-<area shape="rect" id="node1" title="crée la pioche avec les 32 cartes de l&#39;énoncé pour la faction donnée" alt="" coords="5,183,99,209"/>
+<area shape="rect" id="node1" title="Crée la pioche avec les 32 cartes de l&#39;énoncé pour la faction donnée." alt="" coords="5,183,99,209"/>
 <area shape="rect" id="node2" href="$structure_8h.html#ac8dcdc0ffb092b739d94573e47eaaacf" title="ajoute la carte à la pioche au sommet de celle&#45;ci" alt="" coords="159,5,265,32"/>
 <area shape="rect" id="node3" href="$faction_8h.html#a4d000f4cb37265a12d2e36fc372b3b28" title="Prototype de get_pioche qui permet de récupérer la pioche de la faction." alt="" coords="165,56,259,83"/>
 <area shape="rect" id="node4" href="$carte_8h.html#a30fc91d4dd38a6b29c6eb86681238a70" title="Prototype de set_description qui permet d&#39;initialiser la description de la carte." alt="" coords="151,107,273,133"/>

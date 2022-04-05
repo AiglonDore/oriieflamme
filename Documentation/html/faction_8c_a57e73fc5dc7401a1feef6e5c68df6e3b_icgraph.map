@@ -1,9 +1,12 @@
 <map id="set_carte_anl_retournee" name="set_carte_anl_retournee">
-<area shape="rect" id="node1" title="Prototype de set_carte_anl_retournee qui permet d&#39;initialiser si la faction a retourné sa carte Anne&#45;..." alt="" coords="741,31,920,57"/>
-<area shape="rect" id="node2" href="$plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="crée un plateau et les deux factions qui joueront dessus" alt="" coords="424,5,523,32"/>
-<area shape="rect" id="node6" href="$plateau_8c.html#a41cddf8d1f1e457df2f4c905d6605151" title="retourne la carte la plus en haut à gauche du plateau face visible et active son effet" alt="" coords="571,56,693,83"/>
-<area shape="rect" id="node3" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="321,31,376,57"/>
-<area shape="rect" id="node4" href="$plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,31,143,57"/>
-<area shape="rect" id="node5" href="$faction_8c.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="191,93,273,120"/>
-<area shape="rect" id="node7" href="$main_8c.html#a34ccc9f1e0da464163a6f5e297c42563" title="Fonction qui contrôle la phase 2." alt="" coords="439,56,508,83"/>
+<area shape="rect" id="node1" title="Prototype de set_carte_anl_retournee qui permet d&#39;initialiser si la faction a retourné sa carte Anne&#45;..." alt="" coords="1099,35,1277,61"/>
+<area shape="rect" id="node2" href="$plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="748,5,847,32"/>
+<area shape="rect" id="node6" href="$plateau_8c.html#a2798f0544ad34d5950fb8d3a1e62a9ab" title="Active les effets de la carte Anne&#45;Laure Ligozat." alt="" coords="897,57,1051,98"/>
+<area shape="rect" id="node3" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="321,64,376,91"/>
+<area shape="rect" id="node4" href="$plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,64,143,91"/>
+<area shape="rect" id="node5" href="$faction_8c.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="191,127,273,153"/>
+<area shape="rect" id="node7" href="$plateau_8c.html#a676ed33ed1ff7fd3200efd68462f61e0" title="Active les effets de la carte d&#39;identifiant id." alt="" coords="745,64,849,91"/>
+<area shape="rect" id="node8" href="$plateau_8c.html#a0bcc10af128c117f13c64704d8217fd1" title="Active les effets de la carte Massinissa Merabet." alt="" coords="541,57,697,98"/>
+<area shape="rect" id="node9" href="$plateau_8c.html#a41cddf8d1f1e457df2f4c905d6605151" title="retourne la carte la plus en haut à gauche du plateau face visible et active son effet" alt="" coords="558,123,681,149"/>
+<area shape="rect" id="node10" href="$main_8c.html#a34ccc9f1e0da464163a6f5e297c42563" title="Fonction qui contrôle la phase 2." alt="" coords="424,89,493,116"/>
 </map>

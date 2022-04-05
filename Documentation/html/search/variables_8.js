@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_246',['main',['../struct_structure_factions.html#ac8bdba352aea039c8e506f4ca30534ae',1,'StructureFactions']]]
+  ['main_318',['main',['../struct_structure_factions.html#ac8bdba352aea039c8e506f4ca30534ae',1,'StructureFactions']]]
 ];

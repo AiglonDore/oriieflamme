@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['creation_5fpioche_5fvide_173',['creation_pioche_vide',['../structure_8h.html#ad911b5ece54d506c7109120dbfc9c2f0',1,'creation_pioche_vide():&#160;structure.c'],['../structure_8c.html#ad911b5ece54d506c7109120dbfc9c2f0',1,'creation_pioche_vide():&#160;structure.c']]]
+  ['bonus_5fanl_209',['bonus_anl',['../plateau_8h.html#abf68a3ea08cf4500f9925c2ee1e5f7c1',1,'bonus_anl(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse):&#160;plateau.c'],['../plateau_8c.html#abf68a3ea08cf4500f9925c2ee1e5f7c1',1,'bonus_anl(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse):&#160;plateau.c']]]
 ];

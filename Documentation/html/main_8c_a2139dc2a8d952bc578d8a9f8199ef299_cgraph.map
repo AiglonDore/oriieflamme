@@ -4,11 +4,11 @@
 <area shape="rect" id="node3" href="$faction_8h.html#aaa0655066f74d90991cac0094fb8964a" title="Savoir si une faction a utilisé l&#39;option de remélanger sa main et boîte à idée et de repiocher des ca..." alt="" coords="150,71,257,98"/>
 <area shape="rect" id="node4" href="$interface_8h.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="150,122,257,149"/>
 <area shape="rect" id="node5" href="$interface_8h.html#a8330a6ec294f24da52fe0f265181fbcc" title="Fonction qui demande à quelle position doit être placée la carte." alt="" coords="132,173,275,199"/>
-<area shape="rect" id="node6" href="$plateau_8h.html#ab023dd151ba2f8cf843b792a3434b8f5" title="détermine la faction qui joue en premier et renvoie la liste des deux factions du jeu dont le premier..." alt="" coords="138,223,269,250"/>
+<area shape="rect" id="node6" href="$plateau_8h.html#ab023dd151ba2f8cf843b792a3434b8f5" title="Détermine la faction qui joue en premier et renvoie la liste des deux factions du jeu dont le premier..." alt="" coords="138,223,269,250"/>
 <area shape="rect" id="node7" href="$faction_8h.html#abc7feb29ed864c76ea95e1afc3cc7752" title="Permet à une faction de vider sa main, mélanger sa pioche et repiocher ses cartes." alt="" coords="161,325,245,351"/>
 <area shape="rect" id="node13" href="$faction_8h.html#adf3497e77c11921394ac7ca7d2e6cbdb" title="Permet à une faction de mélanger sa pioche." alt="" coords="332,223,467,250"/>
 <area shape="rect" id="node14" href="$faction_8h.html#a5b400a1d1b3c89ef50e5bb4b98e177cb" title="Permet à une faction de repiocher ses cartes." alt="" coords="364,426,435,453"/>
-<area shape="rect" id="node15" href="$plateau_8h.html#a425437529596e13babd7bc8b4e04d491" title="permet à une faction de poser une carte face cachée sur le plateau" alt="" coords="154,426,253,453"/>
+<area shape="rect" id="node15" href="$plateau_8h.html#a425437529596e13babd7bc8b4e04d491" title="Permet à une faction de poser une carte face cachée sur le plateau." alt="" coords="154,426,253,453"/>
 <area shape="rect" id="node16" href="$interface_8h.html#aea24bb8bc24a5877aba14a3879602c7b" title="Fonction qui demande si la faction pointée par f veut utiliser son option." alt="" coords="146,477,261,503"/>
 <area shape="rect" id="node8" href="$faction_8c.html#adf3497e77c11921394ac7ca7d2e6cbdb" title="Permet à une faction de mélanger sa pioche." alt="" coords="332,325,467,351"/>
 <area shape="rect" id="node11" href="$faction_8c.html#a5b400a1d1b3c89ef50e5bb4b98e177cb" title="Permet à une faction de repiocher ses cartes." alt="" coords="364,375,435,402"/>

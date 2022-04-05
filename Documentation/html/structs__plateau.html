@@ -77,12 +77,12 @@ Collaboration diagram for s_plateau:</div>
 <div class="dyncontent">
 <div class="center"><img src="structs__plateau__coll__graph.png" border="0" usemap="#s__plateau_coll__map" alt="Collaboration graph"/></div>
 <map name="s__plateau_coll__map" id="s__plateau_coll__map">
-<area shape="rect" title="type concret vers lequel pointe le plateau de jeu" alt="" coords="182,451,267,477"/>
+<area shape="rect" title="type concret vers lequel pointe le plateau de jeu" alt="" coords="222,465,307,492"/>
 <area shape="rect" href="struct_coord.html" title="Structure pour stocker les coordonnées d&#39;une carte sur la grille 2D." alt="" coords="5,288,65,315"/>
-<area shape="rect" href="struct_structure_carte.html" title="type concret pour la faction, est_cachee vaut 1 si la carte est posée face cachée,..." alt="" coords="269,5,385,32"/>
-<area shape="rect" href="struct_structure_factions.html" title="type concret pour la faction, a_remelange vaut 1 si la main a été remélangée, 0 sinon" alt="" coords="331,184,465,211"/>
-<area shape="rect" href="structs__pioche.html" title="type concret de pile pour la pioche d&#39;une faction" alt="" coords="353,95,432,121"/>
-<area shape="rect" href="struct_factions__en__jeu.html" title="Structure pour les couples de factions." alt="" coords="298,288,423,315"/>
+<area shape="rect" href="struct_structure_carte.html" title="type concret pour la faction, est_cachee vaut 1 si la carte est posée face cachée,..." alt="" coords="309,5,425,32"/>
+<area shape="rect" href="struct_structure_factions.html" title="type concret pour la faction, a_remelange vaut 1 si la main a été remélangée, 0 sinon" alt="" coords="371,184,505,211"/>
+<area shape="rect" href="structs__pioche.html" title="type concret de pile pour la pioche d&#39;une faction" alt="" coords="393,95,472,121"/>
+<area shape="rect" href="struct_factions__en__jeu.html" title="Structure pour les couples de factions." alt="" coords="338,288,463,315"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -98,6 +98,10 @@ Data Fields</h2></td></tr>
 <tr class="separator:a43e28d326e00c37568d07b4d034c6741"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe536a9b9846e99505d291f003a2c59c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_coord.html">Coord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__plateau.html#afe536a9b9846e99505d291f003a2c59c">avant_derniere_carte_retournee</a></td></tr>
 <tr class="separator:afe536a9b9846e99505d291f003a2c59c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e2c13ef56ddbbcdd7da757a07c11393"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_coord.html">Coord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__plateau.html#a6e2c13ef56ddbbcdd7da757a07c11393">carte_haut_gauche_cachee</a></td></tr>
+<tr class="separator:a6e2c13ef56ddbbcdd7da757a07c11393"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb2bec0d261815b576ecaf5e1cdbbccc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_coord.html">Coord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__plateau.html#abb2bec0d261815b576ecaf5e1cdbbccc">carte_bas_droite_cachee</a></td></tr>
+<tr class="separator:abb2bec0d261815b576ecaf5e1cdbbccc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05b31a66697a919ea1071bafcdf0ef13"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_coord.html">Coord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__plateau.html#a05b31a66697a919ea1071bafcdf0ef13">carte_haut_gauche</a></td></tr>
 <tr class="separator:a05b31a66697a919ea1071bafcdf0ef13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc52ce617bc1a028cd39956733efa55f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_coord.html">Coord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__plateau.html#abc52ce617bc1a028cd39956733efa55f">carte_bas_droite</a></td></tr>
@@ -142,6 +146,22 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="plateau_8c_source.html#l00034">34</a> of file <a class="el" href="plateau_8c_source.html">plateau.c</a>.</p>
+
+</div>
+</div>
+<a id="abb2bec0d261815b576ecaf5e1cdbbccc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb2bec0d261815b576ecaf5e1cdbbccc">&#9670;&nbsp;</a></span>carte_bas_droite_cachee</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_coord.html">Coord</a> carte_bas_droite_cachee</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
 <p class="definition">Definition at line <a class="el" href="plateau_8c_source.html#l00032">32</a> of file <a class="el" href="plateau_8c_source.html">plateau.c</a>.</p>
 
 </div>
@@ -154,6 +174,22 @@ Data Fields</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="struct_coord.html">Coord</a> carte_haut_gauche</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="plateau_8c_source.html#l00033">33</a> of file <a class="el" href="plateau_8c_source.html">plateau.c</a>.</p>
+
+</div>
+</div>
+<a id="a6e2c13ef56ddbbcdd7da757a07c11393"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e2c13ef56ddbbcdd7da757a07c11393">&#9670;&nbsp;</a></span>carte_haut_gauche_cachee</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_coord.html">Coord</a> carte_haut_gauche_cachee</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -174,7 +210,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plateau_8c_source.html#l00035">35</a> of file <a class="el" href="plateau_8c_source.html">plateau.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plateau_8c_source.html#l00037">37</a> of file <a class="el" href="plateau_8c_source.html">plateau.c</a>.</p>
 
 </div>
 </div>
@@ -190,7 +226,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plateau_8c_source.html#l00034">34</a> of file <a class="el" href="plateau_8c_source.html">plateau.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plateau_8c_source.html#l00036">36</a> of file <a class="el" href="plateau_8c_source.html">plateau.c</a>.</p>
 
 </div>
 </div>
@@ -254,7 +290,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plateau_8c_source.html#l00033">33</a> of file <a class="el" href="plateau_8c_source.html">plateau.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plateau_8c_source.html#l00035">35</a> of file <a class="el" href="plateau_8c_source.html">plateau.c</a>.</p>
 
 </div>
 </div>

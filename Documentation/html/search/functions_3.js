@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['enleve_5fpioche_175',['enleve_pioche',['../structure_8h.html#a7b95c6a72accdcab7cc1f39d2536fe06',1,'enleve_pioche(Pioche p):&#160;structure.c'],['../structure_8c.html#a7b95c6a72accdcab7cc1f39d2536fe06',1,'enleve_pioche(Pioche p):&#160;structure.c']]]
+  ['demande_5fposition_211',['demande_position',['../interface_8h.html#a8330a6ec294f24da52fe0f265181fbcc',1,'interface.h']]]
 ];
