@@ -4,23 +4,21 @@ FLAGS=-std=c99 -Wall -Wextra
 
 all : oriieflamme.out
 
-oriieflamme.out : main.o carte.o faction.o interface.o plateau.o
-	cd obj
-	$(CC) $(FLAGS) -o ../bin/$@ $^
-	cd ..
+oriieflamme.out : obj/main.o obj/carte.o obj/faction.o obj/interface.o obj/plateau.o
+	$(CC) $(FLAGS) -o bin/$@ $^
 
-%.o : %.c
-	$(CC) $(FLAGS) -c -o obj/$@ src/$<
+%.o: src/%.c
+	$(CC) $(FLAGS) -c -o $@ $<
 
-main.o : headers/carte.h headers/faction.h headers/interface.h headers/plateau.h
+obj/main.o: headers/carte.h headers/faction.h headers/interface.h headers/plateau.h main.o
 
-carte.o : headers/carte.h
+obj/carte.o: headers/carte.h carte.o
 
-faction.o : headers/faction.h headers/carte.h
+obj/faction.o : headers/faction.h headers/carte.h faction.o
 
-interface.o : headers/carte.h headers/faction.h headers/interface.h headers/plateau.h
+obj/interface.o : headers/carte.h headers/faction.h headers/interface.h headers/plateau.h interface.o
 
-plateau.o : headers/plateau.h headers/carte.h headers/faction.h
+obj/plateau.o : headers/plateau.h headers/carte.h headers/faction.h plateau.o
 
 clean :
 	cd bin
