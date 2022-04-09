@@ -7,6 +7,7 @@
 
 #ifndef FACTION_H
 #define FACTION_H
+#include "structure.h"
 
 /**
  * @brief type abstrait pour la faction qu'on définira dans faction.c

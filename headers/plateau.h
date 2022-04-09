@@ -13,6 +13,7 @@
 #define _PLATEAU_H
 #include "carte.h"
 #include "faction.h"
+#include "structure.h"
 
 const int nb_maches_gagnantes = 2;
 
@@ -290,7 +291,7 @@ void retourne_Reprographie(Plateau p, Faction f, int score, Faction f_adverse, i
  * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
-void retourne_Isolation_du_bâtiment(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse, Coord coord);
+void retourne_Isolation_du_batiment(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse, Coord coord);
 
 /**
  * @brief Active les effets de la carte Parcours sobriété numérique
@@ -302,7 +303,7 @@ void retourne_Isolation_du_bâtiment(Plateau p, Faction f, int score, Faction f_
  * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
-void retourne_Parcours_sobriété_numérique(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse, Coord coord);
+void retourne_Parcours_sobriete_numerique(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse, Coord coord);
 
 /**
  * @brief Active les effets de la carte Heures supplémentaires
