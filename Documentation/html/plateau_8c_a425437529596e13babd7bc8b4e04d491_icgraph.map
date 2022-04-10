@@ -1,13 +1,13 @@
 <map id="poser_carte" name="poser_carte">
 <area shape="rect" id="node1" title="Permet à une faction de poser une carte face cachée sur le plateau." alt="" coords="1112,56,1211,83"/>
 <area shape="rect" id="node2" href="$main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="763,5,832,32"/>
-<area shape="rect" id="node6" href="$plateau_8c.html#ab3384d3a2bf6bccc0f87b7f5d8232c17" title="Active les effets de la carte Eric Lejeune." alt="" coords="897,56,1064,83"/>
-<area shape="rect" id="node11" href="$plateau_8c.html#a68f379c29f076c6ad7c92bd4a3f066bf" title="Active les effets de la carte lIIEns." alt="" coords="921,107,1040,133"/>
+<area shape="rect" id="node6" href="$plateau_8c.html#a4eba5c924a69c8f5fe5c8ac913e7fdbb" title="Active les effets de la carte Eric Lejeune." alt="" coords="897,56,1064,83"/>
+<area shape="rect" id="node11" href="$plateau_8c.html#a5eb5134fa91f5c2703f528db8e48909b" title="Active les effets de la carte lIIEns." alt="" coords="921,107,1040,133"/>
 <area shape="rect" id="node3" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="321,64,376,91"/>
 <area shape="rect" id="node4" href="$plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,64,143,91"/>
 <area shape="rect" id="node5" href="$faction_8c.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="191,127,273,153"/>
 <area shape="rect" id="node7" href="$plateau_8c.html#a676ed33ed1ff7fd3200efd68462f61e0" title="Active les effets de la carte d&#39;identifiant id." alt="" coords="745,64,849,91"/>
-<area shape="rect" id="node8" href="$plateau_8c.html#a0bcc10af128c117f13c64704d8217fd1" title="Active les effets de la carte Massinissa Merabet." alt="" coords="541,57,697,98"/>
+<area shape="rect" id="node8" href="$plateau_8c.html#a289b461ee18614882e9e0e242c2193da" title="Active les effets de la carte Massinissa Merabet." alt="" coords="541,57,697,98"/>
 <area shape="rect" id="node9" href="$plateau_8c.html#a41cddf8d1f1e457df2f4c905d6605151" title="retourne la carte la plus en haut à gauche du plateau face visible et active son effet" alt="" coords="558,123,681,149"/>
 <area shape="rect" id="node10" href="$main_8c.html#a34ccc9f1e0da464163a6f5e297c42563" title="Fonction qui contrôle la phase 2." alt="" coords="424,89,493,116"/>
 </map>

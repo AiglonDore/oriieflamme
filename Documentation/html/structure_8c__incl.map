@@ -1,6 +1,6 @@
 <map id="src/structure.c" name="src/structure.c">
-<area shape="rect" id="node1" title="Implémentation de l&#39;interface pour gérer le plateau de jeu et le déroulement de la partie." alt="" coords="98,5,213,32"/>
-<area shape="rect" id="node2" href="$carte_8h.html" title="Interface Carte : interface en charge des informations des cartes jeu." alt="" coords="5,155,140,181"/>
-<area shape="rect" id="node3" href="$faction_8h.html" title="Interface faction : interface en charge des informations et des manipulations propre d&#39;une faction." alt="" coords="182,155,329,181"/>
-<area shape="rect" id="node4" href="$structure_8h.html" title="Interface pour gérer le plateau de jeu et le déroulement de la partie." alt="" coords="75,80,235,107"/>
+<area shape="rect" id="node1" title="Implémentation de l&#39;interface pour gérer le plateau de jeu et le déroulement de la partie." alt="" coords="38,5,153,32"/>
+<area shape="rect" id="node2" href="$carte_8h.html" title="Interface Carte : interface en charge des informations des cartes jeu." alt="" coords="28,80,163,107"/>
+<area shape="rect" id="node3" href="$faction_8h.html" title="Interface faction : interface en charge des informations et des manipulations propre d&#39;une faction." alt="" coords="5,155,84,181"/>
+<area shape="rect" id="node4" href="$structure_8h.html" title="Interface pour gérer le plateau de jeu et le déroulement de la partie." alt="" coords="37,229,129,256"/>
 </map>

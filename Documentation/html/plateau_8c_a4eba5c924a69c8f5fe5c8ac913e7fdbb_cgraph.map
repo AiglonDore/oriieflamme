@@ -1,0 +1,7 @@
+<map id="retourne_Eric_Lejeune" name="retourne_Eric_Lejeune">
+<area shape="rect" id="node1" title="Active les effets de la carte Eric Lejeune." alt="" coords="5,97,172,123"/>
+<area shape="rect" id="node2" href="$plateau_8c.html#a5afb58a5af08cc5c88a166c0351a0799" title=" " alt="" coords="220,5,384,47"/>
+<area shape="rect" id="node3" href="$carte_8h.html#ab61f3254187615cbc1c13aa4e51633c2" title="Prototype de get_est_cachee qui permet de récupérer un entier qui indique si la face est cachée ou pa..." alt="" coords="241,71,363,98"/>
+<area shape="rect" id="node4" href="$carte_8h.html#a07d5b163a3e848772039f8f2e99db83e" title="Prototype de get_id qui permet de récupérer l&#39;id de la carte." alt="" coords="271,122,333,149"/>
+<area shape="rect" id="node5" href="$plateau_8c.html#a425437529596e13babd7bc8b4e04d491" title="Permet à une faction de poser une carte face cachée sur le plateau." alt="" coords="253,173,351,199"/>
+</map>

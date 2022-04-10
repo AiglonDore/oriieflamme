@@ -1,0 +1,6 @@
+<map id="retourne_Jonas_Senizergues" name="retourne_Jonas_Senizergues">
+<area shape="rect" id="node1" title="Active les effets de la carte Jonas Senizergues." alt="" coords="5,71,211,98"/>
+<area shape="rect" id="node2" href="$plateau_8c.html#a5afb58a5af08cc5c88a166c0351a0799" title=" " alt="" coords="259,5,423,47"/>
+<area shape="rect" id="node3" href="$carte_8h.html#ab61f3254187615cbc1c13aa4e51633c2" title="Prototype de get_est_cachee qui permet de récupérer un entier qui indique si la face est cachée ou pa..." alt="" coords="279,71,402,98"/>
+<area shape="rect" id="node4" href="$carte_8h.html#a07d5b163a3e848772039f8f2e99db83e" title="Prototype de get_id qui permet de récupérer l&#39;id de la carte." alt="" coords="309,122,372,149"/>
+</map>

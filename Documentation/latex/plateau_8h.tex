@@ -7,11 +7,13 @@ Interface pour gérer le plateau de jeu et le déroulement de la partie.
 
 {\ttfamily \#include \char`\"{}carte.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}faction.\+h\char`\"{}}\newline
-Include dependency graph for plateau.\+h\+:\nopagebreak
+{\ttfamily \#include \char`\"{}structure.\+h\char`\"{}}\newline
+Include dependency graph for plateau.\+h\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=208pt]{plateau_8h__incl}
+\includegraphics[width=210pt]{plateau_8h__incl}
 \end{center}
 \end{figure}
 This graph shows which files directly or indirectly include this file\+:\nopagebreak
@@ -63,69 +65,69 @@ void \mbox{\hyperlink{plateau_8h_a425437529596e13babd7bc8b4e04d491}{poser\+\_\+c
 \begin{DoxyCompactList}\small\item\em Permet à une faction de poser une carte face cachée sur le plateau. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{plateau_8h_abf68a3ea08cf4500f9925c2ee1e5f7c1}{bonus\+\_\+anl}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f\+\_\+adverse, int score\+\_\+adverse)
 \begin{DoxyCompactList}\small\item\em Ajoute un bonus de 3 points à la faction qui a posé la carte Anne-\/\+Laure Ligozat qui a été précédemment retournée sur le plateau dans les cas où une carte Ecolog\+I\+IE, Ecocup, Parcours sobriété numérique ou Isolation du bâtiment est retournée. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{plateau_8h_a0d9148452963104c00741b98cf4d9255}{retourne\+\_\+\+F\+I\+SE}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score)
+void \mbox{\hyperlink{plateau_8h_ad90766cf8076143270a2b76aeaefe5da}{retourne\+\_\+\+F\+I\+SE}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score, \mbox{\hyperlink{struct_coord}{Coord}} coord)
 \begin{DoxyCompactList}\small\item\em Active les effets de la carte F\+I\+SE. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{plateau_8h_a8f85a7a30321028f3adae08ed107ae74}{retourne\+\_\+\+F\+I\+SA}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score)
+void \mbox{\hyperlink{plateau_8h_a336cac6cd051617253e073d8e65b97ad}{retourne\+\_\+\+F\+I\+SA}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score, \mbox{\hyperlink{struct_coord}{Coord}} coord)
 \begin{DoxyCompactList}\small\item\em Active les effets de la carte F\+I\+SA. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{plateau_8h_ae1fdaa3b313859d436c6883deaedef05}{retourne\+\_\+\+FC}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score)
+void \mbox{\hyperlink{plateau_8h_a6f31d9b51378e4ea68b694367b7b1174}{retourne\+\_\+\+FC}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score, \mbox{\hyperlink{struct_coord}{Coord}} coord)
 \begin{DoxyCompactList}\small\item\em Active les effets de la carte FC. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{plateau_8h_a3ca90036287ffa05a590f42a1447e2db}{retourne\+\_\+\+Ecolog\+I\+IE}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f\+\_\+adverse, int score\+\_\+adverse)
+void \mbox{\hyperlink{plateau_8h_a8e59a299de0435cb251597fede757ade}{retourne\+\_\+\+Ecolog\+I\+IE}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f\+\_\+adverse, int score\+\_\+adverse, \mbox{\hyperlink{struct_coord}{Coord}} coord)
 \begin{DoxyCompactList}\small\item\em Active les effets de la carte Ecolog\+I\+IE. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{plateau_8h_a68f379c29f076c6ad7c92bd4a3f066bf}{retourne\+\_\+l\+I\+I\+Ens}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p)
+void \mbox{\hyperlink{plateau_8h_a5eb5134fa91f5c2703f528db8e48909b}{retourne\+\_\+l\+I\+I\+Ens}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{struct_coord}{Coord}} coord)
 \begin{DoxyCompactList}\small\item\em Active les effets de la carte l\+I\+I\+Ens. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{plateau_8h_a8392a83925caacfa2904dd2829dbc5a0}{retourne\+\_\+\+Soiree\+\_\+sans\+\_\+alcool}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score)
+void \mbox{\hyperlink{plateau_8h_a25711459a4937e78bf709717c5e451e5}{retourne\+\_\+\+Soiree\+\_\+sans\+\_\+alcool}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score, \mbox{\hyperlink{struct_coord}{Coord}} coord)
 \begin{DoxyCompactList}\small\item\em Active les effets de la carte Soirée sans alcool. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{plateau_8h_ac2734f8c9dd2b1da2bc44353bde8f8cd}{retourne\+\_\+\+Alcool}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{struct_coord}{Coord}} coord)
 \begin{DoxyCompactList}\small\item\em Active les effets de la carte Alcool. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{plateau_8h_a3f3d81721be2e77a2976a51fbca5a37d}{retourne\+\_\+\+Cafe}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score)
+void \mbox{\hyperlink{plateau_8h_affb3dc4699da610a4094b898606df720}{retourne\+\_\+\+Cafe}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score, \mbox{\hyperlink{struct_coord}{Coord}} coord)
 \begin{DoxyCompactList}\small\item\em Active les effets de la carte Café \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{plateau_8h_af3fdce0ceedb96397929face2da6634a}{retourne\+\_\+\+The}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score)
+void \mbox{\hyperlink{plateau_8h_aac76ddb6fb1f7345ba3ad5b8f51356d6}{retourne\+\_\+\+The}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score, \mbox{\hyperlink{struct_coord}{Coord}} coord)
 \begin{DoxyCompactList}\small\item\em Active les effets de la carte Thé \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{plateau_8h_a1b1476aa0470878617850444f6707eff}{retourne\+\_\+\+Ecocup}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f\+\_\+adverse, int score\+\_\+adverse)
+void \mbox{\hyperlink{plateau_8h_ad19e3ca7c81b682200136c12ae683ec9}{retourne\+\_\+\+Ecocup}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f\+\_\+adverse, int score\+\_\+adverse, \mbox{\hyperlink{struct_coord}{Coord}} coord)
 \begin{DoxyCompactList}\small\item\em Active les effets de la carte Ecocup. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{plateau_8h_a7a74f3149139d9ae554eec3b54570a70}{retourne\+\_\+\+Reprographie}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f\+\_\+adverse, int score\+\_\+adverse)
+void \mbox{\hyperlink{plateau_8h_a6a3aece8771d38a7231fe4792f828781}{retourne\+\_\+\+Reprographie}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f\+\_\+adverse, int score\+\_\+adverse, \mbox{\hyperlink{struct_coord}{Coord}} coord)
 \begin{DoxyCompactList}\small\item\em Active les effets de la carte Reprographie. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{plateau_8h_a54041ae2d6839dd6cbbf8b8a09201964}{retourne\+\_\+\+Isolation\+\_\+du\+\_\+bâtiment}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f\+\_\+adverse, int score\+\_\+adverse)
+void \mbox{\hyperlink{plateau_8h_ae667a16136a040ee486dd208a7a90b89}{retourne\+\_\+\+Isolation\+\_\+du\+\_\+batiment}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f\+\_\+adverse, int score\+\_\+adverse, \mbox{\hyperlink{struct_coord}{Coord}} coord)
 \begin{DoxyCompactList}\small\item\em Active les effets de la carte Isolation du bâtiment. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{plateau_8h_a21ffcc285946c18ede8aa4b169d40c6d}{retourne\+\_\+\+Parcours\+\_\+sobriété\+\_\+numérique}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f\+\_\+adverse, int score\+\_\+adverse)
+void \mbox{\hyperlink{plateau_8h_a25800990500eafbbd30c7e237bebc989}{retourne\+\_\+\+Parcours\+\_\+sobriete\+\_\+numerique}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f\+\_\+adverse, int score\+\_\+adverse, \mbox{\hyperlink{struct_coord}{Coord}} coord)
 \begin{DoxyCompactList}\small\item\em Active les effets de la carte Parcours sobriété numérique. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{plateau_8h_a458a2095cdd37fd8a04c7ad8acdded3a}{retourne\+\_\+\+Heures\+\_\+supplementaires}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f\+\_\+adverse, int score\+\_\+adverse)
+void \mbox{\hyperlink{plateau_8h_a36ee6886e1fc49003a638898ee8a1430}{retourne\+\_\+\+Heures\+\_\+supplementaires}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f\+\_\+adverse, int score\+\_\+adverse, \mbox{\hyperlink{struct_coord}{Coord}} coord)
 \begin{DoxyCompactList}\small\item\em Active les effets de la carte Heures supplémentaires. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{plateau_8h_a36fb7cdb7c7046fe8ebb32a34b0b7da6}{retourne\+\_\+\+Kahina\+\_\+\+Bouchama}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p)
+void \mbox{\hyperlink{plateau_8h_a13f1ea8c5ce2eb9249d799bfe0fcfba9}{retourne\+\_\+\+Kahina\+\_\+\+Bouchama}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{struct_coord}{Coord}} coord)
 \begin{DoxyCompactList}\small\item\em Active les effets de la carte Kahina Bouchama. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{plateau_8h_ab2ee5a351ff75383f29ee6f23a17a8ad}{retourne\+\_\+\+Kevin\+\_\+\+Goilard}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score)
+void \mbox{\hyperlink{plateau_8h_ae40eb3cf4de488fdf73c964d43010777}{retourne\+\_\+\+Kevin\+\_\+\+Goilard}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score, \mbox{\hyperlink{struct_coord}{Coord}} coord)
 \begin{DoxyCompactList}\small\item\em Active les effets de la carte Kevin Goilard. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{plateau_8h_a0bcc10af128c117f13c64704d8217fd1}{retourne\+\_\+\+Massinissa\+\_\+\+Merabet}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f)
+void \mbox{\hyperlink{plateau_8h_a289b461ee18614882e9e0e242c2193da}{retourne\+\_\+\+Massinissa\+\_\+\+Merabet}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, \mbox{\hyperlink{struct_coord}{Coord}} coord)
 \begin{DoxyCompactList}\small\item\em Active les effets de la carte Massinissa Merabet. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{plateau_8h_ae45f3b23264ebebeaa908e7def31dc88}{retourne\+\_\+\+Vitera\+\_\+Y}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f\+\_\+adverse, int score\+\_\+adverse)
+void \mbox{\hyperlink{plateau_8h_ac781c98f512d7a671fa2f4b84be56cf2}{retourne\+\_\+\+Vitera\+\_\+Y}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f\+\_\+adverse, int score\+\_\+adverse, \mbox{\hyperlink{struct_coord}{Coord}} coord)
 \begin{DoxyCompactList}\small\item\em Active les effets de la carte Vitéra Y. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{plateau_8h_adce7bd766d15b07555f43e5e7639e5e1}{retourne\+\_\+\+Jonas\+\_\+\+Senizergues}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p)
+void \mbox{\hyperlink{plateau_8h_a5948318ef066f8f725c9cbcfbdcddef4}{retourne\+\_\+\+Jonas\+\_\+\+Senizergues}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{struct_coord}{Coord}} coord)
 \begin{DoxyCompactList}\small\item\em Active les effets de la carte Jonas Senizergues. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{plateau_8h_a0c8b8a7457ff68dd9aaca8868c5b9c75}{retourne\+\_\+\+Fetia\+\_\+\+Bannour}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score)
+void \mbox{\hyperlink{plateau_8h_a017b517e0297e70952f7fc6c0d7a3fc0}{retourne\+\_\+\+Fetia\+\_\+\+Bannour}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score, \mbox{\hyperlink{struct_coord}{Coord}} coord)
 \begin{DoxyCompactList}\small\item\em Active les effets de la carte Fetia Bannour. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{plateau_8h_a54bbb50bc4da98fef56d5a1224625062}{retourne\+\_\+\+Catherine\+\_\+\+Dubois}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{struct_coord}{Coord}} coord)
 \begin{DoxyCompactList}\small\item\em Active les effets de la carte Catherine Dubois. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{plateau_8h_a2798f0544ad34d5950fb8d3a1e62a9ab}{retourne\+\_\+\+Anne\+Laure\+\_\+\+Ligozat}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score)
+void \mbox{\hyperlink{plateau_8h_a4fa3750c4cdb95c9f79a8a1c0810dabe}{retourne\+\_\+\+Anne\+Laure\+\_\+\+Ligozat}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score, \mbox{\hyperlink{struct_coord}{Coord}} coord)
 \begin{DoxyCompactList}\small\item\em Active les effets de la carte Anne-\/\+Laure Ligozat. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{plateau_8h_a1cfa26097ba4ec0af5e70257ae58b3cb}{retourne\+\_\+\+Guillaume\+\_\+\+Burel}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f\+\_\+adverse, int score\+\_\+adverse)
+void \mbox{\hyperlink{plateau_8h_a76d84cbf514de5dc1247ce80fcb13471}{retourne\+\_\+\+Guillaume\+\_\+\+Burel}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f\+\_\+adverse, int score\+\_\+adverse, \mbox{\hyperlink{struct_coord}{Coord}} coord)
 \begin{DoxyCompactList}\small\item\em Active les effets de la carte Guillaume Burel. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{plateau_8h_a392e25f7919cb36baed3b193f3206405}{retourne\+\_\+\+Christophe\+\_\+\+Mouilleron}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p)
+void \mbox{\hyperlink{plateau_8h_aac850aae639596089422f59945955893}{retourne\+\_\+\+Christophe\+\_\+\+Mouilleron}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{struct_coord}{Coord}} coord)
 \begin{DoxyCompactList}\small\item\em Active les effets de la carte Christophe Mouilleron. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{plateau_8h_a72b3b0e7a6ca805db12f04e8fa9fd094}{retourne\+\_\+\+Thomas\+\_\+\+Lim}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f\+\_\+adverse, int score\+\_\+adverse)
+void \mbox{\hyperlink{plateau_8h_a1560d3c9cea0c5b2fb4d9617d5c1a0e6}{retourne\+\_\+\+Thomas\+\_\+\+Lim}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f\+\_\+adverse, int score\+\_\+adverse, \mbox{\hyperlink{struct_coord}{Coord}} coord)
 \begin{DoxyCompactList}\small\item\em Active les effets de la carte Thomas Lim. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{plateau_8h_afe64b224118cadecb660f69e46a75484}{retourne\+\_\+\+Julien\+\_\+\+Forest}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score)
+void \mbox{\hyperlink{plateau_8h_a8b356d2c8f83f00b22b937e89a0555ed}{retourne\+\_\+\+Julien\+\_\+\+Forest}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score, \mbox{\hyperlink{struct_coord}{Coord}} coord)
 \begin{DoxyCompactList}\small\item\em Active les effets de la carte Julien Forest. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{plateau_8h_a544c66f1b6f0bf5ca3b6223e997d7e1d}{retourne\+\_\+\+Dimitri\+\_\+\+Watel}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score)
+void \mbox{\hyperlink{plateau_8h_a8eda7434dc0f02bd157237914732da90}{retourne\+\_\+\+Dimitri\+\_\+\+Watel}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score, \mbox{\hyperlink{struct_coord}{Coord}} coord)
 \begin{DoxyCompactList}\small\item\em Active les effets de la carte Dimitri Watel. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{plateau_8h_a21795d3e8856c6912ca864b28e385f5c}{retourne\+\_\+\+Djibril\+\_\+\+Aurelien\+\_\+\+Dembele\+\_\+\+Cabot}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score, \mbox{\hyperlink{struct_coord}{Coord}} coord)
 \begin{DoxyCompactList}\small\item\em Active les effets de la carte Djibril-\/\+Aurélien Dembele-\/\+Cabot. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{plateau_8h_ab3384d3a2bf6bccc0f87b7f5d8232c17}{retourne\+\_\+\+Eric\+\_\+\+Lejeune}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p)
+void \mbox{\hyperlink{plateau_8h_a4eba5c924a69c8f5fe5c8ac913e7fdbb}{retourne\+\_\+\+Eric\+\_\+\+Lejeune}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{struct_coord}{Coord}} coord)
 \begin{DoxyCompactList}\small\item\em Active les effets de la carte Eric Lejeune. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{plateau_8h_a837f0190fe80102a519fc17820ac68c9}{retourne\+\_\+\+Lucienne\+\_\+\+Pacave}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score, \mbox{\hyperlink{struct_coord}{Coord}} coord)
 \begin{DoxyCompactList}\small\item\em Active les effets de la carte Lucienne Pacavé \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{plateau_8h_a8706936e604ef0fd87424d3609c8dcad}{retourne\+\_\+\+Katrin\+\_\+\+Salhab}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int score, \mbox{\hyperlink{struct_coord}{Coord}} coord)
 \begin{DoxyCompactList}\small\item\em Active les effets de la carte Katrin Salhab. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{plateau_8h_a28b3dfc2c5aa884facec4800e0acba03}{retourne\+\_\+\+Laurent\+\_\+\+Prevel}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p)
+void \mbox{\hyperlink{plateau_8h_aa4cceb7af32a7a63e57cb3af2ec57613}{retourne\+\_\+\+Laurent\+\_\+\+Prevel}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{struct_coord}{Coord}} coord)
 \begin{DoxyCompactList}\small\item\em Active les effets de la carte Laurent Prével. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{plateau_8h_a676ed33ed1ff7fd3200efd68462f61e0}{switch\+\_\+carte}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{carte_8h_aaf595c0642ba2db854c179bb92387300}{id\+\_\+carte}} id, \mbox{\hyperlink{struct_coord}{Coord}} coord, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f\+\_\+adverse, int score, int score\+\_\+adverse)
 \begin{DoxyCompactList}\small\item\em Active les effets de la carte d\textquotesingle{}identifiant id. \end{DoxyCompactList}\item 
@@ -168,7 +170,7 @@ type abstrait pour le plateau de jeu
 
 
 
-Definition at line 23 of file plateau.\+h.
+Definition at line 24 of file plateau.\+h.
 
 
 
@@ -198,7 +200,7 @@ Ajoute un bonus de 3 points à la faction qui a posé la carte Anne-\/\+Laure Li
 \end{DoxyParams}
 
 
-Definition at line 287 of file plateau.\+c.
+Definition at line 326 of file plateau.\+c.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -207,7 +209,8 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=317pt]{plateau_8h_abf68a3ea08cf4500f9925c2ee1e5f7c1_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -234,7 +237,7 @@ la liste des des factions du jeu
 \end{DoxyReturn}
 
 
-Definition at line 218 of file plateau.\+c.
+Definition at line 248 of file plateau.\+c.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -261,6 +264,10 @@ Prototype de get\+\_\+avant\+\_\+derniere\+\_\+carte\+\_\+retournee.
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{struct_coord}{Coord}} 
 \end{DoxyReturn}
+
+
+Definition at line 64 of file plateau.\+c.
+
 \mbox{\Hypertarget{plateau_8h_aeadd637dac50b858195f6f2afc3ef727}\label{plateau_8h_aeadd637dac50b858195f6f2afc3ef727}} 
 \index{plateau.h@{plateau.h}!get\_carte\_bas\_droite@{get\_carte\_bas\_droite}}
 \index{get\_carte\_bas\_droite@{get\_carte\_bas\_droite}!plateau.h@{plateau.h}}
@@ -279,6 +286,10 @@ Prototype de get\+\_\+carte\+\_\+bas\+\_\+droite.
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{struct_coord}{Coord}} 
 \end{DoxyReturn}
+
+
+Definition at line 74 of file plateau.\+c.
+
 \mbox{\Hypertarget{plateau_8h_a71f7141a9a486188445d0c2382332ef6}\label{plateau_8h_a71f7141a9a486188445d0c2382332ef6}} 
 \index{plateau.h@{plateau.h}!get\_carte\_haut\_gauche@{get\_carte\_haut\_gauche}}
 \index{get\_carte\_haut\_gauche@{get\_carte\_haut\_gauche}!plateau.h@{plateau.h}}
@@ -297,6 +308,10 @@ Prototype de get\+\_\+carte\+\_\+haut\+\_\+gauche.
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{struct_coord}{Coord}} 
 \end{DoxyReturn}
+
+
+Definition at line 69 of file plateau.\+c.
+
 \mbox{\Hypertarget{plateau_8h_aad74c438b78c0feb48bef41bbcad9fb0}\label{plateau_8h_aad74c438b78c0feb48bef41bbcad9fb0}} 
 \index{plateau.h@{plateau.h}!get\_cartes\_non\_retournees\_manche@{get\_cartes\_non\_retournees\_manche}}
 \index{get\_cartes\_non\_retournees\_manche@{get\_cartes\_non\_retournees\_manche}!plateau.h@{plateau.h}}
@@ -315,6 +330,10 @@ Prototype de get\+\_\+cartes\+\_\+non\+\_\+retournees\+\_\+manche.
 \begin{DoxyReturn}{Returns}
 int 
 \end{DoxyReturn}
+
+
+Definition at line 89 of file plateau.\+c.
+
 \mbox{\Hypertarget{plateau_8h_a7c1c2c150f89293665ef0993cfec9f7f}\label{plateau_8h_a7c1c2c150f89293665ef0993cfec9f7f}} 
 \index{plateau.h@{plateau.h}!get\_cartes\_retournees\_manche@{get\_cartes\_retournees\_manche}}
 \index{get\_cartes\_retournees\_manche@{get\_cartes\_retournees\_manche}!plateau.h@{plateau.h}}
@@ -333,6 +352,10 @@ Prototype de get\+\_\+cartes\+\_\+retournees\+\_\+manche.
 \begin{DoxyReturn}{Returns}
 int 
 \end{DoxyReturn}
+
+
+Definition at line 84 of file plateau.\+c.
+
 \mbox{\Hypertarget{plateau_8h_af18e9c10ad5b52e70af728594d0b6fab}\label{plateau_8h_af18e9c10ad5b52e70af728594d0b6fab}} 
 \index{plateau.h@{plateau.h}!get\_derniere\_carte\_posee@{get\_derniere\_carte\_posee}}
 \index{get\_derniere\_carte\_posee@{get\_derniere\_carte\_posee}!plateau.h@{plateau.h}}
@@ -351,6 +374,10 @@ Prototype de get\+\_\+derniere\+\_\+carte\+\_\+posee.
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{struct_coord}{Coord}} 
 \end{DoxyReturn}
+
+
+Definition at line 54 of file plateau.\+c.
+
 \mbox{\Hypertarget{plateau_8h_a7d0fe2e325ffc2e0d1c019bfb872940b}\label{plateau_8h_a7d0fe2e325ffc2e0d1c019bfb872940b}} 
 \index{plateau.h@{plateau.h}!get\_derniere\_carte\_retournee@{get\_derniere\_carte\_retournee}}
 \index{get\_derniere\_carte\_retournee@{get\_derniere\_carte\_retournee}!plateau.h@{plateau.h}}
@@ -369,6 +396,10 @@ Prototype de get\+\_\+derniere\+\_\+carte\+\_\+retournee.
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{struct_coord}{Coord}} 
 \end{DoxyReturn}
+
+
+Definition at line 59 of file plateau.\+c.
+
 \mbox{\Hypertarget{plateau_8h_a44f2d0cc019d090bd9af0bd3f86bb451}\label{plateau_8h_a44f2d0cc019d090bd9af0bd3f86bb451}} 
 \index{plateau.h@{plateau.h}!get\_factions@{get\_factions}}
 \index{get\_factions@{get\_factions}!plateau.h@{plateau.h}}
@@ -387,6 +418,10 @@ Prototype de get\+\_\+factions qui permet de récupérer les factions en jeu.
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{struct_factions__en__jeu}{Factions\+\_\+en\+\_\+jeu}} 
 \end{DoxyReturn}
+
+
+Definition at line 49 of file plateau.\+c.
+
 \mbox{\Hypertarget{plateau_8h_a672ab477e21c474ba7ca8d58eddba391}\label{plateau_8h_a672ab477e21c474ba7ca8d58eddba391}} 
 \index{plateau.h@{plateau.h}!get\_numero\_manche@{get\_numero\_manche}}
 \index{get\_numero\_manche@{get\_numero\_manche}!plateau.h@{plateau.h}}
@@ -405,6 +440,10 @@ Prototype de get\+\_\+numero\+\_\+manche.
 \begin{DoxyReturn}{Returns}
 int 
 \end{DoxyReturn}
+
+
+Definition at line 79 of file plateau.\+c.
+
 \mbox{\Hypertarget{plateau_8h_a0a1230f40936ff71dbdf095ecaa4993d}\label{plateau_8h_a0a1230f40936ff71dbdf095ecaa4993d}} 
 \index{plateau.h@{plateau.h}!get\_plateau\_jeu@{get\_plateau\_jeu}}
 \index{get\_plateau\_jeu@{get\_plateau\_jeu}!plateau.h@{plateau.h}}
@@ -423,6 +462,10 @@ Prototype de get\+\_\+plateau\+\_\+jeu.
 \begin{DoxyReturn}{Returns}
 Plateau\+\_\+jeu 
 \end{DoxyReturn}
+
+
+Definition at line 44 of file plateau.\+c.
+
 \mbox{\Hypertarget{plateau_8h_a2190bbe0984d78c5f3d5f2e646210f07}\label{plateau_8h_a2190bbe0984d78c5f3d5f2e646210f07}} 
 \index{plateau.h@{plateau.h}!init\_pioche@{init\_pioche}}
 \index{init\_pioche@{init\_pioche}!plateau.h@{plateau.h}}
@@ -440,7 +483,7 @@ Crée la pioche avec les 32 cartes de l\textquotesingle{}énoncé pour la factio
 \end{DoxyParams}
 
 
-Definition at line 68 of file plateau.\+c.
+Definition at line 98 of file plateau.\+c.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -471,7 +514,7 @@ le plateau initialisé
 \end{DoxyReturn}
 
 
-Definition at line 91 of file plateau.\+c.
+Definition at line 121 of file plateau.\+c.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -504,7 +547,7 @@ Libère la mémoire associée au plateau de jeu et aux deux factions.
 \end{DoxyParams}
 
 
-Definition at line 114 of file plateau.\+c.
+Definition at line 144 of file plateau.\+c.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -533,9 +576,10 @@ Initialise une nouvelle manche ou indique que le jeu est terminé
 \end{DoxyReturn}
 
 
-Definition at line 119 of file plateau.\+c.
+Definition at line 149 of file plateau.\+c.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -572,9 +616,10 @@ Permet à une faction de poser une carte face cachée sur le plateau.
 \end{DoxyParams}
 
 
-Definition at line 245 of file plateau.\+c.
+Definition at line 275 of file plateau.\+c.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -595,25 +640,34 @@ Active les effets de la carte Alcool.
 \begin{DoxyParams}{Parameters}
 {\em p} & plateau valide (le pointeur doit être valide) \\
 \hline
-{\em coord} & les coordonnées de la carte Alcool en question sur le plateau \\
+{\em coord} & les coordonnées de la carte en question sur le plateau \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line 444 of file plateau.\+c.
+Definition at line 519 of file plateau.\+c.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{plateau_8h_ac2734f8c9dd2b1da2bc44353bde8f8cd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{plateau_8h_ac2734f8c9dd2b1da2bc44353bde8f8cd_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{plateau_8h_a2798f0544ad34d5950fb8d3a1e62a9ab}\label{plateau_8h_a2798f0544ad34d5950fb8d3a1e62a9ab}} 
+\mbox{\Hypertarget{plateau_8h_a4fa3750c4cdb95c9f79a8a1c0810dabe}\label{plateau_8h_a4fa3750c4cdb95c9f79a8a1c0810dabe}} 
 \index{plateau.h@{plateau.h}!retourne\_AnneLaure\_Ligozat@{retourne\_AnneLaure\_Ligozat}}
 \index{retourne\_AnneLaure\_Ligozat@{retourne\_AnneLaure\_Ligozat}!plateau.h@{plateau.h}}
 \doxysubsubsection{\texorpdfstring{retourne\_AnneLaure\_Ligozat()}{retourne\_AnneLaure\_Ligozat()}}
-{\footnotesize\ttfamily void retourne\+\_\+\+Anne\+Laure\+\_\+\+Ligozat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{int}]{score }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void retourne\+\_\+\+Anne\+Laure\+\_\+\+Ligozat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{int}]{score,  }\item[{\mbox{\hyperlink{struct_coord}{Coord}}}]{coord }\end{DoxyParamCaption})}
 
 
 
@@ -627,30 +681,34 @@ Active les effets de la carte Anne-\/\+Laure Ligozat.
 \hline
 {\em score} & score de la faction f \\
 \hline
+{\em coord} & les coordonnées de la carte en question sur le plateau \\
+\hline
 \end{DoxyParams}
 
 
-Definition at line 752 of file plateau.\+c.
+Definition at line 997 of file plateau.\+c.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_a2798f0544ad34d5950fb8d3a1e62a9ab_cgraph}
+\includegraphics[width=350pt]{plateau_8h_a4fa3750c4cdb95c9f79a8a1c0810dabe_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_a2798f0544ad34d5950fb8d3a1e62a9ab_icgraph}
+\includegraphics[width=350pt]{plateau_8h_a4fa3750c4cdb95c9f79a8a1c0810dabe_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{plateau_8h_a3f3d81721be2e77a2976a51fbca5a37d}\label{plateau_8h_a3f3d81721be2e77a2976a51fbca5a37d}} 
+\mbox{\Hypertarget{plateau_8h_affb3dc4699da610a4094b898606df720}\label{plateau_8h_affb3dc4699da610a4094b898606df720}} 
 \index{plateau.h@{plateau.h}!retourne\_Cafe@{retourne\_Cafe}}
 \index{retourne\_Cafe@{retourne\_Cafe}!plateau.h@{plateau.h}}
 \doxysubsubsection{\texorpdfstring{retourne\_Cafe()}{retourne\_Cafe()}}
-{\footnotesize\ttfamily void retourne\+\_\+\+Cafe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{int}]{score }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void retourne\+\_\+\+Cafe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{int}]{score,  }\item[{\mbox{\hyperlink{struct_coord}{Coord}}}]{coord }\end{DoxyParamCaption})}
 
 
 
@@ -664,23 +722,27 @@ Active les effets de la carte Café
 \hline
 {\em score} & score de la faction f \\
 \hline
+{\em coord} & les coordonnées de la carte en question sur le plateau \\
+\hline
 \end{DoxyParams}
 
 
-Definition at line 451 of file plateau.\+c.
+Definition at line 575 of file plateau.\+c.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=331pt]{plateau_8h_a3f3d81721be2e77a2976a51fbca5a37d_cgraph}
+\includegraphics[width=331pt]{plateau_8h_affb3dc4699da610a4094b898606df720_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_a3f3d81721be2e77a2976a51fbca5a37d_icgraph}
+\includegraphics[width=350pt]{plateau_8h_affb3dc4699da610a4094b898606df720_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{plateau_8h_a54bbb50bc4da98fef56d5a1224625062}\label{plateau_8h_a54bbb50bc4da98fef56d5a1224625062}} 
@@ -697,25 +759,34 @@ Active les effets de la carte Catherine Dubois.
 \begin{DoxyParams}{Parameters}
 {\em p} & plateau valide (le pointeur doit être valide) \\
 \hline
-{\em coord} & les coordonnées de la carte Catherine Dubois en question sur le plateau \\
+{\em coord} & les coordonnées de la carte en question sur le plateau \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line 736 of file plateau.\+c.
+Definition at line 956 of file plateau.\+c.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{plateau_8h_a54bbb50bc4da98fef56d5a1224625062_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{plateau_8h_a54bbb50bc4da98fef56d5a1224625062_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{plateau_8h_a392e25f7919cb36baed3b193f3206405}\label{plateau_8h_a392e25f7919cb36baed3b193f3206405}} 
+\mbox{\Hypertarget{plateau_8h_aac850aae639596089422f59945955893}\label{plateau_8h_aac850aae639596089422f59945955893}} 
 \index{plateau.h@{plateau.h}!retourne\_Christophe\_Mouilleron@{retourne\_Christophe\_Mouilleron}}
 \index{retourne\_Christophe\_Mouilleron@{retourne\_Christophe\_Mouilleron}!plateau.h@{plateau.h}}
 \doxysubsubsection{\texorpdfstring{retourne\_Christophe\_Mouilleron()}{retourne\_Christophe\_Mouilleron()}}
-{\footnotesize\ttfamily void retourne\+\_\+\+Christophe\+\_\+\+Mouilleron (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void retourne\+\_\+\+Christophe\+\_\+\+Mouilleron (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{struct_coord}{Coord}}}]{coord }\end{DoxyParamCaption})}
 
 
 
@@ -725,30 +796,34 @@ Active les effets de la carte Christophe Mouilleron.
 \begin{DoxyParams}{Parameters}
 {\em p} & plateau valide (le pointeur doit être valide) \\
 \hline
+{\em coord} & les coordonnées de la carte en question sur le plateau \\
+\hline
 \end{DoxyParams}
 
 
-Definition at line 782 of file plateau.\+c.
+Definition at line 1038 of file plateau.\+c.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=324pt]{plateau_8h_a392e25f7919cb36baed3b193f3206405_cgraph}
+\includegraphics[width=350pt]{plateau_8h_aac850aae639596089422f59945955893_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_a392e25f7919cb36baed3b193f3206405_icgraph}
+\includegraphics[width=350pt]{plateau_8h_aac850aae639596089422f59945955893_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{plateau_8h_a544c66f1b6f0bf5ca3b6223e997d7e1d}\label{plateau_8h_a544c66f1b6f0bf5ca3b6223e997d7e1d}} 
+\mbox{\Hypertarget{plateau_8h_a8eda7434dc0f02bd157237914732da90}\label{plateau_8h_a8eda7434dc0f02bd157237914732da90}} 
 \index{plateau.h@{plateau.h}!retourne\_Dimitri\_Watel@{retourne\_Dimitri\_Watel}}
 \index{retourne\_Dimitri\_Watel@{retourne\_Dimitri\_Watel}!plateau.h@{plateau.h}}
 \doxysubsubsection{\texorpdfstring{retourne\_Dimitri\_Watel()}{retourne\_Dimitri\_Watel()}}
-{\footnotesize\ttfamily void retourne\+\_\+\+Dimitri\+\_\+\+Watel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{int}]{score }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void retourne\+\_\+\+Dimitri\+\_\+\+Watel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{int}]{score,  }\item[{\mbox{\hyperlink{struct_coord}{Coord}}}]{coord }\end{DoxyParamCaption})}
 
 
 
@@ -762,23 +837,27 @@ Active les effets de la carte Dimitri Watel.
 \hline
 {\em score} & score de la faction f \\
 \hline
+{\em coord} & les coordonnées de la carte en question sur le plateau \\
+\hline
 \end{DoxyParams}
 
 
-Definition at line 883 of file plateau.\+c.
+Definition at line 1143 of file plateau.\+c.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_a544c66f1b6f0bf5ca3b6223e997d7e1d_cgraph}
+\includegraphics[width=350pt]{plateau_8h_a8eda7434dc0f02bd157237914732da90_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_a544c66f1b6f0bf5ca3b6223e997d7e1d_icgraph}
+\includegraphics[width=350pt]{plateau_8h_a8eda7434dc0f02bd157237914732da90_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{plateau_8h_a21795d3e8856c6912ca864b28e385f5c}\label{plateau_8h_a21795d3e8856c6912ca864b28e385f5c}} 
@@ -799,32 +878,34 @@ Active les effets de la carte Djibril-\/\+Aurélien Dembele-\/\+Cabot.
 \hline
 {\em score} & score de la faction f \\
 \hline
-{\em coord} & les coordonnées de la carte Djibril-\/\+Aurélien Dembele-\/\+Cabot en question sur le plateau \\
+{\em coord} & les coordonnées de la carte en question sur le plateau \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line 916 of file plateau.\+c.
+Definition at line 1177 of file plateau.\+c.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{plateau_8h_a21795d3e8856c6912ca864b28e385f5c_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{plateau_8h_a21795d3e8856c6912ca864b28e385f5c_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{plateau_8h_a1b1476aa0470878617850444f6707eff}\label{plateau_8h_a1b1476aa0470878617850444f6707eff}} 
+\mbox{\Hypertarget{plateau_8h_ad19e3ca7c81b682200136c12ae683ec9}\label{plateau_8h_ad19e3ca7c81b682200136c12ae683ec9}} 
 \index{plateau.h@{plateau.h}!retourne\_Ecocup@{retourne\_Ecocup}}
 \index{retourne\_Ecocup@{retourne\_Ecocup}!plateau.h@{plateau.h}}
 \doxysubsubsection{\texorpdfstring{retourne\_Ecocup()}{retourne\_Ecocup()}}
-{\footnotesize\ttfamily void retourne\+\_\+\+Ecocup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{int}]{score,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f\+\_\+adverse,  }\item[{int}]{score\+\_\+adverse }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void retourne\+\_\+\+Ecocup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{int}]{score,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f\+\_\+adverse,  }\item[{int}]{score\+\_\+adverse,  }\item[{\mbox{\hyperlink{struct_coord}{Coord}}}]{coord }\end{DoxyParamCaption})}
 
 
 
@@ -842,30 +923,34 @@ Active les effets de la carte Ecocup.
 \hline
 {\em score\+\_\+adverse} & score de la faction f\+\_\+adverse \\
 \hline
+{\em coord} & les coordonnées de la carte en question sur le plateau \\
+\hline
 \end{DoxyParams}
 
 
-Definition at line 509 of file plateau.\+c.
+Definition at line 637 of file plateau.\+c.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_a1b1476aa0470878617850444f6707eff_cgraph}
+\includegraphics[width=350pt]{plateau_8h_ad19e3ca7c81b682200136c12ae683ec9_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_a1b1476aa0470878617850444f6707eff_icgraph}
+\includegraphics[width=350pt]{plateau_8h_ad19e3ca7c81b682200136c12ae683ec9_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{plateau_8h_a3ca90036287ffa05a590f42a1447e2db}\label{plateau_8h_a3ca90036287ffa05a590f42a1447e2db}} 
+\mbox{\Hypertarget{plateau_8h_a8e59a299de0435cb251597fede757ade}\label{plateau_8h_a8e59a299de0435cb251597fede757ade}} 
 \index{plateau.h@{plateau.h}!retourne\_EcologIIE@{retourne\_EcologIIE}}
 \index{retourne\_EcologIIE@{retourne\_EcologIIE}!plateau.h@{plateau.h}}
 \doxysubsubsection{\texorpdfstring{retourne\_EcologIIE()}{retourne\_EcologIIE()}}
-{\footnotesize\ttfamily void retourne\+\_\+\+Ecolog\+I\+IE (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{int}]{score,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f\+\_\+adverse,  }\item[{int}]{score\+\_\+adverse }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void retourne\+\_\+\+Ecolog\+I\+IE (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{int}]{score,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f\+\_\+adverse,  }\item[{int}]{score\+\_\+adverse,  }\item[{\mbox{\hyperlink{struct_coord}{Coord}}}]{coord }\end{DoxyParamCaption})}
 
 
 
@@ -883,30 +968,34 @@ Active les effets de la carte Ecolog\+I\+IE.
 \hline
 {\em score\+\_\+adverse} & score de la faction f\+\_\+adverse \\
 \hline
+{\em coord} & les coordonnées de la carte en question sur le plateau \\
+\hline
 \end{DoxyParams}
 
 
-Definition at line 333 of file plateau.\+c.
+Definition at line 376 of file plateau.\+c.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_a3ca90036287ffa05a590f42a1447e2db_cgraph}
+\includegraphics[width=350pt]{plateau_8h_a8e59a299de0435cb251597fede757ade_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_a3ca90036287ffa05a590f42a1447e2db_icgraph}
+\includegraphics[width=350pt]{plateau_8h_a8e59a299de0435cb251597fede757ade_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{plateau_8h_ab3384d3a2bf6bccc0f87b7f5d8232c17}\label{plateau_8h_ab3384d3a2bf6bccc0f87b7f5d8232c17}} 
+\mbox{\Hypertarget{plateau_8h_a4eba5c924a69c8f5fe5c8ac913e7fdbb}\label{plateau_8h_a4eba5c924a69c8f5fe5c8ac913e7fdbb}} 
 \index{plateau.h@{plateau.h}!retourne\_Eric\_Lejeune@{retourne\_Eric\_Lejeune}}
 \index{retourne\_Eric\_Lejeune@{retourne\_Eric\_Lejeune}!plateau.h@{plateau.h}}
 \doxysubsubsection{\texorpdfstring{retourne\_Eric\_Lejeune()}{retourne\_Eric\_Lejeune()}}
-{\footnotesize\ttfamily void retourne\+\_\+\+Eric\+\_\+\+Lejeune (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void retourne\+\_\+\+Eric\+\_\+\+Lejeune (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{struct_coord}{Coord}}}]{coord }\end{DoxyParamCaption})}
 
 
 
@@ -916,30 +1005,34 @@ Active les effets de la carte Eric Lejeune.
 \begin{DoxyParams}{Parameters}
 {\em p} & plateau valide (le pointeur doit être valide) \\
 \hline
+{\em coord} & les coordonnées de la carte en question sur le plateau \\
+\hline
 \end{DoxyParams}
 
 
-Definition at line 934 of file plateau.\+c.
+Definition at line 1196 of file plateau.\+c.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=333pt]{plateau_8h_ab3384d3a2bf6bccc0f87b7f5d8232c17_cgraph}
+\includegraphics[width=350pt]{plateau_8h_a4eba5c924a69c8f5fe5c8ac913e7fdbb_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_ab3384d3a2bf6bccc0f87b7f5d8232c17_icgraph}
+\includegraphics[width=350pt]{plateau_8h_a4eba5c924a69c8f5fe5c8ac913e7fdbb_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{plateau_8h_ae1fdaa3b313859d436c6883deaedef05}\label{plateau_8h_ae1fdaa3b313859d436c6883deaedef05}} 
+\mbox{\Hypertarget{plateau_8h_a6f31d9b51378e4ea68b694367b7b1174}\label{plateau_8h_a6f31d9b51378e4ea68b694367b7b1174}} 
 \index{plateau.h@{plateau.h}!retourne\_FC@{retourne\_FC}}
 \index{retourne\_FC@{retourne\_FC}!plateau.h@{plateau.h}}
 \doxysubsubsection{\texorpdfstring{retourne\_FC()}{retourne\_FC()}}
-{\footnotesize\ttfamily void retourne\+\_\+\+FC (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{int}]{score }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void retourne\+\_\+\+FC (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{int}]{score,  }\item[{\mbox{\hyperlink{struct_coord}{Coord}}}]{coord }\end{DoxyParamCaption})}
 
 
 
@@ -953,30 +1046,34 @@ Active les effets de la carte FC.
 \hline
 {\em score} & score de la faction f \\
 \hline
+{\em coord} & les coordonnées de la carte en question sur le plateau \\
+\hline
 \end{DoxyParams}
 
 
-Definition at line 316 of file plateau.\+c.
+Definition at line 357 of file plateau.\+c.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=321pt]{plateau_8h_ae1fdaa3b313859d436c6883deaedef05_cgraph}
+\includegraphics[width=321pt]{plateau_8h_a6f31d9b51378e4ea68b694367b7b1174_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_ae1fdaa3b313859d436c6883deaedef05_icgraph}
+\includegraphics[width=350pt]{plateau_8h_a6f31d9b51378e4ea68b694367b7b1174_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{plateau_8h_a0c8b8a7457ff68dd9aaca8868c5b9c75}\label{plateau_8h_a0c8b8a7457ff68dd9aaca8868c5b9c75}} 
+\mbox{\Hypertarget{plateau_8h_a017b517e0297e70952f7fc6c0d7a3fc0}\label{plateau_8h_a017b517e0297e70952f7fc6c0d7a3fc0}} 
 \index{plateau.h@{plateau.h}!retourne\_Fetia\_Bannour@{retourne\_Fetia\_Bannour}}
 \index{retourne\_Fetia\_Bannour@{retourne\_Fetia\_Bannour}!plateau.h@{plateau.h}}
 \doxysubsubsection{\texorpdfstring{retourne\_Fetia\_Bannour()}{retourne\_Fetia\_Bannour()}}
-{\footnotesize\ttfamily void retourne\+\_\+\+Fetia\+\_\+\+Bannour (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{int}]{score }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void retourne\+\_\+\+Fetia\+\_\+\+Bannour (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{int}]{score,  }\item[{\mbox{\hyperlink{struct_coord}{Coord}}}]{coord }\end{DoxyParamCaption})}
 
 
 
@@ -990,30 +1087,34 @@ Active les effets de la carte Fetia Bannour.
 \hline
 {\em score} & score de la faction f \\
 \hline
+{\em coord} & les coordonnées de la carte en question sur le plateau \\
+\hline
 \end{DoxyParams}
 
 
-Definition at line 690 of file plateau.\+c.
+Definition at line 884 of file plateau.\+c.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_a0c8b8a7457ff68dd9aaca8868c5b9c75_cgraph}
+\includegraphics[width=350pt]{plateau_8h_a017b517e0297e70952f7fc6c0d7a3fc0_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_a0c8b8a7457ff68dd9aaca8868c5b9c75_icgraph}
+\includegraphics[width=350pt]{plateau_8h_a017b517e0297e70952f7fc6c0d7a3fc0_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{plateau_8h_a8f85a7a30321028f3adae08ed107ae74}\label{plateau_8h_a8f85a7a30321028f3adae08ed107ae74}} 
+\mbox{\Hypertarget{plateau_8h_a336cac6cd051617253e073d8e65b97ad}\label{plateau_8h_a336cac6cd051617253e073d8e65b97ad}} 
 \index{plateau.h@{plateau.h}!retourne\_FISA@{retourne\_FISA}}
 \index{retourne\_FISA@{retourne\_FISA}!plateau.h@{plateau.h}}
 \doxysubsubsection{\texorpdfstring{retourne\_FISA()}{retourne\_FISA()}}
-{\footnotesize\ttfamily void retourne\+\_\+\+F\+I\+SA (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{int}]{score }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void retourne\+\_\+\+F\+I\+SA (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{int}]{score,  }\item[{\mbox{\hyperlink{struct_coord}{Coord}}}]{coord }\end{DoxyParamCaption})}
 
 
 
@@ -1027,30 +1128,34 @@ Active les effets de la carte F\+I\+SA.
 \hline
 {\em score} & score de la faction f \\
 \hline
+{\em coord} & les coordonnées de la carte en question sur le plateau \\
+\hline
 \end{DoxyParams}
 
 
-Definition at line 308 of file plateau.\+c.
+Definition at line 348 of file plateau.\+c.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=331pt]{plateau_8h_a8f85a7a30321028f3adae08ed107ae74_cgraph}
+\includegraphics[width=331pt]{plateau_8h_a336cac6cd051617253e073d8e65b97ad_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_a8f85a7a30321028f3adae08ed107ae74_icgraph}
+\includegraphics[width=350pt]{plateau_8h_a336cac6cd051617253e073d8e65b97ad_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{plateau_8h_a0d9148452963104c00741b98cf4d9255}\label{plateau_8h_a0d9148452963104c00741b98cf4d9255}} 
+\mbox{\Hypertarget{plateau_8h_ad90766cf8076143270a2b76aeaefe5da}\label{plateau_8h_ad90766cf8076143270a2b76aeaefe5da}} 
 \index{plateau.h@{plateau.h}!retourne\_FISE@{retourne\_FISE}}
 \index{retourne\_FISE@{retourne\_FISE}!plateau.h@{plateau.h}}
 \doxysubsubsection{\texorpdfstring{retourne\_FISE()}{retourne\_FISE()}}
-{\footnotesize\ttfamily void retourne\+\_\+\+F\+I\+SE (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{int}]{score }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void retourne\+\_\+\+F\+I\+SE (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{int}]{score,  }\item[{\mbox{\hyperlink{struct_coord}{Coord}}}]{coord }\end{DoxyParamCaption})}
 
 
 
@@ -1064,30 +1169,34 @@ Active les effets de la carte F\+I\+SE.
 \hline
 {\em score} & score de la faction f \\
 \hline
+{\em coord} & les coordonnées de la carte en question sur le plateau \\
+\hline
 \end{DoxyParams}
 
 
-Definition at line 303 of file plateau.\+c.
+Definition at line 342 of file plateau.\+c.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=329pt]{plateau_8h_a0d9148452963104c00741b98cf4d9255_cgraph}
+\includegraphics[width=329pt]{plateau_8h_ad90766cf8076143270a2b76aeaefe5da_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_a0d9148452963104c00741b98cf4d9255_icgraph}
+\includegraphics[width=350pt]{plateau_8h_ad90766cf8076143270a2b76aeaefe5da_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{plateau_8h_a1cfa26097ba4ec0af5e70257ae58b3cb}\label{plateau_8h_a1cfa26097ba4ec0af5e70257ae58b3cb}} 
+\mbox{\Hypertarget{plateau_8h_a76d84cbf514de5dc1247ce80fcb13471}\label{plateau_8h_a76d84cbf514de5dc1247ce80fcb13471}} 
 \index{plateau.h@{plateau.h}!retourne\_Guillaume\_Burel@{retourne\_Guillaume\_Burel}}
 \index{retourne\_Guillaume\_Burel@{retourne\_Guillaume\_Burel}!plateau.h@{plateau.h}}
 \doxysubsubsection{\texorpdfstring{retourne\_Guillaume\_Burel()}{retourne\_Guillaume\_Burel()}}
-{\footnotesize\ttfamily void retourne\+\_\+\+Guillaume\+\_\+\+Burel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{int}]{score,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f\+\_\+adverse,  }\item[{int}]{score\+\_\+adverse }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void retourne\+\_\+\+Guillaume\+\_\+\+Burel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{int}]{score,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f\+\_\+adverse,  }\item[{int}]{score\+\_\+adverse,  }\item[{\mbox{\hyperlink{struct_coord}{Coord}}}]{coord }\end{DoxyParamCaption})}
 
 
 
@@ -1105,30 +1214,34 @@ Active les effets de la carte Guillaume Burel.
 \hline
 {\em score\+\_\+adverse} & score de la faction f\+\_\+adverse \\
 \hline
+{\em coord} & les coordonnées de la carte en question sur le plateau \\
+\hline
 \end{DoxyParams}
 
 
-Definition at line 773 of file plateau.\+c.
+Definition at line 1028 of file plateau.\+c.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_a1cfa26097ba4ec0af5e70257ae58b3cb_cgraph}
+\includegraphics[width=350pt]{plateau_8h_a76d84cbf514de5dc1247ce80fcb13471_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_a1cfa26097ba4ec0af5e70257ae58b3cb_icgraph}
+\includegraphics[width=350pt]{plateau_8h_a76d84cbf514de5dc1247ce80fcb13471_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{plateau_8h_a458a2095cdd37fd8a04c7ad8acdded3a}\label{plateau_8h_a458a2095cdd37fd8a04c7ad8acdded3a}} 
+\mbox{\Hypertarget{plateau_8h_a36ee6886e1fc49003a638898ee8a1430}\label{plateau_8h_a36ee6886e1fc49003a638898ee8a1430}} 
 \index{plateau.h@{plateau.h}!retourne\_Heures\_supplementaires@{retourne\_Heures\_supplementaires}}
 \index{retourne\_Heures\_supplementaires@{retourne\_Heures\_supplementaires}!plateau.h@{plateau.h}}
 \doxysubsubsection{\texorpdfstring{retourne\_Heures\_supplementaires()}{retourne\_Heures\_supplementaires()}}
-{\footnotesize\ttfamily void retourne\+\_\+\+Heures\+\_\+supplementaires (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f\+\_\+adverse,  }\item[{int}]{score\+\_\+adverse }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void retourne\+\_\+\+Heures\+\_\+supplementaires (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f\+\_\+adverse,  }\item[{int}]{score\+\_\+adverse,  }\item[{\mbox{\hyperlink{struct_coord}{Coord}}}]{coord }\end{DoxyParamCaption})}
 
 
 
@@ -1142,30 +1255,34 @@ Active les effets de la carte Heures supplémentaires.
 \hline
 {\em score\+\_\+adverse} & score de la faction f\+\_\+adverse \\
 \hline
+{\em coord} & les coordonnées de la carte en question sur le plateau \\
+\hline
 \end{DoxyParams}
 
 
-Definition at line 585 of file plateau.\+c.
+Definition at line 744 of file plateau.\+c.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_a458a2095cdd37fd8a04c7ad8acdded3a_cgraph}
+\includegraphics[width=350pt]{plateau_8h_a36ee6886e1fc49003a638898ee8a1430_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_a458a2095cdd37fd8a04c7ad8acdded3a_icgraph}
+\includegraphics[width=350pt]{plateau_8h_a36ee6886e1fc49003a638898ee8a1430_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{plateau_8h_a54041ae2d6839dd6cbbf8b8a09201964}\label{plateau_8h_a54041ae2d6839dd6cbbf8b8a09201964}} 
-\index{plateau.h@{plateau.h}!retourne\_Isolation\_du\_bâtiment@{retourne\_Isolation\_du\_bâtiment}}
-\index{retourne\_Isolation\_du\_bâtiment@{retourne\_Isolation\_du\_bâtiment}!plateau.h@{plateau.h}}
-\doxysubsubsection{\texorpdfstring{retourne\_Isolation\_du\_bâtiment()}{retourne\_Isolation\_du\_bâtiment()}}
-{\footnotesize\ttfamily void retourne\+\_\+\+Isolation\+\_\+du\+\_\+bâtiment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{int}]{score,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f\+\_\+adverse,  }\item[{int}]{score\+\_\+adverse }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{plateau_8h_ae667a16136a040ee486dd208a7a90b89}\label{plateau_8h_ae667a16136a040ee486dd208a7a90b89}} 
+\index{plateau.h@{plateau.h}!retourne\_Isolation\_du\_batiment@{retourne\_Isolation\_du\_batiment}}
+\index{retourne\_Isolation\_du\_batiment@{retourne\_Isolation\_du\_batiment}!plateau.h@{plateau.h}}
+\doxysubsubsection{\texorpdfstring{retourne\_Isolation\_du\_batiment()}{retourne\_Isolation\_du\_batiment()}}
+{\footnotesize\ttfamily void retourne\+\_\+\+Isolation\+\_\+du\+\_\+batiment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{int}]{score,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f\+\_\+adverse,  }\item[{int}]{score\+\_\+adverse,  }\item[{\mbox{\hyperlink{struct_coord}{Coord}}}]{coord }\end{DoxyParamCaption})}
 
 
 
@@ -1183,30 +1300,34 @@ Active les effets de la carte Isolation du bâtiment.
 \hline
 {\em score\+\_\+adverse} & score de la faction f\+\_\+adverse \\
 \hline
+{\em coord} & les coordonnées de la carte en question sur le plateau \\
+\hline
 \end{DoxyParams}
 
 
-Definition at line 539 of file plateau.\+c.
+Definition at line 669 of file plateau.\+c.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_a54041ae2d6839dd6cbbf8b8a09201964_cgraph}
+\includegraphics[width=350pt]{plateau_8h_ae667a16136a040ee486dd208a7a90b89_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_a54041ae2d6839dd6cbbf8b8a09201964_icgraph}
+\includegraphics[width=350pt]{plateau_8h_ae667a16136a040ee486dd208a7a90b89_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{plateau_8h_adce7bd766d15b07555f43e5e7639e5e1}\label{plateau_8h_adce7bd766d15b07555f43e5e7639e5e1}} 
+\mbox{\Hypertarget{plateau_8h_a5948318ef066f8f725c9cbcfbdcddef4}\label{plateau_8h_a5948318ef066f8f725c9cbcfbdcddef4}} 
 \index{plateau.h@{plateau.h}!retourne\_Jonas\_Senizergues@{retourne\_Jonas\_Senizergues}}
 \index{retourne\_Jonas\_Senizergues@{retourne\_Jonas\_Senizergues}!plateau.h@{plateau.h}}
 \doxysubsubsection{\texorpdfstring{retourne\_Jonas\_Senizergues()}{retourne\_Jonas\_Senizergues()}}
-{\footnotesize\ttfamily void retourne\+\_\+\+Jonas\+\_\+\+Senizergues (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void retourne\+\_\+\+Jonas\+\_\+\+Senizergues (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{struct_coord}{Coord}}}]{coord }\end{DoxyParamCaption})}
 
 
 
@@ -1216,30 +1337,34 @@ Active les effets de la carte Jonas Senizergues.
 \begin{DoxyParams}{Parameters}
 {\em p} & plateau valide (le pointeur doit être valide) \\
 \hline
+{\em coord} & les coordonnées de la carte en question sur le plateau \\
+\hline
 \end{DoxyParams}
 
 
-Definition at line 674 of file plateau.\+c.
+Definition at line 866 of file plateau.\+c.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_adce7bd766d15b07555f43e5e7639e5e1_cgraph}
+\includegraphics[width=350pt]{plateau_8h_a5948318ef066f8f725c9cbcfbdcddef4_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_adce7bd766d15b07555f43e5e7639e5e1_icgraph}
+\includegraphics[width=350pt]{plateau_8h_a5948318ef066f8f725c9cbcfbdcddef4_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{plateau_8h_afe64b224118cadecb660f69e46a75484}\label{plateau_8h_afe64b224118cadecb660f69e46a75484}} 
+\mbox{\Hypertarget{plateau_8h_a8b356d2c8f83f00b22b937e89a0555ed}\label{plateau_8h_a8b356d2c8f83f00b22b937e89a0555ed}} 
 \index{plateau.h@{plateau.h}!retourne\_Julien\_Forest@{retourne\_Julien\_Forest}}
 \index{retourne\_Julien\_Forest@{retourne\_Julien\_Forest}!plateau.h@{plateau.h}}
 \doxysubsubsection{\texorpdfstring{retourne\_Julien\_Forest()}{retourne\_Julien\_Forest()}}
-{\footnotesize\ttfamily void retourne\+\_\+\+Julien\+\_\+\+Forest (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{int}]{score }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void retourne\+\_\+\+Julien\+\_\+\+Forest (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{int}]{score,  }\item[{\mbox{\hyperlink{struct_coord}{Coord}}}]{coord }\end{DoxyParamCaption})}
 
 
 
@@ -1253,30 +1378,34 @@ Active les effets de la carte Julien Forest.
 \hline
 {\em score} & score de la faction f \\
 \hline
+{\em coord} & les coordonnées de la carte en question sur le plateau \\
+\hline
 \end{DoxyParams}
 
 
-Definition at line 850 of file plateau.\+c.
+Definition at line 1109 of file plateau.\+c.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_afe64b224118cadecb660f69e46a75484_cgraph}
+\includegraphics[width=350pt]{plateau_8h_a8b356d2c8f83f00b22b937e89a0555ed_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_afe64b224118cadecb660f69e46a75484_icgraph}
+\includegraphics[width=350pt]{plateau_8h_a8b356d2c8f83f00b22b937e89a0555ed_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{plateau_8h_a36fb7cdb7c7046fe8ebb32a34b0b7da6}\label{plateau_8h_a36fb7cdb7c7046fe8ebb32a34b0b7da6}} 
+\mbox{\Hypertarget{plateau_8h_a13f1ea8c5ce2eb9249d799bfe0fcfba9}\label{plateau_8h_a13f1ea8c5ce2eb9249d799bfe0fcfba9}} 
 \index{plateau.h@{plateau.h}!retourne\_Kahina\_Bouchama@{retourne\_Kahina\_Bouchama}}
 \index{retourne\_Kahina\_Bouchama@{retourne\_Kahina\_Bouchama}!plateau.h@{plateau.h}}
 \doxysubsubsection{\texorpdfstring{retourne\_Kahina\_Bouchama()}{retourne\_Kahina\_Bouchama()}}
-{\footnotesize\ttfamily void retourne\+\_\+\+Kahina\+\_\+\+Bouchama (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void retourne\+\_\+\+Kahina\+\_\+\+Bouchama (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{struct_coord}{Coord}}}]{coord }\end{DoxyParamCaption})}
 
 
 
@@ -1286,23 +1415,27 @@ Active les effets de la carte Kahina Bouchama.
 \begin{DoxyParams}{Parameters}
 {\em p} & plateau valide (le pointeur doit être valide) \\
 \hline
+{\em coord} & les coordonnées de la carte en question sur le plateau \\
+\hline
 \end{DoxyParams}
 
 
-Definition at line 603 of file plateau.\+c.
+Definition at line 763 of file plateau.\+c.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_a36fb7cdb7c7046fe8ebb32a34b0b7da6_cgraph}
+\includegraphics[width=350pt]{plateau_8h_a13f1ea8c5ce2eb9249d799bfe0fcfba9_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_a36fb7cdb7c7046fe8ebb32a34b0b7da6_icgraph}
+\includegraphics[width=350pt]{plateau_8h_a13f1ea8c5ce2eb9249d799bfe0fcfba9_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{plateau_8h_a8706936e604ef0fd87424d3609c8dcad}\label{plateau_8h_a8706936e604ef0fd87424d3609c8dcad}} 
@@ -1323,32 +1456,34 @@ Active les effets de la carte Katrin Salhab.
 \hline
 {\em score} & score de la faction f \\
 \hline
-{\em coord} & les coordonnées de la carte Katrin Salhab en question sur le plateau \\
+{\em coord} & les coordonnées de la carte en question sur le plateau \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line 1052 of file plateau.\+c.
+Definition at line 1310 of file plateau.\+c.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{plateau_8h_a8706936e604ef0fd87424d3609c8dcad_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{plateau_8h_a8706936e604ef0fd87424d3609c8dcad_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{plateau_8h_ab2ee5a351ff75383f29ee6f23a17a8ad}\label{plateau_8h_ab2ee5a351ff75383f29ee6f23a17a8ad}} 
+\mbox{\Hypertarget{plateau_8h_ae40eb3cf4de488fdf73c964d43010777}\label{plateau_8h_ae40eb3cf4de488fdf73c964d43010777}} 
 \index{plateau.h@{plateau.h}!retourne\_Kevin\_Goilard@{retourne\_Kevin\_Goilard}}
 \index{retourne\_Kevin\_Goilard@{retourne\_Kevin\_Goilard}!plateau.h@{plateau.h}}
 \doxysubsubsection{\texorpdfstring{retourne\_Kevin\_Goilard()}{retourne\_Kevin\_Goilard()}}
-{\footnotesize\ttfamily void retourne\+\_\+\+Kevin\+\_\+\+Goilard (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{int}]{score }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void retourne\+\_\+\+Kevin\+\_\+\+Goilard (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{int}]{score,  }\item[{\mbox{\hyperlink{struct_coord}{Coord}}}]{coord }\end{DoxyParamCaption})}
 
 
 
@@ -1362,30 +1497,34 @@ Active les effets de la carte Kevin Goilard.
 \hline
 {\em score} & score de la faction f \\
 \hline
+{\em coord} & les coordonnées de la carte en question sur le plateau \\
+\hline
 \end{DoxyParams}
 
 
-Definition at line 626 of file plateau.\+c.
+Definition at line 793 of file plateau.\+c.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_ab2ee5a351ff75383f29ee6f23a17a8ad_cgraph}
+\includegraphics[width=350pt]{plateau_8h_ae40eb3cf4de488fdf73c964d43010777_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_ab2ee5a351ff75383f29ee6f23a17a8ad_icgraph}
+\includegraphics[width=350pt]{plateau_8h_ae40eb3cf4de488fdf73c964d43010777_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{plateau_8h_a28b3dfc2c5aa884facec4800e0acba03}\label{plateau_8h_a28b3dfc2c5aa884facec4800e0acba03}} 
+\mbox{\Hypertarget{plateau_8h_aa4cceb7af32a7a63e57cb3af2ec57613}\label{plateau_8h_aa4cceb7af32a7a63e57cb3af2ec57613}} 
 \index{plateau.h@{plateau.h}!retourne\_Laurent\_Prevel@{retourne\_Laurent\_Prevel}}
 \index{retourne\_Laurent\_Prevel@{retourne\_Laurent\_Prevel}!plateau.h@{plateau.h}}
 \doxysubsubsection{\texorpdfstring{retourne\_Laurent\_Prevel()}{retourne\_Laurent\_Prevel()}}
-{\footnotesize\ttfamily void retourne\+\_\+\+Laurent\+\_\+\+Prevel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void retourne\+\_\+\+Laurent\+\_\+\+Prevel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{struct_coord}{Coord}}}]{coord }\end{DoxyParamCaption})}
 
 
 
@@ -1395,23 +1534,34 @@ Active les effets de la carte Laurent Prével.
 \begin{DoxyParams}{Parameters}
 {\em p} & plateau valide (le pointeur doit être valide) \\
 \hline
+{\em coord} & les coordonnées de la carte en question sur le plateau \\
+\hline
 \end{DoxyParams}
 
 
-Definition at line 1093 of file plateau.\+c.
+Definition at line 1361 of file plateau.\+c.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_a28b3dfc2c5aa884facec4800e0acba03_icgraph}
+\includegraphics[width=350pt]{plateau_8h_aa4cceb7af32a7a63e57cb3af2ec57613_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{plateau_8h_a68f379c29f076c6ad7c92bd4a3f066bf}\label{plateau_8h_a68f379c29f076c6ad7c92bd4a3f066bf}} 
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{plateau_8h_aa4cceb7af32a7a63e57cb3af2ec57613_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{plateau_8h_a5eb5134fa91f5c2703f528db8e48909b}\label{plateau_8h_a5eb5134fa91f5c2703f528db8e48909b}} 
 \index{plateau.h@{plateau.h}!retourne\_lIIEns@{retourne\_lIIEns}}
 \index{retourne\_lIIEns@{retourne\_lIIEns}!plateau.h@{plateau.h}}
 \doxysubsubsection{\texorpdfstring{retourne\_lIIEns()}{retourne\_lIIEns()}}
-{\footnotesize\ttfamily void retourne\+\_\+l\+I\+I\+Ens (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void retourne\+\_\+l\+I\+I\+Ens (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{struct_coord}{Coord}}}]{coord }\end{DoxyParamCaption})}
 
 
 
@@ -1421,23 +1571,27 @@ Active les effets de la carte l\+I\+I\+Ens.
 \begin{DoxyParams}{Parameters}
 {\em p} & plateau valide (le pointeur doit être valide) \\
 \hline
+{\em coord} & les coordonnées de la carte en question sur le plateau \\
+\hline
 \end{DoxyParams}
 
 
-Definition at line 352 of file plateau.\+c.
+Definition at line 396 of file plateau.\+c.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=297pt]{plateau_8h_a68f379c29f076c6ad7c92bd4a3f066bf_cgraph}
+\includegraphics[width=328pt]{plateau_8h_a5eb5134fa91f5c2703f528db8e48909b_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_a68f379c29f076c6ad7c92bd4a3f066bf_icgraph}
+\includegraphics[width=350pt]{plateau_8h_a5eb5134fa91f5c2703f528db8e48909b_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{plateau_8h_a837f0190fe80102a519fc17820ac68c9}\label{plateau_8h_a837f0190fe80102a519fc17820ac68c9}} 
@@ -1458,32 +1612,34 @@ Active les effets de la carte Lucienne Pacavé
 \hline
 {\em score} & score de la faction f \\
 \hline
-{\em coord} & les coordonnées de la carte Lucienne Pacavé en question sur le plateau \\
+{\em coord} & les coordonnées de la carte en question sur le plateau \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line 1037 of file plateau.\+c.
+Definition at line 1294 of file plateau.\+c.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{plateau_8h_a837f0190fe80102a519fc17820ac68c9_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{plateau_8h_a837f0190fe80102a519fc17820ac68c9_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{plateau_8h_a0bcc10af128c117f13c64704d8217fd1}\label{plateau_8h_a0bcc10af128c117f13c64704d8217fd1}} 
+\mbox{\Hypertarget{plateau_8h_a289b461ee18614882e9e0e242c2193da}\label{plateau_8h_a289b461ee18614882e9e0e242c2193da}} 
 \index{plateau.h@{plateau.h}!retourne\_Massinissa\_Merabet@{retourne\_Massinissa\_Merabet}}
 \index{retourne\_Massinissa\_Merabet@{retourne\_Massinissa\_Merabet}!plateau.h@{plateau.h}}
 \doxysubsubsection{\texorpdfstring{retourne\_Massinissa\_Merabet()}{retourne\_Massinissa\_Merabet()}}
-{\footnotesize\ttfamily void retourne\+\_\+\+Massinissa\+\_\+\+Merabet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void retourne\+\_\+\+Massinissa\+\_\+\+Merabet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{\mbox{\hyperlink{struct_coord}{Coord}}}]{coord }\end{DoxyParamCaption})}
 
 
 
@@ -1495,30 +1651,34 @@ Active les effets de la carte Massinissa Merabet.
 \hline
 {\em f} & faction valide (le pointeur doit être valide), faction qui a déposé la carte \\
 \hline
+{\em coord} & les coordonnées de la carte en question sur le plateau \\
+\hline
 \end{DoxyParams}
 
 
-Definition at line 643 of file plateau.\+c.
+Definition at line 821 of file plateau.\+c.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=550pt]{plateau_8h_a0bcc10af128c117f13c64704d8217fd1_cgraph}
+\includegraphics[height=550pt]{plateau_8h_a289b461ee18614882e9e0e242c2193da_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_a0bcc10af128c117f13c64704d8217fd1_icgraph}
+\includegraphics[width=350pt]{plateau_8h_a289b461ee18614882e9e0e242c2193da_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{plateau_8h_a21ffcc285946c18ede8aa4b169d40c6d}\label{plateau_8h_a21ffcc285946c18ede8aa4b169d40c6d}} 
-\index{plateau.h@{plateau.h}!retourne\_Parcours\_sobriété\_numérique@{retourne\_Parcours\_sobriété\_numérique}}
-\index{retourne\_Parcours\_sobriété\_numérique@{retourne\_Parcours\_sobriété\_numérique}!plateau.h@{plateau.h}}
-\doxysubsubsection{\texorpdfstring{retourne\_Parcours\_sobriété\_numérique()}{retourne\_Parcours\_sobriété\_numérique()}}
-{\footnotesize\ttfamily void retourne\+\_\+\+Parcours\+\_\+sobriété\+\_\+numérique (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{int}]{score,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f\+\_\+adverse,  }\item[{int}]{score\+\_\+adverse }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{plateau_8h_a25800990500eafbbd30c7e237bebc989}\label{plateau_8h_a25800990500eafbbd30c7e237bebc989}} 
+\index{plateau.h@{plateau.h}!retourne\_Parcours\_sobriete\_numerique@{retourne\_Parcours\_sobriete\_numerique}}
+\index{retourne\_Parcours\_sobriete\_numerique@{retourne\_Parcours\_sobriete\_numerique}!plateau.h@{plateau.h}}
+\doxysubsubsection{\texorpdfstring{retourne\_Parcours\_sobriete\_numerique()}{retourne\_Parcours\_sobriete\_numerique()}}
+{\footnotesize\ttfamily void retourne\+\_\+\+Parcours\+\_\+sobriete\+\_\+numerique (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{int}]{score,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f\+\_\+adverse,  }\item[{int}]{score\+\_\+adverse,  }\item[{\mbox{\hyperlink{struct_coord}{Coord}}}]{coord }\end{DoxyParamCaption})}
 
 
 
@@ -1536,30 +1696,34 @@ Active les effets de la carte Parcours sobriété numérique.
 \hline
 {\em score\+\_\+adverse} & score de la faction f\+\_\+adverse \\
 \hline
+{\em coord} & les coordonnées de la carte en question sur le plateau \\
+\hline
 \end{DoxyParams}
 
 
-Definition at line 564 of file plateau.\+c.
+Definition at line 695 of file plateau.\+c.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_a21ffcc285946c18ede8aa4b169d40c6d_cgraph}
+\includegraphics[width=350pt]{plateau_8h_a25800990500eafbbd30c7e237bebc989_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_a21ffcc285946c18ede8aa4b169d40c6d_icgraph}
+\includegraphics[width=350pt]{plateau_8h_a25800990500eafbbd30c7e237bebc989_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{plateau_8h_a7a74f3149139d9ae554eec3b54570a70}\label{plateau_8h_a7a74f3149139d9ae554eec3b54570a70}} 
+\mbox{\Hypertarget{plateau_8h_a6a3aece8771d38a7231fe4792f828781}\label{plateau_8h_a6a3aece8771d38a7231fe4792f828781}} 
 \index{plateau.h@{plateau.h}!retourne\_Reprographie@{retourne\_Reprographie}}
 \index{retourne\_Reprographie@{retourne\_Reprographie}!plateau.h@{plateau.h}}
 \doxysubsubsection{\texorpdfstring{retourne\_Reprographie()}{retourne\_Reprographie()}}
-{\footnotesize\ttfamily void retourne\+\_\+\+Reprographie (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{int}]{score,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f\+\_\+adverse,  }\item[{int}]{score\+\_\+adverse }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void retourne\+\_\+\+Reprographie (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{int}]{score,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f\+\_\+adverse,  }\item[{int}]{score\+\_\+adverse,  }\item[{\mbox{\hyperlink{struct_coord}{Coord}}}]{coord }\end{DoxyParamCaption})}
 
 
 
@@ -1577,30 +1741,34 @@ Active les effets de la carte Reprographie.
 \hline
 {\em score\+\_\+adverse} & score de la faction f\+\_\+adverse \\
 \hline
+{\em coord} & les coordonnées de la carte en question sur le plateau \\
+\hline
 \end{DoxyParams}
 
 
-Definition at line 514 of file plateau.\+c.
+Definition at line 643 of file plateau.\+c.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_a7a74f3149139d9ae554eec3b54570a70_cgraph}
+\includegraphics[width=350pt]{plateau_8h_a6a3aece8771d38a7231fe4792f828781_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_a7a74f3149139d9ae554eec3b54570a70_icgraph}
+\includegraphics[width=350pt]{plateau_8h_a6a3aece8771d38a7231fe4792f828781_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{plateau_8h_a8392a83925caacfa2904dd2829dbc5a0}\label{plateau_8h_a8392a83925caacfa2904dd2829dbc5a0}} 
+\mbox{\Hypertarget{plateau_8h_a25711459a4937e78bf709717c5e451e5}\label{plateau_8h_a25711459a4937e78bf709717c5e451e5}} 
 \index{plateau.h@{plateau.h}!retourne\_Soiree\_sans\_alcool@{retourne\_Soiree\_sans\_alcool}}
 \index{retourne\_Soiree\_sans\_alcool@{retourne\_Soiree\_sans\_alcool}!plateau.h@{plateau.h}}
 \doxysubsubsection{\texorpdfstring{retourne\_Soiree\_sans\_alcool()}{retourne\_Soiree\_sans\_alcool()}}
-{\footnotesize\ttfamily void retourne\+\_\+\+Soiree\+\_\+sans\+\_\+alcool (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{int}]{score }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void retourne\+\_\+\+Soiree\+\_\+sans\+\_\+alcool (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{int}]{score,  }\item[{\mbox{\hyperlink{struct_coord}{Coord}}}]{coord }\end{DoxyParamCaption})}
 
 
 
@@ -1614,30 +1782,34 @@ Active les effets de la carte Soirée sans alcool.
 \hline
 {\em score} & score de la faction f \\
 \hline
+{\em coord} & les coordonnées de la carte en question sur le plateau \\
+\hline
 \end{DoxyParams}
 
 
-Definition at line 403 of file plateau.\+c.
+Definition at line 451 of file plateau.\+c.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_a8392a83925caacfa2904dd2829dbc5a0_cgraph}
+\includegraphics[width=350pt]{plateau_8h_a25711459a4937e78bf709717c5e451e5_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_a8392a83925caacfa2904dd2829dbc5a0_icgraph}
+\includegraphics[width=350pt]{plateau_8h_a25711459a4937e78bf709717c5e451e5_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{plateau_8h_af3fdce0ceedb96397929face2da6634a}\label{plateau_8h_af3fdce0ceedb96397929face2da6634a}} 
+\mbox{\Hypertarget{plateau_8h_aac76ddb6fb1f7345ba3ad5b8f51356d6}\label{plateau_8h_aac76ddb6fb1f7345ba3ad5b8f51356d6}} 
 \index{plateau.h@{plateau.h}!retourne\_The@{retourne\_The}}
 \index{retourne\_The@{retourne\_The}!plateau.h@{plateau.h}}
 \doxysubsubsection{\texorpdfstring{retourne\_The()}{retourne\_The()}}
-{\footnotesize\ttfamily void retourne\+\_\+\+The (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{int}]{score }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void retourne\+\_\+\+The (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{int}]{score,  }\item[{\mbox{\hyperlink{struct_coord}{Coord}}}]{coord }\end{DoxyParamCaption})}
 
 
 
@@ -1651,30 +1823,34 @@ Active les effets de la carte Thé
 \hline
 {\em score} & score de la faction f \\
 \hline
+{\em coord} & les coordonnées de la carte en question sur le plateau \\
+\hline
 \end{DoxyParams}
 
 
-Definition at line 480 of file plateau.\+c.
+Definition at line 606 of file plateau.\+c.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=326pt]{plateau_8h_af3fdce0ceedb96397929face2da6634a_cgraph}
+\includegraphics[width=326pt]{plateau_8h_aac76ddb6fb1f7345ba3ad5b8f51356d6_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_af3fdce0ceedb96397929face2da6634a_icgraph}
+\includegraphics[width=350pt]{plateau_8h_aac76ddb6fb1f7345ba3ad5b8f51356d6_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{plateau_8h_a72b3b0e7a6ca805db12f04e8fa9fd094}\label{plateau_8h_a72b3b0e7a6ca805db12f04e8fa9fd094}} 
+\mbox{\Hypertarget{plateau_8h_a1560d3c9cea0c5b2fb4d9617d5c1a0e6}\label{plateau_8h_a1560d3c9cea0c5b2fb4d9617d5c1a0e6}} 
 \index{plateau.h@{plateau.h}!retourne\_Thomas\_Lim@{retourne\_Thomas\_Lim}}
 \index{retourne\_Thomas\_Lim@{retourne\_Thomas\_Lim}!plateau.h@{plateau.h}}
 \doxysubsubsection{\texorpdfstring{retourne\_Thomas\_Lim()}{retourne\_Thomas\_Lim()}}
-{\footnotesize\ttfamily void retourne\+\_\+\+Thomas\+\_\+\+Lim (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{int}]{score,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f\+\_\+adverse,  }\item[{int}]{score\+\_\+adverse }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void retourne\+\_\+\+Thomas\+\_\+\+Lim (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{int}]{score,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f\+\_\+adverse,  }\item[{int}]{score\+\_\+adverse,  }\item[{\mbox{\hyperlink{struct_coord}{Coord}}}]{coord }\end{DoxyParamCaption})}
 
 
 
@@ -1692,30 +1868,34 @@ Active les effets de la carte Thomas Lim.
 \hline
 {\em score\+\_\+adverse} & score de la faction f\+\_\+adverse \\
 \hline
+{\em coord} & les coordonnées de la carte en question sur le plateau \\
+\hline
 \end{DoxyParams}
 
 
-Definition at line 813 of file plateau.\+c.
+Definition at line 1071 of file plateau.\+c.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_a72b3b0e7a6ca805db12f04e8fa9fd094_cgraph}
+\includegraphics[width=350pt]{plateau_8h_a1560d3c9cea0c5b2fb4d9617d5c1a0e6_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_a72b3b0e7a6ca805db12f04e8fa9fd094_icgraph}
+\includegraphics[width=350pt]{plateau_8h_a1560d3c9cea0c5b2fb4d9617d5c1a0e6_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{plateau_8h_ae45f3b23264ebebeaa908e7def31dc88}\label{plateau_8h_ae45f3b23264ebebeaa908e7def31dc88}} 
+\mbox{\Hypertarget{plateau_8h_ac781c98f512d7a671fa2f4b84be56cf2}\label{plateau_8h_ac781c98f512d7a671fa2f4b84be56cf2}} 
 \index{plateau.h@{plateau.h}!retourne\_Vitera\_Y@{retourne\_Vitera\_Y}}
 \index{retourne\_Vitera\_Y@{retourne\_Vitera\_Y}!plateau.h@{plateau.h}}
 \doxysubsubsection{\texorpdfstring{retourne\_Vitera\_Y()}{retourne\_Vitera\_Y()}}
-{\footnotesize\ttfamily void retourne\+\_\+\+Vitera\+\_\+Y (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{int}]{score,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f\+\_\+adverse,  }\item[{int}]{score\+\_\+adverse }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void retourne\+\_\+\+Vitera\+\_\+Y (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f,  }\item[{int}]{score,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f\+\_\+adverse,  }\item[{int}]{score\+\_\+adverse,  }\item[{\mbox{\hyperlink{struct_coord}{Coord}}}]{coord }\end{DoxyParamCaption})}
 
 
 
@@ -1733,23 +1913,27 @@ Active les effets de la carte Vitéra Y.
 \hline
 {\em score\+\_\+adverse} & score de la faction f\+\_\+adverse \\
 \hline
+{\em coord} & les coordonnées de la carte en question sur le plateau \\
+\hline
 \end{DoxyParams}
 
 
-Definition at line 660 of file plateau.\+c.
+Definition at line 851 of file plateau.\+c.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=349pt]{plateau_8h_ae45f3b23264ebebeaa908e7def31dc88_cgraph}
+\includegraphics[width=349pt]{plateau_8h_ac781c98f512d7a671fa2f4b84be56cf2_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_ae45f3b23264ebebeaa908e7def31dc88_icgraph}
+\includegraphics[width=350pt]{plateau_8h_ac781c98f512d7a671fa2f4b84be56cf2_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{plateau_8h_a41cddf8d1f1e457df2f4c905d6605151}\label{plateau_8h_a41cddf8d1f1e457df2f4c905d6605151}} 
@@ -1774,9 +1958,10 @@ N\+U\+LL s\textquotesingle{}il n\textquotesingle{}y a plus aucune carte à retou
 \end{DoxyReturn}
 
 
-Definition at line 1268 of file plateau.\+c.
+Definition at line 1535 of file plateau.\+c.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1819,16 +2004,18 @@ Active les effets de la carte d\textquotesingle{}identifiant id.
 \end{DoxyParams}
 
 
-Definition at line 1099 of file plateau.\+c.
+Definition at line 1366 of file plateau.\+c.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{plateau_8h_a676ed33ed1ff7fd3200efd68462f61e0_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1846,5 +2033,5 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Definition at line 17 of file plateau.\+h.
+Definition at line 18 of file plateau.\+h.
 

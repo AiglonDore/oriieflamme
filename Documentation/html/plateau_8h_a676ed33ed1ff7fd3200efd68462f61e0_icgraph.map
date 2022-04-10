@@ -1,6 +1,6 @@
 <map id="switch_carte" name="switch_carte">
 <area shape="rect" id="node1" title="Active les effets de la carte d&#39;identifiant id." alt="" coords="1068,42,1172,69"/>
-<area shape="rect" id="node2" href="$plateau_8c.html#a0bcc10af128c117f13c64704d8217fd1" title="Active les effets de la carte Massinissa Merabet." alt="" coords="864,5,1020,47"/>
+<area shape="rect" id="node2" href="$plateau_8c.html#a289b461ee18614882e9e0e242c2193da" title="Active les effets de la carte Massinissa Merabet." alt="" coords="864,5,1020,47"/>
 <area shape="rect" id="node4" href="$plateau_8c.html#a41cddf8d1f1e457df2f4c905d6605151" title="retourne la carte la plus en haut à gauche du plateau face visible et active son effet" alt="" coords="541,42,664,69"/>
 <area shape="rect" id="node3" href="$plateau_8c.html#a676ed33ed1ff7fd3200efd68462f61e0" title="Active les effets de la carte d&#39;identifiant id." alt="" coords="712,13,816,39"/>
 <area shape="rect" id="node5" href="$main_8c.html#a34ccc9f1e0da464163a6f5e297c42563" title="Fonction qui contrôle la phase 2." alt="" coords="424,42,493,69"/>

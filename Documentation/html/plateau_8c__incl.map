@@ -1,9 +1,9 @@
 <map id="src/plateau.c" name="src/plateau.c">
-<area shape="rect" id="node1" title="Implémentation de l&#39;interface pour gérer le plateau de jeu et le déroulement de la partie." alt="" coords="233,5,339,32"/>
+<area shape="rect" id="node1" title="Implémentation de l&#39;interface pour gérer le plateau de jeu et le déroulement de la partie." alt="" coords="152,5,257,32"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,80,76,107"/>
-<area shape="rect" id="node3" href="$plateau_8h.html" title="Interface pour gérer le plateau de jeu et le déroulement de la partie." alt="" coords="152,155,303,181"/>
-<area shape="rect" id="node4" href="$carte_8h.html" title="Interface Carte : interface en charge des informations des cartes jeu." alt="" coords="267,229,334,256"/>
-<area shape="rect" id="node5" href="$faction_8h.html" title="Interface faction : interface en charge des informations et des manipulations propre d&#39;une faction." alt="" coords="392,229,471,256"/>
-<area shape="rect" id="node6" href="$structure_8h.html" title="Interface pour gérer le plateau de jeu et le déroulement de la partie." alt="" coords="429,155,589,181"/>
-<area shape="rect" id="node7" href="$interface_8h.html" title="Interface entre le plateau de jeu et le joueur." alt="" coords="265,80,425,107"/>
+<area shape="rect" id="node3" href="$plateau_8h.html" title="Interface pour gérer le plateau de jeu et le déroulement de la partie." alt="" coords="203,155,353,181"/>
+<area shape="rect" id="node4" href="$carte_8h.html" title="Interface Carte : interface en charge des informations des cartes jeu." alt="" coords="398,229,465,256"/>
+<area shape="rect" id="node5" href="$faction_8h.html" title="Interface faction : interface en charge des informations et des manipulations propre d&#39;une faction." alt="" coords="305,304,384,331"/>
+<area shape="rect" id="node6" href="$structure_8h.html" title="Interface pour gérer le plateau de jeu et le déroulement de la partie." alt="" coords="299,379,391,405"/>
+<area shape="rect" id="node7" href="$interface_8h.html" title="Interface entre le plateau de jeu et le joueur." alt="" coords="311,80,471,107"/>
 </map>
