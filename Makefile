@@ -1,5 +1,6 @@
 CC=gcc
 FLAGS=-std=c99 -Wall -Wextra
+FLAGS_RELEASE=-s -O2
 
 
 all : oriieflamme.out
