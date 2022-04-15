@@ -15,9 +15,9 @@
 #include "structure.h"
 
 /**
- * @brief Fonction qui affiche le plateau de jeu
- * @param p plateau de jeu (pointeur devant être valide)
- * @return rien
+ * @brief Fonction qui demande le nom de la faction
+ * @param f Faction en question
+ * @return Nom de la faction
  */
 char * nom_faction(Faction f);
 

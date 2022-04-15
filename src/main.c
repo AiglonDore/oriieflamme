@@ -7,6 +7,7 @@
  */
 
 #include <stdlib.h>
+#include <unistd.h>
 
 #include "../headers/interface.h"
 #include "../headers/carte.h"
@@ -63,6 +64,7 @@ void phase2(Plateau p)
     {
         affiche_effets(carte_retournee);
         affiche_plateau(p);
+        sleep(1000);
     }
 }
 
