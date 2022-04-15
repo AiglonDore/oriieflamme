@@ -77,7 +77,8 @@ $(function() {
 
 <p>Implantation de l'interface en charge des informations des cartes du jeu.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="carte_8h_source.html">../headers/carte.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="carte_8h_source.html">../headers/carte.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="faction_8h_source.html">../headers/faction.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="structure_8h_source.html">../headers/structure.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -85,10 +86,11 @@ Include dependency graph for carte.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="carte_8c__incl.png" border="0" usemap="#src_2carte_8c" alt=""/></div>
 <map name="src_2carte_8c" id="src_2carte_8c">
-<area shape="rect" title="Implantation de l&#39;interface en charge des informations des cartes du jeu." alt="" coords="51,5,140,32"/>
-<area shape="rect" href="carte_8h.html" title="Interface Carte : interface en charge des informations des cartes jeu." alt="" coords="28,80,163,107"/>
-<area shape="rect" href="faction_8h.html" title="Interface faction : interface en charge des informations et des manipulations propre d&#39;une faction." alt="" coords="5,155,84,181"/>
-<area shape="rect" href="structure_8h.html" title="Interface pour gérer le plateau de jeu et le déroulement de la partie." alt="" coords="37,229,129,256"/>
+<area shape="rect" title="Implantation de l&#39;interface en charge des informations des cartes du jeu." alt="" coords="121,5,211,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,76,107"/>
+<area shape="rect" href="carte_8h.html" title="Interface Carte : interface en charge des informations des cartes jeu." alt="" coords="152,80,287,107"/>
+<area shape="rect" href="faction_8h.html" title="Interface faction : interface en charge des informations et des manipulations propre d&#39;une faction." alt="" coords="129,155,208,181"/>
+<area shape="rect" href="structure_8h.html" title="Interface pour gérer le plateau de jeu et le déroulement de la partie." alt="" coords="161,229,253,256"/>
 </map>
 </div>
 </div>
@@ -102,6 +104,9 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:add213f610b61b0471f517034edebed44"><td class="memItemLeft" align="right" valign="top"><a class="el" href="carte_8h.html#a633ba64ee908d35aac798844f477ee9d">Carte</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="carte_8c.html#add213f610b61b0471f517034edebed44">creation_carte</a> ()</td></tr>
+<tr class="memdesc:add213f610b61b0471f517034edebed44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prototype de creation_carte qui permet d'initialiser une carte.  <a href="carte_8c.html#add213f610b61b0471f517034edebed44">More...</a><br /></td></tr>
+<tr class="separator:add213f610b61b0471f517034edebed44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07d5b163a3e848772039f8f2e99db83e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="carte_8h.html#aaf595c0642ba2db854c179bb92387300">id_carte</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="carte_8c.html#a07d5b163a3e848772039f8f2e99db83e">get_id</a> (<a class="el" href="carte_8h.html#a633ba64ee908d35aac798844f477ee9d">Carte</a> c)</td></tr>
 <tr class="memdesc:a07d5b163a3e848772039f8f2e99db83e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prototype de get_id qui permet de récupérer l'id de la carte.  <a href="carte_8c.html#a07d5b163a3e848772039f8f2e99db83e">More...</a><br /></td></tr>
 <tr class="separator:a07d5b163a3e848772039f8f2e99db83e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,6 +152,41 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition in file <a class="el" href="carte_8c_source.html">carte.c</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="add213f610b61b0471f517034edebed44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add213f610b61b0471f517034edebed44">&#9670;&nbsp;</a></span>creation_carte()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="carte_8h.html#a633ba64ee908d35aac798844f477ee9d">Carte</a> creation_carte </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Prototype de creation_carte qui permet d'initialiser une carte. </p>
+<dl class="section return"><dt>Returns</dt><dd>Carte </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="carte_8c_source.html#l00032">32</a> of file <a class="el" href="carte_8c_source.html">carte.c</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="carte_8c_add213f610b61b0471f517034edebed44_icgraph.png" border="0" usemap="#carte_8c_add213f610b61b0471f517034edebed44_icgraph" alt=""/></div>
+<map name="carte_8c_add213f610b61b0471f517034edebed44_icgraph" id="carte_8c_add213f610b61b0471f517034edebed44_icgraph">
+<area shape="rect" title="Prototype de creation_carte qui permet d&#39;initialiser une carte." alt="" coords="728,77,843,104"/>
+<area shape="rect" href="plateau_8c.html#a2190bbe0984d78c5f3d5f2e646210f07" title="Crée la pioche avec les 32 cartes de l&#39;énoncé pour la faction donnée." alt="" coords="587,77,680,104"/>
+<area shape="rect" href="plateau_8c.html#aa2fd2fef89b903a5c089bf57cb932e29" title="Libère la mémoire associée au plateau de jeu et aux deux factions." alt="" coords="424,21,539,48"/>
+<area shape="rect" href="plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,21,143,48"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="321,5,376,32"/>
+<area shape="rect" href="faction_8c.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="191,52,273,79"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a99d2f8528669eb8a99312bb74a2a27bb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a99d2f8528669eb8a99312bb74a2a27bb">&#9670;&nbsp;</a></span>get_description()</h2>
 
@@ -172,7 +212,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>char* </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="carte_8c_source.html#l00065">65</a> of file <a class="el" href="carte_8c_source.html">carte.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="carte_8c_source.html#l00071">71</a> of file <a class="el" href="carte_8c_source.html">carte.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -214,7 +254,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="carte_8c_source.html#l00085">85</a> of file <a class="el" href="carte_8c_source.html">carte.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="carte_8c_source.html#l00091">91</a> of file <a class="el" href="carte_8c_source.html">carte.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -282,7 +322,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>id_carte </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="carte_8c_source.html#l00035">35</a> of file <a class="el" href="carte_8c_source.html">carte.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="carte_8c_source.html#l00041">41</a> of file <a class="el" href="carte_8c_source.html">carte.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -344,7 +384,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="carte_8c_source.html#l00075">75</a> of file <a class="el" href="carte_8c_source.html">carte.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="carte_8c_source.html#l00081">81</a> of file <a class="el" href="carte_8c_source.html">carte.c</a>.</p>
 
 </div>
 </div>
@@ -373,7 +413,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>char* </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="carte_8c_source.html#l00055">55</a> of file <a class="el" href="carte_8c_source.html">carte.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="carte_8c_source.html#l00061">61</a> of file <a class="el" href="carte_8c_source.html">carte.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -415,7 +455,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Faction </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="carte_8c_source.html#l00045">45</a> of file <a class="el" href="carte_8c_source.html">carte.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="carte_8c_source.html#l00051">51</a> of file <a class="el" href="carte_8c_source.html">carte.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -470,17 +510,18 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="carte_8c_source.html#l00070">70</a> of file <a class="el" href="carte_8c_source.html">carte.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="carte_8c_source.html#l00076">76</a> of file <a class="el" href="carte_8c_source.html">carte.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="carte_8c_a30fc91d4dd38a6b29c6eb86681238a70_icgraph.png" border="0" usemap="#carte_8c_a30fc91d4dd38a6b29c6eb86681238a70_icgraph" alt=""/></div>
 <map name="carte_8c_a30fc91d4dd38a6b29c6eb86681238a70_icgraph" id="carte_8c_a30fc91d4dd38a6b29c6eb86681238a70_icgraph">
-<area shape="rect" title="Prototype de set_description qui permet d&#39;initialiser la description de la carte." alt="" coords="565,5,687,32"/>
-<area shape="rect" href="plateau_8c.html#a2190bbe0984d78c5f3d5f2e646210f07" title="Crée la pioche avec les 32 cartes de l&#39;énoncé pour la faction donnée." alt="" coords="424,5,517,32"/>
-<area shape="rect" href="plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="239,5,376,32"/>
-<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="136,5,191,32"/>
-<area shape="rect" href="faction_8c.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="5,31,88,57"/>
+<area shape="rect" title="Prototype de set_description qui permet d&#39;initialiser la description de la carte." alt="" coords="728,77,849,104"/>
+<area shape="rect" href="plateau_8c.html#a2190bbe0984d78c5f3d5f2e646210f07" title="Crée la pioche avec les 32 cartes de l&#39;énoncé pour la faction donnée." alt="" coords="587,77,680,104"/>
+<area shape="rect" href="plateau_8c.html#aa2fd2fef89b903a5c089bf57cb932e29" title="Libère la mémoire associée au plateau de jeu et aux deux factions." alt="" coords="424,21,539,48"/>
+<area shape="rect" href="plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,21,143,48"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="321,5,376,32"/>
+<area shape="rect" href="faction_8c.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="191,52,273,79"/>
 </map>
 </div>
 
@@ -521,24 +562,25 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="carte_8c_source.html#l00090">90</a> of file <a class="el" href="carte_8c_source.html">carte.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="carte_8c_source.html#l00096">96</a> of file <a class="el" href="carte_8c_source.html">carte.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="carte_8c_ab60bacf04b3f4a170b341b48c38e4144_icgraph.png" border="0" usemap="#carte_8c_ab60bacf04b3f4a170b341b48c38e4144_icgraph" alt=""/></div>
 <map name="carte_8c_ab60bacf04b3f4a170b341b48c38e4144_icgraph" id="carte_8c_ab60bacf04b3f4a170b341b48c38e4144_icgraph">
-<area shape="rect" title="Prototype de set_est_cachee qui permet de changer la valeur associé à la face d&#39;une carte: 0 Face non..." alt="" coords="1027,96,1149,123"/>
-<area shape="rect" href="plateau_8c.html#a2190bbe0984d78c5f3d5f2e646210f07" title="Crée la pioche avec les 32 cartes de l&#39;énoncé pour la faction donnée." alt="" coords="633,5,727,32"/>
-<area shape="rect" href="plateau_8c.html#a8706936e604ef0fd87424d3609c8dcad" title="Active les effets de la carte Katrin Salhab." alt="" coords="792,45,967,72"/>
-<area shape="rect" href="plateau_8c.html#a41cddf8d1f1e457df2f4c905d6605151" title="retourne la carte la plus en haut à gauche du plateau face visible et active son effet" alt="" coords="441,155,563,181"/>
-<area shape="rect" href="plateau_8c.html#a5eb5134fa91f5c2703f528db8e48909b" title="Active les effets de la carte lIIEns." alt="" coords="820,96,939,123"/>
-<area shape="rect" href="plateau_8c.html#a25800990500eafbbd30c7e237bebc989" title="Active les effets de la carte Parcours sobriété numérique." alt="" coords="780,147,979,189"/>
-<area shape="rect" href="plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="239,59,376,85"/>
-<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="136,96,191,123"/>
-<area shape="rect" href="faction_8c.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="5,71,88,97"/>
-<area shape="rect" href="plateau_8c.html#a676ed33ed1ff7fd3200efd68462f61e0" title="Active les effets de la carte d&#39;identifiant id." alt="" coords="628,96,732,123"/>
-<area shape="rect" href="plateau_8c.html#a289b461ee18614882e9e0e242c2193da" title="Active les effets de la carte Massinissa Merabet." alt="" coords="424,89,580,130"/>
-<area shape="rect" href="main_8c.html#a34ccc9f1e0da464163a6f5e297c42563" title="Fonction qui contrôle la phase 2." alt="" coords="273,121,342,148"/>
+<area shape="rect" title="Prototype de set_est_cachee qui permet de changer la valeur associé à la face d&#39;une carte: 0 Face non..." alt="" coords="1189,98,1312,125"/>
+<area shape="rect" href="plateau_8c.html#a2190bbe0984d78c5f3d5f2e646210f07" title="Crée la pioche avec les 32 cartes de l&#39;énoncé pour la faction donnée." alt="" coords="618,18,711,45"/>
+<area shape="rect" href="plateau_8c.html#a8706936e604ef0fd87424d3609c8dcad" title="Active les effets de la carte Katrin Salhab." alt="" coords="955,47,1129,74"/>
+<area shape="rect" href="plateau_8c.html#a41cddf8d1f1e457df2f4c905d6605151" title="retourne la carte la plus en haut à gauche du plateau face visible et active son effet" alt="" coords="603,157,726,183"/>
+<area shape="rect" href="plateau_8c.html#a5eb5134fa91f5c2703f528db8e48909b" title="Active les effets de la carte lIIEns." alt="" coords="983,98,1101,125"/>
+<area shape="rect" href="plateau_8c.html#a25800990500eafbbd30c7e237bebc989" title="Active les effets de la carte Parcours sobriété numérique." alt="" coords="943,149,1141,191"/>
+<area shape="rect" href="plateau_8c.html#aa2fd2fef89b903a5c089bf57cb932e29" title="Libère la mémoire associée au plateau de jeu et aux deux factions." alt="" coords="424,73,539,99"/>
+<area shape="rect" href="plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,81,143,107"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="321,81,376,107"/>
+<area shape="rect" href="faction_8c.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="191,143,273,170"/>
+<area shape="rect" href="plateau_8c.html#a676ed33ed1ff7fd3200efd68462f61e0" title="Active les effets de la carte d&#39;identifiant id." alt="" coords="791,98,895,125"/>
+<area shape="rect" href="plateau_8c.html#a289b461ee18614882e9e0e242c2193da" title="Active les effets de la carte Massinissa Merabet." alt="" coords="587,91,743,132"/>
+<area shape="rect" href="main_8c.html#a34ccc9f1e0da464163a6f5e297c42563" title="Fonction qui contrôle la phase 2." alt="" coords="447,131,516,158"/>
 </map>
 </div>
 
@@ -579,17 +621,18 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="carte_8c_source.html#l00040">40</a> of file <a class="el" href="carte_8c_source.html">carte.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="carte_8c_source.html#l00046">46</a> of file <a class="el" href="carte_8c_source.html">carte.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="carte_8c_aa47c30f1bd901b6511effcda2372029c_icgraph.png" border="0" usemap="#carte_8c_aa47c30f1bd901b6511effcda2372029c_icgraph" alt=""/></div>
 <map name="carte_8c_aa47c30f1bd901b6511effcda2372029c_icgraph" id="carte_8c_aa47c30f1bd901b6511effcda2372029c_icgraph">
-<area shape="rect" title="Prototype de set_id qui permet d&#39;initialiser l&#39;id de la carte." alt="" coords="565,5,627,32"/>
-<area shape="rect" href="plateau_8c.html#a2190bbe0984d78c5f3d5f2e646210f07" title="Crée la pioche avec les 32 cartes de l&#39;énoncé pour la faction donnée." alt="" coords="424,5,517,32"/>
-<area shape="rect" href="plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="239,5,376,32"/>
-<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="136,5,191,32"/>
-<area shape="rect" href="faction_8c.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="5,31,88,57"/>
+<area shape="rect" title="Prototype de set_id qui permet d&#39;initialiser l&#39;id de la carte." alt="" coords="728,77,789,104"/>
+<area shape="rect" href="plateau_8c.html#a2190bbe0984d78c5f3d5f2e646210f07" title="Crée la pioche avec les 32 cartes de l&#39;énoncé pour la faction donnée." alt="" coords="587,77,680,104"/>
+<area shape="rect" href="plateau_8c.html#aa2fd2fef89b903a5c089bf57cb932e29" title="Libère la mémoire associée au plateau de jeu et aux deux factions." alt="" coords="424,21,539,48"/>
+<area shape="rect" href="plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,21,143,48"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="321,5,376,32"/>
+<area shape="rect" href="faction_8c.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="191,52,273,79"/>
 </map>
 </div>
 
@@ -621,17 +664,18 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="carte_8c_source.html#l00080">80</a> of file <a class="el" href="carte_8c_source.html">carte.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="carte_8c_source.html#l00086">86</a> of file <a class="el" href="carte_8c_source.html">carte.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="carte_8c_ab49c570d782fe28d0639c144a68fc311_icgraph.png" border="0" usemap="#carte_8c_ab49c570d782fe28d0639c144a68fc311_icgraph" alt=""/></div>
 <map name="carte_8c_ab49c570d782fe28d0639c144a68fc311_icgraph" id="carte_8c_ab49c570d782fe28d0639c144a68fc311_icgraph">
-<area shape="rect" title=" " alt="" coords="565,5,660,32"/>
-<area shape="rect" href="plateau_8c.html#a2190bbe0984d78c5f3d5f2e646210f07" title="Crée la pioche avec les 32 cartes de l&#39;énoncé pour la faction donnée." alt="" coords="424,5,517,32"/>
-<area shape="rect" href="plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="239,5,376,32"/>
-<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="136,5,191,32"/>
-<area shape="rect" href="faction_8c.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="5,31,88,57"/>
+<area shape="rect" title=" " alt="" coords="728,77,823,104"/>
+<area shape="rect" href="plateau_8c.html#a2190bbe0984d78c5f3d5f2e646210f07" title="Crée la pioche avec les 32 cartes de l&#39;énoncé pour la faction donnée." alt="" coords="587,77,680,104"/>
+<area shape="rect" href="plateau_8c.html#aa2fd2fef89b903a5c089bf57cb932e29" title="Libère la mémoire associée au plateau de jeu et aux deux factions." alt="" coords="424,21,539,48"/>
+<area shape="rect" href="plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,21,143,48"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="321,5,376,32"/>
+<area shape="rect" href="faction_8c.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="191,52,273,79"/>
 </map>
 </div>
 
@@ -672,7 +716,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="carte_8c_source.html#l00060">60</a> of file <a class="el" href="carte_8c_source.html">carte.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="carte_8c_source.html#l00066">66</a> of file <a class="el" href="carte_8c_source.html">carte.c</a>.</p>
 
 </div>
 </div>
@@ -711,21 +755,22 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="carte_8c_source.html#l00050">50</a> of file <a class="el" href="carte_8c_source.html">carte.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="carte_8c_source.html#l00056">56</a> of file <a class="el" href="carte_8c_source.html">carte.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="carte_8c_a5c6c6b9982006477c63fabac74db4649_icgraph.png" border="0" usemap="#carte_8c_a5c6c6b9982006477c63fabac74db4649_icgraph" alt=""/></div>
 <map name="carte_8c_a5c6c6b9982006477c63fabac74db4649_icgraph" id="carte_8c_a5c6c6b9982006477c63fabac74db4649_icgraph">
-<area shape="rect" title="Prototype de set_proprietaire qui permet d&#39;initialiser la fonction qui possède la carte." alt="" coords="951,35,1076,61"/>
-<area shape="rect" href="plateau_8c.html#a2190bbe0984d78c5f3d5f2e646210f07" title="Crée la pioche avec les 32 cartes de l&#39;énoncé pour la faction donnée." alt="" coords="778,5,871,32"/>
-<area shape="rect" href="plateau_8c.html#a289b461ee18614882e9e0e242c2193da" title="Active les effets de la carte Massinissa Merabet." alt="" coords="747,57,903,98"/>
-<area shape="rect" href="plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="239,9,376,36"/>
-<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="136,35,191,61"/>
-<area shape="rect" href="faction_8c.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="5,9,88,36"/>
-<area shape="rect" href="plateau_8c.html#a676ed33ed1ff7fd3200efd68462f61e0" title="Active les effets de la carte d&#39;identifiant id." alt="" coords="595,64,699,91"/>
-<area shape="rect" href="plateau_8c.html#a41cddf8d1f1e457df2f4c905d6605151" title="retourne la carte la plus en haut à gauche du plateau face visible et active son effet" alt="" coords="424,60,547,87"/>
-<area shape="rect" href="main_8c.html#a34ccc9f1e0da464163a6f5e297c42563" title="Fonction qui contrôle la phase 2." alt="" coords="273,60,342,87"/>
+<area shape="rect" title="Prototype de set_proprietaire qui permet d&#39;initialiser la fonction qui possède la carte." alt="" coords="1113,41,1239,67"/>
+<area shape="rect" href="plateau_8c.html#a2190bbe0984d78c5f3d5f2e646210f07" title="Crée la pioche avec les 32 cartes de l&#39;énoncé pour la faction donnée." alt="" coords="601,11,695,38"/>
+<area shape="rect" href="plateau_8c.html#a289b461ee18614882e9e0e242c2193da" title="Active les effets de la carte Massinissa Merabet." alt="" coords="909,63,1065,104"/>
+<area shape="rect" href="plateau_8c.html#aa2fd2fef89b903a5c089bf57cb932e29" title="Libère la mémoire associée au plateau de jeu et aux deux factions." alt="" coords="424,19,539,46"/>
+<area shape="rect" href="plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,31,143,58"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="321,31,376,58"/>
+<area shape="rect" href="faction_8c.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="191,94,273,121"/>
+<area shape="rect" href="plateau_8c.html#a676ed33ed1ff7fd3200efd68462f61e0" title="Active les effets de la carte d&#39;identifiant id." alt="" coords="757,70,861,97"/>
+<area shape="rect" href="plateau_8c.html#a41cddf8d1f1e457df2f4c905d6605151" title="retourne la carte la plus en haut à gauche du plateau face visible et active son effet" alt="" coords="587,70,709,97"/>
+<area shape="rect" href="main_8c.html#a34ccc9f1e0da464163a6f5e297c42563" title="Fonction qui contrôle la phase 2." alt="" coords="447,70,516,97"/>
 </map>
 </div>
 

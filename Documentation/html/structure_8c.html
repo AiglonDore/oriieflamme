@@ -77,7 +77,8 @@ $(function() {
 
 <p>Implémentation de l'interface pour gérer le plateau de jeu et le déroulement de la partie.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="carte_8h_source.html">../headers/carte.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="carte_8h_source.html">../headers/carte.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="faction_8h_source.html">../headers/faction.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="structure_8h_source.html">../headers/structure.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -85,10 +86,11 @@ Include dependency graph for structure.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="structure_8c__incl.png" border="0" usemap="#src_2structure_8c" alt=""/></div>
 <map name="src_2structure_8c" id="src_2structure_8c">
-<area shape="rect" title="Implémentation de l&#39;interface pour gérer le plateau de jeu et le déroulement de la partie." alt="" coords="38,5,153,32"/>
-<area shape="rect" href="carte_8h.html" title="Interface Carte : interface en charge des informations des cartes jeu." alt="" coords="28,80,163,107"/>
-<area shape="rect" href="faction_8h.html" title="Interface faction : interface en charge des informations et des manipulations propre d&#39;une faction." alt="" coords="5,155,84,181"/>
-<area shape="rect" href="structure_8h.html" title="Interface pour gérer le plateau de jeu et le déroulement de la partie." alt="" coords="37,229,129,256"/>
+<area shape="rect" title="Implémentation de l&#39;interface pour gérer le plateau de jeu et le déroulement de la partie." alt="" coords="109,5,223,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,76,107"/>
+<area shape="rect" href="carte_8h.html" title="Interface Carte : interface en charge des informations des cartes jeu." alt="" coords="152,80,287,107"/>
+<area shape="rect" href="faction_8h.html" title="Interface faction : interface en charge des informations et des manipulations propre d&#39;une faction." alt="" coords="129,155,208,181"/>
+<area shape="rect" href="structure_8h.html" title="Interface pour gérer le plateau de jeu et le déroulement de la partie." alt="" coords="161,229,253,256"/>
 </map>
 </div>
 </div>
@@ -159,21 +161,22 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="structure_8c_source.html#l00039">39</a> of file <a class="el" href="structure_8c_source.html">structure.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="structure_8c_source.html#l00040">40</a> of file <a class="el" href="structure_8c_source.html">structure.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="structure_8c_ac8dcdc0ffb092b739d94573e47eaaacf_icgraph.png" border="0" usemap="#structure_8c_ac8dcdc0ffb092b739d94573e47eaaacf_icgraph" alt=""/></div>
 <map name="structure_8c_ac8dcdc0ffb092b739d94573e47eaaacf_icgraph" id="structure_8c_ac8dcdc0ffb092b739d94573e47eaaacf_icgraph">
-<area shape="rect" title="ajoute la carte à la pioche au sommet de celle&#45;ci" alt="" coords="739,56,844,83"/>
-<area shape="rect" href="plateau_8c.html#a2190bbe0984d78c5f3d5f2e646210f07" title="Crée la pioche avec les 32 cartes de l&#39;énoncé pour la faction donnée." alt="" coords="577,5,670,32"/>
-<area shape="rect" href="faction_8c.html#adf3497e77c11921394ac7ca7d2e6cbdb" title="Permet à une faction de mélanger sa pioche." alt="" coords="556,107,691,133"/>
-<area shape="rect" href="faction_8c.html#aa3b0b517bf0cba1c7d52fb4ca770fcdb" title="Permet à une faction de vider sa main." alt="" coords="565,56,682,83"/>
-<area shape="rect" href="plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="239,5,376,32"/>
-<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="136,31,191,57"/>
-<area shape="rect" href="faction_8c.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="5,5,88,32"/>
-<area shape="rect" href="faction_8c.html#abc7feb29ed864c76ea95e1afc3cc7752" title="Permet à une faction de vider sa main, mélanger sa pioche et repiocher ses cartes." alt="" coords="424,56,508,83"/>
-<area shape="rect" href="main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="273,56,342,83"/>
+<area shape="rect" title="ajoute la carte à la pioche au sommet de celle&#45;ci" alt="" coords="911,56,1016,83"/>
+<area shape="rect" href="plateau_8c.html#a2190bbe0984d78c5f3d5f2e646210f07" title="Crée la pioche avec les 32 cartes de l&#39;énoncé pour la faction donnée." alt="" coords="587,5,680,32"/>
+<area shape="rect" href="faction_8c.html#adf3497e77c11921394ac7ca7d2e6cbdb" title="Permet à une faction de mélanger sa pioche." alt="" coords="728,107,863,133"/>
+<area shape="rect" href="faction_8c.html#aa3b0b517bf0cba1c7d52fb4ca770fcdb" title="Permet à une faction de vider sa main." alt="" coords="737,56,854,83"/>
+<area shape="rect" href="plateau_8c.html#aa2fd2fef89b903a5c089bf57cb932e29" title="Libère la mémoire associée au plateau de jeu et aux deux factions." alt="" coords="424,31,539,57"/>
+<area shape="rect" href="plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,43,143,69"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="321,43,376,69"/>
+<area shape="rect" href="faction_8c.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="191,105,273,132"/>
+<area shape="rect" href="faction_8c.html#abc7feb29ed864c76ea95e1afc3cc7752" title="Permet à une faction de vider sa main, mélanger sa pioche et repiocher ses cartes." alt="" coords="591,56,675,83"/>
+<area shape="rect" href="main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="447,81,516,108"/>
 </map>
 </div>
 
@@ -205,7 +208,20 @@ Here is the caller graph for this function:</div>
 <dd>
 1 si la main a été remélangé </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="structure_8c_source.html#l00027">27</a> of file <a class="el" href="structure_8c_source.html">structure.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="structure_8c_source.html#l00028">28</a> of file <a class="el" href="structure_8c_source.html">structure.c</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="structure_8c_ad911b5ece54d506c7109120dbfc9c2f0_icgraph.png" border="0" usemap="#structure_8c_ad911b5ece54d506c7109120dbfc9c2f0_icgraph" alt=""/></div>
+<map name="structure_8c_ad911b5ece54d506c7109120dbfc9c2f0_icgraph" id="structure_8c_ad911b5ece54d506c7109120dbfc9c2f0_icgraph">
+<area shape="rect" title="Savoir si une faction a itilisé l&#39;option de remélanger sa main et boîte à idée et de repiocher des ca..." alt="" coords="728,77,888,104"/>
+<area shape="rect" href="plateau_8c.html#a2190bbe0984d78c5f3d5f2e646210f07" title="Crée la pioche avec les 32 cartes de l&#39;énoncé pour la faction donnée." alt="" coords="587,77,680,104"/>
+<area shape="rect" href="plateau_8c.html#aa2fd2fef89b903a5c089bf57cb932e29" title="Libère la mémoire associée au plateau de jeu et aux deux factions." alt="" coords="424,21,539,48"/>
+<area shape="rect" href="plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,21,143,48"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="321,5,376,32"/>
+<area shape="rect" href="faction_8c.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="191,52,273,79"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -234,7 +250,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>la carte qui a été retirée </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="structure_8c_source.html#l00045">45</a> of file <a class="el" href="structure_8c_source.html">structure.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="structure_8c_source.html#l00046">46</a> of file <a class="el" href="structure_8c_source.html">structure.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -280,7 +296,7 @@ Here is the caller graph for this function:</div>
 <dd>
 1 si la pioche est vide </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="structure_8c_source.html#l00034">34</a> of file <a class="el" href="structure_8c_source.html">structure.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="structure_8c_source.html#l00035">35</a> of file <a class="el" href="structure_8c_source.html">structure.c</a>.</p>
 
 </div>
 </div>

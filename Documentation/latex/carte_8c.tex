@@ -5,14 +5,16 @@
 Implantation de l\textquotesingle{}interface en charge des informations des cartes du jeu.  
 
 
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
 {\ttfamily \#include \char`\"{}../headers/carte.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}../headers/faction.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}../headers/structure.\+h\char`\"{}}\newline
-Include dependency graph for carte.\+c\+:\nopagebreak
+Include dependency graph for carte.\+c\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=210pt]{carte_8c__incl}
+\includegraphics[width=307pt]{carte_8c__incl}
 \end{center}
 \end{figure}
 \doxysubsection*{Data Structures}
@@ -23,6 +25,8 @@ struct \mbox{\hyperlink{struct_structure_carte}{Structure\+Carte}}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{carte_8h_a633ba64ee908d35aac798844f477ee9d}{Carte}} \mbox{\hyperlink{carte_8c_add213f610b61b0471f517034edebed44}{creation\+\_\+carte}} ()
+\begin{DoxyCompactList}\small\item\em Prototype de creation\+\_\+carte qui permet d\textquotesingle{}initialiser une carte. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{carte_8h_aaf595c0642ba2db854c179bb92387300}{id\+\_\+carte}} \mbox{\hyperlink{carte_8c_a07d5b163a3e848772039f8f2e99db83e}{get\+\_\+id}} (\mbox{\hyperlink{carte_8h_a633ba64ee908d35aac798844f477ee9d}{Carte}} c)
 \begin{DoxyCompactList}\small\item\em Prototype de get\+\_\+id qui permet de récupérer l\textquotesingle{}id de la carte. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{carte_8c_aa47c30f1bd901b6511effcda2372029c}{set\+\_\+id}} (\mbox{\hyperlink{carte_8h_a633ba64ee908d35aac798844f477ee9d}{Carte}} c, \mbox{\hyperlink{carte_8h_aaf595c0642ba2db854c179bb92387300}{id\+\_\+carte}} id)
@@ -67,6 +71,31 @@ Copyright (c) 2022
 
 
 \doxysubsection{Function Documentation}
+\mbox{\Hypertarget{carte_8c_add213f610b61b0471f517034edebed44}\label{carte_8c_add213f610b61b0471f517034edebed44}} 
+\index{carte.c@{carte.c}!creation\_carte@{creation\_carte}}
+\index{creation\_carte@{creation\_carte}!carte.c@{carte.c}}
+\doxysubsubsection{\texorpdfstring{creation\_carte()}{creation\_carte()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{carte_8h_a633ba64ee908d35aac798844f477ee9d}{Carte}} creation\+\_\+carte (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Prototype de creation\+\_\+carte qui permet d\textquotesingle{}initialiser une carte. 
+
+\begin{DoxyReturn}{Returns}
+Carte 
+\end{DoxyReturn}
+
+
+Definition at line 32 of file carte.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{carte_8c_add213f610b61b0471f517034edebed44_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{carte_8c_a99d2f8528669eb8a99312bb74a2a27bb}\label{carte_8c_a99d2f8528669eb8a99312bb74a2a27bb}} 
 \index{carte.c@{carte.c}!get\_description@{get\_description}}
 \index{get\_description@{get\_description}!carte.c@{carte.c}}
@@ -87,7 +116,7 @@ char$\ast$
 \end{DoxyReturn}
 
 
-Definition at line 65 of file carte.\+c.
+Definition at line 71 of file carte.\+c.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -116,7 +145,7 @@ int
 \end{DoxyReturn}
 
 
-Definition at line 85 of file carte.\+c.
+Definition at line 91 of file carte.\+c.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -145,7 +174,7 @@ id\+\_\+carte
 \end{DoxyReturn}
 
 
-Definition at line 35 of file carte.\+c.
+Definition at line 41 of file carte.\+c.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -174,7 +203,7 @@ int
 \end{DoxyReturn}
 
 
-Definition at line 75 of file carte.\+c.
+Definition at line 81 of file carte.\+c.
 
 \mbox{\Hypertarget{carte_8c_a36dc56ecacce3b5d693e8ddab6e4201a}\label{carte_8c_a36dc56ecacce3b5d693e8ddab6e4201a}} 
 \index{carte.c@{carte.c}!get\_nom@{get\_nom}}
@@ -196,7 +225,7 @@ char$\ast$
 \end{DoxyReturn}
 
 
-Definition at line 55 of file carte.\+c.
+Definition at line 61 of file carte.\+c.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -225,7 +254,7 @@ Faction
 \end{DoxyReturn}
 
 
-Definition at line 45 of file carte.\+c.
+Definition at line 51 of file carte.\+c.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -253,9 +282,10 @@ Prototype de set\+\_\+description qui permet d\textquotesingle{}initialiser la d
 \end{DoxyParams}
 
 
-Definition at line 70 of file carte.\+c.
+Definition at line 76 of file carte.\+c.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -281,9 +311,10 @@ Prototype de set\+\_\+est\+\_\+cachee qui permet de changer la valeur associé �
 \end{DoxyParams}
 
 
-Definition at line 90 of file carte.\+c.
+Definition at line 96 of file carte.\+c.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -309,9 +340,10 @@ Prototype de set\+\_\+id qui permet d\textquotesingle{}initialiser l\textquotesi
 \end{DoxyParams}
 
 
-Definition at line 40 of file carte.\+c.
+Definition at line 46 of file carte.\+c.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -326,9 +358,10 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Definition at line 80 of file carte.\+c.
+Definition at line 86 of file carte.\+c.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -354,7 +387,7 @@ Prototype de set\+\_\+nom qui permet d\textquotesingle{}initialiser le nom de la
 \end{DoxyParams}
 
 
-Definition at line 60 of file carte.\+c.
+Definition at line 66 of file carte.\+c.
 
 \mbox{\Hypertarget{carte_8c_a5c6c6b9982006477c63fabac74db4649}\label{carte_8c_a5c6c6b9982006477c63fabac74db4649}} 
 \index{carte.c@{carte.c}!set\_proprietaire@{set\_proprietaire}}
@@ -375,9 +408,10 @@ Prototype de set\+\_\+proprietaire qui permet d\textquotesingle{}initialiser la 
 \end{DoxyParams}
 
 
-Definition at line 50 of file carte.\+c.
+Definition at line 56 of file carte.\+c.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

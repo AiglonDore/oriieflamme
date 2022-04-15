@@ -1,11 +1,12 @@
 <map id="ajout_pioche" name="ajout_pioche">
-<area shape="rect" id="node1" title="ajoute la carte à la pioche au sommet de celle&#45;ci" alt="" coords="739,56,844,83"/>
-<area shape="rect" id="node2" href="$plateau_8c.html#a2190bbe0984d78c5f3d5f2e646210f07" title="Crée la pioche avec les 32 cartes de l&#39;énoncé pour la faction donnée." alt="" coords="577,5,670,32"/>
-<area shape="rect" id="node6" href="$faction_8c.html#adf3497e77c11921394ac7ca7d2e6cbdb" title="Permet à une faction de mélanger sa pioche." alt="" coords="556,107,691,133"/>
-<area shape="rect" id="node9" href="$faction_8c.html#aa3b0b517bf0cba1c7d52fb4ca770fcdb" title="Permet à une faction de vider sa main." alt="" coords="565,56,682,83"/>
-<area shape="rect" id="node3" href="$plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="239,5,376,32"/>
-<area shape="rect" id="node4" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="136,31,191,57"/>
-<area shape="rect" id="node5" href="$faction_8c.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="5,5,88,32"/>
-<area shape="rect" id="node7" href="$faction_8c.html#abc7feb29ed864c76ea95e1afc3cc7752" title="Permet à une faction de vider sa main, mélanger sa pioche et repiocher ses cartes." alt="" coords="424,56,508,83"/>
-<area shape="rect" id="node8" href="$main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="273,56,342,83"/>
+<area shape="rect" id="node1" title="ajoute la carte à la pioche au sommet de celle&#45;ci" alt="" coords="911,56,1016,83"/>
+<area shape="rect" id="node2" href="$plateau_8c.html#a2190bbe0984d78c5f3d5f2e646210f07" title="Crée la pioche avec les 32 cartes de l&#39;énoncé pour la faction donnée." alt="" coords="587,5,680,32"/>
+<area shape="rect" id="node7" href="$faction_8c.html#adf3497e77c11921394ac7ca7d2e6cbdb" title="Permet à une faction de mélanger sa pioche." alt="" coords="728,107,863,133"/>
+<area shape="rect" id="node10" href="$faction_8c.html#aa3b0b517bf0cba1c7d52fb4ca770fcdb" title="Permet à une faction de vider sa main." alt="" coords="737,56,854,83"/>
+<area shape="rect" id="node3" href="$plateau_8c.html#aa2fd2fef89b903a5c089bf57cb932e29" title="Libère la mémoire associée au plateau de jeu et aux deux factions." alt="" coords="424,31,539,57"/>
+<area shape="rect" id="node5" href="$plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,43,143,69"/>
+<area shape="rect" id="node4" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="321,43,376,69"/>
+<area shape="rect" id="node6" href="$faction_8c.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="191,105,273,132"/>
+<area shape="rect" id="node8" href="$faction_8c.html#abc7feb29ed864c76ea95e1afc3cc7752" title="Permet à une faction de vider sa main, mélanger sa pioche et repiocher ses cartes." alt="" coords="591,56,675,83"/>
+<area shape="rect" id="node9" href="$main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="447,81,516,108"/>
 </map>

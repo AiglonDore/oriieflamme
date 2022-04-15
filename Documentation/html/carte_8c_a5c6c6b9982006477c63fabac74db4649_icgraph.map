@@ -1,11 +1,12 @@
 <map id="set_proprietaire" name="set_proprietaire">
-<area shape="rect" id="node1" title="Prototype de set_proprietaire qui permet d&#39;initialiser la fonction qui possède la carte." alt="" coords="951,35,1076,61"/>
-<area shape="rect" id="node2" href="$plateau_8c.html#a2190bbe0984d78c5f3d5f2e646210f07" title="Crée la pioche avec les 32 cartes de l&#39;énoncé pour la faction donnée." alt="" coords="778,5,871,32"/>
-<area shape="rect" id="node6" href="$plateau_8c.html#a289b461ee18614882e9e0e242c2193da" title="Active les effets de la carte Massinissa Merabet." alt="" coords="747,57,903,98"/>
-<area shape="rect" id="node3" href="$plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="239,9,376,36"/>
-<area shape="rect" id="node4" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="136,35,191,61"/>
-<area shape="rect" id="node5" href="$faction_8c.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="5,9,88,36"/>
-<area shape="rect" id="node7" href="$plateau_8c.html#a676ed33ed1ff7fd3200efd68462f61e0" title="Active les effets de la carte d&#39;identifiant id." alt="" coords="595,64,699,91"/>
-<area shape="rect" id="node8" href="$plateau_8c.html#a41cddf8d1f1e457df2f4c905d6605151" title="retourne la carte la plus en haut à gauche du plateau face visible et active son effet" alt="" coords="424,60,547,87"/>
-<area shape="rect" id="node9" href="$main_8c.html#a34ccc9f1e0da464163a6f5e297c42563" title="Fonction qui contrôle la phase 2." alt="" coords="273,60,342,87"/>
+<area shape="rect" id="node1" title="Prototype de set_proprietaire qui permet d&#39;initialiser la fonction qui possède la carte." alt="" coords="1113,41,1239,67"/>
+<area shape="rect" id="node2" href="$plateau_8c.html#a2190bbe0984d78c5f3d5f2e646210f07" title="Crée la pioche avec les 32 cartes de l&#39;énoncé pour la faction donnée." alt="" coords="601,11,695,38"/>
+<area shape="rect" id="node7" href="$plateau_8c.html#a289b461ee18614882e9e0e242c2193da" title="Active les effets de la carte Massinissa Merabet." alt="" coords="909,63,1065,104"/>
+<area shape="rect" id="node3" href="$plateau_8c.html#aa2fd2fef89b903a5c089bf57cb932e29" title="Libère la mémoire associée au plateau de jeu et aux deux factions." alt="" coords="424,19,539,46"/>
+<area shape="rect" id="node5" href="$plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,31,143,58"/>
+<area shape="rect" id="node4" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="321,31,376,58"/>
+<area shape="rect" id="node6" href="$faction_8c.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="191,94,273,121"/>
+<area shape="rect" id="node8" href="$plateau_8c.html#a676ed33ed1ff7fd3200efd68462f61e0" title="Active les effets de la carte d&#39;identifiant id." alt="" coords="757,70,861,97"/>
+<area shape="rect" id="node9" href="$plateau_8c.html#a41cddf8d1f1e457df2f4c905d6605151" title="retourne la carte la plus en haut à gauche du plateau face visible et active son effet" alt="" coords="587,70,709,97"/>
+<area shape="rect" id="node10" href="$main_8c.html#a34ccc9f1e0da464163a6f5e297c42563" title="Fonction qui contrôle la phase 2." alt="" coords="447,70,516,97"/>
 </map>
