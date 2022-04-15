@@ -38,7 +38,7 @@ struct s_plateau
 };
 
 /**************************************************
- * Implémentation des prototypes des getters et setters
+ * Implémentation des prototypes des getters
  ***************************************************/
 
 Carte **get_plateau_jeu(Plateau p)

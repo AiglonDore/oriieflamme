@@ -18,7 +18,7 @@
  *
  */
 
-typedef struct s_pioche
+struct s_pioche
 {
   Carte t[32];
   int top;

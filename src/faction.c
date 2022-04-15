@@ -19,7 +19,8 @@
  * @brief type concret pour la faction, a_remelange vaut 1 si la main a été remélangée, 0 sinon
  *
  */
-typedef struct StructureFactions
+
+struct StructureFactions
 {
     char *nom;
     int nb_manches_gagnees;
