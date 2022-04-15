@@ -8,12 +8,15 @@
 
 #ifndef CARTE_H
 #define CARTE_H
-#include "faction.h"
+
 /**
  * @brief type abstrait pour la faction qu'on définira dans carte.c
  *
  */
 typedef struct StructureCarte *Carte;
+
+#include "faction.h"
+
 
 /**
  * @brief
