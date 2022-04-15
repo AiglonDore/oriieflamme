@@ -47,7 +47,7 @@ Plateau creation_plateau()
 
 Carte **get_plateau_jeu(Plateau p)
 {
-    return p->plateau_jeu;
+    return (Carte **)p->plateau_jeu;
 }
 
 Factions_en_jeu get_factions(Plateau p)
@@ -1206,7 +1206,7 @@ void retourne_Djibril_Aurelien_Dembele_Cabot(Plateau p, Faction f, int score, Co
 void retourne_Eric_Lejeune(Plateau p, Coord coord)
 {
     int a_choisir = p->cartes_retournees_manche < 5 ? p->cartes_retournees_manche : 5;
-    int t[a_choisir];
+    int *t = malloc(a_choisir * sizeof(int));
     t[0] = rand() % p->cartes_retournees_manche + 1; // nombre aléatoire entre 1 et le nombre de cartes retournées inclus
     int k;
     for (k = 1; k < a_choisir; k += 1)
@@ -1228,9 +1228,9 @@ void retourne_Eric_Lejeune(Plateau p, Coord coord)
         }
         t[k] = n;
     }
-    Carte supp[a_choisir];
-    int indice_i[a_choisir];
-    int indice_j[a_choisir];
+    Carte *supp = malloc(a_choisir * sizeof(Carte));
+    int *indice_i = malloc(a_choisir * sizeof(int));
+    int *indice_j = malloc(a_choisir * sizeof(int));
     int remplissage = 0;
     int compte_cartes_retournees = 0;
     int i, j;
@@ -1267,8 +1267,8 @@ void retourne_Eric_Lejeune(Plateau p, Coord coord)
     }
     if (est_prof == 1)
     {
-        int t[a_choisir]; // ce tableau sert à savoir si l'indice généré a déjà été généré (t[i]=1 si i déjà sorti, 0 sinon)
-        Carte melange[a_choisir];
+        int *t = malloc(a_choisir * sizeof(int)); // ce tableau sert à savoir si l'indice généré a déjà été généré (t[i]=1 si i déjà sorti, 0 sinon)
+        Carte *melange = malloc(a_choisir * sizeof(Carte));
         int c = 0;                  // sert à compter le nombre de cartes rentrées dans melange
         int n = rand() % a_choisir; // génère un nombre entier aléatoire entre 0 et a_choisir-1
         while (c != a_choisir)
@@ -1289,6 +1289,13 @@ void retourne_Eric_Lejeune(Plateau p, Coord coord)
             p->cartes_retournees_manche -= 1;
             poser_carte(melange[i], p, t, coord.j);
         }
+        free(t);
+        int i;
+        for (i = 0; i < a_choisir; i += 1)
+        {
+            melange[i] = NULL;
+        }
+        free(melange);
     }
     else
     {
@@ -1298,6 +1305,14 @@ void retourne_Eric_Lejeune(Plateau p, Coord coord)
             p->cartes_retournees_manche -= 1;
         }
     }
+    free(indice_i);
+    free(indice_j);
+    for (i = 0; i < a_choisir; i += 1)
+    {
+        supp[i] = NULL;
+    }
+    free(supp);
+    free(t);
     actualiser_constantes_cas_general(p, coord);
 }
 
