@@ -9,6 +9,7 @@
  *
  */
 
+#include <stdlib.h>
 #include "../headers/carte.h"
 #include "../headers/faction.h"
 #include "../headers/structure.h"
@@ -26,7 +27,7 @@ struct s_pioche
 
 Pioche creation_pioche_vide()
 {
-  Pioche p;
+  Pioche p = malloc(sizeof(struct s_pioche));
   p->top = -1;
   return p;
 }

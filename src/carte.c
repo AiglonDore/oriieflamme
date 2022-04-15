@@ -14,6 +14,7 @@
  *
  */
 
+#include <stdlib.h>
 #include "../headers/carte.h"
 #include "../headers/faction.h"
 #include "../headers/structure.h"
@@ -27,6 +28,11 @@ struct StructureCarte
     int nb_occ;
     int est_cachee;
 };
+
+Carte creation_carte()
+{
+    return (malloc(sizeof(struct StructureCarte)));
+}
 
 /**************************************************
  * Implémentation des getters et setters

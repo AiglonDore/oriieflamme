@@ -31,6 +31,11 @@ struct StructureFactions
     Main main;
 };
 
+Faction creation_faction()
+{
+    return (malloc(sizeof(struct StructureFactions)));
+}
+
 int a_remelange(Faction f)
 {
     return f->a_remelange;

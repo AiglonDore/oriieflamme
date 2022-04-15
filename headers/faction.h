@@ -16,6 +16,14 @@ typedef struct StructureFactions *Faction;
 
 #include "structure.h"
 
+/**
+ * @brief Prototype de creation_faction qui permet d'initialiser une faction
+ *
+ * @return Faction
+ */
+
+Faction creation_faction();
+
 /*****************************************
  * Prototypes des fonctions
  ****************************************/

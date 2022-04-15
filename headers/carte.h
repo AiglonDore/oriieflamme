@@ -17,7 +17,6 @@ typedef struct StructureCarte *Carte;
 
 #include "faction.h"
 
-
 /**
  * @brief
  * Déclaration des constantes et variables globales relative aux cartes. Nombre de carte fixe à 8, et une énumération des nom de cartes, ainsi qu'une déclaration des effets.
@@ -105,6 +104,14 @@ char *description[32] = {
     "Si Laurent Prével est la dernière carte retournée du plateau, la faction qui a posé cette carte gagne la manche, quel que soit le nombre de points DDRS des deux factions."};
 
 int nb_occ[32] = {4, 4, 4, 2, 2, 1, 1, 3, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+
+/**
+ * @brief Prototype de creation_carte qui permet d'initialiser une carte.
+ *
+ * @return Carte
+ */
+
+Carte creation_carte();
 
 /**************************************************
  * Création des prototypes des getters et setters

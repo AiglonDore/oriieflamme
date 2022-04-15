@@ -98,14 +98,14 @@ int get_cartes_non_retournees_manche(Plateau p)
 void init_pioche(Faction f)
 {
     int i;
-    Pioche pioche;
+    Pioche pioche = creation_pioche_vide();
     pioche = get_pioche(f);
     for (i = 0; i < 32; i += 1)
     {
         int j = nb_occ[i];
         while (j != 0)
         {
-            Carte c;
+            Carte c = creation_carte();
             set_id(c, i);
             set_nom_faction(c, nom_carte[i]);
             set_proprietaire(c, f);
@@ -124,8 +124,8 @@ Plateau init_plateau()
     // On initialise le numéro de manche
     p->numero_manche = 0;
     // On initialise les factions
-    Faction faction1;
-    Faction faction2;
+    Faction faction1 = creation_faction();
+    Faction faction2 = creation_faction();
     set_nom_faction(faction1, "Faction 1");
     set_nom_faction(faction2, "Faction 2");
     char *a = nom_faction(faction1);
@@ -143,6 +143,12 @@ Plateau init_plateau()
 
 void libere_plateau(Plateau p)
 {
+    init_pioche(p->factions.left);
+    init_pioche(p->factions.right);
+    free(get_pioche(p->factions.left));
+    free(get_pioche(p->factions.right));
+    free(p->factions.left);
+    free(p->factions.right);
     return;
 }
 
