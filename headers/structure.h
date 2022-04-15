@@ -19,7 +19,7 @@
  *
  */
 
-typedef Carte Plateau_jeu[257][257];
+typedef Carte Plateau_jeu[129][129];
 
 /**
  * @brief Structure pour les couples de factions
