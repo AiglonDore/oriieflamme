@@ -10,7 +10,7 @@ var searchData=
   ['plateau_114',['Plateau',['../plateau_8h.html#aeb2df061534a36a23c2755dfbd9ee6f3',1,'plateau.h']]],
   ['plateau_2ec_115',['plateau.c',['../plateau_8c.html',1,'']]],
   ['plateau_2eh_116',['plateau.h',['../plateau_8h.html',1,'']]],
-  ['plateau_5fjeu_117',['plateau_jeu',['../structs__plateau.html#ad782e69822866bf4af66440f3ee64b39',1,'s_plateau::plateau_jeu()'],['../structure_8h.html#af822f7264c54290e7767681948a9c8a2',1,'Plateau_jeu():&#160;structure.h']]],
+  ['plateau_5fjeu_117',['plateau_jeu',['../structs__plateau.html#ad782e69822866bf4af66440f3ee64b39',1,'s_plateau::plateau_jeu()'],['../structure_8h.html#af09c6150dd688094b9a2ed11657afbe0',1,'Plateau_jeu():&#160;structure.h']]],
   ['poser_5fcarte_118',['poser_carte',['../plateau_8h.html#a425437529596e13babd7bc8b4e04d491',1,'poser_carte(Carte c, Plateau p, int i, int j):&#160;plateau.c'],['../plateau_8c.html#a425437529596e13babd7bc8b4e04d491',1,'poser_carte(Carte c, Plateau p, int i, int j):&#160;plateau.c']]],
   ['proprietaire_119',['proprietaire',['../struct_structure_carte.html#ab945314e7899257322b8b02ada57aeaf',1,'StructureCarte']]],
   ['pts_5fddrs_5fmanche_120',['pts_DDRS_manche',['../struct_structure_factions.html#a91856b4077b5b05aa8b53fc8dde80960',1,'StructureFactions']]]
