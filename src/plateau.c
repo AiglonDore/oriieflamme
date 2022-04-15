@@ -150,10 +150,8 @@ void libere_plateau(Plateau p)
 {
     init_pioche(p->factions.left);
     init_pioche(p->factions.right);
-    free(get_pioche(p->factions.left));
-    free(get_pioche(p->factions.right));
-    free(p->factions.left);
-    free(p->factions.right);
+    supprimer_faction(p->factions.left);
+    supprimer_faction(p->factions.right);
     return;
 }
 
@@ -284,7 +282,16 @@ Factions_en_jeu factions_plateau(Plateau p)
 }
 
 void poser_carte(Carte c, Plateau p, int i, int j)
-{ // on suppose que i et j sont légales
+{
+    Faction f = get_proprietaire(c);
+    Main m = get_main(f);
+    int i = 0;
+    while (c != m[i])
+    {
+        i += 1;
+    }
+    m[i] = NULL;
+    // on suppose que i et j sont légales
     Coord derniere_carte = p->derniere_carte_posee;
     p->cartes_non_retournees_manche += 1;
     // Cas de la première carte à poser
@@ -428,8 +435,8 @@ void retourne_lIIEns(Plateau p, Coord coord)
         actualiser_constantes_cas_general(p, coord);
         return;
     }
-    int t[nb_a_retirer]; // ce tableau sert à savoir si l'indice généré a déjà été généré (t[i]=1 si i déjà sorti, 0 sinon)
-    Carte melange[nb_a_retirer];
+    int *t = malloc(nb_a_retirer * sizeof(int)); // ce tableau sert à savoir si l'indice généré a déjà été généré (t[i]=1 si i déjà sorti, 0 sinon)
+    Carte *melange = malloc(nb_a_retirer * sizeof(Carte));
     int c = 0;                     // sert à compter le nombre de cartes rentrées dans melange
     int n = rand() % nb_a_retirer; // génère un nombre entier aléatoire entre 0 et nb_a_retirer-1
     while (c != nb_a_retirer)
@@ -456,6 +463,13 @@ void retourne_lIIEns(Plateau p, Coord coord)
     p->avant_derniere_carte_retournee.j = p->derniere_carte_retournee.j;
     p->derniere_carte_retournee.i = coord.i;
     p->derniere_carte_retournee.j = coord.j;
+    int i;
+    for (i = 0; i < nb_a_retirer; i += 1)
+    {
+        melange[i] = NULL;
+    }
+    free(melange);
+    free(t);
 }
 
 void retourne_Soiree_sans_alcool(Plateau p, Faction f, int score, Coord coord)

@@ -62,6 +62,12 @@ void melanger_pioche(Faction f);
  */
 void piocher(Faction f);
 
+/**
+ * @brief Permet de supprimer une faction et de libérer son espace mémoire alloué
+ * @param f une faction
+ */
+void supprimer_faction(Faction f);
+
 /**************************************************
  * Création des prototypes des getters et setters
  ***************************************************/

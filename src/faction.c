@@ -105,6 +105,19 @@ void piocher(Faction f)
     }
 }
 
+void supprimer_faction(Faction f)
+{
+    free(f->pioche); // la pioche a déjà été vidée normalement dans libere_plateau
+    int i;
+    for (i = 0; i < 8; i += 1)
+    {
+        f->main[i] = NULL;
+    }
+    free(f->nom);
+    free(f);
+    f = NULL;
+}
+
 /**************************************************
  * Implémentation des getters et setters
  ***************************************************/
