@@ -97,7 +97,7 @@ int get_nb_manches_gagnees(Faction f);
  * @param f
  * @param x
  */
-void set_nb_maches_gagnees(Faction f, int x);
+void set_nb_manches_gagnees(Faction f, int x);
 
 /**
  * @brief Prototype de get_pts_DDRS_manche qui permet de récupérer le nombre de points DDRS de la manche en cours d'une faction

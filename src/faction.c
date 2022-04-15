@@ -119,7 +119,7 @@ void set_nom_faction(Faction f, char *nom_faction)
     f->nom = nom_faction;
 }
 
-int get_nb_maches_gagnees(Faction f)
+int get_nb_manches_gagnees(Faction f)
 {
     return f->nb_manches_gagnees;
 }

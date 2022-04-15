@@ -37,6 +37,10 @@ struct s_plateau
     int cartes_non_retournees_manche;
 };
 
+Plateau creation_plateau()
+{
+    return (malloc(sizeof(struct s_plateau)));
+}
 /**************************************************
  * Implémentation des prototypes des getters
  ***************************************************/
@@ -107,7 +111,7 @@ void init_pioche(Faction f)
         {
             Carte c = creation_carte();
             set_id(c, i);
-            set_nom_faction(c, nom_carte[i]);
+            set_nom(c, nom_carte[i]);
             set_proprietaire(c, f);
             set_description(c, description[i]);
             set_nb_occ(c, nb_occ[i]);
@@ -120,7 +124,7 @@ void init_pioche(Faction f)
 
 Plateau init_plateau()
 {
-    Plateau p;
+    Plateau p = creation_plateau();
     // On initialise le numéro de manche
     p->numero_manche = 0;
     // On initialise les factions
@@ -132,13 +136,14 @@ Plateau init_plateau()
     char *b = nom_faction(faction2);
     set_nom_faction(faction1, a);
     set_nom_faction(faction2, b);
-    set_nb_maches_gagnees(faction1, 0);
-    set_nb_maches_gagnees(faction2, 0);
+    set_nb_manches_gagnees(faction1, 0);
+    set_nb_manches_gagnees(faction2, 0);
     set_carte_anl_retournee(faction1, 0);
     set_carte_anl_retournee(faction2, 0);
     p->factions.left = faction1;
     p->factions.right = faction2;
     // Le reste de l'initialisation est commun à chaque début de manche et se fera dans nouvelle_manche
+    return p;
 }
 
 void libere_plateau(Plateau p)
@@ -159,8 +164,8 @@ int nouvelle_manche(Plateau p)
     {
         int score_left = get_pts_DDRS_manche(p->factions.left);
         int score_right = get_pts_DDRS_manche(p->factions.right);
-        int manches_gagnees_left = get_nb_maches_gagnees(p->factions.left);
-        int manches_gagnees_right = get_nb_maches_gagnees(p->factions.right);
+        int manches_gagnees_left = get_nb_manches_gagnees(p->factions.left);
+        int manches_gagnees_right = get_nb_manches_gagnees(p->factions.right);
         Carte carte = p->plateau_jeu[p->derniere_carte_retournee.i][p->derniere_carte_retournee.j];
         id_carte id = get_id(carte);
         Faction f = get_proprietaire(carte);
@@ -168,22 +173,22 @@ int nouvelle_manche(Plateau p)
         {
             if (f == p->factions.left)
             {
-                set_nb_maches_gagnees(p->factions.left, manches_gagnees_left + 1);
+                set_nb_manches_gagnees(p->factions.left, manches_gagnees_left + 1);
             }
             else
             {
-                set_nb_maches_gagnees(p->factions.right, manches_gagnees_right + 1);
+                set_nb_manches_gagnees(p->factions.right, manches_gagnees_right + 1);
             }
         }
         else
         {
             if (score_left < score_right)
             {
-                set_nb_maches_gagnees(p->factions.right, manches_gagnees_right + 1);
+                set_nb_manches_gagnees(p->factions.right, manches_gagnees_right + 1);
             }
             else if (score_left > score_right)
             {
-                set_nb_maches_gagnees(p->factions.left, manches_gagnees_left + 1);
+                set_nb_manches_gagnees(p->factions.left, manches_gagnees_left + 1);
             }
             else
             { // égalité
@@ -191,17 +196,17 @@ int nouvelle_manche(Plateau p)
                 Faction f = get_proprietaire(carte);
                 if (f == p->factions.left)
                 {
-                    set_nb_maches_gagnees(p->factions.left, manches_gagnees_left + 1);
+                    set_nb_manches_gagnees(p->factions.left, manches_gagnees_left + 1);
                 }
                 else
                 {
-                    set_nb_maches_gagnees(p->factions.right, manches_gagnees_right + 1);
+                    set_nb_manches_gagnees(p->factions.right, manches_gagnees_right + 1);
                 }
             }
         }
     }
     // On regarde si une faction a gagné
-    if (get_nb_maches_gagnees(p->factions.left) == 2 || get_nb_maches_gagnees(p->factions.right) == 2)
+    if (get_nb_manches_gagnees(p->factions.left) == 2 || get_nb_manches_gagnees(p->factions.right) == 2)
     {
         return 0;
     }
@@ -329,7 +334,7 @@ void actualiser_constantes_cas_general(Plateau p, Coord coord)
     p->derniere_carte_retournee.j = coord.j;
 }
 
-void bonus_anl(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse)
+void bonus_anl(Faction f, int score, Faction f_adverse, int score_adverse)
 {
     int anl_f = get_carte_anl_retournee(f);
     int anl_f_adv = get_carte_anl_retournee(f_adverse);
@@ -363,7 +368,6 @@ void retourne_FISA(Plateau p, Faction f, int score, Coord coord)
 void retourne_FC(Plateau p, Faction f, int score, Coord coord)
 {
     int i, j;
-    int FC_retournee = 0;
     for (i = 0; i < 129; i += 1)
     {
         for (j = 0; j < 129; j += 1)
@@ -381,7 +385,7 @@ void retourne_FC(Plateau p, Faction f, int score, Coord coord)
 
 void retourne_EcologIIE(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse, Coord coord)
 {
-    bonus_anl(p, f, score, f_adverse, score_adverse);
+    bonus_anl(f, score, f_adverse, score_adverse);
     int pts_gagnes = 0;
     int i, j;
     for (i = 0; i < 129; i += 1)
@@ -642,11 +646,11 @@ void retourne_The(Plateau p, Faction f, int score, Coord coord)
 
 void retourne_Ecocup(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse, Coord coord)
 {
-    bonus_anl(p, f, score, f_adverse, score_adverse);
+    bonus_anl(f, score, f_adverse, score_adverse);
     actualiser_constantes_cas_general(p, coord);
 }
 
-void retourne_Reprographie(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse, Coord coord)
+void retourne_Reprographie(Plateau p, Faction f_adverse, int score_adverse, Coord coord)
 {
     int cartes_retournees[32] = {0};
     int i, j;
@@ -674,7 +678,7 @@ void retourne_Reprographie(Plateau p, Faction f, int score, Faction f_adverse, i
 
 void retourne_Isolation_du_batiment(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse, Coord coord)
 {
-    bonus_anl(p, f, score, f_adverse, score_adverse);
+    bonus_anl(f, score, f_adverse, score_adverse);
     int i, j;
     int pts_gagnes_f = 0;
     int pts_gagnes_f_adverse = 0;
@@ -698,9 +702,9 @@ void retourne_Isolation_du_batiment(Plateau p, Faction f, int score, Faction f_a
     actualiser_constantes_cas_general(p, coord);
 }
 
-void retourne_Parcours_sobriete_numerique(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse, Coord coord)
+void retourne_Parcours_sobriete_numerique(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse)
 {
-    bonus_anl(p, f, score, f_adverse, score_adverse);
+    bonus_anl(f, score, f_adverse, score_adverse);
     int i;
     int i_avt_d = p->avant_derniere_carte_retournee.i;
     int j_avt_d = p->avant_derniere_carte_retournee.j;
@@ -709,7 +713,7 @@ void retourne_Parcours_sobriete_numerique(Plateau p, Faction f, int score, Facti
     for (i = 0; i < 129; i += 1)
     {
         int j = 0;
-        while (j <= 128 && (p->plateau_jeu[i][j] == NULL || get_est_cachee(p->plateau_jeu[i][j] == 0)))
+        while (j <= 128 && (p->plateau_jeu[i][j] == NULL || get_est_cachee(p->plateau_jeu[i][j]) == 0))
         {
             j += 1;
         }
@@ -724,7 +728,7 @@ void retourne_Parcours_sobriete_numerique(Plateau p, Faction f, int score, Facti
             j_d = j;
         }
         j = 128;
-        while (j >= 0 && (p->plateau_jeu[i][j] == NULL || get_est_cachee(p->plateau_jeu[i][j] == 0)))
+        while (j >= 0 && (p->plateau_jeu[i][j] == NULL || get_est_cachee(p->plateau_jeu[i][j]) == 0))
         {
             j -= 1;
         }
@@ -1425,7 +1429,7 @@ void switch_carte(Plateau p, id_carte id, Coord coord, Faction f, Faction f_adve
     }
     case Reprographie:
     {
-        retourne_Reprographie(p, f, score, f_adverse, score_adverse, coord);
+        retourne_Reprographie(p, f_adverse, score_adverse, coord);
         break;
     }
     case Isolation_batiment:
@@ -1435,7 +1439,7 @@ void switch_carte(Plateau p, id_carte id, Coord coord, Faction f, Faction f_adve
     }
     case Parcours_sobriete_numerique:
     {
-        retourne_Parcours_sobriete_numerique(p, f, score, f_adverse, score_adverse, coord);
+        retourne_Parcours_sobriete_numerique(p, f, score, f_adverse, score_adverse);
         break;
     }
     case Heures_supplementaires:

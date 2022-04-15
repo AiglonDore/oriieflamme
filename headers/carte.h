@@ -195,7 +195,16 @@ void set_description(Carte c, char *description_carte);
 int get_nb_occ(Carte c);
 
 /**
- * @brief Prototype de get_est_cachee qui permet de récupérer un entier qui indique si la face est cachée ou pas.
+ * @brief Prototype de set_nb_occ qui permet d'initialiser le nombre d'occurences d'une carte
+ *
+ * @param c
+ * @param x
+ * @return int
+ */
+void set_nb_occ(Carte c, int x);
+
+/**
+ * @brief Prototype de get_est_cachee qui permet de récupérer un entier qui indique si la face est cachée ou pas
  *
  * @param c
  * @return int

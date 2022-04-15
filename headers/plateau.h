@@ -23,6 +23,14 @@ const int nb_maches_gagnantes = 2;
  */
 typedef struct s_plateau *Plateau;
 
+/**
+ * @brief Prototype de creation_plateau qui permet d'initialiser une carte.
+ *
+ * @return Plateau
+ */
+
+Plateau creation_plateau();
+
 /**************************************************
  * Création des prototypes des getters et setters
  ***************************************************/
@@ -167,7 +175,7 @@ void poser_carte(Carte c, Plateau p, int i, int j);
  * @param score_adverse score de la faction f_adverse
  *
  */
-void bonus_anl(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse);
+void bonus_anl(Faction f, int score, Faction f_adverse, int score_adverse);
 
 /**
  * @brief Active les effets de la carte FISE
@@ -279,7 +287,7 @@ void retourne_Ecocup(Plateau p, Faction f, int score, Faction f_adverse, int sco
  * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
-void retourne_Reprographie(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse, Coord coord);
+void retourne_Reprographie(Plateau p, Faction f_adverse, int score_adverse, Coord coord);
 
 /**
  * @brief Active les effets de la carte Isolation du bâtiment
@@ -303,14 +311,13 @@ void retourne_Isolation_du_batiment(Plateau p, Faction f, int score, Faction f_a
  * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
-void retourne_Parcours_sobriete_numerique(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse, Coord coord);
+void retourne_Parcours_sobriete_numerique(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse);
 
 /**
  * @brief Active les effets de la carte Heures supplémentaires
  * @param p plateau valide (le pointeur doit être valide)
  * @param f_adverse faction valide (le pointeur doit être valide), faction adverse de celle qui a déposé la carte
  * @param score_adverse score de la faction f_adverse
- * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
 void retourne_Heures_supplementaires(Plateau p, Faction f_adverse, int score_adverse, Coord coord);
