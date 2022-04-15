@@ -41,6 +41,56 @@ struct s_plateau
  * Implémentation des prototypes des getters et setters
  ***************************************************/
 
+Carte **get_plateau_jeu(Plateau p)
+{
+    return p->plateau_jeu;
+}
+
+Factions_en_jeu get_factions(Plateau p)
+{
+    return p->factions;
+}
+
+Coord get_derniere_carte_posee(Plateau p)
+{
+    return p->derniere_carte_posee;
+}
+
+Coord get_derniere_carte_retournee(Plateau p)
+{
+    return p->derniere_carte_retournee;
+}
+
+Coord get_avant_derniere_carte_retournee(Plateau p)
+{
+    return p->avant_derniere_carte_retournee;
+}
+
+Coord get_carte_haut_gauche(Plateau p)
+{
+    return p->carte_haut_gauche;
+}
+
+Coord get_carte_bas_droite(Plateau p)
+{
+    return p->carte_bas_droite;
+}
+
+int get_numero_manche(Plateau p)
+{
+    return p->numero_manche;
+}
+
+int get_cartes_retournees_manche(Plateau p)
+{
+    return p->cartes_retournees_manche;
+}
+
+int get_cartes_non_retournees_manche(Plateau p)
+{
+    return p->cartes_non_retournees_manche;
+}
+
 /********************************************************
  * Implémentation des prototypes des fonctions du plateau
  ********************************************************/
