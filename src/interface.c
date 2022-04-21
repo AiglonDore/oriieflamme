@@ -10,6 +10,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
 
 char * nom_faction(Faction f)
 {
@@ -54,15 +56,17 @@ void affiche_main(Faction f)
         if (main[i] != NULL)
         {
             printf("%s\n",get_nom(main[i]));
-            affiche_effet(main[i]);
+            affiche_effets(main[i]);
         }
     }
 }
 
 int utiliser_option(Faction f)
 {
-    printf("%s, voulez-vous utiliser votre super pouvoir?[y/n]",get_nom(f));
-    return fgetc(stdin) == 'y';
+    printf("%s, voulez-vous utiliser votre super pouvoir?[y/n]",get_nom_faction(f));
+    char buf[1];
+    fgets(buf,sizeof(char),stdin);
+    return (!strcmp(buf,"y"))||(!strcmp(buf,"Y"));
 }
 
 Carte a_poser_face_cachee_sur_plateau(Faction f)
@@ -96,4 +100,29 @@ Carte a_poser_face_cachee_sur_plateau(Faction f)
 void affiche_effets(Carte c)
 {
     printf("Effet de la carte \"%s\": \"%s\".\n",get_nom(c),get_description(c));
+}
+
+void affiche_vainqueur(Plateau p)
+{
+    Factions_en_jeu fct = get_factions(p);
+    if (get_nb_manches_gagnees(fct.left) == 2)
+    {
+        printf("Le vainqueur de la partie est : \"%s\".\n",get_nom_faction(fct.left));
+    }
+    else
+    {
+        printf("Le vainqueur de la partie est : \"%s\".\n",get_nom_faction(fct.right));
+    }
+    printf("Mais cette victolire n'est pas encore officialisée!\n");
+    printf("Il faut encore attendre le jury de validation pour que la victoire soit validée et définitive.\n");
+    sleep(1000);
+    printf("Mail de Laurent Prével: jury de validation de la victoire\n");
+    printf("Le jury va se réunir et évaluer la partie afin de valider ou non votre victoire... Ah, il manque un représentant de la DFP. Où est Julien Forest?\n");
+    sleep(3000);
+    printf("Julien Forest vient de se reveiller (son café n'a pas réussi à l'empêcher de dormir). Il va donc pouvoir présider le jury pour valider votre victoire!");
+}
+
+Coord demande_position(Plateau p)
+{
+
 }
