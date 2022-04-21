@@ -1,0 +1,9 @@
+<map id="demande_position" name="demande_position">
+<area shape="rect" id="node1" title="Fonction qui demande à quelle position doit être placée la carte." alt="" coords="5,107,148,133"/>
+<area shape="rect" id="node2" href="$interface_8c.html#a8bb576a3127fc3437d91467ec19d0de0" title="Fonction qui affiche le plateau de jeu." alt="" coords="196,107,319,133"/>
+<area shape="rect" id="node3" href="$carte_8h.html#ab61f3254187615cbc1c13aa4e51633c2" title="Prototype de get_est_cachee qui permet de récupérer un entier qui indique si la face est cachée ou pa..." alt="" coords="371,5,493,32"/>
+<area shape="rect" id="node4" href="$carte_8h.html#a36dc56ecacce3b5d693e8ddab6e4201a" title="Prototype de get_nom qui permet de récupérer le nom de la carte." alt="" coords="393,56,471,83"/>
+<area shape="rect" id="node5" href="$faction_8h.html#a152a86ba5f75e19f5eaa93383d2cb64f" title="Prototype de get_nom qui permet de récupérer le nom de la faction." alt="" coords="367,107,497,133"/>
+<area shape="rect" id="node6" href="$plateau_8h.html#a0a1230f40936ff71dbdf095ecaa4993d" title="Prototype de get_plateau_jeu." alt="" coords="369,157,495,184"/>
+<area shape="rect" id="node7" href="$carte_8h.html#a253c323b2facf1fd67c2e6602c5932ee" title="Prototype de get_proprietaire qui permet de récupérer la faction qui possède cette carte." alt="" coords="369,208,495,235"/>
+</map>

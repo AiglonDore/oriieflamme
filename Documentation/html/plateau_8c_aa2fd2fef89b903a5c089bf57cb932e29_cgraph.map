@@ -1,15 +1,18 @@
 <map id="libere_plateau" name="libere_plateau">
-<area shape="rect" id="node1" title="Libère la mémoire associée au plateau de jeu et aux deux factions." alt="" coords="5,259,120,285"/>
-<area shape="rect" id="node2" href="$plateau_8c.html#a2190bbe0984d78c5f3d5f2e646210f07" title="Crée la pioche avec les 32 cartes de l&#39;énoncé pour la faction donnée." alt="" coords="191,233,285,260"/>
-<area shape="rect" id="node13" href="$faction_8h.html#a66e884a727de4d0741a8d344308ed43d" title="Permet de supprimer une faction et de libérer son espace mémoire alloué" alt="" coords="168,284,308,311"/>
+<area shape="rect" id="node1" title="Libère la mémoire associée au plateau de jeu et aux deux factions." alt="" coords="5,335,120,361"/>
+<area shape="rect" id="node2" href="$plateau_8c.html#a2190bbe0984d78c5f3d5f2e646210f07" title="Crée la pioche avec les 32 cartes de l&#39;énoncé pour la faction donnée." alt="" coords="191,309,285,336"/>
+<area shape="rect" id="node16" href="$faction_8h.html#a66e884a727de4d0741a8d344308ed43d" title="Permet de supprimer une faction et de libérer son espace mémoire alloué" alt="" coords="168,360,308,387"/>
 <area shape="rect" id="node3" href="$structure_8h.html#ac8dcdc0ffb092b739d94573e47eaaacf" title="ajoute la carte à la pioche au sommet de celle&#45;ci" alt="" coords="383,5,489,32"/>
 <area shape="rect" id="node4" href="$carte_8h.html#add213f610b61b0471f517034edebed44" title="Prototype de creation_carte qui permet d&#39;initialiser une carte." alt="" coords="379,56,493,83"/>
 <area shape="rect" id="node5" href="$structure_8h.html#ad911b5ece54d506c7109120dbfc9c2f0" title="Savoir si une faction a itilisé l&#39;option de remélanger sa main et boîte à idée et de repiocher des ca..." alt="" coords="356,107,516,133"/>
-<area shape="rect" id="node6" href="$faction_8h.html#a4d000f4cb37265a12d2e36fc372b3b28" title="Prototype de get_pioche qui permet de récupérer la pioche de la faction." alt="" coords="389,157,483,184"/>
-<area shape="rect" id="node7" href="$carte_8h.html#a30fc91d4dd38a6b29c6eb86681238a70" title="Prototype de set_description qui permet d&#39;initialiser la description de la carte." alt="" coords="375,208,497,235"/>
-<area shape="rect" id="node8" href="$carte_8h.html#ab60bacf04b3f4a170b341b48c38e4144" title="Prototype de set_est_cachee qui permet de changer la valeur associé à la face d&#39;une carte: 0 Face non..." alt="" coords="375,259,497,285"/>
-<area shape="rect" id="node9" href="$carte_8h.html#aa47c30f1bd901b6511effcda2372029c" title="Prototype de set_id qui permet d&#39;initialiser l&#39;id de la carte." alt="" coords="405,309,467,336"/>
-<area shape="rect" id="node10" href="$carte_8h.html#ab49c570d782fe28d0639c144a68fc311" title="Prototype de set_nb_occ qui permet d&#39;initialiser le nombre d&#39;occurences d&#39;une carte." alt="" coords="389,360,483,387"/>
-<area shape="rect" id="node11" href="$carte_8h.html#a3a473d789c03dc6bad961bfc4f15e7b3" title="Prototype de set_nom qui permet d&#39;initialiser le nom de la carte." alt="" coords="397,411,475,437"/>
-<area shape="rect" id="node12" href="$carte_8h.html#a5c6c6b9982006477c63fabac74db4649" title="Prototype de set_proprietaire qui permet d&#39;initialiser la fonction qui possède la carte." alt="" coords="373,461,499,488"/>
+<area shape="rect" id="node6" href="$carte_8h.html#a500a84466dd672b4940525996014d3f6" title="Prototype de get_description qui permet de récupérer description[i]." alt="" coords="363,157,509,184"/>
+<area shape="rect" id="node7" href="$carte_8h.html#ab7a563de3cb0533312e2d0e7f3be27a3" title="Prototype de get_nb_occ qui permet de récupérer nb_occ[i]." alt="" coords="377,208,495,235"/>
+<area shape="rect" id="node8" href="$carte_8h.html#aa5b54fe67b2e3c56e0c7c7847085b680" title="Prototype de get_nom_carte qui permet de récupérer nom_carte[i]." alt="" coords="365,259,507,285"/>
+<area shape="rect" id="node9" href="$faction_8h.html#a4d000f4cb37265a12d2e36fc372b3b28" title="Prototype de get_pioche qui permet de récupérer la pioche de la faction." alt="" coords="389,309,483,336"/>
+<area shape="rect" id="node10" href="$carte_8h.html#a30fc91d4dd38a6b29c6eb86681238a70" title="Prototype de set_description qui permet d&#39;initialiser la description de la carte." alt="" coords="375,360,497,387"/>
+<area shape="rect" id="node11" href="$carte_8h.html#ab60bacf04b3f4a170b341b48c38e4144" title="Prototype de set_est_cachee qui permet de changer la valeur associé à la face d&#39;une carte: 0 Face non..." alt="" coords="375,411,497,437"/>
+<area shape="rect" id="node12" href="$carte_8h.html#aa47c30f1bd901b6511effcda2372029c" title="Prototype de set_id qui permet d&#39;initialiser l&#39;id de la carte." alt="" coords="405,461,467,488"/>
+<area shape="rect" id="node13" href="$carte_8h.html#ab49c570d782fe28d0639c144a68fc311" title="Prototype de set_nb_occ qui permet d&#39;initialiser le nombre d&#39;occurences d&#39;une carte." alt="" coords="389,512,483,539"/>
+<area shape="rect" id="node14" href="$carte_8h.html#a3a473d789c03dc6bad961bfc4f15e7b3" title="Prototype de set_nom qui permet d&#39;initialiser le nom de la carte." alt="" coords="397,563,475,589"/>
+<area shape="rect" id="node15" href="$carte_8h.html#a5c6c6b9982006477c63fabac74db4649" title="Prototype de set_proprietaire qui permet d&#39;initialiser la fonction qui possède la carte." alt="" coords="373,613,499,640"/>
 </map>
