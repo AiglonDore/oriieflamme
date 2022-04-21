@@ -284,13 +284,13 @@ Factions_en_jeu factions_plateau(Plateau p)
 void poser_carte(Carte c, Plateau p, int i, int j)
 {
     Faction f = get_proprietaire(c);
-    Main m = get_main(f);
-    int i = 0;
-    while (c != m[i])
+    Carte *m = get_main(f);
+    int k = 0;
+    while (c != m[k])
     {
-        i += 1;
+        k += 1;
     }
-    m[i] = NULL;
+    m[k] = NULL;
     // on suppose que i et j sont légales
     Coord derniere_carte = p->derniere_carte_posee;
     p->cartes_non_retournees_manche += 1;
@@ -463,7 +463,6 @@ void retourne_lIIEns(Plateau p, Coord coord)
     p->avant_derniere_carte_retournee.j = p->derniere_carte_retournee.j;
     p->derniere_carte_retournee.i = coord.i;
     p->derniere_carte_retournee.j = coord.j;
-    int i;
     for (i = 0; i < nb_a_retirer; i += 1)
     {
         melange[i] = NULL;
