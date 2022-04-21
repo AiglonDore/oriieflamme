@@ -15,8 +15,6 @@
 #include "faction.h"
 #include "structure.h"
 
-const int nb_maches_gagnantes = 2;
-
 /**
  * @brief type abstrait pour le plateau de jeu
  *

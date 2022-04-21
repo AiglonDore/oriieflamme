@@ -16,6 +16,8 @@
 #include "../headers/structure.h"
 #include "../headers/interface.h"
 
+const int nb_manches_gagnantes = 2;
+
 /**
  * @brief type concret vers lequel pointe le plateau de jeu
  *
