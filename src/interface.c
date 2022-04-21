@@ -124,5 +124,10 @@ void affiche_vainqueur(Plateau p)
 
 Coord demande_position(Plateau p)
 {
+    Coord ret;
+    ret.i = 0;
+    ret.j = 0;
+    affiche_plateau(p);
 
+    return ret;
 }

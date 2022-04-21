@@ -65,7 +65,7 @@ void affiche_vainqueur(Plateau p);
 
 /**
  * @brief Fonction qui demande à quelle position doit être placée la carte
- * 
+ * @todo A finir.
  * @param p Plateau de jeu.
  */
 Coord demande_position(Plateau p);
