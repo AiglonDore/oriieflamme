@@ -106,15 +106,15 @@ void init_pioche(Faction f)
     pioche = get_pioche(f);
     for (i = 0; i < 32; i += 1)
     {
-        int j = nb_occ[i];
+        int j = get_nb_occ_vg(i);
         while (j != 0)
         {
             Carte c = creation_carte();
             set_id(c, i);
-            set_nom(c, nom_carte[i]);
+            set_nom(c, get_nom_carte_vg(i));
             set_proprietaire(c, f);
-            set_description(c, description[i]);
-            set_nb_occ(c, nb_occ[i]);
+            set_description(c, get_description_vg(i));
+            set_nb_occ(c, get_nb_occ_vg(i));
             set_est_cachee(c, 1);
             ajout_pioche(pioche, c);
             j -= 1;
