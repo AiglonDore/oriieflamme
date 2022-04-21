@@ -18,10 +18,22 @@ Include dependency graph for interface.\+c\+:\nopagebreak
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+char $\ast$ \mbox{\hyperlink{interface_8c_ab716e0c166fd1d07dca1545157befef5}{nom\+\_\+faction}} (\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f)
+\begin{DoxyCompactList}\small\item\em Fonction qui demande le nom de la faction. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{interface_8c_a8bb576a3127fc3437d91467ec19d0de0}{affiche\+\_\+plateau}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p)
 \begin{DoxyCompactList}\small\item\em Fonction qui affiche le plateau de jeu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_8c_ad36c35f78849abca949ea8c755f5b4e6}{affiche\+\_\+main}} (\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f)
+\begin{DoxyCompactList}\small\item\em Fonction qui affiche la main de la faction pointée par f. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interface_8c_aea24bb8bc24a5877aba14a3879602c7b}{utiliser\+\_\+option}} (\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f)
+\begin{DoxyCompactList}\small\item\em Fonction qui demande si la faction pointée par f veut utiliser son option. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{carte_8h_a633ba64ee908d35aac798844f477ee9d}{Carte}} \mbox{\hyperlink{interface_8c_a59cec6e54845df8ae5160bd8b2a351c2}{a\+\_\+poser\+\_\+face\+\_\+cachee\+\_\+sur\+\_\+plateau}} (\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f)
+\begin{DoxyCompactList}\small\item\em Fonction qui demande la carte qui sera posée face cachée sur le plateau. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{interface_8c_a8e9d54781d879f437be3285b5412c1c2}{affiche\+\_\+effets}} (\mbox{\hyperlink{carte_8h_a633ba64ee908d35aac798844f477ee9d}{Carte}} c)
-\begin{DoxyCompactList}\small\item\em Affiche les effets de la carte c si elle est posée. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Affiche les effets de la carte c si elle est posée. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_8c_a802545d4ff1c158f7a2ca77be20915f9}{affiche\+\_\+vainqueur}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p)
+\begin{DoxyCompactList}\small\item\em Affiche le vainquer de la partie. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_coord}{Coord}} \mbox{\hyperlink{interface_8c_a8330a6ec294f24da52fe0f265181fbcc}{demande\+\_\+position}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p)
+\begin{DoxyCompactList}\small\item\em Fonction qui demande à quelle position doit être placée la carte. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -39,6 +51,44 @@ Thomas Roiseux (\href{mailto:thomas.roiseux@ensiie.fr}{\texttt{ thomas.\+roiseux
 
 
 \doxysubsection{Function Documentation}
+\mbox{\Hypertarget{interface_8c_a59cec6e54845df8ae5160bd8b2a351c2}\label{interface_8c_a59cec6e54845df8ae5160bd8b2a351c2}} 
+\index{interface.c@{interface.c}!a\_poser\_face\_cachee\_sur\_plateau@{a\_poser\_face\_cachee\_sur\_plateau}}
+\index{a\_poser\_face\_cachee\_sur\_plateau@{a\_poser\_face\_cachee\_sur\_plateau}!interface.c@{interface.c}}
+\doxysubsubsection{\texorpdfstring{a\_poser\_face\_cachee\_sur\_plateau()}{a\_poser\_face\_cachee\_sur\_plateau()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{carte_8h_a633ba64ee908d35aac798844f477ee9d}{Carte}} a\+\_\+poser\+\_\+face\+\_\+cachee\+\_\+sur\+\_\+plateau (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f }\end{DoxyParamCaption})}
+
+
+
+Fonction qui demande la carte qui sera posée face cachée sur le plateau. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & faction en jeu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Carte carte choisie par la faction f et posée sur le plateau. 
+\end{DoxyReturn}
+
+
+Definition at line 70 of file interface.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interface_8c_a59cec6e54845df8ae5160bd8b2a351c2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interface_8c_a59cec6e54845df8ae5160bd8b2a351c2_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{interface_8c_a8e9d54781d879f437be3285b5412c1c2}\label{interface_8c_a8e9d54781d879f437be3285b5412c1c2}} 
 \index{interface.c@{interface.c}!affiche\_effets@{affiche\_effets}}
 \index{affiche\_effets@{affiche\_effets}!interface.c@{interface.c}}
@@ -58,7 +108,7 @@ Affiche les effets de la carte c si elle est posée.
 \end{DoxyParams}
 
 
-Definition at line 19 of file interface.\+c.
+Definition at line 98 of file interface.\+c.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -67,11 +117,50 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=291pt]{interface_8c_a8e9d54781d879f437be3285b5412c1c2_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{interface_8c_a8e9d54781d879f437be3285b5412c1c2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{interface_8c_ad36c35f78849abca949ea8c755f5b4e6}\label{interface_8c_ad36c35f78849abca949ea8c755f5b4e6}} 
+\index{interface.c@{interface.c}!affiche\_main@{affiche\_main}}
+\index{affiche\_main@{affiche\_main}!interface.c@{interface.c}}
+\doxysubsubsection{\texorpdfstring{affiche\_main()}{affiche\_main()}}
+{\footnotesize\ttfamily void affiche\+\_\+main (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f }\end{DoxyParamCaption})}
+
+
+
+Fonction qui affiche la main de la faction pointée par f. 
+
+\begin{DoxyReturn}{Returns}
+rien 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em f} & faction en jeu \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 49 of file interface.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interface_8c_ad36c35f78849abca949ea8c755f5b4e6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interface_8c_ad36c35f78849abca949ea8c755f5b4e6_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{interface_8c_a8bb576a3127fc3437d91467ec19d0de0}\label{interface_8c_a8bb576a3127fc3437d91467ec19d0de0}} 
@@ -94,12 +183,161 @@ rien
 \end{DoxyReturn}
 
 
-Definition at line 14 of file interface.\+c.
+Definition at line 22 of file interface.\+c.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{interface_8c_a8bb576a3127fc3437d91467ec19d0de0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{interface_8c_a8bb576a3127fc3437d91467ec19d0de0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{interface_8c_a802545d4ff1c158f7a2ca77be20915f9}\label{interface_8c_a802545d4ff1c158f7a2ca77be20915f9}} 
+\index{interface.c@{interface.c}!affiche\_vainqueur@{affiche\_vainqueur}}
+\index{affiche\_vainqueur@{affiche\_vainqueur}!interface.c@{interface.c}}
+\doxysubsubsection{\texorpdfstring{affiche\_vainqueur()}{affiche\_vainqueur()}}
+{\footnotesize\ttfamily void affiche\+\_\+vainqueur (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Affiche le vainquer de la partie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Plateau de jeu. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 103 of file interface.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interface_8c_a802545d4ff1c158f7a2ca77be20915f9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interface_8c_a802545d4ff1c158f7a2ca77be20915f9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{interface_8c_a8330a6ec294f24da52fe0f265181fbcc}\label{interface_8c_a8330a6ec294f24da52fe0f265181fbcc}} 
+\index{interface.c@{interface.c}!demande\_position@{demande\_position}}
+\index{demande\_position@{demande\_position}!interface.c@{interface.c}}
+\doxysubsubsection{\texorpdfstring{demande\_position()}{demande\_position()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_coord}{Coord}} demande\+\_\+position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Fonction qui demande à quelle position doit être placée la carte. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Plateau de jeu. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 123 of file interface.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interface_8c_a8330a6ec294f24da52fe0f265181fbcc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{interface_8c_ab716e0c166fd1d07dca1545157befef5}\label{interface_8c_ab716e0c166fd1d07dca1545157befef5}} 
+\index{interface.c@{interface.c}!nom\_faction@{nom\_faction}}
+\index{nom\_faction@{nom\_faction}!interface.c@{interface.c}}
+\doxysubsubsection{\texorpdfstring{nom\_faction()}{nom\_faction()}}
+{\footnotesize\ttfamily char$\ast$ nom\+\_\+faction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f }\end{DoxyParamCaption})}
+
+
+
+Fonction qui demande le nom de la faction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & Faction en question \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nom de la faction 
+\end{DoxyReturn}
+
+
+Definition at line 14 of file interface.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{interface_8c_ab716e0c166fd1d07dca1545157befef5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interface_8c_ab716e0c166fd1d07dca1545157befef5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{interface_8c_aea24bb8bc24a5877aba14a3879602c7b}\label{interface_8c_aea24bb8bc24a5877aba14a3879602c7b}} 
+\index{interface.c@{interface.c}!utiliser\_option@{utiliser\_option}}
+\index{utiliser\_option@{utiliser\_option}!interface.c@{interface.c}}
+\doxysubsubsection{\texorpdfstring{utiliser\_option()}{utiliser\_option()}}
+{\footnotesize\ttfamily int utiliser\+\_\+option (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f }\end{DoxyParamCaption})}
+
+
+
+Fonction qui demande si la faction pointée par f veut utiliser son option. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & faction en jeu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 non 
+
+1 oui 
+\end{DoxyReturn}
+
+
+Definition at line 62 of file interface.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{interface_8c_aea24bb8bc24a5877aba14a3879602c7b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interface_8c_aea24bb8bc24a5877aba14a3879602c7b_icgraph}
 \end{center}
 \end{figure}

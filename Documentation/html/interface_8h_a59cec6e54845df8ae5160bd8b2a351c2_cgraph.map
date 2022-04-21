@@ -1,0 +1,52 @@
+<map id="a_poser_face_cachee_sur_plateau" name="a_poser_face_cachee_sur_plateau">
+<area shape="rect" id="node1" title="Fonction qui demande la carte qui sera posée face cachée sur le plateau." alt="" coords="5,265,167,306"/>
+<area shape="rect" id="node2" href="$interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="215,449,321,476"/>
+<area shape="rect" id="node3" href="$faction_8h.html#aa0864716c89adc851b3d848aea2e3931" title="Prototype de get_main qui permet de récupérer la main de la faction." alt="" coords="947,399,1029,425"/>
+<area shape="rect" id="node4" href="$carte_8h.html#a36dc56ecacce3b5d693e8ddab6e4201a" title="Prototype de get_nom qui permet de récupérer le nom de la carte." alt="" coords="949,551,1027,577"/>
+<area shape="rect" id="node5" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="369,1069,424,1096"/>
+<area shape="rect" id="node6" href="$interface_8h.html#a802545d4ff1c158f7a2ca77be20915f9" title="Affiche le vainquer de la partie." alt="" coords="472,1412,611,1439"/>
+<area shape="rect" id="node10" href="$plateau_8h.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="492,753,591,780"/>
+<area shape="rect" id="node17" href="$plateau_8h.html#aa2fd2fef89b903a5c089bf57cb932e29" title="Libère la mémoire associée au plateau de jeu et aux deux factions." alt="" coords="484,1311,599,1337"/>
+<area shape="rect" id="node30" href="$plateau_8h.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="473,1133,610,1160"/>
+<area shape="rect" id="node36" href="$main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="507,272,576,299"/>
+<area shape="rect" id="node47" href="$main_8c.html#a34ccc9f1e0da464163a6f5e297c42563" title="Fonction qui contrôle la phase 2." alt="" coords="507,1007,576,1033"/>
+<area shape="rect" id="node7" href="$plateau_8h.html#a44f2d0cc019d090bd9af0bd3f86bb451" title="Prototype de get_factions qui permet de récupérer les factions en jeu." alt="" coords="705,1463,807,1489"/>
+<area shape="rect" id="node8" href="$faction_8h.html#aa92da3f09f56bc38be472b50fcfed30d" title="Prototype de get_nb_manches_gagnees qui permet de récupérer le nombre de manches gagnées d&#39;une factio..." alt="" coords="659,1361,853,1388"/>
+<area shape="rect" id="node9" href="$faction_8h.html#a152a86ba5f75e19f5eaa93383d2cb64f" title="Prototype de get_nom qui permet de récupérer le nom de la faction." alt="" coords="1123,905,1253,932"/>
+<area shape="rect" id="node11" href="$faction_8h.html#a2b256492eb2a3ee0dbffeb1bd73f83c2" title="Prototype de creation_faction qui permet d&#39;initialiser une faction." alt="" coords="693,652,819,679"/>
+<area shape="rect" id="node12" href="$plateau_8c.html#a93d4e98168a58e3d46e8d6b5416ec084" title="Prototype de creation_plateau qui permet d&#39;initialiser une carte." alt="" coords="691,703,821,729"/>
+<area shape="rect" id="node13" href="$interface_8h.html#ab716e0c166fd1d07dca1545157befef5" title="Fonction qui demande le nom de la faction." alt="" coords="937,804,1039,831"/>
+<area shape="rect" id="node14" href="$faction_8h.html#a57e73fc5dc7401a1feef6e5c68df6e3b" title="Prototype de set_carte_anl_retournee qui permet d&#39;initialiser si la faction a retourné sa carte Anne&#45;..." alt="" coords="667,601,845,628"/>
+<area shape="rect" id="node15" href="$faction_8h.html#af9ec0d0b4d1f75128a2b5e6b70d7e677" title="Prototype de set_nb_manches_gagnees qui permet d&#39;initialiser le nombre de manches gagnées d&#39;une facti..." alt="" coords="659,855,853,881"/>
+<area shape="rect" id="node16" href="$faction_8h.html#aab43472fe255e9a674d0b8c8c022521e" title="Prototype de set_nom qui permet d&#39;initialiser le nom de la faction." alt="" coords="691,753,821,780"/>
+<area shape="rect" id="node18" href="$plateau_8c.html#a2190bbe0984d78c5f3d5f2e646210f07" title="Crée la pioche avec les 32 cartes de l&#39;énoncé pour la faction donnée." alt="" coords="709,1311,803,1337"/>
+<area shape="rect" id="node29" href="$faction_8h.html#a66e884a727de4d0741a8d344308ed43d" title="Permet de supprimer une faction et de libérer son espace mémoire alloué" alt="" coords="686,1412,826,1439"/>
+<area shape="rect" id="node19" href="$structure_8h.html#ac8dcdc0ffb092b739d94573e47eaaacf" title="ajoute la carte à la pioche au sommet de celle&#45;ci" alt="" coords="1135,95,1241,121"/>
+<area shape="rect" id="node20" href="$carte_8h.html#add213f610b61b0471f517034edebed44" title="Prototype de creation_carte qui permet d&#39;initialiser une carte." alt="" coords="931,1209,1045,1236"/>
+<area shape="rect" id="node21" href="$structure_8h.html#ad911b5ece54d506c7109120dbfc9c2f0" title="Savoir si une faction a itilisé l&#39;option de remélanger sa main et boîte à idée et de repiocher des ca..." alt="" coords="908,1260,1068,1287"/>
+<area shape="rect" id="node22" href="$faction_8h.html#a4d000f4cb37265a12d2e36fc372b3b28" title="Prototype de get_pioche qui permet de récupérer la pioche de la faction." alt="" coords="941,1311,1035,1337"/>
+<area shape="rect" id="node23" href="$carte_8h.html#a30fc91d4dd38a6b29c6eb86681238a70" title="Prototype de set_description qui permet d&#39;initialiser la description de la carte." alt="" coords="927,1361,1049,1388"/>
+<area shape="rect" id="node24" href="$carte_8h.html#ab60bacf04b3f4a170b341b48c38e4144" title="Prototype de set_est_cachee qui permet de changer la valeur associé à la face d&#39;une carte: 0 Face non..." alt="" coords="927,1108,1049,1135"/>
+<area shape="rect" id="node25" href="$carte_8h.html#aa47c30f1bd901b6511effcda2372029c" title="Prototype de set_id qui permet d&#39;initialiser l&#39;id de la carte." alt="" coords="957,1412,1019,1439"/>
+<area shape="rect" id="node26" href="$carte_8h.html#ab49c570d782fe28d0639c144a68fc311" title="Prototype de set_nb_occ qui permet d&#39;initialiser le nombre d&#39;occurences d&#39;une carte." alt="" coords="941,1463,1035,1489"/>
+<area shape="rect" id="node27" href="$carte_8h.html#a3a473d789c03dc6bad961bfc4f15e7b3" title="Prototype de set_nom qui permet d&#39;initialiser le nom de la carte." alt="" coords="949,1513,1027,1540"/>
+<area shape="rect" id="node28" href="$carte_8h.html#a5c6c6b9982006477c63fabac74db4649" title="Prototype de set_proprietaire qui permet d&#39;initialiser la fonction qui possède la carte." alt="" coords="925,1564,1051,1591"/>
+<area shape="rect" id="node31" href="$carte_8h.html#a07d5b163a3e848772039f8f2e99db83e" title="Prototype de get_id qui permet de récupérer l&#39;id de la carte." alt="" coords="957,1007,1019,1033"/>
+<area shape="rect" id="node32" href="$carte_8h.html#a253c323b2facf1fd67c2e6602c5932ee" title="Prototype de get_proprietaire qui permet de récupérer la faction qui possède cette carte." alt="" coords="925,956,1051,983"/>
+<area shape="rect" id="node33" href="$faction_8h.html#ac1ec72e1c18d60dc3a3718520464b9e9" title="Prototype de get_pts_DDRS_manche qui permet de récupérer le nombre de points DDRS de la manche en cou..." alt="" coords="901,1057,1075,1084"/>
+<area shape="rect" id="node34" href="$faction_8h.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="715,1260,797,1287"/>
+<area shape="rect" id="node35" href="$faction_8h.html#ac18109f0c5db773e1499954c48373a4e" title="Prototype de set_pts_DDRS_manche qui permet d&#39;initialiser le nombre de points DDRS de la manche en co..." alt="" coords="670,1159,842,1185"/>
+<area shape="rect" id="node37" href="$faction_8h.html#aaa0655066f74d90991cac0094fb8964a" title="Savoir si une faction a utilisé l&#39;option de remélanger sa main et boîte à idée et de repiocher des ca..." alt="" coords="703,297,809,324"/>
+<area shape="rect" id="node38" href="$interface_8h.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="703,449,809,476"/>
+<area shape="rect" id="node39" href="$interface_8h.html#a8330a6ec294f24da52fe0f265181fbcc" title="Fonction qui demande à quelle position doit être placée la carte." alt="" coords="685,145,827,172"/>
+<area shape="rect" id="node40" href="$plateau_8h.html#ab023dd151ba2f8cf843b792a3434b8f5" title="Détermine la faction qui joue en premier et renvoie la liste des deux factions du jeu dont le premier..." alt="" coords="691,196,821,223"/>
+<area shape="rect" id="node41" href="$faction_8h.html#abc7feb29ed864c76ea95e1afc3cc7752" title="Permet à une faction de vider sa main, mélanger sa pioche et repiocher ses cartes." alt="" coords="714,95,798,121"/>
+<area shape="rect" id="node43" href="$faction_8h.html#adf3497e77c11921394ac7ca7d2e6cbdb" title="Permet à une faction de mélanger sa pioche." alt="" coords="921,44,1055,71"/>
+<area shape="rect" id="node44" href="$faction_8h.html#a5b400a1d1b3c89ef50e5bb4b98e177cb" title="Permet à une faction de repiocher ses cartes." alt="" coords="721,247,791,273"/>
+<area shape="rect" id="node45" href="$plateau_8h.html#a425437529596e13babd7bc8b4e04d491" title="Permet à une faction de poser une carte face cachée sur le plateau." alt="" coords="707,500,805,527"/>
+<area shape="rect" id="node46" href="$interface_8h.html#aea24bb8bc24a5877aba14a3879602c7b" title="Fonction qui demande si la faction pointée par f veut utiliser son option." alt="" coords="699,399,813,425"/>
+<area shape="rect" id="node42" href="$faction_8c.html#adf3497e77c11921394ac7ca7d2e6cbdb" title="Permet à une faction de mélanger sa pioche." alt="" coords="921,95,1055,121"/>
+<area shape="rect" id="node48" href="$interface_8h.html#a8e9d54781d879f437be3285b5412c1c2" title="Affiche les effets de la carte c si elle est posée." alt="" coords="701,905,811,932"/>
+<area shape="rect" id="node49" href="$interface_8h.html#a8bb576a3127fc3437d91467ec19d0de0" title="Fonction qui affiche le plateau de jeu." alt="" coords="695,956,817,983"/>
+<area shape="rect" id="node50" href="$plateau_8h.html#a41cddf8d1f1e457df2f4c905d6605151" title="retourne la carte la plus en haut à gauche du plateau face visible et active son effet" alt="" coords="695,1057,817,1084"/>
+</map>

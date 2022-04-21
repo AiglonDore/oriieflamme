@@ -1,7 +1,9 @@
 <map id="melanger" name="melanger">
-<area shape="rect" id="node1" title="Permet à une faction de vider sa main, mélanger sa pioche et repiocher ses cartes." alt="" coords="541,5,625,32"/>
-<area shape="rect" id="node2" href="$main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="424,5,493,32"/>
-<area shape="rect" id="node3" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="321,5,376,32"/>
-<area shape="rect" id="node4" href="$plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,5,143,32"/>
-<area shape="rect" id="node5" href="$faction_8c.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="191,68,273,95"/>
+<area shape="rect" id="node1" title="Permet à une faction de vider sa main, mélanger sa pioche et repiocher ses cartes." alt="" coords="589,38,673,65"/>
+<area shape="rect" id="node2" href="$main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="472,38,541,65"/>
+<area shape="rect" id="node3" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="369,89,424,115"/>
+<area shape="rect" id="node4" href="$interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="215,38,321,65"/>
+<area shape="rect" id="node6" href="$plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="17,151,155,178"/>
+<area shape="rect" id="node7" href="$faction_8c.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="227,89,309,115"/>
+<area shape="rect" id="node5" href="$interface_8c.html#a59cec6e54845df8ae5160bd8b2a351c2" title="Fonction qui demande la carte qui sera posée face cachée sur le plateau." alt="" coords="5,5,167,47"/>
 </map>

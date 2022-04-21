@@ -1,10 +1,13 @@
 <map id="retourne_Ecocup" name="retourne_Ecocup">
-<area shape="rect" id="node1" title="Active les effets de la carte Ecocup." alt="" coords="897,13,1028,39"/>
-<area shape="rect" id="node2" href="$plateau_8c.html#a676ed33ed1ff7fd3200efd68462f61e0" title="Active les effets de la carte d&#39;identifiant id." alt="" coords="745,13,849,39"/>
-<area shape="rect" id="node3" href="$plateau_8c.html#a289b461ee18614882e9e0e242c2193da" title="Active les effets de la carte Massinissa Merabet." alt="" coords="541,5,697,47"/>
-<area shape="rect" id="node4" href="$plateau_8c.html#a41cddf8d1f1e457df2f4c905d6605151" title="retourne la carte la plus en haut à gauche du plateau face visible et active son effet" alt="" coords="558,71,681,98"/>
-<area shape="rect" id="node5" href="$main_8c.html#a34ccc9f1e0da464163a6f5e297c42563" title="Fonction qui contrôle la phase 2." alt="" coords="424,71,493,98"/>
-<area shape="rect" id="node6" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="321,71,376,98"/>
-<area shape="rect" id="node7" href="$plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,71,143,98"/>
-<area shape="rect" id="node8" href="$faction_8c.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="191,134,273,161"/>
+<area shape="rect" id="node1" title="Active les effets de la carte Ecocup." alt="" coords="1063,39,1193,66"/>
+<area shape="rect" id="node2" href="$plateau_8c.html#a676ed33ed1ff7fd3200efd68462f61e0" title="Active les effets de la carte d&#39;identifiant id." alt="" coords="911,39,1015,66"/>
+<area shape="rect" id="node3" href="$plateau_8c.html#a289b461ee18614882e9e0e242c2193da" title="Active les effets de la carte Massinissa Merabet." alt="" coords="707,32,863,73"/>
+<area shape="rect" id="node4" href="$plateau_8c.html#a41cddf8d1f1e457df2f4c905d6605151" title="retourne la carte la plus en haut à gauche du plateau face visible et active son effet" alt="" coords="723,98,846,125"/>
+<area shape="rect" id="node5" href="$main_8c.html#a34ccc9f1e0da464163a6f5e297c42563" title="Fonction qui contrôle la phase 2." alt="" coords="589,98,659,125"/>
+<area shape="rect" id="node6" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="487,98,541,125"/>
+<area shape="rect" id="node7" href="$interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="332,35,439,62"/>
+<area shape="rect" id="node10" href="$plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="135,122,272,149"/>
+<area shape="rect" id="node11" href="$faction_8c.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="344,161,427,187"/>
+<area shape="rect" id="node8" href="$interface_8c.html#a59cec6e54845df8ae5160bd8b2a351c2" title="Fonction qui demande la carte qui sera posée face cachée sur le plateau." alt="" coords="123,5,284,47"/>
+<area shape="rect" id="node9" href="$main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="5,71,75,98"/>
 </map>

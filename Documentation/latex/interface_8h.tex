@@ -27,7 +27,7 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{DoxyCompactItemize}
 \item 
 char $\ast$ \mbox{\hyperlink{interface_8h_ab716e0c166fd1d07dca1545157befef5}{nom\+\_\+faction}} (\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f)
-\begin{DoxyCompactList}\small\item\em Fonction qui affiche le plateau de jeu. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Fonction qui demande le nom de la faction. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{interface_8h_a8bb576a3127fc3437d91467ec19d0de0}{affiche\+\_\+plateau}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p)
 \begin{DoxyCompactList}\small\item\em Fonction qui affiche le plateau de jeu. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{interface_8h_ad36c35f78849abca949ea8c755f5b4e6}{affiche\+\_\+main}} (\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f)
@@ -77,7 +77,20 @@ Fonction qui demande la carte qui sera posée face cachée sur le plateau.
 \begin{DoxyReturn}{Returns}
 Carte carte choisie par la faction f et posée sur le plateau. 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:\nopagebreak
+
+
+Definition at line 70 of file interface.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interface_8h_a59cec6e54845df8ae5160bd8b2a351c2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -103,7 +116,7 @@ Affiche les effets de la carte c si elle est posée.
 \end{DoxyParams}
 
 
-Definition at line 19 of file interface.\+c.
+Definition at line 98 of file interface.\+c.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -112,7 +125,8 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=291pt]{interface_8h_a8e9d54781d879f437be3285b5412c1c2_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -137,7 +151,20 @@ rien
 {\em f} & faction en jeu \\
 \hline
 \end{DoxyParams}
-Here is the caller graph for this function\+:\nopagebreak
+
+
+Definition at line 49 of file interface.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{interface_8h_ad36c35f78849abca949ea8c755f5b4e6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -164,9 +191,18 @@ rien
 \end{DoxyReturn}
 
 
-Definition at line 14 of file interface.\+c.
+Definition at line 22 of file interface.\+c.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{interface_8h_a8bb576a3127fc3437d91467ec19d0de0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -188,7 +224,20 @@ Affiche le vainquer de la partie.
 {\em p} & Plateau de jeu. \\
 \hline
 \end{DoxyParams}
-Here is the caller graph for this function\+:\nopagebreak
+
+
+Definition at line 103 of file interface.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interface_8h_a802545d4ff1c158f7a2ca77be20915f9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -210,7 +259,12 @@ Fonction qui demande à quelle position doit être placée la carte.
 {\em p} & Plateau de jeu. \\
 \hline
 \end{DoxyParams}
-Here is the caller graph for this function\+:\nopagebreak
+
+
+Definition at line 123 of file interface.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -225,16 +279,28 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Fonction qui affiche le plateau de jeu. 
+Fonction qui demande le nom de la faction. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em p} & plateau de jeu (pointeur devant être valide) \\
+{\em f} & Faction en question \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-rien 
+Nom de la faction 
 \end{DoxyReturn}
+
+
+Definition at line 14 of file interface.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{interface_8h_ab716e0c166fd1d07dca1545157befef5_cgraph}
+\end{center}
+\end{figure}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -263,7 +329,20 @@ Fonction qui demande si la faction pointée par f veut utiliser son option.
 
 1 oui 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:\nopagebreak
+
+
+Definition at line 62 of file interface.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{interface_8h_aea24bb8bc24a5877aba14a3879602c7b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

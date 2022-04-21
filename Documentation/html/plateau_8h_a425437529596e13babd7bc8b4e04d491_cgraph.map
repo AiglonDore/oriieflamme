@@ -1,0 +1,5 @@
+<map id="poser_carte" name="poser_carte">
+<area shape="rect" id="node1" title="Permet à une faction de poser une carte face cachée sur le plateau." alt="" coords="5,31,104,57"/>
+<area shape="rect" id="node2" href="$faction_8h.html#aa0864716c89adc851b3d848aea2e3931" title="Prototype de get_main qui permet de récupérer la main de la faction." alt="" coords="174,5,257,32"/>
+<area shape="rect" id="node3" href="$carte_8h.html#a253c323b2facf1fd67c2e6602c5932ee" title="Prototype de get_proprietaire qui permet de récupérer la faction qui possède cette carte." alt="" coords="152,56,279,83"/>
+</map>
