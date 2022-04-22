@@ -107,15 +107,16 @@ void piocher(Faction f)
 
 void supprimer_faction(Faction f)
 {
-    free(f->pioche); // la pioche a déjà été vidée normalement dans libere_plateau
+    set_pioche(f, NULL);
+    free(f->pioche); // la pioche a déjà été vidée
     int i;
     for (i = 0; i < 8; i += 1)
     {
         f->main[i] = NULL;
     }
     free(f->nom);
-    free(f);
     f = NULL;
+    free(f);
 }
 
 /**************************************************
@@ -186,7 +187,7 @@ void set_main(Faction f, Carte *main)
     }
 }
 
-Pioche get_pioche(Faction f)
+void set_pioche(Faction f, Pioche p)
 {
-    return f->pioche;
+    return f->pioche = p;
 }

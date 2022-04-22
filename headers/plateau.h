@@ -173,7 +173,7 @@ void poser_carte(Carte c, Plateau p, int i, int j);
  * @param score_adverse score de la faction f_adverse
  *
  */
-void bonus_anl(Faction f, int score, Faction f_adverse, int score_adverse);
+void bonus_anl(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse);
 
 /**
  * @brief Active les effets de la carte FISE

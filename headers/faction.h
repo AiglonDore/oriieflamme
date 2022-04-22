@@ -172,12 +172,12 @@ Carte *get_main(Faction f);
 void set_main(Faction f, Carte *main);
 
 /**
- * @brief Prototype de get_pioche qui permet de récupérer la pioche de la faction
+ * @brief Prototype de set_pioche qui permet d'initialiser la pioche de la faction
  *
  * @param f
- * @return Pioche
+ * @param p
  */
 
-Pioche get_pioche(Faction f);
+void set_pioche(Faction f, Pioche p);
 
 #endif

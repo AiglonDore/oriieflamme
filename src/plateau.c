@@ -104,54 +104,59 @@ int get_cartes_non_retournees_manche(Plateau p)
 void init_pioche(Faction f)
 {
     int i;
-    Pioche pioche = creation_pioche_vide();
-    pioche = get_pioche(f);
+    Pioche pioche = creation_pioche_vide(); // allocation mémoire pour la pioche
     for (i = 0; i < 32; i += 1)
     {
-        int j = get_nb_occ_vg(i);
-        while (j != 0)
+        int j = get_nb_occ_vg(i); // on récupère le nb d'occurences de la carte d'indice i
+        while (j != 0)            // on l'ajoute j fois
         {
-            Carte c = creation_carte();
-            set_id(c, i);
-            set_nom(c, get_nom_carte_vg(i));
-            set_proprietaire(c, f);
-            set_description(c, get_description_vg(i));
-            set_nb_occ(c, get_nb_occ_vg(i));
-            set_est_cachee(c, 1);
-            ajout_pioche(pioche, c);
+            Carte c = creation_carte();                // on créé ladite carte
+            set_id(c, i);                              // on lui associe son identifiant
+            set_nom(c, get_nom_carte_vg(i));           // on lui associe son nom
+            set_proprietaire(c, f);                    // on lui associe son propriétaire
+            set_description(c, get_description_vg(i)); // on lui associe sa descrption
+            set_nb_occ(c, get_nb_occ_vg(i));           // on lui associe son nb d'occurences
+            set_est_cachee(c, 1);                      // on l'initialise face cachée
+            ajout_pioche(pioche, c);                   // on ajoute la carte
             j -= 1;
         }
     }
+    set_pioche(f, pioche); // on initialise la pioche de f ainsi construite
 }
 
 Plateau init_plateau()
 {
-    Plateau p = creation_plateau();
+    Plateau p = creation_plateau(); // allocation mémoire pour le plateau
+
     // On initialise le numéro de manche
     p->numero_manche = 0;
-    // On initialise les factions
+
+    // On crée les factions : leurs noms, leurs nombres de manches gagnées et si oui ou non ils ont déjà retourné une carte Anne-Laure Ligozat
     Faction faction1 = creation_faction();
     Faction faction2 = creation_faction();
     set_nom_faction(faction1, "Faction 1");
     set_nom_faction(faction2, "Faction 2");
-    char *a = nom_faction(faction1);
-    char *b = nom_faction(faction2);
+    char *a = nom_faction(faction1); // demande à la faction 1 comment ils souhaitent s'appeler
+    char *b = nom_faction(faction2); // demande à la faction 2 comment ils souhaitent s'appeler
     set_nom_faction(faction1, a);
     set_nom_faction(faction2, b);
     set_nb_manches_gagnees(faction1, 0);
     set_nb_manches_gagnees(faction2, 0);
-    set_carte_anl_retournee(faction1, 0);
+    set_carte_anl_retournee(faction1, 0); // évidemment ils n'ont pas retourné de carte anl pour le moment
     set_carte_anl_retournee(faction2, 0);
+
+    // On initialise les factions du plateau
     p->factions.left = faction1;
     p->factions.right = faction2;
+
     // Le reste de l'initialisation est commun à chaque début de manche et se fera dans nouvelle_manche
+
     return p;
 }
 
 void libere_plateau(Plateau p)
 {
-    init_pioche(p->factions.left);
-    init_pioche(p->factions.right);
+    // On doit faire attention à libérer proprement les factions en jeu
     supprimer_faction(p->factions.left);
     supprimer_faction(p->factions.right);
     return;
@@ -159,7 +164,7 @@ void libere_plateau(Plateau p)
 
 int nouvelle_manche(Plateau p)
 {
-    // Lorsqu'une manche se termine
+    // On traite d'abord le cas où une manche vient de se terminer (plus de cartes à retourner)
     if (p->numero_manche != 0)
     {
         int score_left = get_pts_DDRS_manche(p->factions.left);
@@ -169,8 +174,8 @@ int nouvelle_manche(Plateau p)
         Carte carte = p->plateau_jeu[p->derniere_carte_retournee.i][p->derniere_carte_retournee.j];
         id_carte id = get_id(carte);
         Faction f = get_proprietaire(carte);
-        if (id == Laurent_Prevel)
-        {
+        if (id == Laurent_Prevel) // on teste si la dernière carte retournée était une carte Laurent Prével
+        {                         // si c'est le cas alors la faction propriétaire a gagné la manche
             if (f == p->factions.left)
             {
                 set_nb_manches_gagnees(p->factions.left, manches_gagnees_left + 1);
@@ -181,7 +186,7 @@ int nouvelle_manche(Plateau p)
             }
         }
         else
-        {
+        { // sinon on compare le nombre de points DDRS
             if (score_left < score_right)
             {
                 set_nb_manches_gagnees(p->factions.right, manches_gagnees_right + 1);
@@ -191,7 +196,7 @@ int nouvelle_manche(Plateau p)
                 set_nb_manches_gagnees(p->factions.left, manches_gagnees_left + 1);
             }
             else
-            { // égalité
+            { // si il y a égalité on regarde la carte la plus en haut à gauche à la fin de la partie et on identifie son propriétaire qui sera le gagnant
                 Carte carte = p->plateau_jeu[p->carte_haut_gauche.i][p->carte_haut_gauche.j];
                 Faction f = get_proprietaire(carte);
                 if (f == p->factions.left)
@@ -205,12 +210,12 @@ int nouvelle_manche(Plateau p)
             }
         }
     }
-    // On regarde si une faction a gagné
+    // On regarde si une faction a gagné la partie
     if (get_nb_manches_gagnees(p->factions.left) == 2 || get_nb_manches_gagnees(p->factions.right) == 2)
     {
-        return 0;
+        return 0; // on retourne 0, la partie est terminée
     }
-    // On initialise les scores des factions
+    // Sinon, on initialise les scores des factions pour la manche à venir
     set_pts_DDRS_manche(p->factions.left, 0);
     set_pts_DDRS_manche(p->factions.right, 0);
     // On réinitialise les pioches et les mains des factions
@@ -219,7 +224,7 @@ int nouvelle_manche(Plateau p)
     Carte main[8] = {NULL};
     set_main(p->factions.left, main);
     set_main(p->factions.right, main);
-    // On initialise le plateau de jeu
+    // On initialise le plateau de jeu à NULL
     int i, j;
     for (i = 0; i < 129; i += 1)
     {
@@ -253,7 +258,7 @@ int nouvelle_manche(Plateau p)
     p->carte_haut_gauche.i = -1;
     p->carte_haut_gauche.j = -1;
 
-    return 1;
+    return 1; // le jeu continue
 }
 
 Factions_en_jeu factions_plateau(Plateau p)
@@ -287,18 +292,23 @@ void poser_carte(Carte c, Plateau p, int i, int j)
 {
     Faction f = get_proprietaire(c);
     Carte *m = get_main(f);
+    // On supprime la carte à poser de la main de la faction
     int k = 0;
     while (c != m[k])
     {
         k += 1;
     }
     m[k] = NULL;
-    // on suppose que i et j sont légales
+    // On pose la carte sur le plateau (on a supposé que les coordonnées i et j sont cohérentes avec les règles du jeu)
     Coord derniere_carte = p->derniere_carte_posee;
     p->cartes_non_retournees_manche += 1;
-    // Cas de la première carte à poser
+    p->plateau_jeu[i][j] = c;
+    p->derniere_carte_posee.i = i;
+    p->derniere_carte_posee.j = j;
+    // Cas de la première carte à poser : on regarde les coordonnées de la dernière carte posée
     if (derniere_carte.i == -1 && derniere_carte.j == -1)
     {
+        // On la dispose au centre du plateau
         p->plateau_jeu[64][64] = c;
         p->derniere_carte_posee.i = 64;
         p->derniere_carte_posee.j = 64;
@@ -312,9 +322,6 @@ void poser_carte(Carte c, Plateau p, int i, int j)
         p->carte_haut_gauche_cachee.j = 64;
         return;
     }
-    p->plateau_jeu[i][j] = c;
-    p->derniere_carte_posee.i = i;
-    p->derniere_carte_posee.j = j;
     // On change éventuellement les coordonnées des cartes en haut à gauche et en bas à droite
     if (j <= p->carte_bas_droite.j && i > p->carte_bas_droite.i)
     {
@@ -324,7 +331,7 @@ void poser_carte(Carte c, Plateau p, int i, int j)
         p->carte_bas_droite_cachee.j = j;
         return;
     }
-    else if (j >= p->carte_haut_gauche.j && i < p->carte_haut_gauche.i)
+    if (j >= p->carte_haut_gauche.j && i < p->carte_haut_gauche.i)
     {
         p->carte_haut_gauche.i = i;
         p->carte_haut_gauche.j = j;
@@ -336,46 +343,71 @@ void poser_carte(Carte c, Plateau p, int i, int j)
 
 void actualiser_constantes_cas_general(Plateau p, Coord coord)
 {
-    // Actualisation des constantes
+    // Actualisation des dernières cartes retournées du plateau lorsque l'on a retourné une carte située aux coordonnées coord
     p->avant_derniere_carte_retournee.i = p->derniere_carte_retournee.i;
     p->avant_derniere_carte_retournee.j = p->derniere_carte_retournee.j;
     p->derniere_carte_retournee.i = coord.i;
     p->derniere_carte_retournee.j = coord.j;
 }
 
-void bonus_anl(Faction f, int score, Faction f_adverse, int score_adverse)
+void bonus_anl(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse)
 {
+    // La fonction est déclenchée quand la faction f retourne une carte EcologIIE, Ecocup, Isolation du bâtiment et Parcours sobriété numérique
     int anl_f = get_carte_anl_retournee(f);
     int anl_f_adv = get_carte_anl_retournee(f_adverse);
+    Coord bas_droite = p->carte_bas_droite_cachee; // dernière carte non retournée du plateau
+    Carte c1 = p->plateau_jeu[bas_droite.i][bas_droite.j];
+    // On teste si une des deux factions a déjà retourné une carte anl et on lui attribue le bonus correspondant
     if (anl_f == 1)
     {
         score += 3;
         set_pts_DDRS_manche(f, score);
+        // Vu que tous les effets persistent, on supprime la dernière carte non retournée du plateau
+        if (get_est_cachee(c1) == 0)
+        {
+            p->cartes_retournees_manche -= 1;
+        }
+        else
+        {
+            p->cartes_non_retournees_manche -= 1;
+        }
+        p->plateau_jeu[bas_droite.i][bas_droite.j] = NULL;
     }
     if (anl_f_adv == 1)
     {
         score_adverse += 3;
         set_pts_DDRS_manche(f_adverse, score_adverse);
+        // Vu que tous les effets persistent, on supprime la dernière carte non retournée du plateau
+        if (get_est_cachee(c1) == 0)
+        {
+            p->cartes_retournees_manche -= 1;
+        }
+        else
+        {
+            p->cartes_non_retournees_manche -= 1;
+        }
+        p->plateau_jeu[bas_droite.i][bas_droite.j] = NULL;
     }
 }
 
 void retourne_FISE(Plateau p, Faction f, int score, Coord coord)
 {
-    set_pts_DDRS_manche(f, score + 1);
+    set_pts_DDRS_manche(f, score + 1); // on ajoute le bonus à la faction qui a posée la carte FISE
     actualiser_constantes_cas_general(p, coord);
 }
 
 void retourne_FISA(Plateau p, Faction f, int score, Coord coord)
 {
-    if (p->cartes_retournees_manche % 2 == 0)
+    if (p->cartes_retournees_manche % 2 == 0) // on teste la parité du nombre de cartes retournées sur le plateau
     {
-        set_pts_DDRS_manche(f, score + 2);
+        set_pts_DDRS_manche(f, score + 2); // on ajoute le bonus à la faction qui a posée la carte FISA
     }
     actualiser_constantes_cas_general(p, coord);
 }
 
 void retourne_FC(Plateau p, Faction f, int score, Coord coord)
 {
+    // On teste si une carte FC est retournée sur la plateau
     int i, j;
     for (i = 0; i < 129; i += 1)
     {
@@ -384,18 +416,22 @@ void retourne_FC(Plateau p, Faction f, int score, Coord coord)
             Carte carte = p->plateau_jeu[i][j];
             if (carte != NULL && get_id(carte) == FC && get_est_cachee(carte) == 0)
             {
+                // C'est le cas donc on ajoute le bonus à la faction qui a posée la carte FC
                 set_pts_DDRS_manche(f, score + 4);
-                break;
+                actualiser_constantes_cas_general(p, coord);
+                return; // On a fini
             }
         }
     }
+    // On a trouvé aucune carte FC retournée sur le plateau, il ne se passe rien
     actualiser_constantes_cas_general(p, coord);
 }
 
 void retourne_EcologIIE(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse, Coord coord)
 {
-    bonus_anl(f, score, f_adverse, score_adverse);
+    bonus_anl(p, f, score, f_adverse, score_adverse);
     int pts_gagnes = 0;
+    // On compte le nombre de cartes FISE, FISA et FC qui sont retournées sur le plateau
     int i, j;
     for (i = 0; i < 129; i += 1)
     {
@@ -408,14 +444,14 @@ void retourne_EcologIIE(Plateau p, Faction f, int score, Faction f_adverse, int 
             }
         }
     }
-    set_pts_DDRS_manche(f, score + pts_gagnes);
+    set_pts_DDRS_manche(f, score + pts_gagnes); // on ajoute le bonus à la faction qui a posée la carte EcologIIE
     actualiser_constantes_cas_general(p, coord);
 }
 
 void retourne_lIIEns(Plateau p, Coord coord)
 {
     // On enlève les cartes FISE/FISA/FC retournées du plateau, on les stocke dans a_retirer
-    Carte a_retirer[16]; // il y a 16 cartes sur le plateau
+    Carte a_retirer[16]; // il y a 16 cartes sur le plateau au maximum
     int nb_a_retirer = 0;
     int i, j;
     for (i = 0; i < 129; i += 1)
@@ -425,9 +461,9 @@ void retourne_lIIEns(Plateau p, Coord coord)
             Carte carte = p->plateau_jeu[i][j];
             if (carte != NULL && get_est_cachee(carte) == 0 && (get_id(carte) == FISE || get_id(carte) == FISA || get_id(carte) == FC))
             {
-                p->plateau_jeu[i][j] = NULL;
-                a_retirer[nb_a_retirer] = carte;
-                nb_a_retirer += 1;
+                p->plateau_jeu[i][j] = NULL;     // suppression du plateau
+                a_retirer[nb_a_retirer] = carte; // stockage dans a_retirer
+                nb_a_retirer += 1;               // incrémentation du compteur qui sert aussi d'indexation dans a_retirer pour la prochaine carte
             }
         }
     }
@@ -465,9 +501,11 @@ void retourne_lIIEns(Plateau p, Coord coord)
     p->avant_derniere_carte_retournee.j = p->derniere_carte_retournee.j;
     p->derniere_carte_retournee.i = coord.i;
     p->derniere_carte_retournee.j = coord.j;
+    // Libération des tableaux melange et t
     for (i = 0; i < nb_a_retirer; i += 1)
     {
         melange[i] = NULL;
+        free(melange[i]);
     }
     free(melange);
     free(t);
@@ -661,7 +699,7 @@ void retourne_The(Plateau p, Faction f, int score, Coord coord)
 
 void retourne_Ecocup(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse, Coord coord)
 {
-    bonus_anl(f, score, f_adverse, score_adverse);
+    bonus_anl(p, f, score, f_adverse, score_adverse);
     actualiser_constantes_cas_general(p, coord);
 }
 
@@ -693,7 +731,7 @@ void retourne_Reprographie(Plateau p, Faction f_adverse, int score_adverse, Coor
 
 void retourne_Isolation_du_batiment(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse, Coord coord)
 {
-    bonus_anl(f, score, f_adverse, score_adverse);
+    bonus_anl(p, f, score, f_adverse, score_adverse);
     int i, j;
     int pts_gagnes_f = 0;
     int pts_gagnes_f_adverse = 0;
@@ -719,7 +757,7 @@ void retourne_Isolation_du_batiment(Plateau p, Faction f, int score, Faction f_a
 
 void retourne_Parcours_sobriete_numerique(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse)
 {
-    bonus_anl(f, score, f_adverse, score_adverse);
+    bonus_anl(p, f, score, f_adverse, score_adverse);
     int i;
     int i_avt_d = p->avant_derniere_carte_retournee.i;
     int j_avt_d = p->avant_derniere_carte_retournee.j;
