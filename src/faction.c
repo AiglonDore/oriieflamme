@@ -186,3 +186,7 @@ void set_main(Faction f, Carte *main)
         f->main[i] = main[i];
     }
 }
+void set_pioche(Faction f, Pioche p)
+{
+    f->pioche = p;
+}
