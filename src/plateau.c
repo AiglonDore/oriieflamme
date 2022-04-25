@@ -320,24 +320,21 @@ void poser_carte(Carte c, Plateau p, int i, int j)
         p->carte_bas_droite_cachee.j = 64;
         p->carte_haut_gauche_cachee.i = 64;
         p->carte_haut_gauche_cachee.j = 64;
-        return;
     }
     // On change éventuellement les coordonnées des cartes en haut à gauche et en bas à droite
-    if (j <= p->carte_bas_droite.j && i > p->carte_bas_droite.i)
+    else if (j <= p->carte_bas_droite.j && i > p->carte_bas_droite.i)
     {
         p->carte_bas_droite.i = i;
         p->carte_bas_droite.j = j;
         p->carte_bas_droite_cachee.i = i;
         p->carte_bas_droite_cachee.j = j;
-        return;
     }
-    if (j >= p->carte_haut_gauche.j && i < p->carte_haut_gauche.i)
+    else if (j >= p->carte_haut_gauche.j && i < p->carte_haut_gauche.i)
     {
         p->carte_haut_gauche.i = i;
         p->carte_haut_gauche.j = j;
         p->carte_haut_gauche_cachee.i = i;
         p->carte_haut_gauche_cachee.j = j;
-        return;
     }
 }
 
@@ -514,7 +511,7 @@ void retourne_lIIEns(Plateau p, Coord coord)
 void retourne_Soiree_sans_alcool(Plateau p, Faction f, int score, Coord coord)
 {
     int i, j;
-    int alcool_retourne = 0;
+    int alcool_retourne = 0; // on teste si une carte alcool est retournée sur le plateau
     for (i = 0; i < 129; i += 1)
     {
         for (j = 0; j < 129; j += 1)
@@ -533,6 +530,7 @@ void retourne_Soiree_sans_alcool(Plateau p, Faction f, int score, Coord coord)
             for (j = 0; j < 129; j += 1)
             {
                 Carte carte = p->plateau_jeu[i][j];
+                // Suppression des cartes FISE/FISA/FC retournées du plateau
                 if (carte != NULL && get_est_cachee(carte) == 0 && (get_id(carte) == FISE || get_id(carte) == FISA || get_id(carte) == FC))
                 {
                     p->plateau_jeu[i][j] = NULL;
@@ -540,6 +538,8 @@ void retourne_Soiree_sans_alcool(Plateau p, Faction f, int score, Coord coord)
                 }
             }
         }
+        // Suppression des première et dernière lignes du plateau
+        // On pense à garder nos constantes valides
         int premiere_ligne = p->carte_haut_gauche.i;
         int derniere_ligne = p->carte_bas_droite.i;
         for (j = 0; j < 129; j += 1)
@@ -574,13 +574,15 @@ void retourne_Soiree_sans_alcool(Plateau p, Faction f, int score, Coord coord)
     }
     else
     {
-        set_pts_DDRS_manche(f, score + 5);
+        set_pts_DDRS_manche(f, score + 5); // ajout du bonus à la faction qui a posé la carte
     }
     actualiser_constantes_cas_general(p, coord);
 }
 
 void retourne_Alcool(Plateau p, Coord coord)
 {
+    // On supprime une par une les quatre cartes consécutives (potentiellement = NULL)
+    // On veille à garder nos constantes valables
     Carte c1 = p->plateau_jeu[coord.i - 1][coord.j];
     if (c1 != NULL)
     {
@@ -644,11 +646,13 @@ void retourne_Cafe(Plateau p, Faction f, int score, Coord coord)
         for (j = 0; j < 129; j += 1)
         {
             Carte carte = p->plateau_jeu[i][j];
+            // Suppression des cartes Thé et Alcool retournées sur le plateau
             if (carte != NULL && get_est_cachee(carte) == 0 && (get_id(carte) == Alcool || get_id(carte) == The))
             {
                 p->plateau_jeu[i][j] = NULL;
                 p->cartes_retournees_manche -= 1;
             }
+            // On teste si une carte Ecocup est retournée sur le plateau ou non
             else if (carte != NULL && get_est_cachee(carte) == 0 && get_id(carte) == Ecocup)
             {
                 ecocup_retourne = 1;
@@ -657,11 +661,11 @@ void retourne_Cafe(Plateau p, Faction f, int score, Coord coord)
     }
     if (ecocup_retourne == 0)
     {
-        set_pts_DDRS_manche(f, score - 1);
+        set_pts_DDRS_manche(f, score - 1); // ajout du malus à la faction qui a posé la carte
     }
     else
     {
-        set_pts_DDRS_manche(f, score + 1);
+        set_pts_DDRS_manche(f, score + 1); // ajout du bonus à la faction qui a posé la carte
     }
     actualiser_constantes_cas_general(p, coord);
 }
