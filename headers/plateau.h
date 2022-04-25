@@ -58,20 +58,36 @@ Factions_en_jeu get_factions(Plateau p);
 Coord get_derniere_carte_posee(Plateau p);
 
 /**
- * @brief Prototype de get_derniere_carte_retournee.
+ * @brief Prototype de get_coord_derniere_carte_retournee.
  *
  * @param p
  * @return Coord
  */
-Coord get_derniere_carte_retournee(Plateau p);
+Coord get_coord_derniere_carte_retournee(Plateau p);
+
+/**
+ * @brief Prototype de get_coord_avant_derniere_carte_retournee.
+ *
+ * @param p
+ * @return Coord
+ */
+Coord get_coord_avant_derniere_carte_retournee(Plateau p);
+
+/**
+ * @brief Prototype de get_derniere_carte_retournee.
+ *
+ * @param p
+ * @return Carte
+ */
+Carte get_derniere_carte_retournee(Plateau p);
 
 /**
  * @brief Prototype de get_avant_derniere_carte_retournee.
  *
  * @param p
- * @return Coord
+ * @return Carte
  */
-Coord get_avant_derniere_carte_retournee(Plateau p);
+Carte get_avant_derniere_carte_retournee(Plateau p);
 
 /**
  * @brief Prototype de get_carte_haut_gauche.
@@ -342,10 +358,13 @@ void retourne_Kevin_Goilard(Plateau p, Faction f, int score, Coord coord);
  * @brief Active les effets de la carte Massinissa Merabet
  * @param p plateau valide (le pointeur doit être valide)
  * @param f faction valide (le pointeur doit être valide), faction qui a déposé la carte
+ * @param score score de la faction f
+ * @param f_adverse faction valide (le pointeur doit être valide), faction adverse de celle qui a déposé la carte
+ * @param score_adverse score de la faction f_adverse
  * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
-void retourne_Massinissa_Merabet(Plateau p, Faction f, Coord coord);
+void retourne_Massinissa_Merabet(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse, Coord coord);
 
 /**
  * @brief Active les effets de la carte Vitéra Y
