@@ -138,22 +138,6 @@ int get_a_remelange(Faction f);
 void set_a_remelange(Faction f, int x);
 
 /**
- * @brief Prototype de get_carte_anl_retournee qui permet de récupérer un entier qui indique si la faction a retourné sa carte Anne-Laure Ligozat ou non.
- *
- * @param f
- * @return int
- */
-int get_carte_anl_retournee(Faction f);
-
-/**
- * @brief Prototype de set_carte_anl_retournee qui permet d'initialiser si la faction a retourné sa carte Anne-Laure Ligozat ou non.
- *
- * @param f
- * @param x
- */
-void set_carte_anl_retournee(Faction f, int x);
-
-/**
  * @brief Prototype de get_main qui permet de récupérer la main de la faction
  *
  * @param f

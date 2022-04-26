@@ -50,12 +50,12 @@ Carte **get_plateau_jeu(Plateau p);
 Factions_en_jeu get_factions(Plateau p);
 
 /**
- * @brief Prototype de get_derniere_carte_posee.
+ * @brief Prototype de get_coord_derniere_carte_posee.
  *
  * @param p
  * @return Coord
  */
-Coord get_derniere_carte_posee(Plateau p);
+Coord get_coord_derniere_carte_posee(Plateau p);
 
 /**
  * @brief Prototype de get_coord_derniere_carte_retournee.
@@ -90,20 +90,20 @@ Carte get_derniere_carte_retournee(Plateau p);
 Carte get_avant_derniere_carte_retournee(Plateau p);
 
 /**
- * @brief Prototype de get_carte_haut_gauche.
+ * @brief Prototype de get_coord_carte_haut_gauche.
  *
  * @param p
  * @return Coord
  */
-Coord get_carte_haut_gauche(Plateau p);
+Coord get_coord_carte_haut_gauche(Plateau p);
 
 /**
- * @brief Prototype de get_carte_bas_droite.
+ * @brief Prototype de get_coord_carte_bas_droite.
  *
  * @param p
  * @return Coord
  */
-Coord get_carte_bas_droite(Plateau p);
+Coord get_coord_carte_bas_droite(Plateau p);
 
 /**
  * @brief Prototype de get_numero_manche.
@@ -181,17 +181,6 @@ Factions_en_jeu factions_plateau(Plateau p);
 void poser_carte(Carte c, Plateau p, int i, int j);
 
 /**
- * @brief Ajoute un bonus de 3 points à la faction qui a posé la carte Anne-Laure Ligozat qui a été précédemment retournée sur le plateau dans les cas où une carte EcologIIE, Ecocup, Parcours sobriété numérique ou Isolation du bâtiment est retournée
- * @param p plateau valide (le pointeur doit être valide)
- * @param f faction valide (le pointeur doit être valide), faction qui a déposé la carte
- * @param score score de la faction f
- * @param f_adverse faction valide (le pointeur doit être valide), faction adverse de celle qui a déposé la carte
- * @param score_adverse score de la faction f_adverse
- *
- */
-void bonus_anl(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse);
-
-/**
  * @brief Active les effets de la carte FISE
  * @param p plateau valide (le pointeur doit être valide)
  * @param f faction valide (le pointeur doit être valide), faction qui a déposé la carte
@@ -226,12 +215,10 @@ void retourne_FC(Plateau p, Faction f, int score, Coord coord);
  * @param p plateau valide (le pointeur doit être valide)
  * @param f faction valide (le pointeur doit être valide), faction qui a déposé la carte
  * @param score score de la faction f
- * @param f_adverse faction valide (le pointeur doit être valide), faction adverse de celle qui a déposé la carte
- * @param score_adverse score de la faction f_adverse
  * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
-void retourne_EcologIIE(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse, Coord coord);
+void retourne_EcologIIE(Plateau p, Faction f, int score, Coord coord);
 
 /**
  * @brief Active les effets de la carte lIIEns
@@ -282,14 +269,10 @@ void retourne_The(Plateau p, Faction f, int score, Coord coord);
 /**
  * @brief Active les effets de la carte Ecocup
  * @param p plateau valide (le pointeur doit être valide)
- * @param f faction valide (le pointeur doit être valide), faction qui a déposé la carte
- * @param score score de la faction f
- * @param f_adverse faction valide (le pointeur doit être valide), faction adverse de celle qui a déposé la carte
- * @param score_adverse score de la faction f_adverse
  * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
-void retourne_Ecocup(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse, Coord coord);
+void retourne_Ecocup(Plateau p, Coord coord);
 
 /**
  * @brief Active les effets de la carte Reprographie
@@ -318,14 +301,9 @@ void retourne_Isolation_du_batiment(Plateau p, Faction f, int score, Faction f_a
 /**
  * @brief Active les effets de la carte Parcours sobriété numérique
  * @param p plateau valide (le pointeur doit être valide)
- * @param f faction valide (le pointeur doit être valide), faction qui a déposé la carte
- * @param score score de la faction f
- * @param f_adverse faction valide (le pointeur doit être valide), faction adverse de celle qui a déposé la carte
- * @param score_adverse score de la faction f_adverse
- * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
-void retourne_Parcours_sobriete_numerique(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse);
+void retourne_Parcours_sobriete_numerique(Plateau p);
 
 /**
  * @brief Active les effets de la carte Heures supplémentaires
