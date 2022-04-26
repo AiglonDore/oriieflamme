@@ -160,7 +160,6 @@ Plateau init_plateau()
     p->factions.right = faction2;
 
     // Le reste de l'initialisation est commun à chaque début de manche et se fera dans nouvelle_manche
-
     return p;
 }
 

@@ -10,6 +10,7 @@
  */
 
 #include <stdlib.h>
+#include <stdio.h>
 #include "../headers/plateau.h"
 #include "../headers/carte.h"
 #include "../headers/faction.h"
@@ -62,36 +63,44 @@ void vider_sa_main(Faction f)
 
 void melanger_pioche(Faction f)
 {
-
     // On dépile et on stocke les cartes dans un tableau
-    Carte pioche[32];
+    Carte pioche[47] = {NULL};
     int i; // pour la boucle for
-    for (i = 0; i < 32; i += 1)
+    for (i = 0; i < 47; i += 1)
     {
         pioche[i] = enleve_pioche(f->pioche);
     }
 
-    // On mélange ce tableau : on crée pioche_melange que l'on remplit à partir de pioche en générant un indice aléatoire de 0 à 31
-    int t[32]; // ce tableau sert à savoir si l'indice généré a déjà été généré (t[i]=1 si i déjà sorti, 0 sinon)
-    Carte pioche_melange[32];
-    int c = 0;           // sert à compter le nombre de cartes rentrées dans pioche_melange
-    int n = rand() % 32; // génère un nombre entier aléatoire entre 0 et 31
-    while (c != 32)
+    // On mélange ce tableau
+    int t[47] = {0}; // ce tableau sert à savoir si l'indice généré a déjà été généré (t[i]=1 si i déjà sorti, 0 sinon)
+    Carte pioche_melange[47] = {NULL};
+    int c = 0; // sert à compter le nombre de cartes rentrées dans pioche_melange
+    int n, k;
+    while (c != 47)
     {
-        while (t[n] == 1)
-        {                    // tant que l'indice a déjà été traité
-            n = rand() % 32; // génère un nombre entier aléatoire entre 0 et 31
+        n = rand() % (47 - c); // génère un nombre entier aléatoire entre 0 et 46-c
+        k = 0;                 // compteur dans t[]
+        for (i = 0; i < 47; i += 1)
+        {
+            if (t[i] == 0)
+            {
+                k += 1;
+                if (k == n)
+                {
+                    pioche_melange[c] = pioche[i]; // on remplit pioche_melange grâce à pioche
+                    t[i] = 1;                      // on indique que i a été traité
+                    c += 1;                        // on indique qu'une carte a été ajoutée à pioche_melange, on donne l'indice pour la prochaine
+                    break;
+                }
+            }
         }
-        pioche_melange[c] = pioche[n]; // on remplit pioche_melange grâce à pioche
-        t[n] = 1;                      // on indique que n a été traité
-        c += 1;                        // on indique qu'une carte a été ajoutée à pioche_melange, on donne l'indice pour la prochaine
     }
 
     // On empile les cartes alors mélangées
     int j; // pour la boucle for
-    for (j = 0; j < 32; j += 1)
+    for (j = 0; j < 47; j += 1)
     { // on empile les cartes de telle sorte que le sommet soit pioche_melange[0] : choix arbitraire
-        ajout_pioche(f->pioche, pioche_melange[31 - i]);
+        ajout_pioche(f->pioche, pioche_melange[46 - i]);
     }
 }
 

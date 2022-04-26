@@ -21,7 +21,7 @@
 
 struct s_pioche
 {
-  Carte t[32];
+  Carte t[47];
   int top;
 };
 
