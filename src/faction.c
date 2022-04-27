@@ -64,44 +64,42 @@ void vider_sa_main(Faction f)
 void melanger_pioche(Faction f)
 {
     // On dépile et on stocke les cartes dans un tableau
-    Carte pioche[47] = {NULL};
+    Carte *pioche = (Carte *)malloc(47 * sizeof(Carte));
     int i; // pour la boucle for
     for (i = 0; i < 47; i += 1)
     {
         pioche[i] = enleve_pioche(f->pioche);
     }
-
     // On mélange ce tableau
-    int t[47] = {0}; // ce tableau sert à savoir si l'indice généré a déjà été généré (t[i]=1 si i déjà sorti, 0 sinon)
-    Carte pioche_melange[47] = {NULL};
+    int *t = (int *)calloc(47, sizeof(int)); // ce tableau sert à savoir si l'indice généré a déjà été généré (t[i]=1 si i déjà sorti, 0 sinon)
+    Carte *pioche_melange = (Carte *)malloc(47 * sizeof(Carte));
     int c = 0; // sert à compter le nombre de cartes rentrées dans pioche_melange
-    int n, k;
+    int n = rand() % 47;
     while (c != 47)
     {
-        n = rand() % (47 - c); // génère un nombre entier aléatoire entre 0 et 46-c
-        k = 0;                 // compteur dans t[]
-        for (i = 0; i < 47; i += 1)
-        {
-            if (t[i] == 0)
-            {
-                k += 1;
-                if (k == n)
-                {
-                    pioche_melange[c] = pioche[i]; // on remplit pioche_melange grâce à pioche
-                    t[i] = 1;                      // on indique que i a été traité
-                    c += 1;                        // on indique qu'une carte a été ajoutée à pioche_melange, on donne l'indice pour la prochaine
-                    break;
-                }
-            }
+        while (t[n] == 1)
+        {                    // tant que l'indice a déjà été traité
+            n = rand() % 47; // génère un nombre entier aléatoire entre 0 et 46
         }
+        pioche_melange[c] = pioche[n]; // on remplit pioche_melange grâce à pioche
+        t[n] = 1;                      // on indique que n a été traité
+        c += 1;
     }
-
     // On empile les cartes alors mélangées
     int j; // pour la boucle for
     for (j = 0; j < 47; j += 1)
     { // on empile les cartes de telle sorte que le sommet soit pioche_melange[0] : choix arbitraire
         ajout_pioche(f->pioche, pioche_melange[46 - i]);
     }
+    // Libération mémoire
+    for (i = 0; i < 47; i += 1)
+    {
+        free(pioche_melange[i]);
+        free(pioche[i]);
+    }
+    free(t);
+    free(pioche_melange);
+    free(pioche);
 }
 
 void piocher(Faction f)
@@ -111,6 +109,7 @@ void piocher(Faction f)
     {
         f->main[i] = enleve_pioche(f->pioche); // on remplit la main en dépilant la pioche
     }
+    printf("%i\n", get_id(f->main[i]));
 }
 
 void supprimer_faction(Faction f)

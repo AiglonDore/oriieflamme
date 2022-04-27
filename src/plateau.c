@@ -232,7 +232,7 @@ int nouvelle_manche(Plateau p)
     // On réinitialise les pioches et les mains des factions
     init_pioche(p->factions.left);
     init_pioche(p->factions.right);
-    Carte main[8] = {NULL};
+    Carte main[8] = {NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL};
     set_main(p->factions.left, main);
     set_main(p->factions.right, main);
     // On initialise le plateau de jeu à NULL
@@ -1354,11 +1354,11 @@ void retourne_Eric_Lejeune(Plateau p, Coord coord)
         // On mélange les cartes
         int *l = malloc(a_choisir * sizeof(int)); // ce tableau sert à savoir si l'indice généré a déjà été généré (t[i]=1 si i déjà sorti, 0 sinon)
         Carte *melange = malloc(a_choisir * sizeof(Carte));
-        int c = 0;                  // sert à compter le nombre de cartes rentrées dans melange
-        int n = rand() % a_choisir; // génère un nombre entier aléatoire entre 0 et a_choisir-1
+        int c = 0;          // sert à compter le nombre de cartes rentrées dans melange
+        int n = rand() % 5; // génère un nombre entier aléatoire entre 0 et 4
         while (c != a_choisir)
         {
-            while (l[n] == 1)
+            while (n >= (a_choisir - 1) || l[n] == 1)
             {                           // tant que l'indice a déjà été traité
                 n = rand() % a_choisir; // génère un nombre entier aléatoire entre 0 et a_choisir-1
             }
