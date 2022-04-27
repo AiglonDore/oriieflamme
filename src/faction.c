@@ -70,6 +70,7 @@ void melanger_pioche(Faction f)
     {
         pioche[i] = enleve_pioche(f->pioche);
     }
+
     // On mélange ce tableau
     int *t = (int *)calloc(47, sizeof(int)); // ce tableau sert à savoir si l'indice généré a déjà été généré (t[i]=1 si i déjà sorti, 0 sinon)
     Carte *pioche_melange = (Carte *)malloc(47 * sizeof(Carte));
@@ -85,18 +86,15 @@ void melanger_pioche(Faction f)
         t[n] = 1;                      // on indique que n a été traité
         c += 1;
     }
+
     // On empile les cartes alors mélangées
     int j; // pour la boucle for
     for (j = 0; j < 47; j += 1)
     { // on empile les cartes de telle sorte que le sommet soit pioche_melange[0] : choix arbitraire
-        ajout_pioche(f->pioche, pioche_melange[46 - i]);
+        ajout_pioche(f->pioche, pioche_melange[46 - j]);
     }
+
     // Libération mémoire
-    for (i = 0; i < 47; i += 1)
-    {
-        free(pioche_melange[i]);
-        free(pioche[i]);
-    }
     free(t);
     free(pioche_melange);
     free(pioche);
@@ -109,7 +107,6 @@ void piocher(Faction f)
     {
         f->main[i] = enleve_pioche(f->pioche); // on remplit la main en dépilant la pioche
     }
-    printf("%i\n", get_id(f->main[i]));
 }
 
 void supprimer_faction(Faction f)
@@ -119,8 +116,9 @@ void supprimer_faction(Faction f)
     int i;
     for (i = 0; i < 8; i += 1)
     {
-        f->main[i] = NULL;
+        free(f->main[i]);
     }
+    free(f->main);
     free(f->nom);
     f = NULL;
     free(f);
@@ -175,7 +173,7 @@ Carte *get_main(Faction f)
     return f->main;
 }
 
-void set_main(Faction f, Carte *main)
+void set_main(Faction f, Main main)
 {
     int i;
     for (i = 0; i < 8; i += 1)

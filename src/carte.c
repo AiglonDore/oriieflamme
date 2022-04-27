@@ -44,7 +44,7 @@ const int nb_cartes = 8;
 
 char *nom_carte[32] = {"FISE", "FISA", "FC", "EcologIIE", "lIIEns", "Soiree_sans_alcool", "Alcool",
                        "Cafe", "The", "Ecocup", "Reprographie", "Isolation_batiment", "Parcours_sobriete_mumerique",
-                       "Heures supplementaites", "Kahina Bouchama", "Kevin Goilard", "Massinissa Merabet",
+                       "Heures supplementaires", "Kahina Bouchama", "Kevin Goilard", "Massinissa Merabet",
                        "Vitera Y", "Jonas Senizergues", "Fetia Bannour", "Catherine Dubois", "Anne Laure Ligozat",
                        "Guillaume Burel", "Christophe Mouilleron", "Thomas lim", "Julien Forest", "Dimitri watel",
                        "Djibril Aurelien Dembele Cabot", "Eric Lejeune", "Lucienne Pacave", "Katrin Salhab",
@@ -122,7 +122,7 @@ void set_nom(Carte c, char *nom_carte)
 
 char *get_description(Carte c)
 {
-    return c->nom;
+    return c->description;
 }
 
 void set_description(Carte c, char *description_carte)

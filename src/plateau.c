@@ -154,6 +154,11 @@ Plateau init_plateau()
     set_nom_faction(faction2, b);
     set_nb_manches_gagnees(faction1, 0);
     set_nb_manches_gagnees(faction2, 0);
+    Main main = {NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL};
+    set_main(faction1, main);
+    set_main(faction2, main);
+    set_a_remelange(faction1, 0);
+    set_a_remelange(faction2, 0);
 
     // On initialise les factions du plateau
     p->factions.left = faction1;
@@ -232,7 +237,7 @@ int nouvelle_manche(Plateau p)
     // On réinitialise les pioches et les mains des factions
     init_pioche(p->factions.left);
     init_pioche(p->factions.right);
-    Carte main[8] = {NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL};
+    Main main = {NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL};
     set_main(p->factions.left, main);
     set_main(p->factions.right, main);
     // On initialise le plateau de jeu à NULL
@@ -450,13 +455,13 @@ void retourne_lIIEns(Plateau p, Coord coord)
     }
     int *t = malloc(nb_a_retirer * sizeof(int)); // ce tableau sert à savoir si l'indice généré a déjà été généré (t[i]=1 si i déjà sorti, 0 sinon)
     Carte *melange = malloc(nb_a_retirer * sizeof(Carte));
-    int c = 0;                     // sert à compter le nombre de cartes rentrées dans melange
-    int n = rand() % nb_a_retirer; // génère un nombre entier aléatoire entre 0 et nb_a_retirer-1
+    int c = 0;           // sert à compter le nombre de cartes rentrées dans melange
+    int n = rand() % 16; // génère un nombre entier aléatoire entre 0 et nb_a_retirer-1
     while (c != nb_a_retirer)
     {
-        while (t[n] == 1)
-        {                              // tant que l'indice a déjà été traité
-            n = rand() % nb_a_retirer; // génère un nombre entier aléatoire entre 0 et nb_a_retirer-1
+        while (n >= nb_a_retirer || t[n] == 1)
+        {                    // tant que l'indice a déjà été traité
+            n = rand() % 16; // génère un nombre entier aléatoire entre 0 et nb_a_retirer-1
         }
         melange[c] = a_retirer[n]; // on remplit melange grâce à a_retirer
         t[n] = 1;                  // on indique que n a été traité
@@ -817,8 +822,10 @@ void retourne_Kahina_Bouchama(Plateau p, Coord coord)
         actualiser_constantes_cas_general(p, coord);
         return;
     }
-    int numero_carte_supprimer = rand() % p->cartes_non_retournees_manche + 1; // retourne un entier entre 1 et le nombre de cartes posées face cachée sur le plateau
-    int cartes_vues = 0;                                                       // compteur
+    int n = rand();
+    int r = (int)n / p->cartes_non_retournees_manche;
+    int numero_carte_supprimer = n + 1 - r * p->cartes_non_retournees_manche; // retourne un entier entre 1 et le nombre de cartes posées face cachée sur le plateau
+    int cartes_vues = 0;                                                      // compteur
     // On parcourt tout le plateau jusqu'à la carte tirée au sort
     int i = 0, j = 0;
     for (i = 0; i < 129; i += 1)
@@ -1286,29 +1293,32 @@ void retourne_Eric_Lejeune(Plateau p, Coord coord)
 {
     // On commence par déterminer le nombre de cartes à prendre au hasard : min(5, nombre de cartes retournées du plateau)
     int a_choisir = p->cartes_retournees_manche < 5 ? p->cartes_retournees_manche : 5;
-    int *t = malloc(a_choisir * sizeof(int));        // allocation mémoire pour sauver les numéros des cartes tirées au sort
-    t[0] = rand() % p->cartes_retournees_manche + 1; // nombre aléatoire entre 1 et le nombre de cartes retournées inclus
-    int k;
+    int *t = malloc(a_choisir * sizeof(int)); // allocation mémoire pour sauver les numéros des cartes tirées au sort
+    int n = rand();
+    int retour = (int)n / p->cartes_retournees_manche;
+    t[0] = n + 1 - retour * p->cartes_retournees_manche; // nombre aléatoire entre 1 et le nombre de cartes retournées inclus
+    int k, r;
     // On tire au sort les numéros des a_choisir - 1 cartes restantes
     for (k = 1; k < a_choisir; k += 1)
     {
         int est_deja_tombe = 1;
-        int n;
         while (est_deja_tombe == 1)
         {
-            n = rand() % p->cartes_retournees_manche + 1; // nombre aléatoire entre 1 et le nombre de cartes retournées inclus
+            n = rand();
+            retour = (int)n / p->cartes_retournees_manche;
+            r = n + 1 - retour * p->cartes_retournees_manche; // nombre aléatoire entre 1 et le nombre de cartes retournées inclus
             est_deja_tombe = 0;
             // On vérifie si on a déjà ce nombre dans notre tableau de numéros
             int j;
             for (j = 0; j < k; j += 1)
             {
-                if (n == t[j])
+                if (r == t[j])
                 {
                     est_deja_tombe = 1;
                 }
             }
         }
-        t[k] = n;
+        t[k] = r;
     }
     Carte *supp = malloc(a_choisir * sizeof(Carte)); // allocation mémoire pour sauver les cartes tirées au sort
     int *indice_i = malloc(a_choisir * sizeof(int)); // allocation mémoire pour sauver les indices horizontaux des cartes à supprimer
@@ -1358,9 +1368,9 @@ void retourne_Eric_Lejeune(Plateau p, Coord coord)
         int n = rand() % 5; // génère un nombre entier aléatoire entre 0 et 4
         while (c != a_choisir)
         {
-            while (n >= (a_choisir - 1) || l[n] == 1)
-            {                           // tant que l'indice a déjà été traité
-                n = rand() % a_choisir; // génère un nombre entier aléatoire entre 0 et a_choisir-1
+            while (n >= a_choisir || l[n] == 1)
+            {                   // tant que l'indice a déjà été traité
+                n = rand() % 5; // génère un nombre entier aléatoire entre 0 et a_choisir-1
             }
             melange[c] = supp[n]; // on remplit melange grâce à c
             l[n] = 1;             // on indique que n a été traité

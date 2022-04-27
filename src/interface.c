@@ -71,7 +71,6 @@ int utiliser_option(Faction f)
 
 Carte a_poser_face_cachee_sur_plateau(Faction f)
 {
-    affiche_main(f);
     int nb_cartes = 0;
     for (int i = 0; i < 8; i++)
     {
@@ -133,7 +132,7 @@ Coord demande_position(Plateau p)
         ret.i = 0;
         ret.j = 0;
         printf("Vous êtes le premier à jouer! Posez une carte où vous voulez!!");
-        printf("Absisse: ");
+        printf("Abscisse: ");
         while (scanf("%d", &(ret.i)) == 0 || ret.i < 0 || ret.i > 128)
         {
             printf("Veuillez saisir un nombre entier compris entre 0 et 128: ");
