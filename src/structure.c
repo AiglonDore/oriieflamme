@@ -10,6 +10,7 @@
  */
 
 #include <stdlib.h>
+#include <stdio.h>
 #include "../headers/carte.h"
 #include "../headers/faction.h"
 #include "../headers/structure.h"
@@ -49,4 +50,19 @@ Carte enleve_pioche(Pioche p)
   c = p->t[p->top];
   p->top -= 1;
   return c;
+}
+
+void affiche_pioche(Pioche p, Faction f)
+{
+  if (p->top == -1)
+  {
+    printf("Faction %s La pile est vide !\n", get_nom_faction(f));
+    return;
+  }
+  int i;
+  for (i = p->top; i >= 0; i -= 1)
+  {
+    printf("%4i", get_id(p->t[i]));
+  }
+  printf("\n");
 }

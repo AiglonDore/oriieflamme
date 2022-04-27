@@ -105,4 +105,6 @@ void ajout_pioche(Pioche p, Carte c);
 
 Carte enleve_pioche(Pioche p);
 
+void affiche_pioche(Pioche p, Faction f);
+
 #endif // STRUCTURE_H
