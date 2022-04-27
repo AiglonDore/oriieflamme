@@ -153,7 +153,7 @@ Coord demande_position(Plateau p)
     {
         for (int j = 0; j < 129; j++)
         {
-            if (get_plateau_jeu(p)[i][j] == NULL) // Si la case n'est pas nulle, alors on ne peut pas y poser de carte
+            if (get_plateau_jeu(p)[i][j] != NULL) // Si la case n'est pas nulle, alors il y a ue carte posée
             {
                 if (i == 0 && j == 0) // Coin en haut à gauche
                 {
