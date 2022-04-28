@@ -39,6 +39,8 @@ struct s_plateau
     int numero_manche;
     int cartes_retournees_manche;
     int cartes_non_retournees_manche;
+    int colonne_gauche;
+    int colonne_droite;
 };
 
 Plateau creation_plateau()
@@ -107,6 +109,16 @@ int get_cartes_retournees_manche(Plateau p)
 int get_cartes_non_retournees_manche(Plateau p)
 {
     return p->cartes_non_retournees_manche;
+}
+
+int get_colonne_gauche(Plateau p)
+{
+    return p->colonne_gauche;
+}
+
+int get_colonne_droite(Plateau p)
+{
+    return p->colonne_droite;
 }
 
 /********************************************************
@@ -278,6 +290,9 @@ int nouvelle_manche(Plateau p)
     p->coord_carte_haut_gauche.i = -1;
     p->coord_carte_haut_gauche.j = -1;
 
+    p->colonne_droite = -1;
+    p->colonne_gauche = -1;
+
     return 1; // le jeu continue
 }
 
@@ -337,21 +352,32 @@ void poser_carte(Carte c, Plateau p, int i, int j)
         p->coord_carte_bas_droite_cachee.j = 64;
         p->coord_carte_haut_gauche_cachee.i = 64;
         p->coord_carte_haut_gauche_cachee.j = 64;
+        p->colonne_gauche = 64;
+        p->colonne_droite = 64;
     }
     else
     {
         p->plateau_jeu[i][j] = c;
         p->coord_derniere_carte_posee.i = i;
         p->coord_derniere_carte_posee.j = j;
+        // On change éventuellement les indices des colonnes à gauche et à droite
+        if (j < p->colonne_gauche)
+        {
+            p->colonne_gauche = j;
+        }
+        else if (j > p->colonne_droite)
+        {
+            p->colonne_droite = j;
+        }
         // On change éventuellement les coordonnées des cartes en haut à gauche et en bas à droite
-        if (j <= p->coord_carte_bas_droite.j && i > p->coord_carte_bas_droite.i)
+        if (j >= p->coord_carte_bas_droite.j && i >= p->coord_carte_bas_droite.i)
         {
             p->coord_carte_bas_droite.i = i;
             p->coord_carte_bas_droite.j = j;
             p->coord_carte_bas_droite_cachee.i = i;
             p->coord_carte_bas_droite_cachee.j = j;
         }
-        else if (j >= p->coord_carte_haut_gauche.j && i < p->coord_carte_haut_gauche.i)
+        else if (j <= p->coord_carte_haut_gauche.j && i <= p->coord_carte_haut_gauche.i)
         {
             p->coord_carte_haut_gauche.i = i;
             p->coord_carte_haut_gauche.j = j;
@@ -1684,55 +1710,63 @@ Carte retourner_carte(Plateau p)
     // On active l'effet de la carte
     switch_carte(p, id, coord, f, f_adverse, score, score_adverse);
 
-    // Actualisation des cartes en haut à gauche et en bas à droite
+    // Actualisation des cartes en haut à gauche et en bas à droite + colonnes les plus à gauche et à droite
     int i, j;
-    // Cartes en haut à gauche
+    int trouve = 0, trouve_cachee = 0;
+    int gauche = 129, droite = -1;
+    // Actualisation cartes en haut à gauche + colonnes les plus à gauche et à droite
     for (i = 0; i < 129; i += 1)
     {
         for (j = 0; j < 129; j += 1)
         {
             if (p->plateau_jeu[i][j] != NULL)
             {
-                p->coord_carte_haut_gauche.i = i;
-                p->coord_carte_haut_gauche.j = j;
-                break;
+                if (trouve == 0)
+                {
+                    p->coord_carte_haut_gauche.i = i;
+                    p->coord_carte_haut_gauche.j = j;
+                    trouve = 1;
+                }
+                if (trouve_cachee == 0 && get_est_cachee(p->plateau_jeu[i][j]) == 1)
+                {
+                    p->coord_carte_haut_gauche_cachee.i = i;
+                    p->coord_carte_haut_gauche_cachee.j = j;
+                    trouve_cachee = 1;
+                }
+                if (j < gauche)
+                {
+                    gauche = j;
+                }
+                else if (j > droite)
+                {
+                    droite = j;
+                }
             }
         }
     }
-    for (i = 0; i < 129; i += 1)
-    {
-        for (j = 0; j < 129; j += 1)
-        {
-            if (p->plateau_jeu[i][j] != NULL && get_est_cachee(p->plateau_jeu[i][j]) == 1)
-            {
-                p->coord_carte_haut_gauche_cachee.i = i;
-                p->coord_carte_haut_gauche_cachee.j = j;
-                break;
-            }
-        }
-    }
-    // Cartes en bas à droite
+    p->colonne_gauche = gauche;
+    p->colonne_droite = droite;
+    trouve = 0;
+    trouve_cachee = 0;
+    // Actualisation des cartes en bas à droite
     for (i = 128; i >= 0; i -= 1)
     {
         for (j = 128; j >= 0; j -= 1)
         {
             if (p->plateau_jeu[i][j] != NULL)
             {
-                p->coord_carte_haut_gauche.i = i;
-                p->coord_carte_haut_gauche.j = j;
-                break;
-            }
-        }
-    }
-    for (i = 128; i >= 0; i -= 1)
-    {
-        for (j = 128; j >= 0; j -= 1)
-        {
-            if (p->plateau_jeu[i][j] != NULL && get_est_cachee(p->plateau_jeu[i][j]) == 1)
-            {
-                p->coord_carte_haut_gauche_cachee.i = i;
-                p->coord_carte_haut_gauche_cachee.j = j;
-                break;
+                if (trouve == 0)
+                {
+                    p->coord_carte_bas_droite.i = i;
+                    p->coord_carte_bas_droite.j = j;
+                    trouve = 1;
+                }
+                if (trouve_cachee == 0 && get_est_cachee(p->plateau_jeu[i][j]) == 1)
+                {
+                    p->coord_carte_bas_droite_cachee.i = i;
+                    p->coord_carte_bas_droite_cachee.j = j;
+                    trouve_cachee = 1;
+                }
             }
         }
     }

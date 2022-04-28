@@ -75,7 +75,7 @@ void phase2(Plateau p)
  */
 int main()
 {
-    srand(time(0)); //Initialise la génération des nombres aléatoires
+    srand(time(0));               // Initialise la génération des nombres aléatoires
     Plateau jeu = init_plateau(); // Initialise le plateau, les factions...
     while (nouvelle_manche(jeu))
     {

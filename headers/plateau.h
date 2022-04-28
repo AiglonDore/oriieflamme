@@ -131,6 +131,22 @@ int get_cartes_retournees_manche(Plateau p);
  */
 int get_cartes_non_retournees_manche(Plateau p);
 
+/**
+ * @brief Prototype de get_colonne_gauche.
+ *
+ * @param p
+ * @return int
+ */
+int get_colonne_gauche(Plateau p);
+
+/**
+ * @brief Prototype de get_colonne_droite.
+ *
+ * @param p
+ * @return int
+ */
+int get_colonne_droite(Plateau p);
+
 /**************************************************
  * Création des prototypes des fonctions du plateau
  ***************************************************/

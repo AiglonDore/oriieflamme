@@ -17,7 +17,7 @@ char *nom_faction(Faction f)
 {
     char *name = malloc(256 * sizeof(char));
     printf("%s, comment souhaitez-vous vous appeler?\n", get_nom_faction(f));
-    scanf("%s",name);
+    scanf("%s", name);
     return name;
 }
 
@@ -27,12 +27,12 @@ void affiche_plateau(Plateau p)
     Coord bas_droite = get_coord_carte_bas_droite(p);
     for (int i = haut_gauche.i; i <= bas_droite.i; i++)
     {
-        printf("Ligne %d: ",i);
-        for (int j = 0; j < 129; j++)
+        printf("Ligne %d: ", i);
+        for (int j = get_colonne_gauche(p); j <= get_colonne_droite(p); j++)
         {
-            if (get_carte_at(p,i,j) != NULL)
+            if (get_carte_at(p, i, j) != NULL)
             {
-                Carte tmp = get_carte_at(p,i,j);
+                Carte tmp = get_carte_at(p, i, j);
                 if (get_est_cachee(tmp))
                 {
                     printf("Cachée ");
@@ -53,7 +53,7 @@ void affiche_plateau(Plateau p)
 
 void affiche_main(Faction f)
 {
-    printf("%s, voici votre main:\n",get_nom_faction(f));
+    printf("%s, voici votre main:\n", get_nom_faction(f));
     Carte *main = get_main(f);
     for (int i = 0; i < 8; i++)
     {
@@ -69,7 +69,7 @@ int utiliser_option(Faction f)
 {
     printf("%s, voulez-vous utiliser votre super pouvoir?[y/n]\n", get_nom_faction(f));
     char buf[1];
-    scanf("%s",buf);
+    scanf("%s", buf);
     return (!strcmp(buf, "y")) || (!strcmp(buf, "Y"));
 }
 
@@ -135,7 +135,7 @@ Coord demande_position(Plateau p)
         Coord ret;
         ret.i = -1;
         ret.j = -1;
-        printf("%s, vous êtes le premier à jouer! Votre carte sera posé au milieu du plateau!!\n",get_nom_faction(get_factions(p).left));//On rappelle que le plateau de jeu est infini.
+        printf("%s, vous êtes le premier à jouer! Votre carte sera posé au milieu du plateau!!\n", get_nom_faction(get_factions(p).left)); // On rappelle que le plateau de jeu est infini.
         return ret;
     }
     affiche_plateau(p);
@@ -146,11 +146,11 @@ Coord demande_position(Plateau p)
     {
         for (int j = 0; j < 129; j++)
         {
-            if (get_carte_at(p,i,j) != NULL) // Si la case n'est pas nulle, alors il y a ue carte posée
+            if (get_carte_at(p, i, j) != NULL) // Si la case n'est pas nulle, alors il y a ue carte posée
             {
                 if (i == 0 && j == 0) // Coin en haut à gauche
                 {
-                    if (get_carte_at(p,i,j+1) == NULL)
+                    if (get_carte_at(p, i, j + 1) == NULL)
                     {
                         Coord tmp;
                         tmp.i = i;
@@ -159,7 +159,7 @@ Coord demande_position(Plateau p)
                         available[counter] = tmp;
                         counter++;
                     }
-                    if (get_carte_at(p,i+1,j) == NULL)
+                    if (get_carte_at(p, i + 1, j) == NULL)
                     {
                         Coord tmp;
                         tmp.i = i + 1;
@@ -171,7 +171,7 @@ Coord demande_position(Plateau p)
                 }
                 else if (i == 0 && j == 128) // Coin en haut à droite
                 {
-                    if (get_carte_at(p,i+1,j) == NULL)
+                    if (get_carte_at(p, i + 1, j) == NULL)
                     {
                         Coord tmp;
                         tmp.i = i + 1;
@@ -180,7 +180,7 @@ Coord demande_position(Plateau p)
                         available[counter] = tmp;
                         counter++;
                     }
-                    if (get_carte_at(p,i-1,j) == NULL)
+                    if (get_carte_at(p, i - 1, j) == NULL)
                     {
                         Coord tmp;
                         tmp.i = i - 1;
@@ -192,7 +192,7 @@ Coord demande_position(Plateau p)
                 }
                 else if (i == 128 && j == 0) // Coin en bas à gauche
                 {
-                    if (get_carte_at(p,i-1,j) == NULL)
+                    if (get_carte_at(p, i - 1, j) == NULL)
                     {
                         Coord tmp;
                         tmp.i = i - 1;
@@ -201,7 +201,7 @@ Coord demande_position(Plateau p)
                         available[counter] = tmp;
                         counter++;
                     }
-                    if (get_carte_at(p,i,j+1) == NULL)
+                    if (get_carte_at(p, i, j + 1) == NULL)
                     {
                         Coord tmp;
                         tmp.i = i;
@@ -213,7 +213,7 @@ Coord demande_position(Plateau p)
                 }
                 else if (i == 128 && j == 128) // Coin en bas à droite
                 {
-                    if (get_carte_at(p,i,j-1) == NULL)
+                    if (get_carte_at(p, i, j - 1) == NULL)
                     {
                         Coord tmp;
                         tmp.i = i;
@@ -222,7 +222,7 @@ Coord demande_position(Plateau p)
                         available[counter] = tmp;
                         counter++;
                     }
-                    if (get_carte_at(p,i-1,j) == NULL)
+                    if (get_carte_at(p, i - 1, j) == NULL)
                     {
                         Coord tmp;
                         tmp.i = i - 1;
@@ -234,7 +234,7 @@ Coord demande_position(Plateau p)
                 }
                 else if (i == 0) // Première ligne hors coins
                 {
-                    if (get_carte_at(p,i,j+1) == NULL) // Point intérieur
+                    if (get_carte_at(p, i, j + 1) == NULL) // Point intérieur
                     {
                         Coord tmp;
                         tmp.i = i;
@@ -243,7 +243,7 @@ Coord demande_position(Plateau p)
                         available[counter] = tmp;
                         counter++;
                     }
-                    if (get_carte_at(p,i+1,j)== NULL)
+                    if (get_carte_at(p, i + 1, j) == NULL)
                     {
                         Coord tmp;
                         tmp.i = i + 1;
@@ -252,7 +252,7 @@ Coord demande_position(Plateau p)
                         available[counter] = tmp;
                         counter++;
                     }
-                    if (get_carte_at(p,i,j-1) == NULL)
+                    if (get_carte_at(p, i, j - 1) == NULL)
                     {
                         Coord tmp;
                         tmp.i = i;
@@ -264,7 +264,7 @@ Coord demande_position(Plateau p)
                 }
                 else if (i == 128) // Dernière ligne hors coins
                 {
-                    if (get_carte_at(p,i,j+1) == NULL) // Point intérieur
+                    if (get_carte_at(p, i, j + 1) == NULL) // Point intérieur
                     {
                         Coord tmp;
                         tmp.i = i;
@@ -273,7 +273,7 @@ Coord demande_position(Plateau p)
                         available[counter] = tmp;
                         counter++;
                     }
-                    if (get_carte_at(p,i,j-1) == NULL)
+                    if (get_carte_at(p, i, j - 1) == NULL)
                     {
                         Coord tmp;
                         tmp.i = i;
@@ -282,7 +282,7 @@ Coord demande_position(Plateau p)
                         available[counter] = tmp;
                         counter++;
                     }
-                    if (get_carte_at(p,i-1,j) == NULL)
+                    if (get_carte_at(p, i - 1, j) == NULL)
                     {
                         Coord tmp;
                         tmp.i = i - 1;
@@ -294,7 +294,7 @@ Coord demande_position(Plateau p)
                 }
                 else if (j == 0) // Première colonne hors coins
                 {
-                    if (get_carte_at(p,i,j+1) == NULL) // Point intérieur
+                    if (get_carte_at(p, i, j + 1) == NULL) // Point intérieur
                     {
                         Coord tmp;
                         tmp.i = i;
@@ -303,7 +303,7 @@ Coord demande_position(Plateau p)
                         available[counter] = tmp;
                         counter++;
                     }
-                    if (get_carte_at(p,i+1,j) == NULL)
+                    if (get_carte_at(p, i + 1, j) == NULL)
                     {
                         Coord tmp;
                         tmp.i = i + 1;
@@ -312,7 +312,7 @@ Coord demande_position(Plateau p)
                         available[counter] = tmp;
                         counter++;
                     }
-                    if (get_carte_at(p,i-1,j) == NULL)
+                    if (get_carte_at(p, i - 1, j) == NULL)
                     {
                         Coord tmp;
                         tmp.i = i - 1;
@@ -324,7 +324,7 @@ Coord demande_position(Plateau p)
                 }
                 else if (j == 128) // Dernière colonne hors coins
                 {
-                    if (get_carte_at(p,i+1,j) == NULL)
+                    if (get_carte_at(p, i + 1, j) == NULL)
                     {
                         Coord tmp;
                         tmp.i = i + 1;
@@ -333,7 +333,7 @@ Coord demande_position(Plateau p)
                         available[counter] = tmp;
                         counter++;
                     }
-                    if (get_carte_at(p,i,j-1) == NULL)
+                    if (get_carte_at(p, i, j - 1) == NULL)
                     {
                         Coord tmp;
                         tmp.i = i;
@@ -342,7 +342,7 @@ Coord demande_position(Plateau p)
                         available[counter] = tmp;
                         counter++;
                     }
-                    if (get_carte_at(p,i-1,j) == NULL)
+                    if (get_carte_at(p, i - 1, j) == NULL)
                     {
                         Coord tmp;
                         tmp.i = i - 1;
@@ -354,7 +354,7 @@ Coord demande_position(Plateau p)
                 }
                 else // Points intérieurs
                 {
-                    if (get_carte_at(p,i,j+1) == NULL) // Point intérieur
+                    if (get_carte_at(p, i, j + 1) == NULL) // Point intérieur
                     {
                         Coord tmp;
                         tmp.i = i;
@@ -363,7 +363,7 @@ Coord demande_position(Plateau p)
                         available[counter] = tmp;
                         counter++;
                     }
-                    if (get_carte_at(p,i+1,j) == NULL)
+                    if (get_carte_at(p, i + 1, j) == NULL)
                     {
                         Coord tmp;
                         tmp.i = i + 1;
@@ -372,7 +372,7 @@ Coord demande_position(Plateau p)
                         available[counter] = tmp;
                         counter++;
                     }
-                    if (get_carte_at(p,i,j-1) == NULL)
+                    if (get_carte_at(p, i, j - 1) == NULL)
                     {
                         Coord tmp;
                         tmp.i = i;
@@ -381,7 +381,7 @@ Coord demande_position(Plateau p)
                         available[counter] = tmp;
                         counter++;
                     }
-                    if (get_carte_at(p,i-1,j) == NULL)
+                    if (get_carte_at(p, i - 1, j) == NULL)
                     {
                         Coord tmp;
                         tmp.i = i - 1;
