@@ -1051,13 +1051,16 @@ void retourne_Catherine_Dubois(Plateau p, Coord coord)
     if (j != 129) // si on a trouvé une carte non nulle sur la ligne où est posée cette carte en partant de la gauche
     {
         Carte c1 = p->plateau_jeu[coord.i][j];
-        if (get_est_cachee(c1) == 0)
+        if (c1 != NULL)
         {
-            p->cartes_retournees_manche -= 1;
-        }
-        else
-        {
-            p->cartes_non_retournees_manche -= 1;
+            if (get_est_cachee(c1) == 0)
+            {
+                p->cartes_retournees_manche -= 1;
+            }
+            else
+            {
+                p->cartes_non_retournees_manche -= 1;
+            }
         }
         p->plateau_jeu[coord.i][j] = NULL;
 
@@ -1070,13 +1073,16 @@ void retourne_Catherine_Dubois(Plateau p, Coord coord)
         if (j != -1) // si on en a trouvé une deuxième sur la ligne non nulle en partant de la droite
         {
             c1 = p->plateau_jeu[coord.i][j];
-            if (get_est_cachee(c1) == 0)
+            if (c1 != NULL)
             {
-                p->cartes_retournees_manche -= 1;
-            }
-            else
-            {
-                p->cartes_non_retournees_manche -= 1;
+                if (get_est_cachee(c1) == 0)
+                {
+                    p->cartes_retournees_manche -= 1;
+                }
+                else
+                {
+                    p->cartes_non_retournees_manche -= 1;
+                }
             }
             p->plateau_jeu[coord.i][j] = NULL;
         }
@@ -1089,13 +1095,16 @@ void retourne_Catherine_Dubois(Plateau p, Coord coord)
     if (i != 129) // si on a trouvé une carte non nulle sur la colonne où est posée cette carte en partant du bas
     {
         Carte c2 = p->plateau_jeu[i][coord.j];
-        if (get_est_cachee(c2) == 0)
+        if (c2 != NULL)
         {
-            p->cartes_retournees_manche -= 1;
-        }
-        else
-        {
-            p->cartes_non_retournees_manche -= 1;
+            if (get_est_cachee(c2) == 0)
+            {
+                p->cartes_retournees_manche -= 1;
+            }
+            else
+            {
+                p->cartes_non_retournees_manche -= 1;
+            }
         }
         p->plateau_jeu[i][coord.j] = NULL;
 
@@ -1108,15 +1117,18 @@ void retourne_Catherine_Dubois(Plateau p, Coord coord)
         if (i != -1) // si on en a trouvé une deuxième sur la colonne non nulle en partant du haut
         {
             c2 = p->plateau_jeu[i][coord.j];
-            if (get_est_cachee(c2) == 0)
+            if (c2 != NULL)
             {
-                p->cartes_retournees_manche -= 1;
+                if (get_est_cachee(c2) == 0)
+                {
+                    p->cartes_retournees_manche -= 1;
+                }
+                else
+                {
+                    p->cartes_non_retournees_manche -= 1;
+                }
+                p->plateau_jeu[i][coord.j] = NULL;
             }
-            else
-            {
-                p->cartes_non_retournees_manche -= 1;
-            }
-            p->plateau_jeu[i][coord.j] = NULL;
         }
     }
     actualiser_constantes_cas_general(p, coord);
@@ -1303,7 +1315,7 @@ void retourne_Djibril_Aurelien_Dembele_Cabot(Plateau p, Faction f, int score, Co
     for (j = 0; j < 129; j += 1)
     {
         Carte carte = p->plateau_jeu[coord.i][j];
-        if (get_est_cachee(carte) == 0)
+        if (carte != NULL && get_est_cachee(carte) == 0)
         {
             nb_retournees_ligne += 1;
         }
@@ -1358,7 +1370,7 @@ void retourne_Eric_Lejeune(Plateau p, Coord coord)
         {
             Carte carte = p->plateau_jeu[i][j];
             // On teste si elle est retournée et on regarde si elle nous intéresse
-            if (get_est_cachee(carte) == 0)
+            if (carte != NULL && get_est_cachee(carte) == 0)
             {
                 compte_cartes_retournees += 1;
                 int k;
@@ -1448,7 +1460,7 @@ void retourne_Lucienne_Pacave(Plateau p, Faction f, int score, Coord coord)
     {
         Carte carte1 = p->plateau_jeu[k][coord.j];
         Carte carte2 = p->plateau_jeu[coord.i][k];
-        if ((get_est_cachee(carte1) == 0 && get_id(carte1) == FISA) || (get_est_cachee(carte2) == 0 && get_id(carte2) == FISA))
+        if ((carte1 != NULL && get_est_cachee(carte1) == 0 && get_id(carte1) == FISA) || (carte2 != NULL && get_est_cachee(carte2) == 0 && get_id(carte2) == FISA))
         {
             set_pts_DDRS_manche(f, score + 5); // ajout du bonus correspondant à la faction qui a posé la carte
             actualiser_constantes_cas_general(p, coord);
