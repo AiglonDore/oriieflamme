@@ -295,8 +295,6 @@ void retourne_Ecocup(Plateau p, Coord coord);
 /**
  * @brief Active les effets de la carte Reprographie
  * @param p plateau valide (le pointeur doit être valide)
- * @param f faction valide (le pointeur doit être valide), faction qui a déposé la carte
- * @param score score de la faction f
  * @param f_adverse faction valide (le pointeur doit être valide), faction adverse de celle qui a déposé la carte
  * @param score_adverse score de la faction f_adverse
  * @param coord les coordonnées de la carte en question sur le plateau
@@ -328,6 +326,7 @@ void retourne_Parcours_sobriete_numerique(Plateau p);
  * @param p plateau valide (le pointeur doit être valide)
  * @param f_adverse faction valide (le pointeur doit être valide), faction adverse de celle qui a déposé la carte
  * @param score_adverse score de la faction f_adverse
+ * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
 void retourne_Heures_supplementaires(Plateau p, Faction f_adverse, int score_adverse, Coord coord);
