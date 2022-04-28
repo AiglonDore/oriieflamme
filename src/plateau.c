@@ -329,11 +329,14 @@ void poser_carte(Carte c, Plateau p, int i, int j)
     Carte *m = get_main(f);
     // On supprime la carte à poser de la main de la faction
     int k = 0;
-    while (c != m[k])
+    while (k < 8 && c != m[k])
     {
         k += 1;
     }
-    m[k] = NULL;
+    if (c == m[k])
+    {
+        m[k] = NULL;
+    }
     // On pose la carte sur le plateau (on a supposé que les coordonnées i et j sont cohérentes avec les règles du jeu)
     Coord derniere_carte = p->coord_derniere_carte_posee;
     p->cartes_non_retournees_manche += 1;
@@ -482,7 +485,7 @@ void retourne_lIIEns(Plateau p, Coord coord)
     int *t = malloc(nb_a_retirer * sizeof(int)); // ce tableau sert à savoir si l'indice généré a déjà été généré (t[i]=1 si i déjà sorti, 0 sinon)
     Carte *melange = malloc(nb_a_retirer * sizeof(Carte));
     int c = 0;           // sert à compter le nombre de cartes rentrées dans melange
-    int n = rand() % 16; // génère un nombre entier aléatoire entre 0 et nb_a_retirer-1
+    int n = rand() % 16; // génère un nombre entier aléatoire entre 0 et 15
     while (c != nb_a_retirer)
     {
         while (n >= nb_a_retirer || t[n] == 1)
@@ -507,7 +510,6 @@ void retourne_lIIEns(Plateau p, Coord coord)
     // Libération des tableaux melange et t
     for (i = 0; i < nb_a_retirer; i += 1)
     {
-        melange[i] = NULL;
         free(melange[i]);
     }
     free(melange);
