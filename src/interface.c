@@ -401,3 +401,10 @@ Coord demande_position(Plateau p)
     }
     return available[item - 1];
 }
+
+void affiche_ddrs(Plateau p)
+{
+    Factions_en_jeu factions = get_factions(p);
+    printf("%s, vos points DDRS sont: %d.\n",get_nom_faction(factions.left),get_pts_DDRS_manche(factions.left));
+    printf("%s, vos points DDRS sont: %d.\n",get_nom_faction(factions.right),get_pts_DDRS_manche(factions.right));
+}

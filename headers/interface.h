@@ -65,9 +65,14 @@ void affiche_vainqueur(Plateau p);
 
 /**
  * @brief Fonction qui demande à quelle position doit être placée la carte
- * @todo A finir.
  * @param p Plateau de jeu.
  */
 Coord demande_position(Plateau p);
 
+/**
+ * @brief Affiche les points DDRS des deux factions.
+ * 
+ * @param p Plateau de jeu.
+ */
+void affiche_ddrs(Plateau p);
 #endif //INTERFACE_H
