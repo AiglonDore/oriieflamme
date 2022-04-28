@@ -25,6 +25,9 @@ void affiche_plateau(Plateau p)
 {
     Coord haut_gauche = get_coord_carte_haut_gauche(p);
     Coord bas_droite = get_coord_carte_bas_droite(p);
+    printf("          ");
+    for (int j = get_colonne_gauche(p); j <= get_colonne_droite(p); j++) printf("Col. %d ",j);
+    printf("\n");
     for (int i = haut_gauche.i; i <= bas_droite.i; i++)
     {
         printf("Ligne %d: ", i);
@@ -59,8 +62,12 @@ void affiche_main(Faction f)
     {
         if (main[i] != NULL)
         {
-            printf("%s\n", get_nom(main[i]));
+            printf("*%s\n", get_nom(main[i]));
             affiche_effets(main[i]);
+        }
+        else
+        {
+            printf("NULL\n");
         }
     }
 }
@@ -88,16 +95,18 @@ Carte a_poser_face_cachee_sur_plateau(Faction f)
         printf("Valeur incorrecte: elle doit être entre 1 et %d.\n", nb_cartes);
     }
     int count = 0;
-    int ret = -1;
-    for (int i = 0; i < 8; i++)
+    int ret = 0;
+    for (int i = 0; i < nb_cartes; i++)
     {
-        if (count == ans - 1)
+        if (get_main(f)[i] != NULL)
+        {
+            count++;
+        }
+        if (count == ans)
         {
             ret = i;
             break;
         }
-        if (get_main(f)[i] != NULL)
-            count++;
     }
     return get_main(f)[ret];
 }
