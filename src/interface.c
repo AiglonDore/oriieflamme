@@ -23,8 +23,11 @@ char *nom_faction(Faction f)
 
 void affiche_plateau(Plateau p)
 {
-    for (int i = 0; i < 129; i++)
+    Coord haut_gauche = get_coord_carte_haut_gauche(p);
+    Coord bas_droite = get_coord_carte_bas_droite(p);
+    for (int i = haut_gauche.i; i <= bas_droite.i; i++)
     {
+        printf("Ligne %d: ",i);
         for (int j = 0; j < 129; j++)
         {
             if (get_carte_at(p,i,j) != NULL)
@@ -136,7 +139,7 @@ Coord demande_position(Plateau p)
         return ret;
     }
     affiche_plateau(p);
-    printf("Veuillez choisir où vous souhaitez poser une carte en saisissant le numéro associé:\n");
+    printf("Veuillez choisir où vous souhaitez poser la carte en saisissant le numéro associé:\n");
     int counter = 0;
     Coord available[129 * 129];
     for (int i = 0; i < 129; i++)
