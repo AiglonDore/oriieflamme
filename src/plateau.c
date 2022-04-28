@@ -723,7 +723,7 @@ void retourne_Reprographie(Plateau p, Faction f_adverse, int score_adverse, Coor
         for (j = 0; j < 129; j += 1)
         {
             Carte carte = p->plateau_jeu[i][j];
-            if (get_est_cachee(carte) == 0)
+            if (carte != NULL && get_est_cachee(carte) == 0)
             {
                 id_carte id = get_id(carte);
                 cartes_retournees[(int)id] += 1;
