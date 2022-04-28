@@ -1,12 +1,17 @@
 var searchData=
 [
-  ['nb_5fcartes_103',['nb_cartes',['../carte_8c.html#a2b6d4f8bcc0250f758fbe1084d6db400',1,'carte.c']]],
-  ['nb_5fmanches_5fgagnantes_104',['nb_manches_gagnantes',['../plateau_8c.html#ad6eb25c37708ff7c560f45c853170da7',1,'plateau.c']]],
-  ['nb_5fmanches_5fgagnees_105',['nb_manches_gagnees',['../struct_structure_factions.html#a9a28e5f76e90c5583dd2a643b6e3d3f0',1,'StructureFactions']]],
-  ['nb_5focc_106',['nb_occ',['../struct_structure_carte.html#ab888049134c61bbeaad3ad6d00548000',1,'StructureCarte::nb_occ()'],['../carte_8c.html#a23ff9557f6159bca189decc25dab66f1',1,'nb_occ():&#160;carte.c']]],
-  ['nom_107',['nom',['../struct_structure_carte.html#abe308d273ff51ad86ff02ef3ba3b6f0e',1,'StructureCarte::nom()'],['../struct_structure_factions.html#abe308d273ff51ad86ff02ef3ba3b6f0e',1,'StructureFactions::nom()']]],
-  ['nom_5fcarte_108',['nom_carte',['../carte_8h.html#abe76352df13b10f1e17f69b53bdd1d64',1,'nom_carte():&#160;carte.h'],['../carte_8c.html#a4907e4800ac43a27ec79e1f3a7f80244',1,'nom_carte():&#160;carte.c']]],
-  ['nom_5ffaction_109',['nom_faction',['../interface_8h.html#ab716e0c166fd1d07dca1545157befef5',1,'nom_faction(Faction f):&#160;interface.c'],['../interface_8c.html#ab716e0c166fd1d07dca1545157befef5',1,'nom_faction(Faction f):&#160;interface.c']]],
-  ['nouvelle_5fmanche_110',['nouvelle_manche',['../plateau_8h.html#a49570b78f74ed1d5d588404e0f6bbcfc',1,'nouvelle_manche(Plateau p):&#160;plateau.c'],['../plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc',1,'nouvelle_manche(Plateau p):&#160;plateau.c']]],
-  ['numero_5fmanche_111',['numero_manche',['../structs__plateau.html#ab81fdfe0230368241bed8055124c3e16',1,'s_plateau']]]
+  ['projet_5finfo_5fgroupe_5f15_118',['Projet_Info_Groupe_15',['../md__r_e_a_d_m_e.html',1,'']]],
+  ['parcours_5fsobriete_5fnumerique_119',['Parcours_sobriete_numerique',['../carte_8h.html#abe76352df13b10f1e17f69b53bdd1d64a231ce4bc9e630f6d36e17e5917322720',1,'carte.h']]],
+  ['phase1_120',['phase1',['../main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299',1,'main.c']]],
+  ['phase2_121',['phase2',['../main_8c.html#a34ccc9f1e0da464163a6f5e297c42563',1,'main.c']]],
+  ['pioche_122',['pioche',['../struct_structure_factions.html#a39d4a6b7b84e20e5de25bb621ac13278',1,'StructureFactions::pioche()'],['../structure_8h.html#a9b18ab4f4d3508a3f5ce014f4040217f',1,'Pioche():&#160;structure.h']]],
+  ['pioche_5fest_5fvide_123',['pioche_est_vide',['../structure_8h.html#ae973594dee297fae28846edec431f098',1,'pioche_est_vide(Pioche p):&#160;structure.c'],['../structure_8c.html#ae973594dee297fae28846edec431f098',1,'pioche_est_vide(Pioche p):&#160;structure.c']]],
+  ['piocher_124',['piocher',['../faction_8h.html#a5b400a1d1b3c89ef50e5bb4b98e177cb',1,'piocher(Faction f):&#160;faction.c'],['../faction_8c.html#a5b400a1d1b3c89ef50e5bb4b98e177cb',1,'piocher(Faction f):&#160;faction.c']]],
+  ['plateau_125',['Plateau',['../plateau_8h.html#aeb2df061534a36a23c2755dfbd9ee6f3',1,'plateau.h']]],
+  ['plateau_2ec_126',['plateau.c',['../plateau_8c.html',1,'']]],
+  ['plateau_2eh_127',['plateau.h',['../plateau_8h.html',1,'']]],
+  ['plateau_5fjeu_128',['plateau_jeu',['../structs__plateau.html#ad782e69822866bf4af66440f3ee64b39',1,'s_plateau::plateau_jeu()'],['../structure_8h.html#af09c6150dd688094b9a2ed11657afbe0',1,'Plateau_jeu():&#160;structure.h']]],
+  ['poser_5fcarte_129',['poser_carte',['../plateau_8h.html#a425437529596e13babd7bc8b4e04d491',1,'poser_carte(Carte c, Plateau p, int i, int j):&#160;plateau.c'],['../plateau_8c.html#a425437529596e13babd7bc8b4e04d491',1,'poser_carte(Carte c, Plateau p, int i, int j):&#160;plateau.c']]],
+  ['proprietaire_130',['proprietaire',['../struct_structure_carte.html#ab945314e7899257322b8b02ada57aeaf',1,'StructureCarte']]],
+  ['pts_5fddrs_5fmanche_131',['pts_DDRS_manche',['../struct_structure_factions.html#a91856b4077b5b05aa8b53fc8dde80960',1,'StructureFactions']]]
 ];

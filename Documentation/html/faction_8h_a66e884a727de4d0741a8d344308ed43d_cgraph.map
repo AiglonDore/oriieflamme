@@ -1,0 +1,4 @@
+<map id="supprimer_faction" name="supprimer_faction">
+<area shape="rect" id="node1" title="Permet de supprimer une faction et de libérer son espace mémoire alloué" alt="" coords="5,5,145,32"/>
+<area shape="rect" id="node2" href="$faction_8c.html#a24be676800659f0495a42397f64d66a2" title="Prototype de set_pioche qui permet d&#39;initialiser la pioche de la faction." alt="" coords="193,5,285,32"/>
+</map>

@@ -1,4 +1,4 @@
-\hypertarget{structure_8h}{}\doxysection{headers/structure.h File Reference}
+\hypertarget{structure_8h}{}\doxysection{Référence du fichier headers/structure.h}
 \label{structure_8h}\index{headers/structure.h@{headers/structure.h}}
 
 
@@ -7,28 +7,28 @@ Interface pour gérer le plateau de jeu et le déroulement de la partie.
 
 {\ttfamily \#include \char`\"{}carte.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}faction.\+h\char`\"{}}\newline
-Include dependency graph for structure.\+h\+:\nopagebreak
+Graphe des dépendances par inclusion de structure.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=223pt]{structure_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{structure_8h__dep__incl}
 \end{center}
 \end{figure}
-\doxysubsection*{Data Structures}
+\doxysubsection*{Structures de données}
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{struct_factions__en__jeu}{Factions\+\_\+en\+\_\+jeu}}
 \begin{DoxyCompactList}\small\item\em Structure pour les couples de factions. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{struct_coord}{Coord}}
 \begin{DoxyCompactList}\small\item\em Structure pour stocker les coordonnées d\textquotesingle{}une carte sur la grille 2D. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Typedefs}
+\doxysubsection*{Définitions de type}
 \begin{DoxyCompactItemize}
 \item 
 typedef \mbox{\hyperlink{carte_8h_a633ba64ee908d35aac798844f477ee9d}{Carte}} \mbox{\hyperlink{structure_8h_af09c6150dd688094b9a2ed11657afbe0}{Plateau\+\_\+jeu}}\mbox{[}129\mbox{]}\mbox{[}129\mbox{]}
@@ -41,7 +41,7 @@ typedef \mbox{\hyperlink{carte_8h_a633ba64ee908d35aac798844f477ee9d}{Carte}} \mb
 \begin{DoxyCompactList}\small\item\em type concret pour la main d\textquotesingle{}une faction \end{DoxyCompactList}\item 
 typedef struct \mbox{\hyperlink{structs__pioche}{s\+\_\+pioche}} $\ast$ \mbox{\hyperlink{structure_8h_a9b18ab4f4d3508a3f5ce014f4040217f}{Pioche}}
 \begin{DoxyCompactList}\small\item\em type abstrait pour la pioche d\textquotesingle{}une faction \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Functions}
+\doxysubsection*{Fonctions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{structure_8h_a9b18ab4f4d3508a3f5ce014f4040217f}{Pioche}} \mbox{\hyperlink{structure_8h_ad911b5ece54d506c7109120dbfc9c2f0}{creation\+\_\+pioche\+\_\+vide}} ()
@@ -51,13 +51,15 @@ int \mbox{\hyperlink{structure_8h_ae973594dee297fae28846edec431f098}{pioche\+\_\
 void \mbox{\hyperlink{structure_8h_ac8dcdc0ffb092b739d94573e47eaaacf}{ajout\+\_\+pioche}} (\mbox{\hyperlink{structure_8h_a9b18ab4f4d3508a3f5ce014f4040217f}{Pioche}} p, \mbox{\hyperlink{carte_8h_a633ba64ee908d35aac798844f477ee9d}{Carte}} c)
 \begin{DoxyCompactList}\small\item\em ajoute la carte à la pioche au sommet de celle-\/ci \end{DoxyCompactList}\item 
 \mbox{\hyperlink{carte_8h_a633ba64ee908d35aac798844f477ee9d}{Carte}} \mbox{\hyperlink{structure_8h_a7b95c6a72accdcab7cc1f39d2536fe06}{enleve\+\_\+pioche}} (\mbox{\hyperlink{structure_8h_a9b18ab4f4d3508a3f5ce014f4040217f}{Pioche}} p)
-\begin{DoxyCompactList}\small\item\em enlève la carte au sommet de la pioche (on suppose la pioche non vide) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em enlève la carte au sommet de la pioche (on suppose la pioche non vide) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structure_8h_aea557b1ca9333f45e14a77f9896d0a56}{affiche\+\_\+pioche}} (\mbox{\hyperlink{structure_8h_a9b18ab4f4d3508a3f5ce014f4040217f}{Pioche}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f)
+\end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
+\doxysubsection{Description détaillée}
 Interface pour gérer le plateau de jeu et le déroulement de la partie. 
 
-\begin{DoxyAuthor}{Author}
+\begin{DoxyAuthor}{Auteur}
 Valentin Gardel (\href{mailto:valentin.gardel@ensiie.fr}{\texttt{ valentin.\+gardel@ensiie.\+fr}}) 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
@@ -71,7 +73,7 @@ Copyright (c) 2022
 \end{DoxyCopyright}
 
 
-\doxysubsection{Typedef Documentation}
+\doxysubsection{Documentation des définitions de type}
 \mbox{\Hypertarget{structure_8h_a28212a9adac38466f50ed55f1bc4cdfb}\label{structure_8h_a28212a9adac38466f50ed55f1bc4cdfb}} 
 \index{structure.h@{structure.h}!Coord@{Coord}}
 \index{Coord@{Coord}!structure.h@{structure.h}}
@@ -84,7 +86,7 @@ Alias pour les coordonnées d\textquotesingle{}une carte.
 
 
 
-Definition at line 58 of file structure.\+h.
+Définition à la ligne 58 du fichier structure.\+h.
 
 \mbox{\Hypertarget{structure_8h_aaf4d7dcdfc776307087361b4ee995e09}\label{structure_8h_aaf4d7dcdfc776307087361b4ee995e09}} 
 \index{structure.h@{structure.h}!Factions\_en\_jeu@{Factions\_en\_jeu}}
@@ -98,7 +100,7 @@ Alias pour les couples de factions.
 
 
 
-Definition at line 40 of file structure.\+h.
+Définition à la ligne 40 du fichier structure.\+h.
 
 \mbox{\Hypertarget{structure_8h_a0231077ad24f0c102c1d0d6daafae6e9}\label{structure_8h_a0231077ad24f0c102c1d0d6daafae6e9}} 
 \index{structure.h@{structure.h}!Main@{Main}}
@@ -112,7 +114,7 @@ type concret pour la main d\textquotesingle{}une faction
 
 
 
-Definition at line 65 of file structure.\+h.
+Définition à la ligne 65 du fichier structure.\+h.
 
 \mbox{\Hypertarget{structure_8h_a9b18ab4f4d3508a3f5ce014f4040217f}\label{structure_8h_a9b18ab4f4d3508a3f5ce014f4040217f}} 
 \index{structure.h@{structure.h}!Pioche@{Pioche}}
@@ -126,7 +128,7 @@ type abstrait pour la pioche d\textquotesingle{}une faction
 
 
 
-Definition at line 72 of file structure.\+h.
+Définition à la ligne 72 du fichier structure.\+h.
 
 \mbox{\Hypertarget{structure_8h_af09c6150dd688094b9a2ed11657afbe0}\label{structure_8h_af09c6150dd688094b9a2ed11657afbe0}} 
 \index{structure.h@{structure.h}!Plateau\_jeu@{Plateau\_jeu}}
@@ -140,11 +142,28 @@ type concret pour le plateau de jeu
 
 
 
-Definition at line 22 of file structure.\+h.
+Définition à la ligne 22 du fichier structure.\+h.
 
 
 
-\doxysubsection{Function Documentation}
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{structure_8h_aea557b1ca9333f45e14a77f9896d0a56}\label{structure_8h_aea557b1ca9333f45e14a77f9896d0a56}} 
+\index{structure.h@{structure.h}!affiche\_pioche@{affiche\_pioche}}
+\index{affiche\_pioche@{affiche\_pioche}!structure.h@{structure.h}}
+\doxysubsubsection{\texorpdfstring{affiche\_pioche()}{affiche\_pioche()}}
+{\footnotesize\ttfamily void affiche\+\_\+pioche (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structure_8h_a9b18ab4f4d3508a3f5ce014f4040217f}{Pioche}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f }\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne 55 du fichier structure.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{structure_8h_aea557b1ca9333f45e14a77f9896d0a56_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{structure_8h_ac8dcdc0ffb092b739d94573e47eaaacf}\label{structure_8h_ac8dcdc0ffb092b739d94573e47eaaacf}} 
 \index{structure.h@{structure.h}!ajout\_pioche@{ajout\_pioche}}
 \index{ajout\_pioche@{ajout\_pioche}!structure.h@{structure.h}}
@@ -156,7 +175,7 @@ Definition at line 22 of file structure.\+h.
 ajoute la carte à la pioche au sommet de celle-\/ci 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Paramètres}
 {\em p} & une pioche valide \\
 \hline
 {\em c} & une carte valide \\
@@ -164,9 +183,9 @@ ajoute la carte à la pioche au sommet de celle-\/ci
 \end{DoxyParams}
 
 
-Definition at line 40 of file structure.\+c.
+Définition à la ligne 41 du fichier structure.\+c.
 
-Here is the caller graph for this function\+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -184,20 +203,20 @@ Here is the caller graph for this function\+:\nopagebreak
 Savoir si une faction a itilisé l\textquotesingle{}option de remélanger sa main et boîte à idée et de repiocher des cartes. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Paramètres}
 {\em f} & une faction \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 0 si la main n\textquotesingle{}a pas été remélangé 
 
 1 si la main a été remélangé 
 \end{DoxyReturn}
 
 
-Definition at line 28 of file structure.\+c.
+Définition à la ligne 29 du fichier structure.\+c.
 
-Here is the caller graph for this function\+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -215,18 +234,18 @@ Here is the caller graph for this function\+:\nopagebreak
 enlève la carte au sommet de la pioche (on suppose la pioche non vide) 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Paramètres}
 {\em p} & une pioche valide \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 la carte qui a été retirée 
 \end{DoxyReturn}
 
 
-Definition at line 46 of file structure.\+c.
+Définition à la ligne 47 du fichier structure.\+c.
 
-Here is the caller graph for this function\+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -244,16 +263,16 @@ Here is the caller graph for this function\+:\nopagebreak
 indique si la pioche est vide ou non 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Paramètres}
 {\em p} & une pioche valide \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 0 si la pioche n\textquotesingle{}est pas vide 
 
 1 si la pioche est vide 
 \end{DoxyReturn}
 
 
-Definition at line 35 of file structure.\+c.
+Définition à la ligne 36 du fichier structure.\+c.
 

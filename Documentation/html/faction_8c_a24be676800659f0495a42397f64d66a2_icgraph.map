@@ -1,0 +1,12 @@
+<map id="set_pioche" name="set_pioche">
+<area shape="rect" id="node1" title="Prototype de set_pioche qui permet d&#39;initialiser la pioche de la faction." alt="" coords="753,81,845,108"/>
+<area shape="rect" id="node2" href="$plateau_8c.html#a2190bbe0984d78c5f3d5f2e646210f07" title="Crée la pioche avec les 32 cartes de l&#39;énoncé pour la faction donnée." alt="" coords="589,56,682,83"/>
+<area shape="rect" id="node9" href="$faction_8c.html#a66e884a727de4d0741a8d344308ed43d" title="Permet de supprimer une faction et de libérer son espace mémoire alloué" alt="" coords="565,107,705,133"/>
+<area shape="rect" id="node3" href="$plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="380,56,517,83"/>
+<area shape="rect" id="node4" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="277,56,332,83"/>
+<area shape="rect" id="node5" href="$interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="123,5,229,32"/>
+<area shape="rect" id="node7" href="$plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="127,56,225,83"/>
+<area shape="rect" id="node8" href="$faction_8c.html#aef8713f12e5372bd993f34fa4f6d6cab" title=" " alt="" coords="135,107,217,133"/>
+<area shape="rect" id="node6" href="$main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="5,81,75,108"/>
+<area shape="rect" id="node10" href="$plateau_8c.html#aa2fd2fef89b903a5c089bf57cb932e29" title="Libère la mémoire associée au plateau de jeu et aux deux factions." alt="" coords="391,107,506,133"/>
+</map>

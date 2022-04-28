@@ -1,39 +1,40 @@
 <map id="get_est_cachee" name="get_est_cachee">
-<area shape="rect" id="node1" title="Prototype de get_est_cachee qui permet de récupérer un entier qui indique si la face est cachée ou pa..." alt="" coords="1259,759,1381,786"/>
-<area shape="rect" id="node2" href="$interface_8c.html#a8bb576a3127fc3437d91467ec19d0de0" title="Fonction qui affiche le plateau de jeu." alt="" coords="793,63,916,90"/>
-<area shape="rect" id="node11" href="$plateau_8c.html#ac2734f8c9dd2b1da2bc44353bde8f8cd" title="Active les effets de la carte Alcool." alt="" coords="1025,165,1149,191"/>
-<area shape="rect" id="node14" href="$plateau_8c.html#a41cddf8d1f1e457df2f4c905d6605151" title="retourne la carte la plus en haut à gauche du plateau face visible et active son effet" alt="" coords="606,139,729,166"/>
-<area shape="rect" id="node15" href="$plateau_8c.html#a4fa3750c4cdb95c9f79a8a1c0810dabe" title="Active les effets de la carte Anne&#45;Laure Ligozat." alt="" coords="1011,216,1164,257"/>
-<area shape="rect" id="node16" href="$plateau_8c.html#affb3dc4699da610a4094b898606df720" title="Active les effets de la carte Café" alt="" coords="1030,282,1145,309"/>
-<area shape="rect" id="node17" href="$plateau_8c.html#a54bbb50bc4da98fef56d5a1224625062" title="Active les effets de la carte Catherine Dubois." alt="" coords="1014,333,1161,375"/>
-<area shape="rect" id="node18" href="$plateau_8c.html#aac850aae639596089422f59945955893" title="Active les effets de la carte Christophe Mouilleron." alt="" coords="1010,399,1165,440"/>
-<area shape="rect" id="node19" href="$plateau_8c.html#a8eda7434dc0f02bd157237914732da90" title="Active les effets de la carte Dimitri Watel." alt="" coords="1001,465,1174,491"/>
-<area shape="rect" id="node20" href="$plateau_8c.html#a21795d3e8856c6912ca864b28e385f5c" title="Active les effets de la carte Djibril&#45;Aurélien Dembele&#45;Cabot." alt="" coords="995,516,1179,557"/>
-<area shape="rect" id="node21" href="$plateau_8c.html#a8e59a299de0435cb251597fede757ade" title="Active les effets de la carte EcologIIE." alt="" coords="1016,582,1159,609"/>
-<area shape="rect" id="node22" href="$plateau_8c.html#a4eba5c924a69c8f5fe5c8ac913e7fdbb" title="Active les effets de la carte Eric Lejeune." alt="" coords="1004,633,1171,659"/>
-<area shape="rect" id="node23" href="$plateau_8c.html#a6f31d9b51378e4ea68b694367b7b1174" title="Active les effets de la carte FC." alt="" coords="1037,683,1138,710"/>
-<area shape="rect" id="node24" href="$plateau_8c.html#a017b517e0297e70952f7fc6c0d7a3fc0" title="Active les effets de la carte Fetia Bannour." alt="" coords="999,734,1176,761"/>
-<area shape="rect" id="node25" href="$plateau_8c.html#a36ee6886e1fc49003a638898ee8a1430" title="Active les effets de la carte Heures supplémentaires." alt="" coords="964,785,1211,811"/>
-<area shape="rect" id="node26" href="$plateau_8c.html#ae667a16136a040ee486dd208a7a90b89" title="Active les effets de la carte Isolation du bâtiment." alt="" coords="1017,836,1157,877"/>
-<area shape="rect" id="node27" href="$plateau_8c.html#a5948318ef066f8f725c9cbcfbdcddef4" title="Active les effets de la carte Jonas Senizergues." alt="" coords="985,902,1190,929"/>
-<area shape="rect" id="node28" href="$plateau_8c.html#a8b356d2c8f83f00b22b937e89a0555ed" title="Active les effets de la carte Julien Forest." alt="" coords="1004,953,1171,979"/>
-<area shape="rect" id="node29" href="$plateau_8c.html#a13f1ea8c5ce2eb9249d799bfe0fcfba9" title="Active les effets de la carte Kahina Bouchama." alt="" coords="985,1003,1190,1030"/>
-<area shape="rect" id="node30" href="$plateau_8c.html#a8706936e604ef0fd87424d3609c8dcad" title="Active les effets de la carte Katrin Salhab." alt="" coords="1000,1054,1175,1081"/>
-<area shape="rect" id="node31" href="$plateau_8c.html#ae40eb3cf4de488fdf73c964d43010777" title="Active les effets de la carte Kevin Goilard." alt="" coords="1000,1105,1175,1131"/>
-<area shape="rect" id="node32" href="$plateau_8c.html#a5eb5134fa91f5c2703f528db8e48909b" title="Active les effets de la carte lIIEns." alt="" coords="1028,1155,1147,1182"/>
-<area shape="rect" id="node33" href="$plateau_8c.html#a3e690776b92b2f31a095755a991a6bfc" title="Active les effets de la carte Parcours sobriété numérique." alt="" coords="988,1207,1187,1248"/>
-<area shape="rect" id="node34" href="$plateau_8c.html#afff5ccdbd66c7da305d833d9bb9f3163" title="Active les effets de la carte Reprographie." alt="" coords="1002,1273,1173,1299"/>
-<area shape="rect" id="node35" href="$plateau_8c.html#a25711459a4937e78bf709717c5e451e5" title="Active les effets de la carte Soirée sans alcool." alt="" coords="1006,1324,1169,1365"/>
-<area shape="rect" id="node36" href="$plateau_8c.html#aac76ddb6fb1f7345ba3ad5b8f51356d6" title="Active les effets de la carte Thé" alt="" coords="1033,1390,1141,1417"/>
-<area shape="rect" id="node37" href="$plateau_8c.html#a1560d3c9cea0c5b2fb4d9617d5c1a0e6" title="Active les effets de la carte Thomas Lim." alt="" coords="1004,1441,1171,1467"/>
-<area shape="rect" id="node3" href="$interface_8c.html#a8330a6ec294f24da52fe0f265181fbcc" title="Fonction qui demande à quelle position doit être placée la carte." alt="" coords="596,38,739,65"/>
-<area shape="rect" id="node10" href="$main_8c.html#a34ccc9f1e0da464163a6f5e297c42563" title="Fonction qui contrôle la phase 2." alt="" coords="472,89,541,115"/>
-<area shape="rect" id="node4" href="$main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="472,38,541,65"/>
-<area shape="rect" id="node5" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="369,89,424,115"/>
-<area shape="rect" id="node6" href="$interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="215,38,321,65"/>
-<area shape="rect" id="node8" href="$plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="17,151,155,178"/>
-<area shape="rect" id="node9" href="$faction_8c.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="227,89,309,115"/>
-<area shape="rect" id="node7" href="$interface_8c.html#a59cec6e54845df8ae5160bd8b2a351c2" title="Fonction qui demande la carte qui sera posée face cachée sur le plateau." alt="" coords="5,5,167,47"/>
-<area shape="rect" id="node12" href="$plateau_8c.html#a676ed33ed1ff7fd3200efd68462f61e0" title="Active les effets de la carte d&#39;identifiant id." alt="" coords="803,785,907,811"/>
-<area shape="rect" id="node13" href="$plateau_8c.html#a289b461ee18614882e9e0e242c2193da" title="Active les effets de la carte Massinissa Merabet." alt="" coords="589,777,745,819"/>
+<area shape="rect" id="node1" title="Prototype de get_est_cachee qui permet de récupérer un entier qui indique si la face est cachée ou pa..." alt="" coords="1080,752,1203,779"/>
+<area shape="rect" id="node2" href="$interface_8c.html#a8bb576a3127fc3437d91467ec19d0de0" title="Fonction qui affiche le plateau de jeu." alt="" coords="615,31,737,57"/>
+<area shape="rect" id="node11" href="$plateau_8c.html#ac2734f8c9dd2b1da2bc44353bde8f8cd" title="Active les effets de la carte Alcool." alt="" coords="847,132,971,159"/>
+<area shape="rect" id="node14" href="$plateau_8c.html#a41cddf8d1f1e457df2f4c905d6605151" title="retourne la carte la plus en haut à gauche du plateau face visible et active son effet" alt="" coords="427,107,550,133"/>
+<area shape="rect" id="node15" href="$plateau_8c.html#a4fa3750c4cdb95c9f79a8a1c0810dabe" title="Active les effets de la carte Anne&#45;Laure Ligozat." alt="" coords="832,183,985,225"/>
+<area shape="rect" id="node16" href="$plateau_8c.html#affb3dc4699da610a4094b898606df720" title="Active les effets de la carte Café" alt="" coords="851,249,966,276"/>
+<area shape="rect" id="node17" href="$plateau_8c.html#a54bbb50bc4da98fef56d5a1224625062" title="Active les effets de la carte Catherine Dubois." alt="" coords="835,301,982,342"/>
+<area shape="rect" id="node18" href="$plateau_8c.html#aac850aae639596089422f59945955893" title="Active les effets de la carte Christophe Mouilleron." alt="" coords="831,366,986,407"/>
+<area shape="rect" id="node19" href="$plateau_8c.html#a8eda7434dc0f02bd157237914732da90" title="Active les effets de la carte Dimitri Watel." alt="" coords="822,432,995,459"/>
+<area shape="rect" id="node20" href="$plateau_8c.html#a21795d3e8856c6912ca864b28e385f5c" title="Active les effets de la carte Djibril&#45;Aurélien Dembele&#45;Cabot." alt="" coords="817,483,1001,525"/>
+<area shape="rect" id="node21" href="$plateau_8c.html#a918c0e8b76b14f83cbbd245d2c486ffa" title="Active les effets de la carte EcologIIE." alt="" coords="837,549,980,576"/>
+<area shape="rect" id="node22" href="$plateau_8c.html#a4eba5c924a69c8f5fe5c8ac913e7fdbb" title="Active les effets de la carte Eric Lejeune." alt="" coords="825,600,992,627"/>
+<area shape="rect" id="node23" href="$plateau_8c.html#a6f31d9b51378e4ea68b694367b7b1174" title="Active les effets de la carte FC." alt="" coords="858,651,959,677"/>
+<area shape="rect" id="node24" href="$plateau_8c.html#a017b517e0297e70952f7fc6c0d7a3fc0" title="Active les effets de la carte Fetia Bannour." alt="" coords="820,701,997,728"/>
+<area shape="rect" id="node25" href="$plateau_8c.html#a36ee6886e1fc49003a638898ee8a1430" title="Active les effets de la carte Heures supplémentaires." alt="" coords="785,752,1032,779"/>
+<area shape="rect" id="node26" href="$plateau_8c.html#ae667a16136a040ee486dd208a7a90b89" title="Active les effets de la carte Isolation du bâtiment." alt="" coords="839,803,979,845"/>
+<area shape="rect" id="node27" href="$plateau_8c.html#a5948318ef066f8f725c9cbcfbdcddef4" title="Active les effets de la carte Jonas Senizergues." alt="" coords="806,869,1011,896"/>
+<area shape="rect" id="node28" href="$plateau_8c.html#a8b356d2c8f83f00b22b937e89a0555ed" title="Active les effets de la carte Julien Forest." alt="" coords="825,920,992,947"/>
+<area shape="rect" id="node29" href="$plateau_8c.html#a13f1ea8c5ce2eb9249d799bfe0fcfba9" title="Active les effets de la carte Kahina Bouchama." alt="" coords="806,971,1011,997"/>
+<area shape="rect" id="node30" href="$plateau_8c.html#a8706936e604ef0fd87424d3609c8dcad" title="Active les effets de la carte Katrin Salhab." alt="" coords="821,1021,996,1048"/>
+<area shape="rect" id="node31" href="$plateau_8c.html#ae40eb3cf4de488fdf73c964d43010777" title="Active les effets de la carte Kevin Goilard." alt="" coords="821,1072,996,1099"/>
+<area shape="rect" id="node32" href="$plateau_8c.html#a5eb5134fa91f5c2703f528db8e48909b" title="Active les effets de la carte lIIEns." alt="" coords="849,1123,968,1149"/>
+<area shape="rect" id="node33" href="$plateau_8c.html#a837f0190fe80102a519fc17820ac68c9" title="Active les effets de la carte Lucienne Pacavé" alt="" coords="811,1173,1006,1200"/>
+<area shape="rect" id="node34" href="$plateau_8c.html#a6cb5b4df4f408a8b430c71eacc014156" title="Active les effets de la carte Parcours sobriété numérique." alt="" coords="809,1225,1008,1266"/>
+<area shape="rect" id="node35" href="$plateau_8c.html#afff5ccdbd66c7da305d833d9bb9f3163" title="Active les effets de la carte Reprographie." alt="" coords="823,1291,994,1317"/>
+<area shape="rect" id="node36" href="$plateau_8c.html#a25711459a4937e78bf709717c5e451e5" title="Active les effets de la carte Soirée sans alcool." alt="" coords="827,1342,990,1383"/>
+<area shape="rect" id="node37" href="$plateau_8c.html#aac76ddb6fb1f7345ba3ad5b8f51356d6" title="Active les effets de la carte Thé" alt="" coords="855,1408,963,1435"/>
+<area shape="rect" id="node38" href="$plateau_8c.html#a1560d3c9cea0c5b2fb4d9617d5c1a0e6" title="Active les effets de la carte Thomas Lim." alt="" coords="825,1459,992,1485"/>
+<area shape="rect" id="node3" href="$interface_8c.html#a8330a6ec294f24da52fe0f265181fbcc" title="Fonction qui demande à quelle position doit être placée la carte." alt="" coords="417,5,560,32"/>
+<area shape="rect" id="node10" href="$main_8c.html#a34ccc9f1e0da464163a6f5e297c42563" title="Fonction qui contrôle la phase 2." alt="" coords="293,56,363,83"/>
+<area shape="rect" id="node4" href="$main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="293,5,363,32"/>
+<area shape="rect" id="node5" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="191,56,245,83"/>
+<area shape="rect" id="node6" href="$interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="21,5,127,32"/>
+<area shape="rect" id="node7" href="$plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="25,56,123,83"/>
+<area shape="rect" id="node8" href="$plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,107,143,133"/>
+<area shape="rect" id="node9" href="$faction_8c.html#aef8713f12e5372bd993f34fa4f6d6cab" title=" " alt="" coords="33,157,115,184"/>
+<area shape="rect" id="node12" href="$plateau_8c.html#a676ed33ed1ff7fd3200efd68462f61e0" title="Active les effets de la carte d&#39;identifiant id." alt="" coords="624,781,728,808"/>
+<area shape="rect" id="node13" href="$plateau_8c.html#a466b7d06f9be4885f93658ef783ebedb" title="Active les effets de la carte Massinissa Merabet." alt="" coords="411,774,567,815"/>
 </map>

@@ -1,4 +1,4 @@
-\hypertarget{structs__plateau}{}\doxysection{s\+\_\+plateau Struct Reference}
+\hypertarget{structs__plateau}{}\doxysection{Référence de la structure s\+\_\+plateau}
 \label{structs__plateau}\index{s\_plateau@{s\_plateau}}
 
 
@@ -7,101 +7,69 @@ type concret vers lequel pointe le plateau de jeu
 
 
 
-Collaboration diagram for s\+\_\+plateau\+:\nopagebreak
+Graphe de collaboration de s\+\_\+plateau\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{structs__plateau__coll__graph}
 \end{center}
 \end{figure}
-\doxysubsection*{Data Fields}
+\doxysubsection*{Champs de données}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{structure_8h_af09c6150dd688094b9a2ed11657afbe0}{Plateau\+\_\+jeu}} \mbox{\hyperlink{structs__plateau_ad782e69822866bf4af66440f3ee64b39}{plateau\+\_\+jeu}}
 \item 
 \mbox{\hyperlink{struct_factions__en__jeu}{Factions\+\_\+en\+\_\+jeu}} \mbox{\hyperlink{structs__plateau_a4da4f8e7a2081778b809f21a57d04e99}{factions}}
 \item 
-\mbox{\hyperlink{struct_coord}{Coord}} \mbox{\hyperlink{structs__plateau_a15c38ec64099b084dabb698a683ba37f}{derniere\+\_\+carte\+\_\+posee}}
+\mbox{\hyperlink{struct_coord}{Coord}} \mbox{\hyperlink{structs__plateau_af67559d522ebab15dce1448f81a84ba8}{coord\+\_\+derniere\+\_\+carte\+\_\+posee}}
 \item 
-\mbox{\hyperlink{struct_coord}{Coord}} \mbox{\hyperlink{structs__plateau_a43e28d326e00c37568d07b4d034c6741}{derniere\+\_\+carte\+\_\+retournee}}
+\mbox{\hyperlink{struct_coord}{Coord}} \mbox{\hyperlink{structs__plateau_abf90bd0752f6d6739e7137ea53836960}{coord\+\_\+derniere\+\_\+carte\+\_\+retournee}}
 \item 
-\mbox{\hyperlink{struct_coord}{Coord}} \mbox{\hyperlink{structs__plateau_afe536a9b9846e99505d291f003a2c59c}{avant\+\_\+derniere\+\_\+carte\+\_\+retournee}}
+\mbox{\hyperlink{carte_8h_a633ba64ee908d35aac798844f477ee9d}{Carte}} \mbox{\hyperlink{structs__plateau_a190b94da03e9eeaee0e4596e446122ba}{derniere\+\_\+carte\+\_\+retournee}}
 \item 
-\mbox{\hyperlink{struct_coord}{Coord}} \mbox{\hyperlink{structs__plateau_a6e2c13ef56ddbbcdd7da757a07c11393}{carte\+\_\+haut\+\_\+gauche\+\_\+cachee}}
+\mbox{\hyperlink{struct_coord}{Coord}} \mbox{\hyperlink{structs__plateau_a0291bbd9027d224510f8cdf6223534af}{coord\+\_\+avant\+\_\+derniere\+\_\+carte\+\_\+retournee}}
 \item 
-\mbox{\hyperlink{struct_coord}{Coord}} \mbox{\hyperlink{structs__plateau_abb2bec0d261815b576ecaf5e1cdbbccc}{carte\+\_\+bas\+\_\+droite\+\_\+cachee}}
+\mbox{\hyperlink{carte_8h_a633ba64ee908d35aac798844f477ee9d}{Carte}} \mbox{\hyperlink{structs__plateau_a0b02666bd23419f6e82a8f15e5c0d6d7}{avant\+\_\+derniere\+\_\+carte\+\_\+retournee}}
 \item 
-\mbox{\hyperlink{struct_coord}{Coord}} \mbox{\hyperlink{structs__plateau_a05b31a66697a919ea1071bafcdf0ef13}{carte\+\_\+haut\+\_\+gauche}}
+\mbox{\hyperlink{struct_coord}{Coord}} \mbox{\hyperlink{structs__plateau_a8133effcdd7a4efff7ec83ae806d3433}{coord\+\_\+carte\+\_\+haut\+\_\+gauche\+\_\+cachee}}
 \item 
-\mbox{\hyperlink{struct_coord}{Coord}} \mbox{\hyperlink{structs__plateau_abc52ce617bc1a028cd39956733efa55f}{carte\+\_\+bas\+\_\+droite}}
+\mbox{\hyperlink{struct_coord}{Coord}} \mbox{\hyperlink{structs__plateau_aac2c55ee18c38e20da38f2ddc66a18f8}{coord\+\_\+carte\+\_\+bas\+\_\+droite\+\_\+cachee}}
+\item 
+\mbox{\hyperlink{struct_coord}{Coord}} \mbox{\hyperlink{structs__plateau_a9c9a122f1fc4f1cbcf162b29f2711014}{coord\+\_\+carte\+\_\+haut\+\_\+gauche}}
+\item 
+\mbox{\hyperlink{struct_coord}{Coord}} \mbox{\hyperlink{structs__plateau_a7af721950746757525912404c11f9f8c}{coord\+\_\+carte\+\_\+bas\+\_\+droite}}
 \item 
 int \mbox{\hyperlink{structs__plateau_ab81fdfe0230368241bed8055124c3e16}{numero\+\_\+manche}}
 \item 
 int \mbox{\hyperlink{structs__plateau_af710c246cc2107c9cd1cb2ea0d03935f}{cartes\+\_\+retournees\+\_\+manche}}
 \item 
 int \mbox{\hyperlink{structs__plateau_ae6e5711783a4637882847b09a4e03d2b}{cartes\+\_\+non\+\_\+retournees\+\_\+manche}}
+\item 
+int \mbox{\hyperlink{structs__plateau_aa7647a23877193236e20e4b7503b8ca5}{colonne\+\_\+gauche}}
+\item 
+int \mbox{\hyperlink{structs__plateau_a4bf9ebcdff7cd6b2073efc35d36e83a0}{colonne\+\_\+droite}}
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
+\doxysubsection{Description détaillée}
 type concret vers lequel pointe le plateau de jeu 
 
 
 
-Definition at line 26 of file plateau.\+c.
+Définition à la ligne 26 du fichier plateau.\+c.
 
 
 
-\doxysubsection{Field Documentation}
-\mbox{\Hypertarget{structs__plateau_afe536a9b9846e99505d291f003a2c59c}\label{structs__plateau_afe536a9b9846e99505d291f003a2c59c}} 
+\doxysubsection{Documentation des champs}
+\mbox{\Hypertarget{structs__plateau_a0b02666bd23419f6e82a8f15e5c0d6d7}\label{structs__plateau_a0b02666bd23419f6e82a8f15e5c0d6d7}} 
 \index{s\_plateau@{s\_plateau}!avant\_derniere\_carte\_retournee@{avant\_derniere\_carte\_retournee}}
 \index{avant\_derniere\_carte\_retournee@{avant\_derniere\_carte\_retournee}!s\_plateau@{s\_plateau}}
 \doxysubsubsection{\texorpdfstring{avant\_derniere\_carte\_retournee}{avant\_derniere\_carte\_retournee}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_coord}{Coord}} avant\+\_\+derniere\+\_\+carte\+\_\+retournee}
+{\footnotesize\ttfamily \mbox{\hyperlink{carte_8h_a633ba64ee908d35aac798844f477ee9d}{Carte}} avant\+\_\+derniere\+\_\+carte\+\_\+retournee}
 
 
 
-Definition at line 32 of file plateau.\+c.
-
-\mbox{\Hypertarget{structs__plateau_abc52ce617bc1a028cd39956733efa55f}\label{structs__plateau_abc52ce617bc1a028cd39956733efa55f}} 
-\index{s\_plateau@{s\_plateau}!carte\_bas\_droite@{carte\_bas\_droite}}
-\index{carte\_bas\_droite@{carte\_bas\_droite}!s\_plateau@{s\_plateau}}
-\doxysubsubsection{\texorpdfstring{carte\_bas\_droite}{carte\_bas\_droite}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_coord}{Coord}} carte\+\_\+bas\+\_\+droite}
-
-
-
-Definition at line 36 of file plateau.\+c.
-
-\mbox{\Hypertarget{structs__plateau_abb2bec0d261815b576ecaf5e1cdbbccc}\label{structs__plateau_abb2bec0d261815b576ecaf5e1cdbbccc}} 
-\index{s\_plateau@{s\_plateau}!carte\_bas\_droite\_cachee@{carte\_bas\_droite\_cachee}}
-\index{carte\_bas\_droite\_cachee@{carte\_bas\_droite\_cachee}!s\_plateau@{s\_plateau}}
-\doxysubsubsection{\texorpdfstring{carte\_bas\_droite\_cachee}{carte\_bas\_droite\_cachee}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_coord}{Coord}} carte\+\_\+bas\+\_\+droite\+\_\+cachee}
-
-
-
-Definition at line 34 of file plateau.\+c.
-
-\mbox{\Hypertarget{structs__plateau_a05b31a66697a919ea1071bafcdf0ef13}\label{structs__plateau_a05b31a66697a919ea1071bafcdf0ef13}} 
-\index{s\_plateau@{s\_plateau}!carte\_haut\_gauche@{carte\_haut\_gauche}}
-\index{carte\_haut\_gauche@{carte\_haut\_gauche}!s\_plateau@{s\_plateau}}
-\doxysubsubsection{\texorpdfstring{carte\_haut\_gauche}{carte\_haut\_gauche}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_coord}{Coord}} carte\+\_\+haut\+\_\+gauche}
-
-
-
-Definition at line 35 of file plateau.\+c.
-
-\mbox{\Hypertarget{structs__plateau_a6e2c13ef56ddbbcdd7da757a07c11393}\label{structs__plateau_a6e2c13ef56ddbbcdd7da757a07c11393}} 
-\index{s\_plateau@{s\_plateau}!carte\_haut\_gauche\_cachee@{carte\_haut\_gauche\_cachee}}
-\index{carte\_haut\_gauche\_cachee@{carte\_haut\_gauche\_cachee}!s\_plateau@{s\_plateau}}
-\doxysubsubsection{\texorpdfstring{carte\_haut\_gauche\_cachee}{carte\_haut\_gauche\_cachee}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_coord}{Coord}} carte\+\_\+haut\+\_\+gauche\+\_\+cachee}
-
-
-
-Definition at line 33 of file plateau.\+c.
+Définition à la ligne 34 du fichier plateau.\+c.
 
 \mbox{\Hypertarget{structs__plateau_ae6e5711783a4637882847b09a4e03d2b}\label{structs__plateau_ae6e5711783a4637882847b09a4e03d2b}} 
 \index{s\_plateau@{s\_plateau}!cartes\_non\_retournees\_manche@{cartes\_non\_retournees\_manche}}
@@ -111,7 +79,7 @@ Definition at line 33 of file plateau.\+c.
 
 
 
-Definition at line 39 of file plateau.\+c.
+Définition à la ligne 41 du fichier plateau.\+c.
 
 \mbox{\Hypertarget{structs__plateau_af710c246cc2107c9cd1cb2ea0d03935f}\label{structs__plateau_af710c246cc2107c9cd1cb2ea0d03935f}} 
 \index{s\_plateau@{s\_plateau}!cartes\_retournees\_manche@{cartes\_retournees\_manche}}
@@ -121,27 +89,107 @@ Definition at line 39 of file plateau.\+c.
 
 
 
-Definition at line 38 of file plateau.\+c.
+Définition à la ligne 40 du fichier plateau.\+c.
 
-\mbox{\Hypertarget{structs__plateau_a15c38ec64099b084dabb698a683ba37f}\label{structs__plateau_a15c38ec64099b084dabb698a683ba37f}} 
-\index{s\_plateau@{s\_plateau}!derniere\_carte\_posee@{derniere\_carte\_posee}}
-\index{derniere\_carte\_posee@{derniere\_carte\_posee}!s\_plateau@{s\_plateau}}
-\doxysubsubsection{\texorpdfstring{derniere\_carte\_posee}{derniere\_carte\_posee}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_coord}{Coord}} derniere\+\_\+carte\+\_\+posee}
+\mbox{\Hypertarget{structs__plateau_a4bf9ebcdff7cd6b2073efc35d36e83a0}\label{structs__plateau_a4bf9ebcdff7cd6b2073efc35d36e83a0}} 
+\index{s\_plateau@{s\_plateau}!colonne\_droite@{colonne\_droite}}
+\index{colonne\_droite@{colonne\_droite}!s\_plateau@{s\_plateau}}
+\doxysubsubsection{\texorpdfstring{colonne\_droite}{colonne\_droite}}
+{\footnotesize\ttfamily int colonne\+\_\+droite}
 
 
 
-Definition at line 30 of file plateau.\+c.
+Définition à la ligne 43 du fichier plateau.\+c.
 
-\mbox{\Hypertarget{structs__plateau_a43e28d326e00c37568d07b4d034c6741}\label{structs__plateau_a43e28d326e00c37568d07b4d034c6741}} 
+\mbox{\Hypertarget{structs__plateau_aa7647a23877193236e20e4b7503b8ca5}\label{structs__plateau_aa7647a23877193236e20e4b7503b8ca5}} 
+\index{s\_plateau@{s\_plateau}!colonne\_gauche@{colonne\_gauche}}
+\index{colonne\_gauche@{colonne\_gauche}!s\_plateau@{s\_plateau}}
+\doxysubsubsection{\texorpdfstring{colonne\_gauche}{colonne\_gauche}}
+{\footnotesize\ttfamily int colonne\+\_\+gauche}
+
+
+
+Définition à la ligne 42 du fichier plateau.\+c.
+
+\mbox{\Hypertarget{structs__plateau_a0291bbd9027d224510f8cdf6223534af}\label{structs__plateau_a0291bbd9027d224510f8cdf6223534af}} 
+\index{s\_plateau@{s\_plateau}!coord\_avant\_derniere\_carte\_retournee@{coord\_avant\_derniere\_carte\_retournee}}
+\index{coord\_avant\_derniere\_carte\_retournee@{coord\_avant\_derniere\_carte\_retournee}!s\_plateau@{s\_plateau}}
+\doxysubsubsection{\texorpdfstring{coord\_avant\_derniere\_carte\_retournee}{coord\_avant\_derniere\_carte\_retournee}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_coord}{Coord}} coord\+\_\+avant\+\_\+derniere\+\_\+carte\+\_\+retournee}
+
+
+
+Définition à la ligne 33 du fichier plateau.\+c.
+
+\mbox{\Hypertarget{structs__plateau_a7af721950746757525912404c11f9f8c}\label{structs__plateau_a7af721950746757525912404c11f9f8c}} 
+\index{s\_plateau@{s\_plateau}!coord\_carte\_bas\_droite@{coord\_carte\_bas\_droite}}
+\index{coord\_carte\_bas\_droite@{coord\_carte\_bas\_droite}!s\_plateau@{s\_plateau}}
+\doxysubsubsection{\texorpdfstring{coord\_carte\_bas\_droite}{coord\_carte\_bas\_droite}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_coord}{Coord}} coord\+\_\+carte\+\_\+bas\+\_\+droite}
+
+
+
+Définition à la ligne 38 du fichier plateau.\+c.
+
+\mbox{\Hypertarget{structs__plateau_aac2c55ee18c38e20da38f2ddc66a18f8}\label{structs__plateau_aac2c55ee18c38e20da38f2ddc66a18f8}} 
+\index{s\_plateau@{s\_plateau}!coord\_carte\_bas\_droite\_cachee@{coord\_carte\_bas\_droite\_cachee}}
+\index{coord\_carte\_bas\_droite\_cachee@{coord\_carte\_bas\_droite\_cachee}!s\_plateau@{s\_plateau}}
+\doxysubsubsection{\texorpdfstring{coord\_carte\_bas\_droite\_cachee}{coord\_carte\_bas\_droite\_cachee}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_coord}{Coord}} coord\+\_\+carte\+\_\+bas\+\_\+droite\+\_\+cachee}
+
+
+
+Définition à la ligne 36 du fichier plateau.\+c.
+
+\mbox{\Hypertarget{structs__plateau_a9c9a122f1fc4f1cbcf162b29f2711014}\label{structs__plateau_a9c9a122f1fc4f1cbcf162b29f2711014}} 
+\index{s\_plateau@{s\_plateau}!coord\_carte\_haut\_gauche@{coord\_carte\_haut\_gauche}}
+\index{coord\_carte\_haut\_gauche@{coord\_carte\_haut\_gauche}!s\_plateau@{s\_plateau}}
+\doxysubsubsection{\texorpdfstring{coord\_carte\_haut\_gauche}{coord\_carte\_haut\_gauche}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_coord}{Coord}} coord\+\_\+carte\+\_\+haut\+\_\+gauche}
+
+
+
+Définition à la ligne 37 du fichier plateau.\+c.
+
+\mbox{\Hypertarget{structs__plateau_a8133effcdd7a4efff7ec83ae806d3433}\label{structs__plateau_a8133effcdd7a4efff7ec83ae806d3433}} 
+\index{s\_plateau@{s\_plateau}!coord\_carte\_haut\_gauche\_cachee@{coord\_carte\_haut\_gauche\_cachee}}
+\index{coord\_carte\_haut\_gauche\_cachee@{coord\_carte\_haut\_gauche\_cachee}!s\_plateau@{s\_plateau}}
+\doxysubsubsection{\texorpdfstring{coord\_carte\_haut\_gauche\_cachee}{coord\_carte\_haut\_gauche\_cachee}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_coord}{Coord}} coord\+\_\+carte\+\_\+haut\+\_\+gauche\+\_\+cachee}
+
+
+
+Définition à la ligne 35 du fichier plateau.\+c.
+
+\mbox{\Hypertarget{structs__plateau_af67559d522ebab15dce1448f81a84ba8}\label{structs__plateau_af67559d522ebab15dce1448f81a84ba8}} 
+\index{s\_plateau@{s\_plateau}!coord\_derniere\_carte\_posee@{coord\_derniere\_carte\_posee}}
+\index{coord\_derniere\_carte\_posee@{coord\_derniere\_carte\_posee}!s\_plateau@{s\_plateau}}
+\doxysubsubsection{\texorpdfstring{coord\_derniere\_carte\_posee}{coord\_derniere\_carte\_posee}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_coord}{Coord}} coord\+\_\+derniere\+\_\+carte\+\_\+posee}
+
+
+
+Définition à la ligne 30 du fichier plateau.\+c.
+
+\mbox{\Hypertarget{structs__plateau_abf90bd0752f6d6739e7137ea53836960}\label{structs__plateau_abf90bd0752f6d6739e7137ea53836960}} 
+\index{s\_plateau@{s\_plateau}!coord\_derniere\_carte\_retournee@{coord\_derniere\_carte\_retournee}}
+\index{coord\_derniere\_carte\_retournee@{coord\_derniere\_carte\_retournee}!s\_plateau@{s\_plateau}}
+\doxysubsubsection{\texorpdfstring{coord\_derniere\_carte\_retournee}{coord\_derniere\_carte\_retournee}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_coord}{Coord}} coord\+\_\+derniere\+\_\+carte\+\_\+retournee}
+
+
+
+Définition à la ligne 31 du fichier plateau.\+c.
+
+\mbox{\Hypertarget{structs__plateau_a190b94da03e9eeaee0e4596e446122ba}\label{structs__plateau_a190b94da03e9eeaee0e4596e446122ba}} 
 \index{s\_plateau@{s\_plateau}!derniere\_carte\_retournee@{derniere\_carte\_retournee}}
 \index{derniere\_carte\_retournee@{derniere\_carte\_retournee}!s\_plateau@{s\_plateau}}
 \doxysubsubsection{\texorpdfstring{derniere\_carte\_retournee}{derniere\_carte\_retournee}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_coord}{Coord}} derniere\+\_\+carte\+\_\+retournee}
+{\footnotesize\ttfamily \mbox{\hyperlink{carte_8h_a633ba64ee908d35aac798844f477ee9d}{Carte}} derniere\+\_\+carte\+\_\+retournee}
 
 
 
-Definition at line 31 of file plateau.\+c.
+Définition à la ligne 32 du fichier plateau.\+c.
 
 \mbox{\Hypertarget{structs__plateau_a4da4f8e7a2081778b809f21a57d04e99}\label{structs__plateau_a4da4f8e7a2081778b809f21a57d04e99}} 
 \index{s\_plateau@{s\_plateau}!factions@{factions}}
@@ -151,7 +199,7 @@ Definition at line 31 of file plateau.\+c.
 
 
 
-Definition at line 29 of file plateau.\+c.
+Définition à la ligne 29 du fichier plateau.\+c.
 
 \mbox{\Hypertarget{structs__plateau_ab81fdfe0230368241bed8055124c3e16}\label{structs__plateau_ab81fdfe0230368241bed8055124c3e16}} 
 \index{s\_plateau@{s\_plateau}!numero\_manche@{numero\_manche}}
@@ -161,7 +209,7 @@ Definition at line 29 of file plateau.\+c.
 
 
 
-Definition at line 37 of file plateau.\+c.
+Définition à la ligne 39 du fichier plateau.\+c.
 
 \mbox{\Hypertarget{structs__plateau_ad782e69822866bf4af66440f3ee64b39}\label{structs__plateau_ad782e69822866bf4af66440f3ee64b39}} 
 \index{s\_plateau@{s\_plateau}!plateau\_jeu@{plateau\_jeu}}
@@ -171,10 +219,10 @@ Definition at line 37 of file plateau.\+c.
 
 
 
-Definition at line 28 of file plateau.\+c.
+Définition à la ligne 28 du fichier plateau.\+c.
 
 
 
-The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+La documentation de cette structure a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
 \item 
 src/\mbox{\hyperlink{plateau_8c}{plateau.\+c}}\end{DoxyCompactItemize}

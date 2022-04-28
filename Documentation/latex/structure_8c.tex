@@ -1,4 +1,4 @@
-\hypertarget{structure_8c}{}\doxysection{src/structure.c File Reference}
+\hypertarget{structure_8c}{}\doxysection{Référence du fichier src/structure.c}
 \label{structure_8c}\index{src/structure.c@{src/structure.c}}
 
 
@@ -6,22 +6,23 @@ Implémentation de l\textquotesingle{}interface pour gérer le plateau de jeu et
 
 
 {\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include \char`\"{}../headers/carte.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}../headers/faction.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}../headers/structure.\+h\char`\"{}}\newline
-Include dependency graph for structure.\+c\+:\nopagebreak
+Graphe des dépendances par inclusion de structure.\+c\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=307pt]{structure_8c__incl}
+\includegraphics[width=350pt]{structure_8c__incl}
 \end{center}
 \end{figure}
-\doxysubsection*{Data Structures}
+\doxysubsection*{Structures de données}
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{structs__pioche}{s\+\_\+pioche}}
 \begin{DoxyCompactList}\small\item\em type concret de pile pour la pioche d\textquotesingle{}une faction \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Functions}
+\doxysubsection*{Fonctions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{structure_8h_a9b18ab4f4d3508a3f5ce014f4040217f}{Pioche}} \mbox{\hyperlink{structure_8c_ad911b5ece54d506c7109120dbfc9c2f0}{creation\+\_\+pioche\+\_\+vide}} ()
@@ -31,13 +32,15 @@ int \mbox{\hyperlink{structure_8c_ae973594dee297fae28846edec431f098}{pioche\+\_\
 void \mbox{\hyperlink{structure_8c_ac8dcdc0ffb092b739d94573e47eaaacf}{ajout\+\_\+pioche}} (\mbox{\hyperlink{structure_8h_a9b18ab4f4d3508a3f5ce014f4040217f}{Pioche}} p, \mbox{\hyperlink{carte_8h_a633ba64ee908d35aac798844f477ee9d}{Carte}} c)
 \begin{DoxyCompactList}\small\item\em ajoute la carte à la pioche au sommet de celle-\/ci \end{DoxyCompactList}\item 
 \mbox{\hyperlink{carte_8h_a633ba64ee908d35aac798844f477ee9d}{Carte}} \mbox{\hyperlink{structure_8c_a7b95c6a72accdcab7cc1f39d2536fe06}{enleve\+\_\+pioche}} (\mbox{\hyperlink{structure_8h_a9b18ab4f4d3508a3f5ce014f4040217f}{Pioche}} p)
-\begin{DoxyCompactList}\small\item\em enlève la carte au sommet de la pioche (on suppose la pioche non vide) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em enlève la carte au sommet de la pioche (on suppose la pioche non vide) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structure_8c_aea557b1ca9333f45e14a77f9896d0a56}{affiche\+\_\+pioche}} (\mbox{\hyperlink{structure_8h_a9b18ab4f4d3508a3f5ce014f4040217f}{Pioche}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f)
+\end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
+\doxysubsection{Description détaillée}
 Implémentation de l\textquotesingle{}interface pour gérer le plateau de jeu et le déroulement de la partie. 
 
-\begin{DoxyAuthor}{Author}
+\begin{DoxyAuthor}{Auteur}
 Valentin Gardel (\href{mailto:valentin.gardel@ensiie.fr}{\texttt{ valentin.\+gardel@ensiie.\+fr}}) 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
@@ -51,7 +54,24 @@ Copyright (c) 2022
 \end{DoxyCopyright}
 
 
-\doxysubsection{Function Documentation}
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{structure_8c_aea557b1ca9333f45e14a77f9896d0a56}\label{structure_8c_aea557b1ca9333f45e14a77f9896d0a56}} 
+\index{structure.c@{structure.c}!affiche\_pioche@{affiche\_pioche}}
+\index{affiche\_pioche@{affiche\_pioche}!structure.c@{structure.c}}
+\doxysubsubsection{\texorpdfstring{affiche\_pioche()}{affiche\_pioche()}}
+{\footnotesize\ttfamily void affiche\+\_\+pioche (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structure_8h_a9b18ab4f4d3508a3f5ce014f4040217f}{Pioche}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f }\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne 55 du fichier structure.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{structure_8c_aea557b1ca9333f45e14a77f9896d0a56_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{structure_8c_ac8dcdc0ffb092b739d94573e47eaaacf}\label{structure_8c_ac8dcdc0ffb092b739d94573e47eaaacf}} 
 \index{structure.c@{structure.c}!ajout\_pioche@{ajout\_pioche}}
 \index{ajout\_pioche@{ajout\_pioche}!structure.c@{structure.c}}
@@ -63,7 +83,7 @@ Copyright (c) 2022
 ajoute la carte à la pioche au sommet de celle-\/ci 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Paramètres}
 {\em p} & une pioche valide \\
 \hline
 {\em c} & une carte valide \\
@@ -71,9 +91,9 @@ ajoute la carte à la pioche au sommet de celle-\/ci
 \end{DoxyParams}
 
 
-Definition at line 40 of file structure.\+c.
+Définition à la ligne 41 du fichier structure.\+c.
 
-Here is the caller graph for this function\+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -91,20 +111,20 @@ Here is the caller graph for this function\+:\nopagebreak
 Savoir si une faction a itilisé l\textquotesingle{}option de remélanger sa main et boîte à idée et de repiocher des cartes. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Paramètres}
 {\em f} & une faction \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 0 si la main n\textquotesingle{}a pas été remélangé 
 
 1 si la main a été remélangé 
 \end{DoxyReturn}
 
 
-Definition at line 28 of file structure.\+c.
+Définition à la ligne 29 du fichier structure.\+c.
 
-Here is the caller graph for this function\+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -122,18 +142,18 @@ Here is the caller graph for this function\+:\nopagebreak
 enlève la carte au sommet de la pioche (on suppose la pioche non vide) 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Paramètres}
 {\em p} & une pioche valide \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 la carte qui a été retirée 
 \end{DoxyReturn}
 
 
-Definition at line 46 of file structure.\+c.
+Définition à la ligne 47 du fichier structure.\+c.
 
-Here is the caller graph for this function\+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -151,16 +171,16 @@ Here is the caller graph for this function\+:\nopagebreak
 indique si la pioche est vide ou non 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Paramètres}
 {\em p} & une pioche valide \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 0 si la pioche n\textquotesingle{}est pas vide 
 
 1 si la pioche est vide 
 \end{DoxyReturn}
 
 
-Definition at line 35 of file structure.\+c.
+Définition à la ligne 36 du fichier structure.\+c.
 

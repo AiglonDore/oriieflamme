@@ -1,8 +1,9 @@
 <map id="a_poser_face_cachee_sur_plateau" name="a_poser_face_cachee_sur_plateau">
-<area shape="rect" id="node1" title="Fonction qui demande la carte qui sera posée face cachée sur le plateau." alt="" coords="565,137,727,178"/>
-<area shape="rect" id="node2" href="$main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="448,119,517,145"/>
-<area shape="rect" id="node3" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="345,68,400,95"/>
-<area shape="rect" id="node4" href="$interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="191,131,297,157"/>
-<area shape="rect" id="node5" href="$plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,68,143,95"/>
-<area shape="rect" id="node6" href="$faction_8c.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="203,5,285,32"/>
+<area shape="rect" id="node1" title="Fonction qui demande la carte qui sera posée face cachée sur le plateau." alt="" coords="411,23,572,65"/>
+<area shape="rect" id="node2" href="$main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="293,31,363,57"/>
+<area shape="rect" id="node3" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="191,56,245,83"/>
+<area shape="rect" id="node4" href="$interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="21,5,127,32"/>
+<area shape="rect" id="node5" href="$plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="25,56,123,83"/>
+<area shape="rect" id="node6" href="$plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,107,143,133"/>
+<area shape="rect" id="node7" href="$faction_8c.html#aef8713f12e5372bd993f34fa4f6d6cab" title=" " alt="" coords="33,157,115,184"/>
 </map>

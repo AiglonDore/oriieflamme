@@ -1,9 +1,9 @@
 <map id="affiche_vainqueur" name="affiche_vainqueur">
-<area shape="rect" id="node1" title="Affiche le vainquer de la partie." alt="" coords="589,98,728,125"/>
-<area shape="rect" id="node2" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="487,98,541,125"/>
-<area shape="rect" id="node3" href="$interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="332,35,439,62"/>
-<area shape="rect" id="node6" href="$plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="135,122,272,149"/>
-<area shape="rect" id="node7" href="$faction_8c.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="344,161,427,187"/>
-<area shape="rect" id="node4" href="$interface_8c.html#a59cec6e54845df8ae5160bd8b2a351c2" title="Fonction qui demande la carte qui sera posée face cachée sur le plateau." alt="" coords="123,5,284,47"/>
-<area shape="rect" id="node5" href="$main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="5,71,75,98"/>
+<area shape="rect" id="node1" title="Affiche le vainquer de la partie." alt="" coords="411,107,549,133"/>
+<area shape="rect" id="node2" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="308,107,363,133"/>
+<area shape="rect" id="node3" href="$interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="138,5,245,32"/>
+<area shape="rect" id="node5" href="$plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="142,56,241,83"/>
+<area shape="rect" id="node6" href="$plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="123,107,260,133"/>
+<area shape="rect" id="node7" href="$faction_8c.html#aef8713f12e5372bd993f34fa4f6d6cab" title=" " alt="" coords="150,157,233,184"/>
+<area shape="rect" id="node4" href="$main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="5,107,75,133"/>
 </map>
