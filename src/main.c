@@ -66,7 +66,7 @@ void phase2(Plateau p)
         affiche_effets(carte_retournee);
         affiche_plateau(p);
         affiche_ddrs(p);
-        sleep(1000);
+        sleep(3);
     }
 }
 

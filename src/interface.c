@@ -90,13 +90,13 @@ Carte a_poser_face_cachee_sur_plateau(Faction f)
     }
     printf("Quelle carte souhaitez-vous jouer? [1-%d]\n", nb_cartes);
     int ans = -1;
-    while (scanf("%d", &ans) == 0 || (ans < 1 && ans > nb_cartes))
+    while (scanf("%d", &ans) == 0 || ans < 1 || ans > nb_cartes)
     {
         printf("Valeur incorrecte: elle doit être entre 1 et %d.\n", nb_cartes);
     }
     int count = 0;
     int ret = 0;
-    for (int i = 0; i < nb_cartes; i++)
+    for (int i = 0; i < 8; i++)
     {
         if (get_main(f)[i] != NULL)
         {
@@ -129,10 +129,10 @@ void affiche_vainqueur(Plateau p)
     }
     printf("Mais cette victoire n'est pas encore officialisée!\n");
     printf("Il faut encore attendre le jury de validation pour que la victoire soit validée et définitive.\n");
-    sleep(1000);
+    sleep(1);
     printf("Mail de Laurent Prével: jury de validation de la victoire\n");
     printf("Le jury va se réunir et évaluer la partie afin de valider ou non votre victoire... Ah, il manque un représentant de la DFP. Où est Julien Forest?\n");
-    sleep(3000);
+    sleep(3);
     printf("Ca sent la cigarette! L'Homme des Cavernes, pardon, Julien Forest arrive par l'ascenceur (son café n'a pas réussi à l'empêcher de dormir). Il va donc pouvoir présider le jury pour valider votre victoire!");
 }
 
