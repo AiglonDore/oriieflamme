@@ -105,6 +105,10 @@ void ajout_pioche(Pioche p, Carte c);
 
 Carte enleve_pioche(Pioche p);
 
-void affiche_pioche(Pioche p, Faction f);
+/**
+ * @brief libère la pioche et ses cartes
+ * @param p une pioche valide
+ */
+void libere_pioche(Pioche p);
 
 #endif // STRUCTURE_H

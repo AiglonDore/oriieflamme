@@ -110,15 +110,7 @@ void piocher(Faction f)
 
 void supprimer_faction(Faction f)
 {
-    set_pioche(f, NULL);
-    free(f->pioche); // la pioche a déjà été vidée
-    int i;
-    for (i = 0; i < 8; i += 1)
-    {
-        free(f->main[i]);
-    }
-    free(f->main);
-    free(f->nom);
+    libere_pioche(f->pioche);
     free(f);
 }
 

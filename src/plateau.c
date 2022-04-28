@@ -185,9 +185,16 @@ void libere_plateau(Plateau p)
     // On doit faire attention à libérer proprement les factions en jeu
     supprimer_faction(p->factions.left);
     supprimer_faction(p->factions.right);
-    free(p->derniere_carte_retournee);
-    free(p->avant_derniere_carte_retournee);
-    return;
+    int i, j;
+    for (i = 0; i < 129; i += 1)
+    {
+        for (j = 0; j < 129; j += 1)
+        {
+            free(p->plateau_jeu[i][j]);
+            p->plateau_jeu[i][j] = NULL;
+        }
+    }
+    free(p);
 }
 
 int nouvelle_manche(Plateau p)

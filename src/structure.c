@@ -52,17 +52,13 @@ Carte enleve_pioche(Pioche p)
   return c;
 }
 
-void affiche_pioche(Pioche p, Faction f)
+void libere_pioche(Pioche p)
 {
-  if (p->top == -1)
-  {
-    printf("Faction %s La pile est vide !\n", get_nom_faction(f));
-    return;
-  }
   int i;
-  for (i = p->top; i >= 0; i -= 1)
+  while (p->top != -1)
   {
-    printf("%4i", get_id(p->t[i]));
+    free(enleve_pioche(p));
   }
-  printf("\n");
+  free(p);
+  p = NULL;
 }
