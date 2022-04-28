@@ -17,7 +17,7 @@ char *nom_faction(Faction f)
 {
     char *name = malloc(256 * sizeof(char));
     printf("%s, comment souhaitez-vous vous appeler?\n", get_nom_faction(f));
-    fgets(name, 256, stdin);
+    scanf("%s",name);
     return name;
 }
 
@@ -50,6 +50,7 @@ void affiche_plateau(Plateau p)
 
 void affiche_main(Faction f)
 {
+    printf("%s, voici votre main:\n",get_nom_faction(f));
     Carte *main = get_main(f);
     for (int i = 0; i < 8; i++)
     {
@@ -63,9 +64,9 @@ void affiche_main(Faction f)
 
 int utiliser_option(Faction f)
 {
-    printf("%s, voulez-vous utiliser votre super pouvoir?[y/n]", get_nom_faction(f));
+    printf("%s, voulez-vous utiliser votre super pouvoir?[y/n]\n", get_nom_faction(f));
     char buf[1];
-    fgets(buf, sizeof(char), stdin);
+    scanf("%s",buf);
     return (!strcmp(buf, "y")) || (!strcmp(buf, "Y"));
 }
 
@@ -77,11 +78,11 @@ Carte a_poser_face_cachee_sur_plateau(Faction f)
         if (get_main(f)[i])
             nb_cartes++;
     }
-    printf("Quelle carte souhaitez-vous jouer? [1-%d]", nb_cartes);
+    printf("Quelle carte souhaitez-vous jouer? [1-%d]\n", nb_cartes);
     int ans = -1;
     while (scanf("%d", &ans) == 0 || (ans < 1 && ans > nb_cartes))
     {
-        printf("Valeur incorrecte: elle doit être entre 1 et %d.", nb_cartes);
+        printf("Valeur incorrecte: elle doit être entre 1 et %d.\n", nb_cartes);
     }
     int count = 0;
     int ret = -1;
@@ -129,19 +130,9 @@ Coord demande_position(Plateau p)
     if (previous.i == -1 && previous.j == -1) // On n'affiche pas le plateau car il n'y a aucune carte posée.
     {
         Coord ret;
-        ret.i = 0;
-        ret.j = 0;
-        printf("Vous êtes le premier à jouer! Posez une carte où vous voulez!!");
-        printf("Abscisse: ");
-        while (scanf("%d", &(ret.i)) == 0 || ret.i < 0 || ret.i > 128)
-        {
-            printf("Veuillez saisir un nombre entier compris entre 0 et 128: ");
-        }
-        printf("Ordonnée: ");
-        while (scanf("%d", &(ret.j)) == 0 || ret.j < 0 || ret.j > 128)
-        {
-            printf("Veuillez saisir un nombre entier compris entre 0 et 128: ");
-        }
+        ret.i = -1;
+        ret.j = -1;
+        printf("%s, vous êtes le premier à jouer! Votre carte sera posé au milieu du plateau!!\n",get_nom_faction(get_factions(p).left));//On rappelle que le plateau de jeu est infini.
         return ret;
     }
     printf("Veuillez choisir où vous souhaitez poser une carte en saisissant le numéro associé:\n");
