@@ -46,7 +46,6 @@ void melanger(Faction f)
     vider_sa_main(f);
     melanger_pioche(f);
     piocher(f);
-    free(f->nom);
 }
 
 void vider_sa_main(Faction f)
@@ -120,7 +119,6 @@ void supprimer_faction(Faction f)
     }
     free(f->main);
     free(f->nom);
-    f = NULL;
     free(f);
 }
 
