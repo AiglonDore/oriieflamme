@@ -52,7 +52,6 @@ Carte a_poser_face_cachee_sur_plateau(Faction f);
 
 /**
  * @brief Affiche les effets de la carte c si elle est posée.
- * @param p Plateau de jeu.
  * @param c Carte dont on veut afficher les effets
  */
 void affiche_effets(Carte c);
