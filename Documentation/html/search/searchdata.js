@@ -1,14 +1,14 @@
 var indexSectionsWithContent =
 {
-  0: "abcdefghijklmnprstuv",
+  0: "acdefghijklmnprstuv",
   1: "cfs",
   2: "cfimprs",
-  3: "abcdefgilmnprsuv",
+  3: "acdefgilmnprsuv",
   4: "acdefijlmnprt",
   5: "cfimp",
   6: "n",
   7: "acdefghijklmprstv",
-  8: "pt"
+  8: "p"
 };
 
 var indexSectionNames =
@@ -26,14 +26,14 @@ var indexSectionNames =
 
 var indexSectionLabels =
 {
-  0: "All",
-  1: "Data Structures",
-  2: "Files",
-  3: "Functions",
+  0: "Tout",
+  1: "Structures de données",
+  2: "Fichiers",
+  3: "Fonctions",
   4: "Variables",
-  5: "Typedefs",
-  6: "Enumerations",
-  7: "Enumerator",
+  5: "Définitions de type",
+  6: "Énumérations",
+  7: "Valeurs énumérées",
   8: "Pages"
 };
 

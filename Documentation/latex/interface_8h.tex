@@ -1,4 +1,4 @@
-\hypertarget{interface_8h}{}\doxysection{headers/interface.h File Reference}
+\hypertarget{interface_8h}{}\doxysection{Référence du fichier headers/interface.h}
 \label{interface_8h}\index{headers/interface.h@{headers/interface.h}}
 
 
@@ -9,21 +9,21 @@ Interface entre le plateau de jeu et le joueur.
 {\ttfamily \#include \char`\"{}faction.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}plateau.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}structure.\+h\char`\"{}}\newline
-Include dependency graph for interface.\+h\+:\nopagebreak
+Graphe des dépendances par inclusion de interface.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=259pt]{interface_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=349pt]{interface_8h__dep__incl}
 \end{center}
 \end{figure}
-\doxysubsection*{Functions}
+\doxysubsection*{Fonctions}
 \begin{DoxyCompactItemize}
 \item 
 char $\ast$ \mbox{\hyperlink{interface_8h_ab716e0c166fd1d07dca1545157befef5}{nom\+\_\+faction}} (\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f)
@@ -41,13 +41,15 @@ void \mbox{\hyperlink{interface_8h_a8e9d54781d879f437be3285b5412c1c2}{affiche\+\
 void \mbox{\hyperlink{interface_8h_a802545d4ff1c158f7a2ca77be20915f9}{affiche\+\_\+vainqueur}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p)
 \begin{DoxyCompactList}\small\item\em Affiche le vainquer de la partie. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_coord}{Coord}} \mbox{\hyperlink{interface_8h_a8330a6ec294f24da52fe0f265181fbcc}{demande\+\_\+position}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p)
-\begin{DoxyCompactList}\small\item\em Fonction qui demande à quelle position doit être placée la carte. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Fonction qui demande à quelle position doit être placée la carte. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_8h_a044fbcd951bab90748a27f16d77b718f}{affiche\+\_\+ddrs}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p)
+\begin{DoxyCompactList}\small\item\em Affiche les points D\+D\+RS des deux factions. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
+\doxysubsection{Description détaillée}
 Interface entre le plateau de jeu et le joueur. 
 
-\begin{DoxyAuthor}{Author}
+\begin{DoxyAuthor}{Auteur}
 Thomas Roiseux (\href{mailto:thomas.roiseux@ensiie.fr}{\texttt{ thomas.\+roiseux@ensiie.\+fr}}) 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
@@ -58,7 +60,7 @@ Thomas Roiseux (\href{mailto:thomas.roiseux@ensiie.fr}{\texttt{ thomas.\+roiseux
 \end{DoxyDate}
 
 
-\doxysubsection{Function Documentation}
+\doxysubsection{Documentation des fonctions}
 \mbox{\Hypertarget{interface_8h_a59cec6e54845df8ae5160bd8b2a351c2}\label{interface_8h_a59cec6e54845df8ae5160bd8b2a351c2}} 
 \index{interface.h@{interface.h}!a\_poser\_face\_cachee\_sur\_plateau@{a\_poser\_face\_cachee\_sur\_plateau}}
 \index{a\_poser\_face\_cachee\_sur\_plateau@{a\_poser\_face\_cachee\_sur\_plateau}!interface.h@{interface.h}}
@@ -70,30 +72,62 @@ Thomas Roiseux (\href{mailto:thomas.roiseux@ensiie.fr}{\texttt{ thomas.\+roiseux
 Fonction qui demande la carte qui sera posée face cachée sur le plateau. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Paramètres}
 {\em f} & faction en jeu \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 Carte carte choisie par la faction f et posée sur le plateau. 
 \end{DoxyReturn}
 
 
-Definition at line 72 of file interface.\+c.
+Définition à la ligne 83 du fichier interface.\+c.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{interface_8h_a59cec6e54845df8ae5160bd8b2a351c2_cgraph}
+\includegraphics[width=299pt]{interface_8h_a59cec6e54845df8ae5160bd8b2a351c2_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{interface_8h_a59cec6e54845df8ae5160bd8b2a351c2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{interface_8h_a044fbcd951bab90748a27f16d77b718f}\label{interface_8h_a044fbcd951bab90748a27f16d77b718f}} 
+\index{interface.h@{interface.h}!affiche\_ddrs@{affiche\_ddrs}}
+\index{affiche\_ddrs@{affiche\_ddrs}!interface.h@{interface.h}}
+\doxysubsubsection{\texorpdfstring{affiche\_ddrs()}{affiche\_ddrs()}}
+{\footnotesize\ttfamily void affiche\+\_\+ddrs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Affiche les points D\+D\+RS des deux factions. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p} & Plateau de jeu. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 414 du fichier interface.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{interface_8h_a044fbcd951bab90748a27f16d77b718f_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interface_8h_a044fbcd951bab90748a27f16d77b718f_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{interface_8h_a8e9d54781d879f437be3285b5412c1c2}\label{interface_8h_a8e9d54781d879f437be3285b5412c1c2}} 
@@ -107,25 +141,22 @@ Here is the caller graph for this function\+:\nopagebreak
 Affiche les effets de la carte c si elle est posée. 
 
 
-\begin{DoxyParams}{Parameters}
-{\em p} & Plateau de jeu. \\
-\hline
+\begin{DoxyParams}{Paramètres}
 {\em c} & Carte dont on veut afficher les effets \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line 100 of file interface.\+c.
+Définition à la ligne 114 du fichier interface.\+c.
 
-Here is the call graph for this function\+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=291pt]{interface_8h_a8e9d54781d879f437be3285b5412c1c2_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -142,27 +173,26 @@ Here is the caller graph for this function\+:
 
 Fonction qui affiche la main de la faction pointée par f. 
 
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 rien 
 \end{DoxyReturn}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Paramètres}
 {\em f} & faction en jeu \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line 51 of file interface.\+c.
+Définition à la ligne 57 du fichier interface.\+c.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{interface_8h_ad36c35f78849abca949ea8c755f5b4e6_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -180,26 +210,25 @@ Here is the caller graph for this function\+:\nopagebreak
 Fonction qui affiche le plateau de jeu. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Paramètres}
 {\em p} & plateau de jeu (pointeur devant être valide) \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 rien 
 \end{DoxyReturn}
 
 
-Definition at line 24 of file interface.\+c.
+Définition à la ligne 24 du fichier interface.\+c.
 
-Here is the call graph for this function\+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=306pt]{interface_8h_a8bb576a3127fc3437d91467ec19d0de0_cgraph}
+\includegraphics[width=330pt]{interface_8h_a8bb576a3127fc3437d91467ec19d0de0_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -217,22 +246,22 @@ Here is the caller graph for this function\+:
 Affiche le vainquer de la partie. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Paramètres}
 {\em p} & Plateau de jeu. \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line 105 of file interface.\+c.
+Définition à la ligne 119 du fichier interface.\+c.
 
-Here is the call graph for this function\+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{interface_8h_a802545d4ff1c158f7a2ca77be20915f9_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -249,26 +278,23 @@ Here is the caller graph for this function\+:\nopagebreak
 
 Fonction qui demande à quelle position doit être placée la carte. 
 
-\begin{DoxyRefDesc}{Todo}
-\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]A finir. \end{DoxyRefDesc}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Paramètres}
 {\em p} & Plateau de jeu. \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line 125 of file interface.\+c.
+Définition à la ligne 139 du fichier interface.\+c.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{interface_8h_a8330a6ec294f24da52fe0f265181fbcc_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -286,25 +312,25 @@ Here is the caller graph for this function\+:\nopagebreak
 Fonction qui demande le nom de la faction. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Paramètres}
 {\em f} & Faction en question \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 Nom de la faction 
 \end{DoxyReturn}
 
 
-Definition at line 16 of file interface.\+c.
+Définition à la ligne 16 du fichier interface.\+c.
 
-Here is the call graph for this function\+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=291pt]{interface_8h_ab716e0c166fd1d07dca1545157befef5_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -322,28 +348,27 @@ Here is the caller graph for this function\+:\nopagebreak
 Fonction qui demande si la faction pointée par f veut utiliser son option. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Paramètres}
 {\em f} & faction en jeu \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 0 non 
 
 1 oui 
 \end{DoxyReturn}
 
 
-Definition at line 64 of file interface.\+c.
+Définition à la ligne 75 du fichier interface.\+c.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=300pt]{interface_8h_aea24bb8bc24a5877aba14a3879602c7b_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

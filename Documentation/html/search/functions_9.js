@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['main_254',['main',['../main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.c']]],
-  ['melanger_255',['melanger',['../faction_8h.html#abc7feb29ed864c76ea95e1afc3cc7752',1,'melanger(Faction f):&#160;faction.c'],['../faction_8c.html#abc7feb29ed864c76ea95e1afc3cc7752',1,'melanger(Faction f):&#160;faction.c']]],
-  ['melanger_5fpioche_256',['melanger_pioche',['../faction_8h.html#adf3497e77c11921394ac7ca7d2e6cbdb',1,'melanger_pioche(Faction f):&#160;faction.c'],['../faction_8c.html#adf3497e77c11921394ac7ca7d2e6cbdb',1,'melanger_pioche(Faction f):&#160;faction.c']]]
+  ['nom_5ffaction_265',['nom_faction',['../interface_8h.html#ab716e0c166fd1d07dca1545157befef5',1,'nom_faction(Faction f):&#160;interface.c'],['../interface_8c.html#ab716e0c166fd1d07dca1545157befef5',1,'nom_faction(Faction f):&#160;interface.c']]],
+  ['nouvelle_5fmanche_266',['nouvelle_manche',['../plateau_8h.html#a49570b78f74ed1d5d588404e0f6bbcfc',1,'nouvelle_manche(Plateau p):&#160;plateau.c'],['../plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc',1,'nouvelle_manche(Plateau p):&#160;plateau.c']]]
 ];
