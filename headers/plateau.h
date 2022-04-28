@@ -34,12 +34,14 @@ Plateau creation_plateau();
  ***************************************************/
 
 /**
- * @brief Prototype de get_plateau_jeu.
+ * @brief Prototype de get_carte_at.
  *
  * @param p
- * @return Plateau_jeu
+ * @param i coordonnée horizontale de la carte souhaitée
+ * @param j coordonnée verticale de la carte souhaitée
+ * @return Carte
  */
-Carte **get_plateau_jeu(Plateau p);
+Carte get_carte_at(Plateau p, int i, int j);
 
 /**
  * @brief Prototype de get_factions qui permet de récupérer les factions en jeu.

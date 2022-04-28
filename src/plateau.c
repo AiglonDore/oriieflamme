@@ -49,9 +49,9 @@ Plateau creation_plateau()
  * Implémentation des prototypes des getters
  ***************************************************/
 
-Carte **get_plateau_jeu(Plateau p)
+Carte get_carte_at(Plateau p, int i, int j)
 {
-    return (Carte **)p->plateau_jeu;
+    return p->plateau_jeu[i][j];
 }
 
 Factions_en_jeu get_factions(Plateau p)
