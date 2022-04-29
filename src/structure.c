@@ -54,7 +54,6 @@ Carte enleve_pioche(Pioche p)
 
 void libere_pioche(Pioche p)
 {
-  int i;
   while (p->top != -1)
   {
     free(enleve_pioche(p));

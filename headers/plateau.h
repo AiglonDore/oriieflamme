@@ -152,10 +152,9 @@ int get_colonne_droite(Plateau p);
  *
  * @param p
  * @param manche
- * @return int
  */
+void set_numero_manche(Plateau p, int x);
 
-int set_numero_manche(Plateau p, int x);
 /**************************************************
  * Création des prototypes des fonctions du plateau
  ***************************************************/
@@ -166,6 +165,16 @@ int set_numero_manche(Plateau p, int x);
  *
  */
 void init_pioche(Faction f);
+
+/**
+ * @brief Crée une faction initialisée
+ * @param nom nom de la faction
+ * @param manches_gagnees nombre de manches gagnées par la faction
+ * @param a_remelange indique si la faction a déjà utilisé son joker ou non
+ * @return la faction initialisée
+ *
+ */
+Faction init_faction(char *nom, int manches_gagnees, int a_remelange);
 
 /**
  * @brief Crée un plateau et les deux factions qui joueront dessus

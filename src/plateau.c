@@ -121,7 +121,7 @@ int get_colonne_droite(Plateau p)
     return p->colonne_droite;
 }
 
-int set_numero_manche(Plateau p, int num)
+void set_numero_manche(Plateau p, int num)
 {
     p->numero_manche = num;
 }
@@ -152,16 +152,15 @@ void init_pioche(Faction f)
     set_pioche(f, pioche); // on initialise la pioche de f ainsi construite
 }
 
-Faction init_faction(char *nom)
+Faction init_faction(char *nom, int manches_gagnees, int a_remelange)
 {
     // On crée la faction
     Faction f = creation_faction();
     set_nom_faction(f, nom);
-    set_nb_manches_gagnees(f, 0);
-    Main main = {NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL};
-    set_main(f, main);
+    set_nb_manches_gagnees(f, manches_gagnees);
+    set_a_remelange(f, a_remelange);
 
-    // On initialise son score, sa pioche, sa main
+    // On initialise son score
     set_pts_DDRS_manche(f, 0);
     init_pioche(f);
     Main main = {NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL};
@@ -178,14 +177,12 @@ Plateau init_plateau()
     p->numero_manche = 0;
 
     // On initialise les factions du plateau
-    Faction f1 = init_faction("faction 1");
-    Faction f2 = init_faction("faction 2");
+    Faction f1 = init_faction("faction 1", 0, 0);
+    Faction f2 = init_faction("faction 2", 0, 0);
     char *a = nom_faction(f1); // demande à la faction 1 comment ils souhaitent s'appeler
     char *b = nom_faction(f2); // demande à la faction 2 comment ils souhaitent s'appeler
     set_nom_faction(f1, a);
     set_nom_faction(f2, b);
-    set_a_remelange(f1, 0);
-    set_a_remelange(f2, 0);
     p->factions.left = f1;
     p->factions.right = f2;
 
@@ -272,14 +269,14 @@ int nouvelle_manche(Plateau p)
         char *nom_right = get_nom_faction(p->factions.right);
         int joker_left = get_a_remelange(p->factions.left);
         int joker_right = get_a_remelange(p->factions.right);
+        int gagne_left = get_nb_manches_gagnees(p->factions.left);
+        int gagne_right = get_nb_manches_gagnees(p->factions.right);
         supprimer_faction(p->factions.left);
         supprimer_faction(p->factions.right);
         p->factions.left = NULL;
         p->factions.right = NULL;
-        p->factions.left = init_faction(nom_left);
-        p->factions.right = init_faction(nom_right);
-        set_a_remelange(p->factions.left, joker_left);
-        set_a_remelange(p->factions.right, joker_right);
+        p->factions.left = init_faction(nom_left, gagne_left, joker_left);
+        p->factions.right = init_faction(nom_right, gagne_right, joker_right);
         int i, j;
         for (i = 0; i < 129; i += 1)
         {
