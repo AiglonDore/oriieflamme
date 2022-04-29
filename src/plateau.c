@@ -47,9 +47,9 @@ Plateau creation_plateau()
 {
     return (malloc(sizeof(struct s_plateau)));
 }
-/**************************************************
- * Implémentation des prototypes des getters
- ***************************************************/
+/*********************************************************
+ * Implémentation des prototypes des getters et setters
+ *********************************************************/
 
 Carte get_carte_at(Plateau p, int i, int j)
 {
@@ -121,6 +121,10 @@ int get_colonne_droite(Plateau p)
     return p->colonne_droite;
 }
 
+int set_numero_manche(Plateau p, int num)
+{
+    p->numero_manche = num;
+}
 /********************************************************
  * Implémentation des prototypes des fonctions du plateau
  ********************************************************/

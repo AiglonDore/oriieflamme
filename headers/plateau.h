@@ -147,6 +147,15 @@ int get_colonne_gauche(Plateau p);
  */
 int get_colonne_droite(Plateau p);
 
+/**
+ * @brief Prototype de set_numero_manche
+ *
+ * @param p
+ * @param manche
+ * @return int
+ */
+
+int set_numero_manche(Plateau p, int x);
 /**************************************************
  * Création des prototypes des fonctions du plateau
  ***************************************************/
