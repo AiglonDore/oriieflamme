@@ -542,10 +542,11 @@ void retourne_lIIEns(Plateau p, Coord coord)
     // On les repose face cachée à gauche de la carte en haut à gauche du plateau
     for (i = 0; i < nb_a_retirer; i += 1)
     {
-        p->plateau_jeu[indice_i[i]][indice_j[j]] = NULL;
         Coord coord = p->coord_carte_haut_gauche;
         set_est_cachee(melange[i], 1);
-        poser_carte(melange[i], p, coord.i, coord.j - 1);
+        int t = coord.j - 1;
+        poser_carte(melange[i], p, coord.i, t);
+        p->plateau_jeu[indice_i[i]][indice_j[i]] = NULL;
     }
     // Actualisation des constantes du plateau
     p->cartes_non_retournees_manche += nb_a_retirer;
@@ -943,12 +944,14 @@ void retourne_Kevin_Goilard(Plateau p, Faction f, int score, Coord coord)
         {
             if (get_est_cachee(carte) == 0)
             {
+                free(p->plateau_jeu[ligne_suppression][j]);
                 p->plateau_jeu[ligne_suppression][j] = NULL;
                 cartes_supprimees += 1;
                 p->cartes_retournees_manche -= 1;
             }
             else
             {
+                free(p->plateau_jeu[ligne_suppression][j]);
                 p->plateau_jeu[ligne_suppression][j] = NULL;
                 cartes_supprimees += 1;
                 p->cartes_non_retournees_manche -= 1;
@@ -1130,6 +1133,7 @@ void retourne_Catherine_Dubois(Plateau p, Coord coord)
                 p->cartes_non_retournees_manche -= 1;
             }
         }
+        free(p->plateau_jeu[coord.i][j] = NULL);
         p->plateau_jeu[coord.i][j] = NULL;
 
         // On recommence dans l'autre sens
@@ -1152,6 +1156,7 @@ void retourne_Catherine_Dubois(Plateau p, Coord coord)
                     p->cartes_non_retournees_manche -= 1;
                 }
             }
+            free(p->plateau_jeu[coord.i][j]);
             p->plateau_jeu[coord.i][j] = NULL;
         }
     }
@@ -1174,6 +1179,7 @@ void retourne_Catherine_Dubois(Plateau p, Coord coord)
                 p->cartes_non_retournees_manche -= 1;
             }
         }
+        free(p->plateau_jeu[i][coord.j]);
         p->plateau_jeu[i][coord.j] = NULL;
 
         // On recommence dans l'autre sens
@@ -1195,6 +1201,7 @@ void retourne_Catherine_Dubois(Plateau p, Coord coord)
                 {
                     p->cartes_non_retournees_manche -= 1;
                 }
+                free(p->plateau_jeu[i][coord.j]);
                 p->plateau_jeu[i][coord.j] = NULL;
             }
         }
@@ -1470,7 +1477,7 @@ void retourne_Eric_Lejeune(Plateau p, Coord coord)
     if (est_prof == 1)
     {
         // On mélange les cartes
-        int *l = malloc(a_choisir * sizeof(int)); // ce tableau sert à savoir si l'indice généré a déjà été généré (t[i]=1 si i déjà sorti, 0 sinon)
+        int *l = calloc(a_choisir, sizeof(int)); // ce tableau sert à savoir si l'indice généré a déjà été généré (t[i]=1 si i déjà sorti, 0 sinon)
         Carte *melange = malloc(a_choisir * sizeof(Carte));
         int c = 0;          // sert à compter le nombre de cartes rentrées dans melange
         int n = rand() % 5; // génère un nombre entier aléatoire entre 0 et 4
@@ -1488,9 +1495,10 @@ void retourne_Eric_Lejeune(Plateau p, Coord coord)
         for (i = 0; i < a_choisir; i += 1)
         {
             Coord coord = p->coord_carte_haut_gauche;
-            int t = coord.i - 1;
+            int t = coord.j - 1;
             p->cartes_retournees_manche -= 1;
-            poser_carte(melange[i], p, t, coord.j);
+            poser_carte(melange[i], p, coord.i, t);
+            p->plateau_jeu[indice_i[i]][indice_j[i]] = NULL;
         }
         // On libère la mémoire allouée
         free(l);
