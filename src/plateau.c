@@ -201,20 +201,10 @@ Plateau init_plateau()
 void libere_plateau(Plateau p)
 {
     // On doit faire attention à libérer proprement les factions en jeu
+    free(get_nom_faction(p->factions.left));
+    free(get_nom_faction(p->factions.right));
     supprimer_faction(p->factions.left);
     supprimer_faction(p->factions.right);
-    int i, j;
-    for (i = 0; i < 129; i += 1)
-    {
-        for (j = 0; j < 129; j += 1)
-        {
-            if (p->plateau_jeu[i][j] != NULL)
-            {
-                free(p->plateau_jeu[i][j]);
-                p->plateau_jeu[i][j] = NULL;
-            }
-        }
-    }
     free(p);
 }
 
@@ -265,8 +255,8 @@ int nouvelle_manche(Plateau p)
                 }
             }
         }
-        char *nom_left = get_nom_faction(p->factions.left);
-        char *nom_right = get_nom_faction(p->factions.right);
+        char *name_left = get_nom_faction(p->factions.left);
+        char *name_right = get_nom_faction(p->factions.right);
         int joker_left = get_a_remelange(p->factions.left);
         int joker_right = get_a_remelange(p->factions.right);
         int gagne_left = get_nb_manches_gagnees(p->factions.left);
@@ -275,8 +265,6 @@ int nouvelle_manche(Plateau p)
         supprimer_faction(p->factions.right);
         p->factions.left = NULL;
         p->factions.right = NULL;
-        p->factions.left = init_faction(nom_left, gagne_left, joker_left);
-        p->factions.right = init_faction(nom_right, gagne_right, joker_right);
         int i, j;
         for (i = 0; i < 129; i += 1)
         {
@@ -289,6 +277,8 @@ int nouvelle_manche(Plateau p)
                 }
             }
         }
+        p->factions.left = init_faction(name_left, gagne_left, joker_left);
+        p->factions.right = init_faction(name_right, gagne_right, joker_right);
     }
     // On regarde si une faction a gagné la partie
     if (get_nb_manches_gagnees(p->factions.left) == 2 || get_nb_manches_gagnees(p->factions.right) == 2)
@@ -513,6 +503,8 @@ void retourne_lIIEns(Plateau p, Coord coord)
         return;
     }
     Carte *a_melanger = malloc(nb_a_retirer * sizeof(Carte)); // cartes à mélanger
+    int *indice_i = malloc(nb_a_retirer * sizeof(int));       // cartes à mélanger
+    int *indice_j = malloc(nb_a_retirer * sizeof(int));       // cartes à mélanger
     int remplissage = 0;
     for (i = p->coord_carte_haut_gauche.i; i <= p->coord_carte_bas_droite.i; i += 1)
     {
@@ -522,21 +514,26 @@ void retourne_lIIEns(Plateau p, Coord coord)
             if (carte != NULL && get_est_cachee(carte) == 0 && (get_id(carte) == FISE || get_id(carte) == FISA || get_id(carte) == FC))
             {
                 a_melanger[remplissage] = carte; // stockage dans a_melanger
-                p->plateau_jeu[i][j] = NULL;     // suppression du plateau
+                indice_i[remplissage] = i;
+                indice_j[remplissage] = j;
                 remplissage += 1;
             }
         }
     }
     // On mélange ce tableau en générant un entier aléatoire entre 0 et nb_a_retirer - 1
     Carte *melange = malloc(nb_a_retirer * sizeof(Carte)); // cartes mélangées
-    int *t = calloc(nb_a_retirer, sizeof(int));            // ce tableau sert à savoir si l'indice généré a déjà été généré (t[i]=1 si i déjà sorti, 0 sinon)
+    int *t = (int *)calloc(nb_a_retirer, sizeof(int));     // ce tableau sert à savoir si l'indice généré a déjà été généré (t[i]=1 si i déjà sorti, 0 sinon)
     int c = 0;                                             // sert à compter le nombre de cartes rentrées dans melange
-    int n = rand() % 16;                                   // génère un nombre entier aléatoire entre 0 et 15
+    int r = rand();
+    int retour = (int)r / nb_a_retirer;
+    int n = r - retour * nb_a_retirer; // génère un nombre entier aléatoire entre 0 et nb_a_retirer - 1
     while (c != nb_a_retirer)
     {
-        while (n >= nb_a_retirer || t[n] == 1)
-        {                    // tant que l'indice a déjà été traité
-            n = rand() % 16; // génère un nombre entier aléatoire entre 0 et nb_a_retirer-1
+        while (t[n] == 1) // tant que l'indice a déjà été traité
+        {
+            r = rand();
+            retour = (int)r / nb_a_retirer;
+            n = r - retour * nb_a_retirer; // génère un nombre entier aléatoire entre 0 et nb_a_retirer - 1
         }
         melange[c] = a_melanger[n]; // on remplit melange grâce à a_retirer
         t[n] = 1;                   // on indique que n a été traité
@@ -545,6 +542,7 @@ void retourne_lIIEns(Plateau p, Coord coord)
     // On les repose face cachée à gauche de la carte en haut à gauche du plateau
     for (i = 0; i < nb_a_retirer; i += 1)
     {
+        p->plateau_jeu[indice_i[i]][indice_j[j]] = NULL;
         Coord coord = p->coord_carte_haut_gauche;
         set_est_cachee(melange[i], 1);
         poser_carte(melange[i], p, coord.i, coord.j - 1);
@@ -556,6 +554,8 @@ void retourne_lIIEns(Plateau p, Coord coord)
     // Libération des tableaux melange et t
     free(a_melanger);
     free(melange);
+    free(indice_i);
+    free(indice_j);
     free(t);
 }
 
@@ -584,6 +584,7 @@ void retourne_Soiree_sans_alcool(Plateau p, Faction f, int score, Coord coord)
                 // Suppression des cartes FISE/FISA/FC retournées du plateau
                 if (carte != NULL && get_est_cachee(carte) == 0 && (get_id(carte) == FISE || get_id(carte) == FISA || get_id(carte) == FC))
                 {
+                    free(p->plateau_jeu[i][j]);
                     p->plateau_jeu[i][j] = NULL;
                     p->cartes_retournees_manche -= 1;
                 }
@@ -606,6 +607,7 @@ void retourne_Soiree_sans_alcool(Plateau p, Faction f, int score, Coord coord)
                 {
                     p->cartes_non_retournees_manche -= 1;
                 }
+                free(p->plateau_jeu[premiere_ligne][j]);
                 p->plateau_jeu[premiere_ligne][j] = NULL;
             }
             Carte c2 = p->plateau_jeu[derniere_ligne][j];
@@ -619,6 +621,7 @@ void retourne_Soiree_sans_alcool(Plateau p, Faction f, int score, Coord coord)
                 {
                     p->cartes_non_retournees_manche -= 1;
                 }
+                free(p->plateau_jeu[derniere_ligne][j]);
                 p->plateau_jeu[derniere_ligne][j] = NULL;
             }
         }
@@ -704,6 +707,7 @@ void retourne_Cafe(Plateau p, Faction f, int score, Coord coord)
             // Suppression des cartes Thé et Alcool retournées sur le plateau
             if (carte != NULL && get_est_cachee(carte) == 0 && (get_id(carte) == Alcool || get_id(carte) == The))
             {
+                free(p->plateau_jeu[i][j]);
                 p->plateau_jeu[i][j] = NULL;
                 p->cartes_retournees_manche -= 1;
             }
@@ -737,6 +741,7 @@ void retourne_The(Plateau p, Faction f, int score, Coord coord)
             // Suppression des cartes Café et Alcool retournées sur le plateau
             if (carte != NULL && get_est_cachee(carte) == 0 && (get_id(carte) == Alcool || get_id(carte) == Cafe))
             {
+                free(p->plateau_jeu[i][j]);
                 p->plateau_jeu[i][j] = NULL;
                 p->cartes_retournees_manche -= 1;
             }
@@ -963,6 +968,11 @@ void retourne_Massinissa_Merabet(Plateau p, Faction f, int score, Faction f_adve
     }
     Carte carte_a_traiter = p->derniere_carte_retournee; // on identifie la dernière carte retournée avant celle-ci
     Coord coord_carte_a_traiter = p->coord_derniere_carte_retournee;
+    if (carte_a_traiter == NULL)
+    {
+        actualiser_constantes_cas_general(p, coord);
+        return;
+    }
     if (get_id(carte_a_traiter) == Massinissa_Merabet) // il peut s'agir de Massinissa Merabet une et une seule fois (carte présente 1x dans chaque pioche)
     {
         if (p->cartes_retournees_manche == 2) // dans ce cas, les deux cartes Massinissa Merabet sont les deux seules à avoir été retournées, on ne fait rien
@@ -972,6 +982,11 @@ void retourne_Massinissa_Merabet(Plateau p, Faction f, int score, Faction f_adve
         }
         carte_a_traiter = p->avant_derniere_carte_retournee; // on change ici la carte à traiter en l'avant-dernière retournée forcément différente de Massinissa Merabet
         coord_carte_a_traiter = p->coord_avant_derniere_carte_retournee;
+        if (carte_a_traiter == NULL)
+        {
+            actualiser_constantes_cas_general(p, coord);
+            return;
+        }
     }
     set_proprietaire(carte_a_traiter, f); // on change le propriétaire de cette carte en la faction qui a retourné la carte
     id_carte id = get_id(carte_a_traiter);
@@ -1008,6 +1023,7 @@ void retourne_Jonas_Senizergues(Plateau p, Coord coord)
             // Suppression des cartes Heures Supplémentaires retournées sur le plateau
             if (carte != NULL && get_est_cachee(carte) == 0 && get_id(carte) == Heures_supplementaires)
             {
+                free(p->plateau_jeu[i][j]);
                 p->plateau_jeu[i][j] = NULL;
                 p->cartes_retournees_manche -= 1;
             }
@@ -1049,6 +1065,7 @@ void retourne_Fetia_Bannour(Plateau p, Faction f, int score, Coord coord)
                 {
                     p->cartes_non_retournees_manche -= 1;
                 }
+                free(p->plateau_jeu[coord.i][k]);
                 p->plateau_jeu[coord.i][k] = NULL;
             }
             // Suppression des cartes posées sur la même colonne que cette carte
@@ -1063,6 +1080,7 @@ void retourne_Fetia_Bannour(Plateau p, Faction f, int score, Coord coord)
                 {
                     p->cartes_non_retournees_manche -= 1;
                 }
+                free(p->plateau_jeu[k][coord.j]);
                 p->plateau_jeu[k][coord.j] = NULL;
             }
         }
@@ -1202,6 +1220,7 @@ void retourne_AnneLaure_Ligozat(Plateau p, Faction f, int score, Coord coord)
     }
     set_pts_DDRS_manche(f, score + pts_gagnes); // ajout du bonus pour la faction qui a posé cette carte
     Coord bas_droite = p->coord_carte_bas_droite_cachee;
+    free(p->plateau_jeu[bas_droite.i][bas_droite.j]);
     p->plateau_jeu[bas_droite.i][bas_droite.j] = NULL; // suppression dernière carte non retournée
     p->cartes_non_retournees_manche -= 1;
     actualiser_constantes_cas_general(p, coord);
@@ -1242,6 +1261,7 @@ void retourne_Christophe_Mouilleron(Plateau p, Coord coord)
                 // Suppression des cartes retournées sauf deux types : CM et HS
                 if (carte != NULL && get_est_cachee(carte) == 0 && get_id(carte) != Christophe_Mouilleron && get_id(carte) != Heures_supplementaires)
                 {
+                    free(p->plateau_jeu[i][j]);
                     p->plateau_jeu[i][j] = NULL;
                     p->cartes_retournees_manche -= 1;
                 }
@@ -1767,7 +1787,7 @@ Carte retourner_carte(Plateau p)
     // Actualisation des cartes en haut à gauche et en bas à droite + colonnes les plus à gauche et à droite
     int i, j;
     int trouve = 0, trouve_cachee = 0;
-    int gauche = 129, droite = -1;
+    int gauche = 128, droite = 0;
     // Actualisation cartes en haut à gauche + colonnes les plus à gauche et à droite
     for (i = 0; i < 129; i += 1)
     {
@@ -1797,6 +1817,11 @@ Carte retourner_carte(Plateau p)
                 }
             }
         }
+    }
+    if (gauche == 128 && droite == 0) // aucune carte trouvée
+    {
+        gauche = 0;
+        droite = 0;
     }
     p->colonne_gauche = gauche;
     p->colonne_droite = droite;
