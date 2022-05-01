@@ -138,14 +138,7 @@ void init_pioche(Faction f)
         int j = get_nb_occ_vg(i); // on récupère le nb d'occurences de la carte d'indice i
         while (j != 0)            // on l'ajoute j fois
         {
-            Carte c = creation_carte();                // on créé ladite carte
-            set_id(c, i);                              // on lui associe son identifiant
-            set_nom(c, get_nom_carte_vg(i));           // on lui associe son nom
-            set_proprietaire(c, f);                    // on lui associe son propriétaire
-            set_description(c, get_description_vg(i)); // on lui associe sa descrption
-            set_nb_occ(c, get_nb_occ_vg(i));           // on lui associe son nb d'occurences
-            set_est_cachee(c, 1);                      // on l'initialise face cachée
-            ajout_pioche(pioche, c);                   // on ajoute la carte
+            ajout_pioche(pioche, nouvelle_carte(i, f));
             j -= 1;
         }
     }
@@ -521,9 +514,11 @@ void retourne_lIIEns(Plateau p, Coord coord)
         }
     }
     // On mélange ce tableau en générant un entier aléatoire entre 0 et nb_a_retirer - 1
-    Carte *melange = malloc(nb_a_retirer * sizeof(Carte)); // cartes mélangées
-    int *t = (int *)calloc(nb_a_retirer, sizeof(int));     // ce tableau sert à savoir si l'indice généré a déjà été généré (t[i]=1 si i déjà sorti, 0 sinon)
-    int c = 0;                                             // sert à compter le nombre de cartes rentrées dans melange
+    Carte *melange = malloc(nb_a_retirer * sizeof(Carte));      // cartes mélangées
+    int *t = (int *)calloc(nb_a_retirer, sizeof(int));          // ce tableau sert à savoir si l'indice généré a déjà été généré (t[i]=1 si i déjà sorti, 0 sinon)
+    int *indice_i_melange = malloc(nb_a_retirer * sizeof(int)); // indices horizontaux cartes mélangées
+    int *indice_j_melange = malloc(nb_a_retirer * sizeof(int)); // indices verticaux cartes mélangées
+    int c = 0;                                                  // sert à compter le nombre de cartes rentrées dans melange
     int r = rand();
     int retour = (int)r / nb_a_retirer;
     int n = r - retour * nb_a_retirer; // génère un nombre entier aléatoire entre 0 et nb_a_retirer - 1
@@ -535,18 +530,22 @@ void retourne_lIIEns(Plateau p, Coord coord)
             retour = (int)r / nb_a_retirer;
             n = r - retour * nb_a_retirer; // génère un nombre entier aléatoire entre 0 et nb_a_retirer - 1
         }
-        melange[c] = a_melanger[n]; // on remplit melange grâce à a_retirer
-        t[n] = 1;                   // on indique que n a été traité
-        c += 1;                     // on indique qu'une carte a été ajoutée à melange, on donne l'indice pour la prochaine
+        melange[c] = a_melanger[n]; // on remplit nos tableaux à partir des précédents
+        indice_i_melange[c] = indice_i[n];
+        indice_j_melange[c] = indice_j[n];
+        t[n] = 1; // on indique que n a été traité
+        c += 1;   // on indique qu'une carte a été ajoutée à melange, on donne l'indice pour la prochaine
     }
     // On les repose face cachée à gauche de la carte en haut à gauche du plateau
     for (i = 0; i < nb_a_retirer; i += 1)
     {
         Coord coord = p->coord_carte_haut_gauche;
-        set_est_cachee(melange[i], 1);
-        int t = coord.j - 1;
-        poser_carte(melange[i], p, coord.i, t);
-        p->plateau_jeu[indice_i[i]][indice_j[i]] = NULL;
+        id_carte id = get_id(melange[i]);
+        Faction f = get_proprietaire(melange[i]);
+        Carte carte_a_poser = nouvelle_carte(id, f);
+        free(p->plateau_jeu[indice_i_melange[i]][indice_j_melange[i]]);
+        p->plateau_jeu[indice_i_melange[i]][indice_j_melange[i]] = NULL;
+        poser_carte(carte_a_poser, p, coord.i, coord.j - 1);
     }
     // Actualisation des constantes du plateau
     p->cartes_non_retournees_manche += nb_a_retirer;
@@ -558,6 +557,8 @@ void retourne_lIIEns(Plateau p, Coord coord)
     free(indice_i);
     free(indice_j);
     free(t);
+    free(indice_i_melange);
+    free(indice_j_melange);
 }
 
 void retourne_Soiree_sans_alcool(Plateau p, Faction f, int score, Coord coord)
@@ -976,7 +977,7 @@ void retourne_Massinissa_Merabet(Plateau p, Faction f, int score, Faction f_adve
         actualiser_constantes_cas_general(p, coord);
         return;
     }
-    if (get_id(carte_a_traiter) == Massinissa_Merabet) // il peut s'agir de Massinissa Merabet une et une seule fois (carte présente 1x dans chaque pioche)
+    else if (get_id(carte_a_traiter) == Massinissa_Merabet) // il peut s'agir de Massinissa Merabet une et une seule fois (carte présente 1x dans chaque pioche)
     {
         if (p->cartes_retournees_manche == 2) // dans ce cas, les deux cartes Massinissa Merabet sont les deux seules à avoir été retournées, on ne fait rien
         {
@@ -1133,7 +1134,7 @@ void retourne_Catherine_Dubois(Plateau p, Coord coord)
                 p->cartes_non_retournees_manche -= 1;
             }
         }
-        free(p->plateau_jeu[coord.i][j] = NULL);
+        free(p->plateau_jeu[coord.i][j]);
         p->plateau_jeu[coord.i][j] = NULL;
 
         // On recommence dans l'autre sens
@@ -1479,30 +1480,40 @@ void retourne_Eric_Lejeune(Plateau p, Coord coord)
         // On mélange les cartes
         int *l = calloc(a_choisir, sizeof(int)); // ce tableau sert à savoir si l'indice généré a déjà été généré (t[i]=1 si i déjà sorti, 0 sinon)
         Carte *melange = malloc(a_choisir * sizeof(Carte));
-        int c = 0;          // sert à compter le nombre de cartes rentrées dans melange
-        int n = rand() % 5; // génère un nombre entier aléatoire entre 0 et 4
+        int *indice_i_melange = malloc(a_choisir * sizeof(int)); // allocation mémoire pour sauver les indices horizontaux des cartes mélangées
+        int *indice_j_melange = malloc(a_choisir * sizeof(int)); // allocation mémoire pour sauver les indices verticaux des cartes mélangées
+        int c = 0;                                               // sert à compter le nombre de cartes rentrées dans melange
+        int n = rand() % 5;                                      // génère un nombre entier aléatoire entre 0 et 4
         while (c != a_choisir)
         {
             while (n >= a_choisir || l[n] == 1)
             {                   // tant que l'indice a déjà été traité
                 n = rand() % 5; // génère un nombre entier aléatoire entre 0 et a_choisir-1
             }
-            melange[c] = supp[n]; // on remplit melange grâce à c
-            l[n] = 1;             // on indique que n a été traité
-            c += 1;               // on indique qu'une carte a été ajoutée à melange, on donne l'indice pour la prochaine
+            melange[c] = supp[n]; // on remplit nos tableaux grâce à supp, indice_i et indice_j
+            indice_i_melange[c] = indice_i[n];
+            indice_j_melange[c] = indice_j[n];
+            l[n] = 1; // on indique que n a été traité
+            c += 1;   // on indique qu'une carte a été ajoutée à melange, on donne l'indice pour la prochaine
         }
         // On les repose face cachée à gauche de la carte en haut à gauche du plateau
         for (i = 0; i < a_choisir; i += 1)
         {
             Coord coord = p->coord_carte_haut_gauche;
-            int t = coord.j - 1;
-            p->cartes_retournees_manche -= 1;
-            poser_carte(melange[i], p, coord.i, t);
-            p->plateau_jeu[indice_i[i]][indice_j[i]] = NULL;
+            id_carte id = get_id(melange[i]);
+            Faction f = get_proprietaire(melange[i]);
+            Carte carte_a_poser = nouvelle_carte(id, f);
+            free(p->plateau_jeu[indice_i_melange[i]][indice_j_melange[i]]);
+            p->plateau_jeu[indice_i_melange[i]][indice_j_melange[i]] = NULL;
+            poser_carte(carte_a_poser, p, coord.i, coord.j - 1);
         }
+        p->cartes_retournees_manche -= a_choisir;
+        p->cartes_non_retournees_manche += a_choisir;
         // On libère la mémoire allouée
         free(l);
         free(melange);
+        free(indice_i_melange);
+        free(indice_j_melange);
     }
     // Sinon, on supprime les cartes du plateau
     else
@@ -1511,8 +1522,8 @@ void retourne_Eric_Lejeune(Plateau p, Coord coord)
         {
             free(p->plateau_jeu[indice_i[i]][indice_j[i]]);
             p->plateau_jeu[indice_i[i]][indice_j[i]] = NULL;
-            p->cartes_retournees_manche -= 1;
         }
+        p->cartes_retournees_manche -= a_choisir;
     }
     // Libération de la mémoire allouée
     free(indice_i);
@@ -1767,11 +1778,11 @@ void switch_carte(Plateau p, id_carte id, Coord coord, Faction f, Faction f_adve
     }
 }
 
-Carte retourner_carte(Plateau p)
+int retourner_carte(Plateau p)
 {
     if (p->cartes_non_retournees_manche == 0) // dans ce cas, on n'a rien à faire, c'est fini
     {
-        return NULL;
+        return (-1);
     }
     // Sinon, on identifie la carte à retourner, on la retourne
     Coord coord = p->coord_carte_haut_gauche_cachee;
@@ -1796,6 +1807,7 @@ Carte retourner_carte(Plateau p)
     int i, j;
     int trouve = 0, trouve_cachee = 0;
     int gauche = 128, droite = 0;
+    Coord avant = p->coord_carte_haut_gauche_cachee;
     // Actualisation cartes en haut à gauche + colonnes les plus à gauche et à droite
     for (i = 0; i < 129; i += 1)
     {
@@ -1833,6 +1845,10 @@ Carte retourner_carte(Plateau p)
     }
     p->colonne_gauche = gauche;
     p->colonne_droite = droite;
+    if (p->coord_carte_haut_gauche_cachee.i == avant.i && p->coord_carte_haut_gauche_cachee.j == avant.j)
+    {
+        p->cartes_non_retournees_manche = 0;
+    }
     trouve = 0;
     trouve_cachee = 0;
     // Actualisation des cartes en bas à droite
@@ -1857,5 +1873,5 @@ Carte retourner_carte(Plateau p)
             }
         }
     }
-    return c;
+    return (id);
 }

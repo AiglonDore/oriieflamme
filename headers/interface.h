@@ -19,7 +19,7 @@
  * @param f Faction en question
  * @return Nom de la faction
  */
-char * nom_faction(Faction f);
+char *nom_faction(Faction f);
 
 /**
  * @brief Fonction qui affiche le plateau de jeu
@@ -52,9 +52,9 @@ Carte a_poser_face_cachee_sur_plateau(Faction f);
 
 /**
  * @brief Affiche les effets de la carte c si elle est posée.
- * @param c Carte dont on veut afficher les effets
+ * @param id id de la carte dont on veut afficher les effets
  */
-void affiche_effets(Carte c);
+void affiche_effets(int id);
 
 /**
  * @brief Affiche le vainquer de la partie.
@@ -70,8 +70,8 @@ Coord demande_position(Plateau p);
 
 /**
  * @brief Affiche les points DDRS des deux factions.
- * 
+ *
  * @param p Plateau de jeu.
  */
 void affiche_ddrs(Plateau p);
-#endif //INTERFACE_H
+#endif // INTERFACE_H

@@ -26,7 +26,8 @@ void affiche_plateau(Plateau p)
     Coord haut_gauche = get_coord_carte_haut_gauche(p);
     Coord bas_droite = get_coord_carte_bas_droite(p);
     printf("          ");
-    for (int j = get_colonne_gauche(p); j <= get_colonne_droite(p); j++) printf("Col. %d ",j);
+    for (int j = get_colonne_gauche(p); j <= get_colonne_droite(p); j++)
+        printf("Col. %d ", j);
     printf("\n");
     for (int i = haut_gauche.i; i <= bas_droite.i; i++)
     {
@@ -63,7 +64,7 @@ void affiche_main(Faction f)
         if (main[i] != NULL)
         {
             printf("*%s\n", get_nom(main[i]));
-            affiche_effets(main[i]);
+            affiche_effets(get_id(main[i]));
         }
         else
         {
@@ -111,9 +112,9 @@ Carte a_poser_face_cachee_sur_plateau(Faction f)
     return get_main(f)[ret];
 }
 
-void affiche_effets(Carte c)
+void affiche_effets(int id)
 {
-    printf("Effet de la carte \"%s\": \"%s\".\n", get_nom(c), get_description(c));
+    printf("Effet de la carte \"%s\": \"%s\".\n", get_nom_carte_vg(id), get_description_vg(id));
 }
 
 void affiche_vainqueur(Plateau p)
@@ -414,6 +415,6 @@ Coord demande_position(Plateau p)
 void affiche_ddrs(Plateau p)
 {
     Factions_en_jeu factions = get_factions(p);
-    printf("%s, vos points DDRS sont: %d.\n",get_nom_faction(factions.left),get_pts_DDRS_manche(factions.left));
-    printf("%s, vos points DDRS sont: %d.\n",get_nom_faction(factions.right),get_pts_DDRS_manche(factions.right));
+    printf("%s, vos points DDRS sont: %d.\n", get_nom_faction(factions.left), get_pts_DDRS_manche(factions.left));
+    printf("%s, vos points DDRS sont: %d.\n", get_nom_faction(factions.right), get_pts_DDRS_manche(factions.right));
 }

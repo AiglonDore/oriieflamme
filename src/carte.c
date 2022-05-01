@@ -34,6 +34,18 @@ Carte creation_carte()
     return (malloc(sizeof(struct StructureCarte)));
 }
 
+Carte nouvelle_carte(id_carte id, Faction f)
+{
+    Carte c = creation_carte();                 // on créé ladite carte
+    set_id(c, id);                              // on lui associe son identifiant
+    set_nom(c, get_nom_carte_vg(id));           // on lui associe son nom
+    set_proprietaire(c, f);                     // on lui associe son propriétaire
+    set_description(c, get_description_vg(id)); // on lui associe sa descrption
+    set_nb_occ(c, get_nb_occ_vg(id));           // on lui associe son nb d'occurences
+    set_est_cachee(c, 1);
+    return (c);
+}
+
 /**
  * @brief
  * Déclaration des constantes et variables globales relative aux cartes. Nombre de carte fixe à 8 ainsi qu'une déclaration des effets.

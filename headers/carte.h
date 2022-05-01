@@ -67,6 +67,14 @@ typedef enum nom_carte
     Laurent_Prevel
 } id_carte;
 
+/**
+ * @brief Prototype de creation_carte qui crée une carte face cachée
+ * @param id l'identifiant de la carte
+ * @param f la faction propriétaire de la carte
+ * @return Carte
+ */
+Carte nouvelle_carte(id_carte id, Faction f);
+
 /**************************************************
  * Création des prototypes des getters et setters
  ***************************************************/

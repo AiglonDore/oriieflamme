@@ -542,9 +542,9 @@ void switch_carte(Plateau p, id_carte id, Coord coord, Faction f, Faction f_adve
  * @brief retourne la carte la plus en haut à gauche du plateau face visible et active son effet
  * @param p plateau valide (le pointeur doit être valide)
  * @return la carte que l'on a retourné face visible
- * @return NULL s'il n'y a plus aucune carte à retourner
+ * @return -1 s'il n'y a plus aucune carte à retourner, sinon l'id de la carte retournée
  *
  */
-Carte retourner_carte(Plateau p);
+int retourner_carte(Plateau p);
 
 #endif // PLATEAU_H

@@ -60,8 +60,8 @@ void phase1(Plateau p)
  */
 void phase2(Plateau p)
 {
-    Carte carte_retournee = NULL;
-    while ((carte_retournee = retourner_carte(p)) != NULL) // Condition sur la valeur de l'affectation: si retourner_carte renvoie NULL, cela signifie qu'il n'y a plus de cartes à retourner.
+    int carte_retournee = 0;
+    while ((carte_retournee = retourner_carte(p)) != -1) // Condition sur la valeur de l'affectation: si retourner_carte renvoie NULL, cela signifie qu'il n'y a plus de cartes à retourner.
     {
         affiche_effets(carte_retournee);
         affiche_plateau(p);
