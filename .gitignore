@@ -2,4 +2,8 @@
 bin/*
 obj/*
 
+*.o
+
+*.obj
+
 *.out
