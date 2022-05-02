@@ -52,8 +52,8 @@ void \mbox{\hyperlink{structure_8h_ac8dcdc0ffb092b739d94573e47eaaacf}{ajout\+\_\
 \begin{DoxyCompactList}\small\item\em ajoute la carte à la pioche au sommet de celle-\/ci \end{DoxyCompactList}\item 
 \mbox{\hyperlink{carte_8h_a633ba64ee908d35aac798844f477ee9d}{Carte}} \mbox{\hyperlink{structure_8h_a7b95c6a72accdcab7cc1f39d2536fe06}{enleve\+\_\+pioche}} (\mbox{\hyperlink{structure_8h_a9b18ab4f4d3508a3f5ce014f4040217f}{Pioche}} p)
 \begin{DoxyCompactList}\small\item\em enlève la carte au sommet de la pioche (on suppose la pioche non vide) \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{structure_8h_aea557b1ca9333f45e14a77f9896d0a56}{affiche\+\_\+pioche}} (\mbox{\hyperlink{structure_8h_a9b18ab4f4d3508a3f5ce014f4040217f}{Pioche}} p, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{structure_8h_a855e5f243da2af0fb6391901773dc997}{libere\+\_\+pioche}} (\mbox{\hyperlink{structure_8h_a9b18ab4f4d3508a3f5ce014f4040217f}{Pioche}} p)
+\begin{DoxyCompactList}\small\item\em libère la pioche et ses cartes \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Description détaillée}
@@ -147,23 +147,6 @@ Définition à la ligne 22 du fichier structure.\+h.
 
 
 \doxysubsection{Documentation des fonctions}
-\mbox{\Hypertarget{structure_8h_aea557b1ca9333f45e14a77f9896d0a56}\label{structure_8h_aea557b1ca9333f45e14a77f9896d0a56}} 
-\index{structure.h@{structure.h}!affiche\_pioche@{affiche\_pioche}}
-\index{affiche\_pioche@{affiche\_pioche}!structure.h@{structure.h}}
-\doxysubsubsection{\texorpdfstring{affiche\_pioche()}{affiche\_pioche()}}
-{\footnotesize\ttfamily void affiche\+\_\+pioche (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structure_8h_a9b18ab4f4d3508a3f5ce014f4040217f}{Pioche}}}]{p,  }\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f }\end{DoxyParamCaption})}
-
-
-
-Définition à la ligne 55 du fichier structure.\+c.
-
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=301pt]{structure_8h_aea557b1ca9333f45e14a77f9896d0a56_cgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{structure_8h_ac8dcdc0ffb092b739d94573e47eaaacf}\label{structure_8h_ac8dcdc0ffb092b739d94573e47eaaacf}} 
 \index{structure.h@{structure.h}!ajout\_pioche@{ajout\_pioche}}
 \index{ajout\_pioche@{ajout\_pioche}!structure.h@{structure.h}}
@@ -185,7 +168,8 @@ ajoute la carte à la pioche au sommet de celle-\/ci
 
 Définition à la ligne 41 du fichier structure.\+c.
 
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -216,7 +200,8 @@ Savoir si une faction a itilisé l\textquotesingle{}option de remélanger sa mai
 
 Définition à la ligne 29 du fichier structure.\+c.
 
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -245,11 +230,47 @@ la carte qui a été retirée
 
 Définition à la ligne 47 du fichier structure.\+c.
 
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{structure_8h_a7b95c6a72accdcab7cc1f39d2536fe06_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structure_8h_a855e5f243da2af0fb6391901773dc997}\label{structure_8h_a855e5f243da2af0fb6391901773dc997}} 
+\index{structure.h@{structure.h}!libere\_pioche@{libere\_pioche}}
+\index{libere\_pioche@{libere\_pioche}!structure.h@{structure.h}}
+\doxysubsubsection{\texorpdfstring{libere\_pioche()}{libere\_pioche()}}
+{\footnotesize\ttfamily void libere\+\_\+pioche (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structure_8h_a9b18ab4f4d3508a3f5ce014f4040217f}{Pioche}}}]{p }\end{DoxyParamCaption})}
+
+
+
+libère la pioche et ses cartes 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p} & une pioche valide \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 55 du fichier structure.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{structure_8h_a855e5f243da2af0fb6391901773dc997_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structure_8h_a855e5f243da2af0fb6391901773dc997_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{structure_8h_ae973594dee297fae28846edec431f098}\label{structure_8h_ae973594dee297fae28846edec431f098}} 

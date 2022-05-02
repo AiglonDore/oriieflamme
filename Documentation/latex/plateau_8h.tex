@@ -60,8 +60,12 @@ int \mbox{\hyperlink{plateau_8h_ae557fab87da33bf071ae6b4ce4430ae0}{get\+\_\+colo
 \begin{DoxyCompactList}\small\item\em Prototype de get\+\_\+colonne\+\_\+gauche. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{plateau_8h_a54d750566fa496b43d4791d422edf570}{get\+\_\+colonne\+\_\+droite}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p)
 \begin{DoxyCompactList}\small\item\em Prototype de get\+\_\+colonne\+\_\+droite. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{plateau_8h_a9334d32e41523c50610d0c70ba5cb46d}{set\+\_\+numero\+\_\+manche}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, int x)
+\begin{DoxyCompactList}\small\item\em Prototype de set\+\_\+numero\+\_\+manche. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{plateau_8h_a2190bbe0984d78c5f3d5f2e646210f07}{init\+\_\+pioche}} (\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f)
 \begin{DoxyCompactList}\small\item\em Crée la pioche avec les 32 cartes de l\textquotesingle{}énoncé pour la faction donnée. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} \mbox{\hyperlink{plateau_8h_aa1b228e632acc6462080d59a556f0cfa}{init\+\_\+faction}} (char $\ast$nom, int manches\+\_\+gagnees, int \mbox{\hyperlink{faction_8c_aaa0655066f74d90991cac0094fb8964a}{a\+\_\+remelange}})
+\begin{DoxyCompactList}\small\item\em Crée une faction initialisée. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} \mbox{\hyperlink{plateau_8h_a48e20516b8894156393d7f0f2da54ce2}{init\+\_\+plateau}} ()
 \begin{DoxyCompactList}\small\item\em Crée un plateau et les deux factions qui joueront dessus. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{plateau_8h_aa2fd2fef89b903a5c089bf57cb932e29}{libere\+\_\+plateau}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p)
@@ -138,7 +142,7 @@ void \mbox{\hyperlink{plateau_8h_aa4cceb7af32a7a63e57cb3af2ec57613}{retourne\+\_
 \begin{DoxyCompactList}\small\item\em Active les effets de la carte Laurent Prével. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{plateau_8h_a676ed33ed1ff7fd3200efd68462f61e0}{switch\+\_\+carte}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p, \mbox{\hyperlink{carte_8h_aaf595c0642ba2db854c179bb92387300}{id\+\_\+carte}} id, \mbox{\hyperlink{struct_coord}{Coord}} coord, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f\+\_\+adverse, int score, int score\+\_\+adverse)
 \begin{DoxyCompactList}\small\item\em Active les effets de la carte d\textquotesingle{}identifiant id. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{carte_8h_a633ba64ee908d35aac798844f477ee9d}{Carte}} \mbox{\hyperlink{plateau_8h_a41cddf8d1f1e457df2f4c905d6605151}{retourner\+\_\+carte}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p)
+int \mbox{\hyperlink{plateau_8h_aafb029b0483a7d02f4f2619eea4deb27}{retourner\+\_\+carte}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p)
 \begin{DoxyCompactList}\small\item\em retourne la carte la plus en haut à gauche du plateau face visible et active son effet \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -194,7 +198,8 @@ Plateau
 
 Définition à la ligne 46 du fichier plateau.\+c.
 
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -221,9 +226,10 @@ la liste des des factions du jeu
 \end{DoxyReturn}
 
 
-Définition à la ligne 299 du fichier plateau.\+c.
+Définition à la ligne 317 du fichier plateau.\+c.
 
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -278,7 +284,8 @@ Carte
 
 Définition à la ligne 54 du fichier plateau.\+c.
 
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -351,7 +358,8 @@ int
 
 Définition à la ligne 119 du fichier plateau.\+c.
 
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -380,7 +388,8 @@ int
 
 Définition à la ligne 114 du fichier plateau.\+c.
 
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -431,7 +440,8 @@ Prototype de get\+\_\+coord\+\_\+carte\+\_\+bas\+\_\+droite.
 
 Définition à la ligne 94 du fichier plateau.\+c.
 
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -460,7 +470,8 @@ Prototype de get\+\_\+coord\+\_\+carte\+\_\+haut\+\_\+gauche.
 
 Définition à la ligne 89 du fichier plateau.\+c.
 
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -489,7 +500,8 @@ Prototype de get\+\_\+coord\+\_\+derniere\+\_\+carte\+\_\+posee.
 
 Définition à la ligne 64 du fichier plateau.\+c.
 
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -562,7 +574,8 @@ Prototype de get\+\_\+factions qui permet de récupérer les factions en jeu.
 
 Définition à la ligne 59 du fichier plateau.\+c.
 
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -591,6 +604,48 @@ int
 
 Définition à la ligne 99 du fichier plateau.\+c.
 
+\mbox{\Hypertarget{plateau_8h_aa1b228e632acc6462080d59a556f0cfa}\label{plateau_8h_aa1b228e632acc6462080d59a556f0cfa}} 
+\index{plateau.h@{plateau.h}!init\_faction@{init\_faction}}
+\index{init\_faction@{init\_faction}!plateau.h@{plateau.h}}
+\doxysubsubsection{\texorpdfstring{init\_faction()}{init\_faction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} init\+\_\+faction (\begin{DoxyParamCaption}\item[{char $\ast$}]{nom,  }\item[{int}]{manches\+\_\+gagnees,  }\item[{int}]{a\+\_\+remelange }\end{DoxyParamCaption})}
+
+
+
+Crée une faction initialisée. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em nom} & nom de la faction \\
+\hline
+{\em manches\+\_\+gagnees} & nombre de manches gagnées par la faction \\
+\hline
+{\em a\+\_\+remelange} & indique si la faction a déjà utilisé son joker ou non \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+la faction initialisée 
+\end{DoxyReturn}
+
+
+Définition à la ligne 148 du fichier plateau.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{plateau_8h_aa1b228e632acc6462080d59a556f0cfa_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{plateau_8h_aa1b228e632acc6462080d59a556f0cfa_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{plateau_8h_a2190bbe0984d78c5f3d5f2e646210f07}\label{plateau_8h_a2190bbe0984d78c5f3d5f2e646210f07}} 
 \index{plateau.h@{plateau.h}!init\_pioche@{init\_pioche}}
 \index{init\_pioche@{init\_pioche}!plateau.h@{plateau.h}}
@@ -608,16 +663,18 @@ Crée la pioche avec les 32 cartes de l\textquotesingle{}énoncé pour la factio
 \end{DoxyParams}
 
 
-Définition à la ligne 128 du fichier plateau.\+c.
+Définition à la ligne 132 du fichier plateau.\+c.
 
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=550pt]{plateau_8h_a2190bbe0984d78c5f3d5f2e646210f07_cgraph}
+\includegraphics[width=350pt]{plateau_8h_a2190bbe0984d78c5f3d5f2e646210f07_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -639,16 +696,18 @@ le plateau initialisé
 \end{DoxyReturn}
 
 
-Définition à la ligne 151 du fichier plateau.\+c.
+Définition à la ligne 164 du fichier plateau.\+c.
 
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=550pt]{plateau_8h_a48e20516b8894156393d7f0f2da54ce2_cgraph}
+\includegraphics[width=350pt]{plateau_8h_a48e20516b8894156393d7f0f2da54ce2_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -672,16 +731,18 @@ Libère la mémoire associée au plateau de jeu et aux deux factions.
 \end{DoxyParams}
 
 
-Définition à la ligne 183 du fichier plateau.\+c.
+Définition à la ligne 194 du fichier plateau.\+c.
 
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{plateau_8h_aa2fd2fef89b903a5c089bf57cb932e29_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -708,16 +769,18 @@ Initialise une nouvelle manche ou indique que le jeu est terminé
 \end{DoxyReturn}
 
 
-Définition à la ligne 193 du fichier plateau.\+c.
+Définition à la ligne 204 du fichier plateau.\+c.
 
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{plateau_8h_a49570b78f74ed1d5d588404e0f6bbcfc_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -747,7 +810,7 @@ Permet à une faction de poser une carte face cachée sur le plateau.
 \end{DoxyParams}
 
 
-Définition à la ligne 326 du fichier plateau.\+c.
+Définition à la ligne 344 du fichier plateau.\+c.
 
 Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \begin{figure}[H]
@@ -756,7 +819,8 @@ Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \includegraphics[width=285pt]{plateau_8h_a425437529596e13babd7bc8b4e04d491_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -782,7 +846,7 @@ Active les effets de la carte Alcool.
 \end{DoxyParams}
 
 
-Définition à la ligne 588 du fichier plateau.\+c.
+Définition à la ligne 638 du fichier plateau.\+c.
 
 Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \begin{figure}[H]
@@ -791,7 +855,8 @@ Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \includegraphics[width=332pt]{plateau_8h_ac2734f8c9dd2b1da2bc44353bde8f8cd_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -821,16 +886,18 @@ Active les effets de la carte Anne-\/\+Laure Ligozat.
 \end{DoxyParams}
 
 
-Définition à la ligne 1125 du fichier plateau.\+c.
+Définition à la ligne 1213 du fichier plateau.\+c.
 
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{plateau_8h_a4fa3750c4cdb95c9f79a8a1c0810dabe_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -860,16 +927,18 @@ Active les effets de la carte Café
 \end{DoxyParams}
 
 
-Définition à la ligne 646 du fichier plateau.\+c.
+Définition à la ligne 700 du fichier plateau.\+c.
 
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=331pt]{plateau_8h_affb3dc4699da610a4094b898606df720_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -895,7 +964,7 @@ Active les effets de la carte Catherine Dubois.
 \end{DoxyParams}
 
 
-Définition à la ligne 1044 du fichier plateau.\+c.
+Définition à la ligne 1116 du fichier plateau.\+c.
 
 Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \begin{figure}[H]
@@ -904,7 +973,8 @@ Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \includegraphics[width=349pt]{plateau_8h_a54bbb50bc4da98fef56d5a1224625062_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -930,16 +1000,18 @@ Active les effets de la carte Christophe Mouilleron.
 \end{DoxyParams}
 
 
-Définition à la ligne 1158 du fichier plateau.\+c.
+Définition à la ligne 1247 du fichier plateau.\+c.
 
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{plateau_8h_aac850aae639596089422f59945955893_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -969,16 +1041,18 @@ Active les effets de la carte Dimitri Watel.
 \end{DoxyParams}
 
 
-Définition à la ligne 1264 du fichier plateau.\+c.
+Définition à la ligne 1354 du fichier plateau.\+c.
 
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{plateau_8h_a8eda7434dc0f02bd157237914732da90_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1008,16 +1082,18 @@ Active les effets de la carte Djibril-\/\+Aurélien Dembele-\/\+Cabot.
 \end{DoxyParams}
 
 
-Définition à la ligne 1298 du fichier plateau.\+c.
+Définition à la ligne 1388 du fichier plateau.\+c.
 
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{plateau_8h_a21795d3e8856c6912ca864b28e385f5c_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1043,7 +1119,7 @@ Active les effets de la carte Ecocup.
 \end{DoxyParams}
 
 
-Définition à la ligne 712 du fichier plateau.\+c.
+Définition à la ligne 768 du fichier plateau.\+c.
 
 Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \begin{figure}[H]
@@ -1052,7 +1128,8 @@ Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \includegraphics[width=337pt]{plateau_8h_ab78ffd3b442ccad823497eb957c7bbbd_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1082,16 +1159,18 @@ Active les effets de la carte Ecolog\+I\+IE.
 \end{DoxyParams}
 
 
-Définition à la ligne 437 du fichier plateau.\+c.
+Définition à la ligne 458 du fichier plateau.\+c.
 
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{plateau_8h_a918c0e8b76b14f83cbbd245d2c486ffa_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1117,16 +1196,18 @@ Active les effets de la carte Eric Lejeune.
 \end{DoxyParams}
 
 
-Définition à la ligne 1318 du fichier plateau.\+c.
+Définition à la ligne 1408 du fichier plateau.\+c.
 
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{plateau_8h_a4eba5c924a69c8f5fe5c8ac913e7fdbb_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1156,16 +1237,18 @@ Active les effets de la carte FC.
 \end{DoxyParams}
 
 
-Définition à la ligne 415 du fichier plateau.\+c.
+Définition à la ligne 436 du fichier plateau.\+c.
 
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=321pt]{plateau_8h_a6f31d9b51378e4ea68b694367b7b1174_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1195,16 +1278,18 @@ Active les effets de la carte Fetia Bannour.
 \end{DoxyParams}
 
 
-Définition à la ligne 969 du fichier plateau.\+c.
+Définition à la ligne 1039 du fichier plateau.\+c.
 
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{plateau_8h_a017b517e0297e70952f7fc6c0d7a3fc0_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1234,7 +1319,7 @@ Active les effets de la carte F\+I\+SA.
 \end{DoxyParams}
 
 
-Définition à la ligne 406 du fichier plateau.\+c.
+Définition à la ligne 427 du fichier plateau.\+c.
 
 Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \begin{figure}[H]
@@ -1243,7 +1328,8 @@ Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \includegraphics[width=331pt]{plateau_8h_a336cac6cd051617253e073d8e65b97ad_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1273,7 +1359,7 @@ Active les effets de la carte F\+I\+SE.
 \end{DoxyParams}
 
 
-Définition à la ligne 400 du fichier plateau.\+c.
+Définition à la ligne 421 du fichier plateau.\+c.
 
 Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \begin{figure}[H]
@@ -1282,7 +1368,8 @@ Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \includegraphics[width=329pt]{plateau_8h_ad90766cf8076143270a2b76aeaefe5da_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1316,7 +1403,7 @@ Active les effets de la carte Guillaume Burel.
 \end{DoxyParams}
 
 
-Définition à la ligne 1148 du fichier plateau.\+c.
+Définition à la ligne 1237 du fichier plateau.\+c.
 
 Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \begin{figure}[H]
@@ -1325,7 +1412,8 @@ Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \includegraphics[width=350pt]{plateau_8h_a76d84cbf514de5dc1247ce80fcb13471_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1355,16 +1443,18 @@ Active les effets de la carte Heures supplémentaires.
 \end{DoxyParams}
 
 
-Définition à la ligne 824 du fichier plateau.\+c.
+Définition à la ligne 880 du fichier plateau.\+c.
 
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{plateau_8h_a36ee6886e1fc49003a638898ee8a1430_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1398,16 +1488,18 @@ Active les effets de la carte Isolation du bâtiment.
 \end{DoxyParams}
 
 
-Définition à la ligne 744 du fichier plateau.\+c.
+Définition à la ligne 800 du fichier plateau.\+c.
 
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{plateau_8h_ae667a16136a040ee486dd208a7a90b89_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1433,16 +1525,18 @@ Active les effets de la carte Jonas Senizergues.
 \end{DoxyParams}
 
 
-Définition à la ligne 950 du fichier plateau.\+c.
+Définition à la ligne 1019 du fichier plateau.\+c.
 
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{plateau_8h_a5948318ef066f8f725c9cbcfbdcddef4_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1472,16 +1566,18 @@ Active les effets de la carte Julien Forest.
 \end{DoxyParams}
 
 
-Définition à la ligne 1230 du fichier plateau.\+c.
+Définition à la ligne 1320 du fichier plateau.\+c.
 
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{plateau_8h_a8b356d2c8f83f00b22b937e89a0555ed_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1507,16 +1603,18 @@ Active les effets de la carte Kahina Bouchama.
 \end{DoxyParams}
 
 
-Définition à la ligne 844 du fichier plateau.\+c.
+Définition à la ligne 900 du fichier plateau.\+c.
 
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{plateau_8h_a13f1ea8c5ce2eb9249d799bfe0fcfba9_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1546,16 +1644,18 @@ Active les effets de la carte Katrin Salhab.
 \end{DoxyParams}
 
 
-Définition à la ligne 1462 du fichier plateau.\+c.
+Définition à la ligne 1554 du fichier plateau.\+c.
 
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{plateau_8h_a8706936e604ef0fd87424d3609c8dcad_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1585,16 +1685,18 @@ Active les effets de la carte Kevin Goilard.
 \end{DoxyParams}
 
 
-Définition à la ligne 877 du fichier plateau.\+c.
+Définition à la ligne 934 du fichier plateau.\+c.
 
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{plateau_8h_ae40eb3cf4de488fdf73c964d43010777_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1620,7 +1722,7 @@ Active les effets de la carte Laurent Prével.
 \end{DoxyParams}
 
 
-Définition à la ligne 1513 du fichier plateau.\+c.
+Définition à la ligne 1605 du fichier plateau.\+c.
 
 Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \begin{figure}[H]
@@ -1629,7 +1731,8 @@ Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \includegraphics[width=350pt]{plateau_8h_aa4cceb7af32a7a63e57cb3af2ec57613_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1655,16 +1758,18 @@ Active les effets de la carte l\+I\+I\+Ens.
 \end{DoxyParams}
 
 
-Définition à la ligne 457 du fichier plateau.\+c.
+Définition à la ligne 478 du fichier plateau.\+c.
 
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{plateau_8h_a5eb5134fa91f5c2703f528db8e48909b_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1694,7 +1799,7 @@ Active les effets de la carte Lucienne Pacavé
 \end{DoxyParams}
 
 
-Définition à la ligne 1443 du fichier plateau.\+c.
+Définition à la ligne 1535 du fichier plateau.\+c.
 
 Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \begin{figure}[H]
@@ -1703,7 +1808,8 @@ Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \includegraphics[width=350pt]{plateau_8h_a837f0190fe80102a519fc17820ac68c9_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1737,16 +1843,18 @@ Active les effets de la carte Massinissa Merabet.
 \end{DoxyParams}
 
 
-Définition à la ligne 907 du fichier plateau.\+c.
+Définition à la ligne 966 du fichier plateau.\+c.
 
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=550pt]{plateau_8h_a466b7d06f9be4885f93658ef783ebedb_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1770,7 +1878,7 @@ Active les effets de la carte Parcours sobriété numérique.
 \end{DoxyParams}
 
 
-Définition à la ligne 770 du fichier plateau.\+c.
+Définition à la ligne 826 du fichier plateau.\+c.
 
 Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \begin{figure}[H]
@@ -1779,7 +1887,8 @@ Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \includegraphics[width=350pt]{plateau_8h_a6cb5b4df4f408a8b430c71eacc014156_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1809,16 +1918,18 @@ Active les effets de la carte Reprographie.
 \end{DoxyParams}
 
 
-Définition à la ligne 717 du fichier plateau.\+c.
+Définition à la ligne 773 du fichier plateau.\+c.
 
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{plateau_8h_afff5ccdbd66c7da305d833d9bb9f3163_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1848,16 +1959,18 @@ Active les effets de la carte Soirée sans alcool.
 \end{DoxyParams}
 
 
-Définition à la ligne 517 du fichier plateau.\+c.
+Définition à la ligne 564 du fichier plateau.\+c.
 
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{plateau_8h_a25711459a4937e78bf709717c5e451e5_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1887,16 +2000,18 @@ Active les effets de la carte Thé
 \end{DoxyParams}
 
 
-Définition à la ligne 679 du fichier plateau.\+c.
+Définition à la ligne 734 du fichier plateau.\+c.
 
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=326pt]{plateau_8h_aac76ddb6fb1f7345ba3ad5b8f51356d6_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1930,16 +2045,18 @@ Active les effets de la carte Thomas Lim.
 \end{DoxyParams}
 
 
-Définition à la ligne 1192 du fichier plateau.\+c.
+Définition à la ligne 1282 du fichier plateau.\+c.
 
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{plateau_8h_a1560d3c9cea0c5b2fb4d9617d5c1a0e6_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1973,7 +2090,7 @@ Active les effets de la carte Vitéra Y.
 \end{DoxyParams}
 
 
-Définition à la ligne 932 du fichier plateau.\+c.
+Définition à la ligne 1001 du fichier plateau.\+c.
 
 Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \begin{figure}[H]
@@ -1982,18 +2099,19 @@ Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \includegraphics[width=349pt]{plateau_8h_ac781c98f512d7a671fa2f4b84be56cf2_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{plateau_8h_ac781c98f512d7a671fa2f4b84be56cf2_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{plateau_8h_a41cddf8d1f1e457df2f4c905d6605151}\label{plateau_8h_a41cddf8d1f1e457df2f4c905d6605151}} 
+\mbox{\Hypertarget{plateau_8h_aafb029b0483a7d02f4f2619eea4deb27}\label{plateau_8h_aafb029b0483a7d02f4f2619eea4deb27}} 
 \index{plateau.h@{plateau.h}!retourner\_carte@{retourner\_carte}}
 \index{retourner\_carte@{retourner\_carte}!plateau.h@{plateau.h}}
 \doxysubsubsection{\texorpdfstring{retourner\_carte()}{retourner\_carte()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{carte_8h_a633ba64ee908d35aac798844f477ee9d}{Carte}} retourner\+\_\+carte (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int retourner\+\_\+carte (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p }\end{DoxyParamCaption})}
 
 
 
@@ -2007,26 +2125,49 @@ retourne la carte la plus en haut à gauche du plateau face visible et active so
 \begin{DoxyReturn}{Renvoie}
 la carte que l\textquotesingle{}on a retourné face visible 
 
-N\+U\+LL s\textquotesingle{}il n\textquotesingle{}y a plus aucune carte à retourner 
+-\/1 s\textquotesingle{}il n\textquotesingle{}y a plus aucune carte à retourner, sinon l\textquotesingle{}id de la carte retournée 
 \end{DoxyReturn}
 
 
-Définition à la ligne 1688 du fichier plateau.\+c.
+Définition à la ligne 1780 du fichier plateau.\+c.
 
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=550pt]{plateau_8h_a41cddf8d1f1e457df2f4c905d6605151_cgraph}
+\includegraphics[height=550pt]{plateau_8h_aafb029b0483a7d02f4f2619eea4deb27_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{plateau_8h_a41cddf8d1f1e457df2f4c905d6605151_icgraph}
+\includegraphics[width=350pt]{plateau_8h_aafb029b0483a7d02f4f2619eea4deb27_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{plateau_8h_a9334d32e41523c50610d0c70ba5cb46d}\label{plateau_8h_a9334d32e41523c50610d0c70ba5cb46d}} 
+\index{plateau.h@{plateau.h}!set\_numero\_manche@{set\_numero\_manche}}
+\index{set\_numero\_manche@{set\_numero\_manche}!plateau.h@{plateau.h}}
+\doxysubsubsection{\texorpdfstring{set\_numero\_manche()}{set\_numero\_manche()}}
+{\footnotesize\ttfamily void set\+\_\+numero\+\_\+manche (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p,  }\item[{int}]{x }\end{DoxyParamCaption})}
+
+
+
+Prototype de set\+\_\+numero\+\_\+manche. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p} & \\
+\hline
+{\em manche} & \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 124 du fichier plateau.\+c.
+
 \mbox{\Hypertarget{plateau_8h_a676ed33ed1ff7fd3200efd68462f61e0}\label{plateau_8h_a676ed33ed1ff7fd3200efd68462f61e0}} 
 \index{plateau.h@{plateau.h}!switch\_carte@{switch\_carte}}
 \index{switch\_carte@{switch\_carte}!plateau.h@{plateau.h}}
@@ -2056,16 +2197,18 @@ Active les effets de la carte d\textquotesingle{}identifiant id.
 \end{DoxyParams}
 
 
-Définition à la ligne 1518 du fichier plateau.\+c.
+Définition à la ligne 1610 du fichier plateau.\+c.
 
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{plateau_8h_a676ed33ed1ff7fd3200efd68462f61e0_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

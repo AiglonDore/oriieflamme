@@ -1,5 +1,7 @@
 <map id="libere_plateau" name="libere_plateau">
-<area shape="rect" id="node1" title="Libère la mémoire associée au plateau de jeu et aux deux factions." alt="" coords="5,5,120,32"/>
-<area shape="rect" id="node2" href="$faction_8h.html#a66e884a727de4d0741a8d344308ed43d" title="Permet de supprimer une faction et de libérer son espace mémoire alloué" alt="" coords="168,5,308,32"/>
-<area shape="rect" id="node3" href="$faction_8c.html#a24be676800659f0495a42397f64d66a2" title="Prototype de set_pioche qui permet d&#39;initialiser la pioche de la faction." alt="" coords="356,5,448,32"/>
+<area shape="rect" id="node1" title="Libère la mémoire associée au plateau de jeu et aux deux factions." alt="" coords="5,31,120,57"/>
+<area shape="rect" id="node2" href="$faction_8h.html#a152a86ba5f75e19f5eaa93383d2cb64f" title="Prototype de get_nom qui permet de récupérer le nom de la faction." alt="" coords="173,5,303,32"/>
+<area shape="rect" id="node3" href="$faction_8h.html#a66e884a727de4d0741a8d344308ed43d" title="Permet de supprimer une faction et de libérer son espace mémoire alloué" alt="" coords="168,56,308,83"/>
+<area shape="rect" id="node4" href="$structure_8h.html#a855e5f243da2af0fb6391901773dc997" title="libère la pioche et ses cartes" alt="" coords="356,56,465,83"/>
+<area shape="rect" id="node5" href="$structure_8c.html#a7b95c6a72accdcab7cc1f39d2536fe06" title="enlève la carte au sommet de la pioche (on suppose la pioche non vide)" alt="" coords="513,56,629,83"/>
 </map>

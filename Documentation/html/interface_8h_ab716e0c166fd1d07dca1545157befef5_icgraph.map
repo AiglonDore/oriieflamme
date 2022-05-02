@@ -1,10 +1,11 @@
 <map id="nom_faction" name="nom_faction">
-<area shape="rect" id="node1" title="Fonction qui demande le nom de la faction." alt="" coords="736,56,839,83"/>
-<area shape="rect" id="node2" href="$plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="411,56,509,83"/>
-<area shape="rect" id="node8" href="$faction_8c.html#aab43472fe255e9a674d0b8c8c022521e" title="Prototype de set_nom qui permet d&#39;initialiser le nom de la faction." alt="" coords="557,81,688,108"/>
-<area shape="rect" id="node3" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="308,56,363,83"/>
-<area shape="rect" id="node4" href="$interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="138,5,245,32"/>
-<area shape="rect" id="node6" href="$plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="123,56,260,83"/>
-<area shape="rect" id="node7" href="$faction_8c.html#aef8713f12e5372bd993f34fa4f6d6cab" title=" " alt="" coords="150,107,233,133"/>
-<area shape="rect" id="node5" href="$main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="5,81,75,108"/>
+<area shape="rect" id="node1" title="Fonction qui demande le nom de la faction." alt="" coords="773,161,876,188"/>
+<area shape="rect" id="node2" href="$plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="448,136,547,163"/>
+<area shape="rect" id="node9" href="$faction_8c.html#aab43472fe255e9a674d0b8c8c022521e" title="Prototype de set_nom qui permet d&#39;initialiser le nom de la faction." alt="" coords="595,187,725,213"/>
+<area shape="rect" id="node3" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="345,85,400,112"/>
+<area shape="rect" id="node4" href="$interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="191,35,297,61"/>
+<area shape="rect" id="node6" href="$plateau_8c.html#aa1b228e632acc6462080d59a556f0cfa" title="Crée une faction initialisée." alt="" coords="197,187,291,213"/>
+<area shape="rect" id="node8" href="$faction_8c.html#aef8713f12e5372bd993f34fa4f6d6cab" title=" " alt="" coords="203,85,285,112"/>
+<area shape="rect" id="node5" href="$main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="39,9,109,36"/>
+<area shape="rect" id="node7" href="$plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,161,143,188"/>
 </map>

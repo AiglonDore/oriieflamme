@@ -1,5 +1,7 @@
 <map id="retourne_Kahina_Bouchama" name="retourne_Kahina_Bouchama">
-<area shape="rect" id="node1" title="Active les effets de la carte Kahina Bouchama." alt="" coords="5,42,211,69"/>
+<area shape="rect" id="node1" title="Active les effets de la carte Kahina Bouchama." alt="" coords="5,97,211,123"/>
 <area shape="rect" id="node2" href="$plateau_8c.html#a5afb58a5af08cc5c88a166c0351a0799" title=" " alt="" coords="259,5,423,47"/>
-<area shape="rect" id="node3" href="$carte_8h.html#ab61f3254187615cbc1c13aa4e51633c2" title="Prototype de get_est_cachee qui permet de récupérer un entier qui indique si la face est cachée ou pa..." alt="" coords="279,71,402,98"/>
+<area shape="rect" id="node3" href="$plateau_8c.html#a54d750566fa496b43d4791d422edf570" title="Prototype de get_colonne_droite." alt="" coords="267,71,414,98"/>
+<area shape="rect" id="node4" href="$plateau_8c.html#ae557fab87da33bf071ae6b4ce4430ae0" title="Prototype de get_colonne_gauche." alt="" coords="263,122,418,149"/>
+<area shape="rect" id="node5" href="$carte_8h.html#ab61f3254187615cbc1c13aa4e51633c2" title="Prototype de get_est_cachee qui permet de récupérer un entier qui indique si la face est cachée ou pa..." alt="" coords="279,173,402,199"/>
 </map>

@@ -1,13 +1,14 @@
 <map id="get_factions" name="get_factions">
-<area shape="rect" id="node1" title="Prototype de get_factions qui permet de récupérer les factions en jeu." alt="" coords="788,157,891,184"/>
-<area shape="rect" id="node2" href="$interface_8c.html#a044fbcd951bab90748a27f16d77b718f" title="Affiche les points DDRS des deux factions." alt="" coords="620,107,721,133"/>
-<area shape="rect" id="node10" href="$interface_8c.html#a802545d4ff1c158f7a2ca77be20915f9" title="Affiche le vainquer de la partie." alt="" coords="601,157,740,184"/>
-<area shape="rect" id="node11" href="$interface_8c.html#a8330a6ec294f24da52fe0f265181fbcc" title="Fonction qui demande à quelle position doit être placée la carte." alt="" coords="411,233,553,260"/>
-<area shape="rect" id="node3" href="$main_8c.html#a34ccc9f1e0da464163a6f5e297c42563" title="Fonction qui contrôle la phase 2." alt="" coords="447,107,517,133"/>
-<area shape="rect" id="node4" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="308,107,363,133"/>
-<area shape="rect" id="node5" href="$interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="138,5,245,32"/>
-<area shape="rect" id="node7" href="$plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="142,56,241,83"/>
-<area shape="rect" id="node8" href="$plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="123,107,260,133"/>
-<area shape="rect" id="node9" href="$faction_8c.html#aef8713f12e5372bd993f34fa4f6d6cab" title=" " alt="" coords="150,157,233,184"/>
-<area shape="rect" id="node6" href="$main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="5,208,75,235"/>
+<area shape="rect" id="node1" title="Prototype de get_factions qui permet de récupérer les factions en jeu." alt="" coords="825,196,928,223"/>
+<area shape="rect" id="node2" href="$interface_8c.html#a044fbcd951bab90748a27f16d77b718f" title="Affiche les points DDRS des deux factions." alt="" coords="657,196,759,223"/>
+<area shape="rect" id="node11" href="$interface_8c.html#a802545d4ff1c158f7a2ca77be20915f9" title="Affiche le vainquer de la partie." alt="" coords="639,145,777,172"/>
+<area shape="rect" id="node12" href="$interface_8c.html#a8330a6ec294f24da52fe0f265181fbcc" title="Fonction qui demande à quelle position doit être placée la carte." alt="" coords="448,285,591,312"/>
+<area shape="rect" id="node3" href="$main_8c.html#a34ccc9f1e0da464163a6f5e297c42563" title="Fonction qui contrôle la phase 2." alt="" coords="485,196,554,223"/>
+<area shape="rect" id="node4" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="345,145,400,172"/>
+<area shape="rect" id="node5" href="$interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="191,196,297,223"/>
+<area shape="rect" id="node7" href="$plateau_8c.html#aa1b228e632acc6462080d59a556f0cfa" title="Crée une faction initialisée." alt="" coords="197,44,291,71"/>
+<area shape="rect" id="node10" href="$faction_8c.html#aef8713f12e5372bd993f34fa4f6d6cab" title=" " alt="" coords="203,145,285,172"/>
+<area shape="rect" id="node6" href="$main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="39,247,109,273"/>
+<area shape="rect" id="node8" href="$plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="25,69,123,96"/>
+<area shape="rect" id="node9" href="$plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,7,143,33"/>
 </map>

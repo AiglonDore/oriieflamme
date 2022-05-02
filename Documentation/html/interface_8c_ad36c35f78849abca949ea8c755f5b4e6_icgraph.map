@@ -1,8 +1,9 @@
 <map id="affiche_main" name="affiche_main">
-<area shape="rect" id="node1" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="411,56,517,83"/>
-<area shape="rect" id="node2" href="$main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="293,31,363,57"/>
-<area shape="rect" id="node3" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="191,56,245,83"/>
-<area shape="rect" id="node4" href="$plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="25,5,123,32"/>
-<area shape="rect" id="node5" href="$plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,56,143,83"/>
-<area shape="rect" id="node6" href="$faction_8c.html#aef8713f12e5372bd993f34fa4f6d6cab" title=" " alt="" coords="33,107,115,133"/>
+<area shape="rect" id="node1" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="553,52,660,79"/>
+<area shape="rect" id="node2" href="$main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="436,27,505,54"/>
+<area shape="rect" id="node3" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="333,52,388,79"/>
+<area shape="rect" id="node4" href="$plateau_8c.html#aa1b228e632acc6462080d59a556f0cfa" title="Crée une faction initialisée." alt="" coords="191,78,285,104"/>
+<area shape="rect" id="node7" href="$faction_8c.html#aef8713f12e5372bd993f34fa4f6d6cab" title=" " alt="" coords="197,27,279,54"/>
+<area shape="rect" id="node5" href="$plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="25,15,123,42"/>
+<area shape="rect" id="node6" href="$plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,103,143,130"/>
 </map>

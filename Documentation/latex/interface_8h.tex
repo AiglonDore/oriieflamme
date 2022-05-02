@@ -36,7 +36,7 @@ int \mbox{\hyperlink{interface_8h_aea24bb8bc24a5877aba14a3879602c7b}{utiliser\+\
 \begin{DoxyCompactList}\small\item\em Fonction qui demande si la faction pointée par f veut utiliser son option. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{carte_8h_a633ba64ee908d35aac798844f477ee9d}{Carte}} \mbox{\hyperlink{interface_8h_a59cec6e54845df8ae5160bd8b2a351c2}{a\+\_\+poser\+\_\+face\+\_\+cachee\+\_\+sur\+\_\+plateau}} (\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f)
 \begin{DoxyCompactList}\small\item\em Fonction qui demande la carte qui sera posée face cachée sur le plateau. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{interface_8h_a8e9d54781d879f437be3285b5412c1c2}{affiche\+\_\+effets}} (\mbox{\hyperlink{carte_8h_a633ba64ee908d35aac798844f477ee9d}{Carte}} c)
+void \mbox{\hyperlink{interface_8h_a79cf870c92b63e231d41e188f2549520}{affiche\+\_\+effets}} (int id)
 \begin{DoxyCompactList}\small\item\em Affiche les effets de la carte c si elle est posée. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{interface_8h_a802545d4ff1c158f7a2ca77be20915f9}{affiche\+\_\+vainqueur}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p)
 \begin{DoxyCompactList}\small\item\em Affiche le vainquer de la partie. \end{DoxyCompactList}\item 
@@ -81,7 +81,7 @@ Carte carte choisie par la faction f et posée sur le plateau.
 \end{DoxyReturn}
 
 
-Définition à la ligne 83 du fichier interface.\+c.
+Définition à la ligne 84 du fichier interface.\+c.
 
 Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \begin{figure}[H]
@@ -90,7 +90,8 @@ Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \includegraphics[width=299pt]{interface_8h_a59cec6e54845df8ae5160bd8b2a351c2_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -114,7 +115,7 @@ Affiche les points D\+D\+RS des deux factions.
 \end{DoxyParams}
 
 
-Définition à la ligne 414 du fichier interface.\+c.
+Définition à la ligne 415 du fichier interface.\+c.
 
 Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \begin{figure}[H]
@@ -123,18 +124,19 @@ Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \includegraphics[width=322pt]{interface_8h_a044fbcd951bab90748a27f16d77b718f_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{interface_8h_a044fbcd951bab90748a27f16d77b718f_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{interface_8h_a8e9d54781d879f437be3285b5412c1c2}\label{interface_8h_a8e9d54781d879f437be3285b5412c1c2}} 
+\mbox{\Hypertarget{interface_8h_a79cf870c92b63e231d41e188f2549520}\label{interface_8h_a79cf870c92b63e231d41e188f2549520}} 
 \index{interface.h@{interface.h}!affiche\_effets@{affiche\_effets}}
 \index{affiche\_effets@{affiche\_effets}!interface.h@{interface.h}}
 \doxysubsubsection{\texorpdfstring{affiche\_effets()}{affiche\_effets()}}
-{\footnotesize\ttfamily void affiche\+\_\+effets (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{carte_8h_a633ba64ee908d35aac798844f477ee9d}{Carte}}}]{c }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void affiche\+\_\+effets (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
 
 
 
@@ -142,25 +144,27 @@ Affiche les effets de la carte c si elle est posée.
 
 
 \begin{DoxyParams}{Paramètres}
-{\em c} & Carte dont on veut afficher les effets \\
+{\em id} & id de la carte dont on veut afficher les effets \\
 \hline
 \end{DoxyParams}
 
 
-Définition à la ligne 114 du fichier interface.\+c.
+Définition à la ligne 115 du fichier interface.\+c.
 
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=291pt]{interface_8h_a8e9d54781d879f437be3285b5412c1c2_cgraph}
+\includegraphics[width=308pt]{interface_8h_a79cf870c92b63e231d41e188f2549520_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{interface_8h_a8e9d54781d879f437be3285b5412c1c2_icgraph}
+\includegraphics[width=350pt]{interface_8h_a79cf870c92b63e231d41e188f2549520_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{interface_8h_ad36c35f78849abca949ea8c755f5b4e6}\label{interface_8h_ad36c35f78849abca949ea8c755f5b4e6}} 
@@ -183,16 +187,18 @@ rien
 \end{DoxyParams}
 
 
-Définition à la ligne 57 du fichier interface.\+c.
+Définition à la ligne 58 du fichier interface.\+c.
 
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{interface_8h_ad36c35f78849abca949ea8c755f5b4e6_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -228,7 +234,8 @@ Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \includegraphics[width=330pt]{interface_8h_a8bb576a3127fc3437d91467ec19d0de0_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -252,7 +259,7 @@ Affiche le vainquer de la partie.
 \end{DoxyParams}
 
 
-Définition à la ligne 119 du fichier interface.\+c.
+Définition à la ligne 120 du fichier interface.\+c.
 
 Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \begin{figure}[H]
@@ -261,7 +268,8 @@ Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \includegraphics[width=350pt]{interface_8h_a802545d4ff1c158f7a2ca77be20915f9_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -285,7 +293,7 @@ Fonction qui demande à quelle position doit être placée la carte.
 \end{DoxyParams}
 
 
-Définition à la ligne 139 du fichier interface.\+c.
+Définition à la ligne 140 du fichier interface.\+c.
 
 Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \begin{figure}[H]
@@ -294,7 +302,8 @@ Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \includegraphics[width=350pt]{interface_8h_a8330a6ec294f24da52fe0f265181fbcc_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -330,7 +339,8 @@ Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \includegraphics[width=291pt]{interface_8h_ab716e0c166fd1d07dca1545157befef5_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -359,7 +369,7 @@ Fonction qui demande si la faction pointée par f veut utiliser son option.
 \end{DoxyReturn}
 
 
-Définition à la ligne 75 du fichier interface.\+c.
+Définition à la ligne 76 du fichier interface.\+c.
 
 Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \begin{figure}[H]
@@ -368,7 +378,8 @@ Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \includegraphics[width=300pt]{interface_8h_aea24bb8bc24a5877aba14a3879602c7b_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

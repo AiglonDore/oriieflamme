@@ -118,9 +118,9 @@ Fonctions</h2></td></tr>
 <tr class="memitem:a59cec6e54845df8ae5160bd8b2a351c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="carte_8h.html#a633ba64ee908d35aac798844f477ee9d">Carte</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8c.html#a59cec6e54845df8ae5160bd8b2a351c2">a_poser_face_cachee_sur_plateau</a> (<a class="el" href="faction_8h.html#a0456d2a4764f54c3e638c612de27a485">Faction</a> f)</td></tr>
 <tr class="memdesc:a59cec6e54845df8ae5160bd8b2a351c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui demande la carte qui sera posée face cachée sur le plateau.  <a href="interface_8c.html#a59cec6e54845df8ae5160bd8b2a351c2">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a59cec6e54845df8ae5160bd8b2a351c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e9d54781d879f437be3285b5412c1c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8c.html#a8e9d54781d879f437be3285b5412c1c2">affiche_effets</a> (<a class="el" href="carte_8h.html#a633ba64ee908d35aac798844f477ee9d">Carte</a> c)</td></tr>
-<tr class="memdesc:a8e9d54781d879f437be3285b5412c1c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche les effets de la carte c si elle est posée.  <a href="interface_8c.html#a8e9d54781d879f437be3285b5412c1c2">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a8e9d54781d879f437be3285b5412c1c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79cf870c92b63e231d41e188f2549520"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8c.html#a79cf870c92b63e231d41e188f2549520">affiche_effets</a> (int id)</td></tr>
+<tr class="memdesc:a79cf870c92b63e231d41e188f2549520"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche les effets de la carte c si elle est posée.  <a href="interface_8c.html#a79cf870c92b63e231d41e188f2549520">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a79cf870c92b63e231d41e188f2549520"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a802545d4ff1c158f7a2ca77be20915f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8c.html#a802545d4ff1c158f7a2ca77be20915f9">affiche_vainqueur</a> (<a class="el" href="plateau_8h.html#aeb2df061534a36a23c2755dfbd9ee6f3">Plateau</a> p)</td></tr>
 <tr class="memdesc:a802545d4ff1c158f7a2ca77be20915f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche le vainquer de la partie.  <a href="interface_8c.html#a802545d4ff1c158f7a2ca77be20915f9">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a802545d4ff1c158f7a2ca77be20915f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -164,7 +164,7 @@ Fonctions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>Carte carte choisie par la faction f et posée sur le plateau. </dd></dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="interface_8c_source.html#l00083">83</a> du fichier <a class="el" href="interface_8c_source.html">interface.c</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="interface_8c_source.html#l00084">84</a> du fichier <a class="el" href="interface_8c_source.html">interface.c</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
@@ -179,13 +179,14 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="interface_8c_a59cec6e54845df8ae5160bd8b2a351c2_icgraph.png" border="0" usemap="#interface_8c_a59cec6e54845df8ae5160bd8b2a351c2_icgraph" alt=""/></div>
 <map name="interface_8c_a59cec6e54845df8ae5160bd8b2a351c2_icgraph" id="interface_8c_a59cec6e54845df8ae5160bd8b2a351c2_icgraph">
-<area shape="rect" title="Fonction qui demande la carte qui sera posée face cachée sur le plateau." alt="" coords="411,23,572,65"/>
-<area shape="rect" href="main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="293,31,363,57"/>
-<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="191,56,245,83"/>
-<area shape="rect" href="interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="21,5,127,32"/>
-<area shape="rect" href="plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="25,56,123,83"/>
-<area shape="rect" href="plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,107,143,133"/>
-<area shape="rect" href="faction_8c.html#aef8713f12e5372bd993f34fa4f6d6cab" title=" " alt="" coords="33,157,115,184"/>
+<area shape="rect" title="Fonction qui demande la carte qui sera posée face cachée sur le plateau." alt="" coords="565,49,727,90"/>
+<area shape="rect" href="main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="448,56,517,83"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="345,81,400,108"/>
+<area shape="rect" href="interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="191,5,297,32"/>
+<area shape="rect" href="plateau_8c.html#aa1b228e632acc6462080d59a556f0cfa" title="Crée une faction initialisée." alt="" coords="197,107,291,133"/>
+<area shape="rect" href="faction_8c.html#aef8713f12e5372bd993f34fa4f6d6cab" title=" " alt="" coords="203,157,285,184"/>
+<area shape="rect" href="plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="25,183,123,209"/>
+<area shape="rect" href="plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,81,143,108"/>
 </map>
 </div>
 
@@ -215,7 +216,7 @@ Voici le graphe des appelants de cette fonction :</div>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="interface_8c_source.html#l00414">414</a> du fichier <a class="el" href="interface_8c_source.html">interface.c</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="interface_8c_source.html#l00415">415</a> du fichier <a class="el" href="interface_8c_source.html">interface.c</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
@@ -232,21 +233,22 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="interface_8c_a044fbcd951bab90748a27f16d77b718f_icgraph.png" border="0" usemap="#interface_8c_a044fbcd951bab90748a27f16d77b718f_icgraph" alt=""/></div>
 <map name="interface_8c_a044fbcd951bab90748a27f16d77b718f_icgraph" id="interface_8c_a044fbcd951bab90748a27f16d77b718f_icgraph">
-<area shape="rect" title="Affiche les points DDRS des deux factions." alt="" coords="528,107,629,133"/>
-<area shape="rect" href="main_8c.html#a34ccc9f1e0da464163a6f5e297c42563" title="Fonction qui contrôle la phase 2." alt="" coords="411,107,480,133"/>
-<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="308,107,363,133"/>
-<area shape="rect" href="interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="138,5,245,32"/>
-<area shape="rect" href="plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="142,56,241,83"/>
-<area shape="rect" href="plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="123,107,260,133"/>
-<area shape="rect" href="faction_8c.html#aef8713f12e5372bd993f34fa4f6d6cab" title=" " alt="" coords="150,157,233,184"/>
-<area shape="rect" href="main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="5,107,75,133"/>
+<area shape="rect" title="Affiche les points DDRS des deux factions." alt="" coords="565,132,667,159"/>
+<area shape="rect" href="main_8c.html#a34ccc9f1e0da464163a6f5e297c42563" title="Fonction qui contrôle la phase 2." alt="" coords="448,132,517,159"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="345,132,400,159"/>
+<area shape="rect" href="interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="191,5,297,32"/>
+<area shape="rect" href="plateau_8c.html#aa1b228e632acc6462080d59a556f0cfa" title="Crée une faction initialisée." alt="" coords="197,208,291,235"/>
+<area shape="rect" href="faction_8c.html#aef8713f12e5372bd993f34fa4f6d6cab" title=" " alt="" coords="203,107,285,133"/>
+<area shape="rect" href="main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="39,31,109,57"/>
+<area shape="rect" href="plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="25,169,123,196"/>
+<area shape="rect" href="plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,233,143,260"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a8e9d54781d879f437be3285b5412c1c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e9d54781d879f437be3285b5412c1c2">&#9670;&nbsp;</a></span>affiche_effets()</h2>
+<a id="a79cf870c92b63e231d41e188f2549520"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79cf870c92b63e231d41e188f2549520">&#9670;&nbsp;</a></span>affiche_effets()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -254,8 +256,8 @@ Voici le graphe des appelants de cette fonction :</div>
         <tr>
           <td class="memname">void affiche_effets </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="carte_8h.html#a633ba64ee908d35aac798844f477ee9d">Carte</a>&#160;</td>
-          <td class="paramname"><em>c</em></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -264,35 +266,36 @@ Voici le graphe des appelants de cette fonction :</div>
 <p>Affiche les effets de la carte c si elle est posée. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">c</td><td>Carte dont on veut afficher les effets </td></tr>
+    <tr><td class="paramname">id</td><td>id de la carte dont on veut afficher les effets </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="interface_8c_source.html#l00114">114</a> du fichier <a class="el" href="interface_8c_source.html">interface.c</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="interface_8c_source.html#l00115">115</a> du fichier <a class="el" href="interface_8c_source.html">interface.c</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><img src="interface_8c_a8e9d54781d879f437be3285b5412c1c2_cgraph.png" border="0" usemap="#interface_8c_a8e9d54781d879f437be3285b5412c1c2_cgraph" alt=""/></div>
-<map name="interface_8c_a8e9d54781d879f437be3285b5412c1c2_cgraph" id="interface_8c_a8e9d54781d879f437be3285b5412c1c2_cgraph">
+<div class="center"><img src="interface_8c_a79cf870c92b63e231d41e188f2549520_cgraph.png" border="0" usemap="#interface_8c_a79cf870c92b63e231d41e188f2549520_cgraph" alt=""/></div>
+<map name="interface_8c_a79cf870c92b63e231d41e188f2549520_cgraph" id="interface_8c_a79cf870c92b63e231d41e188f2549520_cgraph">
 <area shape="rect" title="Affiche les effets de la carte c si elle est posée." alt="" coords="5,31,116,57"/>
-<area shape="rect" href="carte_8h.html#a99d2f8528669eb8a99312bb74a2a27bb" title="Prototype de get_description qui permet de récupérer la description de la carte." alt="" coords="164,5,287,32"/>
-<area shape="rect" href="carte_8h.html#a36dc56ecacce3b5d693e8ddab6e4201a" title="Prototype de get_nom qui permet de récupérer le nom de la carte." alt="" coords="186,56,265,83"/>
+<area shape="rect" href="carte_8h.html#a500a84466dd672b4940525996014d3f6" title="Prototype de get_description qui permet de récupérer description[i]." alt="" coords="164,5,309,32"/>
+<area shape="rect" href="carte_8h.html#aa5b54fe67b2e3c56e0c7c7847085b680" title="Prototype de get_nom_carte qui permet de récupérer nom_carte[i]." alt="" coords="165,56,308,83"/>
 </map>
 </div>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><img src="interface_8c_a8e9d54781d879f437be3285b5412c1c2_icgraph.png" border="0" usemap="#interface_8c_a8e9d54781d879f437be3285b5412c1c2_icgraph" alt=""/></div>
-<map name="interface_8c_a8e9d54781d879f437be3285b5412c1c2_icgraph" id="interface_8c_a8e9d54781d879f437be3285b5412c1c2_icgraph">
-<area shape="rect" title="Affiche les effets de la carte c si elle est posée." alt="" coords="565,81,676,108"/>
-<area shape="rect" href="interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="411,56,517,83"/>
-<area shape="rect" href="main_8c.html#a34ccc9f1e0da464163a6f5e297c42563" title="Fonction qui contrôle la phase 2." alt="" coords="293,107,363,133"/>
-<area shape="rect" href="main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="293,5,363,32"/>
-<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="191,56,245,83"/>
-<area shape="rect" href="plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="25,5,123,32"/>
-<area shape="rect" href="plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,56,143,83"/>
-<area shape="rect" href="faction_8c.html#aef8713f12e5372bd993f34fa4f6d6cab" title=" " alt="" coords="33,107,115,133"/>
+<div class="center"><img src="interface_8c_a79cf870c92b63e231d41e188f2549520_icgraph.png" border="0" usemap="#interface_8c_a79cf870c92b63e231d41e188f2549520_icgraph" alt=""/></div>
+<map name="interface_8c_a79cf870c92b63e231d41e188f2549520_icgraph" id="interface_8c_a79cf870c92b63e231d41e188f2549520_icgraph">
+<area shape="rect" title="Affiche les effets de la carte c si elle est posée." alt="" coords="708,78,819,104"/>
+<area shape="rect" href="interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="553,52,660,79"/>
+<area shape="rect" href="main_8c.html#a34ccc9f1e0da464163a6f5e297c42563" title="Fonction qui contrôle la phase 2." alt="" coords="436,103,505,130"/>
+<area shape="rect" href="main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="436,52,505,79"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="333,52,388,79"/>
+<area shape="rect" href="plateau_8c.html#aa1b228e632acc6462080d59a556f0cfa" title="Crée une faction initialisée." alt="" coords="191,78,285,104"/>
+<area shape="rect" href="faction_8c.html#aef8713f12e5372bd993f34fa4f6d6cab" title=" " alt="" coords="197,27,279,54"/>
+<area shape="rect" href="plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="25,15,123,42"/>
+<area shape="rect" href="plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,103,143,130"/>
 </map>
 </div>
 
@@ -323,62 +326,62 @@ Voici le graphe des appelants de cette fonction :</div>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="interface_8c_source.html#l00057">57</a> du fichier <a class="el" href="interface_8c_source.html">interface.c</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="interface_8c_source.html#l00058">58</a> du fichier <a class="el" href="interface_8c_source.html">interface.c</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="interface_8c_ad36c35f78849abca949ea8c755f5b4e6_cgraph.png" border="0" usemap="#interface_8c_ad36c35f78849abca949ea8c755f5b4e6_cgraph" alt=""/></div>
 <map name="interface_8c_ad36c35f78849abca949ea8c755f5b4e6_cgraph" id="interface_8c_ad36c35f78849abca949ea8c755f5b4e6_cgraph">
-<area shape="rect" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="5,93,112,120"/>
-<area shape="rect" href="interface_8c.html#a8e9d54781d879f437be3285b5412c1c2" title="Affiche les effets de la carte c si elle est posée." alt="" coords="723,148,834,175"/>
-<area shape="rect" href="carte_8h.html#a36dc56ecacce3b5d693e8ddab6e4201a" title="Prototype de get_nom qui permet de récupérer le nom de la carte." alt="" coords="939,148,1018,175"/>
-<area shape="rect" href="faction_8h.html#aa0864716c89adc851b3d848aea2e3931" title="Prototype de get_main qui permet de récupérer la main de la faction." alt="" coords="737,199,820,225"/>
-<area shape="rect" href="faction_8h.html#a152a86ba5f75e19f5eaa93383d2cb64f" title="Prototype de get_nom qui permet de récupérer le nom de la faction." alt="" coords="913,743,1044,769"/>
-<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="160,1052,215,1079"/>
-<area shape="rect" href="carte_8h.html#a99d2f8528669eb8a99312bb74a2a27bb" title="Prototype de get_description qui permet de récupérer la description de la carte." alt="" coords="917,224,1040,251"/>
-<area shape="rect" href="interface_8h.html#a802545d4ff1c158f7a2ca77be20915f9" title="Affiche le vainquer de la partie." alt="" coords="263,964,401,991"/>
-<area shape="rect" href="plateau_8h.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="283,1427,381,1453"/>
-<area shape="rect" href="plateau_8h.html#aa2fd2fef89b903a5c089bf57cb932e29" title="Libère la mémoire associée au plateau de jeu et aux deux factions." alt="" coords="275,1199,389,1225"/>
-<area shape="rect" href="plateau_8h.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="263,1097,401,1124"/>
-<area shape="rect" href="main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="297,413,367,440"/>
-<area shape="rect" href="main_8c.html#a34ccc9f1e0da464163a6f5e297c42563" title="Fonction qui contrôle la phase 2." alt="" coords="297,768,367,795"/>
-<area shape="rect" href="plateau_8h.html#a44f2d0cc019d090bd9af0bd3f86bb451" title="Prototype de get_factions qui permet de récupérer les factions en jeu." alt="" coords="727,667,830,693"/>
-<area shape="rect" href="faction_8h.html#aa92da3f09f56bc38be472b50fcfed30d" title="Prototype de get_nb_manches_gagnees qui permet de récupérer le nombre de manches gagnées d&#39;une factio..." alt="" coords="449,1021,644,1048"/>
-<area shape="rect" href="faction_8h.html#a2b256492eb2a3ee0dbffeb1bd73f83c2" title="Prototype de creation_faction qui permet d&#39;initialiser une faction." alt="" coords="483,1579,610,1605"/>
-<area shape="rect" href="plateau_8c.html#a93d4e98168a58e3d46e8d6b5416ec084" title="Prototype de creation_plateau qui permet d&#39;initialiser une carte." alt="" coords="481,1629,612,1656"/>
-<area shape="rect" href="interface_8h.html#ab716e0c166fd1d07dca1545157befef5" title="Fonction qui demande le nom de la faction." alt="" coords="727,1452,830,1479"/>
-<area shape="rect" href="faction_8h.html#ad4db1cbc6980bc31895c1cdd84f44e5e" title="Prototype de set_a_remelange qui permet d&#39;initialiser si la faction a utilisé ou non son option." alt="" coords="479,1528,614,1555"/>
-<area shape="rect" href="faction_8h.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="505,1325,588,1352"/>
-<area shape="rect" href="faction_8h.html#af9ec0d0b4d1f75128a2b5e6b70d7e677" title="Prototype de set_nb_manches_gagnees qui permet d&#39;initialiser le nombre de manches gagnées d&#39;une facti..." alt="" coords="450,1376,643,1403"/>
-<area shape="rect" href="faction_8h.html#aab43472fe255e9a674d0b8c8c022521e" title="Prototype de set_nom qui permet d&#39;initialiser le nom de la faction." alt="" coords="481,1427,612,1453"/>
-<area shape="rect" href="faction_8h.html#a66e884a727de4d0741a8d344308ed43d" title="Permet de supprimer une faction et de libérer son espace mémoire alloué" alt="" coords="477,1224,617,1251"/>
-<area shape="rect" href="faction_8c.html#a24be676800659f0495a42397f64d66a2" title="Prototype de set_pioche qui permet d&#39;initialiser la pioche de la faction." alt="" coords="733,1097,825,1124"/>
-<area shape="rect" href="carte_8h.html#a07d5b163a3e848772039f8f2e99db83e" title="Prototype de get_id qui permet de récupérer l&#39;id de la carte." alt="" coords="747,971,810,997"/>
-<area shape="rect" href="carte_8h.html#a253c323b2facf1fd67c2e6602c5932ee" title="Prototype de get_proprietaire qui permet de récupérer la faction qui possède cette carte." alt="" coords="715,869,842,896"/>
-<area shape="rect" href="faction_8h.html#ac1ec72e1c18d60dc3a3718520464b9e9" title="Prototype de get_pts_DDRS_manche qui permet de récupérer le nombre de points DDRS de la manche en cou..." alt="" coords="692,819,865,845"/>
-<area shape="rect" href="plateau_8c.html#a2190bbe0984d78c5f3d5f2e646210f07" title="Crée la pioche avec les 32 cartes de l&#39;énoncé pour la faction donnée." alt="" coords="500,1275,593,1301"/>
-<area shape="rect" href="faction_8h.html#ac18109f0c5db773e1499954c48373a4e" title="Prototype de set_pts_DDRS_manche qui permet d&#39;initialiser le nombre de points DDRS de la manche en co..." alt="" coords="461,1173,633,1200"/>
-<area shape="rect" href="structure_8h.html#ac8dcdc0ffb092b739d94573e47eaaacf" title="ajoute la carte à la pioche au sommet de celle&#45;ci" alt="" coords="726,1021,831,1048"/>
-<area shape="rect" href="carte_8h.html#add213f610b61b0471f517034edebed44" title="Prototype de creation_carte qui permet d&#39;initialiser une carte." alt="" coords="721,1199,836,1225"/>
-<area shape="rect" href="structure_8h.html#ad911b5ece54d506c7109120dbfc9c2f0" title="Savoir si une faction a itilisé l&#39;option de remélanger sa main et boîte à idée et de repiocher des ca..." alt="" coords="699,1249,859,1276"/>
-<area shape="rect" href="carte_8h.html#a500a84466dd672b4940525996014d3f6" title="Prototype de get_description qui permet de récupérer description[i]." alt="" coords="706,1300,851,1327"/>
-<area shape="rect" href="carte_8h.html#ab7a563de3cb0533312e2d0e7f3be27a3" title="Prototype de get_nb_occ qui permet de récupérer nb_occ[i]." alt="" coords="719,1351,838,1377"/>
-<area shape="rect" href="carte_8h.html#aa5b54fe67b2e3c56e0c7c7847085b680" title="Prototype de get_nom_carte qui permet de récupérer nom_carte[i]." alt="" coords="707,1401,850,1428"/>
-<area shape="rect" href="carte_8h.html#a30fc91d4dd38a6b29c6eb86681238a70" title="Prototype de set_description qui permet d&#39;initialiser la description de la carte." alt="" coords="718,1148,839,1175"/>
-<area shape="rect" href="interface_8h.html#a59cec6e54845df8ae5160bd8b2a351c2" title="Fonction qui demande la carte qui sera posée face cachée sur le plateau." alt="" coords="466,195,627,237"/>
-<area shape="rect" href="faction_8h.html#aaa0655066f74d90991cac0094fb8964a" title="Savoir si une faction a utilisé l&#39;option de remélanger sa main et boîte à idée et de repiocher des ca..." alt="" coords="493,363,600,389"/>
-<area shape="rect" href="interface_8h.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="493,144,600,171"/>
-<area shape="rect" href="interface_8h.html#a8330a6ec294f24da52fe0f265181fbcc" title="Fonction qui demande à quelle position doit être placée la carte." alt="" coords="475,616,618,643"/>
-<area shape="rect" href="plateau_8h.html#ab023dd151ba2f8cf843b792a3434b8f5" title="Détermine la faction qui joue en premier et renvoie la liste des deux factions du jeu dont le premier..." alt="" coords="481,413,612,440"/>
-<area shape="rect" href="faction_8h.html#abc7feb29ed864c76ea95e1afc3cc7752" title="Permet à une faction de vider sa main, mélanger sa pioche et repiocher ses cartes." alt="" coords="505,261,589,288"/>
-<area shape="rect" href="faction_8h.html#adf3497e77c11921394ac7ca7d2e6cbdb" title="Permet à une faction de mélanger sa pioche." alt="" coords="479,971,614,997"/>
-<area shape="rect" href="faction_8h.html#a5b400a1d1b3c89ef50e5bb4b98e177cb" title="Permet à une faction de repiocher ses cartes." alt="" coords="511,312,582,339"/>
-<area shape="rect" href="plateau_8h.html#a425437529596e13babd7bc8b4e04d491" title="Permet à une faction de poser une carte face cachée sur le plateau." alt="" coords="497,464,596,491"/>
-<area shape="rect" href="interface_8h.html#aea24bb8bc24a5877aba14a3879602c7b" title="Fonction qui demande si la faction pointée par f veut utiliser son option." alt="" coords="721,515,836,541"/>
-<area shape="rect" href="interface_8h.html#a044fbcd951bab90748a27f16d77b718f" title="Affiche les points DDRS des deux factions." alt="" coords="496,717,597,744"/>
-<area shape="rect" href="interface_8h.html#a8e9d54781d879f437be3285b5412c1c2" title="Affiche les effets de la carte c si elle est posée." alt="" coords="723,249,834,276"/>
-<area shape="rect" href="interface_8h.html#a8bb576a3127fc3437d91467ec19d0de0" title="Fonction qui affiche le plateau de jeu." alt="" coords="485,768,608,795"/>
-<area shape="rect" href="plateau_8h.html#a41cddf8d1f1e457df2f4c905d6605151" title="retourne la carte la plus en haut à gauche du plateau face visible et active son effet" alt="" coords="485,869,608,896"/>
+<area shape="rect" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="5,380,112,406"/>
+<area shape="rect" href="interface_8c.html#a79cf870c92b63e231d41e188f2549520" title="Affiche les effets de la carte c si elle est posée." alt="" coords="733,152,844,178"/>
+<area shape="rect" href="carte_8h.html#a07d5b163a3e848772039f8f2e99db83e" title="Prototype de get_id qui permet de récupérer l&#39;id de la carte." alt="" coords="757,548,820,574"/>
+<area shape="rect" href="faction_8h.html#aa0864716c89adc851b3d848aea2e3931" title="Prototype de get_main qui permet de récupérer la main de la faction." alt="" coords="747,422,830,449"/>
+<area shape="rect" href="carte_8h.html#a36dc56ecacce3b5d693e8ddab6e4201a" title="Prototype de get_nom qui permet de récupérer le nom de la carte." alt="" coords="967,412,1045,438"/>
+<area shape="rect" href="faction_8h.html#a152a86ba5f75e19f5eaa93383d2cb64f" title="Prototype de get_nom qui permet de récupérer le nom de la faction." alt="" coords="1127,1206,1257,1233"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="160,852,215,878"/>
+<area shape="rect" href="carte_8h.html#a500a84466dd672b4940525996014d3f6" title="Prototype de get_description qui permet de récupérer description[i]." alt="" coords="933,152,1079,178"/>
+<area shape="rect" href="carte_8h.html#aa5b54fe67b2e3c56e0c7c7847085b680" title="Prototype de get_nom_carte qui permet de récupérer nom_carte[i]." alt="" coords="935,202,1077,229"/>
+<area shape="rect" href="interface_8h.html#a802545d4ff1c158f7a2ca77be20915f9" title="Affiche le vainquer de la partie." alt="" coords="263,1346,401,1373"/>
+<area shape="rect" href="plateau_8h.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="283,1612,381,1638"/>
+<area shape="rect" href="plateau_8h.html#aa2fd2fef89b903a5c089bf57cb932e29" title="Libère la mémoire associée au plateau de jeu et aux deux factions." alt="" coords="275,801,389,828"/>
+<area shape="rect" href="plateau_8h.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="263,1181,401,1208"/>
+<area shape="rect" href="main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="297,852,367,878"/>
+<area shape="rect" href="main_8c.html#a34ccc9f1e0da464163a6f5e297c42563" title="Fonction qui contrôle la phase 2." alt="" coords="297,649,367,676"/>
+<area shape="rect" href="plateau_8h.html#a44f2d0cc019d090bd9af0bd3f86bb451" title="Prototype de get_factions qui permet de récupérer les factions en jeu." alt="" coords="737,988,840,1014"/>
+<area shape="rect" href="faction_8h.html#aa92da3f09f56bc38be472b50fcfed30d" title="Prototype de get_nb_manches_gagnees qui permet de récupérer le nombre de manches gagnées d&#39;une factio..." alt="" coords="449,1460,644,1486"/>
+<area shape="rect" href="plateau_8c.html#a93d4e98168a58e3d46e8d6b5416ec084" title="Prototype de creation_plateau qui permet d&#39;initialiser une carte." alt="" coords="481,1662,612,1689"/>
+<area shape="rect" href="plateau_8c.html#aa1b228e632acc6462080d59a556f0cfa" title="Crée une faction initialisée." alt="" coords="499,1713,594,1740"/>
+<area shape="rect" href="faction_8h.html#aab43472fe255e9a674d0b8c8c022521e" title="Prototype de set_nom qui permet d&#39;initialiser le nom de la faction." alt="" coords="723,1612,854,1638"/>
+<area shape="rect" href="interface_8h.html#ab716e0c166fd1d07dca1545157befef5" title="Fonction qui demande le nom de la faction." alt="" coords="955,1561,1057,1588"/>
+<area shape="rect" href="faction_8h.html#aaa0655066f74d90991cac0094fb8964a" title="Savoir si une faction a utilisé l&#39;option de remélanger sa main et boîte à idée et de repiocher des ca..." alt="" coords="735,1308,842,1334"/>
+<area shape="rect" href="faction_8h.html#a2b256492eb2a3ee0dbffeb1bd73f83c2" title="Prototype de creation_faction qui permet d&#39;initialiser une faction." alt="" coords="725,1713,852,1740"/>
+<area shape="rect" href="plateau_8c.html#a2190bbe0984d78c5f3d5f2e646210f07" title="Crée la pioche avec les 32 cartes de l&#39;énoncé pour la faction donnée." alt="" coords="742,1764,835,1790"/>
+<area shape="rect" href="faction_8h.html#ad4db1cbc6980bc31895c1cdd84f44e5e" title="Prototype de set_a_remelange qui permet d&#39;initialiser si la faction a utilisé ou non son option." alt="" coords="721,1814,856,1841"/>
+<area shape="rect" href="faction_8h.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="747,1865,830,1892"/>
+<area shape="rect" href="faction_8h.html#af9ec0d0b4d1f75128a2b5e6b70d7e677" title="Prototype de set_nb_manches_gagnees qui permet d&#39;initialiser le nombre de manches gagnées d&#39;une facti..." alt="" coords="692,1434,885,1461"/>
+<area shape="rect" href="faction_8h.html#ac18109f0c5db773e1499954c48373a4e" title="Prototype de set_pts_DDRS_manche qui permet d&#39;initialiser le nombre de points DDRS de la manche en co..." alt="" coords="703,1662,875,1689"/>
+<area shape="rect" href="faction_8h.html#a66e884a727de4d0741a8d344308ed43d" title="Permet de supprimer une faction et de libérer son espace mémoire alloué" alt="" coords="477,953,617,980"/>
+<area shape="rect" href="structure_8h.html#a855e5f243da2af0fb6391901773dc997" title="libère la pioche et ses cartes" alt="" coords="734,836,843,862"/>
+<area shape="rect" href="faction_8h.html#ac0afdf461c2e3e7442fd5f8445283bb0" title="Prototype de get_a_remelange qui permet de récupérer un entier qui indique si la faction a utilisé so..." alt="" coords="479,1308,614,1334"/>
+<area shape="rect" href="carte_8h.html#a253c323b2facf1fd67c2e6602c5932ee" title="Prototype de get_proprietaire qui permet de récupérer la faction qui possède cette carte." alt="" coords="943,649,1069,676"/>
+<area shape="rect" href="faction_8h.html#ac1ec72e1c18d60dc3a3718520464b9e9" title="Prototype de get_pts_DDRS_manche qui permet de récupérer le nombre de points DDRS de la manche en cou..." alt="" coords="702,750,875,777"/>
+<area shape="rect" href="interface_8h.html#a59cec6e54845df8ae5160bd8b2a351c2" title="Fonction qui demande la carte qui sera posée face cachée sur le plateau." alt="" coords="466,482,627,523"/>
+<area shape="rect" href="interface_8h.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="493,278,600,305"/>
+<area shape="rect" href="interface_8h.html#a8330a6ec294f24da52fe0f265181fbcc" title="Fonction qui demande à quelle position doit être placée la carte." alt="" coords="475,1156,618,1182"/>
+<area shape="rect" href="plateau_8h.html#ab023dd151ba2f8cf843b792a3434b8f5" title="Détermine la faction qui joue en premier et renvoie la liste des deux factions du jeu dont le premier..." alt="" coords="481,852,612,878"/>
+<area shape="rect" href="faction_8h.html#abc7feb29ed864c76ea95e1afc3cc7752" title="Permet à une faction de vider sa main, mélanger sa pioche et repiocher ses cartes." alt="" coords="505,1004,589,1030"/>
+<area shape="rect" href="faction_8h.html#adf3497e77c11921394ac7ca7d2e6cbdb" title="Permet à une faction de mélanger sa pioche." alt="" coords="479,750,614,777"/>
+<area shape="rect" href="faction_8h.html#a5b400a1d1b3c89ef50e5bb4b98e177cb" title="Permet à une faction de repiocher ses cartes." alt="" coords="511,801,582,828"/>
+<area shape="rect" href="plateau_8h.html#a425437529596e13babd7bc8b4e04d491" title="Permet à une faction de poser une carte face cachée sur le plateau." alt="" coords="497,548,596,574"/>
+<area shape="rect" href="interface_8h.html#aea24bb8bc24a5877aba14a3879602c7b" title="Fonction qui demande si la faction pointée par f veut utiliser son option." alt="" coords="949,1257,1063,1284"/>
+<area shape="rect" href="interface_8c.html#a8bb576a3127fc3437d91467ec19d0de0" title="Fonction qui affiche le plateau de jeu." alt="" coords="727,1105,850,1132"/>
+<area shape="rect" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93" title="Prototype de get_carte_at." alt="" coords="955,1156,1057,1182"/>
+<area shape="rect" href="plateau_8h.html#aea95d42f536139d241b4993f65806c39" title="Prototype de get_coord_derniere_carte_posee." alt="" coords="715,1039,862,1080"/>
+<area shape="rect" href="faction_8c.html#adf3497e77c11921394ac7ca7d2e6cbdb" title="Permet à une faction de mélanger sa pioche." alt="" coords="721,886,856,913"/>
+<area shape="rect" href="interface_8h.html#a044fbcd951bab90748a27f16d77b718f" title="Affiche les points DDRS des deux factions." alt="" coords="496,700,597,726"/>
+<area shape="rect" href="interface_8h.html#a79cf870c92b63e231d41e188f2549520" title="Affiche les effets de la carte c si elle est posée." alt="" coords="733,202,844,229"/>
+<area shape="rect" href="interface_8h.html#a8bb576a3127fc3437d91467ec19d0de0" title="Fonction qui affiche le plateau de jeu." alt="" coords="727,497,850,524"/>
+<area shape="rect" href="plateau_8h.html#aafb029b0483a7d02f4f2619eea4deb27" title="retourne la carte la plus en haut à gauche du plateau face visible et active son effet" alt="" coords="485,649,608,676"/>
 </map>
 </div>
 <div class="dynheader">
@@ -386,12 +389,13 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="interface_8c_ad36c35f78849abca949ea8c755f5b4e6_icgraph.png" border="0" usemap="#interface_8c_ad36c35f78849abca949ea8c755f5b4e6_icgraph" alt=""/></div>
 <map name="interface_8c_ad36c35f78849abca949ea8c755f5b4e6_icgraph" id="interface_8c_ad36c35f78849abca949ea8c755f5b4e6_icgraph">
-<area shape="rect" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="411,56,517,83"/>
-<area shape="rect" href="main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="293,31,363,57"/>
-<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="191,56,245,83"/>
-<area shape="rect" href="plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="25,5,123,32"/>
-<area shape="rect" href="plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,56,143,83"/>
-<area shape="rect" href="faction_8c.html#aef8713f12e5372bd993f34fa4f6d6cab" title=" " alt="" coords="33,107,115,133"/>
+<area shape="rect" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="553,52,660,79"/>
+<area shape="rect" href="main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="436,27,505,54"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="333,52,388,79"/>
+<area shape="rect" href="plateau_8c.html#aa1b228e632acc6462080d59a556f0cfa" title="Crée une faction initialisée." alt="" coords="191,78,285,104"/>
+<area shape="rect" href="faction_8c.html#aef8713f12e5372bd993f34fa4f6d6cab" title=" " alt="" coords="197,27,279,54"/>
+<area shape="rect" href="plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="25,15,123,42"/>
+<area shape="rect" href="plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,103,143,130"/>
 </map>
 </div>
 
@@ -445,15 +449,16 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="interface_8c_a8bb576a3127fc3437d91467ec19d0de0_icgraph.png" border="0" usemap="#interface_8c_a8bb576a3127fc3437d91467ec19d0de0_icgraph" alt=""/></div>
 <map name="interface_8c_a8bb576a3127fc3437d91467ec19d0de0_icgraph" id="interface_8c_a8bb576a3127fc3437d91467ec19d0de0_icgraph">
-<area shape="rect" title="Fonction qui affiche le plateau de jeu." alt="" coords="601,31,724,57"/>
-<area shape="rect" href="interface_8c.html#a8330a6ec294f24da52fe0f265181fbcc" title="Fonction qui demande à quelle position doit être placée la carte." alt="" coords="411,5,553,32"/>
-<area shape="rect" href="main_8c.html#a34ccc9f1e0da464163a6f5e297c42563" title="Fonction qui contrôle la phase 2." alt="" coords="293,56,363,83"/>
-<area shape="rect" href="main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="293,5,363,32"/>
-<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="191,56,245,83"/>
-<area shape="rect" href="interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="21,5,127,32"/>
-<area shape="rect" href="plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="25,56,123,83"/>
-<area shape="rect" href="plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,107,143,133"/>
-<area shape="rect" href="faction_8c.html#aef8713f12e5372bd993f34fa4f6d6cab" title=" " alt="" coords="33,157,115,184"/>
+<area shape="rect" title="Fonction qui affiche le plateau de jeu." alt="" coords="756,56,879,83"/>
+<area shape="rect" href="interface_8c.html#a8330a6ec294f24da52fe0f265181fbcc" title="Fonction qui demande à quelle position doit être placée la carte." alt="" coords="565,31,708,57"/>
+<area shape="rect" href="main_8c.html#a34ccc9f1e0da464163a6f5e297c42563" title="Fonction qui contrôle la phase 2." alt="" coords="448,81,517,108"/>
+<area shape="rect" href="main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="448,31,517,57"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="345,81,400,108"/>
+<area shape="rect" href="interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="191,5,297,32"/>
+<area shape="rect" href="plateau_8c.html#aa1b228e632acc6462080d59a556f0cfa" title="Crée une faction initialisée." alt="" coords="197,107,291,133"/>
+<area shape="rect" href="faction_8c.html#aef8713f12e5372bd993f34fa4f6d6cab" title=" " alt="" coords="203,157,285,184"/>
+<area shape="rect" href="plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="25,157,123,184"/>
+<area shape="rect" href="plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,81,143,108"/>
 </map>
 </div>
 
@@ -483,7 +488,7 @@ Voici le graphe des appelants de cette fonction :</div>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="interface_8c_source.html#l00119">119</a> du fichier <a class="el" href="interface_8c_source.html">interface.c</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="interface_8c_source.html#l00120">120</a> du fichier <a class="el" href="interface_8c_source.html">interface.c</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
@@ -500,13 +505,14 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="interface_8c_a802545d4ff1c158f7a2ca77be20915f9_icgraph.png" border="0" usemap="#interface_8c_a802545d4ff1c158f7a2ca77be20915f9_icgraph" alt=""/></div>
 <map name="interface_8c_a802545d4ff1c158f7a2ca77be20915f9_icgraph" id="interface_8c_a802545d4ff1c158f7a2ca77be20915f9_icgraph">
-<area shape="rect" title="Affiche le vainquer de la partie." alt="" coords="411,107,549,133"/>
-<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="308,107,363,133"/>
-<area shape="rect" href="interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="138,5,245,32"/>
-<area shape="rect" href="plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="142,56,241,83"/>
-<area shape="rect" href="plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="123,107,260,133"/>
-<area shape="rect" href="faction_8c.html#aef8713f12e5372bd993f34fa4f6d6cab" title=" " alt="" coords="150,157,233,184"/>
-<area shape="rect" href="main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="5,107,75,133"/>
+<area shape="rect" title="Affiche le vainquer de la partie." alt="" coords="448,132,587,159"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="345,132,400,159"/>
+<area shape="rect" href="interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="191,5,297,32"/>
+<area shape="rect" href="plateau_8c.html#aa1b228e632acc6462080d59a556f0cfa" title="Crée une faction initialisée." alt="" coords="197,208,291,235"/>
+<area shape="rect" href="faction_8c.html#aef8713f12e5372bd993f34fa4f6d6cab" title=" " alt="" coords="203,107,285,133"/>
+<area shape="rect" href="main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="39,31,109,57"/>
+<area shape="rect" href="plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="25,169,123,196"/>
+<area shape="rect" href="plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,233,143,260"/>
 </map>
 </div>
 
@@ -536,7 +542,7 @@ Voici le graphe des appelants de cette fonction :</div>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="interface_8c_source.html#l00139">139</a> du fichier <a class="el" href="interface_8c_source.html">interface.c</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="interface_8c_source.html#l00140">140</a> du fichier <a class="el" href="interface_8c_source.html">interface.c</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
@@ -562,13 +568,14 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="interface_8c_a8330a6ec294f24da52fe0f265181fbcc_icgraph.png" border="0" usemap="#interface_8c_a8330a6ec294f24da52fe0f265181fbcc_icgraph" alt=""/></div>
 <map name="interface_8c_a8330a6ec294f24da52fe0f265181fbcc_icgraph" id="interface_8c_a8330a6ec294f24da52fe0f265181fbcc_icgraph">
-<area shape="rect" title="Fonction qui demande à quelle position doit être placée la carte." alt="" coords="411,31,553,57"/>
-<area shape="rect" href="main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="293,31,363,57"/>
-<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="191,56,245,83"/>
-<area shape="rect" href="interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="21,5,127,32"/>
-<area shape="rect" href="plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="25,56,123,83"/>
-<area shape="rect" href="plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,107,143,133"/>
-<area shape="rect" href="faction_8c.html#aef8713f12e5372bd993f34fa4f6d6cab" title=" " alt="" coords="33,157,115,184"/>
+<area shape="rect" title="Fonction qui demande à quelle position doit être placée la carte." alt="" coords="565,56,708,83"/>
+<area shape="rect" href="main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="448,56,517,83"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="345,81,400,108"/>
+<area shape="rect" href="interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="191,5,297,32"/>
+<area shape="rect" href="plateau_8c.html#aa1b228e632acc6462080d59a556f0cfa" title="Crée une faction initialisée." alt="" coords="197,107,291,133"/>
+<area shape="rect" href="faction_8c.html#aef8713f12e5372bd993f34fa4f6d6cab" title=" " alt="" coords="203,157,285,184"/>
+<area shape="rect" href="plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="25,183,123,209"/>
+<area shape="rect" href="plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,81,143,108"/>
 </map>
 </div>
 
@@ -614,14 +621,15 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="interface_8c_ab716e0c166fd1d07dca1545157befef5_icgraph.png" border="0" usemap="#interface_8c_ab716e0c166fd1d07dca1545157befef5_icgraph" alt=""/></div>
 <map name="interface_8c_ab716e0c166fd1d07dca1545157befef5_icgraph" id="interface_8c_ab716e0c166fd1d07dca1545157befef5_icgraph">
-<area shape="rect" title="Fonction qui demande le nom de la faction." alt="" coords="736,56,839,83"/>
-<area shape="rect" href="plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="411,56,509,83"/>
-<area shape="rect" href="faction_8c.html#aab43472fe255e9a674d0b8c8c022521e" title="Prototype de set_nom qui permet d&#39;initialiser le nom de la faction." alt="" coords="557,81,688,108"/>
-<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="308,56,363,83"/>
-<area shape="rect" href="interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="138,5,245,32"/>
-<area shape="rect" href="plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="123,56,260,83"/>
-<area shape="rect" href="faction_8c.html#aef8713f12e5372bd993f34fa4f6d6cab" title=" " alt="" coords="150,107,233,133"/>
-<area shape="rect" href="main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="5,81,75,108"/>
+<area shape="rect" title="Fonction qui demande le nom de la faction." alt="" coords="773,161,876,188"/>
+<area shape="rect" href="plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="448,136,547,163"/>
+<area shape="rect" href="faction_8c.html#aab43472fe255e9a674d0b8c8c022521e" title="Prototype de set_nom qui permet d&#39;initialiser le nom de la faction." alt="" coords="595,187,725,213"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="345,85,400,112"/>
+<area shape="rect" href="interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="191,35,297,61"/>
+<area shape="rect" href="plateau_8c.html#aa1b228e632acc6462080d59a556f0cfa" title="Crée une faction initialisée." alt="" coords="197,187,291,213"/>
+<area shape="rect" href="faction_8c.html#aef8713f12e5372bd993f34fa4f6d6cab" title=" " alt="" coords="203,85,285,112"/>
+<area shape="rect" href="main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="39,9,109,36"/>
+<area shape="rect" href="plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,161,143,188"/>
 </map>
 </div>
 
@@ -654,7 +662,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <dd>
 1 oui </dd></dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="interface_8c_source.html#l00075">75</a> du fichier <a class="el" href="interface_8c_source.html">interface.c</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="interface_8c_source.html#l00076">76</a> du fichier <a class="el" href="interface_8c_source.html">interface.c</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
@@ -669,13 +677,14 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="interface_8c_aea24bb8bc24a5877aba14a3879602c7b_icgraph.png" border="0" usemap="#interface_8c_aea24bb8bc24a5877aba14a3879602c7b_icgraph" alt=""/></div>
 <map name="interface_8c_aea24bb8bc24a5877aba14a3879602c7b_icgraph" id="interface_8c_aea24bb8bc24a5877aba14a3879602c7b_icgraph">
-<area shape="rect" title="Fonction qui demande si la faction pointée par f veut utiliser son option." alt="" coords="411,31,525,57"/>
-<area shape="rect" href="main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="293,31,363,57"/>
-<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="191,56,245,83"/>
-<area shape="rect" href="interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="21,5,127,32"/>
-<area shape="rect" href="plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="25,56,123,83"/>
-<area shape="rect" href="plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,107,143,133"/>
-<area shape="rect" href="faction_8c.html#aef8713f12e5372bd993f34fa4f6d6cab" title=" " alt="" coords="33,157,115,184"/>
+<area shape="rect" title="Fonction qui demande si la faction pointée par f veut utiliser son option." alt="" coords="565,56,680,83"/>
+<area shape="rect" href="main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="448,56,517,83"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="345,81,400,108"/>
+<area shape="rect" href="interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="191,5,297,32"/>
+<area shape="rect" href="plateau_8c.html#aa1b228e632acc6462080d59a556f0cfa" title="Crée une faction initialisée." alt="" coords="197,107,291,133"/>
+<area shape="rect" href="faction_8c.html#aef8713f12e5372bd993f34fa4f6d6cab" title=" " alt="" coords="203,157,285,184"/>
+<area shape="rect" href="plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="25,183,123,209"/>
+<area shape="rect" href="plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,81,143,108"/>
 </map>
 </div>
 

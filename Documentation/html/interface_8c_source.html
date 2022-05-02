@@ -92,433 +92,436 @@ $(function() {
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="struct_coord.html">Coord</a> haut_gauche = <a class="code" href="plateau_8h.html#aeb1641caabcbbfd6f59aabab9de29ae3">get_coord_carte_haut_gauche</a>(p);</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="struct_coord.html">Coord</a> bas_droite = <a class="code" href="plateau_8h.html#aadf513dc21050ac59427fc760760b16d">get_coord_carte_bas_droite</a>(p);</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    printf(<span class="stringliteral">&quot;          &quot;</span>);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = <a class="code" href="plateau_8h.html#ae557fab87da33bf071ae6b4ce4430ae0">get_colonne_gauche</a>(p); j &lt;= <a class="code" href="plateau_8h.html#a54d750566fa496b43d4791d422edf570">get_colonne_droite</a>(p); j++) printf(<span class="stringliteral">&quot;Col. %d &quot;</span>,j);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = haut_gauche.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a>; i &lt;= bas_droite.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a>; i++)</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        printf(<span class="stringliteral">&quot;Ligne %d: &quot;</span>, i);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = <a class="code" href="plateau_8h.html#ae557fab87da33bf071ae6b4ce4430ae0">get_colonne_gauche</a>(p); j &lt;= <a class="code" href="plateau_8h.html#a54d750566fa496b43d4791d422edf570">get_colonne_droite</a>(p); j++)</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i, j) != NULL)</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                <a class="code" href="struct_structure_carte.html">Carte</a> tmp = <a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i, j);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="carte_8h.html#ab61f3254187615cbc1c13aa4e51633c2">get_est_cachee</a>(tmp))</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                    printf(<span class="stringliteral">&quot;Cachée &quot;</span>);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                }</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                    printf(<span class="stringliteral">&quot;%s (%s) &quot;</span>, <a class="code" href="carte_8h.html#a36dc56ecacce3b5d693e8ddab6e4201a">get_nom</a>(tmp), <a class="code" href="faction_8h.html#a152a86ba5f75e19f5eaa93383d2cb64f">get_nom_faction</a>(<a class="code" href="carte_8h.html#a253c323b2facf1fd67c2e6602c5932ee">get_proprietaire</a>(tmp)));</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                printf(<span class="stringliteral">&quot;NULL &quot;</span>);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        }</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6">   57</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6">affiche_main</a>(<a class="code" href="struct_structure_factions.html">Faction</a> f)</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    printf(<span class="stringliteral">&quot;%s, voici votre main:\n&quot;</span>, <a class="code" href="faction_8h.html#a152a86ba5f75e19f5eaa93383d2cb64f">get_nom_faction</a>(f));</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="struct_structure_carte.html">Carte</a> *<a class="code" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> = <a class="code" href="faction_8h.html#aa0864716c89adc851b3d848aea2e3931">get_main</a>(f);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 8; i++)</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>[i] != NULL)</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            printf(<span class="stringliteral">&quot;*%s\n&quot;</span>, <a class="code" href="carte_8h.html#a36dc56ecacce3b5d693e8ddab6e4201a">get_nom</a>(<a class="code" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>[i]));</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <a class="code" href="interface_8c.html#a8e9d54781d879f437be3285b5412c1c2">affiche_effets</a>(<a class="code" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>[i]);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            printf(<span class="stringliteral">&quot;NULL\n&quot;</span>);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="interface_8c.html#aea24bb8bc24a5877aba14a3879602c7b">   75</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="interface_8c.html#aea24bb8bc24a5877aba14a3879602c7b">utiliser_option</a>(<a class="code" href="struct_structure_factions.html">Faction</a> f)</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;{</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    printf(<span class="stringliteral">&quot;%s, voulez-vous utiliser votre super pouvoir?[y/n]\n&quot;</span>, <a class="code" href="faction_8h.html#a152a86ba5f75e19f5eaa93383d2cb64f">get_nom_faction</a>(f));</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">char</span> buf[1];</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    scanf(<span class="stringliteral">&quot;%s&quot;</span>, buf);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">return</span> (!strcmp(buf, <span class="stringliteral">&quot;y&quot;</span>)) || (!strcmp(buf, <span class="stringliteral">&quot;Y&quot;</span>));</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="interface_8c.html#a59cec6e54845df8ae5160bd8b2a351c2">   83</a></span>&#160;<a class="code" href="struct_structure_carte.html">Carte</a> <a class="code" href="interface_8c.html#a59cec6e54845df8ae5160bd8b2a351c2">a_poser_face_cachee_sur_plateau</a>(<a class="code" href="struct_structure_factions.html">Faction</a> f)</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;{</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="carte_8c.html#a2b6d4f8bcc0250f758fbe1084d6db400">nb_cartes</a> = 0;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 8; i++)</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    {</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="faction_8h.html#aa0864716c89adc851b3d848aea2e3931">get_main</a>(f)[i])</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <a class="code" href="carte_8c.html#a2b6d4f8bcc0250f758fbe1084d6db400">nb_cartes</a>++;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    printf(<span class="stringliteral">&quot;Quelle carte souhaitez-vous jouer? [1-%d]\n&quot;</span>, <a class="code" href="carte_8c.html#a2b6d4f8bcc0250f758fbe1084d6db400">nb_cartes</a>);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">int</span> ans = -1;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">while</span> (scanf(<span class="stringliteral">&quot;%d&quot;</span>, &amp;ans) == 0 || ans &lt; 1 || ans &gt; <a class="code" href="carte_8c.html#a2b6d4f8bcc0250f758fbe1084d6db400">nb_cartes</a>)</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    {</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        printf(<span class="stringliteral">&quot;Valeur incorrecte: elle doit être entre 1 et %d.\n&quot;</span>, <a class="code" href="carte_8c.html#a2b6d4f8bcc0250f758fbe1084d6db400">nb_cartes</a>);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">int</span> count = 0;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">int</span> ret = 0;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 8; i++)</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="faction_8h.html#aa0864716c89adc851b3d848aea2e3931">get_main</a>(f)[i] != NULL)</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        {</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            count++;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        }</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordflow">if</span> (count == ans)</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        {</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            ret = i;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        }</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    }</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="faction_8h.html#aa0864716c89adc851b3d848aea2e3931">get_main</a>(f)[ret];</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;}</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
-<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="interface_8c.html#a8e9d54781d879f437be3285b5412c1c2">  114</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="interface_8c.html#a8e9d54781d879f437be3285b5412c1c2">affiche_effets</a>(<a class="code" href="struct_structure_carte.html">Carte</a> c)</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;{</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    printf(<span class="stringliteral">&quot;Effet de la carte \&quot;%s\&quot;: \&quot;%s\&quot;.\n&quot;</span>, <a class="code" href="carte_8h.html#a36dc56ecacce3b5d693e8ddab6e4201a">get_nom</a>(c), <a class="code" href="carte_8h.html#a99d2f8528669eb8a99312bb74a2a27bb">get_description</a>(c));</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
-<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="interface_8c.html#a802545d4ff1c158f7a2ca77be20915f9">  119</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="interface_8c.html#a802545d4ff1c158f7a2ca77be20915f9">affiche_vainqueur</a>(<a class="code" href="structs__plateau.html">Plateau</a> p)</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;{</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <a class="code" href="struct_factions__en__jeu.html">Factions_en_jeu</a> fct = <a class="code" href="plateau_8h.html#a44f2d0cc019d090bd9af0bd3f86bb451">get_factions</a>(p);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="faction_8h.html#aa92da3f09f56bc38be472b50fcfed30d">get_nb_manches_gagnees</a>(fct.<a class="code" href="struct_factions__en__jeu.html#ad6aecb732d365d382955d9bc06fd897d">left</a>) == 2)</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    {</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        printf(<span class="stringliteral">&quot;Le vainqueur de la partie est : \&quot;%s\&quot;.\n&quot;</span>, <a class="code" href="faction_8h.html#a152a86ba5f75e19f5eaa93383d2cb64f">get_nom_faction</a>(fct.<a class="code" href="struct_factions__en__jeu.html#ad6aecb732d365d382955d9bc06fd897d">left</a>));</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    }</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    {</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        printf(<span class="stringliteral">&quot;Le vainqueur de la partie est : \&quot;%s\&quot;.\n&quot;</span>, <a class="code" href="faction_8h.html#a152a86ba5f75e19f5eaa93383d2cb64f">get_nom_faction</a>(fct.<a class="code" href="struct_factions__en__jeu.html#aae23e1080a95aef1f1610a99c39f9c81">right</a>));</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    }</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    printf(<span class="stringliteral">&quot;Mais cette victoire n&#39;est pas encore officialisée!\n&quot;</span>);</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    printf(<span class="stringliteral">&quot;Il faut encore attendre le jury de validation pour que la victoire soit validée et définitive.\n&quot;</span>);</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    sleep(1);</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    printf(<span class="stringliteral">&quot;Mail de Laurent Prével: jury de validation de la victoire\n&quot;</span>);</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    printf(<span class="stringliteral">&quot;Le jury va se réunir et évaluer la partie afin de valider ou non votre victoire... Ah, il manque un représentant de la DFP. Où est Julien Forest?\n&quot;</span>);</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    sleep(3);</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    printf(<span class="stringliteral">&quot;Ca sent la cigarette! L&#39;Homme des Cavernes, pardon, Julien Forest arrive par l&#39;ascenceur (son café n&#39;a pas réussi à l&#39;empêcher de dormir). Il va donc pouvoir présider le jury pour valider votre victoire!&quot;</span>);</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;}</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
-<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="interface_8c.html#a8330a6ec294f24da52fe0f265181fbcc">  139</a></span>&#160;<a class="code" href="struct_coord.html">Coord</a> <a class="code" href="interface_8c.html#a8330a6ec294f24da52fe0f265181fbcc">demande_position</a>(<a class="code" href="structs__plateau.html">Plateau</a> p)</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;{</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <a class="code" href="struct_coord.html">Coord</a> previous = <a class="code" href="plateau_8h.html#aea95d42f536139d241b4993f65806c39">get_coord_derniere_carte_posee</a>(p);</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordflow">if</span> (previous.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> == -1 &amp;&amp; previous.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> == -1) <span class="comment">// On n&#39;affiche pas le plateau car il n&#39;y a aucune carte posée.</span></div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    {</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <a class="code" href="struct_coord.html">Coord</a> ret;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        ret.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = -1;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        ret.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = -1;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        printf(<span class="stringliteral">&quot;%s, vous êtes le premier à jouer! Votre carte sera posé au milieu du plateau!!\n&quot;</span>, <a class="code" href="faction_8h.html#a152a86ba5f75e19f5eaa93383d2cb64f">get_nom_faction</a>(<a class="code" href="plateau_8h.html#a44f2d0cc019d090bd9af0bd3f86bb451">get_factions</a>(p).left)); <span class="comment">// On rappelle que le plateau de jeu est infini.</span></div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    }</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <a class="code" href="interface_8c.html#a8bb576a3127fc3437d91467ec19d0de0">affiche_plateau</a>(p);</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    printf(<span class="stringliteral">&quot;Veuillez choisir où vous souhaitez poser la carte en saisissant le numéro associé:\n&quot;</span>);</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordtype">int</span> counter = 0;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <a class="code" href="struct_coord.html">Coord</a> available[129 * 129];</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 129; i++)</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    {</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 129; j++)</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        {</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i, j) != NULL) <span class="comment">// Si la case n&#39;est pas nulle, alors il y a ue carte posée</span></div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            {</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                <span class="keywordflow">if</span> (i == 0 &amp;&amp; j == 0) <span class="comment">// Coin en haut à gauche</span></div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                {</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i, j + 1) == NULL)</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                    {</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j + 1;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i, j + 1);</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                        available[counter] = tmp;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                        counter++;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                    }</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i + 1, j) == NULL)</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                    {</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i + 1;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j;</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i + 1, j);</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                        available[counter] = tmp;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                        counter++;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                    }</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                }</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (i == 0 &amp;&amp; j == 128) <span class="comment">// Coin en haut à droite</span></div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                {</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i + 1, j) == NULL)</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                    {</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i + 1;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i + 1, j);</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                        available[counter] = tmp;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                        counter++;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                    }</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i - 1, j) == NULL)</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                    {</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i - 1;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i - 1, j);</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                        available[counter] = tmp;</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                        counter++;</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                    }</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                }</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (i == 128 &amp;&amp; j == 0) <span class="comment">// Coin en bas à gauche</span></div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                {</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i - 1, j) == NULL)</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                    {</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i - 1;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i - 1, j);</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                        available[counter] = tmp;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                        counter++;</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                    }</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i, j + 1) == NULL)</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                    {</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i;</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j + 1;</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i, j + 1);</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                        available[counter] = tmp;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                        counter++;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                    }</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                }</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (i == 128 &amp;&amp; j == 128) <span class="comment">// Coin en bas à droite</span></div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                {</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i, j - 1) == NULL)</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                    {</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j - 1;</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i, j - 1);</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                        available[counter] = tmp;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                        counter++;</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                    }</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i - 1, j) == NULL)</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                    {</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i - 1;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i - 1, j);</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                        available[counter] = tmp;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                        counter++;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                    }</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                }</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (i == 0) <span class="comment">// Première ligne hors coins</span></div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                {</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i, j + 1) == NULL) <span class="comment">// Point intérieur</span></div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                    {</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i;</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j + 1;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i, j + 1);</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                        available[counter] = tmp;</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                        counter++;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                    }</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i + 1, j) == NULL)</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                    {</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i + 1;</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i + 1, j);</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                        available[counter] = tmp;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                        counter++;</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                    }</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i, j - 1) == NULL)</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                    {</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i;</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j - 1;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i, j - 1);</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                        available[counter] = tmp;</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                        counter++;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                    }</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                }</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (i == 128) <span class="comment">// Dernière ligne hors coins</span></div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                {</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i, j + 1) == NULL) <span class="comment">// Point intérieur</span></div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                    {</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i;</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j + 1;</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i, j + 1);</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                        available[counter] = tmp;</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                        counter++;</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                    }</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i, j - 1) == NULL)</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                    {</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i;</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j - 1;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i, j - 1);</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;                        available[counter] = tmp;</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                        counter++;</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                    }</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i - 1, j) == NULL)</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                    {</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i - 1;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j;</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i - 1, j);</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                        available[counter] = tmp;</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                        counter++;</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                    }</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                }</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (j == 0) <span class="comment">// Première colonne hors coins</span></div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                {</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i, j + 1) == NULL) <span class="comment">// Point intérieur</span></div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                    {</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i;</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j + 1;</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i, j + 1);</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                        available[counter] = tmp;</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;                        counter++;</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                    }</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i + 1, j) == NULL)</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                    {</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i + 1;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j;</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i + 1, j);</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                        available[counter] = tmp;</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                        counter++;</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                    }</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i - 1, j) == NULL)</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                    {</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i - 1;</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j;</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i - 1, j);</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                        available[counter] = tmp;</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                        counter++;</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                    }</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                }</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (j == 128) <span class="comment">// Dernière colonne hors coins</span></div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                {</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i + 1, j) == NULL)</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                    {</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i + 1;</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j;</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i + 1, j);</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;                        available[counter] = tmp;</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;                        counter++;</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;                    }</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i, j - 1) == NULL)</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;                    {</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i;</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j - 1;</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i, j - 1);</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;                        available[counter] = tmp;</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;                        counter++;</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                    }</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i - 1, j) == NULL)</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;                    {</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i - 1;</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j;</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i - 1, j);</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;                        available[counter] = tmp;</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;                        counter++;</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;                    }</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;                }</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;                <span class="keywordflow">else</span> <span class="comment">// Points intérieurs</span></div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;                {</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i, j + 1) == NULL) <span class="comment">// Point intérieur</span></div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;                    {</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i;</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j + 1;</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i, j + 1);</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;                        available[counter] = tmp;</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;                        counter++;</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;                    }</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i + 1, j) == NULL)</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;                    {</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i + 1;</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j;</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i + 1, j);</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;                        available[counter] = tmp;</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;                        counter++;</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;                    }</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i, j - 1) == NULL)</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;                    {</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i;</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j - 1;</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i, j - 1);</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;                        available[counter] = tmp;</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;                        counter++;</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;                    }</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i - 1, j) == NULL)</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;                    {</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i - 1;</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j;</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i - 1, j);</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;                        available[counter] = tmp;</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;                        counter++;</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;                    }</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;                }</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;            }</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;        }</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    }</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    <span class="keywordtype">int</span> item = 0;</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    <span class="keywordflow">while</span> (scanf(<span class="stringliteral">&quot;%d&quot;</span>, &amp;item) == 0 || item &lt; 1 || item &gt; counter)</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    {</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;        printf(<span class="stringliteral">&quot;Veuillez saisir un nombre entier compris entre 1 et %d: &quot;</span>, counter);</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    }</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    <span class="keywordflow">return</span> available[item - 1];</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;}</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160; </div>
-<div class="line"><a name="l00414"></a><span class="lineno"><a class="line" href="interface_8c.html#a044fbcd951bab90748a27f16d77b718f">  414</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="interface_8c.html#a044fbcd951bab90748a27f16d77b718f">affiche_ddrs</a>(<a class="code" href="structs__plateau.html">Plateau</a> p)</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;{</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    <a class="code" href="struct_factions__en__jeu.html">Factions_en_jeu</a> factions = <a class="code" href="plateau_8h.html#a44f2d0cc019d090bd9af0bd3f86bb451">get_factions</a>(p);</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    printf(<span class="stringliteral">&quot;%s, vos points DDRS sont: %d.\n&quot;</span>,<a class="code" href="faction_8h.html#a152a86ba5f75e19f5eaa93383d2cb64f">get_nom_faction</a>(factions.<a class="code" href="struct_factions__en__jeu.html#ad6aecb732d365d382955d9bc06fd897d">left</a>),<a class="code" href="faction_8h.html#ac1ec72e1c18d60dc3a3718520464b9e9">get_pts_DDRS_manche</a>(factions.<a class="code" href="struct_factions__en__jeu.html#ad6aecb732d365d382955d9bc06fd897d">left</a>));</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    printf(<span class="stringliteral">&quot;%s, vos points DDRS sont: %d.\n&quot;</span>,<a class="code" href="faction_8h.html#a152a86ba5f75e19f5eaa93383d2cb64f">get_nom_faction</a>(factions.<a class="code" href="struct_factions__en__jeu.html#aae23e1080a95aef1f1610a99c39f9c81">right</a>),<a class="code" href="faction_8h.html#ac1ec72e1c18d60dc3a3718520464b9e9">get_pts_DDRS_manche</a>(factions.<a class="code" href="struct_factions__en__jeu.html#aae23e1080a95aef1f1610a99c39f9c81">right</a>));</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = <a class="code" href="plateau_8h.html#ae557fab87da33bf071ae6b4ce4430ae0">get_colonne_gauche</a>(p); j &lt;= <a class="code" href="plateau_8h.html#a54d750566fa496b43d4791d422edf570">get_colonne_droite</a>(p); j++)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        printf(<span class="stringliteral">&quot;Col. %d &quot;</span>, j);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = haut_gauche.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a>; i &lt;= bas_droite.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a>; i++)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        printf(<span class="stringliteral">&quot;Ligne %d: &quot;</span>, i);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = <a class="code" href="plateau_8h.html#ae557fab87da33bf071ae6b4ce4430ae0">get_colonne_gauche</a>(p); j &lt;= <a class="code" href="plateau_8h.html#a54d750566fa496b43d4791d422edf570">get_colonne_droite</a>(p); j++)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i, j) != NULL)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                <a class="code" href="struct_structure_carte.html">Carte</a> tmp = <a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i, j);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="carte_8h.html#ab61f3254187615cbc1c13aa4e51633c2">get_est_cachee</a>(tmp))</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                    printf(<span class="stringliteral">&quot;Cachée &quot;</span>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                    printf(<span class="stringliteral">&quot;%s (%s) &quot;</span>, <a class="code" href="carte_8h.html#a36dc56ecacce3b5d693e8ddab6e4201a">get_nom</a>(tmp), <a class="code" href="faction_8h.html#a152a86ba5f75e19f5eaa93383d2cb64f">get_nom_faction</a>(<a class="code" href="carte_8h.html#a253c323b2facf1fd67c2e6602c5932ee">get_proprietaire</a>(tmp)));</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                printf(<span class="stringliteral">&quot;NULL &quot;</span>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6">   58</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6">affiche_main</a>(<a class="code" href="struct_structure_factions.html">Faction</a> f)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    printf(<span class="stringliteral">&quot;%s, voici votre main:\n&quot;</span>, <a class="code" href="faction_8h.html#a152a86ba5f75e19f5eaa93383d2cb64f">get_nom_faction</a>(f));</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="struct_structure_carte.html">Carte</a> *<a class="code" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> = <a class="code" href="faction_8h.html#aa0864716c89adc851b3d848aea2e3931">get_main</a>(f);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 8; i++)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>[i] != NULL)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            printf(<span class="stringliteral">&quot;*%s\n&quot;</span>, <a class="code" href="carte_8h.html#a36dc56ecacce3b5d693e8ddab6e4201a">get_nom</a>(<a class="code" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>[i]));</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <a class="code" href="interface_8c.html#a79cf870c92b63e231d41e188f2549520">affiche_effets</a>(<a class="code" href="carte_8h.html#a07d5b163a3e848772039f8f2e99db83e">get_id</a>(<a class="code" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>[i]));</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            printf(<span class="stringliteral">&quot;NULL\n&quot;</span>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="interface_8c.html#aea24bb8bc24a5877aba14a3879602c7b">   76</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="interface_8c.html#aea24bb8bc24a5877aba14a3879602c7b">utiliser_option</a>(<a class="code" href="struct_structure_factions.html">Faction</a> f)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;{</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    printf(<span class="stringliteral">&quot;%s, voulez-vous utiliser votre super pouvoir?[y/n]\n&quot;</span>, <a class="code" href="faction_8h.html#a152a86ba5f75e19f5eaa93383d2cb64f">get_nom_faction</a>(f));</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">char</span> buf[1];</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    scanf(<span class="stringliteral">&quot;%s&quot;</span>, buf);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">return</span> (!strcmp(buf, <span class="stringliteral">&quot;y&quot;</span>)) || (!strcmp(buf, <span class="stringliteral">&quot;Y&quot;</span>));</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="interface_8c.html#a59cec6e54845df8ae5160bd8b2a351c2">   84</a></span>&#160;<a class="code" href="struct_structure_carte.html">Carte</a> <a class="code" href="interface_8c.html#a59cec6e54845df8ae5160bd8b2a351c2">a_poser_face_cachee_sur_plateau</a>(<a class="code" href="struct_structure_factions.html">Faction</a> f)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;{</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="carte_8c.html#a2b6d4f8bcc0250f758fbe1084d6db400">nb_cartes</a> = 0;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 8; i++)</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="faction_8h.html#aa0864716c89adc851b3d848aea2e3931">get_main</a>(f)[i])</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <a class="code" href="carte_8c.html#a2b6d4f8bcc0250f758fbe1084d6db400">nb_cartes</a>++;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    printf(<span class="stringliteral">&quot;Quelle carte souhaitez-vous jouer? [1-%d]\n&quot;</span>, <a class="code" href="carte_8c.html#a2b6d4f8bcc0250f758fbe1084d6db400">nb_cartes</a>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">int</span> ans = -1;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">while</span> (scanf(<span class="stringliteral">&quot;%d&quot;</span>, &amp;ans) == 0 || ans &lt; 1 || ans &gt; <a class="code" href="carte_8c.html#a2b6d4f8bcc0250f758fbe1084d6db400">nb_cartes</a>)</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        printf(<span class="stringliteral">&quot;Valeur incorrecte: elle doit être entre 1 et %d.\n&quot;</span>, <a class="code" href="carte_8c.html#a2b6d4f8bcc0250f758fbe1084d6db400">nb_cartes</a>);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">int</span> count = 0;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">int</span> ret = 0;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 8; i++)</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="faction_8h.html#aa0864716c89adc851b3d848aea2e3931">get_main</a>(f)[i] != NULL)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            count++;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">if</span> (count == ans)</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            ret = i;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="faction_8h.html#aa0864716c89adc851b3d848aea2e3931">get_main</a>(f)[ret];</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="interface_8c.html#a79cf870c92b63e231d41e188f2549520">  115</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="interface_8c.html#a79cf870c92b63e231d41e188f2549520">affiche_effets</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>)</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;{</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    printf(<span class="stringliteral">&quot;Effet de la carte \&quot;%s\&quot;: \&quot;%s\&quot;.\n&quot;</span>, <a class="code" href="carte_8h.html#aa5b54fe67b2e3c56e0c7c7847085b680">get_nom_carte_vg</a>(<span class="keywordtype">id</span>), <a class="code" href="carte_8h.html#a500a84466dd672b4940525996014d3f6">get_description_vg</a>(<span class="keywordtype">id</span>));</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;}</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="interface_8c.html#a802545d4ff1c158f7a2ca77be20915f9">  120</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="interface_8c.html#a802545d4ff1c158f7a2ca77be20915f9">affiche_vainqueur</a>(<a class="code" href="structs__plateau.html">Plateau</a> p)</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;{</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <a class="code" href="struct_factions__en__jeu.html">Factions_en_jeu</a> fct = <a class="code" href="plateau_8h.html#a44f2d0cc019d090bd9af0bd3f86bb451">get_factions</a>(p);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="faction_8h.html#aa92da3f09f56bc38be472b50fcfed30d">get_nb_manches_gagnees</a>(fct.<a class="code" href="struct_factions__en__jeu.html#ad6aecb732d365d382955d9bc06fd897d">left</a>) == 2)</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        printf(<span class="stringliteral">&quot;Le vainqueur de la partie est : \&quot;%s\&quot;.\n&quot;</span>, <a class="code" href="faction_8h.html#a152a86ba5f75e19f5eaa93383d2cb64f">get_nom_faction</a>(fct.<a class="code" href="struct_factions__en__jeu.html#ad6aecb732d365d382955d9bc06fd897d">left</a>));</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    {</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        printf(<span class="stringliteral">&quot;Le vainqueur de la partie est : \&quot;%s\&quot;.\n&quot;</span>, <a class="code" href="faction_8h.html#a152a86ba5f75e19f5eaa93383d2cb64f">get_nom_faction</a>(fct.<a class="code" href="struct_factions__en__jeu.html#aae23e1080a95aef1f1610a99c39f9c81">right</a>));</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    printf(<span class="stringliteral">&quot;Mais cette victoire n&#39;est pas encore officialisée!\n&quot;</span>);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    printf(<span class="stringliteral">&quot;Il faut encore attendre le jury de validation pour que la victoire soit validée et définitive.\n&quot;</span>);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    sleep(1);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    printf(<span class="stringliteral">&quot;Mail de Laurent Prével: jury de validation de la victoire\n&quot;</span>);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    printf(<span class="stringliteral">&quot;Le jury va se réunir et évaluer la partie afin de valider ou non votre victoire... Ah, il manque un représentant de la DFP. Où est Julien Forest?\n&quot;</span>);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    sleep(3);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    printf(<span class="stringliteral">&quot;Ca sent la cigarette! L&#39;Homme des Cavernes, pardon, Julien Forest arrive par l&#39;ascenceur (son café n&#39;a pas réussi à l&#39;empêcher de dormir). Il va donc pouvoir présider le jury pour valider votre victoire!&quot;</span>);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;}</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="interface_8c.html#a8330a6ec294f24da52fe0f265181fbcc">  140</a></span>&#160;<a class="code" href="struct_coord.html">Coord</a> <a class="code" href="interface_8c.html#a8330a6ec294f24da52fe0f265181fbcc">demande_position</a>(<a class="code" href="structs__plateau.html">Plateau</a> p)</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;{</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <a class="code" href="struct_coord.html">Coord</a> previous = <a class="code" href="plateau_8h.html#aea95d42f536139d241b4993f65806c39">get_coord_derniere_carte_posee</a>(p);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordflow">if</span> (previous.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> == -1 &amp;&amp; previous.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> == -1) <span class="comment">// On n&#39;affiche pas le plateau car il n&#39;y a aucune carte posée.</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    {</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <a class="code" href="struct_coord.html">Coord</a> ret;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        ret.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = -1;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        ret.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = -1;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        printf(<span class="stringliteral">&quot;%s, vous êtes le premier à jouer! Votre carte sera posé au milieu du plateau!!\n&quot;</span>, <a class="code" href="faction_8h.html#a152a86ba5f75e19f5eaa93383d2cb64f">get_nom_faction</a>(<a class="code" href="plateau_8h.html#a44f2d0cc019d090bd9af0bd3f86bb451">get_factions</a>(p).left)); <span class="comment">// On rappelle que le plateau de jeu est infini.</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    }</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <a class="code" href="interface_8c.html#a8bb576a3127fc3437d91467ec19d0de0">affiche_plateau</a>(p);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    printf(<span class="stringliteral">&quot;Veuillez choisir où vous souhaitez poser la carte en saisissant le numéro associé:\n&quot;</span>);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordtype">int</span> counter = 0;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <a class="code" href="struct_coord.html">Coord</a> available[129 * 129];</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 129; i++)</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    {</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 129; j++)</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i, j) != NULL) <span class="comment">// Si la case n&#39;est pas nulle, alors il y a ue carte posée</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            {</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                <span class="keywordflow">if</span> (i == 0 &amp;&amp; j == 0) <span class="comment">// Coin en haut à gauche</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                {</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i, j + 1) == NULL)</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                    {</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j + 1;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i, j + 1);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                        available[counter] = tmp;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                        counter++;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                    }</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i + 1, j) == NULL)</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                    {</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i + 1;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i + 1, j);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                        available[counter] = tmp;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                        counter++;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                    }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                }</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (i == 0 &amp;&amp; j == 128) <span class="comment">// Coin en haut à droite</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                {</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i + 1, j) == NULL)</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                    {</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i + 1;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i + 1, j);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                        available[counter] = tmp;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                        counter++;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                    }</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i - 1, j) == NULL)</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                    {</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i - 1;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i - 1, j);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                        available[counter] = tmp;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                        counter++;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                    }</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                }</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (i == 128 &amp;&amp; j == 0) <span class="comment">// Coin en bas à gauche</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                {</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i - 1, j) == NULL)</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                    {</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i - 1;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i - 1, j);</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                        available[counter] = tmp;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                        counter++;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                    }</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i, j + 1) == NULL)</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                    {</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j + 1;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i, j + 1);</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                        available[counter] = tmp;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                        counter++;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                    }</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                }</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (i == 128 &amp;&amp; j == 128) <span class="comment">// Coin en bas à droite</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                {</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i, j - 1) == NULL)</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                    {</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j - 1;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i, j - 1);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                        available[counter] = tmp;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                        counter++;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                    }</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i - 1, j) == NULL)</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                    {</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i - 1;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i - 1, j);</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                        available[counter] = tmp;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                        counter++;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                    }</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                }</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (i == 0) <span class="comment">// Première ligne hors coins</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                {</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i, j + 1) == NULL) <span class="comment">// Point intérieur</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                    {</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j + 1;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i, j + 1);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                        available[counter] = tmp;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                        counter++;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                    }</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i + 1, j) == NULL)</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                    {</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i + 1;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i + 1, j);</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                        available[counter] = tmp;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                        counter++;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                    }</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i, j - 1) == NULL)</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                    {</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j - 1;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i, j - 1);</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                        available[counter] = tmp;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                        counter++;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                    }</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                }</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (i == 128) <span class="comment">// Dernière ligne hors coins</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                {</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i, j + 1) == NULL) <span class="comment">// Point intérieur</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                    {</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j + 1;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i, j + 1);</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                        available[counter] = tmp;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                        counter++;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                    }</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i, j - 1) == NULL)</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                    {</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j - 1;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i, j - 1);</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                        available[counter] = tmp;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                        counter++;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                    }</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i - 1, j) == NULL)</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                    {</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i - 1;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i - 1, j);</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                        available[counter] = tmp;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                        counter++;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                    }</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                }</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (j == 0) <span class="comment">// Première colonne hors coins</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                {</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i, j + 1) == NULL) <span class="comment">// Point intérieur</span></div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                    {</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j + 1;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i, j + 1);</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;                        available[counter] = tmp;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                        counter++;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;                    }</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i + 1, j) == NULL)</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;                    {</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i + 1;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i + 1, j);</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                        available[counter] = tmp;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                        counter++;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                    }</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i - 1, j) == NULL)</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                    {</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i - 1;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j;</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i - 1, j);</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                        available[counter] = tmp;</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                        counter++;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                    }</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                }</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (j == 128) <span class="comment">// Dernière colonne hors coins</span></div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                {</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i + 1, j) == NULL)</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;                    {</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i + 1;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i + 1, j);</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;                        available[counter] = tmp;</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;                        counter++;</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;                    }</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i, j - 1) == NULL)</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;                    {</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j - 1;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i, j - 1);</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;                        available[counter] = tmp;</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                        counter++;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;                    }</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i - 1, j) == NULL)</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;                    {</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i - 1;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i - 1, j);</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;                        available[counter] = tmp;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;                        counter++;</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;                    }</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;                }</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;                <span class="keywordflow">else</span> <span class="comment">// Points intérieurs</span></div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;                {</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i, j + 1) == NULL) <span class="comment">// Point intérieur</span></div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;                    {</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j + 1;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i, j + 1);</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;                        available[counter] = tmp;</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;                        counter++;</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;                    }</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i + 1, j) == NULL)</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;                    {</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i + 1;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j;</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i + 1, j);</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;                        available[counter] = tmp;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;                        counter++;</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;                    }</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i, j - 1) == NULL)</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;                    {</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j - 1;</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i, j - 1);</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;                        available[counter] = tmp;</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;                        counter++;</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;                    }</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a>(p, i - 1, j) == NULL)</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;                    {</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;                        <a class="code" href="struct_coord.html">Coord</a> tmp;</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;                        tmp.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a> = i - 1;</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;                        tmp.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a> = j;</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;                        printf(<span class="stringliteral">&quot;%d: (%d,%d)\n&quot;</span>, counter + 1, i - 1, j);</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;                        available[counter] = tmp;</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;                        counter++;</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;                    }</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;                }</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;            }</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;        }</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    }</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    <span class="keywordtype">int</span> item = 0;</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    <span class="keywordflow">while</span> (scanf(<span class="stringliteral">&quot;%d&quot;</span>, &amp;item) == 0 || item &lt; 1 || item &gt; counter)</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    {</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;        printf(<span class="stringliteral">&quot;Veuillez saisir un nombre entier compris entre 1 et %d: &quot;</span>, counter);</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    }</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    <span class="keywordflow">return</span> available[item - 1];</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;}</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160; </div>
+<div class="line"><a name="l00415"></a><span class="lineno"><a class="line" href="interface_8c.html#a044fbcd951bab90748a27f16d77b718f">  415</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="interface_8c.html#a044fbcd951bab90748a27f16d77b718f">affiche_ddrs</a>(<a class="code" href="structs__plateau.html">Plateau</a> p)</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;{</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    <a class="code" href="struct_factions__en__jeu.html">Factions_en_jeu</a> factions = <a class="code" href="plateau_8h.html#a44f2d0cc019d090bd9af0bd3f86bb451">get_factions</a>(p);</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    printf(<span class="stringliteral">&quot;%s, vos points DDRS sont: %d.\n&quot;</span>, <a class="code" href="faction_8h.html#a152a86ba5f75e19f5eaa93383d2cb64f">get_nom_faction</a>(factions.<a class="code" href="struct_factions__en__jeu.html#ad6aecb732d365d382955d9bc06fd897d">left</a>), <a class="code" href="faction_8h.html#ac1ec72e1c18d60dc3a3718520464b9e9">get_pts_DDRS_manche</a>(factions.<a class="code" href="struct_factions__en__jeu.html#ad6aecb732d365d382955d9bc06fd897d">left</a>));</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    printf(<span class="stringliteral">&quot;%s, vos points DDRS sont: %d.\n&quot;</span>, <a class="code" href="faction_8h.html#a152a86ba5f75e19f5eaa93383d2cb64f">get_nom_faction</a>(factions.<a class="code" href="struct_factions__en__jeu.html#aae23e1080a95aef1f1610a99c39f9c81">right</a>), <a class="code" href="faction_8h.html#ac1ec72e1c18d60dc3a3718520464b9e9">get_pts_DDRS_manche</a>(factions.<a class="code" href="struct_factions__en__jeu.html#aae23e1080a95aef1f1610a99c39f9c81">right</a>));</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="astruct_factions__en__jeu_html_aae23e1080a95aef1f1610a99c39f9c81"><div class="ttname"><a href="struct_factions__en__jeu.html#aae23e1080a95aef1f1610a99c39f9c81">Factions_en_jeu::right</a></div><div class="ttdeci">Faction right</div><div class="ttdef"><b>Definition:</b> <a href="structure_8h_source.html#l00032">structure.h:32</a></div></div>
+<div class="ttc" id="ainterface_8c_html_a79cf870c92b63e231d41e188f2549520"><div class="ttname"><a href="interface_8c.html#a79cf870c92b63e231d41e188f2549520">affiche_effets</a></div><div class="ttdeci">void affiche_effets(int id)</div><div class="ttdoc">Affiche les effets de la carte c si elle est posée.</div><div class="ttdef"><b>Definition:</b> <a href="interface_8c_source.html#l00115">interface.c:115</a></div></div>
 <div class="ttc" id="ainterface_8c_html_ab716e0c166fd1d07dca1545157befef5"><div class="ttname"><a href="interface_8c.html#ab716e0c166fd1d07dca1545157befef5">nom_faction</a></div><div class="ttdeci">char * nom_faction(Faction f)</div><div class="ttdoc">Fonction qui demande le nom de la faction.</div><div class="ttdef"><b>Definition:</b> <a href="interface_8c_source.html#l00016">interface.c:16</a></div></div>
 <div class="ttc" id="astruct_coord_html_a37d972ae0b47b9099e30983131d31916"><div class="ttname"><a href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">Coord::j</a></div><div class="ttdeci">int j</div><div class="ttdef"><b>Definition:</b> <a href="structure_8h_source.html#l00050">structure.h:50</a></div></div>
 <div class="ttc" id="aplateau_8h_html_aea95d42f536139d241b4993f65806c39"><div class="ttname"><a href="plateau_8h.html#aea95d42f536139d241b4993f65806c39">get_coord_derniere_carte_posee</a></div><div class="ttdeci">Coord get_coord_derniere_carte_posee(Plateau p)</div><div class="ttdoc">Prototype de get_coord_derniere_carte_posee.</div><div class="ttdef"><b>Definition:</b> <a href="plateau_8c_source.html#l00064">plateau.c:64</a></div></div>
-<div class="ttc" id="afaction_8h_html_aa0864716c89adc851b3d848aea2e3931"><div class="ttname"><a href="faction_8h.html#aa0864716c89adc851b3d848aea2e3931">get_main</a></div><div class="ttdeci">Carte * get_main(Faction f)</div><div class="ttdoc">Prototype de get_main qui permet de récupérer la main de la faction.</div><div class="ttdef"><b>Definition:</b> <a href="faction_8c_source.html#l00169">faction.c:169</a></div></div>
+<div class="ttc" id="afaction_8h_html_aa0864716c89adc851b3d848aea2e3931"><div class="ttname"><a href="faction_8h.html#aa0864716c89adc851b3d848aea2e3931">get_main</a></div><div class="ttdeci">Carte * get_main(Faction f)</div><div class="ttdoc">Prototype de get_main qui permet de récupérer la main de la faction.</div><div class="ttdef"><b>Definition:</b> <a href="faction_8c_source.html#l00161">faction.c:161</a></div></div>
 <div class="ttc" id="astruct_structure_factions_html"><div class="ttname"><a href="struct_structure_factions.html">StructureFactions</a></div><div class="ttdoc">type concret pour la faction, a_remelange vaut 1 si la main a été remélangée, 0 sinon</div><div class="ttdef"><b>Definition:</b> <a href="faction_8c_source.html#l00024">faction.c:24</a></div></div>
-<div class="ttc" id="ainterface_8c_html_a8e9d54781d879f437be3285b5412c1c2"><div class="ttname"><a href="interface_8c.html#a8e9d54781d879f437be3285b5412c1c2">affiche_effets</a></div><div class="ttdeci">void affiche_effets(Carte c)</div><div class="ttdoc">Affiche les effets de la carte c si elle est posée.</div><div class="ttdef"><b>Definition:</b> <a href="interface_8c_source.html#l00114">interface.c:114</a></div></div>
 <div class="ttc" id="astruct_coord_html"><div class="ttname"><a href="struct_coord.html">Coord</a></div><div class="ttdoc">Structure pour stocker les coordonnées d'une carte sur la grille 2D.</div><div class="ttdef"><b>Definition:</b> <a href="structure_8h_source.html#l00047">structure.h:47</a></div></div>
 <div class="ttc" id="aplateau_8h_html_a54d750566fa496b43d4791d422edf570"><div class="ttname"><a href="plateau_8h.html#a54d750566fa496b43d4791d422edf570">get_colonne_droite</a></div><div class="ttdeci">int get_colonne_droite(Plateau p)</div><div class="ttdoc">Prototype de get_colonne_droite.</div><div class="ttdef"><b>Definition:</b> <a href="plateau_8c_source.html#l00119">plateau.c:119</a></div></div>
 <div class="ttc" id="aplateau_8h_html_a44f2d0cc019d090bd9af0bd3f86bb451"><div class="ttname"><a href="plateau_8h.html#a44f2d0cc019d090bd9af0bd3f86bb451">get_factions</a></div><div class="ttdeci">Factions_en_jeu get_factions(Plateau p)</div><div class="ttdoc">Prototype de get_factions qui permet de récupérer les factions en jeu.</div><div class="ttdef"><b>Definition:</b> <a href="plateau_8c_source.html#l00059">plateau.c:59</a></div></div>
-<div class="ttc" id="ainterface_8c_html_a802545d4ff1c158f7a2ca77be20915f9"><div class="ttname"><a href="interface_8c.html#a802545d4ff1c158f7a2ca77be20915f9">affiche_vainqueur</a></div><div class="ttdeci">void affiche_vainqueur(Plateau p)</div><div class="ttdoc">Affiche le vainquer de la partie.</div><div class="ttdef"><b>Definition:</b> <a href="interface_8c_source.html#l00119">interface.c:119</a></div></div>
-<div class="ttc" id="acarte_8h_html_a253c323b2facf1fd67c2e6602c5932ee"><div class="ttname"><a href="carte_8h.html#a253c323b2facf1fd67c2e6602c5932ee">get_proprietaire</a></div><div class="ttdeci">Faction get_proprietaire(Carte c)</div><div class="ttdoc">Prototype de get_proprietaire qui permet de récupérer la faction qui possède cette carte.</div><div class="ttdef"><b>Definition:</b> <a href="carte_8c_source.html#l00103">carte.c:103</a></div></div>
-<div class="ttc" id="afaction_8h_html_ac1ec72e1c18d60dc3a3718520464b9e9"><div class="ttname"><a href="faction_8h.html#ac1ec72e1c18d60dc3a3718520464b9e9">get_pts_DDRS_manche</a></div><div class="ttdeci">int get_pts_DDRS_manche(Faction f)</div><div class="ttdoc">Prototype de get_pts_DDRS_manche qui permet de récupérer le nombre de points DDRS de la manche en cou...</div><div class="ttdef"><b>Definition:</b> <a href="faction_8c_source.html#l00149">faction.c:149</a></div></div>
-<div class="ttc" id="afaction_8h_html_aa92da3f09f56bc38be472b50fcfed30d"><div class="ttname"><a href="faction_8h.html#aa92da3f09f56bc38be472b50fcfed30d">get_nb_manches_gagnees</a></div><div class="ttdeci">int get_nb_manches_gagnees(Faction f)</div><div class="ttdoc">Prototype de get_nb_manches_gagnees qui permet de récupérer le nombre de manches gagnées d'une factio...</div><div class="ttdef"><b>Definition:</b> <a href="faction_8c_source.html#l00139">faction.c:139</a></div></div>
+<div class="ttc" id="ainterface_8c_html_a802545d4ff1c158f7a2ca77be20915f9"><div class="ttname"><a href="interface_8c.html#a802545d4ff1c158f7a2ca77be20915f9">affiche_vainqueur</a></div><div class="ttdeci">void affiche_vainqueur(Plateau p)</div><div class="ttdoc">Affiche le vainquer de la partie.</div><div class="ttdef"><b>Definition:</b> <a href="interface_8c_source.html#l00120">interface.c:120</a></div></div>
+<div class="ttc" id="acarte_8h_html_a253c323b2facf1fd67c2e6602c5932ee"><div class="ttname"><a href="carte_8h.html#a253c323b2facf1fd67c2e6602c5932ee">get_proprietaire</a></div><div class="ttdeci">Faction get_proprietaire(Carte c)</div><div class="ttdoc">Prototype de get_proprietaire qui permet de récupérer la faction qui possède cette carte.</div><div class="ttdef"><b>Definition:</b> <a href="carte_8c_source.html#l00115">carte.c:115</a></div></div>
+<div class="ttc" id="afaction_8h_html_ac1ec72e1c18d60dc3a3718520464b9e9"><div class="ttname"><a href="faction_8h.html#ac1ec72e1c18d60dc3a3718520464b9e9">get_pts_DDRS_manche</a></div><div class="ttdeci">int get_pts_DDRS_manche(Faction f)</div><div class="ttdoc">Prototype de get_pts_DDRS_manche qui permet de récupérer le nombre de points DDRS de la manche en cou...</div><div class="ttdef"><b>Definition:</b> <a href="faction_8c_source.html#l00141">faction.c:141</a></div></div>
+<div class="ttc" id="afaction_8h_html_aa92da3f09f56bc38be472b50fcfed30d"><div class="ttname"><a href="faction_8h.html#aa92da3f09f56bc38be472b50fcfed30d">get_nb_manches_gagnees</a></div><div class="ttdeci">int get_nb_manches_gagnees(Faction f)</div><div class="ttdoc">Prototype de get_nb_manches_gagnees qui permet de récupérer le nombre de manches gagnées d'une factio...</div><div class="ttdef"><b>Definition:</b> <a href="faction_8c_source.html#l00131">faction.c:131</a></div></div>
 <div class="ttc" id="aplateau_8h_html_aeb1641caabcbbfd6f59aabab9de29ae3"><div class="ttname"><a href="plateau_8h.html#aeb1641caabcbbfd6f59aabab9de29ae3">get_coord_carte_haut_gauche</a></div><div class="ttdeci">Coord get_coord_carte_haut_gauche(Plateau p)</div><div class="ttdoc">Prototype de get_coord_carte_haut_gauche.</div><div class="ttdef"><b>Definition:</b> <a href="plateau_8c_source.html#l00089">plateau.c:89</a></div></div>
 <div class="ttc" id="astruct_factions__en__jeu_html"><div class="ttname"><a href="struct_factions__en__jeu.html">Factions_en_jeu</a></div><div class="ttdoc">Structure pour les couples de factions.</div><div class="ttdef"><b>Definition:</b> <a href="structure_8h_source.html#l00029">structure.h:29</a></div></div>
-<div class="ttc" id="ainterface_8c_html_a8330a6ec294f24da52fe0f265181fbcc"><div class="ttname"><a href="interface_8c.html#a8330a6ec294f24da52fe0f265181fbcc">demande_position</a></div><div class="ttdeci">Coord demande_position(Plateau p)</div><div class="ttdoc">Fonction qui demande à quelle position doit être placée la carte.</div><div class="ttdef"><b>Definition:</b> <a href="interface_8c_source.html#l00139">interface.c:139</a></div></div>
+<div class="ttc" id="ainterface_8c_html_a8330a6ec294f24da52fe0f265181fbcc"><div class="ttname"><a href="interface_8c.html#a8330a6ec294f24da52fe0f265181fbcc">demande_position</a></div><div class="ttdeci">Coord demande_position(Plateau p)</div><div class="ttdoc">Fonction qui demande à quelle position doit être placée la carte.</div><div class="ttdef"><b>Definition:</b> <a href="interface_8c_source.html#l00140">interface.c:140</a></div></div>
 <div class="ttc" id="aplateau_8h_html_ae557fab87da33bf071ae6b4ce4430ae0"><div class="ttname"><a href="plateau_8h.html#ae557fab87da33bf071ae6b4ce4430ae0">get_colonne_gauche</a></div><div class="ttdeci">int get_colonne_gauche(Plateau p)</div><div class="ttdoc">Prototype de get_colonne_gauche.</div><div class="ttdef"><b>Definition:</b> <a href="plateau_8c_source.html#l00114">plateau.c:114</a></div></div>
+<div class="ttc" id="acarte_8h_html_a07d5b163a3e848772039f8f2e99db83e"><div class="ttname"><a href="carte_8h.html#a07d5b163a3e848772039f8f2e99db83e">get_id</a></div><div class="ttdeci">id_carte get_id(Carte c)</div><div class="ttdoc">Prototype de get_id qui permet de récupérer l'id de la carte.</div><div class="ttdef"><b>Definition:</b> <a href="carte_8c_source.html#l00105">carte.c:105</a></div></div>
 <div class="ttc" id="astructs__plateau_html"><div class="ttname"><a href="structs__plateau.html">s_plateau</a></div><div class="ttdoc">type concret vers lequel pointe le plateau de jeu</div><div class="ttdef"><b>Definition:</b> <a href="plateau_8c_source.html#l00026">plateau.c:26</a></div></div>
+<div class="ttc" id="acarte_8h_html_a500a84466dd672b4940525996014d3f6"><div class="ttname"><a href="carte_8h.html#a500a84466dd672b4940525996014d3f6">get_description_vg</a></div><div class="ttdeci">char * get_description_vg(int i)</div><div class="ttdoc">Prototype de get_description qui permet de récupérer description[i].</div><div class="ttdef"><b>Definition:</b> <a href="carte_8c_source.html#l00175">carte.c:175</a></div></div>
 <div class="ttc" id="astruct_factions__en__jeu_html_ad6aecb732d365d382955d9bc06fd897d"><div class="ttname"><a href="struct_factions__en__jeu.html#ad6aecb732d365d382955d9bc06fd897d">Factions_en_jeu::left</a></div><div class="ttdeci">Faction left</div><div class="ttdef"><b>Definition:</b> <a href="structure_8h_source.html#l00031">structure.h:31</a></div></div>
 <div class="ttc" id="astruct_coord_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">Coord::i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> <a href="structure_8h_source.html#l00049">structure.h:49</a></div></div>
-<div class="ttc" id="afaction_8h_html_a152a86ba5f75e19f5eaa93383d2cb64f"><div class="ttname"><a href="faction_8h.html#a152a86ba5f75e19f5eaa93383d2cb64f">get_nom_faction</a></div><div class="ttdeci">char * get_nom_faction(Faction f)</div><div class="ttdoc">Prototype de get_nom qui permet de récupérer le nom de la faction.</div><div class="ttdef"><b>Definition:</b> <a href="faction_8c_source.html#l00129">faction.c:129</a></div></div>
+<div class="ttc" id="afaction_8h_html_a152a86ba5f75e19f5eaa93383d2cb64f"><div class="ttname"><a href="faction_8h.html#a152a86ba5f75e19f5eaa93383d2cb64f">get_nom_faction</a></div><div class="ttdeci">char * get_nom_faction(Faction f)</div><div class="ttdoc">Prototype de get_nom qui permet de récupérer le nom de la faction.</div><div class="ttdef"><b>Definition:</b> <a href="faction_8c_source.html#l00121">faction.c:121</a></div></div>
 <div class="ttc" id="ainterface_8c_html_a8bb576a3127fc3437d91467ec19d0de0"><div class="ttname"><a href="interface_8c.html#a8bb576a3127fc3437d91467ec19d0de0">affiche_plateau</a></div><div class="ttdeci">void affiche_plateau(Plateau p)</div><div class="ttdoc">Fonction qui affiche le plateau de jeu.</div><div class="ttdef"><b>Definition:</b> <a href="interface_8c_source.html#l00024">interface.c:24</a></div></div>
-<div class="ttc" id="acarte_8h_html_ab61f3254187615cbc1c13aa4e51633c2"><div class="ttname"><a href="carte_8h.html#ab61f3254187615cbc1c13aa4e51633c2">get_est_cachee</a></div><div class="ttdeci">int get_est_cachee(Carte c)</div><div class="ttdoc">Prototype de get_est_cachee qui permet de récupérer un entier qui indique si la face est cachée ou pa...</div><div class="ttdef"><b>Definition:</b> <a href="carte_8c_source.html#l00143">carte.c:143</a></div></div>
-<div class="ttc" id="acarte_8h_html_a99d2f8528669eb8a99312bb74a2a27bb"><div class="ttname"><a href="carte_8h.html#a99d2f8528669eb8a99312bb74a2a27bb">get_description</a></div><div class="ttdeci">char * get_description(Carte c)</div><div class="ttdoc">Prototype de get_description qui permet de récupérer la description de la carte.</div><div class="ttdef"><b>Definition:</b> <a href="carte_8c_source.html#l00123">carte.c:123</a></div></div>
+<div class="ttc" id="acarte_8h_html_ab61f3254187615cbc1c13aa4e51633c2"><div class="ttname"><a href="carte_8h.html#ab61f3254187615cbc1c13aa4e51633c2">get_est_cachee</a></div><div class="ttdeci">int get_est_cachee(Carte c)</div><div class="ttdoc">Prototype de get_est_cachee qui permet de récupérer un entier qui indique si la face est cachée ou pa...</div><div class="ttdef"><b>Definition:</b> <a href="carte_8c_source.html#l00155">carte.c:155</a></div></div>
 <div class="ttc" id="aplateau_8h_html_a92084eaa6f92c0599b937540635fee93"><div class="ttname"><a href="plateau_8h.html#a92084eaa6f92c0599b937540635fee93">get_carte_at</a></div><div class="ttdeci">Carte get_carte_at(Plateau p, int i, int j)</div><div class="ttdoc">Prototype de get_carte_at.</div><div class="ttdef"><b>Definition:</b> <a href="plateau_8c_source.html#l00054">plateau.c:54</a></div></div>
-<div class="ttc" id="acarte_8c_html_a2b6d4f8bcc0250f758fbe1084d6db400"><div class="ttname"><a href="carte_8c.html#a2b6d4f8bcc0250f758fbe1084d6db400">nb_cartes</a></div><div class="ttdeci">const int nb_cartes</div><div class="ttdoc">Déclaration des constantes et variables globales relative aux cartes. Nombre de carte fixe à 8 ainsi ...</div><div class="ttdef"><b>Definition:</b> <a href="carte_8c_source.html#l00043">carte.c:43</a></div></div>
-<div class="ttc" id="ainterface_8c_html_a59cec6e54845df8ae5160bd8b2a351c2"><div class="ttname"><a href="interface_8c.html#a59cec6e54845df8ae5160bd8b2a351c2">a_poser_face_cachee_sur_plateau</a></div><div class="ttdeci">Carte a_poser_face_cachee_sur_plateau(Faction f)</div><div class="ttdoc">Fonction qui demande la carte qui sera posée face cachée sur le plateau.</div><div class="ttdef"><b>Definition:</b> <a href="interface_8c_source.html#l00083">interface.c:83</a></div></div>
+<div class="ttc" id="acarte_8h_html_aa5b54fe67b2e3c56e0c7c7847085b680"><div class="ttname"><a href="carte_8h.html#aa5b54fe67b2e3c56e0c7c7847085b680">get_nom_carte_vg</a></div><div class="ttdeci">char * get_nom_carte_vg(int i)</div><div class="ttdoc">Prototype de get_nom_carte qui permet de récupérer nom_carte[i].</div><div class="ttdef"><b>Definition:</b> <a href="carte_8c_source.html#l00170">carte.c:170</a></div></div>
+<div class="ttc" id="acarte_8c_html_a2b6d4f8bcc0250f758fbe1084d6db400"><div class="ttname"><a href="carte_8c.html#a2b6d4f8bcc0250f758fbe1084d6db400">nb_cartes</a></div><div class="ttdeci">const int nb_cartes</div><div class="ttdoc">Déclaration des constantes et variables globales relative aux cartes. Nombre de carte fixe à 8 ainsi ...</div><div class="ttdef"><b>Definition:</b> <a href="carte_8c_source.html#l00055">carte.c:55</a></div></div>
+<div class="ttc" id="ainterface_8c_html_a59cec6e54845df8ae5160bd8b2a351c2"><div class="ttname"><a href="interface_8c.html#a59cec6e54845df8ae5160bd8b2a351c2">a_poser_face_cachee_sur_plateau</a></div><div class="ttdeci">Carte a_poser_face_cachee_sur_plateau(Faction f)</div><div class="ttdoc">Fonction qui demande la carte qui sera posée face cachée sur le plateau.</div><div class="ttdef"><b>Definition:</b> <a href="interface_8c_source.html#l00084">interface.c:84</a></div></div>
 <div class="ttc" id="amain_8c_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdoc">Fonction principale qui controle le programme.</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00077">main.c:77</a></div></div>
 <div class="ttc" id="astruct_structure_carte_html"><div class="ttname"><a href="struct_structure_carte.html">StructureCarte</a></div><div class="ttdoc">type concret pour la faction, est_cachee vaut 1 si la carte est posée face cachée,...</div><div class="ttdef"><b>Definition:</b> <a href="carte_8c_source.html#l00022">carte.c:22</a></div></div>
-<div class="ttc" id="ainterface_8c_html_ad36c35f78849abca949ea8c755f5b4e6"><div class="ttname"><a href="interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6">affiche_main</a></div><div class="ttdeci">void affiche_main(Faction f)</div><div class="ttdoc">Fonction qui affiche la main de la faction pointée par f.</div><div class="ttdef"><b>Definition:</b> <a href="interface_8c_source.html#l00057">interface.c:57</a></div></div>
-<div class="ttc" id="ainterface_8c_html_aea24bb8bc24a5877aba14a3879602c7b"><div class="ttname"><a href="interface_8c.html#aea24bb8bc24a5877aba14a3879602c7b">utiliser_option</a></div><div class="ttdeci">int utiliser_option(Faction f)</div><div class="ttdoc">Fonction qui demande si la faction pointée par f veut utiliser son option.</div><div class="ttdef"><b>Definition:</b> <a href="interface_8c_source.html#l00075">interface.c:75</a></div></div>
-<div class="ttc" id="acarte_8h_html_a36dc56ecacce3b5d693e8ddab6e4201a"><div class="ttname"><a href="carte_8h.html#a36dc56ecacce3b5d693e8ddab6e4201a">get_nom</a></div><div class="ttdeci">char * get_nom(Carte c)</div><div class="ttdoc">Prototype de get_nom qui permet de récupérer le nom de la carte.</div><div class="ttdef"><b>Definition:</b> <a href="carte_8c_source.html#l00113">carte.c:113</a></div></div>
+<div class="ttc" id="ainterface_8c_html_ad36c35f78849abca949ea8c755f5b4e6"><div class="ttname"><a href="interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6">affiche_main</a></div><div class="ttdeci">void affiche_main(Faction f)</div><div class="ttdoc">Fonction qui affiche la main de la faction pointée par f.</div><div class="ttdef"><b>Definition:</b> <a href="interface_8c_source.html#l00058">interface.c:58</a></div></div>
+<div class="ttc" id="ainterface_8c_html_aea24bb8bc24a5877aba14a3879602c7b"><div class="ttname"><a href="interface_8c.html#aea24bb8bc24a5877aba14a3879602c7b">utiliser_option</a></div><div class="ttdeci">int utiliser_option(Faction f)</div><div class="ttdoc">Fonction qui demande si la faction pointée par f veut utiliser son option.</div><div class="ttdef"><b>Definition:</b> <a href="interface_8c_source.html#l00076">interface.c:76</a></div></div>
+<div class="ttc" id="acarte_8h_html_a36dc56ecacce3b5d693e8ddab6e4201a"><div class="ttname"><a href="carte_8h.html#a36dc56ecacce3b5d693e8ddab6e4201a">get_nom</a></div><div class="ttdeci">char * get_nom(Carte c)</div><div class="ttdoc">Prototype de get_nom qui permet de récupérer le nom de la carte.</div><div class="ttdef"><b>Definition:</b> <a href="carte_8c_source.html#l00125">carte.c:125</a></div></div>
 <div class="ttc" id="aplateau_8h_html_aadf513dc21050ac59427fc760760b16d"><div class="ttname"><a href="plateau_8h.html#aadf513dc21050ac59427fc760760b16d">get_coord_carte_bas_droite</a></div><div class="ttdeci">Coord get_coord_carte_bas_droite(Plateau p)</div><div class="ttdoc">Prototype de get_coord_carte_bas_droite.</div><div class="ttdef"><b>Definition:</b> <a href="plateau_8c_source.html#l00094">plateau.c:94</a></div></div>
-<div class="ttc" id="ainterface_8c_html_a044fbcd951bab90748a27f16d77b718f"><div class="ttname"><a href="interface_8c.html#a044fbcd951bab90748a27f16d77b718f">affiche_ddrs</a></div><div class="ttdeci">void affiche_ddrs(Plateau p)</div><div class="ttdoc">Affiche les points DDRS des deux factions.</div><div class="ttdef"><b>Definition:</b> <a href="interface_8c_source.html#l00414">interface.c:414</a></div></div>
+<div class="ttc" id="ainterface_8c_html_a044fbcd951bab90748a27f16d77b718f"><div class="ttname"><a href="interface_8c.html#a044fbcd951bab90748a27f16d77b718f">affiche_ddrs</a></div><div class="ttdeci">void affiche_ddrs(Plateau p)</div><div class="ttdoc">Affiche les points DDRS des deux factions.</div><div class="ttdef"><b>Definition:</b> <a href="interface_8c_source.html#l00415">interface.c:415</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Généré par &#160;<a href="http://www.doxygen.org/index.html">

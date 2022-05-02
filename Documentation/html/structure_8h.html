@@ -152,8 +152,9 @@ Fonctions</h2></td></tr>
 <tr class="memitem:a7b95c6a72accdcab7cc1f39d2536fe06"><td class="memItemLeft" align="right" valign="top"><a class="el" href="carte_8h.html#a633ba64ee908d35aac798844f477ee9d">Carte</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structure_8h.html#a7b95c6a72accdcab7cc1f39d2536fe06">enleve_pioche</a> (<a class="el" href="structure_8h.html#a9b18ab4f4d3508a3f5ce014f4040217f">Pioche</a> p)</td></tr>
 <tr class="memdesc:a7b95c6a72accdcab7cc1f39d2536fe06"><td class="mdescLeft">&#160;</td><td class="mdescRight">enlève la carte au sommet de la pioche (on suppose la pioche non vide)  <a href="structure_8h.html#a7b95c6a72accdcab7cc1f39d2536fe06">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a7b95c6a72accdcab7cc1f39d2536fe06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea557b1ca9333f45e14a77f9896d0a56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structure_8h.html#aea557b1ca9333f45e14a77f9896d0a56">affiche_pioche</a> (<a class="el" href="structure_8h.html#a9b18ab4f4d3508a3f5ce014f4040217f">Pioche</a> p, <a class="el" href="faction_8h.html#a0456d2a4764f54c3e638c612de27a485">Faction</a> f)</td></tr>
-<tr class="separator:aea557b1ca9333f45e14a77f9896d0a56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a855e5f243da2af0fb6391901773dc997"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structure_8h.html#a855e5f243da2af0fb6391901773dc997">libere_pioche</a> (<a class="el" href="structure_8h.html#a9b18ab4f4d3508a3f5ce014f4040217f">Pioche</a> p)</td></tr>
+<tr class="memdesc:a855e5f243da2af0fb6391901773dc997"><td class="mdescLeft">&#160;</td><td class="mdescRight">libère la pioche et ses cartes  <a href="structure_8h.html#a855e5f243da2af0fb6391901773dc997">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a855e5f243da2af0fb6391901773dc997"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>Interface pour gérer le plateau de jeu et le déroulement de la partie. </p>
@@ -255,46 +256,6 @@ Fonctions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Documentation des fonctions</h2>
-<a id="aea557b1ca9333f45e14a77f9896d0a56"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea557b1ca9333f45e14a77f9896d0a56">&#9670;&nbsp;</a></span>affiche_pioche()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void affiche_pioche </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structure_8h.html#a9b18ab4f4d3508a3f5ce014f4040217f">Pioche</a>&#160;</td>
-          <td class="paramname"><em>p</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="faction_8h.html#a0456d2a4764f54c3e638c612de27a485">Faction</a>&#160;</td>
-          <td class="paramname"><em>f</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Définition à la ligne <a class="el" href="structure_8c_source.html#l00055">55</a> du fichier <a class="el" href="structure_8c_source.html">structure.c</a>.</p>
-<div class="dynheader">
-Voici le graphe d'appel pour cette fonction :</div>
-<div class="dyncontent">
-<div class="center"><img src="structure_8h_aea557b1ca9333f45e14a77f9896d0a56_cgraph.png" border="0" usemap="#structure_8h_aea557b1ca9333f45e14a77f9896d0a56_cgraph" alt=""/></div>
-<map name="structure_8h_aea557b1ca9333f45e14a77f9896d0a56_cgraph" id="structure_8h_aea557b1ca9333f45e14a77f9896d0a56_cgraph">
-<area shape="rect" title=" " alt="" coords="5,31,121,57"/>
-<area shape="rect" href="carte_8h.html#a07d5b163a3e848772039f8f2e99db83e" title="Prototype de get_id qui permet de récupérer l&#39;id de la carte." alt="" coords="203,5,266,32"/>
-<area shape="rect" href="faction_8h.html#a152a86ba5f75e19f5eaa93383d2cb64f" title="Prototype de get_nom qui permet de récupérer le nom de la faction." alt="" coords="169,56,300,83"/>
-</map>
-</div>
-
-</div>
-</div>
 <a id="ac8dcdc0ffb092b739d94573e47eaaacf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac8dcdc0ffb092b739d94573e47eaaacf">&#9670;&nbsp;</a></span>ajout_pioche()</h2>
 
@@ -336,17 +297,18 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="structure_8h_ac8dcdc0ffb092b739d94573e47eaaacf_icgraph.png" border="0" usemap="#structure_8h_ac8dcdc0ffb092b739d94573e47eaaacf_icgraph" alt=""/></div>
 <map name="structure_8h_ac8dcdc0ffb092b739d94573e47eaaacf_icgraph" id="structure_8h_ac8dcdc0ffb092b739d94573e47eaaacf_icgraph">
-<area shape="rect" title="ajoute la carte à la pioche au sommet de celle&#45;ci" alt="" coords="748,208,853,235"/>
-<area shape="rect" href="plateau_8c.html#a2190bbe0984d78c5f3d5f2e646210f07" title="Crée la pioche avec les 32 cartes de l&#39;énoncé pour la faction donnée." alt="" coords="586,107,679,133"/>
-<area shape="rect" href="faction_8c.html#adf3497e77c11921394ac7ca7d2e6cbdb" title="Permet à une faction de mélanger sa pioche." alt="" coords="565,208,700,235"/>
-<area shape="rect" href="faction_8c.html#aa3b0b517bf0cba1c7d52fb4ca770fcdb" title="Permet à une faction de vider sa main." alt="" coords="574,259,691,285"/>
-<area shape="rect" href="plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="380,81,517,108"/>
-<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="277,81,332,108"/>
+<area shape="rect" title="ajoute la carte à la pioche au sommet de celle&#45;ci" alt="" coords="891,157,996,184"/>
+<area shape="rect" href="plateau_8c.html#a2190bbe0984d78c5f3d5f2e646210f07" title="Crée la pioche avec les 32 cartes de l&#39;énoncé pour la faction donnée." alt="" coords="729,93,822,120"/>
+<area shape="rect" href="faction_8c.html#adf3497e77c11921394ac7ca7d2e6cbdb" title="Permet à une faction de mélanger sa pioche." alt="" coords="708,157,843,184"/>
+<area shape="rect" href="faction_8c.html#aa3b0b517bf0cba1c7d52fb4ca770fcdb" title="Permet à une faction de vider sa main." alt="" coords="717,208,834,235"/>
+<area shape="rect" href="plateau_8c.html#aa1b228e632acc6462080d59a556f0cfa" title="Crée une faction initialisée." alt="" coords="565,81,660,108"/>
+<area shape="rect" href="plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="399,5,498,32"/>
+<area shape="rect" href="plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="380,56,517,83"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="277,56,332,83"/>
 <area shape="rect" href="interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="123,5,229,32"/>
-<area shape="rect" href="plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="127,56,225,83"/>
-<area shape="rect" href="faction_8c.html#aef8713f12e5372bd993f34fa4f6d6cab" title=" " alt="" coords="135,107,217,133"/>
-<area shape="rect" href="main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="5,183,75,209"/>
-<area shape="rect" href="faction_8c.html#abc7feb29ed864c76ea95e1afc3cc7752" title="Permet à une faction de vider sa main, mélanger sa pioche et repiocher ses cartes." alt="" coords="407,259,491,285"/>
+<area shape="rect" href="faction_8c.html#aef8713f12e5372bd993f34fa4f6d6cab" title=" " alt="" coords="135,56,217,83"/>
+<area shape="rect" href="main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="5,132,75,159"/>
+<area shape="rect" href="faction_8c.html#abc7feb29ed864c76ea95e1afc3cc7752" title="Permet à une faction de vider sa main, mélanger sa pioche et repiocher ses cartes." alt="" coords="571,208,655,235"/>
 </map>
 </div>
 
@@ -384,14 +346,15 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="structure_8h_ad911b5ece54d506c7109120dbfc9c2f0_icgraph.png" border="0" usemap="#structure_8h_ad911b5ece54d506c7109120dbfc9c2f0_icgraph" alt=""/></div>
 <map name="structure_8h_ad911b5ece54d506c7109120dbfc9c2f0_icgraph" id="structure_8h_ad911b5ece54d506c7109120dbfc9c2f0_icgraph">
-<area shape="rect" title="Savoir si une faction a itilisé l&#39;option de remélanger sa main et boîte à idée et de repiocher des ca..." alt="" coords="707,56,867,83"/>
-<area shape="rect" href="plateau_8c.html#a2190bbe0984d78c5f3d5f2e646210f07" title="Crée la pioche avec les 32 cartes de l&#39;énoncé pour la faction donnée." alt="" coords="565,56,659,83"/>
+<area shape="rect" title="Savoir si une faction a itilisé l&#39;option de remélanger sa main et boîte à idée et de repiocher des ca..." alt="" coords="849,56,1009,83"/>
+<area shape="rect" href="plateau_8c.html#a2190bbe0984d78c5f3d5f2e646210f07" title="Crée la pioche avec les 32 cartes de l&#39;énoncé pour la faction donnée." alt="" coords="708,56,801,83"/>
+<area shape="rect" href="plateau_8c.html#aa1b228e632acc6462080d59a556f0cfa" title="Crée une faction initialisée." alt="" coords="565,56,660,83"/>
+<area shape="rect" href="plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="399,5,498,32"/>
 <area shape="rect" href="plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="380,56,517,83"/>
 <area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="277,56,332,83"/>
 <area shape="rect" href="interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="123,5,229,32"/>
-<area shape="rect" href="plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="127,56,225,83"/>
-<area shape="rect" href="faction_8c.html#aef8713f12e5372bd993f34fa4f6d6cab" title=" " alt="" coords="135,107,217,133"/>
-<area shape="rect" href="main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="5,81,75,108"/>
+<area shape="rect" href="faction_8c.html#aef8713f12e5372bd993f34fa4f6d6cab" title=" " alt="" coords="135,56,217,83"/>
+<area shape="rect" href="main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="5,56,75,83"/>
 </map>
 </div>
 
@@ -428,16 +391,74 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="structure_8h_a7b95c6a72accdcab7cc1f39d2536fe06_icgraph.png" border="0" usemap="#structure_8h_a7b95c6a72accdcab7cc1f39d2536fe06_icgraph" alt=""/></div>
 <map name="structure_8h_a7b95c6a72accdcab7cc1f39d2536fe06_icgraph" id="structure_8h_a7b95c6a72accdcab7cc1f39d2536fe06_icgraph">
-<area shape="rect" title="enlève la carte au sommet de la pioche (on suppose la pioche non vide)" alt="" coords="725,31,841,57"/>
-<area shape="rect" href="faction_8c.html#adf3497e77c11921394ac7ca7d2e6cbdb" title="Permet à une faction de mélanger sa pioche." alt="" coords="543,5,677,32"/>
-<area shape="rect" href="faction_8c.html#a5b400a1d1b3c89ef50e5bb4b98e177cb" title="Permet à une faction de repiocher ses cartes." alt="" coords="575,56,645,83"/>
-<area shape="rect" href="faction_8c.html#abc7feb29ed864c76ea95e1afc3cc7752" title="Permet à une faction de vider sa main, mélanger sa pioche et repiocher ses cartes." alt="" coords="411,31,495,57"/>
-<area shape="rect" href="main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="293,31,363,57"/>
-<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="191,56,245,83"/>
-<area shape="rect" href="interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="21,5,127,32"/>
-<area shape="rect" href="plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="25,56,123,83"/>
-<area shape="rect" href="plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,107,143,133"/>
-<area shape="rect" href="faction_8c.html#aef8713f12e5372bd993f34fa4f6d6cab" title=" " alt="" coords="33,157,115,184"/>
+<area shape="rect" title="enlève la carte au sommet de la pioche (on suppose la pioche non vide)" alt="" coords="1036,309,1152,336"/>
+<area shape="rect" href="structure_8c.html#a855e5f243da2af0fb6391901773dc997" title="libère la pioche et ses cartes" alt="" coords="879,183,988,209"/>
+<area shape="rect" href="faction_8c.html#adf3497e77c11921394ac7ca7d2e6cbdb" title="Permet à une faction de mélanger sa pioche." alt="" coords="345,360,480,387"/>
+<area shape="rect" href="faction_8c.html#a5b400a1d1b3c89ef50e5bb4b98e177cb" title="Permet à une faction de repiocher ses cartes." alt="" coords="377,309,448,336"/>
+<area shape="rect" href="faction_8c.html#a66e884a727de4d0741a8d344308ed43d" title="Permet de supprimer une faction et de libérer son espace mémoire alloué" alt="" coords="691,132,831,159"/>
+<area shape="rect" href="plateau_8c.html#aa2fd2fef89b903a5c089bf57cb932e29" title="Libère la mémoire associée au plateau de jeu et aux deux factions." alt="" coords="528,132,643,159"/>
+<area shape="rect" href="plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,5,143,32"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="385,132,440,159"/>
+<area shape="rect" href="interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="191,259,297,285"/>
+<area shape="rect" href="plateau_8c.html#aa1b228e632acc6462080d59a556f0cfa" title="Crée une faction initialisée." alt="" coords="197,56,291,83"/>
+<area shape="rect" href="faction_8c.html#aef8713f12e5372bd993f34fa4f6d6cab" title=" " alt="" coords="203,208,285,235"/>
+<area shape="rect" href="main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="39,309,109,336"/>
+<area shape="rect" href="plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="25,81,123,108"/>
+<area shape="rect" href="faction_8c.html#abc7feb29ed864c76ea95e1afc3cc7752" title="Permet à une faction de vider sa main, mélanger sa pioche et repiocher ses cartes." alt="" coords="202,360,286,387"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a855e5f243da2af0fb6391901773dc997"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a855e5f243da2af0fb6391901773dc997">&#9670;&nbsp;</a></span>libere_pioche()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void libere_pioche </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structure_8h.html#a9b18ab4f4d3508a3f5ce014f4040217f">Pioche</a>&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>libère la pioche et ses cartes </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>une pioche valide </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="structure_8c_source.html#l00055">55</a> du fichier <a class="el" href="structure_8c_source.html">structure.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="structure_8h_a855e5f243da2af0fb6391901773dc997_cgraph.png" border="0" usemap="#structure_8h_a855e5f243da2af0fb6391901773dc997_cgraph" alt=""/></div>
+<map name="structure_8h_a855e5f243da2af0fb6391901773dc997_cgraph" id="structure_8h_a855e5f243da2af0fb6391901773dc997_cgraph">
+<area shape="rect" title="libère la pioche et ses cartes" alt="" coords="5,5,115,32"/>
+<area shape="rect" href="structure_8c.html#a7b95c6a72accdcab7cc1f39d2536fe06" title="enlève la carte au sommet de la pioche (on suppose la pioche non vide)" alt="" coords="163,5,279,32"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="structure_8h_a855e5f243da2af0fb6391901773dc997_icgraph.png" border="0" usemap="#structure_8h_a855e5f243da2af0fb6391901773dc997_icgraph" alt=""/></div>
+<map name="structure_8h_a855e5f243da2af0fb6391901773dc997_icgraph" id="structure_8h_a855e5f243da2af0fb6391901773dc997_icgraph">
+<area shape="rect" title="libère la pioche et ses cartes" alt="" coords="799,233,908,260"/>
+<area shape="rect" href="faction_8c.html#a66e884a727de4d0741a8d344308ed43d" title="Permet de supprimer une faction et de libérer son espace mémoire alloué" alt="" coords="611,233,751,260"/>
+<area shape="rect" href="plateau_8c.html#aa2fd2fef89b903a5c089bf57cb932e29" title="Libère la mémoire associée au plateau de jeu et aux deux factions." alt="" coords="448,195,563,221"/>
+<area shape="rect" href="plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,208,143,235"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="345,157,400,184"/>
+<area shape="rect" href="interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="191,5,297,32"/>
+<area shape="rect" href="plateau_8c.html#aa1b228e632acc6462080d59a556f0cfa" title="Crée une faction initialisée." alt="" coords="197,157,291,184"/>
+<area shape="rect" href="faction_8c.html#aef8713f12e5372bd993f34fa4f6d6cab" title=" " alt="" coords="203,259,285,285"/>
+<area shape="rect" href="main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="39,44,109,71"/>
+<area shape="rect" href="plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="25,120,123,147"/>
 </map>
 </div>
 
