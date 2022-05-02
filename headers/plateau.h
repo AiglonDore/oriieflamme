@@ -22,9 +22,9 @@
 typedef struct s_plateau *Plateau;
 
 /**
- * @brief Prototype de creation_plateau qui permet d'initialiser une carte.
+ * @brief Prototype de creation_plateau qui permet d'initialiser un plateau.
  *
- * @return Plateau
+ * @return Plateau alloué
  */
 
 Plateau creation_plateau();
@@ -36,124 +36,124 @@ Plateau creation_plateau();
 /**
  * @brief Prototype de get_carte_at.
  *
- * @param p
+ * @param p Plateau de jeu.
  * @param i coordonnée horizontale de la carte souhaitée
  * @param j coordonnée verticale de la carte souhaitée
- * @return Carte
+ * @return Carte à la position i, j sur le plateau
  */
 Carte get_carte_at(Plateau p, int i, int j);
 
 /**
  * @brief Prototype de get_factions qui permet de récupérer les factions en jeu.
  *
- * @param p
- * @return Factions_en_jeu
+ * @param p Plateau de jeu.
+ * @return Couple des factions sur le plateau
  */
 Factions_en_jeu get_factions(Plateau p);
 
 /**
  * @brief Prototype de get_coord_derniere_carte_posee.
  *
- * @param p
- * @return Coord
+ * @param p Plateau de jeu.
+ * @return Coordonnées de la dernière carte posée
  */
 Coord get_coord_derniere_carte_posee(Plateau p);
 
 /**
  * @brief Prototype de get_coord_derniere_carte_retournee.
  *
- * @param p
- * @return Coord
+ * @param p Plateau de jeu.
+ * @return Coordonnées de la dernière carte retournée
  */
 Coord get_coord_derniere_carte_retournee(Plateau p);
 
 /**
  * @brief Prototype de get_coord_avant_derniere_carte_retournee.
  *
- * @param p
- * @return Coord
+ * @param p Plateau de jeu.
+ * @return Coordonnée de l'avant-dernière carte retournée
  */
 Coord get_coord_avant_derniere_carte_retournee(Plateau p);
 
 /**
  * @brief Prototype de get_derniere_carte_retournee.
  *
- * @param p
- * @return Carte
+ * @param p Plateau de jeu.
+ * @return Dernière carte retournée
  */
 Carte get_derniere_carte_retournee(Plateau p);
 
 /**
  * @brief Prototype de get_avant_derniere_carte_retournee.
  *
- * @param p
- * @return Carte
+ * @param p Plateau de jeu.
+ * @return Avabt-dernière carte retournée
  */
 Carte get_avant_derniere_carte_retournee(Plateau p);
 
 /**
  * @brief Prototype de get_coord_carte_haut_gauche.
  *
- * @param p
- * @return Coord
+ * @param p Plateau de jeu.
+ * @return Coordonnées de la carte la plus en haut à gauche du plateau
  */
 Coord get_coord_carte_haut_gauche(Plateau p);
 
 /**
  * @brief Prototype de get_coord_carte_bas_droite.
  *
- * @param p
- * @return Coord
+ * @param p Plateau de jeu.
+ * @return Coordonnées de la carte la plus en bas à droite du plateau
  */
 Coord get_coord_carte_bas_droite(Plateau p);
 
 /**
  * @brief Prototype de get_numero_manche.
  *
- * @param p
- * @return int
+ * @param p Plateau de jeu.
+ * @return Numéro de la manche en cours
  */
 int get_numero_manche(Plateau p);
 
 /**
  * @brief Prototype de get_cartes_retournees_manche.
  *
- * @param p
- * @return int
+ * @param p Plateau de jeu.
+ * @return Nombre de cartes retournées sur le plateau
  */
 int get_cartes_retournees_manche(Plateau p);
 
 /**
  * @brief Prototype de get_cartes_non_retournees_manche.
  *
- * @param p
- * @return int
+ * @param p Plateau de jeu.
+ * @return Nombre de cartes non retournées sur le plateau
  */
 int get_cartes_non_retournees_manche(Plateau p);
 
 /**
  * @brief Prototype de get_colonne_gauche.
  *
- * @param p
- * @return int
+ * @param p Plateau de jeu.
+ * @return Numéro de la colonne la plus à gauche où se trouve une carte non NULL
  */
 int get_colonne_gauche(Plateau p);
 
 /**
  * @brief Prototype de get_colonne_droite.
  *
- * @param p
- * @return int
+ * @param p Plateau de jeu.
+ * @return Numéro de la colonne la plus à droite où se trouve une carte non NULL
  */
 int get_colonne_droite(Plateau p);
 
 /**
  * @brief Prototype de set_numero_manche
  *
- * @param p
- * @param manche
+ * @param p Plateau de jeu.
+ * @param manche Numéro de la manche
  */
-void set_numero_manche(Plateau p, int x);
+void set_numero_manche(Plateau p, int manche);
 
 /**************************************************
  * Création des prototypes des fonctions du plateau

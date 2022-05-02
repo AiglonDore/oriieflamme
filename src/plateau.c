@@ -121,9 +121,9 @@ int get_colonne_droite(Plateau p)
     return p->colonne_droite;
 }
 
-void set_numero_manche(Plateau p, int num)
+void set_numero_manche(Plateau p, int manche)
 {
-    p->numero_manche = num;
+    p->numero_manche = manche;
 }
 /********************************************************
  * Implémentation des prototypes des fonctions du plateau

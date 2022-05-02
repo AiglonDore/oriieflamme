@@ -75,8 +75,8 @@ void supprimer_faction(Faction f);
 /**
  * @brief Prototype de get_nom qui permet de récupérer le nom de la faction
  *
- * @param f
- * @return char*
+ * @param f Faction
+ * @return Nom de la faction
  */
 
 char *get_nom_faction(Faction f);
@@ -84,64 +84,64 @@ char *get_nom_faction(Faction f);
 /**
  * @brief Prototype de set_nom qui permet d'initialiser le nom de la faction
  *
- * @param f
- * @param nom_faction
+ * @param f Faction
+ * @param nom_faction Nom de la faction
  */
 void set_nom_faction(Faction f, char *nom_faction);
 
 /**
  * @brief Prototype de get_nb_manches_gagnees qui permet de récupérer le nombre de manches gagnées d'une faction
  *
- * @param f
- * @return int
+ * @param f Faction
+ * @return Nombre de manches gagnées par la faction
  */
 int get_nb_manches_gagnees(Faction f);
 
 /**
  * @brief Prototype de set_nb_manches_gagnees qui permet d'initialiser le nombre de manches gagnées d'une faction
  *
- * @param f
- * @param x
+ * @param f Faction
+ * @param x Nombre de manches gagnées par la faction
  */
 void set_nb_manches_gagnees(Faction f, int x);
 
 /**
  * @brief Prototype de get_pts_DDRS_manche qui permet de récupérer le nombre de points DDRS de la manche en cours d'une faction
  *
- * @param f
- * @return int
+ * @param f Faction
+ * @return Nombre de points DDRS de la faction pour la manche en cours
  */
 int get_pts_DDRS_manche(Faction f);
 
 /**
  * @brief Prototype de set_pts_DDRS_manche qui permet d'initialiser le nombre de points DDRS de la manche en cours d'une faction
  *
- * @param f
- * @param x
+ * @param f Faction
+ * @param x Nombre de points DDRS de la faction pour la manche en cours
  */
 void set_pts_DDRS_manche(Faction f, int x);
 
 /**
  * @brief Prototype de get_a_remelange qui permet de récupérer un entier qui indique si la faction a utilisé son option ou pas.
  *
- * @param f
- * @return int
+ * @param f Faction
+ * @return Vaut 1 si la faction a déjà utilisé son joker dans le jeu, 0 sinon
  */
 int get_a_remelange(Faction f);
 
 /**
  * @brief Prototype de set_a_remelange qui permet d'initialiser si la faction a utilisé ou non son option
  *
- * @param f
- * @param x
+ * @param f Faction
+ * @param x Vaut 1 si la faction a déjà utilisé son joker dans le jeu, 0 sinon
  */
 void set_a_remelange(Faction f, int x);
 
 /**
  * @brief Prototype de get_main qui permet de récupérer la main de la faction
  *
- * @param f
- * @return Carte *
+ * @param f Faction
+ * @return Main de la faction
  */
 
 Carte *get_main(Faction f);
@@ -149,8 +149,8 @@ Carte *get_main(Faction f);
 /**
  * @brief Prototype de set_main qui permet d'initialiser la main de la faction
  *
- * @param f
- * @param main
+ * @param f Faction
+ * @param main Main de la faction
  */
 
 void set_main(Faction f, Carte *main);
@@ -158,8 +158,8 @@ void set_main(Faction f, Carte *main);
 /**
  * @brief Prototype de set_pioche qui permet d'initialiser la pioche de la faction
  *
- * @param f
- * @param p
+ * @param f Faction
+ * @param p Pioche de la faction
  */
 
 void set_pioche(Faction f, Pioche p);
