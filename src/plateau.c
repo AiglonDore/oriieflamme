@@ -170,8 +170,8 @@ Plateau init_plateau()
     p->numero_manche = 0;
 
     // On initialise les factions du plateau
-    Faction f1 = init_faction("faction 1", 0, 0);
-    Faction f2 = init_faction("faction 2", 0, 0);
+    Faction f1 = init_faction("Faction 1", 0, 0);
+    Faction f2 = init_faction("Faction 2", 0, 0);
     char *a = nom_faction(f1); // demande à la faction 1 comment ils souhaitent s'appeler
     char *b = nom_faction(f2); // demande à la faction 2 comment ils souhaitent s'appeler
     set_nom_faction(f1, a);

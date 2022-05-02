@@ -32,14 +32,14 @@ void phase1(Plateau p)
     affiche_main(factions.left);
     if (!a_remelange(factions.left) && utiliser_option(factions.left))
     {
-        set_a_remelange(factions.left,1);
+        set_a_remelange(factions.left, 1);
         melanger(factions.left);
     }
     // Joueur 2
     affiche_main(factions.right);
     if (!a_remelange(factions.right) && utiliser_option(factions.right))
     {
-        set_a_remelange(factions.right,1);
+        set_a_remelange(factions.right, 1);
         melanger(factions.right);
     }
     for (int i = 8; i > 0; i--)
