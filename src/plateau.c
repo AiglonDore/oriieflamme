@@ -211,10 +211,11 @@ int nouvelle_manche(Plateau p)
         int manches_gagnees_left = get_nb_manches_gagnees(p->factions.left);
         int manches_gagnees_right = get_nb_manches_gagnees(p->factions.right);
         Carte carte = p->derniere_carte_retournee;
-        id_carte id = get_id(carte);
-        Faction f = get_proprietaire(carte);
-        if (id == Laurent_Prevel) // on teste si la dernière carte retournée était une carte Laurent Prével
-        {                         // si c'est le cas alors la faction propriétaire a gagné la manche
+        // On teste si la dernière carte retournée est Laurent Prével, si elle est devenue nulle c'est forcément une autre carte car Laurent Prével n'a pas d'effet particulier
+        if (carte != NULL && get_id(carte) == Laurent_Prevel)
+        {
+            // si c'est le cas alors la faction propriétaire a gagné la manche
+            Faction f = get_proprietaire(carte);
             if (f == p->factions.left)
             {
                 set_nb_manches_gagnees(p->factions.left, manches_gagnees_left + 1);
@@ -350,7 +351,7 @@ void poser_carte(Carte c, Plateau p, int i, int j)
     {
         k += 1;
     }
-    if (c == m[k])
+    if (k != 8 && c == m[k])
     {
         m[k] = NULL;
     }
@@ -548,7 +549,6 @@ void retourne_lIIEns(Plateau p, Coord coord)
         poser_carte(carte_a_poser, p, coord.i, coord.j - 1);
     }
     // Actualisation des constantes du plateau
-    p->cartes_non_retournees_manche += nb_a_retirer;
     p->cartes_retournees_manche -= nb_a_retirer;
     actualiser_constantes_cas_general(p, coord);
     // Libération des tableaux melange et t
@@ -1508,7 +1508,6 @@ void retourne_Eric_Lejeune(Plateau p, Coord coord)
             poser_carte(carte_a_poser, p, coord.i, coord.j - 1);
         }
         p->cartes_retournees_manche -= a_choisir;
-        p->cartes_non_retournees_manche += a_choisir;
         // On libère la mémoire allouée
         free(l);
         free(melange);
@@ -1807,7 +1806,6 @@ int retourner_carte(Plateau p)
     int i, j;
     int trouve = 0, trouve_cachee = 0;
     int gauche = 128, droite = 0;
-    Coord avant = p->coord_carte_haut_gauche_cachee;
     // Actualisation cartes en haut à gauche + colonnes les plus à gauche et à droite
     for (i = 0; i < 129; i += 1)
     {
@@ -1845,10 +1843,6 @@ int retourner_carte(Plateau p)
     }
     p->colonne_gauche = gauche;
     p->colonne_droite = droite;
-    if (p->coord_carte_haut_gauche_cachee.i == avant.i && p->coord_carte_haut_gauche_cachee.j == avant.j)
-    {
-        p->cartes_non_retournees_manche = 0;
-    }
     trouve = 0;
     trouve_cachee = 0;
     // Actualisation des cartes en bas à droite
