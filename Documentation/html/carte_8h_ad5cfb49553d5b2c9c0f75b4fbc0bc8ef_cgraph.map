@@ -1,0 +1,13 @@
+<map id="nouvelle_carte" name="nouvelle_carte">
+<area shape="rect" id="node1" title="Prototype de creation_carte qui crée une carte face cachée." alt="" coords="5,233,124,260"/>
+<area shape="rect" id="node2" href="$carte_8c.html#add213f610b61b0471f517034edebed44" title="Prototype de creation_carte qui permet d&#39;initialiser une carte." alt="" coords="187,5,302,32"/>
+<area shape="rect" id="node3" href="$carte_8c.html#a500a84466dd672b4940525996014d3f6" title="Prototype de get_description qui permet de récupérer description[i]." alt="" coords="172,56,317,83"/>
+<area shape="rect" id="node4" href="$carte_8c.html#ab7a563de3cb0533312e2d0e7f3be27a3" title="Prototype de get_nb_occ qui permet de récupérer nb_occ[i]." alt="" coords="185,107,304,133"/>
+<area shape="rect" id="node5" href="$carte_8c.html#aa5b54fe67b2e3c56e0c7c7847085b680" title="Prototype de get_nom_carte qui permet de récupérer nom_carte[i]." alt="" coords="173,157,316,184"/>
+<area shape="rect" id="node6" href="$carte_8c.html#a30fc91d4dd38a6b29c6eb86681238a70" title="Prototype de set_description qui permet d&#39;initialiser la description de la carte." alt="" coords="184,208,305,235"/>
+<area shape="rect" id="node7" href="$carte_8c.html#ab60bacf04b3f4a170b341b48c38e4144" title="Prototype de set_est_cachee qui permet de changer la valeur associé à la face d&#39;une carte: 0 Face non..." alt="" coords="183,259,306,285"/>
+<area shape="rect" id="node8" href="$carte_8c.html#aa47c30f1bd901b6511effcda2372029c" title="Prototype de set_id qui permet d&#39;initialiser l&#39;id de la carte." alt="" coords="214,309,275,336"/>
+<area shape="rect" id="node9" href="$carte_8c.html#ab49c570d782fe28d0639c144a68fc311" title="Prototype de set_nb_occ qui permet d&#39;initialiser le nombre d&#39;occurences d&#39;une carte." alt="" coords="197,360,292,387"/>
+<area shape="rect" id="node10" href="$carte_8c.html#a3a473d789c03dc6bad961bfc4f15e7b3" title="Prototype de set_nom qui permet d&#39;initialiser le nom de la carte." alt="" coords="205,411,284,437"/>
+<area shape="rect" id="node11" href="$carte_8c.html#a5c6c6b9982006477c63fabac74db4649" title="Prototype de set_proprietaire qui permet d&#39;initialiser la fonction qui possède la carte." alt="" coords="182,461,307,488"/>
+</map>

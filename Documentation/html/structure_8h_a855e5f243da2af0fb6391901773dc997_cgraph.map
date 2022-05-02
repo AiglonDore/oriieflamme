@@ -1,0 +1,4 @@
+<map id="libere_pioche" name="libere_pioche">
+<area shape="rect" id="node1" title="libère la pioche et ses cartes" alt="" coords="5,5,115,32"/>
+<area shape="rect" id="node2" href="$structure_8c.html#a7b95c6a72accdcab7cc1f39d2536fe06" title="enlève la carte au sommet de la pioche (on suppose la pioche non vide)" alt="" coords="163,5,279,32"/>
+</map>
