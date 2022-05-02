@@ -52,8 +52,6 @@ int \mbox{\hyperlink{faction_8c_ac1ec72e1c18d60dc3a3718520464b9e9}{get\+\_\+pts\
 \begin{DoxyCompactList}\small\item\em Prototype de get\+\_\+pts\+\_\+\+D\+D\+R\+S\+\_\+manche qui permet de récupérer le nombre de points D\+D\+RS de la manche en cours d\textquotesingle{}une faction. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{faction_8c_ac18109f0c5db773e1499954c48373a4e}{set\+\_\+pts\+\_\+\+D\+D\+R\+S\+\_\+manche}} (\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int x)
 \begin{DoxyCompactList}\small\item\em Prototype de set\+\_\+pts\+\_\+\+D\+D\+R\+S\+\_\+manche qui permet d\textquotesingle{}initialiser le nombre de points D\+D\+RS de la manche en cours d\textquotesingle{}une faction. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{faction_8c_ac0afdf461c2e3e7442fd5f8445283bb0}{get\+\_\+a\+\_\+remelange}} (\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f)
-\begin{DoxyCompactList}\small\item\em Prototype de get\+\_\+a\+\_\+remelange qui permet de récupérer un entier qui indique si la faction a utilisé son option ou pas. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{faction_8c_ad4db1cbc6980bc31895c1cdd84f44e5e}{set\+\_\+a\+\_\+remelange}} (\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f, int x)
 \begin{DoxyCompactList}\small\item\em Prototype de set\+\_\+a\+\_\+remelange qui permet d\textquotesingle{}initialiser si la faction a utilisé ou non son option. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{carte_8h_a633ba64ee908d35aac798844f477ee9d}{Carte}} $\ast$ \mbox{\hyperlink{faction_8c_aa0864716c89adc851b3d848aea2e3931}{get\+\_\+main}} (\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}} f)
@@ -137,35 +135,6 @@ Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \includegraphics[width=350pt]{faction_8c_a2b256492eb2a3ee0dbffeb1bd73f83c2_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{faction_8c_ac0afdf461c2e3e7442fd5f8445283bb0}\label{faction_8c_ac0afdf461c2e3e7442fd5f8445283bb0}} 
-\index{faction.c@{faction.c}!get\_a\_remelange@{get\_a\_remelange}}
-\index{get\_a\_remelange@{get\_a\_remelange}!faction.c@{faction.c}}
-\doxysubsubsection{\texorpdfstring{get\_a\_remelange()}{get\_a\_remelange()}}
-{\footnotesize\ttfamily int get\+\_\+a\+\_\+remelange (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{faction_8h_a0456d2a4764f54c3e638c612de27a485}{Faction}}}]{f }\end{DoxyParamCaption})}
-
-
-
-Prototype de get\+\_\+a\+\_\+remelange qui permet de récupérer un entier qui indique si la faction a utilisé son option ou pas. 
-
-
-\begin{DoxyParams}{Paramètres}
-{\em f} & Faction \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Renvoie}
-Vaut 1 si la faction a déjà utilisé son joker dans le jeu, 0 sinon 
-\end{DoxyReturn}
-
-
-Définition à la ligne 151 du fichier faction.\+c.
-
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{faction_8c_ac0afdf461c2e3e7442fd5f8445283bb0_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{faction_8c_aa0864716c89adc851b3d848aea2e3931}\label{faction_8c_aa0864716c89adc851b3d848aea2e3931}} 
 \index{faction.c@{faction.c}!get\_main@{get\_main}}
 \index{get\_main@{get\_main}!faction.c@{faction.c}}
@@ -186,7 +155,7 @@ Main de la faction
 \end{DoxyReturn}
 
 
-Définition à la ligne 161 du fichier faction.\+c.
+Définition à la ligne 156 du fichier faction.\+c.
 
 Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{figure}[H]
@@ -400,7 +369,7 @@ Prototype de set\+\_\+a\+\_\+remelange qui permet d\textquotesingle{}initialiser
 \end{DoxyParams}
 
 
-Définition à la ligne 156 du fichier faction.\+c.
+Définition à la ligne 151 du fichier faction.\+c.
 
 Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{figure}[H]
@@ -417,10 +386,9 @@ Voici le graphe des appelants de cette fonction \+:\nopagebreak
 
 
 
-Définition à la ligne 166 du fichier faction.\+c.
+Définition à la ligne 161 du fichier faction.\+c.
 
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
-\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -509,7 +477,7 @@ Prototype de set\+\_\+pioche qui permet d\textquotesingle{}initialiser la pioche
 \end{DoxyParams}
 
 
-Définition à la ligne 174 du fichier faction.\+c.
+Définition à la ligne 169 du fichier faction.\+c.
 
 Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{figure}[H]
