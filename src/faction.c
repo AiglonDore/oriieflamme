@@ -148,11 +148,6 @@ void set_pts_DDRS_manche(Faction f, int x)
     f->pts_DDRS_manche = x;
 }
 
-int get_a_remelange(Faction f)
-{
-    return f->a_remelange;
-}
-
 void set_a_remelange(Faction f, int x)
 {
     f->a_remelange = x;

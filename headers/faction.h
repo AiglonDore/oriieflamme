@@ -122,14 +122,6 @@ int get_pts_DDRS_manche(Faction f);
 void set_pts_DDRS_manche(Faction f, int x);
 
 /**
- * @brief Prototype de get_a_remelange qui permet de récupérer un entier qui indique si la faction a utilisé son option ou pas.
- *
- * @param f Faction
- * @return Vaut 1 si la faction a déjà utilisé son joker dans le jeu, 0 sinon
- */
-int get_a_remelange(Faction f);
-
-/**
  * @brief Prototype de set_a_remelange qui permet d'initialiser si la faction a utilisé ou non son option
  *
  * @param f Faction
