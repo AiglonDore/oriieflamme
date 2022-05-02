@@ -9,7 +9,7 @@
 <area shape="rect" id="node3" href="$plateau_8h.html#a44f2d0cc019d090bd9af0bd3f86bb451" title="Prototype de get_factions qui permet de récupérer les factions en jeu." alt="" coords="583,863,685,889"/>
 <area shape="rect" id="node4" href="$faction_8h.html#aa92da3f09f56bc38be472b50fcfed30d" title="Prototype de get_nb_manches_gagnees qui permet de récupérer le nombre de manches gagnées d&#39;une factio..." alt="" coords="295,664,489,691"/>
 <area shape="rect" id="node5" href="$faction_8h.html#a152a86ba5f75e19f5eaa93383d2cb64f" title="Prototype de get_nom qui permet de récupérer le nom de la faction." alt="" coords="953,939,1084,965"/>
-<area shape="rect" id="node7" href="$plateau_8c.html#a93d4e98168a58e3d46e8d6b5416ec084" title="Prototype de creation_plateau qui permet d&#39;initialiser une carte." alt="" coords="327,107,457,133"/>
+<area shape="rect" id="node7" href="$plateau_8c.html#a93d4e98168a58e3d46e8d6b5416ec084" title="Prototype de creation_plateau qui permet d&#39;initialiser un plateau." alt="" coords="327,107,457,133"/>
 <area shape="rect" id="node8" href="$plateau_8c.html#aa1b228e632acc6462080d59a556f0cfa" title="Crée une faction initialisée." alt="" coords="345,157,439,184"/>
 <area shape="rect" id="node16" href="$faction_8h.html#aab43472fe255e9a674d0b8c8c022521e" title="Prototype de set_nom qui permet d&#39;initialiser le nom de la faction." alt="" coords="569,208,699,235"/>
 <area shape="rect" id="node17" href="$interface_8h.html#ab716e0c166fd1d07dca1545157befef5" title="Fonction qui demande le nom de la faction." alt="" coords="791,259,893,285"/>

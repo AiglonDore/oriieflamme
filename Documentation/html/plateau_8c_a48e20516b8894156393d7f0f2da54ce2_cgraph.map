@@ -1,6 +1,6 @@
 <map id="init_plateau" name="init_plateau">
 <area shape="rect" id="node1" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="5,72,104,98"/>
-<area shape="rect" id="node2" href="$plateau_8c.html#a93d4e98168a58e3d46e8d6b5416ec084" title="Prototype de creation_plateau qui permet d&#39;initialiser une carte." alt="" coords="738,46,869,73"/>
+<area shape="rect" id="node2" href="$plateau_8c.html#a93d4e98168a58e3d46e8d6b5416ec084" title="Prototype de creation_plateau qui permet d&#39;initialiser un plateau." alt="" coords="738,46,869,73"/>
 <area shape="rect" id="node3" href="$plateau_8c.html#aa1b228e632acc6462080d59a556f0cfa" title="Crée une faction initialisée." alt="" coords="152,429,247,456"/>
 <area shape="rect" id="node28" href="$interface_8h.html#ab716e0c166fd1d07dca1545157befef5" title="Fonction qui demande le nom de la faction." alt="" coords="978,110,1081,137"/>
 <area shape="rect" id="node29" href="$faction_8h.html#aab43472fe255e9a674d0b8c8c022521e" title="Prototype de set_nom qui permet d&#39;initialiser le nom de la faction." alt="" coords="738,97,869,124"/>

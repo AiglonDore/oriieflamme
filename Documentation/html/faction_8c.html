@@ -273,11 +273,11 @@ Voici le graphe des appelants de cette fonction :</div>
 <p>Prototype de get_a_remelange qui permet de récupérer un entier qui indique si la faction a utilisé son option ou pas. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">f</td><td></td></tr>
+    <tr><td class="paramname">f</td><td>Faction </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Renvoie</dt><dd>int </dd></dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Vaut 1 si la faction a déjà utilisé son joker dans le jeu, 0 sinon </dd></dl>
 
 <p class="definition">Définition à la ligne <a class="el" href="faction_8c_source.html#l00151">151</a> du fichier <a class="el" href="faction_8c_source.html">faction.c</a>.</p>
 <div class="dynheader">
@@ -317,11 +317,11 @@ Voici le graphe des appelants de cette fonction :</div>
 <p>Prototype de get_main qui permet de récupérer la main de la faction. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">f</td><td></td></tr>
+    <tr><td class="paramname">f</td><td>Faction </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Renvoie</dt><dd>Carte * </dd></dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Main de la faction </dd></dl>
 
 <p class="definition">Définition à la ligne <a class="el" href="faction_8c_source.html#l00161">161</a> du fichier <a class="el" href="faction_8c_source.html">faction.c</a>.</p>
 <div class="dynheader">
@@ -369,11 +369,11 @@ Voici le graphe des appelants de cette fonction :</div>
 <p>Prototype de get_nb_manches_gagnees qui permet de récupérer le nombre de manches gagnées d'une faction. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">f</td><td></td></tr>
+    <tr><td class="paramname">f</td><td>Faction </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Renvoie</dt><dd>int </dd></dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Nombre de manches gagnées par la faction </dd></dl>
 
 <p class="definition">Définition à la ligne <a class="el" href="faction_8c_source.html#l00131">131</a> du fichier <a class="el" href="faction_8c_source.html">faction.c</a>.</p>
 <div class="dynheader">
@@ -414,11 +414,11 @@ Voici le graphe des appelants de cette fonction :</div>
 <p>Prototype de get_nom qui permet de récupérer le nom de la faction. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">f</td><td></td></tr>
+    <tr><td class="paramname">f</td><td>Faction </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Renvoie</dt><dd>char* </dd></dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Nom de la faction </dd></dl>
 
 <p class="definition">Définition à la ligne <a class="el" href="faction_8c_source.html#l00121">121</a> du fichier <a class="el" href="faction_8c_source.html">faction.c</a>.</p>
 <div class="dynheader">
@@ -467,11 +467,11 @@ Voici le graphe des appelants de cette fonction :</div>
 <p>Prototype de get_pts_DDRS_manche qui permet de récupérer le nombre de points DDRS de la manche en cours d'une faction. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">f</td><td></td></tr>
+    <tr><td class="paramname">f</td><td>Faction </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Renvoie</dt><dd>int </dd></dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Nombre de points DDRS de la faction pour la manche en cours </dd></dl>
 
 <p class="definition">Définition à la ligne <a class="el" href="faction_8c_source.html#l00141">141</a> du fichier <a class="el" href="faction_8c_source.html">faction.c</a>.</p>
 <div class="dynheader">
@@ -687,8 +687,8 @@ Voici le graphe des appelants de cette fonction :</div>
 <p>Prototype de set_a_remelange qui permet d'initialiser si la faction a utilisé ou non son option. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">f</td><td></td></tr>
-    <tr><td class="paramname">x</td><td></td></tr>
+    <tr><td class="paramname">f</td><td>Faction </td></tr>
+    <tr><td class="paramname">x</td><td>Vaut 1 si la faction a déjà utilisé son joker dans le jeu, 0 sinon </td></tr>
   </table>
   </dd>
 </dl>
@@ -755,7 +755,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <area shape="rect" href="plateau_8h.html#a44f2d0cc019d090bd9af0bd3f86bb451" title="Prototype de get_factions qui permet de récupérer les factions en jeu." alt="" coords="713,968,816,995"/>
 <area shape="rect" href="faction_8h.html#aa92da3f09f56bc38be472b50fcfed30d" title="Prototype de get_nb_manches_gagnees qui permet de récupérer le nombre de manches gagnées d&#39;une factio..." alt="" coords="425,816,620,843"/>
 <area shape="rect" href="faction_8h.html#a152a86ba5f75e19f5eaa93383d2cb64f" title="Prototype de get_nom qui permet de récupérer le nom de la faction." alt="" coords="1084,1069,1215,1096"/>
-<area shape="rect" href="plateau_8c.html#a93d4e98168a58e3d46e8d6b5416ec084" title="Prototype de creation_plateau qui permet d&#39;initialiser une carte." alt="" coords="457,157,588,184"/>
+<area shape="rect" href="plateau_8c.html#a93d4e98168a58e3d46e8d6b5416ec084" title="Prototype de creation_plateau qui permet d&#39;initialiser un plateau." alt="" coords="457,157,588,184"/>
 <area shape="rect" href="plateau_8c.html#aa1b228e632acc6462080d59a556f0cfa" title="Crée une faction initialisée." alt="" coords="475,208,570,235"/>
 <area shape="rect" href="faction_8h.html#aab43472fe255e9a674d0b8c8c022521e" title="Prototype de set_nom qui permet d&#39;initialiser le nom de la faction." alt="" coords="699,259,830,285"/>
 <area shape="rect" href="interface_8h.html#ab716e0c166fd1d07dca1545157befef5" title="Fonction qui demande le nom de la faction." alt="" coords="921,309,1024,336"/>
@@ -828,8 +828,8 @@ Voici le graphe d'appel pour cette fonction :</div>
 <p>Prototype de set_nb_manches_gagnees qui permet d'initialiser le nombre de manches gagnées d'une faction. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">f</td><td></td></tr>
-    <tr><td class="paramname">x</td><td></td></tr>
+    <tr><td class="paramname">f</td><td>Faction </td></tr>
+    <tr><td class="paramname">x</td><td>Nombre de manches gagnées par la faction </td></tr>
   </table>
   </dd>
 </dl>
@@ -882,8 +882,8 @@ Voici le graphe des appelants de cette fonction :</div>
 <p>Prototype de set_nom qui permet d'initialiser le nom de la faction. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">f</td><td></td></tr>
-    <tr><td class="paramname">nom_faction</td><td></td></tr>
+    <tr><td class="paramname">f</td><td>Faction </td></tr>
+    <tr><td class="paramname">nom_faction</td><td>Nom de la faction </td></tr>
   </table>
   </dd>
 </dl>
@@ -946,8 +946,8 @@ Voici le graphe des appelants de cette fonction :</div>
 <p>Prototype de set_pioche qui permet d'initialiser la pioche de la faction. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">f</td><td></td></tr>
-    <tr><td class="paramname">p</td><td></td></tr>
+    <tr><td class="paramname">f</td><td>Faction </td></tr>
+    <tr><td class="paramname">p</td><td>Pioche de la faction </td></tr>
   </table>
   </dd>
 </dl>
@@ -1001,8 +1001,8 @@ Voici le graphe des appelants de cette fonction :</div>
 <p>Prototype de set_pts_DDRS_manche qui permet d'initialiser le nombre de points DDRS de la manche en cours d'une faction. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">f</td><td></td></tr>
-    <tr><td class="paramname">x</td><td></td></tr>
+    <tr><td class="paramname">f</td><td>Faction </td></tr>
+    <tr><td class="paramname">x</td><td>Nombre de points DDRS de la faction pour la manche en cours </td></tr>
   </table>
   </dd>
 </dl>

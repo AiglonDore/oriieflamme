@@ -39,7 +39,7 @@
 <area shape="rect" id="node40" href="$main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="599,811,668,837"/>
 <area shape="rect" id="node47" href="$main_8c.html#a34ccc9f1e0da464163a6f5e297c42563" title="Fonction qui contrôle la phase 2." alt="" coords="599,1224,668,1251"/>
 <area shape="rect" id="node29" href="$plateau_8h.html#a44f2d0cc019d090bd9af0bd3f86bb451" title="Prototype de get_factions qui permet de récupérer les factions en jeu." alt="" coords="1007,857,1110,884"/>
-<area shape="rect" id="node31" href="$plateau_8c.html#a93d4e98168a58e3d46e8d6b5416ec084" title="Prototype de creation_plateau qui permet d&#39;initialiser une carte." alt="" coords="793,1224,924,1251"/>
+<area shape="rect" id="node31" href="$plateau_8c.html#a93d4e98168a58e3d46e8d6b5416ec084" title="Prototype de creation_plateau qui permet d&#39;initialiser un plateau." alt="" coords="793,1224,924,1251"/>
 <area shape="rect" id="node32" href="$interface_8h.html#ab716e0c166fd1d07dca1545157befef5" title="Fonction qui demande le nom de la faction." alt="" coords="1007,1275,1110,1301"/>
 <area shape="rect" id="node36" href="$structure_8h.html#a855e5f243da2af0fb6391901773dc997" title="libère la pioche et ses cartes" alt="" coords="1004,1528,1113,1555"/>
 <area shape="rect" id="node37" href="$structure_8c.html#a7b95c6a72accdcab7cc1f39d2536fe06" title="enlève la carte au sommet de la pioche (on suppose la pioche non vide)" alt="" coords="1169,1528,1285,1555"/>

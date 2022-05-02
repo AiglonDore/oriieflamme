@@ -119,8 +119,7 @@ Savoir si une faction a utilisé l\textquotesingle{}option de remélanger sa mai
 
 Définition à la ligne 39 du fichier faction.\+c.
 
-Voici le graphe des appelants de cette fonction \+:
-\nopagebreak
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -144,8 +143,7 @@ Faction
 
 Définition à la ligne 34 du fichier faction.\+c.
 
-Voici le graphe des appelants de cette fonction \+:
-\nopagebreak
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -164,18 +162,17 @@ Prototype de get\+\_\+a\+\_\+remelange qui permet de récupérer un entier qui i
 
 
 \begin{DoxyParams}{Paramètres}
-{\em f} & \\
+{\em f} & Faction \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Renvoie}
-int 
+Vaut 1 si la faction a déjà utilisé son joker dans le jeu, 0 sinon 
 \end{DoxyReturn}
 
 
 Définition à la ligne 151 du fichier faction.\+c.
 
-Voici le graphe des appelants de cette fonction \+:
-\nopagebreak
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -194,18 +191,17 @@ Prototype de get\+\_\+main qui permet de récupérer la main de la faction.
 
 
 \begin{DoxyParams}{Paramètres}
-{\em f} & \\
+{\em f} & Faction \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Renvoie}
-Carte $\ast$ 
+Main de la faction 
 \end{DoxyReturn}
 
 
 Définition à la ligne 161 du fichier faction.\+c.
 
-Voici le graphe des appelants de cette fonction \+:
-\nopagebreak
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -224,18 +220,17 @@ Prototype de get\+\_\+nb\+\_\+manches\+\_\+gagnees qui permet de récupérer le 
 
 
 \begin{DoxyParams}{Paramètres}
-{\em f} & \\
+{\em f} & Faction \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Renvoie}
-int 
+Nombre de manches gagnées par la faction 
 \end{DoxyReturn}
 
 
 Définition à la ligne 131 du fichier faction.\+c.
 
-Voici le graphe des appelants de cette fonction \+:
-\nopagebreak
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -254,18 +249,17 @@ Prototype de get\+\_\+nom qui permet de récupérer le nom de la faction.
 
 
 \begin{DoxyParams}{Paramètres}
-{\em f} & \\
+{\em f} & Faction \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Renvoie}
-char$\ast$ 
+Nom de la faction 
 \end{DoxyReturn}
 
 
 Définition à la ligne 121 du fichier faction.\+c.
 
-Voici le graphe des appelants de cette fonction \+:
-\nopagebreak
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -284,18 +278,17 @@ Prototype de get\+\_\+pts\+\_\+\+D\+D\+R\+S\+\_\+manche qui permet de récupére
 
 
 \begin{DoxyParams}{Paramètres}
-{\em f} & \\
+{\em f} & Faction \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Renvoie}
-int 
+Nombre de points D\+D\+RS de la faction pour la manche en cours 
 \end{DoxyReturn}
 
 
 Définition à la ligne 141 du fichier faction.\+c.
 
-Voici le graphe des appelants de cette fonction \+:
-\nopagebreak
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -328,8 +321,7 @@ Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \includegraphics[width=350pt]{faction_8h_abc7feb29ed864c76ea95e1afc3cc7752_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:
-\nopagebreak
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -362,8 +354,7 @@ Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \includegraphics[width=304pt]{faction_8h_adf3497e77c11921394ac7ca7d2e6cbdb_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:
-\nopagebreak
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -396,8 +387,7 @@ Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \includegraphics[width=256pt]{faction_8h_a5b400a1d1b3c89ef50e5bb4b98e177cb_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:
-\nopagebreak
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -416,17 +406,16 @@ Prototype de set\+\_\+a\+\_\+remelange qui permet d\textquotesingle{}initialiser
 
 
 \begin{DoxyParams}{Paramètres}
-{\em f} & \\
+{\em f} & Faction \\
 \hline
-{\em x} & \\
+{\em x} & Vaut 1 si la faction a déjà utilisé son joker dans le jeu, 0 sinon \\
 \hline
 \end{DoxyParams}
 
 
 Définition à la ligne 156 du fichier faction.\+c.
 
-Voici le graphe des appelants de cette fonction \+:
-\nopagebreak
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -445,13 +434,12 @@ Prototype de set\+\_\+main qui permet d\textquotesingle{}initialiser la main de 
 
 
 \begin{DoxyParams}{Paramètres}
-{\em f} & \\
+{\em f} & Faction \\
 \hline
-{\em main} & \\
+{\em main} & Main de la faction \\
 \hline
 \end{DoxyParams}
-Voici le graphe des appelants de cette fonction \+:
-\nopagebreak
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -470,17 +458,16 @@ Prototype de set\+\_\+nb\+\_\+manches\+\_\+gagnees qui permet d\textquotesingle{
 
 
 \begin{DoxyParams}{Paramètres}
-{\em f} & \\
+{\em f} & Faction \\
 \hline
-{\em x} & \\
+{\em x} & Nombre de manches gagnées par la faction \\
 \hline
 \end{DoxyParams}
 
 
 Définition à la ligne 136 du fichier faction.\+c.
 
-Voici le graphe des appelants de cette fonction \+:
-\nopagebreak
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -499,9 +486,9 @@ Prototype de set\+\_\+nom qui permet d\textquotesingle{}initialiser le nom de la
 
 
 \begin{DoxyParams}{Paramètres}
-{\em f} & \\
+{\em f} & Faction \\
 \hline
-{\em nom\+\_\+faction} & \\
+{\em nom\+\_\+faction} & Nom de la faction \\
 \hline
 \end{DoxyParams}
 
@@ -515,8 +502,7 @@ Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \includegraphics[width=350pt]{faction_8h_aab43472fe255e9a674d0b8c8c022521e_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:
-\nopagebreak
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -535,17 +521,16 @@ Prototype de set\+\_\+pioche qui permet d\textquotesingle{}initialiser la pioche
 
 
 \begin{DoxyParams}{Paramètres}
-{\em f} & \\
+{\em f} & Faction \\
 \hline
-{\em p} & \\
+{\em p} & Pioche de la faction \\
 \hline
 \end{DoxyParams}
 
 
 Définition à la ligne 174 du fichier faction.\+c.
 
-Voici le graphe des appelants de cette fonction \+:
-\nopagebreak
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -564,17 +549,16 @@ Prototype de set\+\_\+pts\+\_\+\+D\+D\+R\+S\+\_\+manche qui permet d\textquotesi
 
 
 \begin{DoxyParams}{Paramètres}
-{\em f} & \\
+{\em f} & Faction \\
 \hline
-{\em x} & \\
+{\em x} & Nombre de points D\+D\+RS de la faction pour la manche en cours \\
 \hline
 \end{DoxyParams}
 
 
 Définition à la ligne 146 du fichier faction.\+c.
 
-Voici le graphe des appelants de cette fonction \+:
-\nopagebreak
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -600,16 +584,14 @@ Permet de supprimer une faction et de libérer son espace mémoire alloué
 
 Définition à la ligne 111 du fichier faction.\+c.
 
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
-\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{faction_8h_a66e884a727de4d0741a8d344308ed43d_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:
-\nopagebreak
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -642,8 +624,7 @@ Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \includegraphics[width=283pt]{faction_8h_aa3b0b517bf0cba1c7d52fb4ca770fcdb_cgraph}
 \end{center}
 \end{figure}
-Voici le graphe des appelants de cette fonction \+:
-\nopagebreak
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

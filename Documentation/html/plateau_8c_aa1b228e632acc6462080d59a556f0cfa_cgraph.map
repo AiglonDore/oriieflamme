@@ -33,7 +33,7 @@
 <area shape="rect" id="node22" href="$plateau_8h.html#a44f2d0cc019d090bd9af0bd3f86bb451" title="Prototype de get_factions qui permet de récupérer les factions en jeu." alt="" coords="831,309,934,336"/>
 <area shape="rect" id="node23" href="$faction_8h.html#aa92da3f09f56bc38be472b50fcfed30d" title="Prototype de get_nb_manches_gagnees qui permet de récupérer le nombre de manches gagnées d&#39;une factio..." alt="" coords="785,411,980,437"/>
 <area shape="rect" id="node24" href="$faction_8h.html#a152a86ba5f75e19f5eaa93383d2cb64f" title="Prototype de get_nom qui permet de récupérer le nom de la faction." alt="" coords="1028,360,1159,387"/>
-<area shape="rect" id="node26" href="$plateau_8c.html#a93d4e98168a58e3d46e8d6b5416ec084" title="Prototype de creation_plateau qui permet d&#39;initialiser une carte." alt="" coords="591,107,722,133"/>
+<area shape="rect" id="node26" href="$plateau_8c.html#a93d4e98168a58e3d46e8d6b5416ec084" title="Prototype de creation_plateau qui permet d&#39;initialiser un plateau." alt="" coords="591,107,722,133"/>
 <area shape="rect" id="node27" href="$interface_8h.html#ab716e0c166fd1d07dca1545157befef5" title="Fonction qui demande le nom de la faction." alt="" coords="831,56,934,83"/>
 <area shape="rect" id="node30" href="$faction_8h.html#a66e884a727de4d0741a8d344308ed43d" title="Permet de supprimer une faction et de libérer son espace mémoire alloué" alt="" coords="813,259,953,285"/>
 <area shape="rect" id="node32" href="$faction_8h.html#ac0afdf461c2e3e7442fd5f8445283bb0" title="Prototype de get_a_remelange qui permet de récupérer un entier qui indique si la faction a utilisé so..." alt="" coords="815,579,950,605"/>

@@ -1,5 +1,5 @@
 <map id="creation_plateau" name="creation_plateau">
-<area shape="rect" id="node1" title="Prototype de creation_plateau qui permet d&#39;initialiser une carte." alt="" coords="595,57,725,84"/>
+<area shape="rect" id="node1" title="Prototype de creation_plateau qui permet d&#39;initialiser un plateau." alt="" coords="595,57,725,84"/>
 <area shape="rect" id="node2" href="$plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="448,57,547,84"/>
 <area shape="rect" id="node3" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="345,95,400,121"/>
 <area shape="rect" id="node4" href="$interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="191,107,297,133"/>
