@@ -251,8 +251,8 @@ int nouvelle_manche(Plateau p)
         }
         char *name_left = get_nom_faction(p->factions.left);
         char *name_right = get_nom_faction(p->factions.right);
-        int joker_left = get_a_remelange(p->factions.left);
-        int joker_right = get_a_remelange(p->factions.right);
+        int joker_left = a_remelange(p->factions.left);
+        int joker_right = a_remelange(p->factions.right);
         int gagne_left = get_nb_manches_gagnees(p->factions.left);
         int gagne_right = get_nb_manches_gagnees(p->factions.right);
         supprimer_faction(p->factions.left);
