@@ -7,3 +7,12 @@ obj/*
 *.obj
 
 *.out
+
+*.toc
+
+*.lof
+*.lot
+*.toc
+*.aux
+*.synctex*
+*.log
