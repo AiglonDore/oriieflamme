@@ -1,0 +1,84 @@
+\documentclass[12pt,french,a4paper]{report}
+\usepackage{expl3,xparse}
+\usepackage{fontspec}
+\usepackage[hyperref,table,svgnames]{couleurs}
+\usepackage[normalem]{ulem}
+\usepackage{mathplus}
+\usepackage[warnings-off={mathtools-colon}]{unicode-math}
+\usepackage[top=2.5cm,left=2.5cm,right=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{shorttoc}
+\usepackage[french]{babel}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage[algochapter,french,boxruled,linesnumbered,lined,commentsnumbered,longend]{algorithm2e}
+\usepackage{listings}
+\lstset{
+  breaklines=true,
+  frame=single,
+  xleftmargin=\parindent,
+	xrightmargin=\parindent,
+	numbers=left,
+  language=C,
+	frameround=tttt,
+	numbersep=5pt,
+  showstringspaces=false,
+  basicstyle=\ttfamily,
+  keywordstyle=\bfseries\color{purple}\itshape,
+	framerule=0.5pt,
+  commentstyle=\sffamily\itshape\color{darkgreen},
+  identifierstyle=\color{black},
+  stringstyle=\rmfamily\color{red},
+	firstnumber=1,
+	stepnumber=1,
+	captionpos=b,
+	numberstyle=\small\color{blue}\bfseries,
+  rulecolor=\color[rgb]{0,0,1},
+	emphstyle=\bfseries\color{blue},
+	escapeinside={\%*}{*\%},
+  mathescape=true,
+	literate=
+  {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+  {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+  {à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+  {À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+  {ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+  {Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+  {â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+  {Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+  {Ã}{{\~A}}1 {ã}{{\~a}}1 {Õ}{{\~O}}1 {õ}{{\~o}}1
+  {œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+  {ű}{{\H{u}}}1 {Ű}{{\H{U}}}1 {ő}{{\H{o}}}1 {Ő}{{\H{O}}}1
+  {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+  {€}{{\euro}}1 {£}{{\pounds}}1 {«}{{\guillemotleft}}1
+  {»}{{\guillemotright}}1 {ñ}{{\~n}}1 {Ñ}{{\~N}}1 {¿}{{?`}}1,
+}
+\pagestyle{fancy}
+\fancyfoot[C]{\iffloatpage{Page~\thepage}{\thepage}}
+\fancyfoot[L]{\iffloatpage{}{Groupe 15}}
+\fancyfoot[R]{\iffloatpage{}{Rapport de projet -- Oriieflamme}}
+\fancyhead[L]{\iffloatpage{}{\itshape\leftmark}}
+\fancyhead[R]{\iffloatpage{}{\itshape\rightmark}}
+\setlength{\headheight}{15pt}
+\addtolength{\topmargin}{-3pt}
+\renewcommand{\headrulewidth}{\iffloatpage{0pt}{0.5pt}}
+\renewcommand{\footrulewidth}{\iffloatpage{0pt}{0.5pt}}
+\renewcommand{\thefootnote}{\textit{\sffamily\alph{footnote}}}
+\setmainfont{Times New Roman}[Scale=MatchLowercase,Ligatures=Rare,Numbers=OldStyle]
+\newfontfamily\amazone{Amazone BT}
+\setsansfont{Arial}[Scale=MatchLowercase]
+\setmonofont{Consolas}[Scale=MatchLowercase]
+\setmathfont{Cambria Math}[Scale=MatchLowercase]
+\title{\Huge Rapport de projet\\Oriieflamme}
+\author{\LARGE Nour \bsc{Elbessi}, Valentin \bsc{Gardel} et Thomas \bsc{Roiseux}}
+\date{\Large\today}
+\setcounter{secnumdepth}{6}
+\setcounter{tocdepth}{6}
+\renewcommand{\thesection}{\thechapter.\Alph{section}}
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+\begin{document}
+\DontPrintSemicolon
+\maketitle
+\part{Introduction}
+
+\end{document}
