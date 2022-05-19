@@ -107,7 +107,6 @@ void set_nb_manches_gagnees(Faction f, int x);
 
 /**
  * @brief Prototype de get_pts_DDRS_manche qui permet de récupérer le nombre de points DDRS de la manche en cours d'une faction
- *
  * @param f Faction
  * @return Nombre de points DDRS de la faction pour la manche en cours
  */
@@ -128,6 +127,21 @@ void set_pts_DDRS_manche(Faction f, int x);
  * @param x Vaut 1 si la faction a déjà utilisé son joker dans le jeu, 0 sinon
  */
 void set_a_remelange(Faction f, int x);
+
+/**
+ * @brief Prototype de get_dernier_vainqueur qui permet de savoir si la faction a gagné la dernière manche ou pas
+ * @param f Faction
+ * @return 1 si la faction a gagné la dernière manche, 0 sinon
+ */
+int get_dernier_vainqueur(Faction f);
+
+/**
+ * @brief Prototype de set_dernier_vainqueur qui permet d'initialiser si la faction a gagné la dernière manche ou pas
+ *
+ * @param f Faction
+ * @param x 1 si la faction a gagné la dernière manche, 0 sinon
+ */
+void set_dernier_vainqueur(Faction f, int x);
 
 /**
  * @brief Prototype de get_main qui permet de récupérer la main de la faction

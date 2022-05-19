@@ -111,4 +111,11 @@ Carte enleve_pioche(Pioche p);
  */
 void libere_pioche(Pioche p);
 
+/**
+ * @brief calcule la fonction factorielle en n
+ * @param n un entier positif
+ * @return factorielle(n)
+ */
+int factorielle(int n);
+
 #endif // STRUCTURE_H

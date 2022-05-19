@@ -22,7 +22,7 @@
 
 struct s_pioche
 {
-  Carte t[47];
+  Carte t[75];
   int top;
 };
 
@@ -60,4 +60,19 @@ void libere_pioche(Pioche p)
   }
   free(p);
   p = NULL;
+}
+
+int factorielle(int n)
+{
+  if (n == 0 || n == 1)
+  {
+    return 1;
+  }
+  int i;
+  int res = 1;
+  for (i = 2; i <= n; i += 1)
+  {
+    res = res * i;
+  }
+  return res;
 }

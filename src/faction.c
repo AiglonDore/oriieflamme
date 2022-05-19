@@ -27,6 +27,7 @@ struct StructureFactions
     int nb_manches_gagnees;
     int pts_DDRS_manche;
     int a_remelange;
+    int dernier_vainqueur;
     Pioche pioche;
     Main main;
 };
@@ -63,23 +64,23 @@ void vider_sa_main(Faction f)
 void melanger_pioche(Faction f)
 {
     // On dépile et on stocke les cartes dans un tableau
-    Carte *pioche = (Carte *)malloc(47 * sizeof(Carte));
+    Carte *pioche = (Carte *)malloc(75 * sizeof(Carte));
     int i; // pour la boucle for
-    for (i = 0; i < 47; i += 1)
+    for (i = 0; i < 75; i += 1)
     {
         pioche[i] = enleve_pioche(f->pioche);
     }
 
     // On mélange ce tableau
-    int *t = (int *)calloc(47, sizeof(int)); // ce tableau sert à savoir si l'indice généré a déjà été généré (t[i]=1 si i déjà sorti, 0 sinon)
-    Carte *pioche_melange = (Carte *)malloc(47 * sizeof(Carte));
+    int *t = (int *)calloc(75, sizeof(int)); // ce tableau sert à savoir si l'indice généré a déjà été généré (t[i]=1 si i déjà sorti, 0 sinon)
+    Carte *pioche_melange = (Carte *)malloc(75 * sizeof(Carte));
     int c = 0; // sert à compter le nombre de cartes rentrées dans pioche_melange
-    int n = rand() % 47;
-    while (c != 47)
+    int n = rand() % 75;
+    while (c != 75)
     {
         while (t[n] == 1)
         {                    // tant que l'indice a déjà été traité
-            n = rand() % 47; // génère un nombre entier aléatoire entre 0 et 46
+            n = rand() % 75; // génère un nombre entier aléatoire entre 0 et 46
         }
         pioche_melange[c] = pioche[n]; // on remplit pioche_melange grâce à pioche
         t[n] = 1;                      // on indique que n a été traité
@@ -88,9 +89,9 @@ void melanger_pioche(Faction f)
 
     // On empile les cartes alors mélangées
     int j; // pour la boucle for
-    for (j = 0; j < 47; j += 1)
+    for (j = 0; j < 75; j += 1)
     { // on empile les cartes de telle sorte que le sommet soit pioche_melange[0] : choix arbitraire
-        ajout_pioche(f->pioche, pioche_melange[46 - j]);
+        ajout_pioche(f->pioche, pioche_melange[74 - j]);
     }
 
     // Libération mémoire
@@ -151,6 +152,16 @@ void set_pts_DDRS_manche(Faction f, int x)
 void set_a_remelange(Faction f, int x)
 {
     f->a_remelange = x;
+}
+
+int get_dernier_vainqueur(Faction f)
+{
+    return f->dernier_vainqueur;
+}
+
+void set_dernier_vainqueur(Faction f, int x)
+{
+    f->dernier_vainqueur = x;
 }
 
 Carte *get_main(Faction f)

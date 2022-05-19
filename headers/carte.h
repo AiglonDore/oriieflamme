@@ -64,7 +64,21 @@ typedef enum nom_carte
     Eric_Lejeune,
     Lucienne_Pacave,
     Katrin_Salhab,
-    Laurent_Prevel
+    Laurent_Prevel,
+    Ascenseur_en_panne,
+    Nour_Elbessi,
+    Thomas_Roiseux,
+    Clemence_Juste,
+    Examen,
+    Echec,
+    Droit,
+    OCaml,
+    Stefania_Dumbrava,
+    Nicolas_Brunel,
+    TP_Statistiques,
+    Juhuyn_Park,
+    Angela_Pineda,
+    Diese
 } id_carte;
 
 /**

@@ -54,15 +54,17 @@ Carte nouvelle_carte(id_carte id, Faction f)
 
 const int nb_cartes = 8;
 
-char *nom_carte[32] = {"FISE", "FISA", "FC", "EcologIIE", "lIIEns", "Soiree_sans_alcool", "Alcool",
-                       "Cafe", "The", "Ecocup", "Reprographie", "Isolation_batiment", "Parcours_sobriete_mumerique",
-                       "Heures supplementaires", "Kahina Bouchama", "Kevin Goilard", "Massinissa Merabet",
-                       "Vitera Y", "Jonas Senizergues", "Fetia Bannour", "Catherine Dubois", "Anne Laure Ligozat",
-                       "Guillaume Burel", "Christophe Mouilleron", "Thomas lim", "Julien Forest", "Dimitri watel",
-                       "Djibril Aurelien Dembele Cabot", "Eric Lejeune", "Lucienne Pacave", "Katrin Salhab",
-                       "Laurent Prevel"};
+char *nom_carte[46] = {"FISE", "FISA", "FC", "EcologIIE", "lIIEns", "Soirée sans alcool", "Alcool",
+                       "Café", "Thé", "Ecocup", "Reprographie", "Isolation du bâtiment", "Parcours sobriété numérique",
+                       "Heures Supplémentaires", "Kahina Bouchama", "Kévin Goilard", "Massinissa Merabet",
+                       "Vitera Y", "Jonas Senizergues", "Fetia Bannour", "Catherine Dubois", "Anne-Laure Ligozat",
+                       "Guillaume Burel", "Christophe Mouilleron", "Thomas Lim", "Julien Forest", "Dimitri Watel",
+                       "Djibril Aurélien Dembele Cabot", "Eric Lejeune", "Lucienne Pacavé", "Katrin Salhab",
+                       "Laurent Prével", "Ascenseur en panne", "Nour Elbessi", "Thomas Roiseux", "Clémence Juste",
+                       "Examen", "Echec", "Droit", "OCaml", "Stefania Dumbrava", "Nicolas Brunel", "TP de Statistiques",
+                       "Juhuyn Park", "Angéla Pineda", "Dièse"};
 
-char *description[32] = {
+char *description[46] = {
     "La faction qui a posé cette carte gagne 1 point DDRS.",
     "La faction qui a posé cette carte gagne 2 points DDRS si le nombre de cartes retournées sur le plateau (y compris celle-ci) est pair, et 0 sinon.",
     "La faction qui a posé cette carte gagne 4 points DDRS si au moins une autre carte FC est retournée sur le plateau et 0 sinon",
@@ -94,9 +96,23 @@ char *description[32] = {
     "Prenez au hasard 5 cartes retournées du plateau (ou toutes les cartes retournées du plateau s'il y a moins de 5). Si une de ces cartes est une carte Catherine Dubois, Anne-Laure Ligozat, Guillaume Burel, Christophe Mouilleron, Thomas Lim, Julien Forest ou Dimitri Watel, mélangez les et placez les à gauche de la case la plus à gauche de la première ligne. Les prochaines cartes à être retournées sont ces cartes là. Sinon, supprimez ces cartes du plateau.",
     "S'il y a une carte FISA retournée dans la même ligne ou la même colonne que cette carte, la faction qui a posé cette carte gagne 5 points DDRS.",
     "Si les cartes Djibril-Aurélien Djembele-Cabeau, Eric Lejeune et Lucienne Pacavé sont retournées, la faction qui a posé cette carte gagne 10 points DDRS. Sinon, retournez toutes les cartes dans la même ligne de cette carte sans appliquer leurs effets.",
-    "Si Laurent Prével est la dernière carte retournée du plateau, la faction qui a posé cette carte gagne la manche, quel que soit le nombre de points DDRS des deux factions."};
+    "Si Laurent Prével est la dernière carte retournée du plateau, la faction qui a posé cette carte gagne la manche, quel que soit le nombre de points DDRS des deux factions.",
+    "La faction qui a gagné la manche précédente gagne la partie (ne fait rien en cas de première manche).",
+    "Si une carte Examen est retournée, la faction qui a posé cette carte perd 1 point DDRS. Sinon, supprimez toutes les cartes Échec.",
+    "Si une carte Droit est retournée, supprimez du plateau toutes les cartes Examen retournées.",
+    "Si un nombre pair n de cartes Examen est retourné, la faction qui a posé cette carte perd (n/2)! points DDRS. Sinon, la faction adverse de celle qui a posé cette carte gagne ((n-1)/2)! points DDRS.",
+    "Si une carte Julien Forest est retournée, la faction qui a posé cette carte gagne 1 points DDRS par carte FISE retournée. Si une carte Nicolas Brunel est retournée, la faction qui a posé cette carte perd 2 points DDRS par carte FISE retournée.",
+    "Si la faction qui a posé cette carte a perdu une manche alors elle gagne 4 points DDRS. Si c'est la première manche ou si elle n'a jamais perdu, on retourne toutes les cartes Examen sans appliquer leurs effets.",
+    "Si une carte Nicolas Brunel et Thomas Roiseux sont retournées sur le plateau, la faction qui a posé cette carte perd 10 points DDRS.",
+    "Si la faction a un nom qui commence par un 'O' ou un 'o', alors elle gagne 2 points DDRS par carte Examen retournée. Sinon, elle en perd 1 par carte Examen retournée.",
+    "Si une carte OCaml est retournée, on supprime toutes les cartes Stefania Dumbrava du plateau et toutes les cartes du plateau changent de face. On n'applique pas les effets des cartes que l'on retourne face visible. On n'annule pas les effets des cartes que l'on retourne face cachée. (Explication : à force de taper sa main contre la table le plateau s'est renversé...)",
+    "Si une carte Juhuyn Park ou Angela Pineda est retournée, la faction qui a posé cette carte perd 3 points DDRS. Sinon, supprimez toutes les cartes TP de Statistiques du plateau.",
+    "Si une carte Clémence Juste est retournée, la faction qui a posé cette carte gagne 1 point DDRS par carte TP de Statistiques retournée (y compris celle-ci). Sinon, supprimez toutes les cartes Juhuyn Park et Angela Pineda retournées du plateau.",
+    "Si une carte Clémence Juste est retournée, la faction qui a posé cette carte gagne (plein d'informations sur le TP et) 3 points DDRS.",
+    "Si une carte Juhuyn Park est retournée, la faction qui a posé cette carte gagne 2 points DDRS par carte TP retournée. Sinon, elle en perd 5 par carte Nicolas Brunel retournée.",
+    "Si une carte Julien Forest est retourné alors supprimez toutes les cartes Dièse, celle-ci y compris. Sinon, la faction qui a posé cette carte gagne 5 points DDRS par carte Thomas Roiseux retournée."};
 
-int nb_occ[32] = {4, 4, 4, 2, 2, 1, 1, 3, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+int nb_occ[46] = {4, 4, 4, 2, 2, 1, 1, 3, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 6, 6, 1, 1, 1, 1, 5, 1, 1, 1};
 
 /**************************************************
  * Implémentation des getters et setters

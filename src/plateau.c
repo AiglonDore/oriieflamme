@@ -133,7 +133,7 @@ void init_pioche(Faction f)
 {
     int i;
     Pioche pioche = creation_pioche_vide(); // allocation mémoire pour la pioche
-    for (i = 0; i < 32; i += 1)
+    for (i = 0; i < 46; i += 1)
     {
         int j = get_nb_occ_vg(i); // on récupère le nb d'occurences de la carte d'indice i
         while (j != 0)            // on l'ajoute j fois
@@ -145,7 +145,7 @@ void init_pioche(Faction f)
     set_pioche(f, pioche); // on initialise la pioche de f ainsi construite
 }
 
-Faction init_faction(char *nom, int manches_gagnees, int a_remelange)
+Faction init_faction(char *nom, int manches_gagnees, int a_remelange, int dernier_vainqueur)
 {
     // On crée la faction
     Faction f = creation_faction();
@@ -158,6 +158,7 @@ Faction init_faction(char *nom, int manches_gagnees, int a_remelange)
     init_pioche(f);
     Main main = {NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL};
     set_main(f, main);
+    set_dernier_vainqueur(f, dernier_vainqueur);
     return f;
 }
 
@@ -170,8 +171,8 @@ Plateau init_plateau()
     p->numero_manche = 0;
 
     // On initialise les factions du plateau
-    Faction f1 = init_faction("Faction 1", 0, 0);
-    Faction f2 = init_faction("Faction 2", 0, 0);
+    Faction f1 = init_faction("Faction 1", 0, 0, 0);
+    Faction f2 = init_faction("Faction 2", 0, 0, 0);
     char *a = nom_faction(f1); // demande à la faction 1 comment ils souhaitent s'appeler
     char *b = nom_faction(f2); // demande à la faction 2 comment ils souhaitent s'appeler
     set_nom_faction(f1, a);
@@ -219,10 +220,14 @@ int nouvelle_manche(Plateau p)
             if (f == p->factions.left)
             {
                 set_nb_manches_gagnees(p->factions.left, manches_gagnees_left + 1);
+                set_dernier_vainqueur(p->factions.right, 0);
+                set_dernier_vainqueur(p->factions.left, 1);
             }
             else
             {
                 set_nb_manches_gagnees(p->factions.right, manches_gagnees_right + 1);
+                set_dernier_vainqueur(p->factions.left, 0);
+                set_dernier_vainqueur(p->factions.right, 1);
             }
         }
         else
@@ -230,10 +235,14 @@ int nouvelle_manche(Plateau p)
             if (score_left < score_right)
             {
                 set_nb_manches_gagnees(p->factions.right, manches_gagnees_right + 1);
+                set_dernier_vainqueur(p->factions.left, 0);
+                set_dernier_vainqueur(p->factions.right, 1);
             }
             else if (score_left > score_right)
             {
                 set_nb_manches_gagnees(p->factions.left, manches_gagnees_left + 1);
+                set_dernier_vainqueur(p->factions.right, 0);
+                set_dernier_vainqueur(p->factions.left, 1);
             }
             else
             { // si il y a égalité on regarde la carte la plus en haut à gauche à la fin de la partie et on identifie son propriétaire qui sera le gagnant
@@ -242,10 +251,14 @@ int nouvelle_manche(Plateau p)
                 if (f == p->factions.left)
                 {
                     set_nb_manches_gagnees(p->factions.left, manches_gagnees_left + 1);
+                    set_dernier_vainqueur(p->factions.right, 0);
+                    set_dernier_vainqueur(p->factions.left, 1);
                 }
                 else
                 {
                     set_nb_manches_gagnees(p->factions.right, manches_gagnees_right + 1);
+                    set_dernier_vainqueur(p->factions.left, 0);
+                    set_dernier_vainqueur(p->factions.right, 1);
                 }
             }
         }
@@ -255,6 +268,8 @@ int nouvelle_manche(Plateau p)
         int joker_right = a_remelange(p->factions.right);
         int gagne_left = get_nb_manches_gagnees(p->factions.left);
         int gagne_right = get_nb_manches_gagnees(p->factions.right);
+        int dernier_vainqueur_left = get_dernier_vainqueur(p->factions.left);
+        int dernier_vainqueur_right = get_dernier_vainqueur(p->factions.right);
         supprimer_faction(p->factions.left);
         supprimer_faction(p->factions.right);
         p->factions.left = NULL;
@@ -271,8 +286,8 @@ int nouvelle_manche(Plateau p)
                 }
             }
         }
-        p->factions.left = init_faction(name_left, gagne_left, joker_left);
-        p->factions.right = init_faction(name_right, gagne_right, joker_right);
+        p->factions.left = init_faction(name_left, gagne_left, joker_left, dernier_vainqueur_left);
+        p->factions.right = init_faction(name_right, gagne_right, joker_right, dernier_vainqueur_right);
     }
     // On regarde si une faction a gagné la partie
     if (get_nb_manches_gagnees(p->factions.left) == 2 || get_nb_manches_gagnees(p->factions.right) == 2)
@@ -1607,6 +1622,542 @@ void retourne_Laurent_Prevel(Plateau p, Coord coord)
     actualiser_constantes_cas_general(p, coord); // On ne fait rien, on traite son effet dans nouvelle_manche
 }
 
+void retourne_Ascenseur_en_panne(Plateau p, Coord coord)
+{
+    if (p->numero_manche == 1)
+    {
+        actualiser_constantes_cas_general(p, coord);
+        return;
+    }
+    if (get_dernier_vainqueur(p->factions.left) == 1)
+    {
+        p->cartes_non_retournees_manche = 0;
+        set_pts_DDRS_manche(p->factions.left, get_pts_DDRS_manche(p->factions.right) + 1);
+        actualiser_constantes_cas_general(p, coord);
+        return;
+    }
+    if (get_dernier_vainqueur(p->factions.right) == 1)
+    {
+        p->cartes_non_retournees_manche = 0;
+        set_pts_DDRS_manche(p->factions.right, get_pts_DDRS_manche(p->factions.left) + 1);
+        actualiser_constantes_cas_general(p, coord);
+        return;
+    }
+}
+
+void retourne_Nour_Elbessi(Plateau p, Faction f, int score, Coord coord)
+{
+    int examen_retournee = 0;
+    int i, j;
+    for (i = p->coord_carte_haut_gauche.i; i <= p->coord_carte_bas_droite.i; i += 1)
+    {
+        for (j = get_colonne_gauche(p); j <= get_colonne_droite(p); j += 1)
+        {
+            Carte carte = p->plateau_jeu[i][j];
+            if (carte != NULL && get_est_cachee(carte) == 0 && get_id(carte) == Examen)
+            {
+                examen_retournee = 1;
+                break;
+            }
+        }
+    }
+    if (examen_retournee == 1)
+    {
+        set_pts_DDRS_manche(f, score - 1);
+        actualiser_constantes_cas_general(p, coord);
+        return;
+    }
+    for (i = p->coord_carte_haut_gauche.i; i <= p->coord_carte_bas_droite.i; i += 1)
+    {
+        for (j = get_colonne_gauche(p); j <= get_colonne_droite(p); j += 1)
+        {
+            Carte carte = p->plateau_jeu[i][j];
+            if (carte != NULL && get_id(carte) == Echec)
+            {
+                if (get_est_cachee(carte) == 0)
+                {
+                    free(p->plateau_jeu[i][j]);
+                    p->plateau_jeu[i][j] = NULL;
+                    p->cartes_retournees_manche -= 1;
+                }
+                else
+                {
+                    free(p->plateau_jeu[i][j]);
+                    p->plateau_jeu[i][j] = NULL;
+                    p->cartes_non_retournees_manche -= 1;
+                }
+            }
+        }
+    }
+    actualiser_constantes_cas_general(p, coord);
+}
+
+void retourne_Thomas_Roiseux(Plateau p, Coord coord)
+{
+    int droit_retournee = 0;
+    int i, j;
+    for (i = p->coord_carte_haut_gauche.i; i <= p->coord_carte_bas_droite.i; i += 1)
+    {
+        for (j = get_colonne_gauche(p); j <= get_colonne_droite(p); j += 1)
+        {
+            Carte carte = p->plateau_jeu[i][j];
+            if (carte != NULL && get_est_cachee(carte) == 0 && get_id(carte) == Droit)
+            {
+                droit_retournee = 1;
+                break;
+            }
+        }
+    }
+    if (droit_retournee == 1)
+    {
+
+        for (i = p->coord_carte_haut_gauche.i; i <= p->coord_carte_bas_droite.i; i += 1)
+        {
+            for (j = get_colonne_gauche(p); j <= get_colonne_droite(p); j += 1)
+            {
+                Carte carte = p->plateau_jeu[i][j];
+                if (carte != NULL && get_id(carte) == Examen && get_est_cachee(carte) == 0)
+                {
+                    free(p->plateau_jeu[i][j]);
+                    p->plateau_jeu[i][j] = NULL;
+                    p->cartes_retournees_manche -= 1;
+                }
+            }
+        }
+        actualiser_constantes_cas_general(p, coord);
+        return;
+    }
+    actualiser_constantes_cas_general(p, coord);
+}
+
+void retourne_Clemence_Juste(Plateau p, Faction f, int score, Faction f_adverse, int score_adverse, Coord coord)
+{
+    int examen_retournee = 0;
+    int i, j;
+    for (i = p->coord_carte_haut_gauche.i; i <= p->coord_carte_bas_droite.i; i += 1)
+    {
+        for (j = get_colonne_gauche(p); j <= get_colonne_droite(p); j += 1)
+        {
+            Carte carte = p->plateau_jeu[i][j];
+            if (carte != NULL && get_est_cachee(carte) == 0 && get_id(carte) == Examen)
+            {
+                examen_retournee += 1;
+            }
+        }
+    }
+    if (examen_retournee % 2 == 0)
+    {
+        int n = examen_retournee / 2;
+        set_pts_DDRS_manche(f, score - factorielle(n));
+    }
+    else
+    {
+        int n = (examen_retournee - 1) / 2;
+        set_pts_DDRS_manche(f_adverse, score_adverse - factorielle(n));
+    }
+    actualiser_constantes_cas_general(p, coord);
+}
+
+void retourne_Examen(Plateau p, Faction f, int score, Coord coord)
+{
+    int Forest_retournee = 0;
+    int Brunel_retournee = 0;
+    int FISE_retournee = 0;
+    int i, j;
+    for (i = p->coord_carte_haut_gauche.i; i <= p->coord_carte_bas_droite.i; i += 1)
+    {
+        for (j = get_colonne_gauche(p); j <= get_colonne_droite(p); j += 1)
+        {
+            Carte carte = p->plateau_jeu[i][j];
+            if (carte != NULL && get_est_cachee(carte) == 0 && get_id(carte) == Julien_Forest)
+            {
+                Forest_retournee = 1;
+            }
+            else if (carte != NULL && get_est_cachee(carte) == 0 && get_id(carte) == Nicolas_Brunel)
+            {
+                Brunel_retournee = 1;
+            }
+            else if (carte != NULL && get_est_cachee(carte) == 0 && get_id(carte) == FISE)
+            {
+                FISE_retournee += 1;
+            }
+        }
+    }
+    if (Forest_retournee == 0)
+    {
+        if (Brunel_retournee != 0)
+        {
+            set_pts_DDRS_manche(f, score - 2 * FISE_retournee);
+            actualiser_constantes_cas_general(p, coord);
+            return;
+        }
+        actualiser_constantes_cas_general(p, coord);
+        return;
+    }
+    if (Brunel_retournee == 0)
+    {
+        set_pts_DDRS_manche(f, score + FISE_retournee);
+        actualiser_constantes_cas_general(p, coord);
+        return;
+    }
+    set_pts_DDRS_manche(f, score - FISE_retournee);
+    actualiser_constantes_cas_general(p, coord);
+}
+
+void retourne_Echec(Plateau p, Faction f, int score, Faction f_adverse, Coord coord)
+{
+    int a_perdu_manche = get_nb_manches_gagnees(f_adverse) == 1 ? 1 : 0;
+    if (a_perdu_manche == 1)
+    {
+        set_pts_DDRS_manche(f, score + 4);
+    }
+    else
+    {
+        int i, j;
+        for (i = p->coord_carte_haut_gauche.i; i <= p->coord_carte_bas_droite.i; i += 1)
+        {
+            for (j = get_colonne_gauche(p); j <= get_colonne_droite(p); j += 1)
+            {
+                Carte carte = p->plateau_jeu[i][j];
+                if (carte != NULL && get_est_cachee(carte) == 1 && get_id(carte) == Examen)
+                {
+                    set_est_cachee(carte, 0);
+                    p->cartes_non_retournees_manche -= 1;
+                    p->cartes_retournees_manche += 1;
+                }
+            }
+        }
+    }
+    actualiser_constantes_cas_general(p, coord);
+}
+
+void retourne_Droit(Plateau p, Faction f, int score, Coord coord)
+{
+    int Roiseux_retournee = 0;
+    int Brunel_retournee = 0;
+    int i, j;
+    for (i = p->coord_carte_haut_gauche.i; i <= p->coord_carte_bas_droite.i; i += 1)
+    {
+        for (j = get_colonne_gauche(p); j <= get_colonne_droite(p); j += 1)
+        {
+            Carte carte = p->plateau_jeu[i][j];
+            if (carte != NULL && get_est_cachee(carte) == 0 && get_id(carte) == Thomas_Roiseux)
+            {
+                Roiseux_retournee = 1;
+            }
+            else if (carte != NULL && get_est_cachee(carte) == 0 && get_id(carte) == Nicolas_Brunel)
+            {
+                Brunel_retournee = 1;
+            }
+        }
+    }
+    if (Roiseux_retournee == 1 && Brunel_retournee == 1)
+    {
+        set_pts_DDRS_manche(f, score - 10);
+        actualiser_constantes_cas_general(p, coord);
+        return;
+    }
+    actualiser_constantes_cas_general(p, coord);
+}
+
+void retourne_OCaml(Plateau p, Faction f, int score, Coord coord)
+{
+    int examen_retournee = 0;
+    int i, j;
+    for (i = p->coord_carte_haut_gauche.i; i <= p->coord_carte_bas_droite.i; i += 1)
+    {
+        for (j = get_colonne_gauche(p); j <= get_colonne_droite(p); j += 1)
+        {
+            Carte carte = p->plateau_jeu[i][j];
+            if (carte != NULL && get_est_cachee(carte) == 0 && get_id(carte) == Examen)
+            {
+                examen_retournee += 1;
+            }
+        }
+    }
+    char *nom_faction = get_nom_faction(f);
+    if (nom_faction[0] == 'o' || nom_faction[0] == 'O')
+    {
+        set_pts_DDRS_manche(f, score + 2 * examen_retournee);
+    }
+    else
+    {
+        set_pts_DDRS_manche(f, score - examen_retournee);
+    }
+    actualiser_constantes_cas_general(p, coord);
+}
+
+void retourne_Stefania_Dumbrava(Plateau p, Coord coord)
+{
+    // On récupère les informations sur les dernières cartes retournées
+    // Cela nous permettra de garder actualiser nos constantes du plateau
+    Carte avant_derniere = p->avant_derniere_carte_retournee;
+    Carte derniere = p->derniere_carte_retournee;
+    Coord coord_avant_derniere = p->coord_avant_derniere_carte_retournee;
+    Coord coord_derniere = p->coord_derniere_carte_retournee;
+
+    int OCaml_retournee = 0;
+    int i, j;
+    for (i = p->coord_carte_haut_gauche.i; i <= p->coord_carte_bas_droite.i; i += 1)
+    {
+        for (j = get_colonne_gauche(p); j <= get_colonne_droite(p); j += 1)
+        {
+            Carte carte = p->plateau_jeu[i][j];
+            if (carte != NULL && get_est_cachee(carte) == 0 && get_id(carte) == OCaml)
+            {
+                OCaml_retournee = 1;
+            }
+        }
+    }
+    if (OCaml_retournee == 1)
+    {
+        for (i = p->coord_carte_haut_gauche.i; i <= p->coord_carte_bas_droite.i; i += 1)
+        {
+            for (j = get_colonne_gauche(p); j <= get_colonne_droite(p); j += 1)
+            {
+                Carte carte = p->plateau_jeu[i][j];
+                if (carte != NULL && get_id(carte) == Stefania_Dumbrava)
+                {
+                    if (get_est_cachee(carte) == 0)
+                    {
+                        free(p->plateau_jeu[i][j]);
+                        p->plateau_jeu[i][j] = NULL;
+                        p->cartes_retournees_manche -= 1;
+                    }
+                    else
+                    {
+                        free(p->plateau_jeu[i][j]);
+                        p->plateau_jeu[i][j] = NULL;
+                        p->cartes_non_retournees_manche -= 1;
+                    }
+                }
+                else if (carte != NULL && get_est_cachee(carte) == 0)
+                {
+                    set_est_cachee(carte, 1);
+                    p->cartes_non_retournees_manche += 1;
+                    p->cartes_retournees_manche -= 1;
+                }
+                else if (carte != NULL && get_est_cachee(carte) == 1)
+                {
+                    set_est_cachee(carte, 0);
+                    p->cartes_non_retournees_manche -= 1;
+                    p->cartes_retournees_manche += 1;
+                    avant_derniere = derniere;
+                    coord_avant_derniere = coord_derniere;
+                    derniere = carte;
+                    coord_derniere.i = i;
+                    coord_derniere.j = j;
+                }
+            }
+        }
+    }
+    // Actualisation des constantes du plateau
+    p->avant_derniere_carte_retournee = avant_derniere;
+    p->derniere_carte_retournee = derniere;
+    p->coord_avant_derniere_carte_retournee = coord_avant_derniere;
+    p->coord_derniere_carte_retournee = coord_derniere;
+}
+
+void retourne_Nicolas_Brunel(Plateau p, Faction f, int score, Coord coord)
+{
+    int Charge_TP_retournee = 0;
+    int i, j;
+    for (i = p->coord_carte_haut_gauche.i; i <= p->coord_carte_bas_droite.i; i += 1)
+    {
+        for (j = get_colonne_gauche(p); j <= get_colonne_droite(p); j += 1)
+        {
+            Carte carte = p->plateau_jeu[i][j];
+            if (carte != NULL && get_est_cachee(carte) == 0 && (get_id(carte) == Juhuyn_Park || get_id(carte) == Angela_Pineda))
+            {
+                Charge_TP_retournee = 1;
+            }
+        }
+    }
+    if (Charge_TP_retournee == 1)
+    {
+        set_pts_DDRS_manche(f, score - 3);
+    }
+    else
+    {
+        for (i = p->coord_carte_haut_gauche.i; i <= p->coord_carte_bas_droite.i; i += 1)
+        {
+            for (j = get_colonne_gauche(p); j <= get_colonne_droite(p); j += 1)
+            {
+                Carte carte = p->plateau_jeu[i][j];
+                if (carte != NULL && get_id(carte) == TP_Statistiques)
+                {
+                    if (get_est_cachee(carte) == 0)
+                    {
+                        free(p->plateau_jeu[i][j]);
+                        p->plateau_jeu[i][j] = NULL;
+                        p->cartes_retournees_manche -= 1;
+                    }
+                    else
+                    {
+                        free(p->plateau_jeu[i][j]);
+                        p->plateau_jeu[i][j] = NULL;
+                        p->cartes_non_retournees_manche -= 1;
+                    }
+                }
+            }
+        }
+    }
+    actualiser_constantes_cas_general(p, coord);
+}
+
+void retourne_TP_statistiques(Plateau p, Faction f, int score, Coord coord)
+{
+    int Juste_retournee = 0;
+    int TP_Stat = 0;
+    int i, j;
+    for (i = p->coord_carte_haut_gauche.i; i <= p->coord_carte_bas_droite.i; i += 1)
+    {
+        for (j = get_colonne_gauche(p); j <= get_colonne_droite(p); j += 1)
+        {
+            Carte carte = p->plateau_jeu[i][j];
+            if (carte != NULL && get_est_cachee(carte) == 0 && get_id(carte) == Clemence_Juste)
+            {
+                Juste_retournee = 1;
+            }
+            else if (carte != NULL && get_est_cachee(carte) == 0 && get_id(carte) == TP_Statistiques)
+            {
+                TP_Stat += 1;
+            }
+        }
+    }
+    if (Juste_retournee == 1)
+    {
+        set_pts_DDRS_manche(f, score + TP_Stat);
+    }
+    else
+    {
+        for (i = p->coord_carte_haut_gauche.i; i <= p->coord_carte_bas_droite.i; i += 1)
+        {
+            for (j = get_colonne_gauche(p); j <= get_colonne_droite(p); j += 1)
+            {
+                Carte carte = p->plateau_jeu[i][j];
+                if (carte != NULL && get_est_cachee(carte) == 0 && (get_id(carte) == Juhuyn_Park || get_id(carte) == Angela_Pineda))
+                {
+                    free(p->plateau_jeu[i][j]);
+                    p->plateau_jeu[i][j] = NULL;
+                    p->cartes_retournees_manche -= 1;
+                }
+            }
+        }
+    }
+    actualiser_constantes_cas_general(p, coord);
+}
+
+void retourne_Juhuyn_Park(Plateau p, Faction f, int score, Coord coord)
+{
+    int Juste_retournee = 0;
+    int i, j;
+    for (i = p->coord_carte_haut_gauche.i; i <= p->coord_carte_bas_droite.i; i += 1)
+    {
+        for (j = get_colonne_gauche(p); j <= get_colonne_droite(p); j += 1)
+        {
+            Carte carte = p->plateau_jeu[i][j];
+            if (carte != NULL && get_est_cachee(carte) == 0 && get_id(carte) == Clemence_Juste)
+            {
+                Juste_retournee = 1;
+            }
+        }
+    }
+    if (Juste_retournee == 1)
+    {
+        set_pts_DDRS_manche(f, score + 3);
+    }
+    actualiser_constantes_cas_general(p, coord);
+}
+
+void retourne_Angela_Pineda(Plateau p, Faction f, int score, Coord coord)
+{
+    int Park_retournee = 0;
+    int TP_Stat = 0;
+    int Brunel_retournee = 0;
+    int i, j;
+    for (i = p->coord_carte_haut_gauche.i; i <= p->coord_carte_bas_droite.i; i += 1)
+    {
+        for (j = get_colonne_gauche(p); j <= get_colonne_droite(p); j += 1)
+        {
+            Carte carte = p->plateau_jeu[i][j];
+            if (carte != NULL && get_est_cachee(carte) == 0 && get_id(carte) == Juhuyn_Park)
+            {
+                Park_retournee = 1;
+            }
+            else if (carte != NULL && get_est_cachee(carte) == 0 && get_id(carte) == TP_Statistiques)
+            {
+                TP_Stat += 1;
+            }
+            else if (carte != NULL && get_est_cachee(carte) == 0 && get_id(carte) == Nicolas_Brunel)
+            {
+                Brunel_retournee += 1;
+            }
+        }
+    }
+    if (Park_retournee == 1)
+    {
+        set_pts_DDRS_manche(f, score + 2 * TP_Stat);
+    }
+    else
+    {
+        set_pts_DDRS_manche(f, score - 5 * Brunel_retournee);
+    }
+    actualiser_constantes_cas_general(p, coord);
+}
+
+void retourne_Diese(Plateau p, Faction f, int score, Coord coord)
+{
+    int Forest_retournee = 0;
+    int Roiseux_retournee = 0;
+    int i, j;
+    for (i = p->coord_carte_haut_gauche.i; i <= p->coord_carte_bas_droite.i; i += 1)
+    {
+        for (j = get_colonne_gauche(p); j <= get_colonne_droite(p); j += 1)
+        {
+            Carte carte = p->plateau_jeu[i][j];
+            if (carte != NULL && get_est_cachee(carte) == 0 && get_id(carte) == Julien_Forest)
+            {
+                Forest_retournee = 1;
+            }
+            else if (carte != NULL && get_est_cachee(carte) == 0 && get_id(carte) == Thomas_Roiseux)
+            {
+                Roiseux_retournee += 1;
+            }
+        }
+    }
+    if (Julien_Forest == 1)
+    {
+        for (i = p->coord_carte_haut_gauche.i; i <= p->coord_carte_bas_droite.i; i += 1)
+        {
+            for (j = get_colonne_gauche(p); j <= get_colonne_droite(p); j += 1)
+            {
+                Carte carte = p->plateau_jeu[i][j];
+                if (carte != NULL && get_id(carte) == Diese)
+                {
+                    if (get_est_cachee(carte) == 0)
+                    {
+                        free(p->plateau_jeu[i][j]);
+                        p->plateau_jeu[i][j] = NULL;
+                        p->cartes_retournees_manche -= 1;
+                    }
+                    else
+                    {
+                        free(p->plateau_jeu[i][j]);
+                        p->plateau_jeu[i][j] = NULL;
+                        p->cartes_non_retournees_manche -= 1;
+                    }
+                }
+            }
+        }
+    }
+    else
+    {
+        set_pts_DDRS_manche(f, score + 5 * Roiseux_retournee);
+    }
+    actualiser_constantes_cas_general(p, coord);
+}
+
 void switch_carte(Plateau p, id_carte id, Coord coord, Faction f, Faction f_adverse, int score, int score_adverse)
 {
     // Cette fonction sert d'aiguillage pour activer l'effet de la carte posée par la faction f
@@ -1770,6 +2321,76 @@ void switch_carte(Plateau p, id_carte id, Coord coord, Faction f, Faction f_adve
     case Laurent_Prevel:
     {
         retourne_Laurent_Prevel(p, coord);
+        break;
+    }
+    case Ascenseur_en_panne:
+    {
+        retourne_Ascenseur_en_panne(p, coord);
+        break;
+    }
+    case Nour_Elbessi:
+    {
+        retourne_Nour_Elbessi(p, f, score, coord);
+        break;
+    }
+    case Thomas_Roiseux:
+    {
+        retourne_Thomas_Roiseux(p, coord);
+        break;
+    }
+    case Clemence_Juste:
+    {
+        retourne_Clemence_Juste(p, f, score, f_adverse, score_adverse, coord);
+        break;
+    }
+    case Examen:
+    {
+        retourne_Examen(p, f, score, coord);
+        break;
+    }
+    case Echec:
+    {
+        retourne_Echec(p, f, score, f_adverse, coord);
+        break;
+    }
+    case Droit:
+    {
+        retourne_Droit(p, f, score, coord);
+        break;
+    }
+    case OCaml:
+    {
+        retourne_OCaml(p, f, score, coord);
+        break;
+    }
+    case Stefania_Dumbrava:
+    {
+        retourne_Stefania_Dumbrava(p, coord);
+        break;
+    }
+    case Nicolas_Brunel:
+    {
+        retourne_Nicolas_Brunel(p, f, score, coord);
+        break;
+    }
+    case TP_Statistiques:
+    {
+        retourne_TP_statistiques(p, f, score, coord);
+        break;
+    }
+    case Juhuyn_Park:
+    {
+        retourne_Juhuyn_Park(p, f, score, coord);
+        break;
+    }
+    case Angela_Pineda:
+    {
+        retourne_Angela_Pineda(p, f, score, coord);
+        break;
+    }
+    case Diese:
+    {
+        retourne_Diese(p, f, score, coord);
         break;
     }
     default:
