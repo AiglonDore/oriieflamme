@@ -608,10 +608,9 @@ void retourne_OCaml(Plateau p, Faction f, int score, Coord coord);
 /**
  * @brief Active les effets de la carte Stefania Dumbrava
  * @param p plateau valide (le pointeur doit être valide)
- * @param coord les coordonnées de la carte en question sur le plateau
  *
  */
-void retourne_Stefania_Dumbrava(Plateau p, Coord coord);
+void retourne_Stefania_Dumbrava(Plateau p);
 
 /**
  * @brief Active les effets de la carte Nicolas Brunel

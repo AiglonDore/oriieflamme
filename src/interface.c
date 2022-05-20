@@ -66,10 +66,6 @@ void affiche_main(Faction f)
             printf("*%s\n", get_nom(main[i]));
             affiche_effets(get_id(main[i]));
         }
-        else
-        {
-            printf("NULL\n");
-        }
     }
 }
 

@@ -1887,7 +1887,7 @@ void retourne_OCaml(Plateau p, Faction f, int score, Coord coord)
     actualiser_constantes_cas_general(p, coord);
 }
 
-void retourne_Stefania_Dumbrava(Plateau p, Coord coord)
+void retourne_Stefania_Dumbrava(Plateau p)
 {
     // On récupère les informations sur les dernières cartes retournées
     // Cela nous permettra de garder actualiser nos constantes du plateau
@@ -2126,7 +2126,7 @@ void retourne_Diese(Plateau p, Faction f, int score, Coord coord)
             }
         }
     }
-    if (Julien_Forest == 1)
+    if (Forest_retournee == 1)
     {
         for (i = p->coord_carte_haut_gauche.i; i <= p->coord_carte_bas_droite.i; i += 1)
         {
@@ -2365,7 +2365,7 @@ void switch_carte(Plateau p, id_carte id, Coord coord, Faction f, Faction f_adve
     }
     case Stefania_Dumbrava:
     {
-        retourne_Stefania_Dumbrava(p, coord);
+        retourne_Stefania_Dumbrava(p);
         break;
     }
     case Nicolas_Brunel:
