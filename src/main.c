@@ -84,6 +84,12 @@ void phase2(Plateau p)
  */
 int main()
 {
+    clock_t
+        temps_initial, /* Temps initial en micro-secondes */
+        temps_final;   /* Temps final en micro-secondes */
+    float temps_cpu;
+    temps_initial = clock();
+
     srand(time(0));               // Initialise la génération des nombres aléatoires
     Plateau jeu = init_plateau(); // Initialise le plateau, les factions...
     while (nouvelle_manche(jeu))
@@ -94,5 +100,9 @@ int main()
     affiche_vainqueur(jeu);
     libere_plateau(jeu);
     jeu = NULL;
+
+    temps_final = clock();
+    temps_cpu = (temps_final - temps_initial) * 1e-6;
+
     return 0;
 }

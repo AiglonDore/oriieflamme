@@ -1,0 +1,114 @@
+\documentclass[12pt, openany]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[a4paper,left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[french]{babel}
+\usepackage[pdftex]{graphicx}
+\usepackage{lmodern}
+
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+\newcommand{\hsp}{\hspace{20pt}}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\usepackage{hyperref}
+\usepackage{listings}
+\lstset{language=c, breaklines = true}
+\usepackage{verbatim}
+
+\begin{document}
+
+	\begin{titlepage}
+			\begin{center}
+				
+				\vspace*{\stretch{1}}
+				% Upper part of the page. The '~' is needed because \\
+				% only works if a paragraph has started.
+				\textsc{ \LARGE ENSIIE} \\[2cm]
+				
+				\textsc{ \LARGE Projet d'Informatique} \\[1.5cm]
+				
+				% Title
+				\HRule \\[0.4cm]
+				{ \huge \bfseries Tâches du Lot C\\[0.4cm] }
+				
+				\HRule \\[2cm]
+				
+				% Author and supervisor
+				\begin{minipage}{0.4\textwidth}
+					\begin{flushleft} \large
+						Nour \textsc{Elbessi}\\
+						Thomas \textsc{Roiseux}\\
+						Valentin \textsc{Gardel}\\
+					\end{flushleft}
+				\end{minipage}
+				\begin{minipage}{0.5\textwidth}
+					\begin{flushright} \large
+						\emph{Unité d'enseignement :} PRIM12 \\
+						\emph{Encadrant :} M. \textsc{Senizergues}\\
+					\end{flushright}
+				\end{minipage}
+			
+				\vspace*{\stretch{1}}
+				
+				\vfill
+				
+				% Bottom of the page
+				{\large 23 Mai 2022}
+				
+				
+			\end{center}
+	\end{titlepage}
+
+	\renewcommand*\contentsname{Sommaire}
+	\tableofcontents
+	
+   \chapter{À propos}
+   	
+   	Le Lot C de ce projet consiste à proposer des changements sur le jeu codé lors des deux premiers lots. Pour plus de détails sur le contenu du sujet, vous pouvez vous référer au sujet du Projet d'Informatique \href{https://projet-info.pedago.ensiie.fr}{Oriieflamme}. \\
+   	
+   	\begin{enumerate}
+   		\item \textbf{[Tâche C.1] -} \textsc{Valentin Gardel} \\
+   		Nous proposons dans un premier temps d'ajouter des cartes au jeu et de changer légèrement l'affichage de la main.
+   	\end{enumerate}
+   
+	\chapter{[Tâche C.1] - Ajout de cartes et changement sur l'affichage de la main}
+	
+	Tout d'abord, on propose d'ajouter $14$ cartes supplémentaires au jeu en comportant déjà $32$ types différents. On indique entre parenthèses à côté du nom de la faction le nombre d'occurrences de cette nouvelle carte dans la pioche de chaque faction. 
+	\begin{enumerate}
+		\item \textbf{Ascenseur en panne (1) :}
+		La faction qui a gagné la manche précédente gagne la partie (ne fait rien en cas de première manche).
+		\item \textbf{Nour Elbessi (1) :}
+		Si une carte Examen est retournée, la faction qui a posé cette carte perd $1$ point DDRS. Sinon, supprimez toutes les cartes Échec.
+		\item \textbf{Thomas Roiseux (1) :}
+		Si une carte Droit est retournée, supprimez du plateau toutes les cartes Examen retournées.
+		\item \textbf{Clémence Juste (1) :}
+		Si un nombre pair $n$ de cartes Examen est retourné, la faction qui a posé cette carte perd $(\frac{n}{2})!$ points DDRS. Sinon, la faction adverse de celle qui a posé cette carte gagne $(\frac{n-1}{2})!$ points DDRS.
+		\item \textbf{Examen (6) :}
+		Si une carte Julien Forest est retournée, la faction qui a posé cette carte gagne $1$ points DDRS par carte FISE retournée. Si une carte Nicolas Brunel est retournée, la faction qui a posé cette carte perd $2$ points DDRS par carte FISE retournée.
+		\item \textbf{Échec (6) :}
+		Si la faction qui a posé cette carte a perdu une manche alors elle gagne $4$ points DDRS. Si c'est la première manche ou si elle n'a jamais perdu, on retourne toutes les cartes Examen sans appliquer leurs effets.
+		\item \textbf{Droit (1) :}
+		Si une carte Nicolas Brunel et Thomas Roiseux sont retournées sur le plateau, la faction qui a posé cette carte perd $10$ points DDRS.
+		\item \textbf{OCaml (1) :}
+		Si la faction a un nom qui commence par un "O" ou un "o", alors elle gagne $2$ points DDRS par carte Examen retournée. Sinon, elle en perd $1$ par carte Examen retournée.
+		\item \textbf{Stefania Dumbrava (1) :}
+		Si une carte OCaml est retournée, on supprime toutes les cartes Stefania Dumbrava du plateau et toutes les cartes du plateau changent de face. On n'applique pas les effets des cartes que l'on retourne face visible. On n'annule pas les effets des cartes que l'on retourne face cachée. (Explication : à force de taper sa main contre la table le plateau s'est renversé...)
+		\item \textbf{Nicolas Brunel (1) :}
+		Si une carte Juhuyn Park ou Angela Pineda est retournée, la faction qui a posé cette carte perd $3$ points DDRS. Sinon, supprimez toutes les cartes TP de Statistiques du plateau.
+		\item \textbf{TP de Statistiques (5) :}
+		Si une carte Clémence Juste est retournée, la faction qui a posé cette carte gagne $1$ point DDRS par carte TP de Statistiques retournée (y compris celle-ci). Sinon, supprimez toutes les cartes Juhuyn Park et Angela Pineda retournées du plateau.
+		\item \textbf{Juhuyn Park (1) :}
+		Si une carte Clémence Juste est retournée, la faction qui a posé cette carte gagne (plein d'informations sur le TP et) $3$ points DDRS.
+		\item \textbf{Angela Pineda (1) :}
+		Si une carte Juhuyn Park est retournée, la faction qui a posé cette carte gagne $2$ points DDRS par carte TP retournée. Sinon, elle en perd $5$ par carte Nicolas Brunel retournée.
+		\item \textbf{Dièse (1) :}
+		Si une carte Julien Forest est retournée alors supprimez toutes les cartes Dièse, celle-ci y compris. Sinon, la faction qui a posé cette carte gagne $5$ points DDRS par carte Thomas Roiseux retournée.
+	\end{enumerate}
+Au final, on obtient $46$ types de carte différents pour une pioche de $75$ cartes par équipe. \\
+On réalise également un changement sur l'affichage de la main. On n'affiche plus "NULL" lorsque la carte est le pointeur \verb|NULL|.
+
+\chapter{[Tâche C.2] - Mesurer l’impact environnemental du code d'Oriieflamme}
+Le rapport détaillé de cette partie s'intitule rapport_mesure sous ce même répertoire.
+
+\end{document}
