@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="lot_a" company="ENSIIE" webLink="http://" view-date="2022-02-23" view-index="0" gantt-divider-location="440" resource-divider-location="300" version="3.1.3100" locale="en_GB">
+    <description/>
+    <view zooming-state="default:2" id="gantt-chart">
+        <field id="tpd3" name="Name" width="100" order="0"/>
+        <field id="tpd4" name="Begin date" width="102" order="1"/>
+        <field id="tpd5" name="End date" width="91" order="2"/>
+        <field id="tpd13" name="Resources" width="143" order="3"/>
+        <option id="color.recent">
+            <![CDATA[#ff0033 #ffff00 #0000cc #00ffcc #ff0000]]>
+        </option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="210" order="0"/>
+        <field id="1" name="Default role" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" name="A.2.1" color="#8cb6ce" meeting="false" start="2022-03-07" duration="1" complete="100" thirdDate="2022-02-28" thirdDate-constraint="0" priority="2" expand="true">
+            <notes>
+                <![CDATA[Création des types]]>
+            </notes>
+            <depend id="7" type="2" difference="0" hardness="Strong"/>
+            <depend id="12" type="2" difference="0" hardness="Strong"/>
+            <depend id="18" type="2" difference="0" hardness="Strong"/>
+            <depend id="22" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="18" name="A.2.2" color="#8cb6ce" meeting="false" start="2022-03-08" duration="8" complete="100" thirdDate="2022-02-23" thirdDate-constraint="0" expand="true">
+            <notes>
+                <![CDATA[Implémentation des prototypes]]>
+            </notes>
+            <depend id="12" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="2" name="A.3.1" color="#ff0000" meeting="false" start="2022-03-07" duration="1" complete="100" thirdDate="2022-02-23" thirdDate-constraint="0" priority="2" expand="true">
+            <notes>
+                <![CDATA[Création des types]]>
+            </notes>
+            <depend id="7" type="2" difference="0" hardness="Strong"/>
+            <depend id="12" type="2" difference="0" hardness="Strong"/>
+            <depend id="22" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="22" name="A.3.2" color="#ff0033" meeting="false" start="2022-03-08" duration="8" complete="100" thirdDate="2022-02-23" thirdDate-constraint="0" expand="true">
+            <depend id="12" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="10" name="A.1.1" color="#0000cc" meeting="false" start="2022-03-07" duration="1" complete="100" thirdDate="2022-02-23" thirdDate-constraint="0" expand="true">
+            <notes>
+                <![CDATA[Mettez en place un nouveau dépôt git (n'utilisez pas le dépot du mini-TP tutoriel) et invitez votre encadrant sur votre dépôt en tant que rapporter ainsi que tous les membres du groupe en tant que developper. Ce git contiendra votre code. Créez y une première branche lot_a. Le
+dernier commit de cette branche contiendra le code du Lot A une fois celui-ci terminé et déterminera la date à laquelle vous rendez votre lot.
+Créer un projet avec GanttProject et poussez le sur votre dépot git, dans la branche lot_a. Remplissez ce fichier avec les différentes tâches du Lot A. Mettez des durées arbitraires sur vos tâches. Ajoutez chaque membre du groupe comme ressource. Affectez ces membres aux tâches après décision de qui effectue quelle tâche. Enfin, indiquez les contraintes de précédences sur les tâches (quelle tâche doit être finie pour pouvoir commencer une nouvelle tâche). Vous pouvez couper les
+tâches en sous-taches sur vous voulez.]]>
+            </notes>
+            <depend id="12" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="12" name="A.1.2" color="#ffff00" meeting="false" start="2022-03-18" duration="2" complete="100" thirdDate="2022-02-23" thirdDate-constraint="0" priority="4" expand="true">
+            <notes>
+                <![CDATA[Codez le fichier main.c. Ce fichier devra utiliser toutes les fonctions et uniquement les fonctions qui auront été ajoutées dans les interfaces remplies par les autres membres du groupe. Remarque : ce fichier restera normalement inchangé tout le long du Lot B. Une fois ce dernier terminé, main.c pourra être compilé en un exécutable qui fera tourner le projet.
+Vérifiez, une fois toutes les interfaces rédigées par les autres membres, que votre fichier main.c compile sous forme de fichier objet main.o.
+Faites valider le Lot A par votre encadrant une fois toutes les tâches terminées.]]>
+            </notes>
+        </task>
+        <task id="7" name="A.4" color="#00ffcc" meeting="false" start="2022-03-08" duration="8" complete="100" thirdDate="2022-02-23" thirdDate-constraint="0" expand="true">
+            <notes>
+                <![CDATA[Le fichier interface.h est en charge d'échanger des informations avec les joueurs. Par exemple demander quelle carte la faction veut poser sur le plateau et à quel endroit, ou afficher le plateau de jeu en console.
+
+Ajoutez chacune des fonctions suivants, avec les paramètres qui vous semblent adéquats à vous et au responsable de la tâche A.1 pour coder le fichier main.c. Documentez ensuite ces fonctions et ces types suffisamment pour pouvoir les implanter facilement dans le lot suivant et pour pouvoir les utiliser correctement dans le fichier main.c.
+
+Dans le fichier interface.h:
+
+une fonction pour afficher le plateau
+une fonction pour afficher la main d'une faction
+une fonction pour demander à une faction si elle veut utiliser son option permettant de vider sa main, de mélanger sa pioche et de repiocher
+une fonction pour demander quelle carte de sa main la faction souhaite poser face cachée sur le plateau
+une fonction pour demander à quelle position la faction souhaite poser sa carte
+une fonction pour afficher les effets d'une carte qui vient d'être retournée sur le plateau
+une fonction pour afficher le vainqueur de la partie
+Attention : aucune de ces fonctions ne modifie le plateau de jeu ou les factions ou ne contient d'information sur les cartes. C’est le rôle de plateau.h, faction.h ou carte.h.
+
+On rappelle qu’un fichier .h ne contient pas de code, juste des signatures de fonctions.
+
+Vous devez maintenir le dépot git à jour au fur et à mesure de l’avancement de votre travail. Vos commits doivent avoir l’indication Tâche A.4 (en plus d’un message décrivant le commit).]]>
+            </notes>
+            <depend id="12" type="2" difference="0" hardness="Strong"/>
+        </task>
+    </tasks>
+    <resources>
+        <resource id="0" name="Valentin Gardel" function="SoftwareDevelopment:2" contacts="" phone=""/>
+        <resource id="1" name="Nour Elbessi" function="SoftwareDevelopment:2" contacts="" phone=""/>
+        <resource id="2" name="Thomas Roiseux" function="SoftwareDevelopment:2" contacts="" phone=""/>
+    </resources>
+    <allocations>
+        <allocation task-id="2" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="22" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="0" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="18" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="7" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="10" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="12" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+    </allocations>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles roleset-name="SoftwareDevelopment"/>
+</project>
