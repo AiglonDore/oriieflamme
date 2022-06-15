@@ -1,0 +1,14 @@
+<map id="retourne_Eric_Lejeune" name="retourne_Eric_Lejeune">
+<area shape="rect" id="node1" title="Active les effets de la carte Eric Lejeune." alt="" coords="921,73,1088,100"/>
+<area shape="rect" id="node2" href="$plateau_8c.html#a676ed33ed1ff7fd3200efd68462f61e0" title="Active les effets de la carte d&#39;identifiant id." alt="" coords="769,73,873,100"/>
+<area shape="rect" id="node3" href="$plateau_8c.html#a466b7d06f9be4885f93658ef783ebedb" title="Active les effets de la carte Massinissa Merabet." alt="" coords="565,66,721,107"/>
+<area shape="rect" id="node4" href="$plateau_8c.html#aafb029b0483a7d02f4f2619eea4deb27" title="retourne la carte la plus en haut à gauche du plateau face visible et active son effet" alt="" coords="582,132,705,159"/>
+<area shape="rect" id="node5" href="$main_8c.html#a34ccc9f1e0da464163a6f5e297c42563" title="Fonction qui contrôle la phase 2." alt="" coords="448,132,517,159"/>
+<area shape="rect" id="node6" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="345,132,400,159"/>
+<area shape="rect" id="node7" href="$interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="191,5,297,32"/>
+<area shape="rect" id="node9" href="$plateau_8c.html#aa1b228e632acc6462080d59a556f0cfa" title="Crée une faction initialisée." alt="" coords="197,208,291,235"/>
+<area shape="rect" id="node12" href="$faction_8c.html#aef8713f12e5372bd993f34fa4f6d6cab" title=" " alt="" coords="203,107,285,133"/>
+<area shape="rect" id="node8" href="$main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="39,31,109,57"/>
+<area shape="rect" id="node10" href="$plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="25,183,123,209"/>
+<area shape="rect" id="node11" href="$plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,245,143,272"/>
+</map>

@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Oriieflamme:  Fichier source de headers/structure.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Oriieflamme
+   &#160;<span id="projectnumber">0.2</span>
+   </div>
+   <div id="projectbrief">Jeu de cartes avec des personnes de l&#39;ENSIIE</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7f57b1e41c5acd0e859ae5f3a2b075a9.html">headers</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">structure.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="structure_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef _STRUCTURE_H</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define _STRUCTURE_H</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="carte_8h.html">carte.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="faction_8h.html">faction.h</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="structure_8h.html#af09c6150dd688094b9a2ed11657afbe0">   22</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="struct_structure_carte.html">Carte</a> <a class="code" href="structure_8h.html#af09c6150dd688094b9a2ed11657afbe0">Plateau_jeu</a>[129][129];</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="struct_factions__en__jeu.html">   29</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_factions__en__jeu.html">Factions_en_jeu</a></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="struct_factions__en__jeu.html#ad6aecb732d365d382955d9bc06fd897d">   31</a></span>&#160;  <a class="code" href="struct_structure_factions.html">Faction</a> <a class="code" href="struct_factions__en__jeu.html#ad6aecb732d365d382955d9bc06fd897d">left</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="struct_factions__en__jeu.html#aae23e1080a95aef1f1610a99c39f9c81">   32</a></span>&#160;  <a class="code" href="struct_structure_factions.html">Faction</a> <a class="code" href="struct_factions__en__jeu.html#aae23e1080a95aef1f1610a99c39f9c81">right</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="structure_8h.html#aaf4d7dcdfc776307087361b4ee995e09">   40</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct_factions__en__jeu.html">Factions_en_jeu</a> <a class="code" href="struct_factions__en__jeu.html">Factions_en_jeu</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="struct_coord.html">   47</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_coord.html">Coord</a></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">   49</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">   50</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="structure_8h.html#a28212a9adac38466f50ed55f1bc4cdfb">   58</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct_coord.html">Coord</a> <a class="code" href="struct_coord.html">Coord</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="structure_8h.html#a0231077ad24f0c102c1d0d6daafae6e9">   65</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="struct_structure_carte.html">Carte</a> <a class="code" href="structure_8h.html#a0231077ad24f0c102c1d0d6daafae6e9">Main</a>[8];</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="structure_8h.html#a9b18ab4f4d3508a3f5ce014f4040217f">   72</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structs__pioche.html">s_pioche</a> *<a class="code" href="structure_8h.html#a9b18ab4f4d3508a3f5ce014f4040217f">Pioche</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<a class="code" href="structs__pioche.html">Pioche</a> <a class="code" href="structure_8h.html#ad911b5ece54d506c7109120dbfc9c2f0">creation_pioche_vide</a>();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keywordtype">int</span> <a class="code" href="structure_8h.html#ae973594dee297fae28846edec431f098">pioche_est_vide</a>(<a class="code" href="structs__pioche.html">Pioche</a> p);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keywordtype">void</span> <a class="code" href="structure_8h.html#ac8dcdc0ffb092b739d94573e47eaaacf">ajout_pioche</a>(<a class="code" href="structs__pioche.html">Pioche</a> p, <a class="code" href="struct_structure_carte.html">Carte</a> c);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<a class="code" href="struct_structure_carte.html">Carte</a> <a class="code" href="structure_8h.html#a7b95c6a72accdcab7cc1f39d2536fe06">enleve_pioche</a>(<a class="code" href="structs__pioche.html">Pioche</a> p);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="keywordtype">void</span> <a class="code" href="structure_8h.html#a855e5f243da2af0fb6391901773dc997">libere_pioche</a>(<a class="code" href="structs__pioche.html">Pioche</a> p);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">#endif // STRUCTURE_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_factions__en__jeu_html_aae23e1080a95aef1f1610a99c39f9c81"><div class="ttname"><a href="struct_factions__en__jeu.html#aae23e1080a95aef1f1610a99c39f9c81">Factions_en_jeu::right</a></div><div class="ttdeci">Faction right</div><div class="ttdef"><b>Definition:</b> <a href="structure_8h_source.html#l00032">structure.h:32</a></div></div>
+<div class="ttc" id="astruct_coord_html_a37d972ae0b47b9099e30983131d31916"><div class="ttname"><a href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">Coord::j</a></div><div class="ttdeci">int j</div><div class="ttdef"><b>Definition:</b> <a href="structure_8h_source.html#l00050">structure.h:50</a></div></div>
+<div class="ttc" id="astruct_structure_factions_html"><div class="ttname"><a href="struct_structure_factions.html">StructureFactions</a></div><div class="ttdoc">type concret pour la faction, a_remelange vaut 1 si la main a été remélangée, 0 sinon</div><div class="ttdef"><b>Definition:</b> <a href="faction_8c_source.html#l00024">faction.c:24</a></div></div>
+<div class="ttc" id="astruct_coord_html"><div class="ttname"><a href="struct_coord.html">Coord</a></div><div class="ttdoc">Structure pour stocker les coordonnées d'une carte sur la grille 2D.</div><div class="ttdef"><b>Definition:</b> <a href="structure_8h_source.html#l00047">structure.h:47</a></div></div>
+<div class="ttc" id="astructure_8h_html_a7b95c6a72accdcab7cc1f39d2536fe06"><div class="ttname"><a href="structure_8h.html#a7b95c6a72accdcab7cc1f39d2536fe06">enleve_pioche</a></div><div class="ttdeci">Carte enleve_pioche(Pioche p)</div><div class="ttdoc">enlève la carte au sommet de la pioche (on suppose la pioche non vide)</div><div class="ttdef"><b>Definition:</b> <a href="structure_8c_source.html#l00047">structure.c:47</a></div></div>
+<div class="ttc" id="astructure_8h_html_ad911b5ece54d506c7109120dbfc9c2f0"><div class="ttname"><a href="structure_8h.html#ad911b5ece54d506c7109120dbfc9c2f0">creation_pioche_vide</a></div><div class="ttdeci">Pioche creation_pioche_vide()</div><div class="ttdoc">Savoir si une faction a itilisé l'option de remélanger sa main et boîte à idée et de repiocher des ca...</div><div class="ttdef"><b>Definition:</b> <a href="structure_8c_source.html#l00029">structure.c:29</a></div></div>
+<div class="ttc" id="astructure_8h_html_af09c6150dd688094b9a2ed11657afbe0"><div class="ttname"><a href="structure_8h.html#af09c6150dd688094b9a2ed11657afbe0">Plateau_jeu</a></div><div class="ttdeci">Carte Plateau_jeu[129][129]</div><div class="ttdoc">type concret pour le plateau de jeu</div><div class="ttdef"><b>Definition:</b> <a href="structure_8h_source.html#l00022">structure.h:22</a></div></div>
+<div class="ttc" id="acarte_8h_html"><div class="ttname"><a href="carte_8h.html">carte.h</a></div><div class="ttdoc">Interface Carte : interface en charge des informations des cartes jeu.</div></div>
+<div class="ttc" id="afaction_8h_html"><div class="ttname"><a href="faction_8h.html">faction.h</a></div><div class="ttdoc">Interface faction : interface en charge des informations et des manipulations propre d'une faction.</div></div>
+<div class="ttc" id="astructure_8h_html_a9b18ab4f4d3508a3f5ce014f4040217f"><div class="ttname"><a href="structure_8h.html#a9b18ab4f4d3508a3f5ce014f4040217f">Pioche</a></div><div class="ttdeci">struct s_pioche * Pioche</div><div class="ttdoc">type abstrait pour la pioche d'une faction</div><div class="ttdef"><b>Definition:</b> <a href="structure_8h_source.html#l00072">structure.h:72</a></div></div>
+<div class="ttc" id="astructure_8h_html_ae973594dee297fae28846edec431f098"><div class="ttname"><a href="structure_8h.html#ae973594dee297fae28846edec431f098">pioche_est_vide</a></div><div class="ttdeci">int pioche_est_vide(Pioche p)</div><div class="ttdoc">indique si la pioche est vide ou non</div><div class="ttdef"><b>Definition:</b> <a href="structure_8c_source.html#l00036">structure.c:36</a></div></div>
+<div class="ttc" id="astruct_factions__en__jeu_html"><div class="ttname"><a href="struct_factions__en__jeu.html">Factions_en_jeu</a></div><div class="ttdoc">Structure pour les couples de factions.</div><div class="ttdef"><b>Definition:</b> <a href="structure_8h_source.html#l00029">structure.h:29</a></div></div>
+<div class="ttc" id="astruct_factions__en__jeu_html_ad6aecb732d365d382955d9bc06fd897d"><div class="ttname"><a href="struct_factions__en__jeu.html#ad6aecb732d365d382955d9bc06fd897d">Factions_en_jeu::left</a></div><div class="ttdeci">Faction left</div><div class="ttdef"><b>Definition:</b> <a href="structure_8h_source.html#l00031">structure.h:31</a></div></div>
+<div class="ttc" id="astructure_8h_html_a855e5f243da2af0fb6391901773dc997"><div class="ttname"><a href="structure_8h.html#a855e5f243da2af0fb6391901773dc997">libere_pioche</a></div><div class="ttdeci">void libere_pioche(Pioche p)</div><div class="ttdoc">libère la pioche et ses cartes</div><div class="ttdef"><b>Definition:</b> <a href="structure_8c_source.html#l00055">structure.c:55</a></div></div>
+<div class="ttc" id="astructs__pioche_html"><div class="ttname"><a href="structs__pioche.html">s_pioche</a></div><div class="ttdoc">type concret de pile pour la pioche d'une faction</div><div class="ttdef"><b>Definition:</b> <a href="structure_8c_source.html#l00023">structure.c:23</a></div></div>
+<div class="ttc" id="astruct_coord_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">Coord::i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> <a href="structure_8h_source.html#l00049">structure.h:49</a></div></div>
+<div class="ttc" id="astructure_8h_html_a0231077ad24f0c102c1d0d6daafae6e9"><div class="ttname"><a href="structure_8h.html#a0231077ad24f0c102c1d0d6daafae6e9">Main</a></div><div class="ttdeci">Carte Main[8]</div><div class="ttdoc">type concret pour la main d'une faction</div><div class="ttdef"><b>Definition:</b> <a href="structure_8h_source.html#l00065">structure.h:65</a></div></div>
+<div class="ttc" id="astructure_8h_html_ac8dcdc0ffb092b739d94573e47eaaacf"><div class="ttname"><a href="structure_8h.html#ac8dcdc0ffb092b739d94573e47eaaacf">ajout_pioche</a></div><div class="ttdeci">void ajout_pioche(Pioche p, Carte c)</div><div class="ttdoc">ajoute la carte à la pioche au sommet de celle-ci</div><div class="ttdef"><b>Definition:</b> <a href="structure_8c_source.html#l00041">structure.c:41</a></div></div>
+<div class="ttc" id="astruct_structure_carte_html"><div class="ttname"><a href="struct_structure_carte.html">StructureCarte</a></div><div class="ttdoc">type concret pour la faction, est_cachee vaut 1 si la carte est posée face cachée,...</div><div class="ttdef"><b>Definition:</b> <a href="carte_8c_source.html#l00022">carte.c:22</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

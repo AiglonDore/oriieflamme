@@ -1,0 +1,4 @@
+<map id="a_poser_face_cachee_sur_plateau" name="a_poser_face_cachee_sur_plateau">
+<area shape="rect" id="node1" title="Fonction qui demande la carte qui sera posée face cachée sur le plateau." alt="" coords="5,5,167,47"/>
+<area shape="rect" id="node2" href="$faction_8h.html#aa0864716c89adc851b3d848aea2e3931" title="Prototype de get_main qui permet de récupérer la main de la faction." alt="" coords="215,13,297,39"/>
+</map>

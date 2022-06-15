@@ -1,0 +1,9 @@
+<map id="retourne_FC" name="retourne_FC">
+<area shape="rect" id="node1" title="Active les effets de la carte FC." alt="" coords="5,147,107,174"/>
+<area shape="rect" id="node2" href="$plateau_8c.html#a5afb58a5af08cc5c88a166c0351a0799" title=" " alt="" coords="159,5,323,47"/>
+<area shape="rect" id="node3" href="$plateau_8c.html#a54d750566fa496b43d4791d422edf570" title="Prototype de get_colonne_droite." alt="" coords="167,71,314,98"/>
+<area shape="rect" id="node4" href="$plateau_8c.html#ae557fab87da33bf071ae6b4ce4430ae0" title="Prototype de get_colonne_gauche." alt="" coords="163,122,318,149"/>
+<area shape="rect" id="node5" href="$carte_8h.html#ab61f3254187615cbc1c13aa4e51633c2" title="Prototype de get_est_cachee qui permet de récupérer un entier qui indique si la face est cachée ou pa..." alt="" coords="179,173,302,199"/>
+<area shape="rect" id="node6" href="$carte_8h.html#a07d5b163a3e848772039f8f2e99db83e" title="Prototype de get_id qui permet de récupérer l&#39;id de la carte." alt="" coords="209,223,272,250"/>
+<area shape="rect" id="node7" href="$faction_8h.html#ac18109f0c5db773e1499954c48373a4e" title="Prototype de set_pts_DDRS_manche qui permet d&#39;initialiser le nombre de points DDRS de la manche en co..." alt="" coords="155,274,327,301"/>
+</map>

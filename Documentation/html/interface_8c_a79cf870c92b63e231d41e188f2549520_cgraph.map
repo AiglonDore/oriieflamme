@@ -1,0 +1,5 @@
+<map id="affiche_effets" name="affiche_effets">
+<area shape="rect" id="node1" title="Affiche les effets de la carte c si elle est posée." alt="" coords="5,31,116,57"/>
+<area shape="rect" id="node2" href="$carte_8h.html#a500a84466dd672b4940525996014d3f6" title="Prototype de get_description qui permet de récupérer description[i]." alt="" coords="164,5,309,32"/>
+<area shape="rect" id="node3" href="$carte_8h.html#aa5b54fe67b2e3c56e0c7c7847085b680" title="Prototype de get_nom_carte qui permet de récupérer nom_carte[i]." alt="" coords="165,56,308,83"/>
+</map>

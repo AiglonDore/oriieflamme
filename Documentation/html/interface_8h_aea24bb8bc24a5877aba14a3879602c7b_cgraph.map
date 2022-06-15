@@ -1,0 +1,4 @@
+<map id="utiliser_option" name="utiliser_option">
+<area shape="rect" id="node1" title="Fonction qui demande si la faction pointée par f veut utiliser son option." alt="" coords="5,5,120,32"/>
+<area shape="rect" id="node2" href="$faction_8h.html#a152a86ba5f75e19f5eaa93383d2cb64f" title="Prototype de get_nom qui permet de récupérer le nom de la faction." alt="" coords="168,5,299,32"/>
+</map>

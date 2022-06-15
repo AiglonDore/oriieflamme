@@ -1,0 +1,6 @@
+<map id="affiche_vainqueur" name="affiche_vainqueur">
+<area shape="rect" id="node1" title="Affiche le vainquer de la partie." alt="" coords="5,56,144,83"/>
+<area shape="rect" id="node2" href="$plateau_8h.html#a44f2d0cc019d090bd9af0bd3f86bb451" title="Prototype de get_factions qui permet de récupérer les factions en jeu." alt="" coords="238,5,341,32"/>
+<area shape="rect" id="node3" href="$faction_8h.html#aa92da3f09f56bc38be472b50fcfed30d" title="Prototype de get_nb_manches_gagnees qui permet de récupérer le nombre de manches gagnées d&#39;une factio..." alt="" coords="192,56,387,83"/>
+<area shape="rect" id="node4" href="$faction_8h.html#a152a86ba5f75e19f5eaa93383d2cb64f" title="Prototype de get_nom qui permet de récupérer le nom de la faction." alt="" coords="224,107,355,133"/>
+</map>

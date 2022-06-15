@@ -1,0 +1,145 @@
+\hypertarget{main_8c}{}\doxysection{Référence du fichier src/main.c}
+\label{main_8c}\index{src/main.c@{src/main.c}}
+
+
+Fichier principal qui contrôle le programme.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../headers/interface.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../headers/carte.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../headers/faction.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../headers/plateau.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../headers/structure.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de main.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8c_a2139dc2a8d952bc578d8a9f8199ef299}{phase1}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p)
+\begin{DoxyCompactList}\small\item\em Fonction qui contrôle la phase 1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a34ccc9f1e0da464163a6f5e297c42563}{phase2}} (\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}} p)
+\begin{DoxyCompactList}\small\item\em Fonction qui contrôle la phase 2. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Fonction principale qui controle le programme. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Fichier principal qui contrôle le programme. 
+
+\begin{DoxyAuthor}{Auteur}
+Thomas Roiseux (\href{mailto:thomas.roiseux@ensiie.fr}{\texttt{ thomas.\+roiseux@ensiie.\+fr}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/03-\/07 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction principale qui controle le programme. 
+
+\begin{DoxyReturn}{Renvoie}
+int Code de retour 
+\end{DoxyReturn}
+
+
+Définition à la ligne 79 du fichier main.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8c_a2139dc2a8d952bc578d8a9f8199ef299}\label{main_8c_a2139dc2a8d952bc578d8a9f8199ef299}} 
+\index{main.c@{main.c}!phase1@{phase1}}
+\index{phase1@{phase1}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{phase1()}{phase1()}}
+{\footnotesize\ttfamily void phase1 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Fonction qui contrôle la phase 1. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p} & Plateau de jeu. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 24 du fichier main.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c_a2139dc2a8d952bc578d8a9f8199ef299_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c_a2139dc2a8d952bc578d8a9f8199ef299_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8c_a34ccc9f1e0da464163a6f5e297c42563}\label{main_8c_a34ccc9f1e0da464163a6f5e297c42563}} 
+\index{main.c@{main.c}!phase2@{phase2}}
+\index{phase2@{phase2}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{phase2()}{phase2()}}
+{\footnotesize\ttfamily void phase2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plateau_8h_aeb2df061534a36a23c2755dfbd9ee6f3}{Plateau}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Fonction qui contrôle la phase 2. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p} & Plateau de jeu. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 63 du fichier main.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{main_8c_a34ccc9f1e0da464163a6f5e297c42563_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c_a34ccc9f1e0da464163a6f5e297c42563_icgraph}
+\end{center}
+\end{figure}

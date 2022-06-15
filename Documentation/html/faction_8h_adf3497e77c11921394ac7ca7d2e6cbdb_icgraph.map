@@ -1,0 +1,11 @@
+<map id="melanger_pioche" name="melanger_pioche">
+<area shape="rect" id="node1" title="Permet à une faction de mélanger sa pioche." alt="" coords="697,56,832,83"/>
+<area shape="rect" id="node2" href="$faction_8c.html#abc7feb29ed864c76ea95e1afc3cc7752" title="Permet à une faction de vider sa main, mélanger sa pioche et repiocher ses cartes." alt="" coords="565,31,649,57"/>
+<area shape="rect" id="node3" href="$main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299" title="Fonction qui contrôle la phase 1." alt="" coords="448,56,517,83"/>
+<area shape="rect" id="node4" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="345,81,400,108"/>
+<area shape="rect" id="node5" href="$interface_8c.html#ad36c35f78849abca949ea8c755f5b4e6" title="Fonction qui affiche la main de la faction pointée par f." alt="" coords="191,5,297,32"/>
+<area shape="rect" id="node6" href="$plateau_8c.html#aa1b228e632acc6462080d59a556f0cfa" title="Crée une faction initialisée." alt="" coords="197,107,291,133"/>
+<area shape="rect" id="node9" href="$faction_8c.html#aef8713f12e5372bd993f34fa4f6d6cab" title=" " alt="" coords="203,157,285,184"/>
+<area shape="rect" id="node7" href="$plateau_8c.html#a48e20516b8894156393d7f0f2da54ce2" title="Crée un plateau et les deux factions qui joueront dessus." alt="" coords="25,157,123,184"/>
+<area shape="rect" id="node8" href="$plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,81,143,108"/>
+</map>

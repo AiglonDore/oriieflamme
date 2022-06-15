@@ -1,0 +1,5 @@
+<map id="melanger_pioche" name="melanger_pioche">
+<area shape="rect" id="node1" title="Permet à une faction de mélanger sa pioche." alt="" coords="5,31,140,57"/>
+<area shape="rect" id="node2" href="$structure_8h.html#ac8dcdc0ffb092b739d94573e47eaaacf" title="ajoute la carte à la pioche au sommet de celle&#45;ci" alt="" coords="193,5,299,32"/>
+<area shape="rect" id="node3" href="$structure_8h.html#a7b95c6a72accdcab7cc1f39d2536fe06" title="enlève la carte au sommet de la pioche (on suppose la pioche non vide)" alt="" coords="188,56,304,83"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="set_nom_faction" name="set_nom_faction">
+<area shape="rect" id="node1" title="Prototype de set_nom qui permet d&#39;initialiser le nom de la faction." alt="" coords="5,5,136,32"/>
+<area shape="rect" id="node2" href="$interface_8h.html#ab716e0c166fd1d07dca1545157befef5" title="Fonction qui demande le nom de la faction." alt="" coords="184,5,287,32"/>
+<area shape="rect" id="node3" href="$faction_8h.html#a152a86ba5f75e19f5eaa93383d2cb64f" title="Prototype de get_nom qui permet de récupérer le nom de la faction." alt="" coords="335,5,465,32"/>
+</map>

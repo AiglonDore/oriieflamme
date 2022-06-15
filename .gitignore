@@ -1,4 +1,9 @@
 .vscode
+bin/*
+obj/*
 
 *.o
+
+*.obj
+
 *.out

@@ -1,0 +1,5 @@
+<map id="headers/carte.h" name="headers/carte.h">
+<area shape="rect" id="node1" title="Interface Carte : interface en charge des informations des cartes jeu." alt="" coords="29,5,151,32"/>
+<area shape="rect" id="node2" href="$faction_8h.html" title="Interface faction : interface en charge des informations et des manipulations propre d&#39;une faction." alt="" coords="12,80,91,107"/>
+<area shape="rect" id="node3" href="$structure_8h.html" title="Interface pour gérer le plateau de jeu et le déroulement de la partie." alt="" coords="5,155,97,181"/>
+</map>

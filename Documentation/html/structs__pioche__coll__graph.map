@@ -1,0 +1,5 @@
+<map id="s_pioche" name="s_pioche">
+<area shape="rect" id="node1" title="type concret de pile pour la pioche d&#39;une faction" alt="" coords="126,5,205,83"/>
+<area shape="rect" id="node3" href="$struct_structure_factions.html" title="type concret pour la faction, a_remelange vaut 1 si la main a été remélangée, 0 sinon" alt="" coords="5,145,187,267"/>
+<area shape="rect" id="node2" href="$struct_structure_carte.html" title="type concret pour la faction, est_cachee vaut 1 si la carte est posée face cachée,..." alt="" coords="107,329,223,465"/>
+</map>

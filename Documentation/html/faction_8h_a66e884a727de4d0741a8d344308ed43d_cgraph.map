@@ -1,0 +1,5 @@
+<map id="supprimer_faction" name="supprimer_faction">
+<area shape="rect" id="node1" title="Permet de supprimer une faction et de libérer son espace mémoire alloué" alt="" coords="5,5,145,32"/>
+<area shape="rect" id="node2" href="$structure_8h.html#a855e5f243da2af0fb6391901773dc997" title="libère la pioche et ses cartes" alt="" coords="193,5,303,32"/>
+<area shape="rect" id="node3" href="$structure_8c.html#a7b95c6a72accdcab7cc1f39d2536fe06" title="enlève la carte au sommet de la pioche (on suppose la pioche non vide)" alt="" coords="351,5,467,32"/>
+</map>

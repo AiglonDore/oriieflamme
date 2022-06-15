@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Oriieflamme:  Fichier source de src/main.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Oriieflamme
+   &#160;<span id="projectnumber">0.2</span>
+   </div>
+   <div id="projectbrief">Jeu de cartes avec des personnes de l&#39;ENSIIE</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">main.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="main_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;time.h&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;../headers/interface.h&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;../headers/carte.h&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;../headers/faction.h&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;../headers/plateau.h&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;../headers/structure.h&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299">   24</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299">phase1</a>(<a class="code" href="structs__plateau.html">Plateau</a> p)</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="struct_factions__en__jeu.html">Factions_en_jeu</a> factions = <a class="code" href="plateau_8h.html#ab023dd151ba2f8cf843b792a3434b8f5">factions_plateau</a>(p); <span class="comment">// Type concret donc free inutile</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="faction_8h.html#adf3497e77c11921394ac7ca7d2e6cbdb">melanger_pioche</a>(factions.<a class="code" href="struct_factions__en__jeu.html#ad6aecb732d365d382955d9bc06fd897d">left</a>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="faction_8h.html#adf3497e77c11921394ac7ca7d2e6cbdb">melanger_pioche</a>(factions.<a class="code" href="struct_factions__en__jeu.html#aae23e1080a95aef1f1610a99c39f9c81">right</a>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="faction_8h.html#a5b400a1d1b3c89ef50e5bb4b98e177cb">piocher</a>(factions.<a class="code" href="struct_factions__en__jeu.html#ad6aecb732d365d382955d9bc06fd897d">left</a>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="faction_8h.html#a5b400a1d1b3c89ef50e5bb4b98e177cb">piocher</a>(factions.<a class="code" href="struct_factions__en__jeu.html#aae23e1080a95aef1f1610a99c39f9c81">right</a>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">// Joueur 1</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="interface_8h.html#ad36c35f78849abca949ea8c755f5b4e6">affiche_main</a>(factions.<a class="code" href="struct_factions__en__jeu.html#ad6aecb732d365d382955d9bc06fd897d">left</a>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="faction_8h.html#aaa0655066f74d90991cac0094fb8964a">a_remelange</a>(factions.<a class="code" href="struct_factions__en__jeu.html#ad6aecb732d365d382955d9bc06fd897d">left</a>) &amp;&amp; <a class="code" href="interface_8h.html#aea24bb8bc24a5877aba14a3879602c7b">utiliser_option</a>(factions.<a class="code" href="struct_factions__en__jeu.html#ad6aecb732d365d382955d9bc06fd897d">left</a>))</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="faction_8h.html#ad4db1cbc6980bc31895c1cdd84f44e5e">set_a_remelange</a>(factions.<a class="code" href="struct_factions__en__jeu.html#ad6aecb732d365d382955d9bc06fd897d">left</a>,1);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="faction_8h.html#abc7feb29ed864c76ea95e1afc3cc7752">melanger</a>(factions.<a class="code" href="struct_factions__en__jeu.html#ad6aecb732d365d382955d9bc06fd897d">left</a>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">// Joueur 2</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="interface_8h.html#ad36c35f78849abca949ea8c755f5b4e6">affiche_main</a>(factions.<a class="code" href="struct_factions__en__jeu.html#aae23e1080a95aef1f1610a99c39f9c81">right</a>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="faction_8h.html#aaa0655066f74d90991cac0094fb8964a">a_remelange</a>(factions.<a class="code" href="struct_factions__en__jeu.html#aae23e1080a95aef1f1610a99c39f9c81">right</a>) &amp;&amp; <a class="code" href="interface_8h.html#aea24bb8bc24a5877aba14a3879602c7b">utiliser_option</a>(factions.<a class="code" href="struct_factions__en__jeu.html#aae23e1080a95aef1f1610a99c39f9c81">right</a>))</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="faction_8h.html#ad4db1cbc6980bc31895c1cdd84f44e5e">set_a_remelange</a>(factions.<a class="code" href="struct_factions__en__jeu.html#aae23e1080a95aef1f1610a99c39f9c81">right</a>,1);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="faction_8h.html#abc7feb29ed864c76ea95e1afc3cc7752">melanger</a>(factions.<a class="code" href="struct_factions__en__jeu.html#aae23e1080a95aef1f1610a99c39f9c81">right</a>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 8; i &gt; 0; i--)</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="interface_8h.html#ad36c35f78849abca949ea8c755f5b4e6">affiche_main</a>(factions.<a class="code" href="struct_factions__en__jeu.html#ad6aecb732d365d382955d9bc06fd897d">left</a>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="struct_structure_carte.html">Carte</a> a_poser = <a class="code" href="interface_8h.html#a59cec6e54845df8ae5160bd8b2a351c2">a_poser_face_cachee_sur_plateau</a>(factions.<a class="code" href="struct_factions__en__jeu.html#ad6aecb732d365d382955d9bc06fd897d">left</a>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="struct_coord.html">Coord</a> position = <a class="code" href="interface_8h.html#a8330a6ec294f24da52fe0f265181fbcc">demande_position</a>(p);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="plateau_8h.html#a425437529596e13babd7bc8b4e04d491">poser_carte</a>(a_poser, p, position.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a>, position.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="interface_8h.html#ad36c35f78849abca949ea8c755f5b4e6">affiche_main</a>(factions.<a class="code" href="struct_factions__en__jeu.html#aae23e1080a95aef1f1610a99c39f9c81">right</a>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        a_poser = <a class="code" href="interface_8h.html#a59cec6e54845df8ae5160bd8b2a351c2">a_poser_face_cachee_sur_plateau</a>(factions.<a class="code" href="struct_factions__en__jeu.html#aae23e1080a95aef1f1610a99c39f9c81">right</a>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        position = <a class="code" href="interface_8h.html#a8330a6ec294f24da52fe0f265181fbcc">demande_position</a>(p);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="plateau_8h.html#a425437529596e13babd7bc8b4e04d491">poser_carte</a>(a_poser, p, position.<a class="code" href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">i</a>, position.<a class="code" href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">j</a>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="main_8c.html#a34ccc9f1e0da464163a6f5e297c42563">   63</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="main_8c.html#a34ccc9f1e0da464163a6f5e297c42563">phase2</a>(<a class="code" href="structs__plateau.html">Plateau</a> p)</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">int</span> carte_retournee = 0;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">while</span> ((carte_retournee = <a class="code" href="plateau_8h.html#aafb029b0483a7d02f4f2619eea4deb27">retourner_carte</a>(p)) != -1) <span class="comment">// Condition sur la valeur de l&#39;affectation: si retourner_carte renvoie NULL, cela signifie qu&#39;il n&#39;y a plus de cartes à retourner.</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="interface_8h.html#a79cf870c92b63e231d41e188f2549520">affiche_effets</a>(carte_retournee);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <a class="code" href="interface_8h.html#a8bb576a3127fc3437d91467ec19d0de0">affiche_plateau</a>(p);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="interface_8h.html#a044fbcd951bab90748a27f16d77b718f">affiche_ddrs</a>(p);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        sleep(3);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   79</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    srand(time(0));               <span class="comment">// Initialise la génération des nombres aléatoires</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="structs__plateau.html">Plateau</a> jeu = <a class="code" href="plateau_8h.html#a48e20516b8894156393d7f0f2da54ce2">init_plateau</a>(); <span class="comment">// Initialise le plateau, les factions...</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">while</span> (<a class="code" href="plateau_8h.html#a49570b78f74ed1d5d588404e0f6bbcfc">nouvelle_manche</a>(jeu))</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299">phase1</a>(jeu);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <a class="code" href="main_8c.html#a34ccc9f1e0da464163a6f5e297c42563">phase2</a>(jeu);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="interface_8h.html#a802545d4ff1c158f7a2ca77be20915f9">affiche_vainqueur</a>(jeu);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="plateau_8h.html#aa2fd2fef89b903a5c089bf57cb932e29">libere_plateau</a>(jeu);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    jeu = NULL;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_factions__en__jeu_html_aae23e1080a95aef1f1610a99c39f9c81"><div class="ttname"><a href="struct_factions__en__jeu.html#aae23e1080a95aef1f1610a99c39f9c81">Factions_en_jeu::right</a></div><div class="ttdeci">Faction right</div><div class="ttdef"><b>Definition:</b> <a href="structure_8h_source.html#l00032">structure.h:32</a></div></div>
+<div class="ttc" id="ainterface_8h_html_a79cf870c92b63e231d41e188f2549520"><div class="ttname"><a href="interface_8h.html#a79cf870c92b63e231d41e188f2549520">affiche_effets</a></div><div class="ttdeci">void affiche_effets(int id)</div><div class="ttdoc">Affiche les effets de la carte c si elle est posée.</div><div class="ttdef"><b>Definition:</b> <a href="interface_8c_source.html#l00115">interface.c:115</a></div></div>
+<div class="ttc" id="ainterface_8h_html_a044fbcd951bab90748a27f16d77b718f"><div class="ttname"><a href="interface_8h.html#a044fbcd951bab90748a27f16d77b718f">affiche_ddrs</a></div><div class="ttdeci">void affiche_ddrs(Plateau p)</div><div class="ttdoc">Affiche les points DDRS des deux factions.</div><div class="ttdef"><b>Definition:</b> <a href="interface_8c_source.html#l00415">interface.c:415</a></div></div>
+<div class="ttc" id="afaction_8h_html_aaa0655066f74d90991cac0094fb8964a"><div class="ttname"><a href="faction_8h.html#aaa0655066f74d90991cac0094fb8964a">a_remelange</a></div><div class="ttdeci">int a_remelange(Faction f)</div><div class="ttdoc">Savoir si une faction a utilisé l'option de remélanger sa main et boîte à idée et de repiocher des ca...</div><div class="ttdef"><b>Definition:</b> <a href="faction_8c_source.html#l00039">faction.c:39</a></div></div>
+<div class="ttc" id="afaction_8h_html_adf3497e77c11921394ac7ca7d2e6cbdb"><div class="ttname"><a href="faction_8h.html#adf3497e77c11921394ac7ca7d2e6cbdb">melanger_pioche</a></div><div class="ttdeci">void melanger_pioche(Faction f)</div><div class="ttdoc">Permet à une faction de mélanger sa pioche.</div><div class="ttdef"><b>Definition:</b> <a href="faction_8c_source.html#l00063">faction.c:63</a></div></div>
+<div class="ttc" id="amain_8c_html_a34ccc9f1e0da464163a6f5e297c42563"><div class="ttname"><a href="main_8c.html#a34ccc9f1e0da464163a6f5e297c42563">phase2</a></div><div class="ttdeci">void phase2(Plateau p)</div><div class="ttdoc">Fonction qui contrôle la phase 2.</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00063">main.c:63</a></div></div>
+<div class="ttc" id="aplateau_8h_html_aa2fd2fef89b903a5c089bf57cb932e29"><div class="ttname"><a href="plateau_8h.html#aa2fd2fef89b903a5c089bf57cb932e29">libere_plateau</a></div><div class="ttdeci">void libere_plateau(Plateau p)</div><div class="ttdoc">Libère la mémoire associée au plateau de jeu et aux deux factions.</div><div class="ttdef"><b>Definition:</b> <a href="plateau_8c_source.html#l00194">plateau.c:194</a></div></div>
+<div class="ttc" id="aplateau_8h_html_a425437529596e13babd7bc8b4e04d491"><div class="ttname"><a href="plateau_8h.html#a425437529596e13babd7bc8b4e04d491">poser_carte</a></div><div class="ttdeci">void poser_carte(Carte c, Plateau p, int i, int j)</div><div class="ttdoc">Permet à une faction de poser une carte face cachée sur le plateau.</div><div class="ttdef"><b>Definition:</b> <a href="plateau_8c_source.html#l00344">plateau.c:344</a></div></div>
+<div class="ttc" id="astruct_coord_html_a37d972ae0b47b9099e30983131d31916"><div class="ttname"><a href="struct_coord.html#a37d972ae0b47b9099e30983131d31916">Coord::j</a></div><div class="ttdeci">int j</div><div class="ttdef"><b>Definition:</b> <a href="structure_8h_source.html#l00050">structure.h:50</a></div></div>
+<div class="ttc" id="aplateau_8h_html_ab023dd151ba2f8cf843b792a3434b8f5"><div class="ttname"><a href="plateau_8h.html#ab023dd151ba2f8cf843b792a3434b8f5">factions_plateau</a></div><div class="ttdeci">Factions_en_jeu factions_plateau(Plateau p)</div><div class="ttdoc">Détermine la faction qui joue en premier et renvoie la liste des deux factions du jeu dont le premier...</div><div class="ttdef"><b>Definition:</b> <a href="plateau_8c_source.html#l00317">plateau.c:317</a></div></div>
+<div class="ttc" id="astruct_coord_html"><div class="ttname"><a href="struct_coord.html">Coord</a></div><div class="ttdoc">Structure pour stocker les coordonnées d'une carte sur la grille 2D.</div><div class="ttdef"><b>Definition:</b> <a href="structure_8h_source.html#l00047">structure.h:47</a></div></div>
+<div class="ttc" id="ainterface_8h_html_aea24bb8bc24a5877aba14a3879602c7b"><div class="ttname"><a href="interface_8h.html#aea24bb8bc24a5877aba14a3879602c7b">utiliser_option</a></div><div class="ttdeci">int utiliser_option(Faction f)</div><div class="ttdoc">Fonction qui demande si la faction pointée par f veut utiliser son option.</div><div class="ttdef"><b>Definition:</b> <a href="interface_8c_source.html#l00076">interface.c:76</a></div></div>
+<div class="ttc" id="aplateau_8h_html_a49570b78f74ed1d5d588404e0f6bbcfc"><div class="ttname"><a href="plateau_8h.html#a49570b78f74ed1d5d588404e0f6bbcfc">nouvelle_manche</a></div><div class="ttdeci">int nouvelle_manche(Plateau p)</div><div class="ttdoc">Initialise une nouvelle manche ou indique que le jeu est terminé</div><div class="ttdef"><b>Definition:</b> <a href="plateau_8c_source.html#l00204">plateau.c:204</a></div></div>
+<div class="ttc" id="afaction_8h_html_ad4db1cbc6980bc31895c1cdd84f44e5e"><div class="ttname"><a href="faction_8h.html#ad4db1cbc6980bc31895c1cdd84f44e5e">set_a_remelange</a></div><div class="ttdeci">void set_a_remelange(Faction f, int x)</div><div class="ttdoc">Prototype de set_a_remelange qui permet d'initialiser si la faction a utilisé ou non son option.</div><div class="ttdef"><b>Definition:</b> <a href="faction_8c_source.html#l00151">faction.c:151</a></div></div>
+<div class="ttc" id="aplateau_8h_html_aafb029b0483a7d02f4f2619eea4deb27"><div class="ttname"><a href="plateau_8h.html#aafb029b0483a7d02f4f2619eea4deb27">retourner_carte</a></div><div class="ttdeci">int retourner_carte(Plateau p)</div><div class="ttdoc">retourne la carte la plus en haut à gauche du plateau face visible et active son effet</div><div class="ttdef"><b>Definition:</b> <a href="plateau_8c_source.html#l01780">plateau.c:1780</a></div></div>
+<div class="ttc" id="astruct_factions__en__jeu_html"><div class="ttname"><a href="struct_factions__en__jeu.html">Factions_en_jeu</a></div><div class="ttdoc">Structure pour les couples de factions.</div><div class="ttdef"><b>Definition:</b> <a href="structure_8h_source.html#l00029">structure.h:29</a></div></div>
+<div class="ttc" id="astructs__plateau_html"><div class="ttname"><a href="structs__plateau.html">s_plateau</a></div><div class="ttdoc">type concret vers lequel pointe le plateau de jeu</div><div class="ttdef"><b>Definition:</b> <a href="plateau_8c_source.html#l00026">plateau.c:26</a></div></div>
+<div class="ttc" id="astruct_factions__en__jeu_html_ad6aecb732d365d382955d9bc06fd897d"><div class="ttname"><a href="struct_factions__en__jeu.html#ad6aecb732d365d382955d9bc06fd897d">Factions_en_jeu::left</a></div><div class="ttdeci">Faction left</div><div class="ttdef"><b>Definition:</b> <a href="structure_8h_source.html#l00031">structure.h:31</a></div></div>
+<div class="ttc" id="astruct_coord_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="struct_coord.html#acb559820d9ca11295b4500f179ef6392">Coord::i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> <a href="structure_8h_source.html#l00049">structure.h:49</a></div></div>
+<div class="ttc" id="ainterface_8h_html_a8330a6ec294f24da52fe0f265181fbcc"><div class="ttname"><a href="interface_8h.html#a8330a6ec294f24da52fe0f265181fbcc">demande_position</a></div><div class="ttdeci">Coord demande_position(Plateau p)</div><div class="ttdoc">Fonction qui demande à quelle position doit être placée la carte.</div><div class="ttdef"><b>Definition:</b> <a href="interface_8c_source.html#l00140">interface.c:140</a></div></div>
+<div class="ttc" id="afaction_8h_html_a5b400a1d1b3c89ef50e5bb4b98e177cb"><div class="ttname"><a href="faction_8h.html#a5b400a1d1b3c89ef50e5bb4b98e177cb">piocher</a></div><div class="ttdeci">void piocher(Faction f)</div><div class="ttdoc">Permet à une faction de repiocher ses cartes.</div><div class="ttdef"><b>Definition:</b> <a href="faction_8c_source.html#l00102">faction.c:102</a></div></div>
+<div class="ttc" id="amain_8c_html_a2139dc2a8d952bc578d8a9f8199ef299"><div class="ttname"><a href="main_8c.html#a2139dc2a8d952bc578d8a9f8199ef299">phase1</a></div><div class="ttdeci">void phase1(Plateau p)</div><div class="ttdoc">Fonction qui contrôle la phase 1.</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00024">main.c:24</a></div></div>
+<div class="ttc" id="ainterface_8h_html_a8bb576a3127fc3437d91467ec19d0de0"><div class="ttname"><a href="interface_8h.html#a8bb576a3127fc3437d91467ec19d0de0">affiche_plateau</a></div><div class="ttdeci">void affiche_plateau(Plateau p)</div><div class="ttdoc">Fonction qui affiche le plateau de jeu.</div><div class="ttdef"><b>Definition:</b> <a href="interface_8c_source.html#l00024">interface.c:24</a></div></div>
+<div class="ttc" id="ainterface_8h_html_a59cec6e54845df8ae5160bd8b2a351c2"><div class="ttname"><a href="interface_8h.html#a59cec6e54845df8ae5160bd8b2a351c2">a_poser_face_cachee_sur_plateau</a></div><div class="ttdeci">Carte a_poser_face_cachee_sur_plateau(Faction f)</div><div class="ttdoc">Fonction qui demande la carte qui sera posée face cachée sur le plateau.</div><div class="ttdef"><b>Definition:</b> <a href="interface_8c_source.html#l00084">interface.c:84</a></div></div>
+<div class="ttc" id="afaction_8h_html_abc7feb29ed864c76ea95e1afc3cc7752"><div class="ttname"><a href="faction_8h.html#abc7feb29ed864c76ea95e1afc3cc7752">melanger</a></div><div class="ttdeci">void melanger(Faction f)</div><div class="ttdoc">Permet à une faction de vider sa main, mélanger sa pioche et repiocher ses cartes.</div><div class="ttdef"><b>Definition:</b> <a href="faction_8c_source.html#l00044">faction.c:44</a></div></div>
+<div class="ttc" id="ainterface_8h_html_ad36c35f78849abca949ea8c755f5b4e6"><div class="ttname"><a href="interface_8h.html#ad36c35f78849abca949ea8c755f5b4e6">affiche_main</a></div><div class="ttdeci">void affiche_main(Faction f)</div><div class="ttdoc">Fonction qui affiche la main de la faction pointée par f.</div><div class="ttdef"><b>Definition:</b> <a href="interface_8c_source.html#l00058">interface.c:58</a></div></div>
+<div class="ttc" id="amain_8c_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdoc">Fonction principale qui controle le programme.</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00079">main.c:79</a></div></div>
+<div class="ttc" id="astruct_structure_carte_html"><div class="ttname"><a href="struct_structure_carte.html">StructureCarte</a></div><div class="ttdoc">type concret pour la faction, est_cachee vaut 1 si la carte est posée face cachée,...</div><div class="ttdef"><b>Definition:</b> <a href="carte_8c_source.html#l00022">carte.c:22</a></div></div>
+<div class="ttc" id="aplateau_8h_html_a48e20516b8894156393d7f0f2da54ce2"><div class="ttname"><a href="plateau_8h.html#a48e20516b8894156393d7f0f2da54ce2">init_plateau</a></div><div class="ttdeci">Plateau init_plateau()</div><div class="ttdoc">Crée un plateau et les deux factions qui joueront dessus.</div><div class="ttdef"><b>Definition:</b> <a href="plateau_8c_source.html#l00164">plateau.c:164</a></div></div>
+<div class="ttc" id="ainterface_8h_html_a802545d4ff1c158f7a2ca77be20915f9"><div class="ttname"><a href="interface_8h.html#a802545d4ff1c158f7a2ca77be20915f9">affiche_vainqueur</a></div><div class="ttdeci">void affiche_vainqueur(Plateau p)</div><div class="ttdoc">Affiche le vainquer de la partie.</div><div class="ttdef"><b>Definition:</b> <a href="interface_8c_source.html#l00120">interface.c:120</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

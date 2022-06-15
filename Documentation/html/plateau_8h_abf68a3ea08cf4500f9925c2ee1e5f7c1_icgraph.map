@@ -1,0 +1,14 @@
+<map id="bonus_anl" name="bonus_anl">
+<area shape="rect" id="node1" title="Ajoute un bonus de 3 points à la faction qui a posé la carte Anne&#45;Laure Ligozat qui a été précédemmen..." alt="" coords="1144,85,1232,112"/>
+<area shape="rect" id="node2" href="$plateau_8c.html#ad19e3ca7c81b682200136c12ae683ec9" title="Active les effets de la carte Ecocup." alt="" coords="931,5,1062,32"/>
+<area shape="rect" id="node10" href="$plateau_8c.html#a8e59a299de0435cb251597fede757ade" title="Active les effets de la carte EcologIIE." alt="" coords="925,56,1068,83"/>
+<area shape="rect" id="node11" href="$plateau_8c.html#ae667a16136a040ee486dd208a7a90b89" title="Active les effets de la carte Isolation du bâtiment." alt="" coords="927,107,1067,149"/>
+<area shape="rect" id="node12" href="$plateau_8c.html#a25800990500eafbbd30c7e237bebc989" title="Active les effets de la carte Parcours sobriété numérique." alt="" coords="897,173,1096,214"/>
+<area shape="rect" id="node3" href="$plateau_8c.html#a676ed33ed1ff7fd3200efd68462f61e0" title="Active les effets de la carte d&#39;identifiant id." alt="" coords="745,85,849,112"/>
+<area shape="rect" id="node4" href="$plateau_8c.html#a289b461ee18614882e9e0e242c2193da" title="Active les effets de la carte Massinissa Merabet." alt="" coords="541,78,697,119"/>
+<area shape="rect" id="node5" href="$plateau_8c.html#a41cddf8d1f1e457df2f4c905d6605151" title="retourne la carte la plus en haut à gauche du plateau face visible et active son effet" alt="" coords="558,144,681,171"/>
+<area shape="rect" id="node6" href="$main_8c.html#a34ccc9f1e0da464163a6f5e297c42563" title="Fonction qui contrôle la phase 2." alt="" coords="424,144,493,171"/>
+<area shape="rect" id="node7" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale qui controle le programme." alt="" coords="321,144,376,171"/>
+<area shape="rect" id="node8" href="$plateau_8c.html#a49570b78f74ed1d5d588404e0f6bbcfc" title="Initialise une nouvelle manche ou indique que le jeu est terminé" alt="" coords="5,144,143,171"/>
+<area shape="rect" id="node9" href="$faction_8c.html#aac44b2050d5e1276faeb0a7310583129" title="Prototype de set_main qui permet d&#39;initialiser la main de la faction." alt="" coords="191,207,273,233"/>
+</map>

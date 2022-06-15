@@ -1,0 +1,8 @@
+<map id="s_plateau" name="s_plateau">
+<area shape="rect" id="node1" title="type concret vers lequel pointe le plateau de jeu" alt="" coords="130,859,343,1009"/>
+<area shape="rect" id="node2" href="$struct_coord.html" title="Structure pour stocker les coordonnées d&#39;une carte sur la grille 2D." alt="" coords="5,543,65,635"/>
+<area shape="rect" id="node3" href="$struct_structure_carte.html" title="type concret pour la faction, est_cachee vaut 1 si la carte est posée face cachée,..." alt="" coords="355,5,471,141"/>
+<area shape="rect" id="node4" href="$struct_structure_factions.html" title="type concret pour la faction, a_remelange vaut 1 si la main a été remélangée, 0 sinon" alt="" coords="441,344,622,465"/>
+<area shape="rect" id="node5" href="$structs__pioche.html" title="type concret de pile pour la pioche d&#39;une faction" alt="" coords="448,204,527,281"/>
+<area shape="rect" id="node6" href="$struct_factions__en__jeu.html" title="Structure pour les couples de factions." alt="" coords="371,550,497,627"/>
+</map>

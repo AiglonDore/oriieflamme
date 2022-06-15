@@ -1,0 +1,8 @@
+<map id="retourne_Christophe_Mouilleron" name="retourne_Christophe_Mouilleron">
+<area shape="rect" id="node1" title="Active les effets de la carte Christophe Mouilleron." alt="" coords="5,115,160,156"/>
+<area shape="rect" id="node2" href="$plateau_8c.html#a5afb58a5af08cc5c88a166c0351a0799" title=" " alt="" coords="208,5,372,47"/>
+<area shape="rect" id="node3" href="$plateau_8c.html#a54d750566fa496b43d4791d422edf570" title="Prototype de get_colonne_droite." alt="" coords="217,71,363,98"/>
+<area shape="rect" id="node4" href="$plateau_8c.html#ae557fab87da33bf071ae6b4ce4430ae0" title="Prototype de get_colonne_gauche." alt="" coords="213,122,367,149"/>
+<area shape="rect" id="node5" href="$carte_8h.html#ab61f3254187615cbc1c13aa4e51633c2" title="Prototype de get_est_cachee qui permet de récupérer un entier qui indique si la face est cachée ou pa..." alt="" coords="229,173,351,199"/>
+<area shape="rect" id="node6" href="$carte_8h.html#a07d5b163a3e848772039f8f2e99db83e" title="Prototype de get_id qui permet de récupérer l&#39;id de la carte." alt="" coords="259,223,321,250"/>
+</map>
